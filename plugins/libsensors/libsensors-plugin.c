@@ -150,12 +150,12 @@ static const sensors_feature_data * get_sensor_min_max(const sensors_chip_name *
                                 
 				*low_value = value;
                                 
-                                g_debug("overriding low value of sensor %s with value %f\n", data->name, value);
+                                g_debug("overriding low value of sensor %s with value %f", data->name, value);
                                 
                         } else if (g_str_has_suffix(data->name, "_max")) {
                                 
 				*high_value = value;
-                                g_debug("overriding high value of sensor %s with value %f\n", data->name, value);
+                                g_debug("overriding high value of sensor %s with value %f", data->name, value);
                                 
                         }
                         
