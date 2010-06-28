@@ -97,6 +97,7 @@ static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
 		if (connect(sockfd, (struct sockaddr *)&address,
                             (socklen_t)sizeof(address)) == -1) {
 			g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, HDDTEMP_SOCKET_CONNECT_ERROR, "Error connecting to hddtemp daemon on port %i on %s", htons(HDDTEMP_PORT_NUMBER), HDDTEMP_SERVER_IP_ADDRESS);
+			close(sockfd);
 			return NULL;
 		}
 		memset(buffer, 0, sizeof(buffer));
