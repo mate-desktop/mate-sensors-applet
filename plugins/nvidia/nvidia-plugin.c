@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2006 Sven Peter <svpe@gmx.net>
+ * Copyright (C) 2006 Alex Murray <murray.alex@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,13 +31,13 @@
 
 const gchar *plugin_name = "nvidia";
 
+#define THERMAL_SENSOR_TEMP "SensorTemp"
+#define THERMAL_COOLER_LEVEL "CoolerLevel"
 #define GPU_CORE_TEMP "CoreTemp"
 #define AMBIENT_TEMP "AmbientTemp"
 
 /* global variables */
 Display *nvidia_sensors_dpy; /* the connection to the X server */
-
-int num_gpus;
 
 /* returns the value of the sensor */
 static gdouble nvidia_plugin_get_sensor_value(const gchar *path, 
@@ -49,7 +50,21 @@ static gdouble nvidia_plugin_get_sensor_value(const gchar *path,
 	int i;
 
 	i = g_ascii_strtoll(id + strlen("GPU"), NULL, 10);
-        if (g_ascii_strcasecmp(path, GPU_CORE_TEMP) == 0) {
+        if (g_ascii_strcasecmp(path, THERMAL_SENSOR_TEMP) == 0) {
+		res = XNVCTRLQueryTargetAttribute(nvidia_sensors_dpy,
+						  NV_CTRL_TARGET_TYPE_THERMAL_SENSOR,
+						  i,
+						  0,
+						  NV_CTRL_THERMAL_SENSOR_READING,
+						  &temp);
+        } else if (g_ascii_strcasecmp(path, THERMAL_COOLER_LEVEL) == 0) {
+		res = XNVCTRLQueryTargetAttribute(nvidia_sensors_dpy,
+						  NV_CTRL_TARGET_TYPE_COOLER,
+						  i,
+						  0,
+						  NV_CTRL_THERMAL_COOLER_LEVEL,
+						  &temp);
+        } else if (g_ascii_strcasecmp(path, GPU_CORE_TEMP) == 0) {
 		res = XNVCTRLQueryTargetAttribute(nvidia_sensors_dpy,
 						  NV_CTRL_TARGET_TYPE_GPU,
 						  i,
@@ -96,12 +111,52 @@ static GList *nvidia_plugin_init(void)
 	/* check if the NV-CONTROL extension is available on this X
          * server - if so add the two sensors if they exist */
 	if (XNVCTRLQueryExtension(nvidia_sensors_dpy, &event_base, &error_base)) {
+		int i, cnt;
+
+		if (XNVCTRLQueryTargetCount(nvidia_sensors_dpy,
+					    NV_CTRL_TARGET_TYPE_THERMAL_SENSOR,
+					    &cnt)) {
+			for (i = 0; i < cnt; i++) {
+				gchar *id = g_strdup_printf("GPU%d%s", i, THERMAL_SENSOR_TEMP);
+
+				sensors_applet_plugin_add_sensor(&sensors,
+								 THERMAL_SENSOR_TEMP,
+								 id,
+								 _("GPU"),
+								 TEMP_SENSOR,
+								 TRUE,
+								 GPU_ICON,
+								 DEFAULT_GRAPH_COLOR);
+
+				g_free(id);
+			}
+		}
+
+		if (XNVCTRLQueryTargetCount(nvidia_sensors_dpy,
+					    NV_CTRL_TARGET_TYPE_COOLER,
+					    &cnt)) {
+
+			for (i = 0; i < cnt; i++) {
+				gchar *id = g_strdup_printf("GPU%d%s", i, THERMAL_COOLER_LEVEL);
+
+				sensors_applet_plugin_add_sensor(&sensors,
+								 THERMAL_COOLER_LEVEL,
+								 id,
+								 _("GPU"),
+								 FAN_SENSOR,
+								 TRUE,
+								 FAN_ICON,
+								 DEFAULT_GRAPH_COLOR);
+
+				g_free(id);
+			}
+		}
+
 		if (XNVCTRLQueryTargetCount(nvidia_sensors_dpy,
 					    NV_CTRL_TARGET_TYPE_GPU,
-					    &num_gpus))
+					    &cnt))
 		{
-			int i;
-			for (i = 0; i < num_gpus; i++)
+			for (i = 0; i < cnt; i++)
 			{
 				if (XNVCTRLQueryTargetAttribute(nvidia_sensors_dpy,
 								NV_CTRL_TARGET_TYPE_GPU,
