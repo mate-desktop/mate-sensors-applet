@@ -20,15 +20,15 @@
 #define SENSORS_APPLET_H
 
 #include <gtk/gtk.h>
-#include <panel-applet.h>
+#include <mate-panel-applet.h>
 #include "sensors-applet-sensor.h"
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#ifdef HAVE_LIBNOTIFY
-#include <libnotify/notify.h>
+#ifdef HAVE_LIBMATENOTIFY
+#include <libmatenotify/notify.h>
 #endif
 
 typedef struct _ActiveSensor ActiveSensor;
@@ -60,7 +60,7 @@ static const gchar * const stock_icons[NUM_ICONS] = {
 
 
 /* enumeration used to identify columns in the GtkTreeStore data
- * structure and to access specific gconf keys too.
+ * structure and to access specific mateconf keys too.
  */
 enum {
 	PATH_COLUMN = 0,
@@ -110,8 +110,8 @@ typedef enum {
         LOW_ALARM = 0,
         HIGH_ALARM,
         SENSOR_INTERFACE_ERROR,
-        GCONF_READ_ERROR,
-        GCONF_WRITE_ERROR,
+        MATECONF_READ_ERROR,
+        MATECONF_WRITE_ERROR,
         NUM_NOTIFS
 } NotifType;
 
@@ -120,7 +120,7 @@ typedef enum {
 
 struct _SensorsApplet {
 	/* the actual applet for this instance */
-	PanelApplet* applet;
+	MatePanelApplet* applet;
         gint size;
 
 	GtkTreeStore *sensors;
@@ -137,9 +137,9 @@ struct _SensorsApplet {
 	 * list of labels and sensor values into this container */
 	GtkWidget *table;
 	GList *active_sensors;
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
         NotifyNotification *notification;
-#endif // HAVE_LIBNOTIFY
+#endif // HAVE_LIBMATENOTIFY
 };
 
 

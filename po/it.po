@@ -394,15 +394,15 @@ msgstr ""
 msgid "No sensors enabled!"
 msgstr "Nessun sensore attivo!"
 
-#: ../sensors-applet/sensors-applet-gconf.c:42
+#: ../sensors-applet/sensors-applet-mateconf.c:42
 msgid "An error occurred loading the stored sensors data"
 msgstr "Si è verificato un errore caricando i dati memorizzati dei sensori"
 
-#: ../sensors-applet/sensors-applet-gconf.c:43
+#: ../sensors-applet/sensors-applet-mateconf.c:43
 msgid "Incompatible sensors configuration found"
 msgstr "Trovata una configurazione dei sensori incompatibile"
 
-#: ../sensors-applet/sensors-applet-gconf.c:47
+#: ../sensors-applet/sensors-applet-mateconf.c:47
 msgid ""
 "An error has occurred when loading the stored sensors data. The default "
 "values will be used to recover from this error."
@@ -410,13 +410,13 @@ msgstr ""
 "Si è verificato un errore nel caricamento dei dati memorizzati dei sensori. "
 "I valori predefiniti saranno usati per correggere questo errore."
 
-#: ../sensors-applet/sensors-applet-gconf.c:50
+#: ../sensors-applet/sensors-applet-mateconf.c:50
 msgid ""
-"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"Unfortunately the previous configuration for MATE Sensors Applet is not "
 "compatible with this version. The existing sensors data will be overwritten "
 "with the default values for this new version."
 msgstr ""
-"Sfortunatamente la configurazione precedente per GNOME Sensors Applet non "
+"Sfortunatamente la configurazione precedente per MATE Sensors Applet non "
 "è compatibile con questa versione. I dati esistenti di sensori verranno sovrascritti "
 "con i valori predefiniti di questa nuova versione."
 

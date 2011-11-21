@@ -2,8 +2,8 @@
 <oaf_server iid="OAFIID:SensorsApplet_Factory" type="exe" location="@LIBEXECDIR@/@PACKAGE@">
 
         <oaf_attribute name="repo_ids" type="stringv">
-                <item value="IDL:Bonobo/GenericFactory:1.0"/>
-                <item value="IDL:Bonobo/Unknown:1.0"/>
+                <item value="IDL:MateComponent/GenericFactory:1.0"/>
+                <item value="IDL:MateComponent/Unknown:1.0"/>
         </oaf_attribute>
         <oaf_attribute name="name" type="string" value="Sensors Applet Factory"/>
         <oaf_attribute name="description" type="string" value="Factory to create the Sensors Applet"/>
@@ -13,9 +13,9 @@
             location="OAFIID:SensorsApplet_Factory">
 
         <oaf_attribute name="repo_ids" type="stringv">
-                <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
-                <item value="IDL:Bonobo/Control:1.0"/>
-                <item value="IDL:Bonobo/Unknown:1.0"/>
+                <item value="IDL:MATE/Vertigo/MatePanelAppletShell:1.0"/>
+                <item value="IDL:MateComponent/Control:1.0"/>
+                <item value="IDL:MateComponent/Unknown:1.0"/>
         </oaf_attribute>
         <oaf_attribute name="name" type="string" _value="Hardware Sensors Monitor"/>
         <oaf_attribute name="description" type="string" _value="Display temperature, fan speed and voltage sensor readings"/>

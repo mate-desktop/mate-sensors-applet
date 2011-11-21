@@ -1,8 +1,8 @@
 # ================= initialization =================== #
 
-# if doing version bump - make sure you update sensors-applet-gconf
+# if doing version bump - make sure you update sensors-applet-mateconf
 # version checking to add old version if no changes to config
-AC_INIT([GNOME Sensors Applet], [2.2.7], [murray.alex@gmail.com],
+AC_INIT([MATE Sensors Applet], [2.2.7], [murray.alex@gmail.com],
 [sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
@@ -51,9 +51,9 @@ AC_CHECK_HEADERS(
 GLIB_REQUIRED=2.14.0
 GTK_REQUIRED=2.14.0
 LIBPANEL_REQUIRED=2.0.0
-LIBGNOME_REQUIRED=2.8.0
-LIBGNOMEUI_REQUIRED=2.8.0
-LIBNOTIFY_REQUIRED=0.3.0
+LIBMATE_REQUIRED=2.8.0
+LIBMATEUI_REQUIRED=2.8.0
+LIBMATENOTIFY_REQUIRED=0.3.0
 LIBCAIRO_REQUIRED=1.0.4
 LIBDBUSGLIB_REQUIRED=0.80
 LIBATASMART_REQUIRED=0.16
@@ -66,11 +66,11 @@ PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
-PKG_CHECK_MODULES(GNOME, libgnome-2.0 >= $LIBGNOME_REQUIRED
-			 libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
-			 libpanelapplet-2.0 >= $LIBPANEL_REQUIRED)
-AC_SUBST(GNOME_CFLAGS)
-AC_SUBST(GNOME_LIBS)
+PKG_CHECK_MODULES(MATE, libmate-2.0 >= $LIBMATE_REQUIRED
+			 libmateui-2.0 >= $LIBMATEUI_REQUIRED
+			 libmatepanelapplet-2.0 >= $LIBPANEL_REQUIRED)
+AC_SUBST(MATE_CFLAGS)
+AC_SUBST(MATE_LIBS)
 
 PKG_CHECK_MODULES(CAIRO, cairo >= $LIBCAIRO_REQUIRED)
 AC_SUBST(CAIRO_CFLAGS)
@@ -98,33 +98,33 @@ fi
 
 AM_CONDITIONAL(UDISKS, test -n "$DBUSGLIB_CFLAGS" -a -n "$LIBATASMART_CFLAGS")
 
-# support for libnotify
-LIBNOTIFY_CFLAGS=
-LIBNOTIFY_LIBS=
+# support for libmatenotify
+LIBMATENOTIFY_CFLAGS=
+LIBMATENOTIFY_LIBS=
 
 # enable support even if not specifically asked for
-AC_ARG_ENABLE(libnotify, [  --enable-libnotify   enable libnotify support], [
-			 enable_libnotify=$enableval], [
-			 enable_libnotify="yes"
+AC_ARG_ENABLE(libmatenotify, [  --enable-libmatenotify   enable libmatenotify support], [
+			 enable_libmatenotify=$enableval], [
+			 enable_libmatenotify="yes"
 ])
 
-if test "x$enable_libnotify" = "xno"
+if test "x$enable_libmatenotify" = "xno"
 then
-   echo "Disabling libnotify support"
+   echo "Disabling libmatenotify support"
 else
-	PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED,
-	HAVE_LIBNOTIFY="yes", HAVE_LIBNOTIFY="no")
+	PKG_CHECK_MODULES(LIBMATENOTIFY, libmatenotify >= $LIBMATENOTIFY_REQUIRED,
+	HAVE_LIBMATENOTIFY="yes", HAVE_LIBMATENOTIFY="no")
 
-	if test "x$HAVE_LIBNOTIFY" = "xyes"
+	if test "x$HAVE_LIBMATENOTIFY" = "xyes"
 	then
-	   AC_DEFINE(HAVE_LIBNOTIFY, 1, [libnotify available])
+	   AC_DEFINE(HAVE_LIBMATENOTIFY, 1, [libmatenotify available])
 	fi	
 fi
 
-AM_CONDITIONAL(LIBNOTIFY, test -n "$LIBNOTIFY_LIBS")
+AM_CONDITIONAL(LIBMATENOTIFY, test -n "$LIBMATENOTIFY_LIBS")
 
-AC_SUBST(LIBNOTIFY_CFLAGS)
-AC_SUBST(LIBNOTIFY_LIBS)
+AC_SUBST(LIBMATENOTIFY_CFLAGS)
+AC_SUBST(LIBMATENOTIFY_LIBS)
 
 
 # allow user to specify libsensors support, but support it anyway if possible
@@ -249,10 +249,10 @@ if test x"$XSLTPROC" = xno; then
   AC_MSG_ERROR([xsltproc executable not found in your path - should be installed with libxslt])
 fi
 
-GNOME_COMPILE_WARNINGS(maximum)
+MATE_COMPILE_WARNINGS(maximum)
 
-# ================ gnome-doc-utils stuff ============= #
-GNOME_DOC_INIT
+# ================ mate-doc-utils stuff ============= #
+MATE_DOC_INIT
 
 # ==================== plugin stuff ================== #
 PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"

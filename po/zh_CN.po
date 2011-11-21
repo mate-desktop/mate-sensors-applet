@@ -1,11 +1,11 @@
-# Spanish translation of the GNOME Sensor Applet.
+# Spanish translation of the MATE Sensor Applet.
 # Copyright (C) 2005 Alex Murray.
-# This file is distributed under the same license as the GNOME Sensor Applet package.
+# This file is distributed under the same license as the MATE Sensor Applet package.
 # Davy Defaud <davy.defaud@free.fr>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GNOME Sensor Applet 2.2.4\n"
+"Project-Id-Version: MATE Sensor Applet 2.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-21 14:29+1030\n"
 "PO-Revision-Date: 2009-08-14 19:41+0800\n"
@@ -382,23 +382,23 @@ msgstr ""
 msgid "No sensors enabled!"
 msgstr "没有启动传感器!"
 
-#: ../sensors-applet/sensors-applet-gconf.c:44
+#: ../sensors-applet/sensors-applet-mateconf.c:44
 msgid "An error occurred loading the stored sensors data"
 msgstr "在加载传感器数据时发生错误"
 
-#: ../sensors-applet/sensors-applet-gconf.c:45
+#: ../sensors-applet/sensors-applet-mateconf.c:45
 msgid "Incompatible sensors configuration found"
 msgstr ""
 
-#: ../sensors-applet/sensors-applet-gconf.c:49
+#: ../sensors-applet/sensors-applet-mateconf.c:49
 msgid ""
 "An error has occurred when loading the stored sensors data. The default "
 "values will be used to recover from this error."
 msgstr ""
 
-#: ../sensors-applet/sensors-applet-gconf.c:52
+#: ../sensors-applet/sensors-applet-mateconf.c:52
 msgid ""
-"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"Unfortunately the previous configuration for MATE Sensors Applet is not "
 "compatible with this version. The existing sensors data will be overwritten "
 "with the default values for this new version."
 msgstr ""

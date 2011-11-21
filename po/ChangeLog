@@ -63,7 +63,7 @@
 	* fi.po, POTFILES.skip, POTFILES.in:
 	Added Finnish translation
 	Added POTFILES.skip
-	Added src/sensors-applet-gconf.c to POTFILES.in
+	Added src/sensors-applet-mateconf.c to POTFILES.in
 
 2006-01-08  Alex Murray  <murray.alex@gmail.com>
 

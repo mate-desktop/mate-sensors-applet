@@ -1,8 +1,8 @@
-GNOME Sensors Applet <http://sensors-applet.sourceforge.net/>
+MATE Sensors Applet <http://sensors-applet.sourceforge.net/>
 
 Author: Alex Murray <murray.alex@gmail.com>
 
-GNOME Sensors Applet is an applet for the GNOME Panel to display
+MATE Sensors Applet is an applet for the MATE Panel to display
 readings from hardware sensors, including CPU temperature, fan speeds
 and voltage readings under Linux.
 
@@ -28,11 +28,11 @@ Alarms can be set for each sensor to notify the user once a certain
 high or low value has been reached, and can be configured to execute a
 given command at given repeated intervals.
 
-GNOME HIG v2.0 compliant
+MATE HIG v2.0 compliant
 
-libnotify[8] support for alarm conditions
+libmatenotify[8] support for alarm conditions
 
-The icons bundled as part of GNOME Sensors Applet were created by
+The icons bundled as part of MATE Sensors Applet were created by
 epicbard[9], and are released under the Creative Commons Attribution
 Share-Alike license 3.0[10].
 
@@ -40,7 +40,7 @@ Share-Alike license 3.0[10].
 
 Requirements
 
-    * GNOME 2.8 desktop environment, with GTK >=2.4.0 and libpanelapplet-2
+    * MATE 2.8 desktop environment, with GTK >=2.4.0 and libmatepanelapplet-2
     * For ACPI support:
           o Linux kernel 2.6 with ACPI modules loaded (CONFIG_ACPI &
             CONFIG_ACPI_THERMAL)
@@ -70,7 +70,7 @@ Requirements
           o Linux kernel 2.6 with the Omnibook module
     * For NVIDIA graphics cards support:
           o NVIDIA binary driver with libNVCtrl installed (provided
-          with the nvidia-settings utility) (to enable support GNOME
+          with the nvidia-settings utility) (to enable support MATE
           Sensors Applet needs to be configured with the --with-nvidia
           flag)
     * For sonypi support:
@@ -86,7 +86,7 @@ Debian, Fedora, Ubuntu  and most standard distro users will need to do a
 to ensure proper installation within the correct path.
 
 
-To enable support for NVIDIA GPUs GNOME Sensors Applet requires the
+To enable support for NVIDIA GPUs MATE Sensors Applet requires the
 standard X11 headers as well as libNVCtrl (supplied by nvidia-settings), 
 and needs to be compiled with support for NVIDIA GPUs as:
 

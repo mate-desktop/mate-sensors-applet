@@ -16,31 +16,20 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif /* HAVE_CONFIG_H */
+#ifndef ACTIVE_SESNOR_LIBMATENOTIFY_H
+#define ACTIVE_SENSOR_LIBMATENOTIFY_H
 
-#include <mate-panel-applet.h>
-#include <string.h>
 #include "sensors-applet.h"
+#include "active-sensor.h"
 
-static gboolean sensors_applet_fill(MatePanelApplet *applet, 
-                                    const gchar *iid, 
-                                    gpointer data) {
-	SensorsApplet *sensors_applet;
-	gboolean retval = FALSE;
-        if (strcmp(iid, "OAFIID:SensorsApplet") == 0) {
-		sensors_applet = g_new0(SensorsApplet, 1);
-		sensors_applet->applet = applet;
-		sensors_applet_init(sensors_applet);
-		retval = TRUE;
-	}
-	return retval;
-}
+void active_sensor_libmatenotify_notify(ActiveSensor *active_sensor,
+                                    NotifType notif_type,
+                                    const gchar *summary,
+                                    const gchar *message,
+                                    const gchar *icon_filename,
+                                    gint timeout_msecs,
+                                    GtkWidget *attach);
+void active_sensor_libmatenotify_notify_end(ActiveSensor *active_sensor,
+                                        NotifType notif_type);
 
-MATE_PANEL_APPLET_MATECOMPONENT_FACTORY ("OAFIID:SensorsApplet_Factory", 
-			     PANEL_TYPE_APPLET, 
-			     PACKAGE, 
-			     PACKAGE_VERSION, 
-			     sensors_applet_fill, 
-			     NULL);
+#endif /* SENSORS_APPLET_LIBMATENOTIFY_H */

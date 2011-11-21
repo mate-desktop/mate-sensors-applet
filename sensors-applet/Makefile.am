@@ -1,5 +1,5 @@
 ## Process this file with automake to produce Makefile.in
-INCLUDES = -DGNOMELOCALEDIR=\""$(datadir)/locale/"\" \
+INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
@@ -8,16 +8,16 @@ INCLUDES = -DGNOMELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(GNOME_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
+	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(MATE_CFLAGS) $(CAIRO_CFLAGS) $(LIBMATENOTIFY_CFLAGS)
 
 
-LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(GNOME_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
+LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBMATENOTIFY_LIBS)
 
-if LIBNOTIFY
-libnotify_SRC = active-sensor-libnotify.c \
-		active-sensor-libnotify.h
+if LIBMATENOTIFY
+libmatenotify_SRC = active-sensor-libmatenotify.c \
+		active-sensor-libmatenotify.h
 else
-libnotify_SRC =
+libmatenotify_SRC =
 endif
 
 libexec_PROGRAMS = sensors-applet
@@ -35,9 +35,9 @@ sensors_applet_SOURCES = main.c \
 		sensors-applet-sensor.h \
 		sensors-applet-plugins.c \
 		sensors-applet-plugins.h \
-		sensors-applet-gconf.c \
-		sensors-applet-gconf.h \
-		$(libnotify_SRC) 
+		sensors-applet-mateconf.c \
+		sensors-applet-mateconf.h \
+		$(libmatenotify_SRC) 
 
 # install headers for plugins to use
 INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h

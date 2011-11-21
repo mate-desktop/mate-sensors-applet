@@ -18,4 +18,4 @@ sensors-applet/active-sensor.c
 sensors-applet/about-dialog.c
 sensors-applet/sensor-config-dialog.c
 sensors-applet/sensors-applet.c
-sensors-applet/sensors-applet-gconf.c
+sensors-applet/sensors-applet-mateconf.c

@@ -19,9 +19,9 @@
 #ifndef ACTIVE_SENSOR_H
 #define ACTIVE_SENSOR_H
 
-#ifdef HAVE_LIBNOTIFY
-#include <libnotify/notify.h>
-#include "active-sensor-libnotify.h"
+#ifdef HAVE_LIBMATENOTIFY
+#include <libmatenotify/notify.h>
+#include "active-sensor-libmatenotify.h"
 #endif
 
 #include "sensors-applet.h"
@@ -40,7 +40,7 @@ struct _ActiveSensor {
 
 	GtkTreeRowReference *sensor_row;
 
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
         NotifyNotification *notification[NUM_NOTIFS];
 #endif
 

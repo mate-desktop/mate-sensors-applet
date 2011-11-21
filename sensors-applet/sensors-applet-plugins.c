@@ -27,7 +27,7 @@
 #include "sensors-applet-plugins.h"
 #include "sensors-applet-sensor.h"
 
-#define SENSORS_APPLET_USER_PLUGIN_DIR ".gnome2/sensors-applet/plugins"
+#define SENSORS_APPLET_USER_PLUGIN_DIR ".mate2/sensors-applet/plugins"
 
 static void load_all_plugins(SensorsApplet *sensors_applet,
                              const gchar *path) 

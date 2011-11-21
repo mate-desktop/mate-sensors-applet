@@ -164,8 +164,8 @@ GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-GNOME_CFLAGS = @GNOME_CFLAGS@
-GNOME_LIBS = @GNOME_LIBS@
+MATE_CFLAGS = @MATE_CFLAGS@
+MATE_LIBS = @MATE_LIBS@
 GREP = @GREP@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
@@ -185,8 +185,8 @@ LD = @LD@
 LDFLAGS = @LDFLAGS@
 LIBATASMART_CFLAGS = @LIBATASMART_CFLAGS@
 LIBATASMART_LIBS = @LIBATASMART_LIBS@
-LIBNOTIFY_CFLAGS = @LIBNOTIFY_CFLAGS@
-LIBNOTIFY_LIBS = @LIBNOTIFY_LIBS@
+LIBMATENOTIFY_CFLAGS = @LIBMATENOTIFY_CFLAGS@
+LIBMATENOTIFY_LIBS = @LIBMATENOTIFY_LIBS@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
 LIBSENSORS_CFLAGS = @LIBSENSORS_CFLAGS@
@@ -288,10 +288,10 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = sensors-applet lib plugins pixmaps po help
-serverdir = $(libdir)/bonobo/servers
+serverdir = $(libdir)/matecomponent/servers
 server_in_files = SensorsApplet.server.in
 server_DATA = $(server_in_files:.server.in=.server)
-uidir = $(datadir)/gnome-2.0/ui
+uidir = $(datadir)/mate-2.0/ui
 ui_DATA = SensorsApplet.xml
 CLEANFILES = $(server_in_files) \
 		   $(server_DATA)
@@ -299,9 +299,9 @@ CLEANFILES = $(server_in_files) \
 EXTRA_DIST = $(ui_DATA) \
 		  $(server_DATA:.server=.server.in.in) \
 		  intltool-merge.in intltool-extract.in intltool-update.in \
-		  gnome-doc-utils.make
+		  mate-doc-utils.make
 
-DISTCLEANFILES = gnome-doc-utils.make \
+DISTCLEANFILES = mate-doc-utils.make \
 		   	intltool-extract \
 		   	intltool-merge \
 	   	   	intltool-update

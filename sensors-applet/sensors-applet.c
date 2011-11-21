@@ -28,15 +28,15 @@
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
 
-#include <gnome.h>
+#include <mate.h>
 #include <glib/gprintf.h>
 #include "sensors-applet.h"
 #include "active-sensor.h"
-#include "sensors-applet-gconf.h"
+#include "sensors-applet-mateconf.h"
 #include "sensors-applet-plugins.h"
 
-#ifdef HAVE_LIBNOTIFY
-#include "active-sensor-libnotify.h"
+#ifdef HAVE_LIBMATENOTIFY
+#include "active-sensor-libmatenotify.h"
 #define DEFAULT_NOTIFY_TIMEOUT 3000
 #endif
 
@@ -51,7 +51,7 @@
 #define ROW_SPACING 0
 
 /* callbacks for panel menu */
-static void prefs_cb(BonoboUIComponent *uic,
+static void prefs_cb(MateComponentUIComponent *uic,
 		     gpointer *data,
 		     const gchar       *verbname) {
 
@@ -65,7 +65,7 @@ static void prefs_cb(BonoboUIComponent *uic,
 	prefs_dialog_open(sensors_applet);
 }
 
-static void about_cb(BonoboUIComponent *uic,
+static void about_cb(MateComponentUIComponent *uic,
 		     gpointer data,
 		     const gchar       *verbname) {
         SensorsApplet *sensors_applet;
@@ -74,7 +74,7 @@ static void about_cb(BonoboUIComponent *uic,
 	about_dialog_open(sensors_applet);
 }
 
-static void help_cb(BonoboUIComponent *uic, 
+static void help_cb(MateComponentUIComponent *uic, 
                     gpointer data,
                     const gchar *verbname) {
 
@@ -120,8 +120,8 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
 	return;
 }
 
-static void change_background_cb(PanelApplet *applet, 
-				 PanelAppletBackgroundType type,
+static void change_background_cb(MatePanelApplet *applet, 
+				 MatePanelAppletBackgroundType type,
 				 GdkColor *color, 
 				 GdkPixmap *pixmap, 
 				 gpointer *data) {
@@ -159,8 +159,8 @@ static void change_background_cb(PanelApplet *applet,
 	}
 }
 
-static void change_orient_cb (PanelApplet *applet, 
-                              PanelAppletOrient orient, 
+static void change_orient_cb (MatePanelApplet *applet, 
+                              MatePanelAppletOrient orient, 
                               gpointer data) {
         SensorsApplet *sensors_applet;
         sensors_applet = (SensorsApplet *)data;
@@ -168,18 +168,18 @@ static void change_orient_cb (PanelApplet *applet,
         sensors_applet_display_layout_changed(sensors_applet);
 }
 
-static void size_allocate_cb(PanelApplet *applet, 
+static void size_allocate_cb(MatePanelApplet *applet, 
                              GtkAllocation *allocation, 
                              gpointer data) {
         SensorsApplet *sensors_applet;
-        PanelAppletOrient orient;
+        MatePanelAppletOrient orient;
 
         g_debug("size-allocate occurred");
         sensors_applet = (SensorsApplet *)data;
-        orient = panel_applet_get_orient(sensors_applet->applet);
+        orient = mate_panel_applet_get_orient(sensors_applet->applet);
         
-        if ((orient == PANEL_APPLET_ORIENT_LEFT) || 
-            (orient == PANEL_APPLET_ORIENT_RIGHT)) {
+        if ((orient == MATE_PANEL_APPLET_ORIENT_LEFT) || 
+            (orient == MATE_PANEL_APPLET_ORIENT_RIGHT)) {
                 if (sensors_applet->size == allocation->width)
                         return;
                 sensors_applet->size = allocation->width;
@@ -212,7 +212,7 @@ static void style_set_cb(GtkWidget *widget,
 
         g_debug("set-style occurred");
 
-        display_mode = panel_applet_gconf_get_int(sensors_applet->applet,
+        display_mode = mate_panel_applet_mateconf_get_int(sensors_applet->applet,
                                                   DISPLAY_MODE,
                                                   NULL);
         if (sensors_applet->sensors) {
@@ -255,14 +255,14 @@ static void style_set_cb(GtkWidget *widget,
             
 }
 
-static const BonoboUIVerb sensors_applet_menu_verbs[] = {
-	BONOBO_UI_UNSAFE_VERB("Preferences", prefs_cb),
-	BONOBO_UI_UNSAFE_VERB ("Help", help_cb),
-	BONOBO_UI_UNSAFE_VERB("About", about_cb),
-	BONOBO_UI_VERB_END
+static const MateComponentUIVerb sensors_applet_menu_verbs[] = {
+	MATECOMPONENT_UI_UNSAFE_VERB("Preferences", prefs_cb),
+	MATECOMPONENT_UI_UNSAFE_VERB ("Help", help_cb),
+	MATECOMPONENT_UI_UNSAFE_VERB("About", about_cb),
+	MATECOMPONENT_UI_VERB_END
 };
 
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
 static void notif_closed_cb(NotifyNotification *notification,
                             SensorsApplet *sensors_applet) 
 {
@@ -270,12 +270,12 @@ static void notif_closed_cb(NotifyNotification *notification,
         
         sensors_applet->notification = NULL;
 }
-#endif // HAVE_LIBNOTIFY
+#endif // HAVE_LIBMATENOTIFY
 
 void sensors_applet_notify(SensorsApplet *sensors_applet,
                            NotifType notif_type) 
 {
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
         gchar *message;
         gchar *summary;
         GError *error = NULL;
@@ -293,12 +293,12 @@ void sensors_applet_notify(SensorsApplet *sensors_applet,
         }
         
         switch (notif_type) {
-        case GCONF_READ_ERROR:
+        case MATECONF_READ_ERROR:
                 summary = g_strdup_printf(_("Error restoring saved sensor configuration."));
                 message = g_strdup_printf(_("An error occurred while trying to restore the saved sensor configuration. The previous configuration has been lost and will need to be re-entered."));
                 break;
                 
-        case GCONF_WRITE_ERROR:
+        case MATECONF_WRITE_ERROR:
                 summary = g_strdup_printf(_("Error saving sensor configuration."));
                 message = g_strdup_printf(_("An error occurred while trying to save the current sensor configuration. "));
                 break;
@@ -320,12 +320,12 @@ void sensors_applet_notify(SensorsApplet *sensors_applet,
                 g_debug("Error showing notification: %s", error->message);
                 g_error_free(error);
         } 
-#endif // HAVE_LIBNOTIFY
+#endif // HAVE_LIBMATENOTIFY
 }
         
 
 void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType notif_type) {
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
  
         SensorsApplet *sensors_applet;
         GList *table_children;
@@ -347,7 +347,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
         
         sensors_applet = active_sensor->sensors_applet;
 
-        if (!panel_applet_gconf_get_bool(sensors_applet->applet,
+        if (!mate_panel_applet_mateconf_get_bool(sensors_applet->applet,
                                          DISPLAY_NOTIFICATIONS,
                                          NULL)) {
                 g_debug("Wanted to display notification, but user has disabled them");
@@ -411,7 +411,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                 case TEMP_SENSOR:
                         unit_type_title = _("Temperature");
                         unit_type = _("temperature");
-                        temp_scale = (TemperatureScale)panel_applet_gconf_get_int(active_sensor->sensors_applet->applet,
+                        temp_scale = (TemperatureScale)mate_panel_applet_mateconf_get_int(active_sensor->sensors_applet->applet,
                                                                                   TEMPERATURE_SCALE,
                                                                                   NULL);
                         
@@ -457,7 +457,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
         case SENSOR_INTERFACE_ERROR:
                 summary = g_strdup_printf(_("Error updating sensor %s"), sensor_label);
                 message = g_strdup_printf(_("An error occurred while trying to update the value of the sensor %s located at %s."), sensor_label, sensor_path);
-                timeout_msecs = panel_applet_gconf_get_int(active_sensor->sensors_applet->applet,
+                timeout_msecs = mate_panel_applet_mateconf_get_int(active_sensor->sensors_applet->applet,
                                                            TIMEOUT,
                                                            NULL);
                 
@@ -467,7 +467,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                 g_assert_not_reached();
         }
         
-        active_sensor_libnotify_notify(active_sensor,
+        active_sensor_libmatenotify_notify(active_sensor,
                                        notif_type,
                                        summary,
                                        message,
@@ -484,21 +484,21 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
 
 void sensors_applet_notify_end(ActiveSensor *active_sensor, 
                                NotifType notif_type) {
-#ifdef HAVE_LIBNOTIFY
-        active_sensor_libnotify_notify_end(active_sensor, notif_type);
+#ifdef HAVE_LIBMATENOTIFY
+        active_sensor_libmatenotify_notify_end(active_sensor, notif_type);
 #endif
 }
 
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
 static void sensors_applet_notify_end_all_gfunc(ActiveSensor *active_sensor,
                                                 gpointer data) {
-        active_sensor_libnotify_notify_end(active_sensor, LOW_ALARM);
-        active_sensor_libnotify_notify_end(active_sensor, HIGH_ALARM);
+        active_sensor_libmatenotify_notify_end(active_sensor, LOW_ALARM);
+        active_sensor_libmatenotify_notify_end(active_sensor, HIGH_ALARM);
 }
 #endif
 
 void sensors_applet_notify_end_all(SensorsApplet *sensors_applet) {
-#ifdef HAVE_LIBNOTIFY
+#ifdef HAVE_LIBMATENOTIFY
         g_list_foreach(sensors_applet->active_sensors,
                        (GFunc)sensors_applet_notify_end_all_gfunc,
                        NULL);
@@ -599,14 +599,14 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
         /* otherwise can acess active_sensors without any worries */
 	num_active_sensors = g_list_length(sensors_applet->active_sensors);
 
-	display_mode = (DisplayMode)panel_applet_gconf_get_int(sensors_applet->applet, 
+	display_mode = (DisplayMode)mate_panel_applet_mateconf_get_int(sensors_applet->applet, 
                                                                DISPLAY_MODE, NULL);
-	layout_mode = (LayoutMode)panel_applet_gconf_get_int(sensors_applet->applet, 
+	layout_mode = (LayoutMode)mate_panel_applet_mateconf_get_int(sensors_applet->applet, 
                                                              LAYOUT_MODE, NULL);
 
 
-        horizontal = (((panel_applet_get_orient(sensors_applet->applet) == PANEL_APPLET_ORIENT_UP) || 
-                      (panel_applet_get_orient(sensors_applet->applet) == PANEL_APPLET_ORIENT_DOWN)));
+        horizontal = (((mate_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_UP) || 
+                      (mate_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN)));
 
         /* figure out num rows / cols by how high / wide sensors
          * labels / icons are and how much size we have to put them
@@ -1302,13 +1302,13 @@ void sensors_applet_graph_size_changed(SensorsApplet *sensors_applet) {
 
         if (sensors_applet->active_sensors) {
                 
-                graph_size = panel_applet_gconf_get_int(sensors_applet->applet,
+                graph_size = mate_panel_applet_mateconf_get_int(sensors_applet->applet,
                                                         GRAPH_SIZE,
                                                         NULL);
-                if (panel_applet_get_orient(sensors_applet->applet) == 
-                    PANEL_APPLET_ORIENT_UP ||
-                    panel_applet_get_orient(sensors_applet->applet) == 
-                    PANEL_APPLET_ORIENT_DOWN) {
+                if (mate_panel_applet_get_orient(sensors_applet->applet) == 
+                    MATE_PANEL_APPLET_ORIENT_UP ||
+                    mate_panel_applet_get_orient(sensors_applet->applet) == 
+                    MATE_PANEL_APPLET_ORIENT_DOWN) {
                         /* is horizontal so set graph_size as width */
                         dimensions[0] = graph_size;
                         dimensions[1] = sensors_applet->size;
@@ -1388,16 +1388,16 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
         /* initialise size */
         sensors_applet->size = DEFAULT_APPLET_SIZE;
 
-        panel_applet_set_flags(sensors_applet->applet, 
-                               PANEL_APPLET_EXPAND_MINOR);
+        mate_panel_applet_set_flags(sensors_applet->applet, 
+                               MATE_PANEL_APPLET_EXPAND_MINOR);
 
 	g_signal_connect(sensors_applet->applet, "destroy",
 			 G_CALLBACK(destroy_cb),
 			 sensors_applet);
 
 
-        /* if not setup, write defaults to gconf */
-        sensors_applet_gconf_setup(sensors_applet);
+        /* if not setup, write defaults to mateconf */
+        sensors_applet_mateconf_setup(sensors_applet);
 
 	/* now do any setup needed manually */
         sensors_applet_plugins_load_all(sensors_applet);        
@@ -1413,7 +1413,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	}
 	
         /* only do menu and signal connections if sensors are found */
-	panel_applet_setup_menu_from_file(sensors_applet->applet,
+	mate_panel_applet_setup_menu_from_file(sensors_applet->applet,
 					  DATADIR,
 					  SENSORS_APPLET_MENU_FILE,
 					  NULL,
@@ -1441,7 +1441,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	sensors_applet_update_active_sensors(sensors_applet);
 	sensors_applet_pack_display(sensors_applet);
 
-	sensors_applet->timeout_id = g_timeout_add_seconds(panel_applet_gconf_get_int(sensors_applet->applet, TIMEOUT, NULL) / 1000, 
+	sensors_applet->timeout_id = g_timeout_add_seconds(mate_panel_applet_mateconf_get_int(sensors_applet->applet, TIMEOUT, NULL) / 1000, 
                                                            (GSourceFunc)sensors_applet_update_active_sensors, 
                                                            sensors_applet);
 	gtk_widget_show_all(GTK_WIDGET(sensors_applet->applet));

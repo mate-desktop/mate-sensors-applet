@@ -1,6 +1,6 @@
 SUBDIRS = sensors-applet lib plugins pixmaps po help
 
-serverdir 	= $(libdir)/bonobo/servers
+serverdir 	= $(libdir)/matecomponent/servers
 server_in_files = SensorsApplet.server.in
 server_DATA 	= $(server_in_files:.server.in=.server)
 
@@ -9,7 +9,7 @@ $(server_in_files): $(server_in_files:.server.in=.server.in.in) Makefile
 
 @INTLTOOL_SERVER_RULE@
 
-uidir 		= $(datadir)/gnome-2.0/ui
+uidir 		= $(datadir)/mate-2.0/ui
 ui_DATA 	= SensorsApplet.xml
 
 CLEANFILES 	=  $(server_in_files) \
@@ -18,9 +18,9 @@ CLEANFILES 	=  $(server_in_files) \
 EXTRA_DIST 	= $(ui_DATA) \
 		  $(server_DATA:.server=.server.in.in) \
 		  intltool-merge.in intltool-extract.in intltool-update.in \
-		  gnome-doc-utils.make
+		  mate-doc-utils.make
 
-DISTCLEANFILES	=	gnome-doc-utils.make \
+DISTCLEANFILES	=	mate-doc-utils.make \
 		   	intltool-extract \
 		   	intltool-merge \
 	   	   	intltool-update

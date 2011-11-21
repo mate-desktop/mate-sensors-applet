@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GNOME Sensors Applet\n"
+"Project-Id-Version: MATE Sensors Applet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-21 14:29+1030\n"
 "PO-Revision-Date: 2006-11-26 12:17+0100\n"
@@ -385,15 +385,15 @@ msgstr "Hiba történt az elmentett szenzorbeállítások betöltésekor"
 msgid "No sensors enabled!"
 msgstr "Nincs engedélyezett szenzor!"
 
-#: ../sensors-applet/sensors-applet-gconf.c:44
+#: ../sensors-applet/sensors-applet-mateconf.c:44
 msgid "An error occurred loading the stored sensors data"
 msgstr "Hiba történt az elmentett szenzorbeállítások betöltésekor"
 
-#: ../sensors-applet/sensors-applet-gconf.c:45
+#: ../sensors-applet/sensors-applet-mateconf.c:45
 msgid "Incompatible sensors configuration found"
 msgstr "Nem kompatibilis szenzor beállítást találtam"
 
-#: ../sensors-applet/sensors-applet-gconf.c:49
+#: ../sensors-applet/sensors-applet-mateconf.c:49
 msgid ""
 "An error has occurred when loading the stored sensors data. The default "
 "values will be used to recover from this error."
@@ -401,12 +401,12 @@ msgstr ""
 "Hiba történt az elmentett szenzorbeállítások betöltésekor. Az "
 "alapértelmezett értékek lesznek betöltve."
 
-#: ../sensors-applet/sensors-applet-gconf.c:52
+#: ../sensors-applet/sensors-applet-mateconf.c:52
 msgid ""
-"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"Unfortunately the previous configuration for MATE Sensors Applet is not "
 "compatible with this version. The existing sensors data will be overwritten "
 "with the default values for this new version."
 msgstr ""
-"Sajnos az előző GNOME Sensors Applet verzió beállításai nem kompatibilisek "
+"Sajnos az előző MATE Sensors Applet verzió beállításai nem kompatibilisek "
 "ezzel a verzióéval. A jelenlegi beállítások felül lesznek írva az új verzió "
 "alapértelmezett értékeivel."

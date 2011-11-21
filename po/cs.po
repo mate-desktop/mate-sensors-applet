@@ -385,15 +385,15 @@ msgstr "Při nahrávání uložených dat senzorů došlo k chybě"
 msgid "No sensors enabled!"
 msgstr "Senzory nejsou k dispozici!"
 
-#: ../sensors-applet/sensors-applet-gconf.c:44
+#: ../sensors-applet/sensors-applet-mateconf.c:44
 msgid "An error occurred loading the stored sensors data"
 msgstr "Při nahrávání uložených dat senzorů došlo k chybě"
 
-#: ../sensors-applet/sensors-applet-gconf.c:45
+#: ../sensors-applet/sensors-applet-mateconf.c:45
 msgid "Incompatible sensors configuration found"
 msgstr "Byla nalezena nekompatibilní konfigurace senzorů"
 
-#: ../sensors-applet/sensors-applet-gconf.c:49
+#: ../sensors-applet/sensors-applet-mateconf.c:49
 msgid ""
 "An error has occurred when loading the stored sensors data. The default "
 "values will be used to recover from this error."
@@ -401,9 +401,9 @@ msgstr ""
 "Při nahrávání uložených dat senzorů došlo k chybě. Budou použity výchozí "
 "hodnoty."
 
-#: ../sensors-applet/sensors-applet-gconf.c:52
+#: ../sensors-applet/sensors-applet-mateconf.c:52
 msgid ""
-"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"Unfortunately the previous configuration for MATE Sensors Applet is not "
 "compatible with this version. The existing sensors data will be overwritten "
 "with the default values for this new version."
 msgstr ""

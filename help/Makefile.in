@@ -15,8 +15,8 @@
 
 @SET_MAKE@
 
-# gnome-doc-utils.make - make magic for building documentation
-# Copyright (C) 2004-2005 Shaun McCance <shaunm@gnome.org>
+# mate-doc-utils.make - make magic for building documentation
+# Copyright (C) 2004-2005 Shaun McCance <shaunm@mate.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -58,7 +58,7 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/gnome-doc-utils.make ChangeLog
+	$(top_srcdir)/mate-doc-utils.make ChangeLog
 subdir = help
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -110,8 +110,8 @@ GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-GNOME_CFLAGS = @GNOME_CFLAGS@
-GNOME_LIBS = @GNOME_LIBS@
+MATE_CFLAGS = @MATE_CFLAGS@
+MATE_LIBS = @MATE_LIBS@
 GREP = @GREP@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
@@ -131,8 +131,8 @@ LD = @LD@
 LDFLAGS = @LDFLAGS@
 LIBATASMART_CFLAGS = @LIBATASMART_CFLAGS@
 LIBATASMART_LIBS = @LIBATASMART_LIBS@
-LIBNOTIFY_CFLAGS = @LIBNOTIFY_CFLAGS@
-LIBNOTIFY_LIBS = @LIBNOTIFY_LIBS@
+LIBMATENOTIFY_CFLAGS = @LIBMATENOTIFY_CFLAGS@
+LIBMATENOTIFY_LIBS = @LIBMATENOTIFY_LIBS@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
 LIBSENSORS_CFLAGS = @LIBSENSORS_CFLAGS@
@@ -351,7 +351,7 @@ DOC_LINGUAS =
 all: all-am
 
 .SUFFIXES:
-$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am $(top_srcdir)/gnome-doc-utils.make $(am__configure_deps)
+$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am $(top_srcdir)/mate-doc-utils.make $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -573,8 +573,8 @@ $(DOC_H_FILE): $(DOC_H_DOCS);
 	cp $@.tmp $@ && rm -f $@.tmp
 
 dist-check-gdu:
-@HAVE_GNOME_DOC_UTILS_FALSE@	@echo "*** GNOME Doc Utils must be installed in order to make dist"
-@HAVE_GNOME_DOC_UTILS_FALSE@	@false
+@HAVE_MATE_DOC_UTILS_FALSE@	@echo "*** MATE Doc Utils must be installed in order to make dist"
+@HAVE_MATE_DOC_UTILS_FALSE@	@false
 
 .PHONY: dist-doc-header
 dist-doc-header: $(DOC_H_FILE)
@@ -616,12 +616,12 @@ DOC_LINGUAS ?=
 
 _xml2po ?= `which xml2po`
 
-_db2html ?= `$(PKG_CONFIG) --variable db2html gnome-doc-utils`
-_db2omf  ?= `$(PKG_CONFIG) --variable db2omf gnome-doc-utils`
-_malrng  ?= `$(PKG_CONFIG) --variable malrng gnome-doc-utils`
-_chunks  ?= `$(PKG_CONFIG) --variable xmldir gnome-doc-utils`/gnome/xslt/docbook/utils/chunks.xsl
-_credits ?= `$(PKG_CONFIG) --variable xmldir gnome-doc-utils`/gnome/xslt/docbook/utils/credits.xsl
-_ids ?= `$(PKG_CONFIG) --variable xmldir gnome-doc-utils`/gnome/xslt/docbook/utils/ids.xsl
+_db2html ?= `$(PKG_CONFIG) --variable db2html mate-doc-utils`
+_db2omf  ?= `$(PKG_CONFIG) --variable db2omf mate-doc-utils`
+_malrng  ?= `$(PKG_CONFIG) --variable malrng mate-doc-utils`
+_chunks  ?= `$(PKG_CONFIG) --variable xmldir mate-doc-utils`/mate/xslt/docbook/utils/chunks.xsl
+_credits ?= `$(PKG_CONFIG) --variable xmldir mate-doc-utils`/mate/xslt/docbook/utils/credits.xsl
+_ids ?= `$(PKG_CONFIG) --variable xmldir mate-doc-utils`/mate/xslt/docbook/utils/ids.xsl
 @ENABLE_SK_TRUE@_skpkgdatadir ?= `scrollkeeper-config --pkgdatadir`
 @ENABLE_SK_TRUE@_sklocalstatedir ?= `scrollkeeper-config --pkglocalstatedir`
 @ENABLE_SK_TRUE@_skcontentslist ?= $(_skpkgdatadir)/Templates/C/scrollkeeper_cl.xml

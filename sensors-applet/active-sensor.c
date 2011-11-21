@@ -24,12 +24,12 @@
 #include <string.h>
 #endif /* HAVE_STRING_H */
 
-#include <gconf/gconf-client.h>
-#include <gnome.h>
+#include <mateconf/mateconf-client.h>
+#include <mate.h>
 
 #include "active-sensor.h"
 #include "sensors-applet-plugins.h"
-#include "sensors-applet-gconf.h"
+#include "sensors-applet-mateconf.h"
 
 typedef enum {
         VERY_LOW_SENSOR_VALUE = 0,
@@ -80,7 +80,7 @@ static gboolean active_sensor_execute_alarm(ActiveSensor *active_sensor,
                 (notif_type == LOW_ALARM ? 
                  "LOW" : "HIGH"),
                 active_sensor->alarm_command[notif_type]);
-	pid = gnome_execute_shell(NULL, 
+	pid = mate_execute_shell(NULL, 
                                   active_sensor->alarm_command[notif_type]);
         g_debug("Command executed in shell with pid %d", pid);
 
@@ -426,7 +426,7 @@ void active_sensor_update_graph_dimensions(ActiveSensor *as,
 ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
                                 GtkTreeRowReference *sensor_row) {
         ActiveSensor *active_sensor;
-        PanelAppletOrient orient;
+        MatePanelAppletOrient orient;
         gint graph_size;
         gboolean horizontal;
 
@@ -459,12 +459,12 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
                               GDK_ALL_EVENTS_MASK);
 
         /* need to set size according to orientation */
-        orient = panel_applet_get_orient(active_sensor->sensors_applet->applet);
-        graph_size = panel_applet_gconf_get_int(active_sensor->sensors_applet->applet, 
+        orient = mate_panel_applet_get_orient(active_sensor->sensors_applet->applet);
+        graph_size = mate_panel_applet_mateconf_get_int(active_sensor->sensors_applet->applet, 
                                                 GRAPH_SIZE, NULL);
 
-        horizontal = ((orient == PANEL_APPLET_ORIENT_UP) ||
-                      (orient == PANEL_APPLET_ORIENT_DOWN));
+        horizontal = ((orient == MATE_PANEL_APPLET_ORIENT_UP) ||
+                      (orient == MATE_PANEL_APPLET_ORIENT_DOWN));
 
         active_sensor_set_graph_dimensions(active_sensor,
                                            (horizontal ? graph_size : sensors_applet->size),
@@ -527,8 +527,8 @@ void active_sensor_update(ActiveSensor *active_sensor,
         gchar *tooltip = NULL;
         gchar *value_tooltip = NULL;
 
-        /* hidden gconf options */
-        GConfClient *client;
+        /* hidden mateconf options */
+        MateConfClient *client;
         gint font_size = 0;
         gboolean hide_units = FALSE;
 
@@ -584,14 +584,14 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                  * note this is not unique */
                                 sensor_value = -1;
 			} else { 
-                                /* use hidden gconf key for hide_units */
+                                /* use hidden mateconf key for hide_units */
 
-                                if ((client = gconf_client_get_default()) != NULL) {
-                                        hide_units = gconf_client_get_bool(client,
+                                if ((client = mateconf_client_get_default()) != NULL) {
+                                        hide_units = mateconf_client_get_bool(client,
                                                                           "/apps/sensors-applet/" HIDE_UNITS,
                                                                           &error);
                                         if (error) {
-                                                g_debug("Could not get hide units from GConf - assuming false");
+                                                g_debug("Could not get hide units from MateConf - assuming false");
                                                 hide_units = FALSE;
                                                 g_error_free(error);
                                                 error = NULL;
@@ -606,7 +606,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
 				switch (sensor_type) {
 				case TEMP_SENSOR:
 
-                                        scale = (TemperatureScale)panel_applet_gconf_get_int(sensors_applet->applet, TEMPERATURE_SCALE, NULL);
+                                        scale = (TemperatureScale)mate_panel_applet_mateconf_get_int(sensors_applet->applet, TEMPERATURE_SCALE, NULL);
                                         /* scale value */
 					sensor_value = sensors_applet_convert_temperature(sensor_value, 
                                                                                           CELSIUS,
@@ -661,17 +661,17 @@ void active_sensor_update(ActiveSensor *active_sensor,
                         g_free(value_tooltip);
 
                         /* only do icons and labels / graphs if needed */
-                        display_mode = panel_applet_gconf_get_int(sensors_applet->applet,
+                        display_mode = mate_panel_applet_mateconf_get_int(sensors_applet->applet,
                                                                   DISPLAY_MODE,
                                                                   NULL);
                         
                         /* most users wont have a font size set */
-                        if ((client = gconf_client_get_default()) != NULL) {
-                                font_size = gconf_client_get_int(client,
+                        if ((client = mateconf_client_get_default()) != NULL) {
+                                font_size = mateconf_client_get_int(client,
                                                                  "/apps/sensors-applet/" FONT_SIZE,
                                                                  &error);
                                 if (error) {
-                                        g_debug("Could not get font size from GConf - assuming default size");
+                                        g_debug("Could not get font size from MateConf - assuming default size");
                                         font_size = 0;
                                         g_error_free(error);
                                         error = NULL;

@@ -36,8 +36,8 @@
 /* Define if your <locale.h> file defines LC_MESSAGES. */
 #undef HAVE_LC_MESSAGES
 
-/* libnotify available */
-#undef HAVE_LIBNOTIFY
+/* libmatenotify available */
+#undef HAVE_LIBMATENOTIFY
 
 /* libsensors is available */
 #undef HAVE_LIBSENSORS

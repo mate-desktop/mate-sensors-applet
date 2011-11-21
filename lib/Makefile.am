@@ -1,5 +1,5 @@
 ## Process this file with automake to produce Makefile.in
-INCLUDES = -DGNOMELOCALEDIR=\""$(datadir)/locale/"\" \
+INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \

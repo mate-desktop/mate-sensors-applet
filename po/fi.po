@@ -1,4 +1,4 @@
-# Finnish translation for the GNOME Sensors Applet.
+# Finnish translation for the MATE Sensors Applet.
 # Copyright © 2005 Lauri Nurmi.
 # This file is distributed under the same license as the sensors-applet package.
 # Lauri Nurmi <lanurmi@iki.fi>, 2005.
@@ -10,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2009-11-21 14:29+1030\n"
 "PO-Revision-Date: 2005-11-17 01:15+0200\n"
 "Last-Translator: Lauri Nurmi <lanurmi@iki.fi>\n"
-"Language-Team: GFTT <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language-Team: GFTT <mate-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -235,7 +235,7 @@ msgid ""
 msgstr ""
 "Lauri Nurmi, 2005\n"
 "\n"
-"http://www.gnome.fi/"
+"http://www.mate.fi/"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 #, fuzzy
@@ -399,23 +399,23 @@ msgstr ""
 msgid "No sensors enabled!"
 msgstr "Antureita ei ole käytössä!"
 
-#: ../sensors-applet/sensors-applet-gconf.c:44
+#: ../sensors-applet/sensors-applet-mateconf.c:44
 msgid "An error occurred loading the stored sensors data"
 msgstr ""
 
-#: ../sensors-applet/sensors-applet-gconf.c:45
+#: ../sensors-applet/sensors-applet-mateconf.c:45
 msgid "Incompatible sensors configuration found"
 msgstr ""
 
-#: ../sensors-applet/sensors-applet-gconf.c:49
+#: ../sensors-applet/sensors-applet-mateconf.c:49
 msgid ""
 "An error has occurred when loading the stored sensors data. The default "
 "values will be used to recover from this error."
 msgstr ""
 
-#: ../sensors-applet/sensors-applet-gconf.c:52
+#: ../sensors-applet/sensors-applet-mateconf.c:52
 msgid ""
-"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"Unfortunately the previous configuration for MATE Sensors Applet is not "
 "compatible with this version. The existing sensors data will be overwritten "
 "with the default values for this new version."
 msgstr ""

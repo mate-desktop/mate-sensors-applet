@@ -54,14 +54,14 @@ am__sensors_applet_SOURCES_DIST = main.c about-dialog.c about-dialog.h \
 	sensor-config-dialog.c sensor-config-dialog.h sensors-applet.c \
 	sensors-applet.h sensors-applet-sensor.h \
 	sensors-applet-plugins.c sensors-applet-plugins.h \
-	sensors-applet-gconf.c sensors-applet-gconf.h \
-	active-sensor-libnotify.c active-sensor-libnotify.h
-@LIBNOTIFY_TRUE@am__objects_1 = active-sensor-libnotify.$(OBJEXT)
+	sensors-applet-mateconf.c sensors-applet-mateconf.h \
+	active-sensor-libmatenotify.c active-sensor-libmatenotify.h
+@LIBMATENOTIFY_TRUE@am__objects_1 = active-sensor-libmatenotify.$(OBJEXT)
 am_sensors_applet_OBJECTS = main.$(OBJEXT) about-dialog.$(OBJEXT) \
 	active-sensor.$(OBJEXT) prefs-dialog.$(OBJEXT) \
 	sensor-config-dialog.$(OBJEXT) sensors-applet.$(OBJEXT) \
 	sensors-applet-plugins.$(OBJEXT) \
-	sensors-applet-gconf.$(OBJEXT) $(am__objects_1)
+	sensors-applet-mateconf.$(OBJEXT) $(am__objects_1)
 sensors_applet_OBJECTS = $(am_sensors_applet_OBJECTS)
 sensors_applet_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I.@am__isrc@
@@ -143,8 +143,8 @@ GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-GNOME_CFLAGS = @GNOME_CFLAGS@
-GNOME_LIBS = @GNOME_LIBS@
+MATE_CFLAGS = @MATE_CFLAGS@
+MATE_LIBS = @MATE_LIBS@
 GREP = @GREP@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
@@ -164,10 +164,10 @@ LD = @LD@
 LDFLAGS = @LDFLAGS@
 LIBATASMART_CFLAGS = @LIBATASMART_CFLAGS@
 LIBATASMART_LIBS = @LIBATASMART_LIBS@
-LIBNOTIFY_CFLAGS = @LIBNOTIFY_CFLAGS@
-LIBNOTIFY_LIBS = @LIBNOTIFY_LIBS@
+LIBMATENOTIFY_CFLAGS = @LIBMATENOTIFY_CFLAGS@
+LIBMATENOTIFY_LIBS = @LIBMATENOTIFY_LIBS@
 LIBOBJS = @LIBOBJS@
-LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(GNOME_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
+LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBMATENOTIFY_LIBS)
 LIBSENSORS_CFLAGS = @LIBSENSORS_CFLAGS@
 LIBSENSORS_LIBS = @LIBSENSORS_LIBS@
 LIBTOOL = @LIBTOOL@
@@ -266,7 +266,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-INCLUDES = -DGNOMELOCALEDIR=\""$(datadir)/locale/"\" \
+INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
@@ -275,11 +275,11 @@ INCLUDES = -DGNOMELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(GNOME_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
+	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(MATE_CFLAGS) $(CAIRO_CFLAGS) $(LIBMATENOTIFY_CFLAGS)
 
-@LIBNOTIFY_FALSE@libnotify_SRC = 
-@LIBNOTIFY_TRUE@libnotify_SRC = active-sensor-libnotify.c \
-@LIBNOTIFY_TRUE@		active-sensor-libnotify.h
+@LIBMATENOTIFY_FALSE@libmatenotify_SRC = 
+@LIBMATENOTIFY_TRUE@libmatenotify_SRC = active-sensor-libmatenotify.c \
+@LIBMATENOTIFY_TRUE@		active-sensor-libmatenotify.h
 
 sensors_applet_SOURCES = main.c \
 		about-dialog.c \
@@ -295,9 +295,9 @@ sensors_applet_SOURCES = main.c \
 		sensors-applet-sensor.h \
 		sensors-applet-plugins.c \
 		sensors-applet-plugins.h \
-		sensors-applet-gconf.c \
-		sensors-applet-gconf.h \
-		$(libnotify_SRC) 
+		sensors-applet-mateconf.c \
+		sensors-applet-mateconf.h \
+		$(libmatenotify_SRC) 
 
 
 # install headers for plugins to use
@@ -413,12 +413,12 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/about-dialog.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/active-sensor-libnotify.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/active-sensor-libmatenotify.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/active-sensor.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/prefs-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sensor-config-dialog.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sensors-applet-gconf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sensors-applet-mateconf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sensors-applet-plugins.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sensors-applet.Po@am__quote@
 

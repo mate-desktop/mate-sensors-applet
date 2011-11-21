@@ -1,13 +1,13 @@
-# French translation of the GNOME Sensor Applet.
+# French translation of the MATE Sensor Applet.
 # Copyright (C) 2005 Alex Murray.
-# This file is distributed under the same license as the GNOME Sensor Applet package.
+# This file is distributed under the same license as the MATE Sensor Applet package.
 # Davy Defaud <davy.defaud@free.fr>, 2005.
 # Davy Defaud <davy.defaud@free.fr>, 2006.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GNOME Sensor Applet 1.7.10\n"
+"Project-Id-Version: MATE Sensor Applet 1.7.10\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-21 14:29+1030\n"
 "PO-Revision-Date: 2006-11-24 11:51+0100\n"
@@ -386,16 +386,16 @@ msgstr ""
 msgid "No sensors enabled!"
 msgstr "Aucun capteur activé!"
 
-#: ../sensors-applet/sensors-applet-gconf.c:44
+#: ../sensors-applet/sensors-applet-mateconf.c:44
 msgid "An error occurred loading the stored sensors data"
 msgstr ""
 "Une erreur est survenue lors du chargement des préférences des capteurs"
 
-#: ../sensors-applet/sensors-applet-gconf.c:45
+#: ../sensors-applet/sensors-applet-mateconf.c:45
 msgid "Incompatible sensors configuration found"
 msgstr "Configuration de capteurs incompatible"
 
-#: ../sensors-applet/sensors-applet-gconf.c:49
+#: ../sensors-applet/sensors-applet-mateconf.c:49
 msgid ""
 "An error has occurred when loading the stored sensors data. The default "
 "values will be used to recover from this error."
@@ -403,13 +403,13 @@ msgstr ""
 "Une erreur est survenue lors du chargement des préférences des capteurs.Les "
 "valeurs par défaut vont être utilisées."
 
-#: ../sensors-applet/sensors-applet-gconf.c:52
+#: ../sensors-applet/sensors-applet-mateconf.c:52
 msgid ""
-"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"Unfortunately the previous configuration for MATE Sensors Applet is not "
 "compatible with this version. The existing sensors data will be overwritten "
 "with the default values for this new version."
 msgstr ""
-"La configuration précédente du moniteur matériel GNOME Sensors Applet n'est "
+"La configuration précédente du moniteur matériel MATE Sensors Applet n'est "
 "pas compatible avec cette version. Les préférences de capteurs vont être "
 "remplacées par leurs valeurs par défaut pour cette nouvelle version."
 

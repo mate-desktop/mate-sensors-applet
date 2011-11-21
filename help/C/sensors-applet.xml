@@ -5,7 +5,7 @@
   <!ENTITY appletversion "1.6">
   <!ENTITY manrevision "2.0">
   <!ENTITY date "January 2006">
-  <!ENTITY applet "GNOME Sensors Applet">
+  <!ENTITY applet "MATE Sensors Applet">
   <!ENTITY author-name "Alex Murray">
   <!ENTITY author-email "murray.alex@gmail.com">
   <!ENTITY project-webpage "http://sensors-applet.sourceforge.net/">
@@ -19,8 +19,8 @@
 ]>
 <!-- 
       (Do not remove this comment block.)
-  Maintained by the GNOME Documentation Project
-  http://developer.gnome.org/projects/gdp
+  Maintained by the MATE Documentation Project
+  http://developer.mate.org/projects/gdp
   Template version: 2.0 beta
   Template last modified Feb 06, 2003
 -->
@@ -51,7 +51,7 @@
     not specified, the publisher/author is the same for all versions of the 
     document.
     <publisher> 
-    <publishername> GNOME Documentation Project </publishername> 
+    <publishername> MATE Documentation Project </publishername> 
   </publisher> 
     -->
     &legal;
@@ -64,10 +64,10 @@
 	<firstname>Alex</firstname> 
 	<surname>Murray</surname> 
 	<affiliation> 
-	  <!-- <orgname>GNOME Documentation
+	  <!-- <orgname>MATE Documentation
 	  Project</orgname> -->
 	  <!-- The email address of the author is optional and is commented out by default. 
-	  <address> <email>doc-writer2@gnome.org</email> </address> 
+	  <address> <email>doc-writer2@mate.org</email> </address> 
 	  --> 
 	</affiliation> 
       </author> 
@@ -78,7 +78,7 @@
       <surname>Translator 1</surname> 
       <affiliation> 
       <orgname>Latin Translation Team</orgname> 
-      <address> <email>translator@gnome.org</email> </address> 
+      <address> <email>translator@mate.org</email> </address> 
     </affiliation>
       <contrib>Latin translation</contrib>
     </othercredit>
@@ -89,11 +89,11 @@
     <!-- Remember to remove the &manrevision; entity from the revision entries other
     -->
     <!-- than the current revision. -->
-    <!-- The revision numbering system for GNOME manuals is as follows: -->
+    <!-- The revision numbering system for MATE manuals is as follows: -->
     <!-- * the revision number consists of two components -->
-    <!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+    <!-- * the first component of the revision number reflects the release version of the MATE desktop. -->
     <!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
-    <!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+    <!-- For example, if the MATE desktop release is V2.x, the first version of the manual that -->
     <!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
     <!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
     <!-- to V3.0, and so on. -->  
@@ -106,7 +106,7 @@
 
 	    <email>&author-email;</email>
 	  </para> 
-	  <!-- <para role="publisher">GNOME Documentation Project</para> -->
+	  <!-- <para role="publisher">MATE Documentation Project</para> -->
 	</revdescription> 
       </revision> 
     </revhistory> 
@@ -524,7 +524,7 @@ Alarms for individual sensors must also be enabled.
 		      <para>You can play a sound when the alarm occurs
 			by using the command
 			<command>esdplay</command> which should be
-			available as part of the standard GNOME
+			available as part of the standard MATE
 			installation. (Note: If this does not work,
 			you could also try <command>aplay</command>
 			which is the default ALSA sound player).
@@ -546,17 +546,17 @@ Alarms for individual sensors must also be enabled.
 		    </term>
 		    <listitem>
 		      <para>
-			The program <command>zenity</command> can be used to create
+			The program <command>matedialog</command> can be used to create
 			dialog boxes to be displayed on the users current
 			display, and can thus be used to create pop-up
 			style notifications that the alarm has
 			occurred.
 
-		      <screen><userinput><command>zenity --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
+		      <screen><userinput><command>matedialog --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
 
-		      For more information regarding Zenity please
-		      consult the Zenity <ulink type="help"
-			url="ghelp:zenity">documentation</ulink>.
+		      For more information regarding MateDialog please
+		      consult the MateDialog <ulink type="help"
+			url="ghelp:matedialog">documentation</ulink>.
 		    </para>
 		  </listitem>
 		  </varlistentry>
@@ -571,9 +571,9 @@ Alarms for individual sensors must also be enabled.
 		      Multiple commands can be executed one after the
 		      other using the "&amp;&amp;" construct to separate
 		      them. To play a sound and pop-up a dialog via
-		      Zenity the follow command can be used:
+		      MateDialog the follow command can be used:
 
-		      <screen><userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; zenity --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
+		      <screen><userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; matedialog --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
 
 		    </para>
 		  </listitem>
@@ -613,25 +613,25 @@ Alarms for individual sensors must also be enabled.
     <title>Advanced Options</title>
     <para>There are a number of advanced options which can be set to
     customize the display of sensors within the panel, which are set
-    using the GConf system.</para>
+    using the MateConf system.</para>
     <variablelist>
       <varlistentry>
 	<term><guilabel>Font Size</guilabel></term>
 	<listitem>
 	  <para>The font size for labels and values is normally
-	  derived from the standard Application Font size of the GNOME
+	  derived from the standard Application Font size of the MATE
 	  Desktop, however this can be overridden. This is done by
 	    setting the value of the parameter
 
 	  <emphasis>/apps/sensors-applet/font-size</emphasis>
 
-	    within the user's GConf database. This can be achieved by
+	    within the user's MateConf database. This can be achieved by
 	  the following command, where the font size is specified as
 	  the last parameter, and in this case is set to
 	  <emphasis>10</emphasis>:
 
 	    <!-- CAN"T HAVE ANY LINE BREAKS IN COMMAND -->
-	    <screen><userinput><command>gconftool-2 -s /apps/sensors-applet/font-size -t int 10</command></userinput></screen>
+	    <screen><userinput><command>mateconftool-2 -s /apps/sensors-applet/font-size -t int 10</command></userinput></screen>
 	  </para>
 
 	  <note>
@@ -651,21 +651,21 @@ Alarms for individual sensors must also be enabled.
 
 	  <emphasis>/apps/sensors-applet/hide-units</emphasis>
 
-	    within the user's GConf database. This can be achieved by
+	    within the user's MateConf database. This can be achieved by
 	  the following command, where the value is specified as
 	  either <emphasis>true</emphasis> or
 	  <emphasis>false</emphasis> and is specified as the last
 	  parameter. In this case is the units will be hidden (the
 	  value is set to <emphasis>true</emphasis>):
 	    <!-- CAN"T HAVE ANY LINE BREAKS IN COMMAND -->
-	    <screen><userinput><command>gconftool-2 -s /apps/sensors-applet/hide-units -t bool true</command></userinput></screen>
+	    <screen><userinput><command>mateconftool-2 -s /apps/sensors-applet/hide-units -t bool true</command></userinput></screen>
 	  </para>
 	</listitem>
       </varlistentry>
     </variablelist>
     <note>
       <para>These values can also be set using the <ulink type="help"
-	url="ghelp:gconf-editor">Configuration Editor</ulink>
+	url="ghelp:mateconf-editor">Configuration Editor</ulink>
 	application.
       </para>
       </note>
@@ -725,9 +725,9 @@ Alarms for individual sensors must also be enabled.
 
 </article> 
 <!-- OVERRIDE DICTIONARY SETTING SO THAT USE AMERICAN ENGLISH STYLE - -->
-<!-- FROM GNOME HIG -->
+<!-- FROM MATE HIG -->
 <!-- Local IspellDict: english -->
 <!-- LocalWords: hddtemp filesystem proc lm README Inspiron windtunnel -->
 <!-- LocalWords: ibm ACPI sysfs PowerPC adt Omnibook NVIDIA -->
-<!-- LocalWords: libNVCtrl libsensors nvidia esdplay aplay ALSA zenity -->
-<!-- LocalWords: acpi iMac Windfarm nvidia gconftool GConf bool -->
+<!-- LocalWords: libNVCtrl libsensors nvidia esdplay aplay ALSA matedialog -->
+<!-- LocalWords: acpi iMac Windfarm nvidia mateconftool MateConf bool -->

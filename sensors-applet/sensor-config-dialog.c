@@ -20,7 +20,7 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#include <gnome.h>
+#include <mate.h>
 #include "sensor-config-dialog.h"
 #include "sensors-applet.h"
 

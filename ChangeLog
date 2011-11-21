@@ -1,6 +1,6 @@
 2010-06-24  Alex Murray <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.27 Released
+	* MATE Sensors Applet Version 2.27 Released
 
 2010-06-23  Alex Murray <murray.alex@gmail.com>
 
@@ -13,7 +13,7 @@
 
 2010-06-15  Alex Murray <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.6 Released
+	* MATE Sensors Applet Version 2.2.6 Released
 
 	* Rename and port devkit-disks plugin to udisks interface as
 	devkit-disks no longer exists
@@ -22,7 +22,7 @@
 
 2009-11-21  Alex Murray <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.5 Released
+	* MATE Sensors Applet Version 2.2.5 Released
 
 	* Port devicekit-disks plugin to use latest devicekit DBus API - now
 	requires libatasmart as a dependency as a result (Patch contributed by
@@ -50,21 +50,21 @@
 
 2009-04-21  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.4 Released
+	* MATE Sensors Applet Version 2.2.4 Released
 
 	* Fix bug where changing temperature scale would convert limits of
 	non-temperature sensors (Fixes Ubuntu bug #249955)
 
 2009-03-15  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.3 Released
+	* MATE Sensors Applet Version 2.2.3 Released
 
 	* Fix error retrieving sensor value if compiled against old libsensors
 	library version (libsensors API version < 4) (Fixes bug #2687451).
 
 2009-03-08  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.2 Released
+	* MATE Sensors Applet Version 2.2.2 Released
 
 	* Avoid using sensors_parse_chip_name in libsensors plugin each time we
 	need to get a sensor's value since it leaks memory. (Fixes bug
@@ -99,13 +99,13 @@
 
 2007-12-26  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.1 Released
+	* MATE Sensors Applet Version 2.2.1 Released
 
 	* Fixed bug in libsensors4 plugin [ 1858005 ] segfault on startup
 	
 2007-12-24  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.2.0 Released
+	* MATE Sensors Applet Version 2.2.0 Released
 
 2007-12-23  Alex Murray  <murray.alex@gmail.com>
 
@@ -121,22 +121,22 @@
 
 	* Implemented a plugin system, so all interface specific code are
 	compiled into separated plugin modules, allowing them to be
-	shipped separately from the main GNOME Sensors Applet program, to
+	shipped separately from the main MATE Sensors Applet program, to
 	fix Debian bug #375179, and allow the NVIDIA plugin to be split
 	into a separate package if needed.
 
 2007-12-11  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 2.0.1 Released
+	* MATE Sensors Applet Version 2.0.1 Released
 
 	* Use new GTK tooltip API when possible
 
-	* Update GTK icon cache on uninstall to comply with GNOME bug
+	* Update GTK icon cache on uninstall to comply with MATE bug
 	#362604
 
 	* Use g_timeout_add_seconds() when possible to save power
 
-	* GNOME Sensors Applet Version 2.0.0 Released
+	* MATE Sensors Applet Version 2.0.0 Released
 
 	* src/libsensors-sensors-interface.c: Added support for
 	libsensors4 API - to be shipped with upcoming Fedora 9 and Ubuntu
@@ -144,7 +144,7 @@
 
 2007-10-25  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.8.2 Released
+	* MATE Sensors Applet Version 1.8.2 Released
 
 	* Updated README to reflect re-licensing of icons under CC-BY-SA
 	3.0 (https://bugs.launchpad.net/ubuntu/+source/sensors-applet/+bug/69800/comments/12)
@@ -156,7 +156,7 @@
 
 2007-07-04  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.8.1 Released
+	* MATE Sensors Applet Version 1.8.1 Released
 
 	* Fixed bug [ 1738013 ] "38 °C" instead of "38°C"
 	
@@ -164,7 +164,7 @@
 
 2007-07-03  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.8.0 Released
+	* MATE Sensors Applet Version 1.8.0 Released
 
 2007-07-02  Alex Murray  <murray.alex@gmail.com>
 	
@@ -178,7 +178,7 @@
 
 2007-04-27  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.12 Released
+	* MATE Sensors Applet Version 1.7.12 Released
 
 	* Fixed bug [ 1705371 ] - Don't see second core on Core/Core 2
 
@@ -189,7 +189,7 @@
 
 2007-02-10  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.11 Released
+	* MATE Sensors Applet Version 1.7.11 Released
 
 2007-02-08  Alex Murray  <murray.alex@gmail.com>
 
@@ -221,7 +221,7 @@
 
 2006-11-22  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.10 Released
+	* MATE Sensors Applet Version 1.7.10 Released
 	
 	* Fixed bug where when upgrading from a previous version, the
 	graph size would always be restored from the previous version
@@ -240,7 +240,7 @@
 
 2006-11-01  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.9 Released
+	* MATE Sensors Applet Version 1.7.9 Released
 	
 	* Added new Tango style icons (very big thanks to epicbard)
 
@@ -255,7 +255,7 @@
 
 2006-08-23  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.8 Released
+	* MATE Sensors Applet Version 1.7.8 Released
 
 2006-08-22  Alex Murray  <murray.alex@gmail.com>
 
@@ -270,7 +270,7 @@
 
 2006-08-20  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.7 Released
+	* MATE Sensors Applet Version 1.7.7 Released
 
 2006-08-19  Alex Murray  <murray.alex@gmail.com>
 
@@ -286,7 +286,7 @@
 
 2006-08-07  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.6 Released
+	* MATE Sensors Applet Version 1.7.6 Released
 
 	* Fixed crash if no sensors found (should resolve Ubuntu bug
 	#51575)
@@ -303,24 +303,24 @@
 
 2006-07-25  Alex Murray  <murray.alex@gmail.com>
 
-	* Changed tooltips to display units regardless of GConf setting 
+	* Changed tooltips to display units regardless of MateConf setting 
 	(fixes bug [ 1528198 ] tooltip & hide units).
 
 	* Pack sensor rows closer together on panel
 
 2006-07-24  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.5 Released
+	* MATE Sensors Applet Version 1.7.5 Released
 
 	* Fix for Debian bug #379361
 
 2006-07-21  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.4 Released
+	* MATE Sensors Applet Version 1.7.4 Released
 
 	* Fixed crash when no sensors enabled.
 
-	* GNOME Sensors Applet Version 1.7.3 Released
+	* MATE Sensors Applet Version 1.7.3 Released
 
 	* Fixed bug to allow for vertical panels - now we use a single
 	variable Graph Size which sets the width when the applet is on top
@@ -344,7 +344,7 @@
 	kernel module http://popies.net/sonypi/)
 	
 	* Added support for setting the font size and hiding the units of
-	labels via GConf parameters
+	labels via MateConf parameters
 	
 	* Added a section to the help manual 'Advanced Options' which
 	details the font size and unit hiding parameters and how to set
@@ -360,7 +360,7 @@
 
 2006-07-05  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.2 Released
+	* MATE Sensors Applet Version 1.7.2 Released
 	* Optimised startup time by reducing search time for new sensors
 	* Optimised updating of active sensors to reduce overall CPU usage
 	* Added help buttons in Preferences and Sensor Properties windows
@@ -384,10 +384,10 @@
 
 2006-06-27  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.7.1 Released
+	* MATE Sensors Applet Version 1.7.1 Released
 	* Missed bug in libsensors interface
 
-	* GNOME Sensors Applet Version 1.7.0 released
+	* MATE Sensors Applet Version 1.7.0 released
 	* Added graph display for sensors
 	* Fixed bug where sensors would stop updating sometimes
 
@@ -398,12 +398,12 @@
 
 2006-06-20  Alex Murray  <murray.alex@gmail.com>
 
-	* Added support for libnotify
+	* Added support for libmatenotify
 
 2006-06-18  Alex Murray  <murray.alex@gmail.com>
 
-	* Removed extraneous preference options to conform more to GNOME
-	HIG and other GNOME applets.
+	* Removed extraneous preference options to conform more to MATE
+	HIG and other MATE applets.
 	* Fixed bug in alignment of values when icons displayed.
 	* Introduced smart layout of sensors within panel.
 	
@@ -419,7 +419,7 @@
 	
 2006-06-15  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.6.2 released
+	* MATE Sensors Applet Version 1.6.2 released
 	* Added the ability to rearrange the order of sensors
 	* Minor bug fixes
 	
@@ -439,7 +439,7 @@
 
 2006-03-25  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet Version 1.6.1 released
+	* MATE Sensors Applet Version 1.6.1 released
 	* Refactored code base to lower CPU utilisation
 	* Added support for dynamic temperature icons
 	* Added support for libsensors interface (detected at compile
@@ -451,7 +451,7 @@
 
 2006-01-08  Alex Murray  <murray.alex@gmail.com>
 
-	* src/active-sensor.c, src/active-sensor.h, src/sensor-config-dialog.c, src/sensors-applet-gconf.c, src/sensors-applet.c, src/sensors-applet.h:
+	* src/active-sensor.c, src/active-sensor.h, src/sensor-config-dialog.c, src/sensors-applet-mateconf.c, src/sensors-applet.c, src/sensors-applet.h:
 	Refactored code base to allow for lower CPU utilisation and dynamic icons.
 
 2006-01-07  Alex Murray  <murray.alex@gmail.com>
@@ -474,7 +474,7 @@
 
 2006-01-04  Alex Murray  <murray.alex@gmail.com>
 
-	* GNOME Sensors Applet 1.6 Released.
+	* MATE Sensors Applet 1.6 Released.
 
 2006-01-03  Alex Murray  <murray.alex@gmail.com>
 
@@ -482,7 +482,7 @@
 	Finished help manual
 
 	* src/prefs-dialog.c:
-	Restructured prefs-dialog to comply better with the GNOME HIG v2.0
+	Restructured prefs-dialog to comply better with the MATE HIG v2.0
 
 	* src/prefs-dialog.c, src/sensor-config-dialog.c, src/sensors-applet.c, src/sensors-applet.h:
 	Fixed memory leaks, including reference creep in pack_display.
@@ -507,7 +507,7 @@
 	* src/sensor-config-dialog.c, src/sensors-applet.c, src/sensors-applet.h, pixmaps/Makefile.am, pixmaps/cpu-temp-icon.png:
 	Added an icon for cpu temp
 
-	* src/prefs-dialog.c, src/prefs-dialog.h, src/sensor-config-dialog.c, src/sensors-applet-gconf.c, src/sensors-applet-gconf.h, src/sensors-applet.c, src/sensors-applet.h, SensorsApplet.server.in.in, configure.ac, pixmaps/Makefile.am:
+	* src/prefs-dialog.c, src/prefs-dialog.h, src/sensor-config-dialog.c, src/sensors-applet-mateconf.c, src/sensors-applet-mateconf.h, src/sensors-applet.c, src/sensors-applet.h, SensorsApplet.server.in.in, configure.ac, pixmaps/Makefile.am:
 	Support for icons added.
 
 2005-12-26  Alex Murray  <murray.alex@gmail.com>
@@ -517,7 +517,7 @@
 
 2005-12-23  Alex Murray  <murray.alex@gmail.com>
 
-	* src/Makefile.am, src/hddtemp-sensors-interface.c, src/ibm-acpi-sensors-interface.c, src/ibm-acpi-sensors-interface.h, src/prefs-dialog.c, src/sensors-applet-gconf.c, src/sensors-applet-gconf.h, src/sensors-applet.c, src/sensors-applet.h:
+	* src/Makefile.am, src/hddtemp-sensors-interface.c, src/ibm-acpi-sensors-interface.c, src/ibm-acpi-sensors-interface.h, src/prefs-dialog.c, src/sensors-applet-mateconf.c, src/sensors-applet-mateconf.h, src/sensors-applet.c, src/sensors-applet.h:
 	Added patch for ibm-acpi kernel module.
 
 	
@@ -563,7 +563,7 @@
 	Fixed bug where id's in i8k sensors were being translated but they need to stay constant. Removed the translations
 
 	* help/C/sensors-applet.xml, help/Makefile.am, m4/.cvsignore, .cvsignore, Makefile.am, configure.ac:
-	Switched to gnome-doc-utils way of doing help docs
+	Switched to mate-doc-utils way of doing help docs
 
 	* src/sensors-applet.c:
 	Fixed -pedantic errors - need to do for rest of code-base
@@ -614,10 +614,10 @@
 
 	* configure.ac: Updated to version 1.5.2 and updated email address
 
-	* src/acpi-sensors-interface.c, src/hddtemp-sensors-interface.c, src/i2c-proc-sensors-interface.c, src/i2c-sys-sensors-interface.c, src/i8k-sensors-interface.c, src/omnibook-sensors-interface.c, src/pmu-sys-sensors-interface.c, src/sensors-applet-gconf.c, src/sensors-applet.c, src/sensors-applet.h:
+	* src/acpi-sensors-interface.c, src/hddtemp-sensors-interface.c, src/i2c-proc-sensors-interface.c, src/i2c-sys-sensors-interface.c, src/i8k-sensors-interface.c, src/omnibook-sensors-interface.c, src/pmu-sys-sensors-interface.c, src/sensors-applet-mateconf.c, src/sensors-applet.c, src/sensors-applet.h:
 	Check when each sensor is added to the list that it doesn't already exist.
-	On start-up, first restore any old values from gconf, then try to set up manually to see if any new sensors found.
-	When loading from gconf, dont worry if paths are invalid.
+	On start-up, first restore any old values from mateconf, then try to set up manually to see if any new sensors found.
+	When loading from mateconf, dont worry if paths are invalid.
 	When adding a sensor, give indication if was successful or not.
 
 	
@@ -653,7 +653,7 @@
 
 2005-07-24  Alex Murray  <murray.alex@gmail.com>
 
-	* sensors-applet-gconf.c: Tidied up gconf stuff
+	* sensors-applet-mateconf.c: Tidied up mateconf stuff
 
 	* sensors-applet.c, sensors-applet.h, sensor-config-dialog.c:
 		Fixed memory leak with alarm_command allocation by adding
@@ -764,7 +764,7 @@
 	* sensors-applet: Version 0.7.3 Released
 	Added cpu_vid sensor reading to i2c-sys interface.
 	Fixed bug where icon would not be displayed on the Add to Panel
-	list for GNOME > 2.8 (need to specify full path to icon).
+	list for MATE > 2.8 (need to specify full path to icon).
 	
 2005-04-06  Alex Murray  <murray.alex@gmail.com>
 
