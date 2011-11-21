@@ -1,0 +1,80 @@
+2008-03-09  Alex Murray  <murray.alex@gmail.com>
+
+	* pt_BR.po: Added Brazilian Portuguese translation (thanks to
+	Amadeu A. Barbosa Júnior)
+
+2007-12-23  Alex Murray  <murray.alex@gmail.com>
+
+	* Merged all translations with updated plugin layout
+
+2007-05-04  Alex Murray  <murray.alex@gmail.com>
+
+	* po.pl:
+	Updated Polish translation
+
+2006-11-27  Alex Murray  <murray.alex@gmail.com>
+
+	* hu.po:
+	Added Hungarian translation
+
+	* cs.po:
+	Updated Czech translation
+
+	* fr.po:
+	Updated French translation
+
+2006-11-11  Alex Murray  <murray.alex@gmail.com>
+
+	* cs.po:
+	Added Czech translation
+
+2006-09-06  Alex Murray  <murray.alex@gmail.com>
+
+	* sv.po:
+	Updated Swedish translation
+
+2006-08-25  Alex Murray  <murray.alex@gmail.com>
+
+	* de.po:
+	Updated German translation
+
+2006-08-22  Alex Murray  <murray.alex@gmail.com>
+
+	* de.po: 
+	Updated German translation
+
+2006-07-02  Alex Murray  <murray.alex@gmail.com>
+
+	* fr.po: 
+	Updated French translation
+
+2006-04-27  Alex Murray  <murray.alex@gmail.com>
+
+	* sv.po:
+	Added Swedish translation
+
+2006-01-21  Alex Murray  <murray.alex@gmail.com>
+
+	* es.po:
+	Added Spanish translation
+
+2006-01-11  Alex Murray  <murray.alex@gmail.com>
+
+	* fi.po, POTFILES.skip, POTFILES.in:
+	Added Finnish translation
+	Added POTFILES.skip
+	Added src/sensors-applet-gconf.c to POTFILES.in
+
+2006-01-08  Alex Murray  <murray.alex@gmail.com>
+
+	* POTFILES.in
+	Updated to include all interfaces and new refactored code.
+
+2006-01-06  Alex Murray  <murray.alex@gmail.com>
+
+	* fr.po:
+	Updated french translation (thanks to Davy Defaud).
+
+2005-01-16  Alex Murray  <murray.alex@gmail.com>
+
+	* Initial setup

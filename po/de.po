@@ -1,0 +1,413 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Sensors Applet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-21 14:29+1030\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Matthias Schmidt <matthias@msebede.d2g.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../SensorsApplet.server.in.in.h:1
+msgid "Display temperature, fan speed and voltage sensor readings"
+msgstr "Anzeige der Werte für Temperatur, Lüftergeschwindigkeit und Spannung"
+
+#: ../SensorsApplet.server.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr "Hardware Sensor Monitor"
+
+#: ../SensorsApplet.xml.h:1
+msgid "_About"
+msgstr "_Über"
+
+#: ../SensorsApplet.xml.h:2
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../SensorsApplet.xml.h:3
+msgid "_Preferences"
+msgstr "_Einstellungen"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:59
+#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
+#: ../plugins/omnibook/omnibook-plugin.c:47
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/smu-sys/smu-sys-plugin.c:58
+msgid "CPU"
+msgstr "CPU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:64
+#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/smu-sys/smu-sys-plugin.c:63
+#: ../plugins/aticonfig/aticonfig-plugin.c:104
+msgid "GPU"
+msgstr "Grafik CPU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:69
+#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+msgid "FAN"
+msgstr "Lüfter"
+
+#: ../plugins/i8k/i8k-plugin.c:56
+msgid "FAN1"
+msgstr "Lüfter 1"
+
+#: ../plugins/i8k/i8k-plugin.c:64
+msgid "FAN2"
+msgstr "Lüfter 2"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+msgid "MiniPCI"
+msgstr "MiniPCI"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+msgid "Battery"
+msgstr "Batterie"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+msgid "Fan"
+msgstr "Lüfter"
+
+#: ../plugins/sonypi/sonypi-plugin.c:62
+msgid "CPU TEMP"
+msgstr ""
+
+#: ../plugins/omnibook/omnibook-plugin.c:46
+#: ../sensors-applet/sensors-applet.c:413
+msgid "temperature"
+msgstr "Temperatur"
+
+#: ../plugins/nvidia/nvidia-plugin.c:131
+msgid "Ambient"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:415
+msgid "Sensors Applet Preferences"
+msgstr "Sensorapplet Einstellungen"
+
+#: ../sensors-applet/prefs-dialog.c:450
+#: ../sensors-applet/sensors-applet.c:1397
+msgid "No sensors found!"
+msgstr "Keine Sensoren gefunden!"
+
+#: ../sensors-applet/prefs-dialog.c:456
+msgid "Display"
+msgstr "Anzeige"
+
+#: ../sensors-applet/prefs-dialog.c:468
+msgid "label with value"
+msgstr "Beschreibung mit Wert"
+
+#: ../sensors-applet/prefs-dialog.c:469
+msgid "icon with value"
+msgstr "Symbol mit Wert"
+
+#: ../sensors-applet/prefs-dialog.c:470
+msgid "value only"
+msgstr "Wert"
+
+#: ../sensors-applet/prefs-dialog.c:471
+msgid "icon only"
+msgstr "Symbol"
+
+#: ../sensors-applet/prefs-dialog.c:472
+msgid "graph only"
+msgstr "Graph"
+
+#: ../sensors-applet/prefs-dialog.c:488
+msgid "_Display sensors in panel as"
+msgstr "Im Panel _anzeigen als"
+
+#: ../sensors-applet/prefs-dialog.c:503
+msgid "beside labels / icons"
+msgstr "neben den Beschreibungen / Symbolen"
+
+#: ../sensors-applet/prefs-dialog.c:504
+msgid "below labels / icons"
+msgstr "unter den Beschreibungen / Symbolen"
+
+#: ../sensors-applet/prefs-dialog.c:515
+msgid "Preferred _position of sensor values"
+msgstr "_Position der Sensorwerte"
+
+#: ../sensors-applet/prefs-dialog.c:527
+msgid "Kelvin"
+msgstr "Kelvin"
+
+#: ../sensors-applet/prefs-dialog.c:528
+msgid "Celsius"
+msgstr "Grad Celsius"
+
+#: ../sensors-applet/prefs-dialog.c:529
+msgid "Fahrenheit"
+msgstr "Grad Fahrenheit"
+
+#: ../sensors-applet/prefs-dialog.c:540
+msgid "_Temperature scale"
+msgstr "_Temperaturskala"
+
+#: ../sensors-applet/prefs-dialog.c:571
+msgid "Graph _size (pixels)"
+msgstr "_Größe des Graphen (Pixel)"
+
+#: ../sensors-applet/prefs-dialog.c:584
+msgid "Update"
+msgstr "Aktualisierung"
+
+#: ../sensors-applet/prefs-dialog.c:614
+msgid "Update _interval (secs)"
+msgstr "_Intervall (sek)"
+
+#: ../sensors-applet/prefs-dialog.c:624
+msgid "Notifications"
+msgstr "Benachrichtigung"
+
+#: ../sensors-applet/prefs-dialog.c:635
+msgid "Display _notifications"
+msgstr "Benachrichtigungen _anzeigen"
+
+#: ../sensors-applet/prefs-dialog.c:839
+msgid "Sensor"
+msgstr "Datenquellen"
+
+#: ../sensors-applet/prefs-dialog.c:846
+msgid "Label"
+msgstr "Bezeichnung"
+
+#: ../sensors-applet/prefs-dialog.c:856
+msgid "Labels can be edited directly by clicking on them."
+msgstr "Die Bezeichnungen können durch Anklicken geändert werden."
+
+#: ../sensors-applet/prefs-dialog.c:857
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#. icon stuff
+#: ../sensors-applet/prefs-dialog.c:863
+#: ../sensors-applet/sensor-config-dialog.c:452
+msgid "Icon"
+msgstr "Symbol"
+
+#: ../sensors-applet/prefs-dialog.c:997
+msgid "General Options"
+msgstr "Allgemein"
+
+#: ../sensors-applet/prefs-dialog.c:1001
+msgid "Sensors"
+msgstr "Sensoren"
+
+#: ../sensors-applet/sensors-applet.h:57
+msgid "RPM"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.h:58
+msgid "V"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.h:59
+msgid "A"
+msgstr ""
+
+#. hard code text as ERROR
+#: ../sensors-applet/active-sensor.c:578
+msgid "ERROR"
+msgstr ""
+
+#: ../sensors-applet/about-dialog.c:33
+msgid "Translator"
+msgstr "Übersetzer"
+
+#: ../sensors-applet/about-dialog.c:36
+msgid ""
+"To translator: Put your name here to show up in the About dialog as the "
+"translator"
+msgstr ""
+"Matthias Schmidt <matthias@msebede.d2g.com>\n"
+"Markus Dorn <markus.dorn@gmx.de>"
+
+#: ../sensors-applet/sensor-config-dialog.c:394
+msgid "Sensor Properties"
+msgstr "Sensoreigenschaften"
+
+#. graph stuff
+#: ../sensors-applet/sensor-config-dialog.c:419
+msgid "Graph"
+msgstr "Graph"
+
+#: ../sensors-applet/sensor-config-dialog.c:438
+msgid "Graph Color"
+msgstr "Farbe des Graphen"
+
+#: ../sensors-applet/sensor-config-dialog.c:441
+msgid "Graph _color"
+msgstr "_Farbe"
+
+#: ../sensors-applet/sensor-config-dialog.c:503
+msgid "Sensor _icon"
+msgstr "_Symbol"
+
+#: ../sensors-applet/sensor-config-dialog.c:509
+msgid "Scaling Parameters"
+msgstr "Anpassung der Sensorwerte"
+
+#: ../sensors-applet/sensor-config-dialog.c:542
+msgid "Sensor value _multiplier"
+msgstr "_Multiplikator"
+
+#: ../sensors-applet/sensor-config-dialog.c:575
+msgid "Sensor value _offset"
+msgstr "_Verschiebung (Offset)"
+
+#. now do alarm widgets
+#: ../sensors-applet/sensor-config-dialog.c:585
+msgid "Sensor Limits"
+msgstr "Grenzwerte"
+
+#: ../sensors-applet/sensor-config-dialog.c:618
+msgid "Sensor _low value"
+msgstr "M_inimaler Wert"
+
+#: ../sensors-applet/sensor-config-dialog.c:653
+msgid "Sensor _high value"
+msgstr "Ma_ximaler Wert"
+
+#: ../sensors-applet/sensor-config-dialog.c:664
+#: ../sensors-applet/sensors-applet.c:452
+msgid "Alarm"
+msgstr "Alarm"
+
+#: ../sensors-applet/sensor-config-dialog.c:696
+msgid "Alarm _repeat interval (secs)"
+msgstr "_Wiederholungsintervall (sek)"
+
+#: ../sensors-applet/sensor-config-dialog.c:716
+#, fuzzy
+msgid "Lo_w alarm command"
+msgstr "_Befehl ausführen"
+
+#: ../sensors-applet/sensor-config-dialog.c:738
+#, fuzzy
+msgid "Hi_gh alarm command"
+msgstr "_Befehl ausführen"
+
+#: ../sensors-applet/sensor-config-dialog.c:752
+msgid "_Enable alarm"
+msgstr "_Aktiv"
+
+#: ../sensors-applet/sensors-applet.c:297
+#, fuzzy, c-format
+msgid "Error restoring saved sensor configuration."
+msgstr "Inkompatible Sensorkonfiguration gefunden"
+
+#: ../sensors-applet/sensors-applet.c:298
+#, c-format
+msgid ""
+"An error occurred while trying to restore the saved sensor configuration. "
+"The previous configuration has been lost and will need to be re-entered."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:302
+#, fuzzy, c-format
+msgid "Error saving sensor configuration."
+msgstr "Inkompatible Sensorkonfiguration gefunden"
+
+#: ../sensors-applet/sensors-applet.c:303
+#, fuzzy, c-format
+msgid ""
+"An error occurred while trying to save the current sensor configuration. "
+msgstr "Während des Ladens der Sensordaten ist ein Fehler aufgetreten"
+
+#: ../sensors-applet/sensors-applet.c:394
+msgid "is very low"
+msgstr "ist sehr gering"
+
+#: ../sensors-applet/sensors-applet.c:395
+msgid "lower limit"
+msgstr "unterer Grenzwert"
+
+#. assume high alarm condition
+#: ../sensors-applet/sensors-applet.c:400
+msgid "is very high"
+msgstr "ist sehr hoch"
+
+#: ../sensors-applet/sensors-applet.c:401
+msgid "upper limit"
+msgstr "oberer Grenzwert"
+
+#: ../sensors-applet/sensors-applet.c:412
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: ../sensors-applet/sensors-applet.c:434
+msgid "Voltage"
+msgstr "Spannung"
+
+#: ../sensors-applet/sensors-applet.c:435
+msgid "voltage"
+msgstr "Spannung"
+
+#: ../sensors-applet/sensors-applet.c:439
+msgid "Fan Speed"
+msgstr "Lüftergeschwindigkeit"
+
+#: ../sensors-applet/sensors-applet.c:440
+msgid "fan speed"
+msgstr "Lüftergeschwindigkeit"
+
+#: ../sensors-applet/sensors-applet.c:444
+msgid "Current"
+msgstr "Stromstärke"
+
+#: ../sensors-applet/sensors-applet.c:445
+msgid "current"
+msgstr "Stromstärke"
+
+#: ../sensors-applet/sensors-applet.c:458
+#, c-format
+msgid "Error updating sensor %s"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:459
+#, fuzzy, c-format
+msgid ""
+"An error occurred while trying to update the value of the sensor %s located "
+"at %s."
+msgstr "Während des Ladens der Sensordaten ist ein Fehler aufgetreten"
+
+#: ../sensors-applet/sensors-applet.c:567
+msgid "No sensors enabled!"
+msgstr "Keine Sensoren aktiviert!"
+
+#: ../sensors-applet/sensors-applet-gconf.c:44
+msgid "An error occurred loading the stored sensors data"
+msgstr "Während des Ladens der Sensordaten ist ein Fehler aufgetreten"
+
+#: ../sensors-applet/sensors-applet-gconf.c:45
+msgid "Incompatible sensors configuration found"
+msgstr "Inkompatible Sensorkonfiguration gefunden"
+
+#: ../sensors-applet/sensors-applet-gconf.c:49
+msgid ""
+"An error has occurred when loading the stored sensors data. The default "
+"values will be used to recover from this error."
+msgstr ""
+"Während des Ladens der Sensordaten ist ein Fehler aufgetreten. Die "
+"Standardwerte werden verwendet."
+
+#: ../sensors-applet/sensors-applet-gconf.c:52
+msgid ""
+"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"compatible with this version. The existing sensors data will be overwritten "
+"with the default values for this new version."
+msgstr ""
+"Leider ist die Konfiguration der vorherigen Version dieses Programmes nicht "
+"mit dieser kompatibel. Die Daten werden mit Standardwerten überschrieben."

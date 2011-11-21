@@ -1,0 +1,529 @@
+# Romanian translation of PACKAGE.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Spoială Cristian <scristian@gmail.com>, 2005.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Sensors Applet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-21 14:29+1030\n"
+"PO-Revision-Date: 2005-02-19 19:06+0200\n"
+"Last-Translator: Spoială Cristian <scristian@gmail.com>\n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../SensorsApplet.server.in.in.h:1
+msgid "Display temperature, fan speed and voltage sensor readings"
+msgstr "Afişează temperatura, viteza coolerului şi valorile la tensiune"
+
+#: ../SensorsApplet.server.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr ""
+
+#: ../SensorsApplet.xml.h:1
+msgid "_About"
+msgstr "_Despre"
+
+#: ../SensorsApplet.xml.h:2
+msgid "_Help"
+msgstr ""
+
+#: ../SensorsApplet.xml.h:3
+msgid "_Preferences"
+msgstr "_Preferinţe"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:59
+#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
+#: ../plugins/omnibook/omnibook-plugin.c:47
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/smu-sys/smu-sys-plugin.c:58
+msgid "CPU"
+msgstr "COU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:64
+#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/smu-sys/smu-sys-plugin.c:63
+#: ../plugins/aticonfig/aticonfig-plugin.c:104
+#, fuzzy
+msgid "GPU"
+msgstr "COU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:69
+#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+#, fuzzy
+msgid "FAN"
+msgstr "FAN 2"
+
+#: ../plugins/i8k/i8k-plugin.c:56
+#, fuzzy
+msgid "FAN1"
+msgstr "FAN 1"
+
+#: ../plugins/i8k/i8k-plugin.c:64
+#, fuzzy
+msgid "FAN2"
+msgstr "FAN 2"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+msgid "MiniPCI"
+msgstr ""
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+msgid "Battery"
+msgstr ""
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+msgid "Fan"
+msgstr ""
+
+#: ../plugins/sonypi/sonypi-plugin.c:62
+msgid "CPU TEMP"
+msgstr ""
+
+#: ../plugins/omnibook/omnibook-plugin.c:46
+#: ../sensors-applet/sensors-applet.c:413
+msgid "temperature"
+msgstr ""
+
+#: ../plugins/nvidia/nvidia-plugin.c:131
+msgid "Ambient"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:415
+msgid "Sensors Applet Preferences"
+msgstr "Preferinţele la Appletul cu senzori"
+
+#: ../sensors-applet/prefs-dialog.c:450
+#: ../sensors-applet/sensors-applet.c:1397
+msgid "No sensors found!"
+msgstr "Nu s-au găsit senzorii!"
+
+#: ../sensors-applet/prefs-dialog.c:456
+msgid "Display"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:468
+msgid "label with value"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:469
+msgid "icon with value"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:470
+msgid "value only"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:471
+msgid "icon only"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:472
+msgid "graph only"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:488
+msgid "_Display sensors in panel as"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:503
+msgid "beside labels / icons"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:504
+msgid "below labels / icons"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:515
+msgid "Preferred _position of sensor values"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:527
+msgid "Kelvin"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:528
+msgid "Celsius"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:529
+msgid "Fahrenheit"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:540
+msgid "_Temperature scale"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:571
+msgid "Graph _size (pixels)"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:584
+msgid "Update"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:614
+#, fuzzy
+msgid "Update _interval (secs)"
+msgstr "Intervalul de _repetare (secs)"
+
+#: ../sensors-applet/prefs-dialog.c:624
+msgid "Notifications"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:635
+msgid "Display _notifications"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:839
+#, fuzzy
+msgid "Sensor"
+msgstr "Senzori"
+
+#: ../sensors-applet/prefs-dialog.c:846
+msgid "Label"
+msgstr "Nume"
+
+#: ../sensors-applet/prefs-dialog.c:856
+msgid "Labels can be edited directly by clicking on them."
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:857
+msgid "Enabled"
+msgstr "Activat"
+
+#. icon stuff
+#: ../sensors-applet/prefs-dialog.c:863
+#: ../sensors-applet/sensor-config-dialog.c:452
+msgid "Icon"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:997
+#, fuzzy
+msgid "General Options"
+msgstr "Opţiuni globale"
+
+#: ../sensors-applet/prefs-dialog.c:1001
+msgid "Sensors"
+msgstr "Senzori"
+
+#: ../sensors-applet/sensors-applet.h:57
+msgid "RPM"
+msgstr "RPM"
+
+#: ../sensors-applet/sensors-applet.h:58
+msgid "V"
+msgstr "V"
+
+#: ../sensors-applet/sensors-applet.h:59
+msgid "A"
+msgstr "A"
+
+#. hard code text as ERROR
+#: ../sensors-applet/active-sensor.c:578
+msgid "ERROR"
+msgstr ""
+
+#: ../sensors-applet/about-dialog.c:33
+msgid "Translator"
+msgstr "Traducător"
+
+#: ../sensors-applet/about-dialog.c:36
+msgid ""
+"To translator: Put your name here to show up in the About dialog as the "
+"translator"
+msgstr "Spoială Cristian"
+
+#: ../sensors-applet/sensor-config-dialog.c:394
+#, fuzzy
+msgid "Sensor Properties"
+msgstr "Applet cu senzori"
+
+#. graph stuff
+#: ../sensors-applet/sensor-config-dialog.c:419
+msgid "Graph"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:438
+msgid "Graph Color"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:441
+msgid "Graph _color"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:503
+#, fuzzy
+msgid "Sensor _icon"
+msgstr "Senzori"
+
+#: ../sensors-applet/sensor-config-dialog.c:509
+msgid "Scaling Parameters"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:542
+msgid "Sensor value _multiplier"
+msgstr "Multiplicator pentru valoarea senzorului"
+
+#: ../sensors-applet/sensor-config-dialog.c:575
+msgid "Sensor value _offset"
+msgstr "_Offsetul pentru valoarea senzorului"
+
+#. now do alarm widgets
+#: ../sensors-applet/sensor-config-dialog.c:585
+#, fuzzy
+msgid "Sensor Limits"
+msgstr "Senzori"
+
+#: ../sensors-applet/sensor-config-dialog.c:618
+#, fuzzy
+msgid "Sensor _low value"
+msgstr "_Offsetul pentru valoarea senzorului"
+
+#: ../sensors-applet/sensor-config-dialog.c:653
+#, fuzzy
+msgid "Sensor _high value"
+msgstr "_Offsetul pentru valoarea senzorului"
+
+#: ../sensors-applet/sensor-config-dialog.c:664
+#: ../sensors-applet/sensors-applet.c:452
+#, fuzzy
+msgid "Alarm"
+msgstr "mare"
+
+#: ../sensors-applet/sensor-config-dialog.c:696
+#, fuzzy
+msgid "Alarm _repeat interval (secs)"
+msgstr "Intervalul de _repetare (secs)"
+
+#: ../sensors-applet/sensor-config-dialog.c:716
+#, fuzzy
+msgid "Lo_w alarm command"
+msgstr "Comandă la alarmă"
+
+#: ../sensors-applet/sensor-config-dialog.c:738
+#, fuzzy
+msgid "Hi_gh alarm command"
+msgstr "Comandă la alarmă"
+
+#: ../sensors-applet/sensor-config-dialog.c:752
+msgid "_Enable alarm"
+msgstr "_Activează alarma"
+
+#: ../sensors-applet/sensors-applet.c:297
+#, c-format
+msgid "Error restoring saved sensor configuration."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:298
+#, c-format
+msgid ""
+"An error occurred while trying to restore the saved sensor configuration. "
+"The previous configuration has been lost and will need to be re-entered."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:302
+#, c-format
+msgid "Error saving sensor configuration."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:303
+#, c-format
+msgid ""
+"An error occurred while trying to save the current sensor configuration. "
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:394
+msgid "is very low"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:395
+msgid "lower limit"
+msgstr ""
+
+#. assume high alarm condition
+#: ../sensors-applet/sensors-applet.c:400
+msgid "is very high"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:401
+msgid "upper limit"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:412
+msgid "Temperature"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:434
+#, fuzzy
+msgid "Voltage"
+msgstr "mare"
+
+#: ../sensors-applet/sensors-applet.c:435
+#, fuzzy
+msgid "voltage"
+msgstr "mare"
+
+#: ../sensors-applet/sensors-applet.c:439
+msgid "Fan Speed"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:440
+msgid "fan speed"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:444
+msgid "Current"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:445
+msgid "current"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:458
+#, c-format
+msgid "Error updating sensor %s"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:459
+#, c-format
+msgid ""
+"An error occurred while trying to update the value of the sensor %s located "
+"at %s."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:567
+msgid "No sensors enabled!"
+msgstr "Nu sunt activaţi senzorii!"
+
+#: ../sensors-applet/sensors-applet-gconf.c:44
+msgid "An error occurred loading the stored sensors data"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet-gconf.c:45
+msgid "Incompatible sensors configuration found"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet-gconf.c:49
+msgid ""
+"An error has occurred when loading the stored sensors data. The default "
+"values will be used to recover from this error."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet-gconf.c:52
+msgid ""
+"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"compatible with this version. The existing sensors data will be overwritten "
+"with the default values for this new version."
+msgstr ""
+
+#~ msgid "Display labels _inline with sensor values"
+#~ msgstr "Afişează numele pe aceaşi linie cu valorile senzorului"
+
+#~ msgid "Display _units with sensor values"
+#~ msgstr "Arată _unităţile cu valoarea senzorilor"
+
+#, fuzzy
+#~ msgid "Use _Fahrenheit for temperature sensors"
+#~ msgstr "Foloseşte fahrenheit pentru temperatura senzorilor"
+
+#, fuzzy
+#~ msgid "_Number of sensors per column / row"
+#~ msgstr "Numărul de senzori pe _group"
+
+#~ msgid "Refresh _delay (secs)"
+#~ msgstr "Intervalul de împrospătare (secs)"
+
+#~ msgid "largest"
+#~ msgstr "cel mai mare"
+
+#~ msgid "larger"
+#~ msgstr "mai mare"
+
+#~ msgid "normal"
+#~ msgstr "normal"
+
+#~ msgid "small"
+#~ msgstr "mic"
+
+#~ msgid "smaller"
+#~ msgstr "mai mic"
+
+#~ msgid "smallest"
+#~ msgstr "cel mai mic"
+
+#~ msgid "Font _size"
+#~ msgstr "_Mărimea fontului"
+
+#, fuzzy
+#~ msgid "labels"
+#~ msgstr "Nume"
+
+#~ msgid "Configure _Sensor"
+#~ msgstr "Configurează _Senzor"
+
+#~ msgid "Configure Sensor"
+#~ msgstr "Configurează senzorul"
+
+#~ msgid "greater than"
+#~ msgstr "mai mare de "
+
+#~ msgid "less than"
+#~ msgstr "mai mică de "
+
+#~ msgid "Execute alarm when _sensor is"
+#~ msgstr "Execută alarmă când _senzoru este"
+
+#~ msgid "alarm threshold"
+#~ msgstr "declanşatorul alarmei"
+
+#~ msgid "Alarm _threshold"
+#~ msgstr "_Declanşatorul alarmei"
+
+#, fuzzy
+#~ msgid "Sensor Icon"
+#~ msgstr "Senzori"
+
+#, fuzzy
+#~ msgid "sensor enabled"
+#~ msgstr "Nu sunt activaţi senzorii!"
+
+#, fuzzy
+#~ msgid "sensors enabled"
+#~ msgstr "Nu sunt activaţi senzorii!"
+
+#~ msgid " - Error Occurred"
+#~ msgstr " - A avut loc o eroare"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>An error occurred trying to reload the sensors.</b>\n"
+#~ "Did you forget to load the correct module?  Once the problem\n"
+#~ "is resolved you will need to reload %s."
+#~ msgstr ""
+#~ "<b>O eroare a avut loc la accesarea senzorului %s.</b>\n"
+#~ "Aţi încărcat modulul corect?  O dată ce problema \n"
+#~ "s-a rezolvat trebuie să reporniţi %s."
+
+#~ msgid "Show _labels"
+#~ msgstr "Arată _numele"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sensors Applet\n"
+#~ "%d sensors enabled"
+#~ msgstr "Preferinţele la Appletul cu senzori"
+
+#~ msgid "FAN 1"
+#~ msgstr "FAN 1"
+
+#~ msgid "FAN 2"
+#~ msgstr "FAN 2"
+
+#~ msgid "Filename"
+#~ msgstr "Numele fişierului"

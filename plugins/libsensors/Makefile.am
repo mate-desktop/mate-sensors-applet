@@ -1,0 +1,21 @@
+plugindir = $(libdir)/sensors-applet/plugins
+
+# libsensors plugin
+INCLUDES = -DGNOMELOCALEDIR=\""$(datadir)/locale/"\" \
+	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
+	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
+	-DDATADIR=\""$(datadir)"\" \
+	-DLIBDIR=\""$(libdir)"\" \
+        -DSYSCONFDIR=\""$(sysconfdir)"\" \
+        -DPREFIX=\""$(prefix)"\" \
+	-I$(top_srcdir) \
+	$(GLIB_CFLAGS) $(LIBSENSORS_CFLAGS)
+
+plugin_LTLIBRARIES = liblibsensors.la
+
+liblibsensors_la_SOURCES = \
+	libsensors-plugin.h	\
+	libsensors-plugin.c
+
+liblibsensors_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) $(LIBSENSORS_LIBS)
+liblibsensors_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la

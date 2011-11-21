@@ -1,0 +1,404 @@
+# Spanish translation of the GNOME Sensor Applet.
+# Copyright (C) 2005 Alex Murray.
+# This file is distributed under the same license as the GNOME Sensor Applet package.
+# Davy Defaud <davy.defaud@free.fr>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Sensor Applet 2.2.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-21 14:29+1030\n"
+"PO-Revision-Date: 2009-08-14 19:41+0800\n"
+"Last-Translator: lerosua <lerosua@gmail.com>\n"
+"Language-Team: lerosua <lerosua@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../SensorsApplet.server.in.in.h:1
+msgid "Display temperature, fan speed and voltage sensor readings"
+msgstr "."
+
+#: ../SensorsApplet.server.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr "硬件传感器监测"
+
+#: ../SensorsApplet.xml.h:1
+msgid "_About"
+msgstr "关于(_A)"
+
+#: ../SensorsApplet.xml.h:2
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../SensorsApplet.xml.h:3
+msgid "_Preferences"
+msgstr "属性(_P)"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:59
+#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
+#: ../plugins/omnibook/omnibook-plugin.c:47
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/smu-sys/smu-sys-plugin.c:58
+msgid "CPU"
+msgstr "CPU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:64
+#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/smu-sys/smu-sys-plugin.c:63
+#: ../plugins/aticonfig/aticonfig-plugin.c:104
+msgid "GPU"
+msgstr "GPU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:69
+#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+msgid "FAN"
+msgstr "风扇"
+
+#: ../plugins/i8k/i8k-plugin.c:56
+msgid "FAN1"
+msgstr "风扇1"
+
+#: ../plugins/i8k/i8k-plugin.c:64
+msgid "FAN2"
+msgstr "风扇2"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+msgid "MiniPCI"
+msgstr ""
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+msgid "Battery"
+msgstr "电池"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+msgid "Fan"
+msgstr "风扇"
+
+#: ../plugins/sonypi/sonypi-plugin.c:62
+msgid "CPU TEMP"
+msgstr "CPU温度"
+
+#: ../plugins/omnibook/omnibook-plugin.c:46
+#: ../sensors-applet/sensors-applet.c:413
+msgid "temperature"
+msgstr "温度"
+
+#: ../plugins/nvidia/nvidia-plugin.c:131
+msgid "Ambient"
+msgstr "周边的"
+
+#: ../sensors-applet/prefs-dialog.c:415
+msgid "Sensors Applet Preferences"
+msgstr "传感器控件属性"
+
+#: ../sensors-applet/prefs-dialog.c:450
+#: ../sensors-applet/sensors-applet.c:1397
+msgid "No sensors found!"
+msgstr "未发现传感器!"
+
+#: ../sensors-applet/prefs-dialog.c:456
+msgid "Display"
+msgstr "显示"
+
+#: ../sensors-applet/prefs-dialog.c:468
+msgid "label with value"
+msgstr "标签与值"
+
+#: ../sensors-applet/prefs-dialog.c:469
+msgid "icon with value"
+msgstr "图标与值"
+
+#: ../sensors-applet/prefs-dialog.c:470
+msgid "value only"
+msgstr "值"
+
+#: ../sensors-applet/prefs-dialog.c:471
+msgid "icon only"
+msgstr "图标"
+
+#: ../sensors-applet/prefs-dialog.c:472
+msgid "graph only"
+msgstr "图形显示"
+
+#: ../sensors-applet/prefs-dialog.c:488
+msgid "_Display sensors in panel as"
+msgstr "在面板中显示传感器(_D)"
+
+#: ../sensors-applet/prefs-dialog.c:503
+msgid "beside labels / icons"
+msgstr "在标签/图标旁边"
+
+#: ../sensors-applet/prefs-dialog.c:504
+msgid "below labels / icons"
+msgstr "在标签/图标下面"
+
+#: ../sensors-applet/prefs-dialog.c:515
+msgid "Preferred _position of sensor values"
+msgstr "传感器值的位置(_p)"
+
+#: ../sensors-applet/prefs-dialog.c:527
+msgid "Kelvin"
+msgstr "开氏温标"
+
+#: ../sensors-applet/prefs-dialog.c:528
+msgid "Celsius"
+msgstr "摄氏温标"
+
+#: ../sensors-applet/prefs-dialog.c:529
+msgid "Fahrenheit"
+msgstr "华氏温标"
+
+#: ../sensors-applet/prefs-dialog.c:540
+msgid "_Temperature scale"
+msgstr "温度范围(_T)"
+
+#: ../sensors-applet/prefs-dialog.c:571
+msgid "Graph _size (pixels)"
+msgstr "图像大小(_s)(像素)"
+
+#: ../sensors-applet/prefs-dialog.c:584
+msgid "Update"
+msgstr "更新"
+
+#: ../sensors-applet/prefs-dialog.c:614
+msgid "Update _interval (secs)"
+msgstr "更新间隔(_i)(秒)"
+
+#: ../sensors-applet/prefs-dialog.c:624
+msgid "Notifications"
+msgstr "通知"
+
+#: ../sensors-applet/prefs-dialog.c:635
+msgid "Display _notifications"
+msgstr "显示通知(_n)"
+
+#: ../sensors-applet/prefs-dialog.c:839
+msgid "Sensor"
+msgstr "传感器"
+
+#: ../sensors-applet/prefs-dialog.c:846
+msgid "Label"
+msgstr "标签"
+
+#: ../sensors-applet/prefs-dialog.c:856
+msgid "Labels can be edited directly by clicking on them."
+msgstr "点击时能直接编辑标签"
+
+#: ../sensors-applet/prefs-dialog.c:857
+msgid "Enabled"
+msgstr "启用"
+
+#. icon stuff
+#: ../sensors-applet/prefs-dialog.c:863
+#: ../sensors-applet/sensor-config-dialog.c:452
+msgid "Icon"
+msgstr "图标"
+
+#: ../sensors-applet/prefs-dialog.c:997
+msgid "General Options"
+msgstr "通用选项"
+
+#: ../sensors-applet/prefs-dialog.c:1001
+msgid "Sensors"
+msgstr "传感器"
+
+#: ../sensors-applet/sensors-applet.h:57
+msgid "RPM"
+msgstr "RPM"
+
+#: ../sensors-applet/sensors-applet.h:58
+msgid "V"
+msgstr "V"
+
+#: ../sensors-applet/sensors-applet.h:59
+msgid "A"
+msgstr "A"
+
+#. hard code text as ERROR
+#: ../sensors-applet/active-sensor.c:578
+msgid "ERROR"
+msgstr "错误"
+
+#: ../sensors-applet/about-dialog.c:33
+msgid "Translator"
+msgstr "翻译者"
+
+#: ../sensors-applet/about-dialog.c:36
+msgid ""
+"To translator: Put your name here to show up in the About dialog as the "
+"translator"
+msgstr "lerosua<lerosua@gmail.com>"
+
+#: ../sensors-applet/sensor-config-dialog.c:394
+msgid "Sensor Properties"
+msgstr "传感器飞行属性"
+
+#. graph stuff
+#: ../sensors-applet/sensor-config-dialog.c:419
+msgid "Graph"
+msgstr "图像"
+
+#: ../sensors-applet/sensor-config-dialog.c:438
+msgid "Graph Color"
+msgstr "图像颜色"
+
+#: ../sensors-applet/sensor-config-dialog.c:441
+msgid "Graph _color"
+msgstr "图像颜色(_c)"
+
+#: ../sensors-applet/sensor-config-dialog.c:503
+msgid "Sensor _icon"
+msgstr "传感器图标(_i)"
+
+#: ../sensors-applet/sensor-config-dialog.c:509
+msgid "Scaling Parameters"
+msgstr "范围参数"
+
+#: ../sensors-applet/sensor-config-dialog.c:542
+msgid "Sensor value _multiplier"
+msgstr "传感器增值(_m)"
+
+#: ../sensors-applet/sensor-config-dialog.c:575
+msgid "Sensor value _offset"
+msgstr "传感器偏移值(_o)"
+
+#. now do alarm widgets
+#: ../sensors-applet/sensor-config-dialog.c:585
+msgid "Sensor Limits"
+msgstr "传感器限制"
+
+#: ../sensors-applet/sensor-config-dialog.c:618
+msgid "Sensor _low value"
+msgstr "传感器低值(_l)"
+
+#: ../sensors-applet/sensor-config-dialog.c:653
+msgid "Sensor _high value"
+msgstr "传感器高值(_h)"
+
+#: ../sensors-applet/sensor-config-dialog.c:664
+#: ../sensors-applet/sensors-applet.c:452
+msgid "Alarm"
+msgstr "警报"
+
+#: ../sensors-applet/sensor-config-dialog.c:696
+msgid "Alarm _repeat interval (secs)"
+msgstr "警报重复间隔(_r)(秒)"
+
+#: ../sensors-applet/sensor-config-dialog.c:716
+msgid "Lo_w alarm command"
+msgstr "低值报警命令(_w)"
+
+#: ../sensors-applet/sensor-config-dialog.c:738
+msgid "Hi_gh alarm command"
+msgstr "高值报警命令(_g)"
+
+#: ../sensors-applet/sensor-config-dialog.c:752
+msgid "_Enable alarm"
+msgstr "启用警报(_E)"
+
+#: ../sensors-applet/sensors-applet.c:297
+#, c-format
+msgid "Error restoring saved sensor configuration."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:298
+#, c-format
+msgid ""
+"An error occurred while trying to restore the saved sensor configuration. "
+"The previous configuration has been lost and will need to be re-entered."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:302
+#, c-format
+msgid "Error saving sensor configuration."
+msgstr "在保存传感器配置时错误"
+
+#: ../sensors-applet/sensors-applet.c:303
+#, c-format
+msgid ""
+"An error occurred while trying to save the current sensor configuration. "
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:394
+msgid "is very low"
+msgstr "非常低"
+
+#: ../sensors-applet/sensors-applet.c:395
+msgid "lower limit"
+msgstr ""
+
+#. assume high alarm condition
+#: ../sensors-applet/sensors-applet.c:400
+msgid "is very high"
+msgstr "非常高"
+
+#: ../sensors-applet/sensors-applet.c:401
+msgid "upper limit"
+msgstr "上限"
+
+#: ../sensors-applet/sensors-applet.c:412
+msgid "Temperature"
+msgstr "温度"
+
+#: ../sensors-applet/sensors-applet.c:434
+msgid "Voltage"
+msgstr "电压"
+
+#: ../sensors-applet/sensors-applet.c:435
+msgid "voltage"
+msgstr "电压"
+
+#: ../sensors-applet/sensors-applet.c:439
+msgid "Fan Speed"
+msgstr "风扇速度"
+
+#: ../sensors-applet/sensors-applet.c:440
+msgid "fan speed"
+msgstr "风扇速度"
+
+#: ../sensors-applet/sensors-applet.c:444
+msgid "Current"
+msgstr "当前"
+
+#: ../sensors-applet/sensors-applet.c:445
+msgid "current"
+msgstr "当前"
+
+#: ../sensors-applet/sensors-applet.c:458
+#, c-format
+msgid "Error updating sensor %s"
+msgstr "更新传感器错误 %s"
+
+#: ../sensors-applet/sensors-applet.c:459
+#, c-format
+msgid ""
+"An error occurred while trying to update the value of the sensor %s located "
+"at %s."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:567
+msgid "No sensors enabled!"
+msgstr "没有启动传感器!"
+
+#: ../sensors-applet/sensors-applet-gconf.c:44
+msgid "An error occurred loading the stored sensors data"
+msgstr "在加载传感器数据时发生错误"
+
+#: ../sensors-applet/sensors-applet-gconf.c:45
+msgid "Incompatible sensors configuration found"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet-gconf.c:49
+msgid ""
+"An error has occurred when loading the stored sensors data. The default "
+"values will be used to recover from this error."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet-gconf.c:52
+msgid ""
+"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"compatible with this version. The existing sensors data will be overwritten "
+"with the default values for this new version."
+msgstr ""

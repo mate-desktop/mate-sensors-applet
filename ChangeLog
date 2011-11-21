@@ -1,0 +1,868 @@
+2010-06-24  Alex Murray <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.27 Released
+
+2010-06-23  Alex Murray <murray.alex@gmail.com>
+
+	* Fix bug #3002075 - value temperature is missing
+
+2010-06-19  Alex Murray <murray.alex@gmail.com>
+
+	* Update the pmu-sys plugin to handle new kernel interface (thanks to
+	Alexey Smazhenko for the patch). Fixes bug LP #402064
+
+2010-06-15  Alex Murray <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.6 Released
+
+	* Rename and port devkit-disks plugin to udisks interface as
+	devkit-disks no longer exists
+
+	* Update Italian translation (thanks to Daniele Napolitano)
+
+2009-11-21  Alex Murray <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.5 Released
+
+	* Port devicekit-disks plugin to use latest devicekit DBus API - now
+	requires libatasmart as a dependency as a result (Patch contributed by
+	Pramod Dematagoda)
+
+	* Update Russian translation (thanks to gankov)
+
+2009-11-14  Alex Murray <murray.alex@gmail.com>
+
+	* Cleanup old compatibility code and drop support for older version of
+	GTK+ and Glib - now require 2.14 for both
+
+2009-08-16  Alex Murray <murray.alex@gmail.com>
+
+	* Add zh_CN translation (thanks to lerosua)
+
+2009-07-24  Alex Murray <murray.alex@gmail.com>
+
+	* Add support for monitoring disk temperatures via devicekit-disks
+	(Patch contributed by Pramod Dematagoda)
+
+2009-06-24  Jaap Versteegh <j.r.versteegh@gmail.com>
+
+	* Add support for ATI GPUs using proprietary driver
+
+2009-04-21  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.4 Released
+
+	* Fix bug where changing temperature scale would convert limits of
+	non-temperature sensors (Fixes Ubuntu bug #249955)
+
+2009-03-15  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.3 Released
+
+	* Fix error retrieving sensor value if compiled against old libsensors
+	library version (libsensors API version < 4) (Fixes bug #2687451).
+
+2009-03-08  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.2 Released
+
+	* Avoid using sensors_parse_chip_name in libsensors plugin each time we
+	need to get a sensor's value since it leaks memory. (Fixes bug
+	#2555807)
+
+2009-03-05  Alex Murray  <murray.alex@gmail.com>
+
+	* Add plugin for fan sensor on eeepc
+
+	* Fix bug where choosing to display icons would fail if we start with a
+	different display mode
+
+	* Add support to nvidia plugin for multiple GPUs (Fixes bug #2659148)
+
+2008-03-16  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed bugs in libsensors and nvidia plugins, where we would
+	return with no value on some error conditions at start-up, which
+	could cause a segmentation violation.
+
+2008-03-09  Alex Murray  <murray.alex@gmail.com>
+
+	* Added Brazilian Portuguese translation (thanks to Amadeu
+	A. Barbosa Júnior)
+
+2008-02-10  Alex Murray  <murray.alex@gmail.com>
+
+	* Use "program-name" instead of "name" in about dialog as per GTK
+	API
+
+	* Updated Copyright of files to 2008
+
+2007-12-26  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.1 Released
+
+	* Fixed bug in libsensors4 plugin [ 1858005 ] segfault on startup
+	
+2007-12-24  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.2.0 Released
+
+2007-12-23  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed crash when removing applet from panel, whilst the
+	preferences window is open - fixes Ubuntu bug #172991
+	
+2007-12-20  Alex Murray  <murray.alex@gmail.com>
+
+	* Work around memory leak in libsensors3 code by manually freeing
+	the result of sensors_parse_chip_name()
+
+2007-12-13  Alex Murray  <murray.alex@gmail.com>
+
+	* Implemented a plugin system, so all interface specific code are
+	compiled into separated plugin modules, allowing them to be
+	shipped separately from the main GNOME Sensors Applet program, to
+	fix Debian bug #375179, and allow the NVIDIA plugin to be split
+	into a separate package if needed.
+
+2007-12-11  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 2.0.1 Released
+
+	* Use new GTK tooltip API when possible
+
+	* Update GTK icon cache on uninstall to comply with GNOME bug
+	#362604
+
+	* Use g_timeout_add_seconds() when possible to save power
+
+	* GNOME Sensors Applet Version 2.0.0 Released
+
+	* src/libsensors-sensors-interface.c: Added support for
+	libsensors4 API - to be shipped with upcoming Fedora 9 and Ubuntu
+	8.04
+
+2007-10-25  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.8.2 Released
+
+	* Updated README to reflect re-licensing of icons under CC-BY-SA
+	3.0 (https://bugs.launchpad.net/ubuntu/+source/sensors-applet/+bug/69800/comments/12)
+
+2007-07-19  Alex Murray  <murray.alex@gmail.com>
+
+	* Added patch from [ 1756362 ] PATCH: get initial sensor min/max
+	from libsensors - thanks to Hans de Goede
+
+2007-07-04  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.8.1 Released
+
+	* Fixed bug [ 1738013 ] "38 °C" instead of "38°C"
+	
+	* Fixed bug [ 1728599 ] Label is not red when value is wrong 
+
+2007-07-03  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.8.0 Released
+
+2007-07-02  Alex Murray  <murray.alex@gmail.com>
+	
+	* Added fix for bug [ 1570143 ] Wrong sensor type after upgrade
+	 - this breaks existing libsensors configurations, so warn user
+	after upgrading and use the default values instead.
+
+2007-05-04  Alex Murray  <murray.alex@gmail.com>
+
+	* Updated Polish translation (thanks to Paweł Marciniak)
+
+2007-04-27  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.12 Released
+
+	* Fixed bug [ 1705371 ] - Don't see second core on Core/Core 2
+
+2007-04-23  Alex Murray  <murray.alex@gmail.com>
+
+	* Added notifications to alert user when errors occur while
+	updating sensors or when trying to save or restore sensor settings.
+
+2007-02-10  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.11 Released
+
+2007-02-08  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed crash when graph has size of only a few pixels to fix bug
+	[ 1653522 ] Crash in sensor applet: reducing graph pixel size to 0
+	
+2007-01-23  Alex Murray  <murray.alex@gmail.com>
+
+	* Changed to display error messages in tooltip rather than on
+	actual panel to fix bug [ 1560533 ] Request: Don't print error
+	messages in main applet GUI
+
+2007-01-20  Alex Murray  <murray.alex@gmail.com>
+
+	* Added patch for k8temp sensor - Thanks to erdem_ua - to fix bug 
+	[ 1598367 ] AMD64/Opteron temp sensor broken
+
+	* Added patch to fix mem leak - Thanks again to erdem_ua - closes 
+	[ 1623134 ] Leakage
+	
+
+2006-11-27  Alex Murray  <murray.alex@gmail.com>
+
+	* Added Hungarian translation
+
+	* Updated Czech translation
+
+	* Updated French translation
+
+2006-11-22  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.10 Released
+	
+	* Fixed bug where when upgrading from a previous version, the
+	graph size would always be restored from the previous version
+	setting rather than the new version. (Fixes Debian Bug #393937).
+
+	* Added support for separate high and low alarm commands to allow
+	for things like hysteresis fan control.
+
+2006-11-11  Alex Murray  <murray.alex@gmail.com>
+
+	* Added Czech translation (thanks to Vitezslav Kotrla)
+
+2006-11-04  Alex Murray  <murray.alex@gmail.com>
+
+	* Updated HDD icon to be more consistent with others
+
+2006-11-01  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.9 Released
+	
+	* Added new Tango style icons (very big thanks to epicbard)
+
+2006-09-06  Alex Murray  <murray.alex@gmail.com>
+
+	* Updated Swedish translation (thanks to Daniel Nylander)
+
+2006-08-25  Alex Murray  <murray.alex@gmail.com>
+
+	* Updated German translation (should now be complete) (thanks to
+	Matthias Schmidt)
+
+2006-08-23  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.8 Released
+
+2006-08-22  Alex Murray  <murray.alex@gmail.com>
+
+	* Updated German translation (thanks to Matthias Schmidt)
+	
+	* Fixed crash due to misuse of g_return_if_fail() (thanks to Cyril
+	Jaquier)
+
+	* Fixed bug where text would appear unmarked during alarm
+	conditions when a user had specified a different font size (thanks
+	to Colin Macdonald for noticing it).
+
+2006-08-20  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.7 Released
+
+2006-08-19  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed potential crash when restoring data between sessions
+
+2006-08-18  Alex Murray  <murray.alex@gmail.com>
+
+	* Refactored code to store sensor data between sessions
+
+2006-08-10  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed a number of compiler warnings
+
+2006-08-07  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.6 Released
+
+	* Fixed crash if no sensors found (should resolve Ubuntu bug
+	#51575)
+
+	
+2006-08-04  Alex Murray  <murray.alex@gmail.com>
+
+	* Refactored sensor search code
+
+2006-08-03  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed bug in where CFLAGS and LDFLAGS would be ignored if
+	configured with --with-nvidia
+
+2006-07-25  Alex Murray  <murray.alex@gmail.com>
+
+	* Changed tooltips to display units regardless of GConf setting 
+	(fixes bug [ 1528198 ] tooltip & hide units).
+
+	* Pack sensor rows closer together on panel
+
+2006-07-24  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.5 Released
+
+	* Fix for Debian bug #379361
+
+2006-07-21  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.4 Released
+
+	* Fixed crash when no sensors enabled.
+
+	* GNOME Sensors Applet Version 1.7.3 Released
+
+	* Fixed bug to allow for vertical panels - now we use a single
+	variable Graph Size which sets the width when the applet is on top
+	or bottom panels, or the height when the applet is on left or
+	right panels. (Resolves Debian Bug #378530: Graph does not work on
+	vertical panels).
+	
+	* Removed dependance on assertions in code and instead handle
+	errors before assertions occur.
+	
+	* Fixed bug where crash would occur if trying to update active
+	sensors when no sensors were active (fixes Gentoo Bug #140264)
+
+	
+2006-07-18  Alex Murray  <murray.alex@gmail.com>
+
+	* Fixed bugs where g_assert_not_reached was triggered which would
+	exit the applet without warning to the user
+	
+	* Added support for Sony Vaio laptops (provided by the sonypi
+	kernel module http://popies.net/sonypi/)
+	
+	* Added support for setting the font size and hiding the units of
+	labels via GConf parameters
+	
+	* Added a section to the help manual 'Advanced Options' which
+	details the font size and unit hiding parameters and how to set
+	them.
+	
+
+2006-07-06  Alex Murray  <murray.alex@gmail.com>
+
+	* Improved notification text to make more informative
+	
+	* Fixed bug #1517837 to allow for transparent panels
+	
+
+2006-07-05  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.2 Released
+	* Optimised startup time by reducing search time for new sensors
+	* Optimised updating of active sensors to reduce overall CPU usage
+	* Added help buttons in Preferences and Sensor Properties windows
+	to provide easy access to documentation.
+	* Added error handling between different version configurations to
+	allow for easier upgrading and fix crashes on upgrades.
+
+2006-07-02  Alex Murray  <murray.alex@gmail.com>
+
+	* Updated help manual
+	* Updated French translation (thanks to Davy Defaud)
+
+2006-06-30  Alex Murray  <murray.alex@gmail.com>
+
+	* Added patch to fix locale problems with i2c-proc sensors
+	interface (resolves #1281540 - thanks to Jacek Tomasiak).
+	
+2006-06-28  Alex Murray  <murray.alex@gmail.com>
+
+	* Increase gradient effect for graphs 
+
+2006-06-27  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.7.1 Released
+	* Missed bug in libsensors interface
+
+	* GNOME Sensors Applet Version 1.7.0 released
+	* Added graph display for sensors
+	* Fixed bug where sensors would stop updating sometimes
+
+2006-06-23  Alex Murray  <murray.alex@gmail.com>
+
+	* Changed to use stock icons for sensors to fit with the current
+	desktop theme
+
+2006-06-20  Alex Murray  <murray.alex@gmail.com>
+
+	* Added support for libnotify
+
+2006-06-18  Alex Murray  <murray.alex@gmail.com>
+
+	* Removed extraneous preference options to conform more to GNOME
+	HIG and other GNOME applets.
+	* Fixed bug in alignment of values when icons displayed.
+	* Introduced smart layout of sensors within panel.
+	
+2006-06-18  Alex Murray  <murray.alex@gmail.com>
+
+	* Removed support for GTK versions < 2.6
+
+2006-06-16  Alex Murray  <murray.alex@gmail.com>
+
+	* Added the ability to set high and low values for each sensor
+	* Alarms and dynamic icons are then based upon these values
+	
+	
+2006-06-15  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.6.2 released
+	* Added the ability to rearrange the order of sensors
+	* Minor bug fixes
+	
+
+2006-05-24  Alex Murray  <murray.alex@gmail.com>
+
+	* Added per sensor tooltips	
+	* Adeed option to display icons only
+	* Fixed bugs
+	
+
+2006-05-01  Alex Murray  <murray.alex@gmail.com>
+
+	* Added support for nvidia GPUs, via libNVCtrl (from
+	nvidia-settings) - thanks to Sven Peter.
+	
+
+2006-03-25  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet Version 1.6.1 released
+	* Refactored code base to lower CPU utilisation
+	* Added support for dynamic temperature icons
+	* Added support for libsensors interface (detected at compile
+	time) - Thanks to Sam Morris
+	* Added support for Windfarm kernel module (iMac and other G5s) -
+	Thanks to Alastair Poole
+	* Added Spanish translation
+	* Minor bug fixes
+
+2006-01-08  Alex Murray  <murray.alex@gmail.com>
+
+	* src/active-sensor.c, src/active-sensor.h, src/sensor-config-dialog.c, src/sensors-applet-gconf.c, src/sensors-applet.c, src/sensors-applet.h:
+	Refactored code base to allow for lower CPU utilisation and dynamic icons.
+
+2006-01-07  Alex Murray  <murray.alex@gmail.com>
+
+	* pixmaps/battery-icon.png, pixmaps/cpu-icon.png, pixmaps/memory-icon.png, pixmaps/Makefile.am, pixmaps/case-icon.png:
+	Added back some more icons
+
+2006-01-06  Alex Murray  <murray.alex@gmail.com>
+
+	* src/acpi-sensors-interface.c, src/hddtemp-sensors-interface.c, src/i2c-proc-sensors-interface.c, src/i2c-sys-sensors-interface.c, src/i8k-sensors-interface.c, src/ibm-acpi-sensors-interface.c, src/omnibook-sensors-interface.c, src/pmu-sys-sensors-interface.c, src/sensors-applet.c, src/sensors-applet.h:
+	Implemented dynamic temperature icons.
+	Resize icons with font size.
+
+	* pixmaps/high-temp-icon.png, pixmaps/low-temp-icon.png, pixmaps/normal-temp-icon.png, pixmaps/very-high-temp-icon.png, pixmaps/very-low-temp-icon.png:
+	Added range temp icons
+
+	* pixmaps/battery-temp-icon.png, pixmaps/cpu-temp-icon.png, pixmaps/generic-temp-icon.png, pixmaps/gpu-temp-icon.png, pixmaps/hdd-icon.png, pixmaps/hdd-temp-icon.png, pixmaps/mem-temp-icon.png:
+	Added hdd device icon and cpu device icons, removed old fixed temp icons
+	* po/ChangeLog, po/fr.po: Updated french translation
+
+2006-01-04  Alex Murray  <murray.alex@gmail.com>
+
+	* GNOME Sensors Applet 1.6 Released.
+
+2006-01-03  Alex Murray  <murray.alex@gmail.com>
+
+	* help/C/figures/applet_in_panel.png, help/C/sensors-applet.xml, pixmaps/Makefile.am:
+	Finished help manual
+
+	* src/prefs-dialog.c:
+	Restructured prefs-dialog to comply better with the GNOME HIG v2.0
+
+	* src/prefs-dialog.c, src/sensor-config-dialog.c, src/sensors-applet.c, src/sensors-applet.h:
+	Fixed memory leaks, including reference creep in pack_display.
+
+	* src/about-dialog.c, src/pmu-sys-sensors-interface.c, src/prefs-dialog.c, src/sensor-config-dialog.c, src/sensors-applet.c:
+	Fixed another small memory leak, plus many other fixes for consistency etc
+
+2006-01-02  Alex Murray  <murray.alex@gmail.com>
+
+	* src/hddtemp-sensors-interface.c, src/sensor-config-dialog.c, src/sensors-applet.c:
+	Fixed a memory leak in sensors_applet_update_display - forgot to free the sensor id string for each sensor.
+
+
+2005-12-30  Alex Murray  <murray.alex@gmail.com>
+
+	* src/acpi-sensors-interface.c, src/hddtemp-sensors-interface.c, src/i2c-proc-sensors-interface.c, src/i2c-sys-sensors-interface.c, src/ibm-acpi-sensors-interface.c, src/pmu-sys-sensors-interface.c, src/sensors-applet.c, src/sensors-applet.h, pixmaps/battery-temp-icon.png, pixmaps/cpu-temp-icon.png, pixmaps/fan-icon.png, pixmaps/generic-temp-icon.png, pixmaps/gpu-temp-icon.png, pixmaps/hdd-temp-icon.png, pixmaps/mem-temp-icon.png:
+	Added more icons
+
+	* src/acpi-sensors-interface.c, src/hddtemp-sensors-interface.c, src/i2c-proc-sensors-interface.c, src/i2c-sys-sensors-interface.c, src/i8k-sensors-interface.c, src/ibm-acpi-sensors-interface.c, src/omnibook-sensors-interface.c, src/pmu-sys-sensors-interface.c, src/sensors-applet.c, src/sensors-applet.h:
+	Allow interfaces to specify icons, and default if none specified.
+
+	* src/sensor-config-dialog.c, src/sensors-applet.c, src/sensors-applet.h, pixmaps/Makefile.am, pixmaps/cpu-temp-icon.png:
+	Added an icon for cpu temp
+
+	* src/prefs-dialog.c, src/prefs-dialog.h, src/sensor-config-dialog.c, src/sensors-applet-gconf.c, src/sensors-applet-gconf.h, src/sensors-applet.c, src/sensors-applet.h, SensorsApplet.server.in.in, configure.ac, pixmaps/Makefile.am:
+	Support for icons added.
+
+2005-12-26  Alex Murray  <murray.alex@gmail.com>
+
+	* help/C/sensors-applet.xml:
+	More work on help document.
+
+2005-12-23  Alex Murray  <murray.alex@gmail.com>
+
+	* src/Makefile.am, src/hddtemp-sensors-interface.c, src/ibm-acpi-sensors-interface.c, src/ibm-acpi-sensors-interface.h, src/prefs-dialog.c, src/sensors-applet-gconf.c, src/sensors-applet-gconf.h, src/sensors-applet.c, src/sensors-applet.h:
+	Added patch for ibm-acpi kernel module.
+
+	
+2005-11-14  Alex Murray  <murray.alex@gmail.com>
+
+	* help/Makefile.am, src/sensors-applet.c:
+	Updated help Makefile.am to include DOC_FIGURES so figures get installed properly
+
+	* help/C/figures/applet_in_panel.png, help/C/sensors-applet.xml:
+	Added a simple screenshot for the help manual
+	Started on the introduction to the help manual
+
+2005-11-13  Alex Murray  <murray.alex@gmail.com>
+
+	* TODO: Added locale fix to TODO
+
+	* TODO: Updated TODO
+
+2005-11-11  murray.alex  <murray.alex@lorenz>
+
+	* ChangeLog, configure.ac, help/C/sensors-applet.xml:
+	Updated version number and name
+	Updated ChangeLog
+	Started on help manual
+
+	* TODO: Updated TODO
+
+2005-11-11  Alex Murray  <murray.alex@gmail.com>
+
+	* TODO: Updated TODO
+
+2005-11-10  Alex Murray  <murray.alex@gmail.com>
+
+	* help/C/Makefile.am, help/C/sensors-applet-C.omf, omf.make, xmldocs.make:
+	Removed redundant old style help files from CVS
+
+	* src/Makefile.am, src/main.c, src/sensors-applet.c, SensorsApplet.xml, configure.ac, help/Makefile.am:
+	Added help menu option and document link
+
+2005-11-08  Alex Murray  <murray.alex@gmail.com>
+
+	* src/i8k-sensors-interface.c:
+	Fixed bug where id's in i8k sensors were being translated but they need to stay constant. Removed the translations
+
+	* help/C/sensors-applet.xml, help/Makefile.am, m4/.cvsignore, .cvsignore, Makefile.am, configure.ac:
+	Switched to gnome-doc-utils way of doing help docs
+
+	* src/sensors-applet.c:
+	Fixed -pedantic errors - need to do for rest of code-base
+
+2005-11-07  Alex Murray  <murray.alex@gmail.com>
+
+	* src/TODO: Added TODO list
+
+2005-11-06  Alex Murray  <murray.alex@gmail.com>
+
+	* ChangeLog: Updated ChangeLog
+
+	* src/sensors-applet.c:
+	Display temperatures without any decimal places as almost all
+	interfaces only use integers, and the only one that doesn't is i2c-sys
+	which only uses half degrees at most.
+
+	* src/prefs-dialog.c:
+	Make list of sensors resize with window as window is resized.
+
+2005-11-04  Alex Murray  <murray.alex@gmail.com>
+
+	* pmu-sys-sensors-interface.c:
+	Backported code to handle therm_adt746x prior to 2.6.12 as well as
+	current therm_adt746x devices
+
+2005-11-04  Alex Murray  <murray.alex@gmail.com>
+
+	* pmu-sys-sensors-interface.c:
+	Backported code to handle therm_adt746x prior to 2.6.12 as well as
+	current therm_adt746x devices
+
+2005-11-03  Alex Murray  <murray.alex@gmail.com>
+
+	* prefs-dialog.c, sensors-list-i8k.c, sensors-list-i8k.h:
+	Removed old cruft (sensors-list-i8k.h/c) from repo
+	Added autosize to columns in prefs dialog
+
+
+2005-11-02  Alex Murray  <murray.alex@gmail.com>
+
+	* prefs-dialog.c:
+	Fixed sensor list in prefs dialog so interfaces can't be
+	"configured"
+
+
+2005-10-29  Alex Murray  <murray.alex@gmail.com>
+
+	* configure.ac: Updated to version 1.5.2 and updated email address
+
+	* src/acpi-sensors-interface.c, src/hddtemp-sensors-interface.c, src/i2c-proc-sensors-interface.c, src/i2c-sys-sensors-interface.c, src/i8k-sensors-interface.c, src/omnibook-sensors-interface.c, src/pmu-sys-sensors-interface.c, src/sensors-applet-gconf.c, src/sensors-applet.c, src/sensors-applet.h:
+	Check when each sensor is added to the list that it doesn't already exist.
+	On start-up, first restore any old values from gconf, then try to set up manually to see if any new sensors found.
+	When loading from gconf, dont worry if paths are invalid.
+	When adding a sensor, give indication if was successful or not.
+
+	
+2005-10-22  Alex Murray  <murray.alex@gmail.com>
+
+	* ChangeLog, configure.ac: Changed email address
+
+2005-10-03  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensor-config-dialog.c:
+	sensor-config-dialog.c: Changed offset and multiplier values to be more finegrained - as per patch from Debian (thanks to Sam Morris)
+
+2005-09-30  Alex Murray  <murray.alex@gmail.com>
+
+	* src/Makefile.am, src/omnibook-sensors-interface.c, src/omnibook-sensors-interface.h, src/sensors-applet.c, src/sensors-applet.h:
+	Added support for Omnibook kernel module
+
+	* src/hddtemp-sensors-interface.c, src/prefs-dialog.c, src/prefs-dialog.h, src/sensors-applet.c, src/sensors-applet.h:
+	prefs-dialog.c: Added tooltip to alert the user that the labels are editable
+	prefs-dialog.h: Added the tooltip pointer to prefs_dialog
+	sensors-applet.c/h: Added patch to fix "ACPI" bug on amd64
+
+2005-08-23  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-applet.c, ChangeLog, po/fr.po:
+	src/sensors-applet.c : Changed tooltip to use plural / non plural form as appropriate
+	po/fr.po : Updated French translation (including plural forms for the tooltip).
+
+2005-08-19  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-applet.c:
+	sensors-applet.c: Changed order in which each interface is called to ensure the list of sensors generated has the interfaces in alphabetical order.
+
+2005-07-24  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet-gconf.c: Tidied up gconf stuff
+
+	* sensors-applet.c, sensors-applet.h, sensor-config-dialog.c:
+		Fixed memory leak with alarm_command allocation by adding
+		a GSList pointer within the SensorsApplet struct to keep a
+		list of the allocated memory so it can be freed when the
+		alarm is deactivated.
+		
+2005-07-24  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-applet.c/h: SensorsApplet now keeps track of the
+	allocated memory for the active alarm commands, so that this
+	memory can be freed when the alarm is deactivated.
+
+2005-07-23  Alex Murray  <murray.alex@gmail.com>
+
+	* src/pmu-sys-sensors-interface.c: Updated device filenames, as
+	they changed with the 2.6.12 kernel.
+
+2005-07-22  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Stable version 1.4 released.
+	* po/fr.po: Updated French translation (thanks to Davy Defaud).
+	* src/sensors-applet.c: Fixed bug in alarm system.
+	* src/prefs-dialog.c: Fixed bug where when a sensor is turned off
+	which had an active alarm, the alarm would continue regardless.
+	
+2005-07-12  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Unstable/testing version 1.3.1 released.
+	* src/acpi-sensors-interface.c/h: Added support for ACPI thermal zones
+	* src/sensors-applet.c: In sensors_applet_pack_labels() when
+	sensor values are not placed inline with labels, center align
+	both, but when placed next to labels, left justify instead.
+
+	
+2005-07-11  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Unstable/testing version 1.3 released.
+	* src/* : Restructured the majority of the applet by removing the
+	SensorsList structure and storing all sensors in a single tree
+	structure, group by interface. This makes writing the code for
+	extra interfaces (eg ACPI, nvidia-settings for NVIDIA gfx cards)
+	much easier.
+
+	
+2005-07-07  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 1.2 Released.
+
+	
+2005-07-06  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-list-pmu-sys.c/h: Added support for reading from
+	PowerPC modules therm_adt746x and therm_windtunnel (thanks to
+	Nathan Hand).
+
+	
+2005-07-04  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-list-hddtemp.c/h: Added support for reading disk
+	temps from hddtemp daemon.
+
+	
+2005-07-03  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-list-xxx.c/h:
+	* src/sensors-list.c/h: Moved repeated code fragments from
+	sensors-lists into the generic sensors-list file for better
+	encapsulation.
+
+	
+2005-06-30  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 1.0 Released.
+
+	
+2005-06-24  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-applet.c:
+	* src/sensors-list-i2c-sys.c:
+	* src/sensors-list-i2c-proc.c:
+	* src/sensors-list-i8k.c: Fixed bug where displaying one sensor
+	with no label would sometimes display nothing at all.
+	
+
+2005-06-05  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-applet.c:
+	* src/sensors-list.c:
+	* src/sensors-list-i2c-sys.c:
+	* src/sensors-list-i2c-proc.c: Fixed minor memory leaks - reduced
+	overall memory footprint.
+	
+
+2005-05-31  Alex Murray  <murray.alex@gmail.com>
+
+	* src/sensors-applet.c: Fixed minor memory leak when changing
+	applet background style.
+
+
+2005-05-08  Alex Murray  <murray.alex@gmail.com>
+
+	* SensorsApplet.server.in.in: Changed name in Applet list to be
+	more HIG compliant (Sensors Applet => Hardware Sensors Monitor).
+
+2005-05-02  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.7.3 Released
+	Added cpu_vid sensor reading to i2c-sys interface.
+	Fixed bug where icon would not be displayed on the Add to Panel
+	list for GNOME > 2.8 (need to specify full path to icon).
+	
+2005-04-06  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.7.2 Released
+	Added backwards compatability for GTK+ 2.4
+
+2005-04-03  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.7.1 Released
+	Added check for GTK 2.6 in configure process
+	Added Polish translation (thanks to Tomek Bielecki)
+	Added Italian translation (thanks to Roberto)
+	
+
+2005-03-06  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.7 Released
+	Updated to GTK 2.6.x widgets.
+	Fixed bug where multiple applet instances would add sensors
+	into the list of the original applet, and thus appear to 
+	find no sensors themselves.
+	Improved sensors error handling during runtime.
+	Changed minimum update time to 1.5 seconds since this
+	is the rate the kernel modules themselves use.
+	Updated German translation.
+	
+2005-02-20  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.6.2 Released
+	Fixed secondary memory leak - is now 'memory-tight'.
+	Font size is now stored as an integer rather than a string to
+	improve robustness of code.
+	Updated Romanian translation.
+	Updated French translation.
+	
+2005-02-16  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.6.1 Released
+	Fixed minor memory leak with i2c sensors
+	Improved error handling and detection
+	Minor UI improvements
+	Updated French translation
+
+2005-02-06  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.6.0 Released
+	Added multiplier and offset values for each
+	sensor so users can make adjustments according
+	their own specific needs.
+	Added an alarm type, so user can specify if alarm
+	is less than or greater than sensor value.
+	Improved dialog's to make more HIG compliant
+	Improved kernel 2.4 sensor detection
+	Added German translation
+	Minor bugfixes
+	
+2005-02-03  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.5.1 Released
+	Support for Linux kernel 2.4 added.
+
+2005-02-02  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.5.0 Released
+	Support for Dell Inspirion 8000 (i8k) sensors.
+	Needs i8k kernel module loaded.	
+	Fixed so translations actually work
+	Updated French translation
+
+2005-02-01  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.4.0 Released
+	Major rewrite of codebase to allow for easy
+	extension into i8k and other sensor interfaces
+
+	Added alarm repeat interval option so user
+	can define how often the alarm repeats itself
+
+2005-01-29  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.3.0 Released
+	Addded alarms for each sensor
+	Fixed bug with multiple instances of applet
+	Added Russian translation
+
+2005-01-24  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.2.2 Released
+	Added French translation
+	Refactored codebase
+	
+2005-01-23  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.2.1 Released
+	Added Romanian translation
+	Improved sensors device detection
+	
+2005-01-23  Alex Murray  <murray.alex@gmail.com>
+
+	* sensors-applet: Version 0.2 Released
+

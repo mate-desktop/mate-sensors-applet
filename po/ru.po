@@ -1,0 +1,505 @@
+# Russian translation of the GNOME Sensor Applet.
+# Copyright (C) 2005 Alex Murray.
+# This file is distributed under the same license as the GNOME Sensor Applet package.
+# Mikhael Korneev <voldar@vrg.ru>, 2005.
+# Gankov Andrey <gankov.andrey@inbox.ru>, 2009
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Sensor Applet 2.2.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-21 14:29+1030\n"
+"PO-Revision-Date: 2009-09-02 00:13+0400\n"
+"Last-Translator: Gankov Andrey <gankov.andrey@inbox.ru>\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../SensorsApplet.server.in.in.h:1
+msgid "Display temperature, fan speed and voltage sensor readings"
+msgstr ""
+"Сообщает данные о температуре, скорости вентиляторов и напряжении питания"
+
+#: ../SensorsApplet.server.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr "Монитор аппаратных датчиков"
+
+#: ../SensorsApplet.xml.h:1
+msgid "_About"
+msgstr "_Об апплете"
+
+#: ../SensorsApplet.xml.h:2
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../SensorsApplet.xml.h:3
+msgid "_Preferences"
+msgstr "Н_астройка"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:59
+#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
+#: ../plugins/omnibook/omnibook-plugin.c:47
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/smu-sys/smu-sys-plugin.c:58
+msgid "CPU"
+msgstr "ЦП"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:64
+#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/smu-sys/smu-sys-plugin.c:63
+#: ../plugins/aticonfig/aticonfig-plugin.c:104
+msgid "GPU"
+msgstr "ЦП"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:69
+#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+msgid "FAN"
+msgstr "Вент"
+
+#: ../plugins/i8k/i8k-plugin.c:56
+msgid "FAN1"
+msgstr "Вент 1"
+
+#: ../plugins/i8k/i8k-plugin.c:64
+msgid "FAN2"
+msgstr "Вент 2"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+msgid "MiniPCI"
+msgstr ""
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+msgid "Battery"
+msgstr "Батарея"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+msgid "Fan"
+msgstr "Вент"
+
+#: ../plugins/sonypi/sonypi-plugin.c:62
+msgid "CPU TEMP"
+msgstr ""
+
+#: ../plugins/omnibook/omnibook-plugin.c:46
+#: ../sensors-applet/sensors-applet.c:413
+msgid "temperature"
+msgstr "температура"
+
+#: ../plugins/nvidia/nvidia-plugin.c:131
+msgid "Ambient"
+msgstr "Внешний"
+
+#: ../sensors-applet/prefs-dialog.c:415
+msgid "Sensors Applet Preferences"
+msgstr "Настройки апплета Сенсоры"
+
+#: ../sensors-applet/prefs-dialog.c:450
+#: ../sensors-applet/sensors-applet.c:1397
+msgid "No sensors found!"
+msgstr "Датчики не найдены!"
+
+#: ../sensors-applet/prefs-dialog.c:456
+msgid "Display"
+msgstr "Внешний вид"
+
+#: ../sensors-applet/prefs-dialog.c:468
+msgid "label with value"
+msgstr "название и значение"
+
+#: ../sensors-applet/prefs-dialog.c:469
+msgid "icon with value"
+msgstr "значок и значение"
+
+#: ../sensors-applet/prefs-dialog.c:470
+msgid "value only"
+msgstr "только значение"
+
+#: ../sensors-applet/prefs-dialog.c:471
+msgid "icon only"
+msgstr "только значок"
+
+#: ../sensors-applet/prefs-dialog.c:472
+msgid "graph only"
+msgstr "только график"
+
+#: ../sensors-applet/prefs-dialog.c:488
+msgid "_Display sensors in panel as"
+msgstr "_Показывать в панели как"
+
+#: ../sensors-applet/prefs-dialog.c:503
+msgid "beside labels / icons"
+msgstr "рядом со значком"
+
+#: ../sensors-applet/prefs-dialog.c:504
+msgid "below labels / icons"
+msgstr "ниже значка"
+
+#: ../sensors-applet/prefs-dialog.c:515
+msgid "Preferred _position of sensor values"
+msgstr "Расположение значений датчика"
+
+#: ../sensors-applet/prefs-dialog.c:527
+msgid "Kelvin"
+msgstr "Кельвин"
+
+#: ../sensors-applet/prefs-dialog.c:528
+msgid "Celsius"
+msgstr "Цельсий"
+
+#: ../sensors-applet/prefs-dialog.c:529
+msgid "Fahrenheit"
+msgstr "Ференгейт"
+
+#: ../sensors-applet/prefs-dialog.c:540
+msgid "_Temperature scale"
+msgstr "Ед. изм. _температуры"
+
+#: ../sensors-applet/prefs-dialog.c:571
+msgid "Graph _size (pixels)"
+msgstr "Ширина _графика (пиксели)"
+
+#: ../sensors-applet/prefs-dialog.c:584
+msgid "Update"
+msgstr "Обновление"
+
+#: ../sensors-applet/prefs-dialog.c:614
+msgid "Update _interval (secs)"
+msgstr "_Интервал обновления (сек)"
+
+#: ../sensors-applet/prefs-dialog.c:624
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: ../sensors-applet/prefs-dialog.c:635
+msgid "Display _notifications"
+msgstr "Показывать _уведомления"
+
+#: ../sensors-applet/prefs-dialog.c:839
+msgid "Sensor"
+msgstr "Датчик"
+
+#: ../sensors-applet/prefs-dialog.c:846
+msgid "Label"
+msgstr "Название"
+
+#: ../sensors-applet/prefs-dialog.c:856
+msgid "Labels can be edited directly by clicking on them."
+msgstr "Названия могут быть изменены если вы щелкните по ним."
+
+#: ../sensors-applet/prefs-dialog.c:857
+msgid "Enabled"
+msgstr "Включен"
+
+#. icon stuff
+#: ../sensors-applet/prefs-dialog.c:863
+#: ../sensors-applet/sensor-config-dialog.c:452
+msgid "Icon"
+msgstr "Значок"
+
+#: ../sensors-applet/prefs-dialog.c:997
+msgid "General Options"
+msgstr "Общие настройки"
+
+#: ../sensors-applet/prefs-dialog.c:1001
+msgid "Sensors"
+msgstr "Датчики"
+
+#: ../sensors-applet/sensors-applet.h:57
+msgid "RPM"
+msgstr "об/мин"
+
+#: ../sensors-applet/sensors-applet.h:58
+msgid "V"
+msgstr "В"
+
+#: ../sensors-applet/sensors-applet.h:59
+msgid "A"
+msgstr ""
+
+#. hard code text as ERROR
+#: ../sensors-applet/active-sensor.c:578
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+#: ../sensors-applet/about-dialog.c:33
+msgid "Translator"
+msgstr "Перевод"
+
+#: ../sensors-applet/about-dialog.c:36
+msgid ""
+"To translator: Put your name here to show up in the About dialog as the "
+"translator"
+msgstr ""
+"Андрей Ганьков <gankov.andrey@inbox.ru>\n"
+"Михаил Корнеев <voldar@vrg.ru>"
+
+#: ../sensors-applet/sensor-config-dialog.c:394
+msgid "Sensor Properties"
+msgstr "Настройки Датчика"
+
+#. graph stuff
+#: ../sensors-applet/sensor-config-dialog.c:419
+msgid "Graph"
+msgstr "График"
+
+#: ../sensors-applet/sensor-config-dialog.c:438
+msgid "Graph Color"
+msgstr "Выберите цвет графика"
+
+#: ../sensors-applet/sensor-config-dialog.c:441
+msgid "Graph _color"
+msgstr "_Цвет графика"
+
+#: ../sensors-applet/sensor-config-dialog.c:503
+msgid "Sensor _icon"
+msgstr "_Значок датчика"
+
+#: ../sensors-applet/sensor-config-dialog.c:509
+msgid "Scaling Parameters"
+msgstr "Параметры значений датчика"
+
+#: ../sensors-applet/sensor-config-dialog.c:542
+msgid "Sensor value _multiplier"
+msgstr "_Коэффициент"
+
+#: ../sensors-applet/sensor-config-dialog.c:575
+msgid "Sensor value _offset"
+msgstr "_Смещение"
+
+#. now do alarm widgets
+#: ../sensors-applet/sensor-config-dialog.c:585
+msgid "Sensor Limits"
+msgstr "Диапазон значений датчика"
+
+#: ../sensors-applet/sensor-config-dialog.c:618
+msgid "Sensor _low value"
+msgstr "Нижняя граница"
+
+#: ../sensors-applet/sensor-config-dialog.c:653
+msgid "Sensor _high value"
+msgstr "Верхняя граница"
+
+#: ../sensors-applet/sensor-config-dialog.c:664
+#: ../sensors-applet/sensors-applet.c:452
+msgid "Alarm"
+msgstr "Сигнал тревоги"
+
+#: ../sensors-applet/sensor-config-dialog.c:696
+msgid "Alarm _repeat interval (secs)"
+msgstr "_Интервал повтора (сек)"
+
+#: ../sensors-applet/sensor-config-dialog.c:716
+msgid "Lo_w alarm command"
+msgstr "_Команда для низкого значения"
+
+#: ../sensors-applet/sensor-config-dialog.c:738
+msgid "Hi_gh alarm command"
+msgstr "_Команда для высокого значения"
+
+#: ../sensors-applet/sensor-config-dialog.c:752
+msgid "_Enable alarm"
+msgstr "_Включить тревогу"
+
+#: ../sensors-applet/sensors-applet.c:297
+#, c-format
+msgid "Error restoring saved sensor configuration."
+msgstr "Ошибка восстановления сохраненных настроек датчика"
+
+#: ../sensors-applet/sensors-applet.c:298
+#, c-format
+msgid ""
+"An error occurred while trying to restore the saved sensor configuration. "
+"The previous configuration has been lost and will need to be re-entered."
+msgstr ""
+"При попытке восстановить сохраненные настройки датчика, произошла ошибка."
+"Предыдущие настройки были потеряны и необходимо настроить датчик заново."
+
+#: ../sensors-applet/sensors-applet.c:302
+#, c-format
+msgid "Error saving sensor configuration."
+msgstr "Ошибка сохранения настроек датчика"
+
+#: ../sensors-applet/sensors-applet.c:303
+#, c-format
+msgid ""
+"An error occurred while trying to save the current sensor configuration. "
+msgstr "При попытке сохранить текущие настройки датчика, произошла ошибка."
+
+#: ../sensors-applet/sensors-applet.c:394
+msgid "is very low"
+msgstr "очень низкая"
+
+#: ../sensors-applet/sensors-applet.c:395
+msgid "lower limit"
+msgstr "нижний предел"
+
+#. assume high alarm condition
+#: ../sensors-applet/sensors-applet.c:400
+msgid "is very high"
+msgstr "очень высокая"
+
+#: ../sensors-applet/sensors-applet.c:401
+msgid "upper limit"
+msgstr "верхний предел"
+
+#: ../sensors-applet/sensors-applet.c:412
+msgid "Temperature"
+msgstr "Температура"
+
+#: ../sensors-applet/sensors-applet.c:434
+msgid "Voltage"
+msgstr "Напряжение"
+
+#: ../sensors-applet/sensors-applet.c:435
+msgid "voltage"
+msgstr "напряжение"
+
+#: ../sensors-applet/sensors-applet.c:439
+msgid "Fan Speed"
+msgstr "Скорость вращения вентилятора"
+
+#: ../sensors-applet/sensors-applet.c:440
+msgid "fan speed"
+msgstr "скорость вращения вентилятора"
+
+#: ../sensors-applet/sensors-applet.c:444
+msgid "Current"
+msgstr "Сила Тока"
+
+#: ../sensors-applet/sensors-applet.c:445
+msgid "current"
+msgstr "сила тока"
+
+#: ../sensors-applet/sensors-applet.c:458
+#, c-format
+msgid "Error updating sensor %s"
+msgstr "Ошибка обновления датчика %s"
+
+#: ../sensors-applet/sensors-applet.c:459
+#, c-format
+msgid ""
+"An error occurred while trying to update the value of the sensor %s located "
+"at %s."
+msgstr ""
+"При попытке обновить значение датчика %s расположенного на %s, произошла "
+"ошибка."
+
+#: ../sensors-applet/sensors-applet.c:567
+msgid "No sensors enabled!"
+msgstr "Нет включенных датчиков!"
+
+#: ../sensors-applet/sensors-applet-gconf.c:44
+msgid "An error occurred loading the stored sensors data"
+msgstr "Произошла ошибка при загрузке информации о датчиках"
+
+#: ../sensors-applet/sensors-applet-gconf.c:45
+msgid "Incompatible sensors configuration found"
+msgstr "Найдена несовместимая конфигурация датчиков"
+
+#: ../sensors-applet/sensors-applet-gconf.c:49
+msgid ""
+"An error has occurred when loading the stored sensors data. The default "
+"values will be used to recover from this error."
+msgstr ""
+"Ошибка произошла при загрузке информации о датчиках.Для восстановления будут "
+"использованы значения по умолчанию."
+
+#: ../sensors-applet/sensors-applet-gconf.c:52
+msgid ""
+"Unfortunately the previous configuration for GNOME Sensors Applet is not "
+"compatible with this version. The existing sensors data will be overwritten "
+"with the default values for this new version."
+msgstr ""
+"К сожалению предыдущая конфигурация GNOME·Sensors·Applet не совместима с "
+"текущей версией. Имеющиеся данные о датчиках будутзаменены на значения по "
+"умолчанию для новой версии."
+
+#~ msgid "Display labels _inline with sensor values"
+#~ msgstr "Показывать подписи _вместе со показаниями сенсоров"
+
+#~ msgid "Display _units with sensor values"
+#~ msgstr "Показывать _единицы измерения вместе с показаниями сенсоров"
+
+#, fuzzy
+#~ msgid "Use _Fahrenheit for temperature sensors"
+#~ msgstr "Показывать температуру в градусах Фаренгейта"
+
+#, fuzzy
+#~ msgid "_Number of sensors per column / row"
+#~ msgstr "Количество сенсоров в группе"
+
+#~ msgid "Refresh _delay (secs)"
+#~ msgstr "Частота _обновления (сек.)"
+
+#~ msgid "largest"
+#~ msgstr "наибольший"
+
+#~ msgid "larger"
+#~ msgstr "больший"
+
+#~ msgid "normal"
+#~ msgstr "обычный"
+
+#~ msgid "small"
+#~ msgstr "маленький"
+
+#~ msgid "smaller"
+#~ msgstr "меньший"
+
+#~ msgid "smallest"
+#~ msgstr "наименьший"
+
+#, fuzzy
+#~ msgid "Font _size"
+#~ msgstr "_Размер шрифта"
+
+#, fuzzy
+#~ msgid "labels"
+#~ msgstr "Название"
+
+#, fuzzy
+#~ msgid "alarm threshold"
+#~ msgstr "_Порог"
+
+#, fuzzy
+#~ msgid "Alarm _threshold"
+#~ msgstr "_Порог"
+
+#, fuzzy
+#~ msgid "Sensor Icon"
+#~ msgstr "Сенсоры"
+
+#, fuzzy
+#~ msgid "sensor enabled"
+#~ msgstr "Сенсоры выключены!"
+
+#, fuzzy
+#~ msgid "sensors enabled"
+#~ msgstr "Сенсоры выключены!"
+
+#~ msgid "Show _labels"
+#~ msgstr "Показывать _подписи"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sensors Applet\n"
+#~ "%d sensors enabled"
+#~ msgstr "Настройки апплета Сенсоры"
+
+#~ msgid "FAN 1"
+#~ msgstr "Вент 1"
+
+#~ msgid "FAN 2"
+#~ msgstr "Вент 2"
+
+#~ msgid "Filename"
+#~ msgstr "Файл"
+
+#~ msgid "Alarm Settings"
+#~ msgstr "Настройка сигнала тревоги"
+
+#~ msgid "_Alarm Settings"
+#~ msgstr "_Настройка сигнала тревоги"
