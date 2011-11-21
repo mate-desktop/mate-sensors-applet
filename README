@@ -1,6 +1,7 @@
-MATE Sensors Applet <http://sensors-applet.sourceforge.net/>
+MATE Sensors Applet <https://github.com/stefano-k/mate-sensors-applet>
 
-Author: Alex Murray <murray.alex@gmail.com>
+Authors: Alex Murray <murray.alex@gmail.com>,
+         Stefano Karapetsas <stefano@karapetsas.com>
 
 MATE Sensors Applet is an applet for the MATE Panel to display
 readings from hardware sensors, including CPU temperature, fan speeds
@@ -40,7 +41,7 @@ Share-Alike license 3.0[10].
 
 Requirements
 
-    * MATE 2.8 desktop environment, with GTK >=2.4.0 and libmatepanelapplet-2
+    * MATE desktop environment, with GTK >=2.4.0 and libmatepanelapplet
     * For ACPI support:
           o Linux kernel 2.6 with ACPI modules loaded (CONFIG_ACPI &
             CONFIG_ACPI_THERMAL)
