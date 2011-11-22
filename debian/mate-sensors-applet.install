@@ -1,0 +1,4 @@
+debian/tmp/usr/lib/matecomponent
+debian/tmp/usr/lib/mate-panel
+debian/tmp/usr/lib/sensors-applet/plugins/*.so
+debian/tmp/usr/share

@@ -1,0 +1,59 @@
+#!/usr/bin/make -f
+
+# prevent 'installed' schemas from being registered on the build machine
+export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL := 1
+
+# detect cross-compiling and configure build appropriately
+export DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+export DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+    confflags := --build=$(DEB_HOST_GNU_TYPE)
+else
+    confflags += --build=$(DEB_BUILD_GNU_TYPE) --host=$(DEB_HOST_GNU_TYPE)
+endif
+
+# standard install directories
+confflags += --prefix=/usr
+confflags += --libexecdir="\$${prefix}/lib/gnome-panel"
+
+# rebuild everything
+confflags += --enable-maintainer-mode
+
+# one-time-build, don't waste time on dependency tracking
+confflags += --disable-dependency-tracking
+
+# don't do scrollkeeper at build-time
+confflags += --disable-scrollkeeper
+
+# remove un-necessary dependencies
+confflags += LDFLAGS=-Wl,--as-needed
+
+clean_paths := \
+    aclocal.m4 \
+    config.guess \
+    config.sub \
+    configure \
+    depcomp \
+    INSTALL \
+    install-sh \
+    libtool \
+    ltmain.sh \
+    missing \
+    mkinstalldirs
+
+clean_filenames := \
+    Makefile.in
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	for path in $(clean_paths); do rm -f "$$path"; done
+	for filename in $(clean_filenames); do find -name "$$filename" -delete; done
+
+override_dh_auto_configure:
+	gnome-autogen.sh $(confflags)
+
+override_dh_makeshlibs:
+	dh_makeshlibs --exclude=/usr/lib/sensors-applet/plugins/

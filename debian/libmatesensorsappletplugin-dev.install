@@ -1,0 +1,4 @@
+debian/tmp/usr/include/sensors-applet
+debian/tmp/usr/lib/libsensors-applet-plugin.a
+debian/tmp/usr/lib/libsensors-applet-plugin.la
+debian/tmp/usr/lib/libsensors-applet-plugin.so
