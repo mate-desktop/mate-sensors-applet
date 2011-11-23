@@ -42,7 +42,7 @@ sensors_applet_SOURCES = main.c \
 # install headers for plugins to use
 INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h
 
-headerdir = $(prefix)/include/sensors-applet
+headerdir = $(prefix)/include/mate-sensors-applet
 
 header_DATA = $(INST_H_FILES)
 

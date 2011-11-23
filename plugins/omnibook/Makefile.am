@@ -1,5 +1,5 @@
 # OMNIBOOK plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libomnibook_la_SOURCES = \
 	omnibook-plugin.c
 
 libomnibook_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libomnibook_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libomnibook_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 # prevent 'installed' schemas from being registered on the build machine
-export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL := 1
+export MATECONF_DISABLE_MAKEFILE_SCHEMA_INSTALL := 1
 
 # detect cross-compiling and configure build appropriately
 export DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
@@ -14,7 +14,7 @@ endif
 
 # standard install directories
 confflags += --prefix=/usr
-confflags += --libexecdir="\$${prefix}/lib/gnome-panel"
+confflags += --libexecdir="\$${prefix}/lib/mate-panel"
 
 # rebuild everything
 confflags += --enable-maintainer-mode
@@ -56,4 +56,4 @@ override_dh_auto_configure:
 	gnome-autogen.sh $(confflags)
 
 override_dh_makeshlibs:
-	dh_makeshlibs --exclude=/usr/lib/sensors-applet/plugins/
+	dh_makeshlibs --exclude=/usr/lib/mate-sensors-applet/plugins/

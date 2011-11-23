@@ -1,5 +1,5 @@
 # I2C-SYS plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libi2c_sys_la_SOURCES = \
 	i2c-sys-plugin.c
 
 libi2c_sys_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libi2c_sys_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libi2c_sys_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

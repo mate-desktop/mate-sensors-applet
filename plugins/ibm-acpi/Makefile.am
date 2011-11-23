@@ -1,5 +1,5 @@
 # IBM-ACPI plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libibm_acpi_la_SOURCES = \
 	ibm-acpi-plugin.c
 
 libibm_acpi_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libibm_acpi_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libibm_acpi_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

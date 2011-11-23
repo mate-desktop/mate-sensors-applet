@@ -2920,7 +2920,7 @@ fi
 
 
 # Define the identity of the package.
- PACKAGE='sensors-applet'
+ PACKAGE='mate-sensors-applet'
  VERSION='2.2.7'
 
 

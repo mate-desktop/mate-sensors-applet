@@ -36,17 +36,17 @@ typedef struct _ActiveSensor ActiveSensor;
 #include "prefs-dialog.h"
 
 #define GRAPH_FRAME_EXTRA_WIDTH 6
-#define SENSORS_APPLET_ICON "sensors-applet"
+#define SENSORS_APPLET_ICON "mate-sensors-applet"
 
 static const gchar * const stock_icons[NUM_ICONS] = {
-        "sensors-applet-cpu",
-        "sensors-applet-drive-harddisk",
-        "sensors-applet-battery",
-        "sensors-applet-memory",
-        "sensors-applet-gpu",
-        "sensors-applet-chip",
-        "sensors-applet-fan",
-        "sensors-applet-case"
+        "mate-sensors-applet-cpu",
+        "mate-sensors-applet-drive-harddisk",
+        "mate-sensors-applet-battery",
+        "mate-sensors-applet-memory",
+        "mate-sensors-applet-gpu",
+        "mate-sensors-applet-chip",
+        "mate-sensors-applet-fan",
+        "mate-sensors-applet-case"
 };        
 
 #define DEFAULT_ICON_SIZE 22

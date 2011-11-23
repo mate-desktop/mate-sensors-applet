@@ -1,5 +1,5 @@
 # ATICONFIG plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libaticonfig_la_SOURCES = \
 	aticonfig-plugin.c
 
 libaticonfig_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) 
-libaticonfig_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libaticonfig_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

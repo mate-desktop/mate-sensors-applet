@@ -1,5 +1,5 @@
 # ACPI plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libeee_la_SOURCES = \
 	eee-plugin.c
 
 libeee_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libeee_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libeee_la_LIBADD = $(top_builddir)/lib/libmatesensors-applet-plugin.la

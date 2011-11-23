@@ -1,5 +1,5 @@
 # UDisks plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -22,4 +22,4 @@ libudisks_la_SOURCES = \
 
 libudisks_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(DBUSGLIB_LIBS)	$(LIBATASMART_LIBS)
 
-libudisks_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libudisks_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

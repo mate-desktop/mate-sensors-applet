@@ -1,5 +1,5 @@
 # SONYPI plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libsonypi_la_SOURCES = \
 	sonypi-plugin.c
 
 libsonypi_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libsonypi_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libsonypi_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

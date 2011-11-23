@@ -5,7 +5,7 @@ Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
 Build-Depends:
     autoconf,
     automake,
-    debhelper,
+    debhelper (>= 8),
     docbook-xml,
     mate-common,
     mate-doc-utils,

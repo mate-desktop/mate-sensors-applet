@@ -27,6 +27,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
 	gchar *translator;
 	const gchar *authors[] = {
 		"Alex Murray <murray.alex@gmail.com>",
+		"Stefano Karapetsas <stefano@karapetsas.com>",
 		NULL
 	};
 
@@ -40,12 +41,12 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
 	gtk_show_about_dialog(NULL,
 			      "program-name", PACKAGE_NAME, 
 			      "version", PACKAGE_VERSION,
-			      "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>",
+			      "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>",
 			      "authors", authors,
 			      "documenters", authors,
 			      "translator-credits", translator,
 			      "logo-icon-name", SENSORS_APPLET_ICON,
-			      "website", "http://sensors-applet.sourceforge.net/",
+			      "website", "https://github.com/stefano-k/mate-sensors-applet",
 			      NULL);
 
 

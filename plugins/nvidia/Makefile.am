@@ -1,5 +1,5 @@
 # NVIDIA plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libnvidia_la_SOURCES = \
 	nvidia-plugin.c
 
 libnvidia_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) $(NVIDIA_LIBS)
-libnvidia_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libnvidia_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

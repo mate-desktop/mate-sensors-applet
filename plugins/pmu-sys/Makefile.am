@@ -1,5 +1,5 @@
 # PMU-SYS plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libpmu_sys_la_SOURCES = \
 	pmu-sys-plugin.c
 
 libpmu_sys_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libpmu_sys_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libpmu_sys_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

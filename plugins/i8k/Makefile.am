@@ -1,5 +1,5 @@
 # I8K plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
@@ -18,4 +18,4 @@ libi8k_la_SOURCES = \
 	i8k-plugin.c
 
 libi8k_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libi8k_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libi8k_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
