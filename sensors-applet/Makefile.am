@@ -20,8 +20,8 @@ else
 libmatenotify_SRC =
 endif
 
-libexec_PROGRAMS = sensors-applet
-sensors_applet_SOURCES = main.c \
+libexec_PROGRAMS = mate-sensors-applet
+mate_sensors_applet_SOURCES = main.c \
 		about-dialog.c \
 		about-dialog.h \
 		active-sensor.c \

@@ -13,7 +13,7 @@ INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 LIBS = $(GLIB_LIBS)
 
 # also build the libsensorsplugin library
-lib_LTLIBRARIES = libsensors-applet-plugin.la
+lib_LTLIBRARIES = libmate-sensors-applet-plugin.la
 
-libsensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c 
-libsensors_applet_plugin_la_LDFLAGS = -export-dynamic
+libmate_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c 
+libmate_sensors_applet_plugin_la_LDFLAGS = -export-dynamic

@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-libexec_PROGRAMS = sensors-applet$(EXEEXT)
+libexec_PROGRAMS = mate-sensors-applet$(EXEEXT)
 subdir = sensors-applet
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(srcdir)/config.h.in
@@ -49,22 +49,22 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(libexecdir)" "$(DESTDIR)$(headerdir)"
 PROGRAMS = $(libexec_PROGRAMS)
-am__sensors_applet_SOURCES_DIST = main.c about-dialog.c about-dialog.h \
-	active-sensor.c active-sensor.h prefs-dialog.c prefs-dialog.h \
-	sensor-config-dialog.c sensor-config-dialog.h sensors-applet.c \
-	sensors-applet.h sensors-applet-sensor.h \
+am__mate_sensors_applet_SOURCES_DIST = main.c about-dialog.c \
+	about-dialog.h active-sensor.c active-sensor.h prefs-dialog.c \
+	prefs-dialog.h sensor-config-dialog.c sensor-config-dialog.h \
+	sensors-applet.c sensors-applet.h sensors-applet-sensor.h \
 	sensors-applet-plugins.c sensors-applet-plugins.h \
 	sensors-applet-mateconf.c sensors-applet-mateconf.h \
 	active-sensor-libmatenotify.c active-sensor-libmatenotify.h
 @LIBMATENOTIFY_TRUE@am__objects_1 =  \
 @LIBMATENOTIFY_TRUE@	active-sensor-libmatenotify.$(OBJEXT)
-am_sensors_applet_OBJECTS = main.$(OBJEXT) about-dialog.$(OBJEXT) \
+am_mate_sensors_applet_OBJECTS = main.$(OBJEXT) about-dialog.$(OBJEXT) \
 	active-sensor.$(OBJEXT) prefs-dialog.$(OBJEXT) \
 	sensor-config-dialog.$(OBJEXT) sensors-applet.$(OBJEXT) \
 	sensors-applet-plugins.$(OBJEXT) \
 	sensors-applet-mateconf.$(OBJEXT) $(am__objects_1)
-sensors_applet_OBJECTS = $(am_sensors_applet_OBJECTS)
-sensors_applet_LDADD = $(LDADD)
+mate_sensors_applet_OBJECTS = $(am_mate_sensors_applet_OBJECTS)
+mate_sensors_applet_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -78,8 +78,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(sensors_applet_SOURCES)
-DIST_SOURCES = $(am__sensors_applet_SOURCES_DIST)
+SOURCES = $(mate_sensors_applet_SOURCES)
+DIST_SOURCES = $(am__mate_sensors_applet_SOURCES_DIST)
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
     $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
@@ -282,7 +282,7 @@ INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 @LIBMATENOTIFY_TRUE@libmatenotify_SRC = active-sensor-libmatenotify.c \
 @LIBMATENOTIFY_TRUE@		active-sensor-libmatenotify.h
 
-sensors_applet_SOURCES = main.c \
+mate_sensors_applet_SOURCES = main.c \
 		about-dialog.c \
 		about-dialog.h \
 		active-sensor.c \
@@ -403,9 +403,9 @@ clean-libexecPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
-sensors-applet$(EXEEXT): $(sensors_applet_OBJECTS) $(sensors_applet_DEPENDENCIES) 
-	@rm -f sensors-applet$(EXEEXT)
-	$(LINK) $(sensors_applet_OBJECTS) $(sensors_applet_LDADD) $(LIBS)
+mate-sensors-applet$(EXEEXT): $(mate_sensors_applet_OBJECTS) $(mate_sensors_applet_DEPENDENCIES) 
+	@rm -f mate-sensors-applet$(EXEEXT)
+	$(LINK) $(mate_sensors_applet_OBJECTS) $(mate_sensors_applet_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

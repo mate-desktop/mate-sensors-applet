@@ -67,14 +67,15 @@ am__base_list = \
   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
-libsensors_applet_plugin_la_LIBADD =
-am_libsensors_applet_plugin_la_OBJECTS = sensors-applet-plugin.lo
-libsensors_applet_plugin_la_OBJECTS =  \
-	$(am_libsensors_applet_plugin_la_OBJECTS)
-libsensors_applet_plugin_la_LINK = $(LIBTOOL) --tag=CC \
+libmate_sensors_applet_plugin_la_LIBADD =
+am_libmate_sensors_applet_plugin_la_OBJECTS =  \
+	sensors-applet-plugin.lo
+libmate_sensors_applet_plugin_la_OBJECTS =  \
+	$(am_libmate_sensors_applet_plugin_la_OBJECTS)
+libmate_sensors_applet_plugin_la_LINK = $(LIBTOOL) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(AM_CFLAGS) $(CFLAGS) $(libsensors_applet_plugin_la_LDFLAGS) \
-	$(LDFLAGS) -o $@
+	$(AM_CFLAGS) $(CFLAGS) \
+	$(libmate_sensors_applet_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/sensors-applet
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -88,8 +89,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(libsensors_applet_plugin_la_SOURCES)
-DIST_SOURCES = $(libsensors_applet_plugin_la_SOURCES)
+SOURCES = $(libmate_sensors_applet_plugin_la_SOURCES)
+DIST_SOURCES = $(libmate_sensors_applet_plugin_la_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -268,9 +269,9 @@ INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 
 
 # also build the libsensorsplugin library
-lib_LTLIBRARIES = libsensors-applet-plugin.la
-libsensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c 
-libsensors_applet_plugin_la_LDFLAGS = -export-dynamic
+lib_LTLIBRARIES = libmate-sensors-applet-plugin.la
+libmate_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c 
+libmate_sensors_applet_plugin_la_LDFLAGS = -export-dynamic
 all: all-am
 
 .SUFFIXES:
@@ -336,8 +337,8 @@ clean-libLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-libsensors-applet-plugin.la: $(libsensors_applet_plugin_la_OBJECTS) $(libsensors_applet_plugin_la_DEPENDENCIES) 
-	$(libsensors_applet_plugin_la_LINK) -rpath $(libdir) $(libsensors_applet_plugin_la_OBJECTS) $(libsensors_applet_plugin_la_LIBADD) $(LIBS)
+libmate-sensors-applet-plugin.la: $(libmate_sensors_applet_plugin_la_OBJECTS) $(libmate_sensors_applet_plugin_la_DEPENDENCIES) 
+	$(libmate_sensors_applet_plugin_la_LINK) -rpath $(libdir) $(libmate_sensors_applet_plugin_la_OBJECTS) $(libmate_sensors_applet_plugin_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
