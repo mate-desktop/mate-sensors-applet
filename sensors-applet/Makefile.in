@@ -56,7 +56,8 @@ am__sensors_applet_SOURCES_DIST = main.c about-dialog.c about-dialog.h \
 	sensors-applet-plugins.c sensors-applet-plugins.h \
 	sensors-applet-mateconf.c sensors-applet-mateconf.h \
 	active-sensor-libmatenotify.c active-sensor-libmatenotify.h
-@LIBMATENOTIFY_TRUE@am__objects_1 = active-sensor-libmatenotify.$(OBJEXT)
+@LIBMATENOTIFY_TRUE@am__objects_1 =  \
+@LIBMATENOTIFY_TRUE@	active-sensor-libmatenotify.$(OBJEXT)
 am_sensors_applet_OBJECTS = main.$(OBJEXT) about-dialog.$(OBJEXT) \
 	active-sensor.$(OBJEXT) prefs-dialog.$(OBJEXT) \
 	sensor-config-dialog.$(OBJEXT) sensors-applet.$(OBJEXT) \
@@ -143,8 +144,6 @@ GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-MATE_CFLAGS = @MATE_CFLAGS@
-MATE_LIBS = @MATE_LIBS@
 GREP = @GREP@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
@@ -176,6 +175,8 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
+MATE_CFLAGS = @MATE_CFLAGS@
+MATE_LIBS = @MATE_LIBS@
 MKDIR_P = @MKDIR_P@
 MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
@@ -302,7 +303,7 @@ sensors_applet_SOURCES = main.c \
 
 # install headers for plugins to use
 INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h
-headerdir = $(prefix)/include/sensors-applet
+headerdir = $(prefix)/include/mate-sensors-applet
 header_DATA = $(INST_H_FILES)
 
 # since it is separate

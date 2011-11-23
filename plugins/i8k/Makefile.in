@@ -68,7 +68,7 @@ am__base_list = \
 am__installdirs = "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 libi8k_la_DEPENDENCIES =  \
-	$(top_builddir)/lib/libsensors-applet-plugin.la
+	$(top_builddir)/lib/libmate-sensors-applet-plugin.la
 am_libi8k_la_OBJECTS = i8k-plugin.lo
 libi8k_la_OBJECTS = $(am_libi8k_la_OBJECTS)
 libi8k_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
@@ -131,8 +131,6 @@ GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-MATE_CFLAGS = @MATE_CFLAGS@
-MATE_LIBS = @MATE_LIBS@
 GREP = @GREP@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
@@ -164,6 +162,8 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
+MATE_CFLAGS = @MATE_CFLAGS@
+MATE_LIBS = @MATE_LIBS@
 MKDIR_P = @MKDIR_P@
 MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
@@ -256,7 +256,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 
 # I8K plugin
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
@@ -273,7 +273,7 @@ libi8k_la_SOURCES = \
 	i8k-plugin.c
 
 libi8k_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libi8k_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+libi8k_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
 all: all-am
 
 .SUFFIXES:

@@ -68,7 +68,7 @@ am__base_list = \
 am__installdirs = "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 liblibsensors_la_DEPENDENCIES =  \
-	$(top_builddir)/lib/libsensors-applet-plugin.la
+	$(top_builddir)/lib/libmate-sensors-applet-plugin.la
 am_liblibsensors_la_OBJECTS = libsensors-plugin.lo
 liblibsensors_la_OBJECTS = $(am_liblibsensors_la_OBJECTS)
 liblibsensors_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
@@ -131,8 +131,6 @@ GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-MATE_CFLAGS = @MATE_CFLAGS@
-MATE_LIBS = @MATE_LIBS@
 GREP = @GREP@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
@@ -164,6 +162,8 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
+MATE_CFLAGS = @MATE_CFLAGS@
+MATE_LIBS = @MATE_LIBS@
 MKDIR_P = @MKDIR_P@
 MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
@@ -254,7 +254,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-plugindir = $(libdir)/sensors-applet/plugins
+plugindir = $(libdir)/mate-sensors-applet/plugins
 
 # libsensors plugin
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
@@ -273,7 +273,7 @@ liblibsensors_la_SOURCES = \
 	libsensors-plugin.c
 
 liblibsensors_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) $(LIBSENSORS_LIBS)
-liblibsensors_la_LIBADD = $(top_builddir)/lib/libsensors-applet-plugin.la
+liblibsensors_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
 all: all-am
 
 .SUFFIXES:
