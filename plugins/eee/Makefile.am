@@ -18,4 +18,4 @@ libeee_la_SOURCES = \
 	eee-plugin.c
 
 libeee_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libeee_la_LIBADD = $(top_builddir)/lib/libmatesensors-applet-plugin.la
+libeee_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
