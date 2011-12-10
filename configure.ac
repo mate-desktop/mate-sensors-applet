@@ -2,7 +2,7 @@
 
 # if doing version bump - make sure you update sensors-applet-mateconf
 # version checking to add old version if no changes to config
-AC_INIT([MATE Sensors Applet], [2011.12.01], [stefano@karapetsas.com],
+AC_INIT([MATE Sensors Applet], [1.1.0], [stefano@karapetsas.com],
 [mate-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
@@ -51,9 +51,9 @@ AC_CHECK_HEADERS(
 GLIB_REQUIRED=2.14.0
 GTK_REQUIRED=2.14.0
 LIBPANEL_REQUIRED=2.0.0
-LIBMATE_REQUIRED=2.8.0
-LIBMATEUI_REQUIRED=2.8.0
-LIBMATENOTIFY_REQUIRED=0.3.0
+LIBMATE_REQUIRED=1.1.0
+LIBMATEUI_REQUIRED=1.1.0
+LIBMATENOTIFY_REQUIRED=1.1.0
 LIBCAIRO_REQUIRED=1.0.4
 LIBDBUSGLIB_REQUIRED=0.80
 LIBATASMART_REQUIRED=0.16
