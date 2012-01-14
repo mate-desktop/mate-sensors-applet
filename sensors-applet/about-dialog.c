@@ -24,34 +24,34 @@
 #include "about-dialog.h"
 
 void about_dialog_open(SensorsApplet *sensors_applet) {
-	gchar *translator;
-	const gchar *authors[] = {
-		"Alex Murray <murray.alex@gmail.com>",
-		"Stefano Karapetsas <stefano@karapetsas.com>",
-		NULL
-	};
+    gchar *translator;
+    const gchar *authors[] = {
+        "Alex Murray <murray.alex@gmail.com>",
+        "Stefano Karapetsas <stefano@karapetsas.com>",
+        NULL
+    };
 
-	if (_("Translator") == "Translator") {
-		translator = NULL;
-	} else {
-		translator = g_strdup(_("To translator: Put your name here to show up in the About dialog as the translator"));
-	}
+    if (_("Translator") == "Translator") {
+        translator = NULL;
+    } else {
+        translator = g_strdup(_("To translator: Put your name here to show up in the About dialog as the translator"));
+    }
 
-	/* Construct the about dialog */
-	gtk_show_about_dialog(NULL,
-			      "program-name", PACKAGE_NAME, 
-			      "version", PACKAGE_VERSION,
-			      "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>",
-			      "authors", authors,
-			      "documenters", authors,
-			      "translator-credits", translator,
-			      "logo-icon-name", SENSORS_APPLET_ICON,
-			      "website", "https://github.com/stefano-k/mate-sensors-applet",
-			      NULL);
+    /* Construct the about dialog */
+    gtk_show_about_dialog(NULL,
+                  "program-name", PACKAGE_NAME, 
+                  "version", PACKAGE_VERSION,
+                  "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>",
+                  "authors", authors,
+                  "documenters", authors,
+                  "translator-credits", translator,
+                  "logo-icon-name", SENSORS_APPLET_ICON,
+                  "website", "http://www.mate-desktop.org",
+                  NULL);
 
 
-	if (translator != NULL) {
-		g_free(translator);
-	}
+    if (translator != NULL) {
+        g_free(translator);
+    }
 
 }
