@@ -168,7 +168,7 @@ static void active_sensor_alarm_on(ActiveSensor *active_sensor,
                                                                                                     active_sensor);
                                 break;
                         default:
-                                g_debug("Unkown notif type: %d", notif_type);
+                                g_debug("Unknown notif type: %d", notif_type);
                         }
                         
                         
