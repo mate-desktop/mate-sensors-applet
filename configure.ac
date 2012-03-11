@@ -2,7 +2,7 @@
 
 # if doing version bump - make sure you update sensors-applet-mateconf
 # version checking to add old version if no changes to config
-AC_INIT([MATE Sensors Applet], [1.1.1], [http://www.mate-desktop.org],
+AC_INIT([MATE Sensors Applet], [1.2.1], [http://www.mate-desktop.org],
 [mate-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])

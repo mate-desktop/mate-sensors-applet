@@ -1,4 +1,4 @@
-MATE Sensors Applet <https://github.com/stefano-k/mate-sensors-applet>
+MATE Sensors Applet <https://github.com/mate-desktop/mate-sensors-applet>
 
 Authors: Alex Murray <murray.alex@gmail.com>,
          Stefano Karapetsas <stefano@karapetsas.com>
@@ -82,7 +82,7 @@ Requirements
 
 Debian, Fedora, Ubuntu  and most standard distro users will need to do a 
 
-./configure --prefix=/usr
+./autogen.sh --prefix=/usr
 
 to ensure proper installation within the correct path.
 
@@ -91,12 +91,12 @@ To enable support for NVIDIA GPUs MATE Sensors Applet requires the
 standard X11 headers as well as libNVCtrl (supplied by nvidia-settings), 
 and needs to be compiled with support for NVIDIA GPUs as:
 
-./configure --with-nvidia
+./autogen.sh --with-nvidia
 
 If your X11 headers are in a non-standard location, these can also be
 specified as:
 
-./configure --with-nvidia --with-x11=PATH_TO_X11_LIBRARIES
+./autogen.sh --with-nvidia --with-x11=PATH_TO_X11_LIBRARIES
 
 where PATH_TO_X11_LIBRARIES is the path to your X11 libraries
 (such as /usr/include/X11), although in most cases this should not
