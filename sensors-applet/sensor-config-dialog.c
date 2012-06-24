@@ -80,7 +80,7 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
         case GTK_RESPONSE_HELP:
                 g_debug("loading help in config dialog");
                 gtk_show_uri(NULL,
-			     "ghelp:sensors-applet?sensors-applet-sensors",
+			     "http://wiki.mate-desktop.org/docs:mate-sensors-applet",
 			     gtk_get_current_event_time(),
 			     &error);
                 
