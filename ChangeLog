@@ -1,3 +1,45 @@
+commit bbc91ae8f2faddcf80bfdbece951873bf22e3ce7
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Jun 24 21:29:55 2012 +0200
+
+    fix help links
+
+ sensors-applet/prefs-dialog.c         |    6 +++---
+ sensors-applet/sensor-config-dialog.c |    2 +-
+ sensors-applet/sensors-applet.c       |    2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 81786a08b867e99a94c5b985a91fa98a75d74290
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Jun 24 15:43:04 2012 +0200
+
+    use icon from theme
+
+ SensorsApplet.server.in.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ea867e26e1d9beee9f494f5fe22cb0fb98857d08
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Mar 11 19:55:23 2012 +0100
+
+    fix typo inversion
+
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 098d70435f1e9afc77cfb719af515f48bcd7910e
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Mar 11 17:19:36 2012 +0100
+
+    update for 1.2 release
+
+ AUTHORS      |    8 +-
+ ChangeLog    | 1391 +++++++++++++++++++++++-----------------------------------
+ README       |    8 +-
+ autogen.sh   |    4 +-
+ configure.ac |    2 +-
+ 5 files changed, 550 insertions(+), 863 deletions(-)
+
 commit 6de96f515e5122ec2ba42fd07bac4e99f0c2db79
 Author: Stefano Karapetsas <stefano@karapetsas.com>
 Date:   Sun Mar 11 16:48:46 2012 +0100
@@ -5,7 +47,7 @@ Date:   Sun Mar 11 16:48:46 2012 +0100
     fix configuration version check
 
  sensors-applet/sensors-applet-mateconf.c |    9 ++++-----
- 1 files changed, 4 insertions(+), 5 deletions(-)
+ 1 file changed, 4 insertions(+), 5 deletions(-)
 
 commit 52ee7d7b43076dd6ca9fb229adf935683e1fde6a
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -14,7 +56,7 @@ Date:   Thu Jan 26 10:39:04 2012 +0100
     fix spelling error (thanks lintian)
 
  sensors-applet/active-sensor.c |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 7cdb9a3d301ec24e0eb7a1e5a28ebeca9c81f2d6
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -23,7 +65,7 @@ Date:   Thu Jan 26 10:34:42 2012 +0100
     1.1.1 release
 
  configure.ac |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 2bf19a608c87c646f70f4d9b690e92f704d5db85
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -32,7 +74,7 @@ Date:   Thu Jan 26 10:34:04 2012 +0100
     fix applet icon
 
  SensorsApplet.server.in.in |    4 ++--
- 1 files changed, 2 insertions(+), 2 deletions(-)
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 85e95c7dcaef9579507d09738f3f9cb77d9f196d
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -40,8 +82,8 @@ Date:   Fri Jan 13 20:00:57 2012 -0500
 
     Changed url for about window.
 
- sensors-applet/about-dialog.c |   58 ++++++++++++++++++++--------------------
- 1 files changed, 29 insertions(+), 29 deletions(-)
+ sensors-applet/about-dialog.c |   58 ++++++++++++++++++++---------------------
+ 1 file changed, 29 insertions(+), 29 deletions(-)
 
 commit c721227fa8c02d290ade5782d09383743f58d061
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -50,7 +92,7 @@ Date:   Wed Dec 14 09:24:08 2011 +0100
     fixed autogen.sh
 
  autogen.sh |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit d098c06a56f1d6f5dd078ac8091441aeaeb027f1
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -100,7 +142,7 @@ Date:   Wed Dec 14 00:47:16 2011 +0100
  plugins/udisks/Makefile.in     |  585 --
  po/Makefile.in.in              |  217 -
  sensors-applet/Makefile.in     |  679 --
- 32 files changed, 0 insertions(+), 44837 deletions(-)
+ 32 files changed, 44837 deletions(-)
 
 commit e8e5217893467a49254e8f70040a387bb33be79b
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -109,7 +151,7 @@ Date:   Fri Dec 9 23:43:35 2011 -0500
     updated version
 
  configure.ac |    8 ++++----
- 1 files changed, 4 insertions(+), 4 deletions(-)
+ 1 file changed, 4 insertions(+), 4 deletions(-)
 
 commit eb82e640da54f8ae8151a5cddb0248c43b9eedc0
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -118,7 +160,7 @@ Date:   Fri Dec 2 21:02:10 2011 -0500
     Changed version to 2011.12.01
 
  configure.ac |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit c230c3c57749f55133a9a9f0756a60d7ed86a0a5
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -189,7 +231,7 @@ Date:   Wed Nov 23 18:46:07 2011 +0100
     added autogen.sh
 
  autogen.sh |   24 ++++++++++++++++++++++++
- 1 files changed, 24 insertions(+), 0 deletions(-)
+ 1 file changed, 24 insertions(+)
 
 commit c9b682a53a7a5e3df9beafaa279425f4449d3d1f
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -206,7 +248,7 @@ Date:   Wed Nov 23 18:25:54 2011 +0100
  debian/mate-sensors-applet.install            |    4 -
  debian/rules                                  |   59 ----
  debian/source/format                          |    1 -
- 9 files changed, 0 insertions(+), 522 deletions(-)
+ 9 files changed, 522 deletions(-)
 
 commit c355361668a3efc27d957861162bef4e077a1485
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -276,7 +318,7 @@ Date:   Tue Nov 22 01:34:17 2011 +0100
  debian/mate-sensors-applet.install            |    4 +
  debian/rules                                  |   59 ++++
  debian/source/format                          |    1 +
- 9 files changed, 522 insertions(+), 0 deletions(-)
+ 9 files changed, 522 insertions(+)
 
 commit 7ddd3ee1fa7a73057c9fa4badfeb769347d1eb32
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -285,7 +327,7 @@ Date:   Tue Nov 22 00:54:48 2011 +0100
     updated README
 
  README |    9 +++++----
- 1 files changed, 5 insertions(+), 4 deletions(-)
+ 1 file changed, 5 insertions(+), 4 deletions(-)
 
 commit 12b9dff0bfd11456987edf4cadbc34d1367d4499
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -294,11 +336,11 @@ Date:   Tue Nov 22 00:52:25 2011 +0100
     deleted gnome files
 
  gnome-doc-utils.make                     |  655 ------------------------------
- sensors-applet/active-sensor-libnotify.c |  113 -----
+ sensors-applet/active-sensor-libnotify.c |  113 ------
  sensors-applet/active-sensor-libnotify.h |   35 --
  sensors-applet/sensors-applet-gconf.c    |  492 ----------------------
- sensors-applet/sensors-applet-gconf.h    |   91 ----
- 5 files changed, 0 insertions(+), 1386 deletions(-)
+ sensors-applet/sensors-applet-gconf.h    |   91 -----
+ 5 files changed, 1386 deletions(-)
 
 commit a509013b9b4a80a13bfb4adb365dee38fb2b81d7
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -317,9 +359,9 @@ Date:   Tue Nov 22 00:52:00 2011 +0100
  TODO                                         |    2 +-
  aclocal.m4                                   |   28 +-
  configure                                    |  252 +++++-----
- configure.ac                                 |   56 ++--
+ configure.ac                                 |   56 +--
  help/C/legal.xml                             |    6 +-
- help/C/sensors-applet.xml                    |   58 ++--
+ help/C/sensors-applet.xml                    |   58 +--
  help/ChangeLog                               |    2 +-
  help/Makefile.am                             |    2 +-
  help/Makefile.in                             |   32 +-
@@ -389,7 +431,7 @@ Date:   Tue Nov 22 00:52:00 2011 +0100
  sensors-applet/sensors-applet-mateconf.c     |  492 +++++++++++++++++++
  sensors-applet/sensors-applet-mateconf.h     |   91 ++++
  sensors-applet/sensors-applet-plugins.c      |    2 +-
- sensors-applet/sensors-applet.c              |  108 +++---
+ sensors-applet/sensors-applet.c              |  108 ++---
  sensors-applet/sensors-applet.h              |   18 +-
  85 files changed, 2033 insertions(+), 647 deletions(-)
 
@@ -517,7 +559,7 @@ Date:   Mon Nov 21 23:44:15 2011 +0100
  po/de.po                                  |  413 +
  po/es.po                                  |  561 +
  po/fi.po                                  |  515 +
- po/fr.po                                  |  562 +
+ po/fr.po                                  |  562 ++
  po/hu.po                                  |  412 +
  po/it.po                                  |  527 +
  po/pl.po                                  |  410 +
@@ -548,4 +590,4 @@ Date:   Mon Nov 21 23:44:15 2011 +0100
  sensors-applet/sensors-applet-sensor.h    |   64 +
  sensors-applet/sensors-applet.c           | 1451 +++
  sensors-applet/sensors-applet.h           |  186 +
- 149 files changed, 72032 insertions(+), 0 deletions(-)
+ 149 files changed, 72032 insertions(+)
