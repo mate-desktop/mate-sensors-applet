@@ -103,9 +103,10 @@ LIBMATENOTIFY_CFLAGS=
 LIBMATENOTIFY_LIBS=
 
 # enable support even if not specifically asked for
-AC_ARG_ENABLE(libmatenotify, [  --enable-libmatenotify   enable libmatenotify support], [
-			 enable_libmatenotify=$enableval], [
-			 enable_libmatenotify="yes"
+AC_ARG_ENABLE(libmatenotify, 
+[  --enable-libmatenotify    Enable libmatenotify support], [
+         enable_libmatenotify=$enableval], [
+         enable_libmatenotify="yes"
 ])
 
 if test "x$enable_libmatenotify" = "xno"
@@ -167,7 +168,7 @@ AC_SUBST(LIBSENSORS_LIBS)
 
 # do nvidia by default if available
 AC_ARG_WITH(nvidia,
-[  --with-nvidia[=DIR]   use nvidia in DIR],[
+[  --with-nvidia[=DIR]       use nvidia in DIR],[
         if test "$withval" != "no" -a "$withval" != "yes"; then
                 NVIDIA_DIR=$withval
                 CFLAGS="${CFLAGS} -I${NVIDIA_DIR}/include"
@@ -181,7 +182,7 @@ if test "$with_nvidia" = "no"; then
         echo "Disabling nvidia support"
 else
 	AC_ARG_WITH(x11,
-		[  --with-x11[=DIR]   use x11 in DIR],[
+		[  --with-x11[=DIR]          use x11 in DIR],[
         	if test "$withval" != "no" -a "$withval" != "yes"; then
                    	X11_DIR=$withval
 		   	CFLAGS="${CFLAGS} -I${X11_DIR}/include"
@@ -215,8 +216,9 @@ AM_CONDITIONAL(NVIDIA, test -n "$NVIDIA_LIBS")
 AC_SUBST(NVIDIA_CFLAGS)
 AC_SUBST(NVIDIA_LIBS)
 
-AC_ARG_WITH(aticonfig, [  
-         --with-aticonfig[=PATH]   use aticonfig provided by PATH], [
+AC_ARG_WITH(aticonfig, 
+[  --with-aticonfig[=PATH]   use aticonfig plugin with optional binary provided         
+                          by PATH], [
 	if test "$withval" != "no" -a "$withval" != "yes"; then
 		aticonfig_exe=$withval
         else
