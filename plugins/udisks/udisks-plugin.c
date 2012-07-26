@@ -40,6 +40,7 @@
  */
 typedef struct _DevInfo{
 	gchar *path;
+	gchar *id;
 	gboolean changed;
 	gdouble temp;
 	DBusGProxy *sensor_proxy;
@@ -181,19 +182,6 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 						    G_CALLBACK(udisks_changed_signal_cb),
 						    path, NULL);
 
-			info = g_malloc(sizeof(DevInfo));
-			if (devices == NULL)
-			{
-				devices = g_hash_table_new(g_str_hash,
-							   g_str_equal);
-			}
-			info->path = g_strdup(path);
-			info->sensor_proxy = sensor_proxy;
-			/* Set the device status changed as TRUE because we need
-			 * to get the initial temperature reading
-			 */
-			info->changed = TRUE;
-			g_hash_table_insert(devices, info->path, info);
 
 			gchar *model = g_value_get_string(&model_v);
 			gchar *dev = g_value_get_string(&dev_v);
@@ -201,10 +189,25 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 
 			gchar *id = ids != NULL && ids[0] != NULL ? ids[0] : dev;
 
+			info = g_malloc(sizeof(DevInfo));
+			if (devices == NULL)
+			{
+				devices = g_hash_table_new(g_str_hash,
+							   g_str_equal);
+			}
+			info->id = g_strdup(id);
+			info->path = g_strdup(path);
+			info->sensor_proxy = sensor_proxy;
+			/* Set the device status changed as TRUE because we need
+			 * to get the initial temperature reading
+			 */
+			info->changed = TRUE;
+			g_hash_table_insert(devices, info->id, info);
+
 			/* Write the sensor data */
 			sensors_applet_plugin_add_sensor(sensors,
-							 path,
 							 id,
+							 "Disk Temperature",
 							 model,
 							 TEMP_SENSOR,
 							 FALSE,
@@ -260,7 +263,7 @@ static gdouble udisks_plugin_get_sensor_value(const gchar *path,
 		GValue smart_time = { 0, };
 		sensor_proxy = dbus_g_proxy_new_for_name(connection,
 							 UDISKS_BUS_NAME,
-							 path,
+							 info->path,
 							 UDISKS_PROPERTIES_INTERFACE);
 		if (!dbus_g_proxy_call(sensor_proxy, "Get", error,
 				       G_TYPE_STRING, UDISKS_BUS_NAME,
