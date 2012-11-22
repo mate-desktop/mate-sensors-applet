@@ -1,4 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
+ * vim: sts=0 sw=8 ts=8 tw=78 noexpandtab
  *
  * Copyright (C) 2009 Pramod Dematagoda <pmd.lotr.gandalf@gmail.com>
  *
@@ -39,6 +40,7 @@
  */
 typedef struct _DevInfo{
 	gchar *path;
+	gchar *id;
 	gboolean changed;
 	gdouble temp;
 	DBusGProxy *sensor_proxy;
@@ -115,7 +117,7 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 		/* This proxy is used to get the required data in order to build
 		 * up the list of sensors
 		 */
-		GValue model = {0, }, id = {0, }, smart_available = {0, };
+		GValue smart_available = G_VALUE_INIT;
 		gchar *path = (gchar *)g_ptr_array_index(paths, i);
 
 		sensor_proxy = dbus_g_proxy_new_for_name(connection,
@@ -130,27 +132,37 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 				      "DriveAtaSmartIsAvailable",
 				      G_TYPE_INVALID,
 				      G_TYPE_VALUE, &smart_available, G_TYPE_INVALID)) {
-			gchar *id_str, *model_str;
 			if (!g_value_get_boolean(&smart_available)) {
-				g_debug("Drive at path '%s' does not support Smart monitoring... ignoring",
+				g_debug("Drive at path '%s' does not support "
+                                        "Smart monitoring... ignoring",
 					path);
 				g_object_unref(sensor_proxy);
 				g_free (path);
 				continue;
 			}
 
+			GValue model_v = G_VALUE_INIT;
 			dbus_g_proxy_call(sensor_proxy, "Get", NULL,
 					  G_TYPE_STRING, UDISKS_BUS_NAME,
 					  G_TYPE_STRING, "DriveModel",
 					  G_TYPE_INVALID,
-					  G_TYPE_VALUE, &model,
+					  G_TYPE_VALUE, &model_v,
 					  G_TYPE_INVALID);
 
+			GValue dev_v = G_VALUE_INIT;
 			dbus_g_proxy_call(sensor_proxy, "Get", NULL,
 					  G_TYPE_STRING, UDISKS_BUS_NAME,
 					  G_TYPE_STRING, "DeviceFile",
 					  G_TYPE_INVALID,
-					  G_TYPE_VALUE, &id,
+					  G_TYPE_VALUE, &dev_v,
+					  G_TYPE_INVALID);
+
+			GValue ids_v = G_VALUE_INIT;
+			dbus_g_proxy_call(sensor_proxy, "Get", NULL,
+					  G_TYPE_STRING, UDISKS_BUS_NAME,
+					  G_TYPE_STRING, "DeviceFileById",
+					  G_TYPE_INVALID,
+					  G_TYPE_VALUE, &ids_v,
 					  G_TYPE_INVALID);
 
 			g_object_unref(sensor_proxy);
@@ -170,38 +182,46 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 						    G_CALLBACK(udisks_changed_signal_cb),
 						    path, NULL);
 
+
+			gchar *model = g_value_get_string(&model_v);
+			gchar *dev = g_value_get_string(&dev_v);
+			GStrv ids = g_value_get_boxed(&ids_v);
+
+			gchar *id = ids != NULL && ids[0] != NULL ? ids[0] : dev;
+
 			info = g_malloc(sizeof(DevInfo));
 			if (devices == NULL)
 			{
 				devices = g_hash_table_new(g_str_hash,
 							   g_str_equal);
 			}
+			info->id = g_strdup(id);
 			info->path = g_strdup(path);
 			info->sensor_proxy = sensor_proxy;
 			/* Set the device status changed as TRUE because we need
 			 * to get the initial temperature reading
 			 */
 			info->changed = TRUE;
-			g_hash_table_insert(devices, info->path, info);
+			g_hash_table_insert(devices, info->id, info);
 
 			/* Write the sensor data */
-			id_str = g_value_get_string(&id);
-			model_str = g_value_get_string(&model);
 			sensors_applet_plugin_add_sensor(sensors,
-							 path,
-							 id_str,
-							 model_str,
+							 id,
+							 "Disk Temperature",
+							 model,
 							 TEMP_SENSOR,
 							 FALSE,
 							 HDD_ICON,
 							 DEFAULT_GRAPH_COLOR);
-			g_free(id_str);
-			g_free(model_str);
+			g_strfreev(ids);
+			g_free(model);
+			g_free(dev);
+			g_debug("Added %s %s", path, id);
 		} else {
 			g_debug ("Cannot obtain data for device: %s\n"
-				    "Error: %s\n",
-				    path,
-				    error->message);
+				 "Error: %s\n",
+				 path,
+				 error->message);
 			g_error_free (error);
 			error = NULL;
 			g_object_unref(sensor_proxy);
@@ -243,7 +263,7 @@ static gdouble udisks_plugin_get_sensor_value(const gchar *path,
 		GValue smart_time = { 0, };
 		sensor_proxy = dbus_g_proxy_new_for_name(connection,
 							 UDISKS_BUS_NAME,
-							 path,
+							 info->path,
 							 UDISKS_PROPERTIES_INTERFACE);
 		if (!dbus_g_proxy_call(sensor_proxy, "Get", error,
 				       G_TYPE_STRING, UDISKS_BUS_NAME,
