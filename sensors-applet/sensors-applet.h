@@ -60,7 +60,7 @@ static const gchar * const stock_icons[NUM_ICONS] = {
 
 
 /* enumeration used to identify columns in the GtkTreeStore data
- * structure and to access specific mateconf keys too.
+ * structure
  */
 enum {
 	PATH_COLUMN = 0,
@@ -110,8 +110,6 @@ typedef enum {
         LOW_ALARM = 0,
         HIGH_ALARM,
         SENSOR_INTERFACE_ERROR,
-        MATECONF_READ_ERROR,
-        MATECONF_WRITE_ERROR,
         NUM_NOTIFS
 } NotifType;
 
@@ -137,6 +135,9 @@ struct _SensorsApplet {
 	 * list of labels and sensor values into this container */
 	GtkWidget *table;
 	GList *active_sensors;
+
+	GSettings *settings;
+
 #ifdef HAVE_LIBMATENOTIFY
         NotifyNotification *notification;
 #endif // HAVE_LIBMATENOTIFY
@@ -169,8 +170,7 @@ void sensors_applet_reorder_sensors(SensorsApplet *sensors_applet);
 gdouble sensors_applet_convert_temperature(gdouble value, 
                                            TemperatureScale old, 
                                            TemperatureScale new);
-void sensors_applet_notify(SensorsApplet *sensors_applet,
-                           NotifType notif_type);
+
 void sensors_applet_notify_end(ActiveSensor *active_sensor, NotifType notif_type);
 void sensors_applet_notify_end_all(SensorsApplet *sensors_applet);
 void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType notif_type);

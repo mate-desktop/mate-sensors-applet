@@ -28,11 +28,12 @@
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
 
-#include <mate.h>
+#include <glib/gi18n.h>
 #include <glib/gprintf.h>
+#include <gio/gio.h>
 #include "sensors-applet.h"
 #include "active-sensor.h"
-#include "sensors-applet-mateconf.h"
+#include "sensors-applet-settings.h"
 #include "sensors-applet-plugins.h"
 
 #ifdef HAVE_LIBMATENOTIFY
@@ -51,9 +52,8 @@
 #define ROW_SPACING 0
 
 /* callbacks for panel menu */
-static void prefs_cb(MateComponentUIComponent *uic,
-		     gpointer *data,
-		     const gchar       *verbname) {
+static void prefs_cb(GtkAction *action,
+		     gpointer *data) {
 
         SensorsApplet *sensors_applet;
         sensors_applet = (SensorsApplet *)data;
@@ -65,18 +65,16 @@ static void prefs_cb(MateComponentUIComponent *uic,
 	prefs_dialog_open(sensors_applet);
 }
 
-static void about_cb(MateComponentUIComponent *uic,
-		     gpointer data,
-		     const gchar       *verbname) {
+static void about_cb(GtkAction *action,
+		     gpointer data) {
         SensorsApplet *sensors_applet;
         sensors_applet = (SensorsApplet *)data;
 
 	about_dialog_open(sensors_applet);
 }
 
-static void help_cb(MateComponentUIComponent *uic, 
-                    gpointer data,
-                    const gchar *verbname) {
+static void help_cb(GtkAction *action, 
+                    gpointer data) {
 
         GError *error = NULL;
         
@@ -103,6 +101,11 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
 
 	if (sensors_applet->timeout_id) {
 		g_source_remove(sensors_applet->timeout_id);
+	}
+
+	if (sensors_applet->settings ) {
+		g_object_unref (sensors_applet->settings);
+		sensors_applet->settings = NULL;
 	}
 
         // destroy all active sensors
@@ -212,9 +215,7 @@ static void style_set_cb(GtkWidget *widget,
 
         g_debug("set-style occurred");
 
-        display_mode = mate_panel_applet_mateconf_get_int(sensors_applet->applet,
-                                                  DISPLAY_MODE,
-                                                  NULL);
+        display_mode = g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
         if (sensors_applet->sensors) {
                 for (gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter); not_end_of_interfaces; not_end_of_interfaces = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
                         
@@ -255,11 +256,16 @@ static void style_set_cb(GtkWidget *widget,
             
 }
 
-static const MateComponentUIVerb sensors_applet_menu_verbs[] = {
-	MATECOMPONENT_UI_UNSAFE_VERB("Preferences", prefs_cb),
-	MATECOMPONENT_UI_UNSAFE_VERB ("Help", help_cb),
-	MATECOMPONENT_UI_UNSAFE_VERB("About", about_cb),
-	MATECOMPONENT_UI_VERB_END
+static const GtkActionEntry sensors_applet_menu_actions[] = {
+	{ "Preferences", GTK_STOCK_PROPERTIES, N_("_Preferences"),
+		NULL, NULL,
+		G_CALLBACK(prefs_cb) },
+	{ "Help", GTK_STOCK_HELP, N_("_Help"),
+		NULL, NULL,
+		G_CALLBACK(help_cb) },
+	{ "About", GTK_STOCK_ABOUT, N_("_About"),
+		NULL, NULL,
+		G_CALLBACK(about_cb) }
 };
 
 #ifdef HAVE_LIBMATENOTIFY
@@ -271,58 +277,6 @@ static void notif_closed_cb(NotifyNotification *notification,
         sensors_applet->notification = NULL;
 }
 #endif // HAVE_LIBMATENOTIFY
-
-void sensors_applet_notify(SensorsApplet *sensors_applet,
-                           NotifType notif_type) 
-{
-#ifdef HAVE_LIBMATENOTIFY
-        gchar *message;
-        gchar *summary;
-        GError *error = NULL;
-        g_assert(sensors_applet);
-        
-        if (!notify_is_initted()) {
-                if (!notify_init(PACKAGE)) {
-                        return;
-                }
-        }
-
-        if (sensors_applet->notification) {
-                g_debug("notification already shown, not showing another one...");
-                return;
-        }
-        
-        switch (notif_type) {
-        case MATECONF_READ_ERROR:
-                summary = g_strdup_printf(_("Error restoring saved sensor configuration."));
-                message = g_strdup_printf(_("An error occurred while trying to restore the saved sensor configuration. The previous configuration has been lost and will need to be re-entered."));
-                break;
-                
-        case MATECONF_WRITE_ERROR:
-                summary = g_strdup_printf(_("Error saving sensor configuration."));
-                message = g_strdup_printf(_("An error occurred while trying to save the current sensor configuration. "));
-                break;
-        }
-        
-        sensors_applet->notification = notify_notification_new(summary,
-                                                               message,
-                                                               GTK_STOCK_DIALOG_WARNING,
-                                                               GTK_WIDGET(sensors_applet->applet));
-        g_free(summary);
-        g_free(message);
-        
-        g_signal_connect(sensors_applet->notification,
-                         "closed",
-                         G_CALLBACK(notif_closed_cb),
-                         sensors_applet);
-        g_debug("showing notification");
-        if (!notify_notification_show(sensors_applet->notification, &error)) {
-                g_debug("Error showing notification: %s", error->message);
-                g_error_free(error);
-        } 
-#endif // HAVE_LIBMATENOTIFY
-}
-        
 
 void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType notif_type) {
 #ifdef HAVE_LIBMATENOTIFY
@@ -347,9 +301,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
         
         sensors_applet = active_sensor->sensors_applet;
 
-        if (!mate_panel_applet_mateconf_get_bool(sensors_applet->applet,
-                                         DISPLAY_NOTIFICATIONS,
-                                         NULL)) {
+        if (!g_settings_get_boolean (sensors_applet->settings, DISPLAY_NOTIFICATIONS)) {
                 g_debug("Wanted to display notification, but user has disabled them");
                 return;
         }
@@ -411,9 +363,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                 case TEMP_SENSOR:
                         unit_type_title = _("Temperature");
                         unit_type = _("temperature");
-                        temp_scale = (TemperatureScale)mate_panel_applet_mateconf_get_int(active_sensor->sensors_applet->applet,
-                                                                                  TEMPERATURE_SCALE,
-                                                                                  NULL);
+                        temp_scale = (TemperatureScale) g_settings_get_int (active_sensor->sensors_applet->settings, TEMPERATURE_SCALE);
                         
                         switch (temp_scale) {
                         case CELSIUS:
@@ -457,9 +407,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
         case SENSOR_INTERFACE_ERROR:
                 summary = g_strdup_printf(_("Error updating sensor %s"), sensor_label);
                 message = g_strdup_printf(_("An error occurred while trying to update the value of the sensor %s located at %s."), sensor_label, sensor_path);
-                timeout_msecs = mate_panel_applet_mateconf_get_int(active_sensor->sensors_applet->applet,
-                                                           TIMEOUT,
-                                                           NULL);
+                timeout_msecs = g_settings_get_int (active_sensor->sensors_applet->settings, TIMEOUT);
                 
                 break;
                 
@@ -599,10 +547,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
         /* otherwise can acess active_sensors without any worries */
 	num_active_sensors = g_list_length(sensors_applet->active_sensors);
 
-	display_mode = (DisplayMode)mate_panel_applet_mateconf_get_int(sensors_applet->applet, 
-                                                               DISPLAY_MODE, NULL);
-	layout_mode = (LayoutMode)mate_panel_applet_mateconf_get_int(sensors_applet->applet, 
-                                                             LAYOUT_MODE, NULL);
+	display_mode = (DisplayMode) g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
+	layout_mode = (LayoutMode) g_settings_get_int (sensors_applet->settings, LAYOUT_MODE);
 
 
         horizontal = (((mate_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_UP) || 
@@ -1099,8 +1045,6 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
                 g_debug("Added sensor interface %s to tree", interface);
 	}
 
-        icon = sensors_applet_load_icon(icon_type);
-
 	
 	/* then add sensor as a child under interface node - ie assume
 	 * we either found it or created it - the inteface node that
@@ -1111,28 +1055,70 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
 			      &sensors_iter,
 			      &interfaces_iter);
 	
-	gtk_tree_store_set(sensors_applet->sensors,
-			   &sensors_iter,
-			   PATH_COLUMN, path,
-			   ID_COLUMN, id,
-			   LABEL_COLUMN, label,
-			   INTERFACE_COLUMN, interface,
-			   SENSOR_TYPE_COLUMN, type,
-			   ENABLE_COLUMN, enable,
-			   VISIBLE_COLUMN, TRUE,
-			   LOW_VALUE_COLUMN, low_value,
-			   HIGH_VALUE_COLUMN, high_value,
-			   ALARM_ENABLE_COLUMN, alarm_enable,
-			   ALARM_TIMEOUT_COLUMN, alarm_timeout,
-			   LOW_ALARM_COMMAND_COLUMN, low_alarm_command,
-			   HIGH_ALARM_COMMAND_COLUMN, high_alarm_command,
-			   MULTIPLIER_COLUMN, multiplier,
-			   OFFSET_COLUMN, offset,
-			   ICON_TYPE_COLUMN, icon_type,
-			   ICON_PIXBUF_COLUMN, icon,
-                           GRAPH_COLOR_COLUMN, graph_color,
-			   -1);
-        g_debug("added sensor %s to tree", path);
+	/* if sensor is already in settings, load values from there */
+	gchar *applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
+	gchar *settings_path = g_strdup_printf ("%s%s/",
+				applet_path,
+				sensors_applet_settings_get_unique_id (interface,
+								       id,
+								       path));
+	GSettings *settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", settings_path);
+	g_free (applet_path);
+	g_free (settings_path);
+	
+	gchar *settings_id = g_settings_get_string (settings, ID);
+	
+	if (settings_id != NULL && settings_id[0] != '\0') {
+		icon = sensors_applet_load_icon(g_settings_get_int (settings, ICON_TYPE));
+		gtk_tree_store_set(sensors_applet->sensors,
+				   &sensors_iter,
+				   PATH_COLUMN, g_settings_get_string (settings, PATH),
+				   ID_COLUMN, settings_id,
+				   LABEL_COLUMN, g_settings_get_string (settings, LABEL),
+				   INTERFACE_COLUMN, g_settings_get_string (settings, INTERFACE),
+				   SENSOR_TYPE_COLUMN, g_settings_get_int (settings, SENSOR_TYPE),
+				   ENABLE_COLUMN, g_settings_get_boolean (settings, ENABLED),
+				   VISIBLE_COLUMN, TRUE,
+				   LOW_VALUE_COLUMN, g_settings_get_double (settings, LOW_VALUE),
+				   HIGH_VALUE_COLUMN, g_settings_get_double (settings, HIGH_VALUE),
+				   ALARM_ENABLE_COLUMN, g_settings_get_boolean (settings, ALARM_ENABLED),
+				   ALARM_TIMEOUT_COLUMN, g_settings_get_int (settings, ALARM_TIMEOUT),
+				   LOW_ALARM_COMMAND_COLUMN, g_settings_get_string (settings, LOW_ALARM_COMMAND),
+				   HIGH_ALARM_COMMAND_COLUMN, g_settings_get_string (settings, HIGH_ALARM_COMMAND),
+				   MULTIPLIER_COLUMN, g_settings_get_double (settings, MULTIPLIER),
+				   OFFSET_COLUMN, g_settings_get_double (settings, OFFSET),
+				   ICON_TYPE_COLUMN, g_settings_get_int (settings, ICON_TYPE),
+				   ICON_PIXBUF_COLUMN, icon,
+				   GRAPH_COLOR_COLUMN, g_settings_get_string (settings, GRAPH_COLOR),
+				   -1);
+		g_free (settings_id);
+	}
+	else {
+		icon = sensors_applet_load_icon(icon_type);
+		gtk_tree_store_set(sensors_applet->sensors,
+				   &sensors_iter,
+				   PATH_COLUMN, path,
+				   ID_COLUMN, id,
+				   LABEL_COLUMN, label,
+				   INTERFACE_COLUMN, interface,
+				   SENSOR_TYPE_COLUMN, type,
+				   ENABLE_COLUMN, enable,
+				   VISIBLE_COLUMN, TRUE,
+				   LOW_VALUE_COLUMN, low_value,
+				   HIGH_VALUE_COLUMN, high_value,
+				   ALARM_ENABLE_COLUMN, alarm_enable,
+				   ALARM_TIMEOUT_COLUMN, alarm_timeout,
+				   LOW_ALARM_COMMAND_COLUMN, low_alarm_command,
+				   HIGH_ALARM_COMMAND_COLUMN, high_alarm_command,
+				   MULTIPLIER_COLUMN, multiplier,
+				   OFFSET_COLUMN, offset,
+				   ICON_TYPE_COLUMN, icon_type,
+				   ICON_PIXBUF_COLUMN, icon,
+				   GRAPH_COLOR_COLUMN, graph_color,
+				   -1);
+	}
+	g_object_unref (settings);
+	g_debug("added sensor %s to tree", path);
 
 	/* remove reference to icon as tree now has ref */
 	g_object_unref(icon);
@@ -1302,9 +1288,7 @@ void sensors_applet_graph_size_changed(SensorsApplet *sensors_applet) {
 
         if (sensors_applet->active_sensors) {
                 
-                graph_size = mate_panel_applet_mateconf_get_int(sensors_applet->applet,
-                                                        GRAPH_SIZE,
-                                                        NULL);
+                graph_size = g_settings_get_int (sensors_applet->settings, GRAPH_SIZE);
                 if (mate_panel_applet_get_orient(sensors_applet->applet) == 
                     MATE_PANEL_APPLET_ORIENT_UP ||
                     mate_panel_applet_get_orient(sensors_applet->applet) == 
@@ -1375,6 +1359,9 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
         g_assert(sensors_applet);
 	g_assert(sensors_applet->applet);
 
+	GtkActionGroup *action_group;
+	gchar *ui_path;
+
         /* plugin functions are stored as name -> get_value_function pairs so
          * use standard string functions on hash table */
         sensors_applet->plugins = g_hash_table_new(g_str_hash,
@@ -1395,9 +1382,9 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 			 G_CALLBACK(destroy_cb),
 			 sensors_applet);
 
-
-        /* if not setup, write defaults to mateconf */
-        sensors_applet_mateconf_setup(sensors_applet);
+	/* init gsettings */
+	sensors_applet->settings = mate_panel_applet_settings_new (sensors_applet->applet,
+								   "org.mate.sensors-applet");
 
 	/* now do any setup needed manually */
         sensors_applet_plugins_load_all(sensors_applet);        
@@ -1413,12 +1400,16 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	}
 	
         /* only do menu and signal connections if sensors are found */
-	mate_panel_applet_setup_menu_from_file(sensors_applet->applet,
-					  DATADIR,
-					  SENSORS_APPLET_MENU_FILE,
-					  NULL,
-					  sensors_applet_menu_verbs,
-					  sensors_applet);
+	action_group = gtk_action_group_new ("Sensors Applet Actions");
+	gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (action_group,
+		sensors_applet_menu_actions,
+		G_N_ELEMENTS (sensors_applet_menu_actions),
+		sensors_applet);
+	ui_path = g_build_filename (UIDIR, SENSORS_APPLET_MENU_FILE, NULL);
+	mate_panel_applet_setup_menu_from_file (sensors_applet->applet, ui_path, action_group);
+	g_free (ui_path);
+	g_object_unref (action_group);
 
 	g_signal_connect(sensors_applet->applet, "style-set",
 			 G_CALLBACK(style_set_cb),
@@ -1441,7 +1432,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	sensors_applet_update_active_sensors(sensors_applet);
 	sensors_applet_pack_display(sensors_applet);
 
-	sensors_applet->timeout_id = g_timeout_add_seconds(mate_panel_applet_mateconf_get_int(sensors_applet->applet, TIMEOUT, NULL) / 1000, 
+	sensors_applet->timeout_id = g_timeout_add_seconds(g_settings_get_int(sensors_applet->settings, TIMEOUT) / 1000, 
                                                            (GSourceFunc)sensors_applet_update_active_sensors, 
                                                            sensors_applet);
 	gtk_widget_show_all(GTK_WIDGET(sensors_applet->applet));

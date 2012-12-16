@@ -1,9 +1,13 @@
 ## Process this file with automake to produce Makefile.in
+
+uidir = $(datadir)/mate-sensors-applet/ui
+
 INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
 	-DLIBDIR=\""$(libdir)"\" \
+	-DUIDIR=\""$(pkgdatadir)/ui"\" \
 	-DSENSORS_APPLET_PLUGIN_DIR=\""$(libdir)/$(PACKAGE)/plugins/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
@@ -35,8 +39,8 @@ mate_sensors_applet_SOURCES = main.c \
 		sensors-applet-sensor.h \
 		sensors-applet-plugins.c \
 		sensors-applet-plugins.h \
-		sensors-applet-mateconf.c \
-		sensors-applet-mateconf.h \
+		sensors-applet-settings.c \
+		sensors-applet-settings.h \
 		$(libmatenotify_SRC) 
 
 # install headers for plugins to use

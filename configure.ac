@@ -1,7 +1,5 @@
 # ================= initialization =================== #
 
-# if doing version bump - make sure you update sensors-applet-mateconf
-# version checking to add old version if no changes to config
 AC_INIT([MATE Sensors Applet], [1.4.0], [http://www.mate-desktop.org],
 [mate-sensors-applet])
 
@@ -48,17 +46,15 @@ AC_CHECK_HEADERS(
 	dlfcn.h
 )   
 
-GLIB_REQUIRED=2.14.0
+GLIB_REQUIRED=2.26.0
 GTK_REQUIRED=2.14.0
 LIBPANEL_REQUIRED=1.1.0
-LIBMATE_REQUIRED=1.1.0
-LIBMATEUI_REQUIRED=1.1.0
 LIBMATENOTIFY_REQUIRED=1.1.0
 LIBCAIRO_REQUIRED=1.0.4
 LIBDBUSGLIB_REQUIRED=0.80
 LIBATASMART_REQUIRED=0.16
 
-PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED)
+PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gio-2.0)
 AC_SUBST(GLIB_CFLAGS)
 AC_SUBST(GLIB_LIBS)
 
@@ -66,9 +62,7 @@ PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
-PKG_CHECK_MODULES(MATE, libmate-2.0 >= $LIBMATE_REQUIRED
-			 libmateui-2.0 >= $LIBMATEUI_REQUIRED
-			 libmatepanelapplet-2.0 >= $LIBPANEL_REQUIRED)
+PKG_CHECK_MODULES(MATE, libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED)
 AC_SUBST(MATE_CFLAGS)
 AC_SUBST(MATE_LIBS)
 
@@ -255,6 +249,9 @@ MATE_COMPILE_WARNINGS(maximum)
 
 # ================ mate-doc-utils stuff ============= #
 MATE_DOC_INIT
+
+# ================ GSettings stuff ============= #
+GLIB_GSETTINGS
 
 # ==================== plugin stuff ================== #
 PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"

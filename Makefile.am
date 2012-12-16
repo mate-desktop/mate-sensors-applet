@@ -1,24 +1,50 @@
 SUBDIRS = sensors-applet lib plugins pixmaps po help
 
-serverdir 	= $(libdir)/matecomponent/servers
-server_in_files = SensorsApplet.server.in
-server_DATA 	= $(server_in_files:.server.in=.server)
+appletdir =  $(datadir)/mate-panel/applets
+applet_in_files = org.mate.applets.sensors-applet.mate-panel-applet.in
+applet_DATA = $(applet_in_files:.mate-panel-applet.in=.mate-panel-applet)
 
-$(server_in_files): $(server_in_files:.server.in=.server.in.in) Makefile
-	sed -e "s|\@DATADIR\@|$(datadir)|" -e "s|\@LIBEXECDIR\@|$(libexecdir)|" -e "s|\@PACKAGE\@|$(PACKAGE)|" $< > $@
+$(applet_in_files): $(applet_in_files).in Makefile
+	$(AM_V_GEN)sed \
+		-e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+		$< > $@
 
-@INTLTOOL_SERVER_RULE@
+%.mate-panel-applet: %.mate-panel-applet.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
-uidir 		= $(datadir)/mate-2.0/ui
+uidir 		= $(datadir)/mate-sensors-applet/ui
 ui_DATA 	= SensorsApplet.xml
 
-CLEANFILES 	=  $(server_in_files) \
-		   $(server_DATA)
+servicedir = $(datadir)/dbus-1/services
+service_in_files = org.mate.panel.applet.SensorsAppletFactory.service.in
+service_DATA = $(service_in_files:.service.in=.service)
 
-EXTRA_DIST 	= $(ui_DATA) \
-		  $(server_DATA:.server=.server.in.in) \
-		  intltool-merge.in intltool-extract.in intltool-update.in \
-		  mate-doc-utils.make
+org.mate.panel.applet.SensorsAppletFactory.service: $(service_in_files)
+	$(AM_V_GEN)sed \
+		-e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+		$< > $@
+
+@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_SCHEMAS = \
+	org.mate.sensors-applet.gschema.xml \
+	org.mate.sensors-applet.sensor.gschema.xml
+@GSETTINGS_RULES@
+
+%.gschema.xml.in: %.gschema.xml.in.in Makefile
+	$(AM_V_GEN) $(SED) \
+		-e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' \
+		< $< > $@
+
+CLEANFILES = $(applet_DATA) \
+	$(applet_DATA).in \
+	$(service_DATA) \
+	$(gsettings_SCHEMAS_in) \
+	$(gsettings_SCHEMAS) \
+	*.gschema.valid
+
+EXTRA_DIST = $(ui_DATA) \
+	$(applet_in_files).in \
+	$(service_in_files) \
+	$(gsettings_SCHEMAS_in_in)
 
 DISTCLEANFILES	=	mate-doc-utils.make \
 		   	intltool-extract \

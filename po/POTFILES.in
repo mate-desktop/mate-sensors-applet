@@ -1,5 +1,6 @@
-SensorsApplet.server.in.in
-SensorsApplet.xml
+org.mate.applets.sensors-applet.mate-panel-applet.in.in
+org.mate.sensors-applet.gschema.xml.in.in
+org.mate.sensors-applet.sensor.gschema.xml.in.in
 plugins/pmu-sys/pmu-sys-plugin.c
 plugins/i2c-sys/i2c-sys-plugin.c
 plugins/i8k/i8k-plugin.c
@@ -18,4 +19,4 @@ sensors-applet/active-sensor.c
 sensors-applet/about-dialog.c
 sensors-applet/sensor-config-dialog.c
 sensors-applet/sensors-applet.c
-sensors-applet/sensors-applet-mateconf.c
+sensors-applet/sensors-applet-settings.c

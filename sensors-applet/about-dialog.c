@@ -20,7 +20,8 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#include <mate.h>
+#include <glib/gi18n.h>
+#include <gtk/gtk.h>
 #include "about-dialog.h"
 
 void about_dialog_open(SensorsApplet *sensors_applet) {

@@ -20,8 +20,9 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#include <libmate/libmate.h>
-#include "sensors-applet-mateconf.h"
+#include <glib/gi18n.h>
+#include <gio/gio.h>
+#include "sensors-applet-settings.h"
 #include "prefs-dialog.h"
 #include "sensor-config-dialog.h"
 
@@ -29,13 +30,11 @@
 #define NEW_TEMP_SCALE 1
 
 /* when a user closes the prefs-dialog we assume that applet is now
-   setup, so store all values in mateconf */
+   setup, so store all values in gsettings */
 void prefs_dialog_close(SensorsApplet *sensors_applet) {
 
         if (sensors_applet->sensors != NULL) {
-                if (sensors_applet_mateconf_save_sensors(sensors_applet))
-                        mate_panel_applet_mateconf_set_bool(sensors_applet->applet,
-                                                    IS_SETUP, TRUE, NULL);
+                sensors_applet_settings_save_sensors(sensors_applet);
         }
         if (sensors_applet->prefs_dialog) {
                 gtk_widget_destroy(GTK_WIDGET(sensors_applet->prefs_dialog->dialog));
@@ -44,7 +43,7 @@ void prefs_dialog_close(SensorsApplet *sensors_applet) {
 
         }
         if (sensors_applet->timeout_id == 0) {
-                sensors_applet->timeout_id = g_timeout_add_seconds(mate_panel_applet_mateconf_get_int(sensors_applet->applet, TIMEOUT, NULL) / 1000, (GSourceFunc)sensors_applet_update_active_sensors, sensors_applet);
+                sensors_applet->timeout_id = g_timeout_add_seconds(g_settings_get_int (sensors_applet->settings, TIMEOUT) / 1000, (GSourceFunc)sensors_applet_update_active_sensors, sensors_applet);
         }
 
 
@@ -125,7 +124,7 @@ static void prefs_dialog_timeout_changed(GtkSpinButton *button,
                                          PrefsDialog *prefs_dialog) {
         gint value;
         value = (gint)(gtk_spin_button_get_value(button) * 1000);
-        mate_panel_applet_mateconf_set_int(prefs_dialog->sensors_applet->applet, TIMEOUT, value, NULL);
+        g_settings_set_int (prefs_dialog->sensors_applet->settings, TIMEOUT, value);
 }
 
 static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_box,
@@ -149,10 +148,9 @@ static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_bo
         gtk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->graph_size_spinbutton),
                                  (display_mode == DISPLAY_GRAPH));
 
-        mate_panel_applet_mateconf_set_int(prefs_dialog->sensors_applet->applet,
-                                   DISPLAY_MODE,
-                                   gtk_combo_box_get_active(display_mode_combo_box),
-                                   NULL);
+        g_settings_set_int (prefs_dialog->sensors_applet->settings,
+                            DISPLAY_MODE,
+                            gtk_combo_box_get_active(display_mode_combo_box));
 
         sensors_applet_display_layout_changed(prefs_dialog->sensors_applet);
 }
@@ -160,10 +158,9 @@ static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_bo
 static void prefs_dialog_layout_mode_changed(GtkComboBox *layout_mode_combo_box,
                                              PrefsDialog *prefs_dialog) {
 
-        mate_panel_applet_mateconf_set_int(prefs_dialog->sensors_applet->applet,
-                                   LAYOUT_MODE,
-                                   gtk_combo_box_get_active(layout_mode_combo_box),
-                                   NULL);
+        g_settings_set_int (prefs_dialog->sensors_applet->settings,
+                            LAYOUT_MODE,
+                            gtk_combo_box_get_active(layout_mode_combo_box));
 
         sensors_applet_display_layout_changed(prefs_dialog->sensors_applet);
 }
@@ -175,16 +172,14 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
         TemperatureScale scales[2];
         GtkTreeModel *model;
 
-        scales[OLD_TEMP_SCALE] = (TemperatureScale)mate_panel_applet_mateconf_get_int(prefs_dialog->sensors_applet->applet,
-                                                                              TEMPERATURE_SCALE,
-                                                                              NULL);
+        scales[OLD_TEMP_SCALE] = (TemperatureScale) g_settings_get_int (prefs_dialog->sensors_applet->settings,
+                                                                        TEMPERATURE_SCALE);
 
         scales[NEW_TEMP_SCALE] = (TemperatureScale)gtk_combo_box_get_active(temperature_scale_combo_box);
 
-        mate_panel_applet_mateconf_set_int(prefs_dialog->sensors_applet->applet,
-                                   TEMPERATURE_SCALE,
-                                   scales[NEW_TEMP_SCALE],
-                                   NULL);
+        g_settings_set_int (prefs_dialog->sensors_applet->settings,
+                            TEMPERATURE_SCALE,
+                            scales[NEW_TEMP_SCALE]);
 
         /* now go thru and convert all low and high sensor values in
          * the tree to either celcius or Fahrenheit */
@@ -205,10 +200,9 @@ static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_n
         gboolean notify;
 
         notify = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(display_notifications));
-        mate_panel_applet_mateconf_set_bool(prefs_dialog->sensors_applet->applet,
-                                    DISPLAY_NOTIFICATIONS,
-                                    notify,
-                                    NULL);
+        g_settings_set_boolean(prefs_dialog->sensors_applet->settings,
+                               DISPLAY_NOTIFICATIONS,
+                               notify);
 
         if (notify) {
                 sensors_applet_update_active_sensors(prefs_dialog->sensors_applet);
@@ -222,7 +216,7 @@ static void prefs_dialog_graph_size_changed(GtkSpinButton *button,
                                             PrefsDialog *prefs_dialog) {
         gint value;
         value = (gint)(gtk_spin_button_get_value(button));
-        mate_panel_applet_mateconf_set_int(prefs_dialog->sensors_applet->applet, GRAPH_SIZE, value, NULL);
+        g_settings_set_int(prefs_dialog->sensors_applet->settings, GRAPH_SIZE, value);
 
         /* notify change of number of samples */
         sensors_applet_graph_size_changed(prefs_dialog->sensors_applet);
@@ -472,7 +466,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_combo_box_append_text(prefs_dialog->display_mode_combo_box, _("graph only"));
 
 
-        display_mode = mate_panel_applet_mateconf_get_int(sensors_applet->applet, DISPLAY_MODE, NULL);
+        display_mode = g_settings_get_int(sensors_applet->settings, DISPLAY_MODE);
         gtk_combo_box_set_active(prefs_dialog->display_mode_combo_box, display_mode);
 
         g_signal_connect(prefs_dialog->display_mode_combo_box,
@@ -503,7 +497,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_combo_box_append_text(prefs_dialog->layout_mode_combo_box, _("beside labels / icons"));
         gtk_combo_box_append_text(prefs_dialog->layout_mode_combo_box, _("below labels / icons"));
 
-        gtk_combo_box_set_active(prefs_dialog->layout_mode_combo_box, mate_panel_applet_mateconf_get_int(sensors_applet->applet, LAYOUT_MODE, NULL));
+        gtk_combo_box_set_active(prefs_dialog->layout_mode_combo_box, g_settings_get_int(sensors_applet->settings, LAYOUT_MODE));
 
         g_signal_connect(prefs_dialog->layout_mode_combo_box,
                          "changed",
@@ -528,7 +522,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_combo_box_append_text(prefs_dialog->temperature_scale_combo_box, _("Celsius"));
         gtk_combo_box_append_text(prefs_dialog->temperature_scale_combo_box, _("Fahrenheit"));
 
-        gtk_combo_box_set_active(prefs_dialog->temperature_scale_combo_box, mate_panel_applet_mateconf_get_int(sensors_applet->applet, TEMPERATURE_SCALE, NULL));
+        gtk_combo_box_set_active(prefs_dialog->temperature_scale_combo_box, g_settings_get_int(sensors_applet->settings, TEMPERATURE_SCALE));
 
         g_signal_connect(prefs_dialog->temperature_scale_combo_box,
                          "changed",
@@ -543,9 +537,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                              NULL);
 
         prefs_dialog->graph_size_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
-                                                       "value", (gdouble)mate_panel_applet_mateconf_get_int(sensors_applet->applet,
-                                                                                                    GRAPH_SIZE,
-                                                                                                    NULL),
+                                                       "value", (gdouble)g_settings_get_int(sensors_applet->settings, GRAPH_SIZE),
                                                        "lower", 1.0,
                                                        "upper", 100.0,
                                                        "step-increment", 1.0,
@@ -557,9 +549,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                            "adjustment", prefs_dialog->graph_size_adjust,
                                                            "climb-rate", 1.0,
                                                            "digits", 0,
-                                                           "value", (gdouble)mate_panel_applet_mateconf_get_int(sensors_applet->applet,
-                                                                                                        GRAPH_SIZE,
-                                                                                                        NULL),
+                                                           "value", (gdouble)g_settings_get_int(sensors_applet->settings, GRAPH_SIZE),
                                                            "width-chars", 4,
                                                            NULL);
 
@@ -604,7 +594,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                         "adjustment", prefs_dialog->timeout_adjust,
                                                         "climb-rate", 0.5,
                                                         "digits", 1,
-                                                        "value", (gdouble) mate_panel_applet_mateconf_get_int(sensors_applet->applet, TIMEOUT, NULL) / 1000.0,
+                                                        "value", (gdouble) g_settings_get_int(sensors_applet->settings, TIMEOUT) / 1000.0,
                                                         "width-chars", 4,
                                                         NULL);
 
@@ -635,9 +625,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                            "label", _("Display _notifications"),
                                                            NULL);
         gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON(prefs_dialog->display_notifications),
-                                    mate_panel_applet_mateconf_get_bool(sensors_applet->applet,
-                                                                DISPLAY_NOTIFICATIONS,
-                                                                NULL));
+                                    g_settings_get_boolean(sensors_applet->settings,
+                                                           DISPLAY_NOTIFICATIONS));
         g_signal_connect(prefs_dialog->display_notifications,
                          "toggled",
                          G_CALLBACK(prefs_dialog_display_notifications_toggled),
