@@ -45,9 +45,4 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
                   "website", "http://www.mate-desktop.org",
                   NULL);
 
-
-    if (translator != NULL) {
-        g_free(translator);
-    }
-
 }
