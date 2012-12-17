@@ -20,6 +20,7 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
+#include <string.h>
 #include <glib.h>
 #include "sensors-applet.h"
 #include "sensors-applet-settings.h"
