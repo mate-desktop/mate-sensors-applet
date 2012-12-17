@@ -20,23 +20,17 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
+#include <glib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include "about-dialog.h"
 
 void about_dialog_open(SensorsApplet *sensors_applet) {
-    gchar *translator;
     const gchar *authors[] = {
         "Alex Murray <murray.alex@gmail.com>",
         "Stefano Karapetsas <stefano@karapetsas.com>",
         NULL
     };
-
-    if (_("Translator") == "Translator") {
-        translator = NULL;
-    } else {
-        translator = g_strdup(_("To translator: Put your name here to show up in the About dialog as the translator"));
-    }
 
     /* Construct the about dialog */
     gtk_show_about_dialog(NULL,
@@ -45,7 +39,8 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
                   "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>",
                   "authors", authors,
                   "documenters", authors,
-                  "translator-credits", translator,
+                  /* To translator: Put your name here to show up in the About dialog as the translator */
+                  "translator-credits", _("translator-credits"),
                   "logo-icon-name", SENSORS_APPLET_ICON,
                   "website", "http://www.mate-desktop.org",
                   NULL);
