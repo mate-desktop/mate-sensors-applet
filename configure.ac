@@ -4,7 +4,7 @@ AC_INIT([MATE Sensors Applet], [1.5.1], [http://www.mate-desktop.org],
 [mate-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
-AM_CONFIG_HEADER([sensors-applet/config.h])
+AC_CONFIG_HEADERS([sensors-applet/config.h])
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
 
