@@ -1,3 +1,202 @@
+commit f108ccca26b7a56009063b01e23b9df878d021ce
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Jan 20 21:54:38 2013 +0100
+
+    Fix load of saved enabled sensors in GSettings
+
+ sensors-applet/sensors-applet.c |    5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 5e29d576c0c137a389a4d686c946a30a20eb40ff
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 18 01:00:49 2012 +0100
+
+    hddtemp-plugin: Fix string compare
+
+ plugins/hddtemp/hddtemp-plugin.c |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 68f8b71b075a39dc869a527d83144a2a21e6018f
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 18 00:43:32 2012 +0100
+
+    Remove g_free of var removed previously
+
+ sensors-applet/about-dialog.c |    5 -----
+ 1 file changed, 5 deletions(-)
+
+commit 8a4349758ebc7b27e1c0077b715d47d2819007db
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 18 00:08:23 2012 +0100
+
+    Add missing includes
+
+ plugins/hddtemp/hddtemp-plugin.c         |    1 +
+ sensors-applet/sensors-applet-settings.c |    1 +
+ 2 files changed, 2 insertions(+)
+
+commit 0bca7365d5c1d574d644e4cf316f99801aeaa298
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 18 00:07:54 2012 +0100
+
+    Improve internationalization of translators credits
+
+ sensors-applet/about-dialog.c |   11 +++--------
+ 1 file changed, 3 insertions(+), 8 deletions(-)
+
+commit 1c5da0e7861a95860a05406e6d1c08ac6f94605e
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Dec 16 23:39:23 2012 +0100
+
+    update NEWS
+
+ NEWS |   11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
+
+commit ace14eff0192770e599d7d5ab141db9ee8fbf057
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Dec 16 23:38:18 2012 +0100
+
+    bump version to 1.5.0
+
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fbb7e89c4eab794cc9151e119c7ee94c9494dd7d
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Dec 16 23:31:49 2012 +0100
+
+    migrate to GSettings and remove MateConf usage
+    migrate to DBUS and remove MateComponent usage
+    remove libmate usage and use glib instead
+
+ Makefile.am                                        |   56 ++-
+ SensorsApplet.server.in.in                         |   25 -
+ SensorsApplet.xml                                  |   12 +-
+ configure.ac                                       |   15 +-
+ ....applets.sensors-applet.mate-panel-applet.in.in |   10 +
+ ...te.panel.applet.SensorsAppletFactory.service.in |    3 +
+ org.mate.sensors-applet.gschema.xml.in.in          |   40 ++
+ org.mate.sensors-applet.sensor.gschema.xml.in.in   |   68 +++
+ po/POTFILES.in                                     |    7 +-
+ sensors-applet/Makefile.am                         |    8 +-
+ sensors-applet/about-dialog.c                      |    3 +-
+ sensors-applet/active-sensor.c                     |   64 +--
+ sensors-applet/main.c                              |   17 +-
+ sensors-applet/prefs-dialog.c                      |   71 ++-
+ sensors-applet/sensor-config-dialog.c              |    2 +-
+ sensors-applet/sensors-applet-mateconf.c           |  491 --------------------
+ sensors-applet/sensors-applet-mateconf.h           |   91 ----
+ sensors-applet/sensors-applet-settings.c           |  142 ++++++
+ sensors-applet/sensors-applet-settings.h           |   56 +++
+ sensors-applet/sensors-applet.c                    |  233 +++++-----
+ sensors-applet/sensors-applet.h                    |   10 +-
+ 21 files changed, 557 insertions(+), 867 deletions(-)
+
+commit 5a584a07fe8ea0507d4bfe5c1b98f052f0001042
+Merge: a39bbde d3263c4
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Nov 22 14:20:39 2012 -0800
+
+    Merge pull request #3 from jrversteegh/udisks_by_id
+    
+    Udisks by id rather than device node
+
+commit a39bbde3774a32bca86eb18654c1c0a880dc507a
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sun Nov 18 20:45:57 2012 -0500
+
+    fixed incorrect fsf addresses.
+
+ lib/sensors-applet-plugin.c                  |    2 +-
+ plugins/acpi/acpi-plugin.c                   |    2 +-
+ plugins/acpi/acpi-plugin.h                   |    2 +-
+ plugins/aticonfig/aticonfig-plugin.c         |    2 +-
+ plugins/aticonfig/aticonfig-plugin.h         |    2 +-
+ plugins/eee/eee-plugin.c                     |    2 +-
+ plugins/eee/eee-plugin.h                     |    2 +-
+ plugins/hddtemp/hddtemp-plugin.c             |    2 +-
+ plugins/hddtemp/hddtemp-plugin.h             |    2 +-
+ plugins/i2c-proc/i2c-proc-plugin.c           |    2 +-
+ plugins/i2c-proc/i2c-proc-plugin.h           |    2 +-
+ plugins/i2c-sys/i2c-sys-plugin.c             |    2 +-
+ plugins/i2c-sys/i2c-sys-plugin.h             |    2 +-
+ plugins/i8k/i8k-plugin.c                     |    2 +-
+ plugins/i8k/i8k-plugin.h                     |    2 +-
+ plugins/ibm-acpi/ibm-acpi-plugin.c           |    2 +-
+ plugins/ibm-acpi/ibm-acpi-plugin.h           |    2 +-
+ plugins/libsensors/libsensors-plugin.c       |    2 +-
+ plugins/libsensors/libsensors-plugin.h       |    2 +-
+ plugins/nvidia/nvidia-plugin.c               |    2 +-
+ plugins/nvidia/nvidia-plugin.h               |    2 +-
+ plugins/omnibook/omnibook-plugin.c           |    2 +-
+ plugins/omnibook/omnibook-plugin.h           |    2 +-
+ plugins/pmu-sys/pmu-sys-plugin.c             |    2 +-
+ plugins/pmu-sys/pmu-sys-plugin.h             |    2 +-
+ plugins/smu-sys/smu-sys-plugin.c             |    2 +-
+ plugins/smu-sys/smu-sys-plugin.h             |    2 +-
+ plugins/sonypi/sonypi-plugin.c               |    2 +-
+ plugins/sonypi/sonypi-plugin.h               |    2 +-
+ plugins/udisks/udisks-plugin.c               |    2 +-
+ plugins/udisks/udisks-plugin.h               |    2 +-
+ sensors-applet/about-dialog.c                |    2 +-
+ sensors-applet/about-dialog.h                |    2 +-
+ sensors-applet/active-sensor-libmatenotify.c |    2 +-
+ sensors-applet/active-sensor-libmatenotify.h |    2 +-
+ sensors-applet/active-sensor.c               |    2 +-
+ sensors-applet/active-sensor.h               |    2 +-
+ sensors-applet/main.c                        |    2 +-
+ sensors-applet/prefs-dialog.c                |    2 +-
+ sensors-applet/prefs-dialog.h                |    2 +-
+ sensors-applet/sensor-config-dialog.c        |    2 +-
+ sensors-applet/sensor-config-dialog.h        |    2 +-
+ sensors-applet/sensors-applet-mateconf.c     |    2 +-
+ sensors-applet/sensors-applet-mateconf.h     |    2 +-
+ sensors-applet/sensors-applet-plugin.h       |    2 +-
+ sensors-applet/sensors-applet-plugins.c      |    2 +-
+ sensors-applet/sensors-applet-plugins.h      |    2 +-
+ sensors-applet/sensors-applet-sensor.h       |    2 +-
+ sensors-applet/sensors-applet.c              |    2 +-
+ sensors-applet/sensors-applet.h              |    2 +-
+ 50 files changed, 50 insertions(+), 50 deletions(-)
+
+commit d3263c4135e55df4ceba1d609045ff680016054b
+Author: Jaap Versteegh <j.r.versteegh@gmail.com>
+Date:   Thu Jul 26 22:30:05 2012 +0200
+
+    Also use id in hash table of sensors
+
+ plugins/udisks/udisks-plugin.c |   21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+
+commit 58aeb9344c1794551d159d6a7dafed74ac0e08e0
+Author: Jaap Versteegh <j.r.versteegh@gmail.com>
+Date:   Thu Jul 26 18:49:35 2012 +0200
+
+    List disks by persistent id rather than device node
+
+ plugins/udisks/udisks-plugin.c |   45 +++++++++++++++++++++++++++-------------
+ 1 file changed, 31 insertions(+), 14 deletions(-)
+
+commit dc567aaead4dc270ea7a39b0c03d10922b03baec
+Author: Jaap Versteegh <j.r.versteegh@gmail.com>
+Date:   Thu Jul 26 18:48:19 2012 +0200
+
+    Extended description of with-aticonfig option
+
+ configure.ac |   16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+
+commit 07fc7c237c3db0ec240b3c4fb705c0c3964228d0
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 12 14:52:45 2012 -0400
+
+    Preparing for 1.4 release.
+
+ ChangeLog    |   86 +++++++++++++++++++++++++++++++++++++++++++---------------
+ configure.ac |    2 +-
+ 2 files changed, 65 insertions(+), 23 deletions(-)
+
 commit bbc91ae8f2faddcf80bfdbece951873bf22e3ce7
 Author: Stefano Karapetsas <stefano@karapetsas.com>
 Date:   Sun Jun 24 21:29:55 2012 +0200
