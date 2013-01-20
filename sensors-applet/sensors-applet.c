@@ -103,7 +103,7 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
 		g_source_remove(sensors_applet->timeout_id);
 	}
 
-	if (sensors_applet->settings ) {
+	if (sensors_applet->settings) {
 		g_object_unref (sensors_applet->settings);
 		sensors_applet->settings = NULL;
 	}
@@ -1069,6 +1069,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
 	gchar *settings_id = g_settings_get_string (settings, ID);
 	
 	if (settings_id != NULL && settings_id[0] != '\0') {
+		enable = g_settings_get_boolean (settings, ENABLED);
 		icon = sensors_applet_load_icon(g_settings_get_int (settings, ICON_TYPE));
 		gtk_tree_store_set(sensors_applet->sensors,
 				   &sensors_iter,
@@ -1077,7 +1078,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
 				   LABEL_COLUMN, g_settings_get_string (settings, LABEL),
 				   INTERFACE_COLUMN, g_settings_get_string (settings, INTERFACE),
 				   SENSOR_TYPE_COLUMN, g_settings_get_int (settings, SENSOR_TYPE),
-				   ENABLE_COLUMN, g_settings_get_boolean (settings, ENABLED),
+				   ENABLE_COLUMN, enable,
 				   VISIBLE_COLUMN, TRUE,
 				   LOW_VALUE_COLUMN, g_settings_get_double (settings, LOW_VALUE),
 				   HIGH_VALUE_COLUMN, g_settings_get_double (settings, HIGH_VALUE),
