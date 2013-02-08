@@ -41,7 +41,9 @@ mate_sensors_applet_SOURCES = main.c \
 		sensors-applet-plugins.h \
 		sensors-applet-settings.c \
 		sensors-applet-settings.h \
-		$(libmatenotify_SRC) 
+		$(libmatenotify_SRC)
+
+mate_sensors_applet_LDADD = -ldl
 
 # install headers for plugins to use
 INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h
