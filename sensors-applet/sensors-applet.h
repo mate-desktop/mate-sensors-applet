@@ -27,8 +27,8 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#ifdef HAVE_LIBMATENOTIFY
-#include <libmatenotify/notify.h>
+#ifdef HAVE_LIBNOTIFY
+#include <libnotify/notify.h>
 #endif
 
 typedef struct _ActiveSensor ActiveSensor;
@@ -138,9 +138,9 @@ struct _SensorsApplet {
 
 	GSettings *settings;
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
         NotifyNotification *notification;
-#endif // HAVE_LIBMATENOTIFY
+#endif // HAVE_LIBNOTIFY
 };
 
 

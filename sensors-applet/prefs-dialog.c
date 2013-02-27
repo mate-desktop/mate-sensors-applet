@@ -193,7 +193,7 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
 }
 
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
 static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_notifications,
                                                        PrefsDialog *prefs_dialog) {
 
@@ -610,7 +610,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          G_CALLBACK(prefs_dialog_timeout_changed),
                          prefs_dialog);
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
         header_text = g_markup_printf_escaped("<b>%s</b>", _("Notifications"));
         prefs_dialog->notifications_header = g_object_new(GTK_TYPE_LABEL,
                                                           "use-markup", TRUE,
@@ -654,7 +654,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         prefs_dialog->globals_table = g_object_new(GTK_TYPE_TABLE,
                                                    "homogeneous", FALSE,
                                                    "n-columns", 3,
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
                                                    "n-rows", 9,
 #else
                                                    "n-rows", 7,
@@ -774,7 +774,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          0);
 
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
         gtk_table_attach(prefs_dialog->globals_table,
                          GTK_WIDGET(prefs_dialog->notifications_header),
                          0, 2,

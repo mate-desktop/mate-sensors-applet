@@ -49,7 +49,7 @@ AC_CHECK_HEADERS(
 GLIB_REQUIRED=2.26.0
 GTK_REQUIRED=2.14.0
 LIBPANEL_REQUIRED=1.1.0
-LIBMATENOTIFY_REQUIRED=1.1.0
+LIBNOTIFY_REQUIRED=0.7.0
 LIBCAIRO_REQUIRED=1.0.4
 LIBDBUSGLIB_REQUIRED=0.80
 LIBATASMART_REQUIRED=0.16
@@ -92,34 +92,34 @@ fi
 
 AM_CONDITIONAL(UDISKS, test -n "$DBUSGLIB_CFLAGS" -a -n "$LIBATASMART_CFLAGS")
 
-# support for libmatenotify
-LIBMATENOTIFY_CFLAGS=
-LIBMATENOTIFY_LIBS=
+# support for libnotify
+LIBNOTIFY_CFLAGS=
+LIBNOTIFY_LIBS=
 
 # enable support even if not specifically asked for
-AC_ARG_ENABLE(libmatenotify, 
-[  --enable-libmatenotify    Enable libmatenotify support], [
-         enable_libmatenotify=$enableval], [
-         enable_libmatenotify="yes"
+AC_ARG_ENABLE(libnotify, 
+[  --enable-libnotify    Enable libnotify support], [
+         enable_libnotify=$enableval], [
+         enable_libnotify="yes"
 ])
 
-if test "x$enable_libmatenotify" = "xno"
+if test "x$enable_libnotify" = "xno"
 then
-   echo "Disabling libmatenotify support"
+   echo "Disabling libnotify support"
 else
-	PKG_CHECK_MODULES(LIBMATENOTIFY, libmatenotify >= $LIBMATENOTIFY_REQUIRED,
-	HAVE_LIBMATENOTIFY="yes", HAVE_LIBMATENOTIFY="no")
+	PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED,
+	HAVE_LIBNOTIFY="yes", HAVE_LIBNOTIFY="no")
 
-	if test "x$HAVE_LIBMATENOTIFY" = "xyes"
+	if test "x$HAVE_LIBNOTIFY" = "xyes"
 	then
-	   AC_DEFINE(HAVE_LIBMATENOTIFY, 1, [libmatenotify available])
+	   AC_DEFINE(HAVE_LIBNOTIFY, 1, [libnotify available])
 	fi	
 fi
 
-AM_CONDITIONAL(LIBMATENOTIFY, test -n "$LIBMATENOTIFY_LIBS")
+AM_CONDITIONAL(LIBNOTIFY, test -n "$LIBNOTIFY_LIBS")
 
-AC_SUBST(LIBMATENOTIFY_CFLAGS)
-AC_SUBST(LIBMATENOTIFY_LIBS)
+AC_SUBST(LIBNOTIFY_CFLAGS)
+AC_SUBST(LIBNOTIFY_LIBS)
 
 
 # allow user to specify libsensors support, but support it anyway if possible

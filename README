@@ -31,7 +31,7 @@ given command at given repeated intervals.
 
 MATE HIG v2.0 compliant
 
-libmatenotify[8] support for alarm conditions
+libnotify[8] support for alarm conditions
 
 The icons bundled as part of MATE Sensors Applet were created by
 epicbard[9], and are released under the Creative Commons Attribution

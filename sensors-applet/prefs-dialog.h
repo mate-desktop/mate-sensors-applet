@@ -38,7 +38,7 @@ typedef struct {
         GtkLabel *timeout_label, *display_mode_label, *layout_mode_label, *temperature_scale_label, *graph_size_label, *update_header, *display_header;
         GtkAdjustment *timeout_adjust, *graph_size_adjust;
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
         GtkCheckButton *display_notifications;
         GtkLabel *notifications_header;
 #endif

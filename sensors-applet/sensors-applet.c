@@ -36,8 +36,8 @@
 #include "sensors-applet-settings.h"
 #include "sensors-applet-plugins.h"
 
-#ifdef HAVE_LIBMATENOTIFY
-#include "active-sensor-libmatenotify.h"
+#ifdef HAVE_LIBNOTIFY
+#include "active-sensor-libnotify.h"
 #define DEFAULT_NOTIFY_TIMEOUT 3000
 #endif
 
@@ -268,7 +268,7 @@ static const GtkActionEntry sensors_applet_menu_actions[] = {
 		G_CALLBACK(about_cb) }
 };
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
 static void notif_closed_cb(NotifyNotification *notification,
                             SensorsApplet *sensors_applet) 
 {
@@ -276,14 +276,12 @@ static void notif_closed_cb(NotifyNotification *notification,
         
         sensors_applet->notification = NULL;
 }
-#endif // HAVE_LIBMATENOTIFY
+#endif // HAVE_LIBNOTIFY
 
 void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType notif_type) {
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
  
         SensorsApplet *sensors_applet;
-        GList *table_children;
-        GtkWidget *attach = NULL;
         gchar *summary, *message;
         gint timeout_msecs;
         gchar *sensor_label;
@@ -305,23 +303,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                 g_debug("Wanted to display notification, but user has disabled them");
                 return;
         }
-                                    
-        table_children = gtk_container_get_children(GTK_CONTAINER(sensors_applet->table));
-        
-        if (g_list_find(table_children, active_sensor->icon)) {
-                attach = GTK_WIDGET(active_sensor->icon);
-        } else if (g_list_find(table_children, active_sensor->label)) {
-                attach = GTK_WIDGET(active_sensor->label);
-        } else if (g_list_find(table_children, active_sensor->value)) {
-                attach = GTK_WIDGET(active_sensor->value);
-        } else if (g_list_find(table_children, active_sensor->graph)) {
-                attach = GTK_WIDGET(active_sensor->graph);
-        } else {
-                g_warning("Wanted to do notify for a sensor which has no elements in the table!!!");
-                return;
-        }
-        g_list_free(table_children);
-        
+
         path = gtk_tree_row_reference_get_path(active_sensor->sensor_row);
         if (gtk_tree_model_get_iter(GTK_TREE_MODEL(sensors_applet->sensors), 
                                     &iter, path)) {
@@ -415,13 +397,12 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                 g_assert_not_reached();
         }
         
-        active_sensor_libmatenotify_notify(active_sensor,
+        active_sensor_libnotify_notify(active_sensor,
                                        notif_type,
                                        summary,
                                        message,
                                        GTK_STOCK_DIALOG_WARNING,
-                                       timeout_msecs,
-                                       attach);
+                                       timeout_msecs);
         
         g_free(sensor_path);
         g_free(sensor_label);
@@ -432,21 +413,21 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
 
 void sensors_applet_notify_end(ActiveSensor *active_sensor, 
                                NotifType notif_type) {
-#ifdef HAVE_LIBMATENOTIFY
-        active_sensor_libmatenotify_notify_end(active_sensor, notif_type);
+#ifdef HAVE_LIBNOTIFY
+        active_sensor_libnotify_notify_end(active_sensor, notif_type);
 #endif
 }
 
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
 static void sensors_applet_notify_end_all_gfunc(ActiveSensor *active_sensor,
                                                 gpointer data) {
-        active_sensor_libmatenotify_notify_end(active_sensor, LOW_ALARM);
-        active_sensor_libmatenotify_notify_end(active_sensor, HIGH_ALARM);
+        active_sensor_libnotify_notify_end(active_sensor, LOW_ALARM);
+        active_sensor_libnotify_notify_end(active_sensor, HIGH_ALARM);
 }
 #endif
 
 void sensors_applet_notify_end_all(SensorsApplet *sensors_applet) {
-#ifdef HAVE_LIBMATENOTIFY
+#ifdef HAVE_LIBNOTIFY
         g_list_foreach(sensors_applet->active_sensors,
                        (GFunc)sensors_applet_notify_end_all_gfunc,
                        NULL);

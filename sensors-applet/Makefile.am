@@ -12,16 +12,16 @@ INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(MATE_CFLAGS) $(CAIRO_CFLAGS) $(LIBMATENOTIFY_CFLAGS)
+	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(MATE_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
 
 
-LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBMATENOTIFY_LIBS)
+LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
 
-if LIBMATENOTIFY
-libmatenotify_SRC = active-sensor-libmatenotify.c \
-		active-sensor-libmatenotify.h
+if LIBNOTIFY
+libnotify_SRC = active-sensor-libnotify.c \
+		active-sensor-libnotify.h
 else
-libmatenotify_SRC =
+libnotify_SRC =
 endif
 
 libexec_PROGRAMS = mate-sensors-applet
@@ -41,7 +41,7 @@ mate_sensors_applet_SOURCES = main.c \
 		sensors-applet-plugins.h \
 		sensors-applet-settings.c \
 		sensors-applet-settings.h \
-		$(libmatenotify_SRC)
+		$(libnotify_SRC)
 
 mate_sensors_applet_LDADD = -ldl
 

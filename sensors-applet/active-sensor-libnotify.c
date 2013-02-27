@@ -20,11 +20,11 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#ifdef HAVE_LIBMATENOTIFY
-#include <libmatenotify/notify.h>
+#ifdef HAVE_LIBNOTIFY
+#include <libnotify/notify.h>
 #endif
 
-#include "active-sensor-libmatenotify.h"
+#include "active-sensor-libnotify.h"
 
 static void notif_closed_cb(NotifyNotification *notification,
                             ActiveSensor *active_sensor) 
@@ -45,7 +45,7 @@ static void notif_closed_cb(NotifyNotification *notification,
 }
 
                 
-void active_sensor_libmatenotify_notify_end(ActiveSensor *active_sensor,
+void active_sensor_libnotify_notify_end(ActiveSensor *active_sensor,
                                         NotifType notif_type) {
         GError *error = NULL;
         if (active_sensor->notification[notif_type]) {
@@ -60,13 +60,12 @@ void active_sensor_libmatenotify_notify_end(ActiveSensor *active_sensor,
         }
 }
 
-void active_sensor_libmatenotify_notify(ActiveSensor *active_sensor,
+void active_sensor_libnotify_notify(ActiveSensor *active_sensor,
                                     NotifType notif_type,
                                     const gchar *summary,
                                     const gchar *message,
                                     const gchar *icon_filename,
-                                    gint timeout_msecs,
-                                    GtkWidget *attach) {
+                                    gint timeout_msecs) {
         GError *error = NULL;
 
         if (!notify_is_initted()) {
@@ -79,15 +78,14 @@ void active_sensor_libmatenotify_notify(ActiveSensor *active_sensor,
         /* leave any existing notification since most likely hasn't changed */
         if (active_sensor->notification[notif_type] != NULL) {
                 return;
-/*                 active_sensor_libmatenotify_notify_end(active_sensor, notif_type); */
+/*                 active_sensor_libnotify_notify_end(active_sensor, notif_type); */
         }
 
         /* now create a new one */
         g_debug("Creating new notification");
         active_sensor->notification[notif_type] = notify_notification_new(summary,
                                                                           message,
-                                                                          icon_filename,
-                                                                          attach);
+                                                                          icon_filename);
         g_signal_connect(active_sensor->notification[notif_type], "closed",
                          G_CALLBACK(notif_closed_cb),
                          active_sensor);

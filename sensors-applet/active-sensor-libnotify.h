@@ -16,20 +16,19 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifndef ACTIVE_SESNOR_LIBMATENOTIFY_H
-#define ACTIVE_SENSOR_LIBMATENOTIFY_H
+#ifndef ACTIVE_SESNOR_LIBNOTIFY_H
+#define ACTIVE_SENSOR_LIBNOTIFY_H
 
 #include "sensors-applet.h"
 #include "active-sensor.h"
 
-void active_sensor_libmatenotify_notify(ActiveSensor *active_sensor,
+void active_sensor_libnotify_notify(ActiveSensor *active_sensor,
                                     NotifType notif_type,
                                     const gchar *summary,
                                     const gchar *message,
                                     const gchar *icon_filename,
-                                    gint timeout_msecs,
-                                    GtkWidget *attach);
-void active_sensor_libmatenotify_notify_end(ActiveSensor *active_sensor,
+                                    gint timeout_msecs);
+void active_sensor_libnotify_notify_end(ActiveSensor *active_sensor,
                                         NotifType notif_type);
 
-#endif /* SENSORS_APPLET_LIBMATENOTIFY_H */
+#endif /* SENSORS_APPLET_LIBNOTIFY_H */
