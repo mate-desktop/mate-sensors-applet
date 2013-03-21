@@ -1,7 +1,7 @@
 plugindir = $(libdir)/mate-sensors-applet/plugins
 
 # libsensors plugin
-INCLUDES = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
+AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
