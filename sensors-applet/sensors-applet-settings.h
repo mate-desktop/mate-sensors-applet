@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2005-2009 Alex Murray <murray.alex@gmail.com>
+ *               2013 Stefano Karapetsas <stefano@karapetsas.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,32 +24,32 @@
 #include <mate-panel-applet.h>
 #include <mate-panel-applet-gsettings.h>
 
-#define FONT_SIZE "font-size"
-#define HIDE_UNITS "hide-units"
-#define DISPLAY_MODE "display-mode"
-#define LAYOUT_MODE "layout-mode"
-#define TEMPERATURE_SCALE "temperature-scale"
+#define FONT_SIZE             "font-size"
+#define HIDE_UNITS            "hide-units"
+#define DISPLAY_MODE          "display-mode"
+#define LAYOUT_MODE           "layout-mode"
+#define TEMPERATURE_SCALE     "temperature-scale"
 #define DISPLAY_NOTIFICATIONS "display-notifications"
-#define TIMEOUT "timeout-delay"
-#define GRAPH_SIZE "graph-size"
-#define SENSORS_LIST "sensors-list"
+#define TIMEOUT               "timeout-delay"
+#define GRAPH_SIZE            "graph-size"
+#define SENSORS_LIST          "sensors-list"
 
-#define PATH "path"
-#define ID "id"
-#define INTERFACE "interface"
-#define LABEL "label"
-#define ENABLED "enabled"
-#define LOW_VALUE "low-value"
-#define HIGH_VALUE "high-value"
-#define ALARM_ENABLED "alarm-enabled"
-#define LOW_ALARM_COMMAND "low-alarm-command"
-#define HIGH_ALARM_COMMAND "high-alarm-command"
-#define ALARM_TIMEOUT "alarm-timeout"
-#define SENSOR_TYPE "sensor-type"
-#define MULTIPLIER "multiplier"
-#define OFFSET "offset"
-#define ICON_TYPE "icon-type"
-#define GRAPH_COLOR "graph-color"
+#define PATH                  "path"
+#define ID                    "id"
+#define INTERFACE             "interface"
+#define LABEL                 "label"
+#define ENABLED               "enabled"
+#define LOW_VALUE             "low-value"
+#define HIGH_VALUE            "high-value"
+#define ALARM_ENABLED         "alarm-enabled"
+#define LOW_ALARM_COMMAND     "low-alarm-command"
+#define HIGH_ALARM_COMMAND    "high-alarm-command"
+#define ALARM_TIMEOUT         "alarm-timeout"
+#define SENSOR_TYPE           "sensor-type"
+#define MULTIPLIER            "multiplier"
+#define OFFSET                "offset"
+#define ICON_TYPE             "icon-type"
+#define GRAPH_COLOR           "graph-color"
 
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path);
 gboolean sensors_applet_settings_save_sensors(SensorsApplet *sensors_applet);
