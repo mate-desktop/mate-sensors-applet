@@ -46,8 +46,7 @@ EXTRA_DIST = $(ui_DATA) \
 	$(service_in_files) \
 	$(gsettings_SCHEMAS_in_in)
 
-DISTCLEANFILES	=	mate-doc-utils.make \
-		   	intltool-extract \
+DISTCLEANFILES	= intltool-extract \
 		   	intltool-merge \
 	   	   	intltool-update
 
