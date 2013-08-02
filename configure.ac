@@ -247,7 +247,7 @@ fi
 
 MATE_COMPILE_WARNINGS(maximum)
 
-# ================ mate-doc-utils stuff ============= #
+# ================ yelp-tools stuff ============= #
 YELP_HELP_INIT
 
 # ================ GSettings stuff ============= #
