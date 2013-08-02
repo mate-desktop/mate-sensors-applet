@@ -556,7 +556,7 @@ Alarms for individual sensors must also be enabled.
 
 		      For more information regarding MateDialog please
 		      consult the MateDialog <ulink type="help"
-			url="ghelp:matedialog">documentation</ulink>.
+			url="help:matedialog">documentation</ulink>.
 		    </para>
 		  </listitem>
 		  </varlistentry>
@@ -665,7 +665,7 @@ Alarms for individual sensors must also be enabled.
     </variablelist>
     <note>
       <para>These values can also be set using the <ulink type="help"
-	url="ghelp:mateconf-editor">Configuration Editor</ulink>
+	url="help:mateconf-editor">Configuration Editor</ulink>
 	application.
       </para>
       </note>
@@ -718,7 +718,7 @@ Alarms for individual sensors must also be enabled.
       Public license as published by the Free Software Foundation;
       either version 2 of the License, or (at your option) any later
       version. A copy of this license can be found at this <ulink
-	type="help" url="ghelp:gpl">link</ulink>, or in the file COPYING
+	type="help" url="help:gpl">link</ulink>, or in the file COPYING
       included with the source code of this program. 
     </para>
   </sect1> 
