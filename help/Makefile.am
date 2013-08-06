@@ -1,8 +1,6 @@
-include $(top_srcdir)/mate-doc-utils.make
-dist-hook: doc-dist-hook
+@YELP_HELP_RULES@
 
-DOC_MODULE = mate-sensors-applet
-DOC_ENTITIES = legal.xml
-DOC_FIGURES = figures/applet_in_panel.png
-DOC_INCLUDES = 
-DOC_LINGUAS =
+HELP_ID = mate-sensors-applet
+HELP_FILES = index.docbook legal.xml
+HELP_MEDIA = figures/applet_in_panel.png
+HELP_LINGUAS =
