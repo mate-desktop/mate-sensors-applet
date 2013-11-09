@@ -5,7 +5,7 @@ AC_INIT([MATE Sensors Applet], [1.6.0], [http://www.mate-desktop.org],
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
 AC_CONFIG_HEADERS([sensors-applet/config.h])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([dist-xz no-dist-gzip])
 AM_MAINTAINER_MODE
 
 # ============== basic compiler settings ============= #
