@@ -29,6 +29,8 @@ org.mate.panel.applet.SensorsAppletFactory.service: $(service_in_files)
 gsettings_SCHEMAS = \
 	org.mate.sensors-applet.gschema.xml \
 	org.mate.sensors-applet.sensor.gschema.xml
+
+gsettings_SCHEMAS_in_in = $(gsettings_SCHEMAS:.xml=.xml.in.in)
 @GSETTINGS_RULES@
 
 %.gschema.xml.in: %.gschema.xml.in.in Makefile
