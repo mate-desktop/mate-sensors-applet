@@ -1,45 +1,123 @@
-# French translation of the MATE Sensor Applet.
-# Copyright (C) 2005 Alex Murray.
-# This file is distributed under the same license as the MATE Sensor Applet package.
-# Davy Defaud <davy.defaud@free.fr>, 2005.
-# Davy Defaud <davy.defaud@free.fr>, 2006.
-#
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Davy Defaud <davy.defaud@free.fr>, 2005-2006
+# Pygmalion, 2014
+# mkbu95 <mkbu95@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Sensor Applet 1.7.10\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-21 14:29+1030\n"
-"PO-Revision-Date: 2008-03-08 18:30-0300\n"
-"Last-Translator: Amadeu A. Barbosa Jr <amadeu@gmail.coom>\n"
-"Language-Team: Brazilian Portuguese <mate-l10n-br@listas.cipsga.org.br>\n"
+"POT-Creation-Date: 2013-04-01 12:05+0200\n"
+"PO-Revision-Date: 2014-01-14 00:27+0000\n"
+"Last-Translator: Pygmalion\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/MATE/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../SensorsApplet.server.in.in.h:1
-msgid "Display temperature, fan speed and voltage sensor readings"
-msgstr "Mostra as leituras da temperatura, velocidade do ventilador e voltagem"
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
+msgid "Font size in points"
+msgstr "Tamanho da fonte em pontos"
 
-#: ../SensorsApplet.server.in.in.h:2
-msgid "Hardware Sensors Monitor"
-msgstr "Monitor dos Sensores de Hardware"
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
+msgid "Specify if show or hide sensor units"
+msgstr ""
 
-#: ../SensorsApplet.xml.h:1
-msgid "_About"
-msgstr "_Sobre"
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
+msgid "Set if display icons or text labels"
+msgstr ""
 
-#: ../SensorsApplet.xml.h:2
-msgid "_Help"
-msgstr "Aj_uda"
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
+msgid "Set value beside or below label"
+msgstr ""
 
-#: ../SensorsApplet.xml.h:3
-msgid "_Preferences"
-msgstr "_Preferências"
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
+msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
+msgstr ""
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:59
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
+msgid "Whether to display notifications"
+msgstr "Exibir ou não notificações"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
+msgid "Delay (in ms) between refreshes"
+msgstr "Tempo de espera (em ms) entre atualizações"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
+msgid ""
+"The size of the graph in pixels (width if horizontal, height if vertical)"
+msgstr "O tamanho do gráfico em pixels (largura se horizontal, altura se vertical)"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
+msgid "List of sensors"
+msgstr "Lista de sensores"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
+msgid "Path to filename"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
+msgid "Sensor device ids"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
+msgid "The sensor device interface"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
+msgid "User defined label"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
+msgid "Whether a sensor is enabled or not"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
+msgid "Low value"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
+msgid "High value"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
+msgid "Whether the sensor has its alarm enabled"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
+msgid "Command to execute when the alarm is activated"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
+msgid "How often each alarm should be sounded (in seconds)"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
+msgid "Used to identify a sensor in a list"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
+msgid "Multiplier"
+msgstr "Multiplicador"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
+msgid "Offset"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
+msgid "Icon type"
+msgstr ""
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
+msgid "Color of the graph for the sensor"
+msgstr ""
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
 #: ../plugins/omnibook/omnibook-plugin.c:47
 #: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
@@ -47,14 +125,18 @@ msgstr "_Preferências"
 msgid "CPU"
 msgstr "CPU"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:64
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:66
 #: ../plugins/nvidia/nvidia-plugin.c:115
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
 msgstr "GPU"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:69
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:71
+msgid "CASE"
+msgstr ""
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
 msgstr "VENTILADOR"
@@ -85,7 +167,7 @@ msgid "CPU TEMP"
 msgstr "CPU"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:413
+#: ../sensors-applet/sensors-applet.c:347
 msgid "temperature"
 msgstr "temperatura"
 
@@ -93,118 +175,118 @@ msgstr "temperatura"
 msgid "Ambient"
 msgstr "Ambiente"
 
-#: ../sensors-applet/prefs-dialog.c:415
+#: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
 msgstr "Preferências do Miniaplicativo de Sensores"
 
-#: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1397
+#: ../sensors-applet/prefs-dialog.c:444
+#: ../sensors-applet/sensors-applet.c:1378
 msgid "No sensors found!"
 msgstr "Nenhum sensor foi encontrado!"
 
-#: ../sensors-applet/prefs-dialog.c:456
+#: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
 msgstr "Visualização"
 
-#: ../sensors-applet/prefs-dialog.c:468
+#: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
 msgstr "rótulo com valor"
 
-#: ../sensors-applet/prefs-dialog.c:469
+#: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
 msgstr "ícone com valor"
 
-#: ../sensors-applet/prefs-dialog.c:470
+#: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
 msgstr "apenas valor"
 
-#: ../sensors-applet/prefs-dialog.c:471
+#: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
 msgstr "apenas ícone"
 
-#: ../sensors-applet/prefs-dialog.c:472
+#: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
 msgstr "apenas gráfico"
 
-#: ../sensors-applet/prefs-dialog.c:488
+#: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
 msgstr "_Visualizar os sensores no painel como"
 
-#: ../sensors-applet/prefs-dialog.c:503
+#: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
 msgstr "ao lado rótulos / ícones"
 
-#: ../sensors-applet/prefs-dialog.c:504
+#: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
 msgstr "abaixo rótulos / ícones"
 
-#: ../sensors-applet/prefs-dialog.c:515
+#: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
 msgstr "_Posição preferida para os valores do sensor"
 
-#: ../sensors-applet/prefs-dialog.c:527
+#: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: ../sensors-applet/prefs-dialog.c:528
+#: ../sensors-applet/prefs-dialog.c:522
 msgid "Celsius"
 msgstr "Celsius"
 
-#: ../sensors-applet/prefs-dialog.c:529
+#: ../sensors-applet/prefs-dialog.c:523
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../sensors-applet/prefs-dialog.c:540
+#: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
 msgstr "Unidade de _temperatura"
 
-#: ../sensors-applet/prefs-dialog.c:571
+#: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
 msgstr "Tamanho do _gráfico (pixels)"
 
-#: ../sensors-applet/prefs-dialog.c:584
+#: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
 msgstr "Atualização"
 
-#: ../sensors-applet/prefs-dialog.c:614
+#: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
 msgstr "_Intervalo de atualização (segs)"
 
-#: ../sensors-applet/prefs-dialog.c:624
+#: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
 msgstr "Notificações"
 
-#: ../sensors-applet/prefs-dialog.c:635
+#: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
 msgstr "Mostrar _notificações"
 
-#: ../sensors-applet/prefs-dialog.c:839
+#: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
 msgstr "Sensor"
 
-#: ../sensors-applet/prefs-dialog.c:846
+#: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
 msgstr "Rótulo"
 
-#: ../sensors-applet/prefs-dialog.c:856
+#: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
 msgstr "Os rótulos podem ser editados diretamente ao clicar sobre eles."
 
-#: ../sensors-applet/prefs-dialog.c:857
+#: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
 msgstr "Ativado"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:863
+#: ../sensors-applet/prefs-dialog.c:852
 #: ../sensors-applet/sensor-config-dialog.c:452
 msgid "Icon"
 msgstr "Ícone"
 
-#: ../sensors-applet/prefs-dialog.c:997
+#: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
 msgstr "Opções Gerais"
 
-#: ../sensors-applet/prefs-dialog.c:1001
+#: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
 msgstr "Sensores"
 
@@ -221,19 +303,15 @@ msgid "A"
 msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:578
+#: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
 msgstr "ERRO"
 
-#: ../sensors-applet/about-dialog.c:33
-msgid "Translator"
-msgstr "Tradutores"
-
-#: ../sensors-applet/about-dialog.c:36
-msgid ""
-"To translator: Put your name here to show up in the About dialog as the "
-"translator"
-msgstr "Amadeu A. Barbosa Júnior <amadeu@gmail.com>"
+#. To translator: Put your name here to show up in the About dialog as the
+#. translator
+#: ../sensors-applet/about-dialog.c:43
+msgid "translator-credits"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
@@ -282,7 +360,7 @@ msgid "Sensor _high value"
 msgstr "Limite _superior do sensor"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
-#: ../sensors-applet/sensors-applet.c:452
+#: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
 msgstr "Alarme"
 
@@ -302,263 +380,75 @@ msgstr "Comando para alarme su_perior"
 msgid "_Enable alarm"
 msgstr "_Ativar alarme"
 
-#: ../sensors-applet/sensors-applet.c:297
-#, c-format
-msgid "Error restoring saved sensor configuration."
-msgstr "Erro ao restaurar a configuração do sensor."
+#: ../sensors-applet/sensors-applet.c:260
+msgid "_Preferences"
+msgstr "_Preferências"
 
-#: ../sensors-applet/sensors-applet.c:298
-#, c-format
-msgid ""
-"An error occurred while trying to restore the saved sensor configuration. "
-"The previous configuration has been lost and will need to be re-entered."
-msgstr ""
-"Um erro ocorreu ao restaurar as configurações salvas do sensor. As "
-"configurações antigas foram perdidas e será necessário reconfigurar o sensor."
+#: ../sensors-applet/sensors-applet.c:263
+msgid "_Help"
+msgstr "Aj_uda"
 
-#: ../sensors-applet/sensors-applet.c:302
-#, c-format
-msgid "Error saving sensor configuration."
-msgstr "Erro ao salvar a configuração do sensor."
+#: ../sensors-applet/sensors-applet.c:266
+msgid "_About"
+msgstr "_Sobre"
 
-#: ../sensors-applet/sensors-applet.c:303
-#, c-format
-msgid ""
-"An error occurred while trying to save the current sensor configuration. "
-msgstr "Um erro ocorreu ao tentar salvar a configuração atual do sensor."
-
-#: ../sensors-applet/sensors-applet.c:394
+#: ../sensors-applet/sensors-applet.c:328
 msgid "is very low"
 msgstr "está muito baixa"
 
-#: ../sensors-applet/sensors-applet.c:395
+#: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
 msgstr "limite inferior"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:400
+#: ../sensors-applet/sensors-applet.c:334
 msgid "is very high"
 msgstr "está muito alta"
 
-#: ../sensors-applet/sensors-applet.c:401
+#: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
 msgstr "limite superior"
 
-#: ../sensors-applet/sensors-applet.c:412
+#: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: ../sensors-applet/sensors-applet.c:434
+#: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
 msgstr "Voltagem"
 
-#: ../sensors-applet/sensors-applet.c:435
+#: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
 msgstr "voltagem"
 
-#: ../sensors-applet/sensors-applet.c:439
+#: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
 msgstr "Velocidade do Ventilador"
 
-#: ../sensors-applet/sensors-applet.c:440
+#: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
 msgstr "velocidade do ventilador"
 
-#: ../sensors-applet/sensors-applet.c:444
+#: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
 msgstr "Atual"
 
-#: ../sensors-applet/sensors-applet.c:445
+#: ../sensors-applet/sensors-applet.c:377
 msgid "current"
 msgstr "atual"
 
-#: ../sensors-applet/sensors-applet.c:458
+#: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "Erro ao atualizar o sensor %s"
 
-#: ../sensors-applet/sensors-applet.c:459
+#: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
-"Um erro ocorreu ao tentar atualizar o valor do sensor %s localizado em %s."
+msgstr "Um erro ocorreu ao tentar atualizar o valor do sensor %s localizado em %s."
 
-#: ../sensors-applet/sensors-applet.c:567
+#: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
 msgstr "Nenhum sensor ativo!"
-
-#: ../sensors-applet/sensors-applet-mateconf.c:44
-msgid "An error occurred loading the stored sensors data"
-msgstr "Um erro ocorreu ao tentar carregar os dados do sensor"
-
-#: ../sensors-applet/sensors-applet-mateconf.c:45
-msgid "Incompatible sensors configuration found"
-msgstr "Não foi possível encontrar sensores compatíveis"
-
-#: ../sensors-applet/sensors-applet-mateconf.c:49
-msgid ""
-"An error has occurred when loading the stored sensors data. The default "
-"values will be used to recover from this error."
-msgstr ""
-"Um erro ocorreu ao tentar carregar os dados do sensor. Os valores padrões "
-"serão usados para recuperar-se deste erro."
-
-#: ../sensors-applet/sensors-applet-mateconf.c:52
-msgid ""
-"Unfortunately the previous configuration for MATE Sensors Applet is not "
-"compatible with this version. The existing sensors data will be overwritten "
-"with the default values for this new version."
-msgstr ""
-"Infelizmente as configurações anteriores do Miniaplicativo de Sensores do "
-"MATE são incompatíveis com esta versão. Os dados de sensores serão "
-"sobrescritos com os valores padrões para esta versão nova."
-
-#~ msgid "Number of _samples per graph"
-#~ msgstr "_Nombre d'échantillons par graphique"
-
-#~ msgid "is less than or equal to lower limit"
-#~ msgstr "inférieur ou égal à la limite basse"
-
-#~ msgid "is greater than or equal to upper limit"
-#~ msgstr "supérieur ou égal à la limite haute"
-
-#~ msgid " - Error Occurred"
-#~ msgstr " - Une erreur est survenue"
-
-#~ msgid ""
-#~ "<b>An error occurred trying to reload the sensors.</b>\n"
-#~ "Did you forget to load the correct module?  Once the problem\n"
-#~ "is resolved you will need to reload %s."
-#~ msgstr ""
-#~ "<b>Une erreur est survenue lors de l'accès aux capteurs.</b>\n"
-#~ "Auriez-vous oublié de charger le bon module? Une fois le problème\n"
-#~ "corrigé, vous devrez recharger %s."
-
-#~ msgid "Display labels _inline with sensor values"
-#~ msgstr "Afficher les libellÃÃï¿œÃï¿œÃÄÃ©s en _face des valeurs"
-
-#~ msgid "Display _units with sensor values"
-#~ msgstr "Afficher les _unitÃÃï¿œÃï¿œÃÄÃ©s avec les valeurs"
-
-#~ msgid "Use _Fahrenheit for temperature sensors"
-#~ msgstr ""
-#~ "Utiliser le _degrÃÃï¿œÃï¿œÃÄÃ© Farenheit pour les tempÃÃï¿œÃï¿œÃÄÃ©ratures"
-
-#~ msgid "Refresh _delay (secs)"
-#~ msgstr "_Intervalle de mise ÃÃï¿œÃï¿œÃÄÃ  jour"
-
-#~ msgid "largest"
-#~ msgstr "ÃÃï¿œÃï¿œÃÄÃ©norme"
-
-#~ msgid "larger"
-#~ msgstr "trÃÃï¿œÃï¿œÃàž£Ã¡s grande"
-
-#~ msgid "normal"
-#~ msgstr "normale"
-
-#~ msgid "small"
-#~ msgstr "petite"
-
-#~ msgid "smaller"
-#~ msgstr "trÃÃï¿œÃï¿œÃàž£Ã¡s petite"
-
-#~ msgid "smallest"
-#~ msgstr "minuscule"
-
-#~ msgid "Font _size"
-#~ msgstr "_Taille de la police"
-
-#~ msgid "none"
-#~ msgstr "aucun"
-
-#~ msgid "labels"
-#~ msgstr "texte"
-
-#~ msgid "icons"
-#~ msgstr "icÃÃï¿œÃï¿œÃàž£àž¢Âne"
-
-#~ msgid "Configure _Sensor"
-#~ msgstr "_Configurer le capteur"
-
-#~ msgid "Configure Sensor"
-#~ msgstr "Configuration du capteur"
-
-#~ msgid "greater than"
-#~ msgstr "supÃÃï¿œÃï¿œÃÄÃ©rieure"
-
-#~ msgid "less than"
-#~ msgstr "infÃÃï¿œÃï¿œÃÄÃ©rieure"
-
-#~ msgid "Execute alarm when _sensor is"
-#~ msgstr "DÃÃï¿œÃï¿œÃÄÃ©clencher l'alarme quand la _valeur est"
-
-#~ msgid "alarm threshold"
-#~ msgstr "au seuil"
-
-#~ msgid "Alarm _threshold"
-#~ msgstr "_Seuil de l'alarme"
-
-#~ msgid "Sensor Icon"
-#~ msgstr "IcÃÃï¿œÃï¿œÃàž£àž¢Âne du capteur"
-
-#~ msgid "sensor enabled"
-#~ msgstr "capteur activÃÃï¿œÃï¿œÃÄÃ©"
-
-#~ msgid "sensors enabled"
-#~ msgstr "capteurs activÃÃï¿œÃï¿œÃÄÃ©s"
-
-#~ msgid "Battery 1"
-#~ msgstr "Batterie 1"
-
-#~ msgid "Show _labels"
-#~ msgstr "Afficher les _libellÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©s"
-
-#~ msgid "temp1"
-#~ msgstr "tÃÃï¿œÃï¿œÃÄÃÄÃï¿œÃÄÃÄÃ° 1"
-
-#~ msgid "fan1"
-#~ msgstr "vent1"
-
-#~ msgid "fan2"
-#~ msgstr "vent2"
-
-#, fuzzy
-#~ msgid ""
-#~ "%s\n"
-#~ "%d sensor enabled"
-#~ msgid_plural ""
-#~ "%s\n"
-#~ "%d sensors enabled"
-#~ msgstr[0] ""
-#~ "%s\n"
-#~ "%d capteur activÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©"
-#~ msgstr[1] ""
-#~ "%s\n"
-#~ "%d capteurs activÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©"
-
-#~ msgid ""
-#~ "%s\n"
-#~ "%d sensor enabled%s\n"
-#~ "%d sensors enabled"
-#~ msgstr ""
-#~ "%s\n"
-#~ "%d capteur activÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©%s\n"
-#~ "%d capteurs activÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©s"
-
-#~ msgid ""
-#~ "Sensors Applet\n"
-#~ "%d sensors enabled"
-#~ msgstr ""
-#~ "Moniteur matÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©riel\n"
-#~ "%d capteurs activÃÃï¿œÃï¿œÃÄÃï¿œÃï¿œÃÄÃÄÃ©s"
-
-#~ msgid "FAN 1"
-#~ msgstr "vÃÃï¿œÃï¿œÃÄÃÄÃï¿œÃÄÃÄÃ° 1"
-
-#~ msgid "FAN 2"
-#~ msgstr "vÃÃï¿œÃï¿œÃÄÃÄÃï¿œÃÄÃÄÃ° 2"
-
-#~ msgid "Filename"
-#~ msgstr "Capteur"

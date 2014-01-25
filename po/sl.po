@@ -3,119 +3,117 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
-# Davy Defaud <davy.defaud@free.fr>, 2005
-# Lluís Tusquellas <lutusq@gmail.com>, 2013
+# jierro <jierro@windowslive.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2013-05-22 21:31+0000\n"
-"Last-Translator: Lluís Tusquellas <lutusq@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
+"PO-Revision-Date: 2013-09-04 09:10+0000\n"
+"Last-Translator: jierro <jierro@windowslive.com>\n"
+"Language-Team: Slovenian (http://www.transifex.com/projects/p/MATE/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
 msgid "Font size in points"
-msgstr "Tamaño de letra en puntos"
+msgstr "Velikost pisave v točkah"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "Especifique si muestra o esconde las unidades de sensor"
+msgstr "Navedi vidnost enot tipala"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "Establecer si se muestran iconos o etiquetas de texto"
+msgstr "Nastavi prikaz ikon ali oznak besedila"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr "Establecer el valor al lado o por debajo de la etiqueta"
+msgstr "Nastavi vrednost zraven ali pod oznako"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr "Mostrar la temperatura en Kelvin, Celsius o Fahrenheit"
+msgstr "Pokaži temperaturo s Kelvinovo, Celzijevo ali Fahrenheitovo temperaturno lestvico"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
 msgid "Whether to display notifications"
-msgstr "Si mostrar o no notificaciones"
+msgstr "Ali se naj izpišejo obvestila"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr "Retardo (en ms) entre actualizaciones"
+msgstr "Zakasnitev (v ms) med osveževanji"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "El tamaño del gráfico en píxeles (anchura si es horizontal, altura si es vertical)"
+msgstr "Velikost diagrama v slikovnih točkah (širina, če vodoravno in višina, če navpično)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
-msgstr "Lista de sensores"
+msgstr "Seznam tipal"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr "Ruta al nombre de archivo"
+msgstr "Pot do imena datoteke"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr "ID de dispositivo de los sensores"
+msgstr "ID-ji naprav s tipali"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr "La interfaz de dispositivo del sensor"
+msgstr "Vmesnik naprave s tipalom"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
-msgstr "Etiqueta definida por el usuario"
+msgstr "Uporabniško določena oznaka"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr "Si un sensor está o no "
+msgstr "Ali je tipalo omogočeno ali ne"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
-msgstr "Valor bajo"
+msgstr "Nizka vrednost"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
 msgid "High value"
-msgstr "Valor alto"
+msgstr "Visoka vrednost"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr "Si el sensor tiene o no su alarma habilitada"
+msgstr "Ali ima tipalo omogočen alarm"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr "Orden a ejecutar cuando se activa la alarma"
+msgstr "Ukaz za izvršitev, kadar je alarm omogočen"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr "Con qué frecuencia debería sonar la alarma (en segundos)"
+msgstr "Kako pogosto bi vsak alarm moral zvoniti (v sekundah)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Se usa para identificar un sensor en la lista"
+msgstr "Uporabljeno za določitev tipala na seznamu"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr "Multiplicador"
+msgstr "Množitelj"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr "Compensación"
+msgstr "Odmik"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
-msgstr "Tipo de icono"
+msgstr "Vrsta ikone"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr "Color del gráfico del sensor"
+msgstr "Barva diagrama za tipalo"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -123,31 +121,31 @@ msgstr "Color del gráfico del sensor"
 #: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
 #: ../plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
-msgstr "CPU"
+msgstr "CPE"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:66
 #: ../plugins/nvidia/nvidia-plugin.c:115
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "GPU"
+msgstr "GPE"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr "CASE"
+msgstr "PRIMER"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr "VENTILADOR"
+msgstr "VENTILATOR"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "VENT1"
+msgstr "VENTILATOR1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "VENT2"
+msgstr "VENTILATOR2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
@@ -156,15 +154,15 @@ msgstr "MiniPCI"
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr "Batería"
+msgstr "Baterija"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "Ventilador"
+msgstr "Ventilator"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr "TEMP del CPU"
+msgstr "TEMP. CPE"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:347
@@ -173,56 +171,56 @@ msgstr "temperatura"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr "Ambiente"
+msgstr "Okolje"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr "Preferencias de la miniaplicación de sensores"
+msgstr "Možnosti apleta tipal"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
 msgid "No sensors found!"
-msgstr "¡No se han encontrado sensores!"
+msgstr "Ni najdenih tipal!"
 
 #: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
-msgstr "Mostrar"
+msgstr "Zaslon"
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr "etiqueta con valor"
+msgstr "oznaka z vrednostjo"
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
-msgstr "icono con valor"
+msgstr "Ikona z vrednostjo"
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr "solo el valor"
+msgstr "samo vrednost"
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr "solo el icono"
+msgstr "samo ikona"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr "solo el gráfico"
+msgstr "samo graf"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr "_Mostrar sensores en panel como"
+msgstr "_Prikakaži tipala na pultu kot"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr "junto a etiquetas / iconos"
+msgstr "zraven oznak / ikon"
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr "debajo de etiquetas / iconos"
+msgstr "pod oznakami / ikonami"
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr "_Posición preferida de los valores del sensor"
+msgstr "Željen _položaj vrednosti tipala"
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
@@ -230,7 +228,7 @@ msgstr "Kelvin"
 
 #: ../sensors-applet/prefs-dialog.c:522
 msgid "Celsius"
-msgstr "Celsius"
+msgstr "Celzij"
 
 #: ../sensors-applet/prefs-dialog.c:523
 msgid "Fahrenheit"
@@ -238,61 +236,61 @@ msgstr "Fahrenheit"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr "Escala de _temperatura"
+msgstr "_Temperaturna lestvica"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr "_Tamaño del gráfico (píxeles)"
+msgstr "_Velikost diagrama (slikovne točke)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
-msgstr "Actualizar"
+msgstr "Posodobi"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr "_Intervalo de actualización (s)"
+msgstr "Časovni _razmik posodabljanja (sekunde)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr "Notificaciones"
+msgstr "Obvestila"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
-msgstr "Mostrar _notificaciones"
+msgstr "Prikaži _obvestila"
 
 #: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
-msgstr "Sensor"
+msgstr "Tipalo"
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr "Etiqueta"
+msgstr "Oznaka"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr "Puede editar las etiquetas directamente pulsando en ellas."
+msgstr "Oznake je mogoče urejati neposredno s klikom na njih."
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
-msgstr "Activado"
+msgstr "Omogočeno"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:852
 #: ../sensors-applet/sensor-config-dialog.c:452
 msgid "Icon"
-msgstr "Icono"
+msgstr "Ikona"
 
 #: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
-msgstr "Opciones generales"
+msgstr "Splošne možnosti"
 
 #: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
-msgstr "Sensores"
+msgstr "Tipala"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr "RPM"
+msgstr "Vrtljajev na minuto"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
@@ -305,109 +303,109 @@ msgstr "A"
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
-msgstr "ERROR"
+msgstr "NAPAKA"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013."
+msgstr "Damir Jerovšek <damir.jerovsek@ubuntu.si>"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
-msgstr "Propiedades del sensor"
+msgstr "Lastnosti tipala"
 
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
 msgid "Graph"
-msgstr "Gráfico"
+msgstr "Diagram"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr "Color del gráfico"
+msgstr "Barva diagrama"
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr "_Color del gráfico"
+msgstr "_Barva diagrama"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr "_Icono del sensor"
+msgstr "_Ikona tipala"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr "Parámetros de redimensionado"
+msgstr "Spreminjajoči se parametri"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr "Valor del _multiplicador del sensor"
+msgstr "_Množitelj vrednosti tipala"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr "Desajuste del valor del sensor"
+msgstr "_Odmik vrednosti tipala"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr "Límites del sensor"
+msgstr "Omejitve tipala"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "Valor _bajo del sensor"
+msgstr "_Nizka vrednost tipala"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "Valor _alto del sensor"
+msgstr "_Visoka vrednost tipala"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr "Alarma"
+msgstr "Alarm"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "Intervalo de _repetición de la alarma (s)"
+msgstr "Časovni razmik med ponavljanjem alarma (sekunde)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "Orden baj_a de alarma"
+msgstr "Ukaz za _nizki alarm"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "Orden alt_a de alarma"
+msgstr "Ukaz za _visok alarm"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr "A_ctivar alarma"
+msgstr "_Omogoči alarm"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
-msgstr "_Preferencias"
+msgstr "_Možnosti"
 
 #: ../sensors-applet/sensors-applet.c:263
 msgid "_Help"
-msgstr "Ay_uda"
+msgstr "_Pomoč"
 
 #: ../sensors-applet/sensors-applet.c:266
 msgid "_About"
-msgstr "_Sobre"
+msgstr "_O programu"
 
 #: ../sensors-applet/sensors-applet.c:328
 msgid "is very low"
-msgstr "es muy bajo"
+msgstr "je zelo nizka"
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr "límite inferior"
+msgstr "nižja omejitev"
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
 msgid "is very high"
-msgstr "es muy alto"
+msgstr "je zelo visoka"
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr "límite superior"
+msgstr "višja omejitev"
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
@@ -415,40 +413,40 @@ msgstr "Temperatura"
 
 #: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
-msgstr "Voltaje"
+msgstr "Voltaža"
 
 #: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
-msgstr "voltaje"
+msgstr "voltaža"
 
 #: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
-msgstr "Velocidad del ventilador"
+msgstr "Hitrost ventilatorja"
 
 #: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
-msgstr "velocidad del ventilador"
+msgstr "hitrost ventilatorja"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr "Actual"
+msgstr "Trenutno"
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr "actual"
+msgstr "trenutno"
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "Error al actualizar el sensor %s"
+msgstr "Napaka med posodabljanjem tipala %s"
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "Ocurrió un error al intentar actualizar el valor del sensor %s que se ubica en %s."
+msgstr "Med poskusom posodobitve vrednosti tipala %s, ki je na mestu %s, je prišlo do napake."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
-msgstr "¡No hay sensores activados!"
+msgstr "Nobeno tipalo ni omogočeno!"

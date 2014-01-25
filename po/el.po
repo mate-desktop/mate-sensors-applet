@@ -3,119 +3,120 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
-# Davy Defaud <davy.defaud@free.fr>, 2005
-# Lluís Tusquellas <lutusq@gmail.com>, 2013
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2013
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013
+# gapan <vlahavas@gmail.com>, 2013
+# gapan <vlahavas@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2013-05-22 21:31+0000\n"
-"Last-Translator: Lluís Tusquellas <lutusq@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
+"PO-Revision-Date: 2013-08-05 20:09+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
 msgid "Font size in points"
-msgstr "Tamaño de letra en puntos"
+msgstr "Μέγεθος γραμματοσειρών σε σημεία"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "Especifique si muestra o esconde las unidades de sensor"
+msgstr "Καθορίστε αν θα εμφανίζονται ή αποκρύπτονται οι μονάδες των αισθητήρων"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "Establecer si se muestran iconos o etiquetas de texto"
+msgstr "Ορίστε αν θα εμφανίζονται εικονίδια ή ετικέτες κειμένου"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr "Establecer el valor al lado o por debajo de la etiqueta"
+msgstr "Ορισμός της τιμής δίπλα ή κάτω από την ετικέτα"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr "Mostrar la temperatura en Kelvin, Celsius o Fahrenheit"
+msgstr "Εμφάνιση της θερμοκρασίας σε βαθμούς Κέλβιν, Κελσίου ή Φάρεναιτ"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
 msgid "Whether to display notifications"
-msgstr "Si mostrar o no notificaciones"
+msgstr "Αν εμφανίζονται ειδοποιήσεις"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr "Retardo (en ms) entre actualizaciones"
+msgstr "Καθυστέρηση (σε ms) μεταξύ ενημερώσεων"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "El tamaño del gráfico en píxeles (anchura si es horizontal, altura si es vertical)"
+msgstr "Το μέγεθος του γραφήματος σε pixels (πλάτος αν είναι οριζόντιο, ύψος αν είναι κάθετο)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
-msgstr "Lista de sensores"
+msgstr "Λίστα αισθητήρων"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr "Ruta al nombre de archivo"
+msgstr "Διαδρομή αρχείου"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr "ID de dispositivo de los sensores"
+msgstr "Ταυτότητες (id) συσκευών αισθητήρων"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr "La interfaz de dispositivo del sensor"
+msgstr "Η διεπαφή της συσκευής αισθητήρα"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
-msgstr "Etiqueta definida por el usuario"
+msgstr "Ετικέτα καθορισμένη από το χρήστη"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr "Si un sensor está o no "
+msgstr "Αν ο αισθητήρας είναι ενεργοποιημένος ή όχι"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
-msgstr "Valor bajo"
+msgstr "Χαμηλή τιμή"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
 msgid "High value"
-msgstr "Valor alto"
+msgstr "Υψηλή τιμή"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr "Si el sensor tiene o no su alarma habilitada"
+msgstr "Αν ο αισθητήρας έχει την ειδοποίησή του ενεργοποιημένη"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr "Orden a ejecutar cuando se activa la alarma"
+msgstr "Η εντολή που θα εκτελείτε όταν ενεργοποιούνται ειδοποιήσεις"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr "Con qué frecuencia debería sonar la alarma (en segundos)"
+msgstr "Πόσο συχνά θα ακούγεται κάθε ειδοποίηση (σε δευτερόλεπτα)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Se usa para identificar un sensor en la lista"
+msgstr "Χρησιμοποιείται για την ταυτοποίηση ενός αισθητήρα σε μια λίστα"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr "Multiplicador"
+msgstr "Πολλαπλασιαστής"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr "Compensación"
+msgstr "Μετατόπιση"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
-msgstr "Tipo de icono"
+msgstr "Τύπος εικονιδίου"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr "Color del gráfico del sensor"
+msgstr "Χρώμα του γραφήματος για τον αισθητήρα"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -139,15 +140,15 @@ msgstr "CASE"
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr "VENTILADOR"
+msgstr "ΑΝΕΜΙΣΤΗΡΑΣ"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "VENT1"
+msgstr "ΑΝΕΜΙΣΤΗΡΑΣ1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "VENT2"
+msgstr "ΑΝΕΜΙΣΤΗΡΑΣ2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
@@ -156,73 +157,73 @@ msgstr "MiniPCI"
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr "Batería"
+msgstr "Μπαταρία"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "Ventilador"
+msgstr "Ανεμιστήρας"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr "TEMP del CPU"
+msgstr "ΘΕΡΜ CPU"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:347
 msgid "temperature"
-msgstr "temperatura"
+msgstr "θερμοκρασία"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr "Ambiente"
+msgstr "Ambient"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr "Preferencias de la miniaplicación de sensores"
+msgstr "Προτιμήσεις Μικροεφαρμογής Αισθητήρων"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
 msgid "No sensors found!"
-msgstr "¡No se han encontrado sensores!"
+msgstr "Δεν βρέθηκαν αισθητήρες!"
 
 #: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
-msgstr "Mostrar"
+msgstr "Προβολή"
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr "etiqueta con valor"
+msgstr "ετικέτα με τιμή"
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
-msgstr "icono con valor"
+msgstr "εικονίδιο με τιμή"
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr "solo el valor"
+msgstr "μόνο τιμή"
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr "solo el icono"
+msgstr "μόνο εικονίδιο"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr "solo el gráfico"
+msgstr "μόνο γράφημα"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr "_Mostrar sensores en panel como"
+msgstr "_Εμφάνιση των αισθητήρων στο πάνελ ως"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr "junto a etiquetas / iconos"
+msgstr "δίπλα από τις ετικέτες / εικονίδια"
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr "debajo de etiquetas / iconos"
+msgstr "κάτω από τις ετικέτες / εικονίδια"
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr "_Posición preferida de los valores del sensor"
+msgstr "Προτιμώμενη _θέση των τιμών των αισθητήρων"
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
@@ -238,57 +239,57 @@ msgstr "Fahrenheit"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr "Escala de _temperatura"
+msgstr "_Κλίμακα θερμοκρασίας"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr "_Tamaño del gráfico (píxeles)"
+msgstr "_Μέγεθος κειμένου (pixels)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
-msgstr "Actualizar"
+msgstr "Ενημέρωση"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr "_Intervalo de actualización (s)"
+msgstr "Διάστημα μεταξύ ενημερώσεων (δευτερόλεπτα)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr "Notificaciones"
+msgstr "Ειδοποιήσεις"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
-msgstr "Mostrar _notificaciones"
+msgstr "Προβολή _ειδοποιήσεων"
 
 #: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
-msgstr "Sensor"
+msgstr "Αισθητήρας"
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr "Etiqueta"
+msgstr "Ετικέτα"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr "Puede editar las etiquetas directamente pulsando en ellas."
+msgstr "Μπορεί να γίνει άμεσα επεξεργασία των ετικετών κάνοντας κλικ πάνω τους"
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
-msgstr "Activado"
+msgstr "Ενεργό"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:852
 #: ../sensors-applet/sensor-config-dialog.c:452
 msgid "Icon"
-msgstr "Icono"
+msgstr "Εικονίδιο"
 
 #: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
-msgstr "Opciones generales"
+msgstr "Γενικές επιλογές"
 
 #: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
-msgstr "Sensores"
+msgstr "Αισθητήρες"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
@@ -305,150 +306,150 @@ msgstr "A"
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
-msgstr "ERROR"
+msgstr "ΣΦΑΛΜΑ"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013."
+msgstr "Ευστάθιος Ιωσηφίδης, <iosifidis@opensuse.org>, 2013"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
-msgstr "Propiedades del sensor"
+msgstr "Ρυθμίσεις Αισθητήρα"
 
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
 msgid "Graph"
-msgstr "Gráfico"
+msgstr "Γράφημα"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr "Color del gráfico"
+msgstr "Χρώμα Γραφήματος"
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr "_Color del gráfico"
+msgstr "_Χρώμα γραφήματος"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr "_Icono del sensor"
+msgstr "Εικονίδιο _αισθητήρα"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr "Parámetros de redimensionado"
+msgstr "Παράμετροι κλιμάκωσης"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr "Valor del _multiplicador del sensor"
+msgstr "_Πολλαπλασιαστής τιμών αισθητήρα"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr "Desajuste del valor del sensor"
+msgstr "_Μετατόπιση τιμών αισθητήρα"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr "Límites del sensor"
+msgstr "Όρια αισθητήρων"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "Valor _bajo del sensor"
+msgstr "_Χαμηλή τιμή αισθητήρα"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "Valor _alto del sensor"
+msgstr "_Υψηλή τιμή αισθητήρα"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr "Alarma"
+msgstr "Ειδοποίηση"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "Intervalo de _repetición de la alarma (s)"
+msgstr "_Διάστημα επανάληψης ειδοποίησης"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "Orden baj_a de alarma"
+msgstr "Εντολή ειδοποίησης χαμηλού ορίου"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "Orden alt_a de alarma"
+msgstr "Εντολή ειδοποίησης _υψηλού ορίου"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr "A_ctivar alarma"
+msgstr "_Ενεργοποίηση ειδοποίησης"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
-msgstr "_Preferencias"
+msgstr "_Προτιμήσεις"
 
 #: ../sensors-applet/sensors-applet.c:263
 msgid "_Help"
-msgstr "Ay_uda"
+msgstr "_Βοήθεια"
 
 #: ../sensors-applet/sensors-applet.c:266
 msgid "_About"
-msgstr "_Sobre"
+msgstr "Π_ερί"
 
 #: ../sensors-applet/sensors-applet.c:328
 msgid "is very low"
-msgstr "es muy bajo"
+msgstr "είναι πολύ χαμηλή"
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr "límite inferior"
+msgstr "χαμηλότερο όριο"
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
 msgid "is very high"
-msgstr "es muy alto"
+msgstr "είναι πολύ υψηλή"
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr "límite superior"
+msgstr "ανώτερο όριο"
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
-msgstr "Temperatura"
+msgstr "Θερμοκρασία"
 
 #: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
-msgstr "Voltaje"
+msgstr "Voltage"
 
 #: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
-msgstr "voltaje"
+msgstr "voltage"
 
 #: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
-msgstr "Velocidad del ventilador"
+msgstr "Ταχύτητα Ανεμιστήρα"
 
 #: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
-msgstr "velocidad del ventilador"
+msgstr "ταχύτητα ανεμιστήρα"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr "Actual"
+msgstr "Τρέχουσα"
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr "actual"
+msgstr "τρέχουσα"
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "Error al actualizar el sensor %s"
+msgstr "Σφάλμα κατά την ενημέρωση του αισθητήρα %s"
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "Ocurrió un error al intentar actualizar el valor del sensor %s que se ubica en %s."
+msgstr "Συνέβη ένα σφάλμα κατά την ενημέρωση της τιμής του αισθητήρα %s που βρίσκεται στο %s."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
-msgstr "¡No hay sensores activados!"
+msgstr "Δεν ενεργοποιήθηκαν αισθητήρες!"
