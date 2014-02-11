@@ -48,7 +48,8 @@ CLEANFILES = $(applet_DATA) \
 EXTRA_DIST = $(ui_DATA) \
 	$(applet_in_files).in \
 	$(service_in_files) \
-	$(gsettings_SCHEMAS_in_in)
+	$(gsettings_SCHEMAS_in_in) \
+	autogen.sh
 
 DISTCLEANFILES	= intltool-extract \
 		   	intltool-merge \
