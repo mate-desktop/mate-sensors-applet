@@ -5,13 +5,15 @@
 # Translators:
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2013
 # SGOrava <sgd.orava@gmail.com>, 2013
+# SGOrava <sgd.orava@gmail.com>, 2013
+# tibbi <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2013-04-23 16:20+0000\n"
-"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
+"PO-Revision-Date: 2014-02-11 23:11+0000\n"
+"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +27,11 @@ msgstr "Veľkosť písma v bodoch"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr ""
+msgstr "Určte či zobraziť alebo skryť jednotky senzora"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "Určte či majú byť zobrazené ikony, alebo textové menovky"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
@@ -37,20 +39,20 @@ msgstr "Nastaviť hodnotu vedľa alebo pod menovku"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr ""
+msgstr "Zobraziť teplotu v Kelvinoch, stupňoch Celzia alebo Fahrenheitoch"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
 msgid "Whether to display notifications"
-msgstr ""
+msgstr "Či majú byť zobrazované oznámenia"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr ""
+msgstr "Oneskorenie (v ms) medzi obnoveniami"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr ""
+msgstr "Veľkosť grafu v pixloch (v prípade vodorovného šírka, pre zvislý výška)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
@@ -58,15 +60,15 @@ msgstr "Zoznam senzorov"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr ""
+msgstr "Cesta k názvu súboru"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr ""
+msgstr "ID senzorových zariadení"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr ""
+msgstr "Rozhranie senzorového zariadenia"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
@@ -74,39 +76,39 @@ msgstr "Užívateľom definovaná menovka"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "Či je senzor povolený, alebo nie"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
-msgstr ""
+msgstr "Nízka hodnota"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
 msgid "High value"
-msgstr ""
+msgstr "Vysoká hodnota"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr ""
+msgstr "Či má senzor povolenú výstrahu"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr ""
+msgstr "Príkaz, ktorý má byť vykonaný pri aktivácií výstrahy"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr ""
+msgstr "Ako často by mala výstraha znieť (v sekundách)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr ""
+msgstr "Použité na identifikáciu senzora na zozname"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr ""
+msgstr "Násobok"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr ""
+msgstr "Odstup"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
@@ -133,7 +135,7 @@ msgstr "GPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr ""
+msgstr "RÁM"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
@@ -172,7 +174,7 @@ msgstr "teplota"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr ""
+msgstr "Okolité"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
@@ -209,11 +211,11 @@ msgstr "iba graf"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr "Zobrazenie senzorov v paneli ako"
+msgstr "_Zobraziť senzor v paneli ako"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr "vedľa menoviek / ikon"
+msgstr "vedľa menovky / ikon"
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
@@ -221,7 +223,7 @@ msgstr "pod menovkami / ikonami"
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr "Preferovaná poloha hodnôt senzorov"
+msgstr "Preferovaná _poloha hodnôt senzorov"
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
@@ -241,7 +243,7 @@ msgstr "_Jednotka teploty"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr "Veľkosť _grafu (v bodoch)"
+msgstr "Veľkosť _grafu (v pixloch)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
@@ -269,7 +271,7 @@ msgstr "Menovka"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "Menovky môžu byť upravené priamo kliknutím na ne"
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
@@ -291,7 +293,7 @@ msgstr "Senzory"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
@@ -304,13 +306,13 @@ msgstr "A"
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
-msgstr "Chyba"
+msgstr "ERROR"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "Poďakovanie prekladateľom"
+msgstr "Ján Ďanovský <dagsoftware@yahoo.com>\nSGOrava <sgd.orava@gmail.com>\nTibor Kaputa <tibbbi2@gmail.com>"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
@@ -331,32 +333,32 @@ msgstr "_Farba grafu"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr "_Ikona senzoru"
+msgstr "_Ikona senzora"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "Škálované parametre"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr "_Násobok hodnoty senzoru"
+msgstr "_Násobok hodnoty senzora"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr "Posun hodnoty senzoru"
+msgstr "_Odstup hodnoty senzora"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr "Limit senzoru"
+msgstr "Limit senzora"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "Dolná hodnota senzoru"
+msgstr "Do_lná hodnota senzora"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "Horná hodnota senzoru"
+msgstr "_Horná hodnota senzora"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
@@ -365,19 +367,19 @@ msgstr "Výstraha"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "Interval opakovania výstrahy (v sekundách)"
+msgstr "Inte_rval opakovania výstrahy (v sekundách)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "Príkaz _nízkej výstrahy"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "Príkaz _vysokej výstrahy"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr "Povoliť výstrahu"
+msgstr "P_ovoliť výstrahu"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
@@ -397,7 +399,7 @@ msgstr "je veľmi nízka"
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr ""
+msgstr "spodný limit"
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
@@ -406,7 +408,7 @@ msgstr "je veľmi vysoká"
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr ""
+msgstr "horný limit"
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
@@ -439,15 +441,15 @@ msgstr "prúd"
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "Chyba pri aktualizácií senzora %s"
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "Nastala chyba počas aktualizácie hodnoty senzora %s umiestneného v %s"
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
-msgstr "Senzory nie sú k dispozícii"
+msgstr "Žiadne senzory nie sú k dispozícii!"
