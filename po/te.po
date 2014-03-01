@@ -3,118 +3,117 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Darkcircle <darkcircle.0426@gmail.com>, 2014
-# Darkcircle <darkcircle.0426@gmail.com>, 2014
+# ప్రవీణ్ ఇళ్ళ <mail2ipn@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-02-27 13:10+0000\n"
-"Last-Translator: Darkcircle <darkcircle.0426@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/projects/p/MATE/language/ko/)\n"
+"PO-Revision-Date: 2014-02-25 13:42+0000\n"
+"Last-Translator: ప్రవీణ్ ఇళ్ళ <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu (http://www.transifex.com/projects/p/MATE/language/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
 msgid "Font size in points"
-msgstr "포인트 단위 글꼴 크기"
+msgstr "ఖతి పరిమాణం బిందువులలో"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "센서 단위 표시 여부를 지정하십시오"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "아이콘 또는 텍스트 레이블을 표시할지 여부 설정"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr "값을 레이블 옆에 표시할지 아래에 표시할지 설정"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr "온도 단위를, 캘빈, 섭씨, 화씨중 어떤 단위로 보일지 설정"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
 msgid "Whether to display notifications"
-msgstr "알림을 표시할지 여부"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr "새로 고침 지연시간(ms)"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "픽셀 단위 그래프 크기(가로는 width, 세로는 height)"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
-msgstr "센서 목록"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr "파일 이름 경로"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr "센서 장치 ID"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr "센서 장치 인터페이스"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
-msgstr "사용자 정의 레이블"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr "센서를 활성화 할지 여부"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
-msgstr "최저값"
+msgstr "అల్ప విలువ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
 msgid "High value"
-msgstr "최고값"
+msgstr "అధిక విలువ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr "센서에 알람을 활성화 할 지여부"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr "알람이 활성화되면 실행할 명령"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr "알람을 얼마나 자주 울릴지 여부(초)"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "목록의 센서를 식별하는데 사용"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr "승수"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr "오프셋"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
-msgstr "아이콘 형식"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr "센서 그래프 색상"
+msgstr ""
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -122,332 +121,332 @@ msgstr "센서 그래프 색상"
 #: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
 #: ../plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
-msgstr "CPU"
+msgstr "సీపీయు"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:66
 #: ../plugins/nvidia/nvidia-plugin.c:115
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "GPU"
+msgstr "జీపీయు"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr "케이스"
+msgstr ""
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr "팬"
+msgstr "పంకా"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "팬1"
+msgstr "పంకా1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "팬2"
+msgstr "పంకా2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
-msgstr "미니PCI"
+msgstr ""
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr "배터리"
+msgstr "ఘటం"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "팬"
+msgstr "పంకా"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr "CPU 온도"
+msgstr ""
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:347
 msgid "temperature"
-msgstr "온도"
+msgstr "ఉష్ణోగ్రత"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr "주위"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr "센서 애플린 기본 설정"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
 msgid "No sensors found!"
-msgstr "센서가 없습니다!"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
-msgstr "표시"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr "값과 레이블"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
-msgstr "값과 아이콘"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr "값만"
+msgstr "విలువ మాత్రమే"
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr "아이콘만"
+msgstr "ప్రతీక మాత్రమే"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr "그래프만"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr "다음 방식으로 패널에 센서 표시(_D)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr "레이블 / 아이콘 옆"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr "레이블 / 아이콘 아래"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr "원하는 센서 값의 위치(_P)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
-msgstr "켈빈"
+msgstr "కెల్విన్"
 
 #: ../sensors-applet/prefs-dialog.c:522
 msgid "Celsius"
-msgstr "섭"
+msgstr "సెల్సియస్"
 
 #: ../sensors-applet/prefs-dialog.c:523
 msgid "Fahrenheit"
-msgstr "화씨"
+msgstr "పారెన్‌హీట్"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr "온도 스케일(_T)"
+msgstr "ఉష్ణోగ్రత కొలబద్ద (_T)"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr "그래프 크기(_S) (픽셀)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
-msgstr "업데이트"
+msgstr "నవీకరించు"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr "업데이트 주기(초)(_I)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr "알림"
+msgstr "గమనికలు"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
-msgstr "알림 표시(_N)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
-msgstr "센서"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr "레이블"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr "클릭하면 레이블을 직접 편집할 수 있습니다."
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
-msgstr "활성화"
+msgstr ""
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:852
 #: ../sensors-applet/sensor-config-dialog.c:452
 msgid "Icon"
-msgstr "아이콘"
+msgstr "ప్రతీక"
 
 #: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
-msgstr "일반 옵션"
+msgstr "సాధారణ ఐచ్చికలు"
 
 #: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
-msgstr "센서"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr "RPM"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
-msgstr "V"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.h:59
 msgid "A"
-msgstr "A"
+msgstr ""
 
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
-msgstr "오류"
+msgstr "దోషం"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
+msgstr "Praveen Illa <mail2ipn@gmail.com>, 2014"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
-msgstr "센서 속성"
+msgstr ""
 
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
 msgid "Graph"
-msgstr "그래프"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr "그래프 색상"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr "그래프 색상(_C)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr "센서 아이콘(_I)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr "스케일링 매개변수"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr "센서 값 승수(_M)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr "센서 값 오프셋(_O)"
+msgstr ""
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr "센서 한계"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "센서 최저값(_L)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "센서 최고값(_H)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr "알림"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "알림 반복 주기(초)(_R)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "낮은 값 알림시 명령(_W)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "높은 값 알림시 명령(_G)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr "알림 활성화(_E)"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
-msgstr "기본 설정(_P)"
+msgstr "అభిరుచులు (_P)"
 
 #: ../sensors-applet/sensors-applet.c:263
 msgid "_Help"
-msgstr "도움말(_H)"
+msgstr "సహాయం (_H)"
 
 #: ../sensors-applet/sensors-applet.c:266
 msgid "_About"
-msgstr "정보(_A)"
+msgstr "గురించి (_A)"
 
 #: ../sensors-applet/sensors-applet.c:328
 msgid "is very low"
-msgstr "매우 낮음"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr "낮음 한계"
+msgstr ""
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
 msgid "is very high"
-msgstr "매우 높음"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr "높음 한계"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
-msgstr "온도"
+msgstr "ఉష్ణోగ్రత"
 
 #: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
-msgstr "전압"
+msgstr "వోల్టేజి"
 
 #: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
-msgstr "전압"
+msgstr "వోల్టేజి"
 
 #: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
-msgstr "팬 회전 속도"
+msgstr "పంకా వేగం"
 
 #: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
-msgstr "팬 회전 속도"
+msgstr "పంకా వేగం"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr "전류"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr "전류"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "%s 센서 업데이트중 오류"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "%2$s에 있는 %1$s 센서 값을 업데이트 하려던 중 오류가 발생했습니다."
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
-msgstr "활성화 한 센서가 없습니다!"
+msgstr ""
