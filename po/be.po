@@ -3,118 +3,117 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# desperateCoder <a.dawtjan@gmx.de>, 2013
-# to_ba, 2014
+# , 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-04-27 23:28+0000\n"
-"Last-Translator: to_ba\n"
-"Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
+"PO-Revision-Date: 2014-03-28 13:57+0000\n"
+"Last-Translator: meequz <meequz@gmail.com>\n"
+"Language-Team: Belarusian (http://www.transifex.com/projects/p/MATE/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: be\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
 msgid "Font size in points"
-msgstr "Schriftgröße einstellen"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "Sensoreinheiten anzeigen oder verstecken"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "Icons oder Texte anzeigen"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr "Wert neben oder  unter  den Text setzen"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr "Temperatur in Kelvin, Celsius oder Fahrenheit anzeigen"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
 msgid "Whether to display notifications"
-msgstr "Ob Benachrichtigungen angezeigt werden sollen"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr "Zeitabstand zwischen Aktualisierungen (in ms)"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "Größe der Grafik in Pixeln (Breite wenn horizontal, Höhe wenn vertikal)"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
-msgstr "Liste der Sensoren"
+msgstr "Спіс сэнсараў"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr "Pfad zum Dateinamen"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr "IDs der Sensoren"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr "Die Sensoren-Geräteschnittstelle"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
-msgstr "Benutzerdefinierte Beschriftung"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr "Ob ein Sensor aktiviert ist, oder nicht."
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
-msgstr "Tief-Wert"
+msgstr "Нізкае значэнне"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
 msgid "High value"
-msgstr "Hoch-Wert"
+msgstr "Высокае значэнне"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr "Ob der Alarm des Sensors aktiviert ist"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr "Auszuführendes Kommando, wenn der Alarm aktiviert wird"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr "Wie oft jeder Alarm abgespielt werden soll (in Sekunden)"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Wird verwendet, um einen Sensor in der Liste zu identifizieren"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr "Multiplikator"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr "Aufrechnung"
+msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
-msgstr "Icon-Typ"
+msgstr "Тып значка"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr "Farbe der Sensorgrafik"
+msgstr "Колер сэнсара на графіку"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -122,332 +121,332 @@ msgstr "Farbe der Sensorgrafik"
 #: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
 #: ../plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
-msgstr "CPU"
+msgstr ""
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:66
 #: ../plugins/nvidia/nvidia-plugin.c:115
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "Grafik CPU"
+msgstr ""
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr "Gehäuse"
+msgstr ""
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr "Lüfter"
+msgstr ""
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "Lüfter 1"
+msgstr ""
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "Lüfter 2"
+msgstr ""
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
-msgstr "MiniPCI"
+msgstr ""
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr "Batterie"
+msgstr "Батарэя"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "Lüfter"
+msgstr "Вентылятар"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr "CPU Temperatur"
+msgstr ""
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:347
 msgid "temperature"
-msgstr "Temperatur"
+msgstr "тэмпература"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr "Umgebung"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr "Sensorapplet-Einstellungen"
+msgstr "Настаўленні аплета сэнсараў"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
 msgid "No sensors found!"
-msgstr "Keine Sensoren gefunden!"
+msgstr "Сэнсары не знойдзены!"
 
 #: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
-msgstr "Anzeige"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr "Beschreibung mit Wert"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
-msgstr "Symbol mit Wert"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr "Wert"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr "Symbol"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr "Graph"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr "In der Leiste _anzeigen als"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr "neben den Beschreibungen / Symbolen"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr "unter den Beschreibungen / Symbolen"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr "_Position der Sensorwerte"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
-msgstr "Kelvin"
+msgstr "Кельвін"
 
 #: ../sensors-applet/prefs-dialog.c:522
 msgid "Celsius"
-msgstr "Grad Celsius"
+msgstr "Цэльсій"
 
 #: ../sensors-applet/prefs-dialog.c:523
 msgid "Fahrenheit"
-msgstr "Grad Fahrenheit"
+msgstr "Фарэнгейт"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr "_Temperaturskala"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr "_Größe des Graphen (Pixel)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
-msgstr "Aktualisierung"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr "_Intervall (sek)"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr "Benachrichtigung"
+msgstr "Абвяшчэнні"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
-msgstr "Benachrichtigungen _anzeigen"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
-msgstr "Datenquellen"
+msgstr "Сэнсар"
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr "Bezeichnung"
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr "Die Bezeichnungen können durch Anklicken geändert werden."
+msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
-msgstr "Aktiviert"
+msgstr "Уключана"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:852
 #: ../sensors-applet/sensor-config-dialog.c:452
 msgid "Icon"
-msgstr "Symbol"
+msgstr "Значок"
 
 #: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
-msgstr "Allgemein"
+msgstr "Галоўныя параметры"
 
 #: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
-msgstr "Sensoren"
+msgstr "Сэнсары"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr "Umdrehungen / Min."
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
-msgstr "V"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.h:59
 msgid "A"
-msgstr "A"
+msgstr ""
 
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
-msgstr "FEHLER"
+msgstr "ПАМЫЛКА"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "Übersetzer"
+msgstr "Міхась Варанцоў <meequz@gmail.com>, 2014"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
-msgstr "Sensoreigenschaften"
+msgstr "Уласцівасці сэнсара"
 
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
 msgid "Graph"
-msgstr "Graph"
+msgstr "Графік"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr "Farbe des Graphen"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr "_Farbe"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr "_Symbol"
+msgstr "Значок _сэнсара"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr "Anpassung der Sensorwerte"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr "_Multiplikator"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr "_Verschiebung (Offset)"
+msgstr ""
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr "Grenzwerte"
+msgstr "Ліміты сэнсара"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "M_inimaler Wert"
+msgstr "_Ніжняе значэнне сэнсара"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "Ma_ximaler Wert"
+msgstr "_Верхняе значэнне сэнсара"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr "Alarm"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "_Wiederholungsintervall (sek)"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "Lo_w Alarm-Kommando"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "Hi_gh Alarm-Kommando"
+msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr "_Aktiv"
+msgstr "_Уключыць сігнал трывогі"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
-msgstr "_Einstellungen"
+msgstr "_Настаўленні"
 
 #: ../sensors-applet/sensors-applet.c:263
 msgid "_Help"
-msgstr "_Hilfe"
+msgstr "_Даведка"
 
 #: ../sensors-applet/sensors-applet.c:266
 msgid "_About"
-msgstr "_Über"
+msgstr "_Пра аплет"
 
 #: ../sensors-applet/sensors-applet.c:328
 msgid "is very low"
-msgstr "ist sehr gering"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr "unterer Grenzwert"
+msgstr ""
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
 msgid "is very high"
-msgstr "ist sehr hoch"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr "oberer Grenzwert"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
-msgstr "Temperatur"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
-msgstr "Spannung"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
-msgstr "Spannung"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
-msgstr "Lüftergeschwindigkeit"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
-msgstr "Lüftergeschwindigkeit"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr "Stromstärke"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr "Stromstärke"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "Fehler beim Aktualisieren des Sensors %s"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "Beim Aktualisieren des Wertes für den Sensor %s, welcher sich in %s befindet, ist ein Fehler aufgetreten"
+msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
-msgstr "Keine Sensoren aktiviert!"
+msgstr "Сэнсары не ўключаны!"

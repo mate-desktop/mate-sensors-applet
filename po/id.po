@@ -4,13 +4,14 @@
 # 
 # Translators:
 # operamaniac <rizkiaulia.r@gmail.com>, 2013
+# willysr <willysr@slackware-id.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2013-05-17 16:45+0000\n"
-"Last-Translator: operamaniac <rizkiaulia.r@gmail.com>\n"
+"PO-Revision-Date: 2014-03-10 16:24+0000\n"
+"Last-Translator: willysr <willysr@slackware-id.org>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/MATE/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,19 +21,19 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
 msgid "Font size in points"
-msgstr ""
+msgstr "Ukuran font dalam point"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr ""
+msgstr "Tentukan apakah menampilkan atau menyembunyikan unit sensor"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "Tentukan hendak menampilkan ikon atau label teks"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr ""
+msgstr "Tentukan nilai diantara atau dibawah label"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
@@ -40,7 +41,7 @@ msgstr "Tapmilkan temperatur dalam Kelvin, Celsius, atau Fahrenheit"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
 msgid "Whether to display notifications"
-msgstr ""
+msgstr "Apakah hendak menampilkan notifikasi"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
 msgid "Delay (in ms) between refreshes"
@@ -61,7 +62,7 @@ msgstr "alur menuju nama berkas"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr ""
+msgstr "ID perangkat sensor"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
@@ -73,7 +74,7 @@ msgstr "label tentuan pengguna"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "Apakah sensor diaktifkan atau tidak"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
@@ -85,7 +86,7 @@ msgstr "nilai tinggi"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr ""
+msgstr "Apakah alarm pada sensor diaktifkan"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
@@ -101,11 +102,11 @@ msgstr "digunakan untuk mengidentifikasi sensor dalam sebuah daftar"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr ""
+msgstr "Pengali"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr ""
+msgstr "Offset"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
@@ -132,7 +133,7 @@ msgstr "GPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr ""
+msgstr "CASING"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
@@ -141,312 +142,312 @@ msgstr "FAN"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr ""
+msgstr "KIPAS1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr ""
+msgstr "KIPAS2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
-msgstr ""
+msgstr "MiniPCI"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr ""
+msgstr "Baterai"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr ""
+msgstr "Kipas"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr ""
+msgstr "TEMPERATUR CPU"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:347
 msgid "temperature"
-msgstr ""
+msgstr "temperatur"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr ""
+msgstr "Ambien"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr ""
+msgstr "Preferensi Applet Sensor"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
 msgid "No sensors found!"
-msgstr ""
+msgstr "Tidak ada sensor yang ditemukan!"
 
 #: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
-msgstr ""
+msgstr "Tampilan"
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr ""
+msgstr "label dengan nilai"
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
-msgstr ""
+msgstr "ikon dengan nilai"
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr ""
+msgstr "hanya nilai"
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr ""
+msgstr "hanya ikon"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr ""
+msgstr "hanya grafik"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr ""
+msgstr "_Tampilkan sensor pada panel sebagai"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr ""
+msgstr "diantara label / ikon"
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr ""
+msgstr "dibawah label / ikon"
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr ""
+msgstr "_Posisi nilai sensor yang dipilih"
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
-msgstr ""
+msgstr "Kelvin"
 
 #: ../sensors-applet/prefs-dialog.c:522
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: ../sensors-applet/prefs-dialog.c:523
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahreinheit"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr ""
+msgstr "Skala _temperatur"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr ""
+msgstr "_Ukuran grafik (piksel)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
-msgstr ""
+msgstr "Update"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr ""
+msgstr "_Interval update (detik)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr ""
+msgstr "Notifikasi"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
-msgstr ""
+msgstr "Tampilkan _notifikasi"
 
 #: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
-msgstr ""
+msgstr "Sensor"
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr ""
+msgstr "Label"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "Label bisa diedit secara langsung dengan klik pada label."
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
-msgstr ""
+msgstr "Aktif"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:852
 #: ../sensors-applet/sensor-config-dialog.c:452
 msgid "Icon"
-msgstr ""
+msgstr "Ikon"
 
 #: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
-msgstr ""
+msgstr "Opsi Umum"
 
 #: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
-msgstr ""
+msgstr "Sensor"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
-msgstr ""
+msgstr "V"
 
 #: ../sensors-applet/sensors-applet.h:59
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
 msgid "ERROR"
-msgstr ""
+msgstr "KESALAHAN"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr ""
+msgstr "penghargaan-penterjemah"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
-msgstr ""
+msgstr "Properti Sensor"
 
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
 msgid "Graph"
-msgstr ""
+msgstr "Grafik"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr ""
+msgstr "Warna Grafik"
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr ""
+msgstr "_Warna grafik"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr ""
+msgstr "_Ikon sensor"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "Parameter Skala"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr ""
+msgstr "_Pengali nilai sensor"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr ""
+msgstr "_Offset nilai sensor"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr ""
+msgstr "Batasan Sensor"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr ""
+msgstr "Nilai _rendah sensor"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr ""
+msgstr "Nilai _tinggi sensor"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr ""
+msgstr "Alarm"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr ""
+msgstr "Interval pengulang ala_rm (detik)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "Perintah alarm ba_wah"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "Perintah alarm a_tas"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr ""
+msgstr "_Aktifkan alarm"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferensi"
 
 #: ../sensors-applet/sensors-applet.c:263
 msgid "_Help"
-msgstr ""
+msgstr "_Bantuan"
 
 #: ../sensors-applet/sensors-applet.c:266
 msgid "_About"
-msgstr ""
+msgstr "Tent_ang"
 
 #: ../sensors-applet/sensors-applet.c:328
 msgid "is very low"
-msgstr ""
+msgstr "sangat rendah"
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr ""
+msgstr "batas bawah"
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
 msgid "is very high"
-msgstr ""
+msgstr "sangat tinggi"
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr ""
+msgstr "batas atas"
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatur"
 
 #: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
-msgstr ""
+msgstr "Tegangan"
 
 #: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
-msgstr ""
+msgstr "tegangan"
 
 #: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
-msgstr ""
+msgstr "Kecepatan Kipas"
 
 #: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
-msgstr ""
+msgstr "kecepatan kipas"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr ""
+msgstr "Arus"
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr ""
+msgstr "arus"
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "Kesalahan mengupdate sensor %s"
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "Kesalahan terjadi ketika hendak mengupdate nilai dari sensor %s yang terletak pada %s."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
-msgstr ""
+msgstr "Tidak ada sensor yang aktif!"
