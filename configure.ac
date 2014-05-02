@@ -47,18 +47,37 @@ AC_CHECK_HEADERS(
 )   
 
 GLIB_REQUIRED=2.26.0
-GTK_REQUIRED=2.14.0
 LIBPANEL_REQUIRED=1.1.0
 LIBNOTIFY_REQUIRED=0.7.0
 LIBCAIRO_REQUIRED=1.0.4
 LIBDBUSGLIB_REQUIRED=0.80
 LIBATASMART_REQUIRED=0.16
 
+# ================= GTK+ API version ================= #
+AC_MSG_CHECKING([which gtk+ version to compile against])
+AC_ARG_WITH([gtk],
+  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
+  [case "$with_gtk" in
+     2.0|3.0) ;;
+     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
+   esac],
+  [with_gtk=2.0])
+AC_MSG_RESULT([$with_gtk])
+
+case "$with_gtk" in
+  2.0) GTK_API_VERSION=2.0
+       GTK_REQUIRED=2.24.0
+       ;;
+  3.0) GTK_API_VERSION=3.0
+       GTK_REQUIRED=3.0.0
+       ;;
+esac
+
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gio-2.0)
 AC_SUBST(GLIB_CFLAGS)
 AC_SUBST(GLIB_LIBS)
 
-PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(GTK, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 

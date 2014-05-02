@@ -395,7 +395,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
 	config_dialog->dialog = gtk_dialog_new_with_buttons(header_text,
                                                             GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
-                                                            GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
+                                                            GTK_DIALOG_DESTROY_WITH_PARENT,
                                                             GTK_STOCK_HELP,
                                                             GTK_RESPONSE_HELP,
                                                             GTK_STOCK_CLOSE,
@@ -912,7 +912,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 				  2, 3,
 				  14, 15);
 
-	gtk_box_pack_start_defaults(GTK_BOX(GTK_DIALOG(config_dialog->dialog)->vbox), GTK_WIDGET(config_dialog->table));
+	gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area (GTK_DIALOG(config_dialog->dialog))), GTK_WIDGET(config_dialog->table), TRUE, TRUE, 0);
 	gtk_widget_show_all(config_dialog->dialog);
 
 }		

@@ -123,6 +123,7 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
 	return;
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 static void change_background_cb(MatePanelApplet *applet, 
 				 MatePanelAppletBackgroundType type,
 				 GdkColor *color, 
@@ -161,6 +162,7 @@ static void change_background_cb(MatePanelApplet *applet,
 		break;
 	}
 }
+#endif
 
 static void change_orient_cb (MatePanelApplet *applet, 
                               MatePanelAppletOrient orient, 
@@ -1397,9 +1399,11 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 			 G_CALLBACK(style_set_cb),
 			 sensors_applet);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	g_signal_connect(sensors_applet->applet, "change_background",
 			 G_CALLBACK(change_background_cb), 
 			 sensors_applet);
+#endif
 
         g_signal_connect(G_OBJECT(sensors_applet->applet), "change_orient",
                           G_CALLBACK(change_orient_cb), 

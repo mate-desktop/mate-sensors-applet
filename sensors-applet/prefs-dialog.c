@@ -408,7 +408,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
         prefs_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(_("Sensors Applet Preferences"),
                                                                       NULL,
-                                                                      GTK_DIALOG_NO_SEPARATOR,
+                                                                      GTK_DIALOG_MODAL,
                                                                       GTK_STOCK_HELP,
                                                                       GTK_RESPONSE_HELP,
                                                                       GTK_STOCK_CLOSE,
@@ -420,9 +420,9 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                      "default-height", 350,
                      NULL);
 
-        gtk_box_set_homogeneous(GTK_BOX(prefs_dialog->dialog->vbox), FALSE);
+        gtk_box_set_homogeneous(GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)), FALSE);
 
-        gtk_box_set_spacing(GTK_BOX(prefs_dialog->dialog->vbox), 5);
+        gtk_box_set_spacing(GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)), 5);
 
 
         g_signal_connect(prefs_dialog->dialog,
@@ -442,7 +442,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         if (sensors_applet->sensors == NULL) {
                 GtkWidget *label;
                 label = gtk_label_new(_("No sensors found!"));
-                gtk_box_pack_start_defaults(GTK_BOX(prefs_dialog->dialog->vbox), label);
+                gtk_box_pack_start (GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)), label, TRUE, TRUE, 0);
                 return;
         }
 
@@ -456,14 +456,14 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                     NULL);
         g_free(header_text);
 
-        prefs_dialog->display_mode_combo_box = GTK_COMBO_BOX(gtk_combo_box_new_text());
+        prefs_dialog->display_mode_combo_box = GTK_COMBO_BOX(gtk_combo_box_text_new());
 
 
-        gtk_combo_box_append_text(prefs_dialog->display_mode_combo_box, _("label with value"));
-        gtk_combo_box_append_text(prefs_dialog->display_mode_combo_box, _("icon with value"));
-        gtk_combo_box_append_text(prefs_dialog->display_mode_combo_box, _("value only"));
-        gtk_combo_box_append_text(prefs_dialog->display_mode_combo_box, _("icon only"));
-        gtk_combo_box_append_text(prefs_dialog->display_mode_combo_box, _("graph only"));
+        gtk_combo_box_text_append_text(prefs_dialog->display_mode_combo_box, _("label with value"));
+        gtk_combo_box_text_append_text(prefs_dialog->display_mode_combo_box, _("icon with value"));
+        gtk_combo_box_text_append_text(prefs_dialog->display_mode_combo_box, _("value only"));
+        gtk_combo_box_text_append_text(prefs_dialog->display_mode_combo_box, _("icon only"));
+        gtk_combo_box_text_append_text(prefs_dialog->display_mode_combo_box, _("graph only"));
 
 
         display_mode = g_settings_get_int(sensors_applet->settings, DISPLAY_MODE);
@@ -487,15 +487,15 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
 
 
-        prefs_dialog->layout_mode_combo_box = GTK_COMBO_BOX(gtk_combo_box_new_text());
+        prefs_dialog->layout_mode_combo_box = GTK_COMBO_BOX(gtk_combo_box_text_new());
 
         gtk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->layout_mode_combo_box),
                                  (display_mode != DISPLAY_ICON) &&
                                  (display_mode != DISPLAY_VALUE) &&
                                  (display_mode != DISPLAY_GRAPH));
 
-        gtk_combo_box_append_text(prefs_dialog->layout_mode_combo_box, _("beside labels / icons"));
-        gtk_combo_box_append_text(prefs_dialog->layout_mode_combo_box, _("below labels / icons"));
+        gtk_combo_box_text_append_text(prefs_dialog->layout_mode_combo_box, _("beside labels / icons"));
+        gtk_combo_box_text_append_text(prefs_dialog->layout_mode_combo_box, _("below labels / icons"));
 
         gtk_combo_box_set_active(prefs_dialog->layout_mode_combo_box, g_settings_get_int(sensors_applet->settings, LAYOUT_MODE));
 
@@ -516,11 +516,11 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                  (display_mode != DISPLAY_VALUE) &&
                                  (display_mode != DISPLAY_GRAPH));
 
-        prefs_dialog->temperature_scale_combo_box = GTK_COMBO_BOX(gtk_combo_box_new_text());
+        prefs_dialog->temperature_scale_combo_box = GTK_COMBO_BOX(gtk_combo_box_text_new());
 
-        gtk_combo_box_append_text(prefs_dialog->temperature_scale_combo_box, _("Kelvin"));
-        gtk_combo_box_append_text(prefs_dialog->temperature_scale_combo_box, _("Celsius"));
-        gtk_combo_box_append_text(prefs_dialog->temperature_scale_combo_box, _("Fahrenheit"));
+        gtk_combo_box_text_append_text(prefs_dialog->temperature_scale_combo_box, _("Kelvin"));
+        gtk_combo_box_text_append_text(prefs_dialog->temperature_scale_combo_box, _("Celsius"));
+        gtk_combo_box_text_append_text(prefs_dialog->temperature_scale_combo_box, _("Fahrenheit"));
 
         gtk_combo_box_set_active(prefs_dialog->temperature_scale_combo_box, g_settings_get_int(sensors_applet->settings, TEMPERATURE_SCALE));
 
@@ -624,9 +624,9 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                            "use-underline", TRUE,
                                                            "label", _("Display _notifications"),
                                                            NULL);
-        gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON(prefs_dialog->display_notifications),
-                                    g_settings_get_boolean(sensors_applet->settings,
-                                                           DISPLAY_NOTIFICATIONS));
+        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(prefs_dialog->display_notifications),
+                                     g_settings_get_boolean(sensors_applet->settings,
+                                                            DISPLAY_NOTIFICATIONS));
         g_signal_connect(prefs_dialog->display_notifications,
                          "toggled",
                          G_CALLBACK(prefs_dialog_display_notifications_toggled),
@@ -990,8 +990,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                  gtk_label_new(_("Sensors")));
 
         /* pack notebook into prefs_dialog */
-        gtk_box_pack_start_defaults(GTK_BOX(prefs_dialog->dialog->vbox),
-                                    GTK_WIDGET(prefs_dialog->notebook));
+        gtk_box_pack_start (GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)),
+                            GTK_WIDGET(prefs_dialog->notebook), TRUE, TRUE, 0);
 
 
         gtk_widget_show_all(GTK_WIDGET(prefs_dialog->dialog));
