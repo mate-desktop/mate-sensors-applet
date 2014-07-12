@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# AsavarTzeth <asavartzeth@gmail.com>, 2014
+# Patrik Nilsson <asavartzeth@gmail.com>, 2014
 # Daniel Nylander <po@danielnylander.se>, 2006
+# Patrik Nilsson <asavartzeth@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-04-07 20:29+0000\n"
-"Last-Translator: AsavarTzeth <asavartzeth@gmail.com>\n"
+"PO-Revision-Date: 2014-07-10 18:25+0000\n"
+"Last-Translator: Patrik Nilsson <asavartzeth@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/MATE/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,7 +67,7 @@ msgstr "Sensor enhets id:n"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr ""
+msgstr "Sensor enhetens gränssnitt"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
@@ -369,11 +370,11 @@ msgstr "Intervall för upp_repning av alarm (sekunder)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "Låg_t alarm kommando"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "Hö_gt alarm kommando"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"

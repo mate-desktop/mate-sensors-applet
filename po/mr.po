@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# vaibhav.dlv <vaibhav.dlv@gmail.com>, 2014
+# Vaibhav S Dalvi <vaibhav.dlv@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-03-12 05:13+0000\n"
-"Last-Translator: vaibhav.dlv <vaibhav.dlv@gmail.com>\n"
+"PO-Revision-Date: 2014-06-22 16:49+0000\n"
+"Last-Translator: Vaibhav S Dalvi <vaibhav.dlv@gmail.com>\n"
 "Language-Team: Marathi (http://www.transifex.com/projects/p/MATE/language/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +49,7 @@ msgstr "नूतनीकरणाचा वेळ (मिलिसेकन्
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr ""
+msgstr "ग्राफचा आकार पिक्सेल मध्ये (आडवा असल्यास रुंदी, उभा असल्यास उंची) "
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
@@ -57,15 +57,15 @@ msgstr "सेन्सर यादी"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr ""
+msgstr "फाइल नावाचा मार्ग "
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr ""
+msgstr "सेन्सर साधन ids"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr ""
+msgstr "सेन्सर साधन संवाद"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
@@ -73,7 +73,7 @@ msgstr "वापरकर्ता व्याख्यीत लेबल"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "सेन्सर उपलब्ध आहे का नाही"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
@@ -85,15 +85,15 @@ msgstr "उच्च मुल्य"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr ""
+msgstr "सेन्सरचा गजर कार्यान्वित आहे का"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr ""
+msgstr "गजर झाल्यावर अमलात आणायची आज्ञा "
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr ""
+msgstr "प्रत्येक गजर किती वेळ वाजवायचा (सेकंद) "
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
@@ -113,7 +113,7 @@ msgstr "चिन्ह प्रकार"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr ""
+msgstr "सेन्सरच्या आलेखाचा रंग "
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -171,11 +171,11 @@ msgstr "तापमान"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr ""
+msgstr "सभोवतालची"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr ""
+msgstr "सेन्सर एप्लेट आवड निवड"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
@@ -188,7 +188,7 @@ msgstr "दृश्य"
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr ""
+msgstr "मुल्यासहित लेबल"
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
@@ -204,11 +204,11 @@ msgstr "फक्त चिन्हे"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr ""
+msgstr "फक्त आलेख"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr ""
+msgstr "सेन्सर पटलात असे दाखवा (_D )"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
@@ -220,7 +220,7 @@ msgstr "पाठ्यखाली / चिन्हाखाली "
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr ""
+msgstr "सेन्सर मुल्यांची आवडती जागा (_P)"
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
@@ -236,11 +236,11 @@ msgstr "फॅरेनहाइट"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr ""
+msgstr "तापमान पट्टी (_T)"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr ""
+msgstr "आलेख आकार (_S) (पिक्सेल)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
@@ -268,7 +268,7 @@ msgstr "लेबल"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "लेबलवर क्लिक करून त्यांना बदलता येत"
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
@@ -334,20 +334,20 @@ msgstr "सेन्सर चिन्ह (_I)"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "प्रमाणन मापदंड"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr ""
+msgstr "सेन्सर मुल्य गणक (_M)"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr ""
+msgstr "सेन्सर मुल्य ऑफसेट (_O)"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr ""
+msgstr "सेन्सर मर्यादा"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
@@ -360,23 +360,23 @@ msgstr "सेन्सर उच्च मुल्य (_H)"
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr ""
+msgstr "गजर"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr ""
+msgstr "गजर वारंवार अवकाश (_I) (सेकंद)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "निम्न गजर आज्ञा (_W)"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "उच्च गजर आज्ञा (_G)"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr ""
+msgstr "गजर सक्षम करा (_E)"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
@@ -396,7 +396,7 @@ msgstr "खूप कमी आहे"
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr ""
+msgstr "किमान मर्यादा"
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
@@ -405,7 +405,7 @@ msgstr "खूप जास्त आहे"
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr ""
+msgstr "कमाल मर्यादा"
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
@@ -429,23 +429,23 @@ msgstr "पंख्याचा वेग"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr ""
+msgstr "वर्तमान"
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr ""
+msgstr "वर्तमान"
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "सेन्सर अपडेट करताना चूक झाली %s"
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "सेन्सर %s, %s या जागी असलेल्याचे मुल्य अपडेट करताना चूक झाली."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"

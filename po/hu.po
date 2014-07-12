@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-03-29 01:56+0000\n"
+"PO-Revision-Date: 2014-05-01 19:05+0000\n"
 "Last-Translator: kami911 <kami911@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -25,15 +25,15 @@ msgstr "Betűméret pontokban"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr ""
+msgstr "Adja meg a szenzorok megjelenítését vagy elrejtését"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "Állítsa be ikonok vagy szövegcímkék megjelenítéséhez."
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr ""
+msgstr "Adja meg hogy a címke előtt vagy után legyen"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
@@ -50,7 +50,7 @@ msgstr "Frissítési időköz (ms)"
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr ""
+msgstr "Grafikon mérete, képpontban megadva (vízszintes esetén szélesség, függőleges esetén magasság)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
@@ -446,7 +446,7 @@ msgstr "%s szenzor lekérdezése során hiba lépett fel"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "Hiba történt a(z) „%s” szenzor (helye: %s) értékének frissítésekor."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"
