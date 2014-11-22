@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Koljan1970 <Stuartlittle1970@gmail.com>, 2013
-# zubr139 <zubr139@ukr.net>, 2013
-# zubr139 <zubr139@ukr.net>, 2013
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2013
+# zubr139, 2013
+# zubr139, 2013
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2013-06-13 17:18+0000\n"
-"Last-Translator: Koljan1970 <Stuartlittle1970@gmail.com>\n"
+"PO-Revision-Date: 2014-09-18 14:34+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -353,11 +354,11 @@ msgstr "Діапазон значень датчика"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "Нижня межа"
+msgstr "Долішня межа"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "Верхня межа"
+msgstr "Горішня межа"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
@@ -370,11 +371,11 @@ msgstr "_Період повтору сигналу тривоги (сек)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "_Команда для низького значення"
+msgstr "_Команда для долішнього значення"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "_Команда для високого значення"
+msgstr "_Команда для горішнього значення"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
@@ -398,7 +399,7 @@ msgstr "дуже низька"
 
 #: ../sensors-applet/sensors-applet.c:329
 msgid "lower limit"
-msgstr "нижня межа"
+msgstr "долішня межа"
 
 #. assume high alarm condition
 #: ../sensors-applet/sensors-applet.c:334
@@ -407,7 +408,7 @@ msgstr "дуже висока"
 
 #: ../sensors-applet/sensors-applet.c:335
 msgid "upper limit"
-msgstr "верхня межа"
+msgstr "горішня межа"
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"

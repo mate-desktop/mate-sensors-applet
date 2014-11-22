@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# desperateCoder <a.dawtjan@gmx.de>, 2013
-# to_ba, 2014
+# guyfawkes <a.dawtjan@gmx.de>, 2013
+# Tobias Bannert <tobannert@gmail.com>, 2014
+# Wolfgang Ulbrich <chat-to-me@raveit.de>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-04-27 23:28+0000\n"
-"Last-Translator: to_ba\n"
+"PO-Revision-Date: 2014-08-26 15:44+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +30,11 @@ msgstr "Sensoreinheiten anzeigen oder verstecken"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "Icons oder Texte anzeigen"
+msgstr "Symbole oder Texte anzeigen"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
 msgid "Set value beside or below label"
-msgstr "Wert neben oder  unter  den Text setzen"
+msgstr "Wert neben oder unter dem Text setzen"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
@@ -50,7 +51,7 @@ msgstr "Zeitabstand zwischen Aktualisierungen (in ms)"
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "Größe der Grafik in Pixeln (Breite wenn horizontal, Höhe wenn vertikal)"
+msgstr "Größe des Diagramms in Pixeln (Breite wenn horizontal, Höhe wenn vertikal)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
@@ -62,11 +63,11 @@ msgstr "Pfad zum Dateinamen"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr "IDs der Sensoren"
+msgstr "Kennungen der Sensoren"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
-msgstr "Die Sensoren-Geräteschnittstelle"
+msgstr "Die Sensorgeräteschnittstelle"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
@@ -78,11 +79,11 @@ msgstr "Ob ein Sensor aktiviert ist, oder nicht."
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
-msgstr "Tief-Wert"
+msgstr "Tiefstwert"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
 msgid "High value"
-msgstr "Hoch-Wert"
+msgstr "Höchstwert"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
 msgid "Whether the sensor has its alarm enabled"
@@ -98,7 +99,7 @@ msgstr "Wie oft jeder Alarm abgespielt werden soll (in Sekunden)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Wird verwendet, um einen Sensor in der Liste zu identifizieren"
+msgstr "Wird verwendet, um einen Sensor in der Liste zu bestimmen"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
@@ -110,11 +111,11 @@ msgstr "Aufrechnung"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
-msgstr "Icon-Typ"
+msgstr "Symboltyp"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr "Farbe der Sensorgrafik"
+msgstr "Farbe des Sensordiagramms"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -129,7 +130,7 @@ msgstr "CPU"
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "Grafik CPU"
+msgstr "CPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
@@ -155,7 +156,7 @@ msgstr "MiniPCI"
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr "Batterie"
+msgstr "Akku"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
@@ -163,7 +164,7 @@ msgstr "Lüfter"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr "CPU Temperatur"
+msgstr "CPU-Temperatur"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:347
@@ -197,15 +198,15 @@ msgstr "Symbol mit Wert"
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr "Wert"
+msgstr "Nur Wert"
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr "Symbol"
+msgstr "Nur Symbol"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr "Graph"
+msgstr "Nur Diagramm"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
@@ -241,7 +242,7 @@ msgstr "_Temperaturskala"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr "_Größe des Graphen (Pixel)"
+msgstr "_Diagrammgröße (Pixel)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
@@ -249,11 +250,11 @@ msgstr "Aktualisierung"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr "_Intervall (sek)"
+msgstr "_Aktualisierungsintervall (s)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr "Benachrichtigung"
+msgstr "Benachrichtigungen"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
@@ -291,7 +292,7 @@ msgstr "Sensoren"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr "Umdrehungen / Min."
+msgstr "U/min"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
@@ -319,19 +320,19 @@ msgstr "Sensoreigenschaften"
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
 msgid "Graph"
-msgstr "Graph"
+msgstr "Diagramm"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr "Farbe des Graphen"
+msgstr "Farbe des Diagramms"
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr "_Farbe"
+msgstr "_Diagrammfarbe"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
-msgstr "_Symbol"
+msgstr "_Sensorsymbol"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
@@ -339,24 +340,24 @@ msgstr "Anpassung der Sensorwerte"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr "_Multiplikator"
+msgstr "Sensorwert_multiplikator"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr "_Verschiebung (Offset)"
+msgstr "Sensorwert_verschiebung"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr "Grenzwerte"
+msgstr "Sensorgrenzwerte"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
-msgstr "M_inimaler Wert"
+msgstr "_Kleinster Sensorwertwert"
 
 #: ../sensors-applet/sensor-config-dialog.c:653
 msgid "Sensor _high value"
-msgstr "Ma_ximaler Wert"
+msgstr "_Größter Sensorwertwert"
 
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
@@ -365,19 +366,19 @@ msgstr "Alarm"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "_Wiederholungsintervall (sek)"
+msgstr "Alarm_wiederholungsintervall (s)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "Lo_w Alarm-Kommando"
+msgstr "_Niedrigalarmbefehl"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "Hi_gh Alarm-Kommando"
+msgstr "_Hochalarmbefehl"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr "_Aktiv"
+msgstr "_Alarm aktivieren"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
