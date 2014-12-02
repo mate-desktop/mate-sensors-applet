@@ -1,0 +1,452 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-01 12:05+0200\n"
+"PO-Revision-Date: 2014-11-28 19:49+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian (http://www.transifex.com/projects/p/MATE/language/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
+msgid "Font size in points"
+msgstr "Величина слова у тачкицама"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
+msgid "Specify if show or hide sensor units"
+msgstr "Наводи да ли приказује или скрива јединице сензора"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
+msgid "Set if display icons or text labels"
+msgstr "Подешава да ли се приказују иконице или натписи текста"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
+msgid "Set value beside or below label"
+msgstr "Подешава вредност поред или испод натписа"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
+msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
+msgstr "Приказује температуру у Келвинима, Целзијусима или Фаренхајтима"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
+msgid "Whether to display notifications"
+msgstr "Да ли ће обавештења бити приказана"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
+msgid "Delay (in ms) between refreshes"
+msgstr "Застој (у милисекундама) између освежавања"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
+msgid ""
+"The size of the graph in pixels (width if horizontal, height if vertical)"
+msgstr "Величина графика у тачкицама (ширина ако је водоравно, висина ако је усправно)"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
+msgid "List of sensors"
+msgstr "Списак сензора"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
+msgid "Path to filename"
+msgstr "Путања до датотеке"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
+msgid "Sensor device ids"
+msgstr "Иб-ови сензорског уређаја"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
+msgid "The sensor device interface"
+msgstr "Сучеље сензорског уређаја"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
+msgid "User defined label"
+msgstr "Натпис који одреди корисник"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
+msgid "Whether a sensor is enabled or not"
+msgstr "Да ли је сензор укључен или није"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
+msgid "Low value"
+msgstr "Ниска вредност"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
+msgid "High value"
+msgstr "Висока вредност"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
+msgid "Whether the sensor has its alarm enabled"
+msgstr "Да ли је аларм сензора укључен"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
+msgid "Command to execute when the alarm is activated"
+msgstr "Наредба коју треба извршити када се покрене аларм"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
+msgid "How often each alarm should be sounded (in seconds)"
+msgstr "Колико често сваки аларм треба да се огласи (у секундама)"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
+msgid "Used to identify a sensor in a list"
+msgstr "Користи се за одређивање сензора на списку"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
+msgid "Multiplier"
+msgstr "Умножавач"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
+msgid "Offset"
+msgstr "Померај"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
+msgid "Icon type"
+msgstr "Врста иконице"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
+msgid "Color of the graph for the sensor"
+msgstr "Боја графика за сензор"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:61
+#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
+#: ../plugins/omnibook/omnibook-plugin.c:47
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/smu-sys/smu-sys-plugin.c:58
+msgid "CPU"
+msgstr "Процесор"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:66
+#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/smu-sys/smu-sys-plugin.c:63
+#: ../plugins/aticonfig/aticonfig-plugin.c:104
+msgid "GPU"
+msgstr "Графички процесор"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:71
+msgid "CASE"
+msgstr "КУЋИШТЕ"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:76
+#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+msgid "FAN"
+msgstr "ВЕНТИЛАТОР"
+
+#: ../plugins/i8k/i8k-plugin.c:56
+msgid "FAN1"
+msgstr "ВЕНТИЛАТОР1"
+
+#: ../plugins/i8k/i8k-plugin.c:64
+msgid "FAN2"
+msgstr "ВЕНТИЛАТОР2"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+msgid "MiniPCI"
+msgstr "Мини ПЦИ"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+msgid "Battery"
+msgstr "Батерија"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+msgid "Fan"
+msgstr "Вентилатор"
+
+#: ../plugins/sonypi/sonypi-plugin.c:62
+msgid "CPU TEMP"
+msgstr "ТЕМП ПРОЦЕСОРА"
+
+#: ../plugins/omnibook/omnibook-plugin.c:46
+#: ../sensors-applet/sensors-applet.c:347
+msgid "temperature"
+msgstr "температура"
+
+#: ../plugins/nvidia/nvidia-plugin.c:131
+msgid "Ambient"
+msgstr "Околина"
+
+#: ../sensors-applet/prefs-dialog.c:409
+msgid "Sensors Applet Preferences"
+msgstr "Поставке програмчета сензора"
+
+#: ../sensors-applet/prefs-dialog.c:444
+#: ../sensors-applet/sensors-applet.c:1378
+msgid "No sensors found!"
+msgstr "Нисам пронашао сензоре!"
+
+#: ../sensors-applet/prefs-dialog.c:450
+msgid "Display"
+msgstr "Приказ"
+
+#: ../sensors-applet/prefs-dialog.c:462
+msgid "label with value"
+msgstr "натпис са вредношћу"
+
+#: ../sensors-applet/prefs-dialog.c:463
+msgid "icon with value"
+msgstr "иконица са вредношћу"
+
+#: ../sensors-applet/prefs-dialog.c:464
+msgid "value only"
+msgstr "вредност само"
+
+#: ../sensors-applet/prefs-dialog.c:465
+msgid "icon only"
+msgstr "иконицу само"
+
+#: ../sensors-applet/prefs-dialog.c:466
+msgid "graph only"
+msgstr "график само"
+
+#: ../sensors-applet/prefs-dialog.c:482
+msgid "_Display sensors in panel as"
+msgstr "_Прикажи сензоре у панелу као"
+
+#: ../sensors-applet/prefs-dialog.c:497
+msgid "beside labels / icons"
+msgstr "поред натписа / иконица"
+
+#: ../sensors-applet/prefs-dialog.c:498
+msgid "below labels / icons"
+msgstr "испод натписа / иконица"
+
+#: ../sensors-applet/prefs-dialog.c:509
+msgid "Preferred _position of sensor values"
+msgstr "Жељени _положај вредности сензора"
+
+#: ../sensors-applet/prefs-dialog.c:521
+msgid "Kelvin"
+msgstr "Келвини"
+
+#: ../sensors-applet/prefs-dialog.c:522
+msgid "Celsius"
+msgstr "Целзијуси"
+
+#: ../sensors-applet/prefs-dialog.c:523
+msgid "Fahrenheit"
+msgstr "Фаренхајти"
+
+#: ../sensors-applet/prefs-dialog.c:534
+msgid "_Temperature scale"
+msgstr "_Температурна лествица"
+
+#: ../sensors-applet/prefs-dialog.c:561
+msgid "Graph _size (pixels)"
+msgstr "Величина _графика (у тачкицама)"
+
+#: ../sensors-applet/prefs-dialog.c:574
+msgid "Update"
+msgstr "Освежи"
+
+#: ../sensors-applet/prefs-dialog.c:604
+msgid "Update _interval (secs)"
+msgstr "Период _освежавања (секунди)"
+
+#: ../sensors-applet/prefs-dialog.c:614
+msgid "Notifications"
+msgstr "Обавештења"
+
+#: ../sensors-applet/prefs-dialog.c:625
+msgid "Display _notifications"
+msgstr "Прикажи _обавештења"
+
+#: ../sensors-applet/prefs-dialog.c:828
+msgid "Sensor"
+msgstr "Сензор"
+
+#: ../sensors-applet/prefs-dialog.c:835
+msgid "Label"
+msgstr "Натпис"
+
+#: ../sensors-applet/prefs-dialog.c:845
+msgid "Labels can be edited directly by clicking on them."
+msgstr "Натписи могу бити уређивани непосредно притиском на њих."
+
+#: ../sensors-applet/prefs-dialog.c:846
+msgid "Enabled"
+msgstr "Укључен"
+
+#. icon stuff
+#: ../sensors-applet/prefs-dialog.c:852
+#: ../sensors-applet/sensor-config-dialog.c:452
+msgid "Icon"
+msgstr "Иконица"
+
+#: ../sensors-applet/prefs-dialog.c:986
+msgid "General Options"
+msgstr "Опште опције"
+
+#: ../sensors-applet/prefs-dialog.c:990
+msgid "Sensors"
+msgstr "Сензори"
+
+#: ../sensors-applet/sensors-applet.h:57
+msgid "RPM"
+msgstr "О/М"
+
+#: ../sensors-applet/sensors-applet.h:58
+msgid "V"
+msgstr "V"
+
+#: ../sensors-applet/sensors-applet.h:59
+msgid "A"
+msgstr "A"
+
+#. hard code text as ERROR
+#: ../sensors-applet/active-sensor.c:581
+msgid "ERROR"
+msgstr "ГРЕШКА"
+
+#. To translator: Put your name here to show up in the About dialog as the
+#. translator
+#: ../sensors-applet/about-dialog.c:43
+msgid "translator-credits"
+msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>\n\nhttp://prevod.org — превод на српски језик."
+
+#: ../sensors-applet/sensor-config-dialog.c:394
+msgid "Sensor Properties"
+msgstr "Својства сензора"
+
+#. graph stuff
+#: ../sensors-applet/sensor-config-dialog.c:419
+msgid "Graph"
+msgstr "График"
+
+#: ../sensors-applet/sensor-config-dialog.c:438
+msgid "Graph Color"
+msgstr "Боја графика"
+
+#: ../sensors-applet/sensor-config-dialog.c:441
+msgid "Graph _color"
+msgstr "Боја _графика"
+
+#: ../sensors-applet/sensor-config-dialog.c:503
+msgid "Sensor _icon"
+msgstr "Иконица _сензора"
+
+#: ../sensors-applet/sensor-config-dialog.c:509
+msgid "Scaling Parameters"
+msgstr "Параметри сразмеравања"
+
+#: ../sensors-applet/sensor-config-dialog.c:542
+msgid "Sensor value _multiplier"
+msgstr "_Множитељ вредности сензора"
+
+#: ../sensors-applet/sensor-config-dialog.c:575
+msgid "Sensor value _offset"
+msgstr "_Померај вредности сензора"
+
+#. now do alarm widgets
+#: ../sensors-applet/sensor-config-dialog.c:585
+msgid "Sensor Limits"
+msgstr "Ограничења сензора"
+
+#: ../sensors-applet/sensor-config-dialog.c:618
+msgid "Sensor _low value"
+msgstr "_Ниска вредност сензора"
+
+#: ../sensors-applet/sensor-config-dialog.c:653
+msgid "Sensor _high value"
+msgstr "_Висока вредност сензора"
+
+#: ../sensors-applet/sensor-config-dialog.c:664
+#: ../sensors-applet/sensors-applet.c:384
+msgid "Alarm"
+msgstr "Аларм"
+
+#: ../sensors-applet/sensor-config-dialog.c:696
+msgid "Alarm _repeat interval (secs)"
+msgstr "Период _понављања аларма"
+
+#: ../sensors-applet/sensor-config-dialog.c:716
+msgid "Lo_w alarm command"
+msgstr "Наредба _ниског аларма"
+
+#: ../sensors-applet/sensor-config-dialog.c:738
+msgid "Hi_gh alarm command"
+msgstr "Наредба _високог аларма"
+
+#: ../sensors-applet/sensor-config-dialog.c:752
+msgid "_Enable alarm"
+msgstr "_Укључи аларм"
+
+#: ../sensors-applet/sensors-applet.c:260
+msgid "_Preferences"
+msgstr "_Поставке"
+
+#: ../sensors-applet/sensors-applet.c:263
+msgid "_Help"
+msgstr "По_моћ"
+
+#: ../sensors-applet/sensors-applet.c:266
+msgid "_About"
+msgstr "_О програму"
+
+#: ../sensors-applet/sensors-applet.c:328
+msgid "is very low"
+msgstr "је врло ниска"
+
+#: ../sensors-applet/sensors-applet.c:329
+msgid "lower limit"
+msgstr "доња граница"
+
+#. assume high alarm condition
+#: ../sensors-applet/sensors-applet.c:334
+msgid "is very high"
+msgstr "је врло висока"
+
+#: ../sensors-applet/sensors-applet.c:335
+msgid "upper limit"
+msgstr "горња граница"
+
+#: ../sensors-applet/sensors-applet.c:346
+msgid "Temperature"
+msgstr "Температура"
+
+#: ../sensors-applet/sensors-applet.c:366
+msgid "Voltage"
+msgstr "Напон"
+
+#: ../sensors-applet/sensors-applet.c:367
+msgid "voltage"
+msgstr "напон"
+
+#: ../sensors-applet/sensors-applet.c:371
+msgid "Fan Speed"
+msgstr "Брзина вентилатора"
+
+#: ../sensors-applet/sensors-applet.c:372
+msgid "fan speed"
+msgstr "брзина вентилатора"
+
+#: ../sensors-applet/sensors-applet.c:376
+msgid "Current"
+msgstr "Струја"
+
+#: ../sensors-applet/sensors-applet.c:377
+msgid "current"
+msgstr "струја"
+
+#: ../sensors-applet/sensors-applet.c:390
+#, c-format
+msgid "Error updating sensor %s"
+msgstr "Грешка освежавања сензора „%s“"
+
+#: ../sensors-applet/sensors-applet.c:391
+#, c-format
+msgid ""
+"An error occurred while trying to update the value of the sensor %s located "
+"at %s."
+msgstr "Дошло је до грешке приликом покушаја освежавања вредности сензора „%s“ који се налази на „%s“."
+
+#: ../sensors-applet/sensors-applet.c:496
+msgid "No sensors enabled!"
+msgstr "Нема укључених сензора!"

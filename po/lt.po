@@ -1,0 +1,455 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
+# GiedriusS <inactive+GiedriusS@transifex.com>, 2014
+# brennus <jonas.ska@gmail.com>, 2014
+# Moo, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-01 12:05+0200\n"
+"PO-Revision-Date: 2014-11-18 21:13+0000\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian (http://www.transifex.com/projects/p/MATE/language/lt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
+msgid "Font size in points"
+msgstr "Šrifto dydis taškais"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
+msgid "Specify if show or hide sensor units"
+msgstr "Nurodykite, rodyti ar slėpti jutiklio vienetus"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
+msgid "Set if display icons or text labels"
+msgstr "Nustatykite, ar rodyti, ar slėpti tekstines etiketes"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
+msgid "Set value beside or below label"
+msgstr "Nustatyti aukštesnę arba žemesnę etiketei vertę"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
+msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
+msgstr "Temperatūros vienetai. Vertės: „Kelvino“, „Celsijaus“, „Farenheito“."
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
+msgid "Whether to display notifications"
+msgstr "Ar rodyti ekrano pranešimus"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
+msgid "Delay (in ms) between refreshes"
+msgstr "Delsa tarp atnaujinimų (ms)"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
+msgid ""
+"The size of the graph in pixels (width if horizontal, height if vertical)"
+msgstr "Grafiko dydis pikseliais (plotis, jeigu horizontalu, aukštis, jeigu vertikalu)"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
+msgid "List of sensors"
+msgstr "Jutiklių sąrašas"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
+msgid "Path to filename"
+msgstr "Kelias iki failo vardo"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
+msgid "Sensor device ids"
+msgstr "Jutiklio įrenginio kodai"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
+msgid "The sensor device interface"
+msgstr "Jutiklio įrenginio sąsaja"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
+msgid "User defined label"
+msgstr "Naudotojo nurodyta etiketė"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
+msgid "Whether a sensor is enabled or not"
+msgstr "Ar jutiklis naudojamas"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
+msgid "Low value"
+msgstr "Didelė vertė"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
+msgid "High value"
+msgstr "Maža vertė"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
+msgid "Whether the sensor has its alarm enabled"
+msgstr "Ar jutiklio signalas įjungtas"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
+msgid "Command to execute when the alarm is activated"
+msgstr "Komanda, paleidžiama įjungus signalą"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
+msgid "How often each alarm should be sounded (in seconds)"
+msgstr "Kiek laiko kiekvienas signalas turėtų skambėti (s)"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
+msgid "Used to identify a sensor in a list"
+msgstr "Naudojamas atpažinti jutiklį iš sąrašo"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
+msgid "Multiplier"
+msgstr "Daugiklis"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
+msgid "Offset"
+msgstr "Ofsetas"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
+msgid "Icon type"
+msgstr "Piktogramų rūšis"
+
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
+msgid "Color of the graph for the sensor"
+msgstr "Jutiklio grafiko spalva"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:61
+#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
+#: ../plugins/omnibook/omnibook-plugin.c:47
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/smu-sys/smu-sys-plugin.c:58
+msgid "CPU"
+msgstr "CPU"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:66
+#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/smu-sys/smu-sys-plugin.c:63
+#: ../plugins/aticonfig/aticonfig-plugin.c:104
+msgid "GPU"
+msgstr "Vaizdo ploštė"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:71
+msgid "CASE"
+msgstr "Sisteminis blokas"
+
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:76
+#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+msgid "FAN"
+msgstr "Ventiliatorius"
+
+#: ../plugins/i8k/i8k-plugin.c:56
+msgid "FAN1"
+msgstr "1 ventiliatorius"
+
+#: ../plugins/i8k/i8k-plugin.c:64
+msgid "FAN2"
+msgstr "2 ventiliatorius"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+msgid "MiniPCI"
+msgstr "MiniPCI"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+msgid "Battery"
+msgstr "Baterija"
+
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+msgid "Fan"
+msgstr "Ventiliatorius"
+
+#: ../plugins/sonypi/sonypi-plugin.c:62
+msgid "CPU TEMP"
+msgstr "Procesoriaus temperatūra"
+
+#: ../plugins/omnibook/omnibook-plugin.c:46
+#: ../sensors-applet/sensors-applet.c:347
+msgid "temperature"
+msgstr "Temperatūra"
+
+#: ../plugins/nvidia/nvidia-plugin.c:131
+msgid "Ambient"
+msgstr "Aplinkinis"
+
+#: ../sensors-applet/prefs-dialog.c:409
+msgid "Sensors Applet Preferences"
+msgstr "Jutiklių įtaiso nustatymai"
+
+#: ../sensors-applet/prefs-dialog.c:444
+#: ../sensors-applet/sensors-applet.c:1378
+msgid "No sensors found!"
+msgstr "Nerasti jutikliai"
+
+#: ../sensors-applet/prefs-dialog.c:450
+msgid "Display"
+msgstr "Rodymas"
+
+#: ../sensors-applet/prefs-dialog.c:462
+msgid "label with value"
+msgstr "etiketė su verte"
+
+#: ../sensors-applet/prefs-dialog.c:463
+msgid "icon with value"
+msgstr "piktograma su verte"
+
+#: ../sensors-applet/prefs-dialog.c:464
+msgid "value only"
+msgstr "tik vertė"
+
+#: ../sensors-applet/prefs-dialog.c:465
+msgid "icon only"
+msgstr "tik piktograma"
+
+#: ../sensors-applet/prefs-dialog.c:466
+msgid "graph only"
+msgstr "tik grafikas"
+
+#: ../sensors-applet/prefs-dialog.c:482
+msgid "_Display sensors in panel as"
+msgstr "_Rodyti jutiklius skydelyje kaip"
+
+#: ../sensors-applet/prefs-dialog.c:497
+msgid "beside labels / icons"
+msgstr "greta etikečių/piktogramų"
+
+#: ../sensors-applet/prefs-dialog.c:498
+msgid "below labels / icons"
+msgstr "žemiau etikečių/piktogramų"
+
+#: ../sensors-applet/prefs-dialog.c:509
+msgid "Preferred _position of sensor values"
+msgstr "Pasirinkta jutiklio reikšmių _padėtis"
+
+#: ../sensors-applet/prefs-dialog.c:521
+msgid "Kelvin"
+msgstr "Kelvino"
+
+#: ../sensors-applet/prefs-dialog.c:522
+msgid "Celsius"
+msgstr "Celsijaus"
+
+#: ../sensors-applet/prefs-dialog.c:523
+msgid "Fahrenheit"
+msgstr "Farenheito"
+
+#: ../sensors-applet/prefs-dialog.c:534
+msgid "_Temperature scale"
+msgstr "_Temperatūros skalė"
+
+#: ../sensors-applet/prefs-dialog.c:561
+msgid "Graph _size (pixels)"
+msgstr "Grafiko _dydis (pikseliais)"
+
+#: ../sensors-applet/prefs-dialog.c:574
+msgid "Update"
+msgstr "Atnaujinimas"
+
+#: ../sensors-applet/prefs-dialog.c:604
+msgid "Update _interval (secs)"
+msgstr "Atnaujinimo dažnis (s)"
+
+#: ../sensors-applet/prefs-dialog.c:614
+msgid "Notifications"
+msgstr "Pranešimai"
+
+#: ../sensors-applet/prefs-dialog.c:625
+msgid "Display _notifications"
+msgstr "Rodyti _pranešimus"
+
+#: ../sensors-applet/prefs-dialog.c:828
+msgid "Sensor"
+msgstr "Jutiklis"
+
+#: ../sensors-applet/prefs-dialog.c:835
+msgid "Label"
+msgstr "Užrašas"
+
+#: ../sensors-applet/prefs-dialog.c:845
+msgid "Labels can be edited directly by clicking on them."
+msgstr "Etiketes galima redaguoti jas paspaspaudus"
+
+#: ../sensors-applet/prefs-dialog.c:846
+msgid "Enabled"
+msgstr "Įjungtas"
+
+#. icon stuff
+#: ../sensors-applet/prefs-dialog.c:852
+#: ../sensors-applet/sensor-config-dialog.c:452
+msgid "Icon"
+msgstr "Piktograma"
+
+#: ../sensors-applet/prefs-dialog.c:986
+msgid "General Options"
+msgstr "Bendriniai nustatymai"
+
+#: ../sensors-applet/prefs-dialog.c:990
+msgid "Sensors"
+msgstr "Jutikliai"
+
+#: ../sensors-applet/sensors-applet.h:57
+msgid "RPM"
+msgstr "Apsisukimų per min"
+
+#: ../sensors-applet/sensors-applet.h:58
+msgid "V"
+msgstr "V"
+
+#: ../sensors-applet/sensors-applet.h:59
+msgid "A"
+msgstr "A"
+
+#. hard code text as ERROR
+#: ../sensors-applet/active-sensor.c:581
+msgid "ERROR"
+msgstr "KLAIDA"
+
+#. To translator: Put your name here to show up in the About dialog as the
+#. translator
+#: ../sensors-applet/about-dialog.c:43
+msgid "translator-credits"
+msgstr "Džiugas Grėbliūnas"
+
+#: ../sensors-applet/sensor-config-dialog.c:394
+msgid "Sensor Properties"
+msgstr "Jutiklių savybės"
+
+#. graph stuff
+#: ../sensors-applet/sensor-config-dialog.c:419
+msgid "Graph"
+msgstr "Diagrama"
+
+#: ../sensors-applet/sensor-config-dialog.c:438
+msgid "Graph Color"
+msgstr "Diagramos spalva"
+
+#: ../sensors-applet/sensor-config-dialog.c:441
+msgid "Graph _color"
+msgstr "Grafiko _spalva"
+
+#: ../sensors-applet/sensor-config-dialog.c:503
+msgid "Sensor _icon"
+msgstr "Jutiklio _piktograma"
+
+#: ../sensors-applet/sensor-config-dialog.c:509
+msgid "Scaling Parameters"
+msgstr "Dalijimo nustatymai"
+
+#: ../sensors-applet/sensor-config-dialog.c:542
+msgid "Sensor value _multiplier"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:575
+msgid "Sensor value _offset"
+msgstr "Jutiklio reikšmių p_oslinkis"
+
+#. now do alarm widgets
+#: ../sensors-applet/sensor-config-dialog.c:585
+msgid "Sensor Limits"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:618
+msgid "Sensor _low value"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:653
+msgid "Sensor _high value"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:664
+#: ../sensors-applet/sensors-applet.c:384
+msgid "Alarm"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:696
+msgid "Alarm _repeat interval (secs)"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:716
+msgid "Lo_w alarm command"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:738
+msgid "Hi_gh alarm command"
+msgstr ""
+
+#: ../sensors-applet/sensor-config-dialog.c:752
+msgid "_Enable alarm"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:260
+msgid "_Preferences"
+msgstr "_Nuostatos"
+
+#: ../sensors-applet/sensors-applet.c:263
+msgid "_Help"
+msgstr "_Pagalba"
+
+#: ../sensors-applet/sensors-applet.c:266
+msgid "_About"
+msgstr "_Apie"
+
+#: ../sensors-applet/sensors-applet.c:328
+msgid "is very low"
+msgstr "yra labai žemas"
+
+#: ../sensors-applet/sensors-applet.c:329
+msgid "lower limit"
+msgstr ""
+
+#. assume high alarm condition
+#: ../sensors-applet/sensors-applet.c:334
+msgid "is very high"
+msgstr "yra labai aukštas"
+
+#: ../sensors-applet/sensors-applet.c:335
+msgid "upper limit"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:346
+msgid "Temperature"
+msgstr "Temperatūra"
+
+#: ../sensors-applet/sensors-applet.c:366
+msgid "Voltage"
+msgstr "Įtampa"
+
+#: ../sensors-applet/sensors-applet.c:367
+msgid "voltage"
+msgstr "įtampa"
+
+#: ../sensors-applet/sensors-applet.c:371
+msgid "Fan Speed"
+msgstr "Ventiliatoriaus greitis"
+
+#: ../sensors-applet/sensors-applet.c:372
+msgid "fan speed"
+msgstr "ventiliatoriaus greitis"
+
+#: ../sensors-applet/sensors-applet.c:376
+msgid "Current"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:377
+msgid "current"
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:390
+#, c-format
+msgid "Error updating sensor %s"
+msgstr "Klaida, atnaujinant jutiklį %s"
+
+#: ../sensors-applet/sensors-applet.c:391
+#, c-format
+msgid ""
+"An error occurred while trying to update the value of the sensor %s located "
+"at %s."
+msgstr ""
+
+#: ../sensors-applet/sensors-applet.c:496
+msgid "No sensors enabled!"
+msgstr "Nėra įjungtų jutiklių!"
