@@ -55,8 +55,6 @@ DISTCLEANFILES	= intltool-extract \
 		   	intltool-merge \
 	   	   	intltool-update
 
-DISTCHECK_CONFIGURE_FLAGS	= --disable-scrollkeeper
-
 dist-hook:
 	@if test -d "$(srcdir)/.git"; \
 	then \
