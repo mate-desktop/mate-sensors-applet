@@ -403,7 +403,9 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                                             GTK_STOCK_CLOSE,
                                                             GTK_RESPONSE_CLOSE,
                                                             NULL);
-        
+        gtk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog),
+                                 "sensors-applet");
+
         g_free(header_text);
         g_free(sensor_label);
 
