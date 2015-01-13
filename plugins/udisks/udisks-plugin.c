@@ -73,8 +73,6 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 	guint i;
 	DevInfo *info;
 
-	g_type_init();
-
 	/* This connection will be used for everything, including the obtaining
 	 * of sensor data
 	 */
