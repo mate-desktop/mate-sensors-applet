@@ -4,14 +4,14 @@
 # 
 # Translators:
 # kami911 <kami911@gmail.com>, 2014
-# Rezső Páder <rezso@rezso.net>, 2013
+# Rezső Páder <rezso@rezso.net>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-05-01 19:05+0000\n"
-"Last-Translator: kami911 <kami911@gmail.com>\n"
+"PO-Revision-Date: 2015-03-22 13:01+0000\n"
+"Last-Translator: Rezső Páder <rezso@rezso.net>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,7 +129,7 @@ msgstr "CPU"
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "Grafik CPU"
+msgstr "Grafikus CPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
@@ -138,15 +138,15 @@ msgstr "Kis- és nagybetűk"
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr "Lüfter"
+msgstr "Ventillátor"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "Lüfter 1"
+msgstr "Ventillátor 1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "Lüfter 2"
+msgstr "Ventillátor 2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
@@ -159,7 +159,7 @@ msgstr "Akkumulátor"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "Lüfter"
+msgstr "Ventillátor"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
@@ -176,7 +176,7 @@ msgstr "Ambient"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr "Szenzor Alkalmazás Beállítások"
+msgstr "Szenzor kisalkalmazás beállításai"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
@@ -253,7 +253,7 @@ msgstr "_Frissítési idő (sec)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
-msgstr "Értesítés"
+msgstr "Értesítések"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
@@ -283,7 +283,7 @@ msgstr "Ikon"
 
 #: ../sensors-applet/prefs-dialog.c:986
 msgid "General Options"
-msgstr "Alap Beállítások"
+msgstr "Általános beállítások"
 
 #: ../sensors-applet/prefs-dialog.c:990
 msgid "Sensors"
@@ -314,7 +314,7 @@ msgstr "Páder Rezső <rezso@rezso.net>"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
-msgstr "Szenzor Tulajdonságok"
+msgstr "Szenzor tulajdonságok"
 
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:419
@@ -335,7 +335,7 @@ msgstr "_Szenzor ikon"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr "Skálázási Paraméterek"
+msgstr "Skálázási paraméterek"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"

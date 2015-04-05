@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
+# Adolfo Jayme Barrientos, 2013
 # Davy Defaud <davy.defaud@free.fr>, 2005
+# Emiliano Fascetti, 2015
 # Lluís Tusquellas <lutusq@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2013-05-22 21:31+0000\n"
-"Last-Translator: Lluís Tusquellas <lutusq@gmail.com>\n"
+"PO-Revision-Date: 2015-01-05 01:12+0000\n"
+"Last-Translator: Emiliano Fascetti\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,7 +92,7 @@ msgstr "Si el sensor tiene o no su alarma habilitada"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr "Orden a ejecutar cuando se activa la alarma"
+msgstr "Comando a ejecutar cuando se activa la alarma"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
@@ -370,11 +371,11 @@ msgstr "Intervalo de _repetición de la alarma (s)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr "Orden baj_a de alarma"
+msgstr "Comando baj_a de alarma"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr "Orden alt_a de alarma"
+msgstr "Comando alt_a de alarma"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"

@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Carlos Moreira <crolidge@gmail.com>, 2013
+# Carlos Moreira <crolidge@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-05-24 12:36+0000\n"
+"PO-Revision-Date: 2014-12-31 02:41+0000\n"
 "Last-Translator: Carlos Moreira <crolidge@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -141,11 +142,11 @@ msgstr "VENTOINHA"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "FAN1"
+msgstr "VENTOINHA1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "FAN2"
+msgstr "VENTOINHA2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
@@ -248,7 +249,7 @@ msgstr "Atualizar"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr "Intervalo de atualizações (segundos)"
+msgstr "Intervalo de atualização (segundos)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
@@ -309,7 +310,7 @@ msgstr "ERRO"
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "créditos de tradução"
+msgstr "Carlos Moreira"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
@@ -364,7 +365,7 @@ msgstr "Alarme"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr "Intervalo de _repetição do alarme (em segundos)"
+msgstr "Intervalo de _repetição do alarme (segundos)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"

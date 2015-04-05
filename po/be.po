@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# , 2014
+# , 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-03-28 13:57+0000\n"
-"Last-Translator: meequz <meequz@gmail.com>\n"
+"PO-Revision-Date: 2015-03-20 13:29+0000\n"
+"Last-Translator: Mihail Varantsou <meequz@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/projects/p/MATE/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
 msgid "Font size in points"
-msgstr ""
+msgstr "Памер шрыфта ў пунктах"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
 msgid "Specify if show or hide sensor units"
@@ -57,11 +57,11 @@ msgstr "Спіс сэнсараў"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
-msgstr ""
+msgstr "Шлях да назвы файла"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
 msgid "Sensor device ids"
-msgstr ""
+msgstr "Ідэнтыфікатары прылад сэнсараў"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
 msgid "The sensor device interface"
@@ -69,11 +69,11 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
 msgid "User defined label"
-msgstr ""
+msgstr "Зададзеная карыстальнікам назва"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "Сэнсар уключаны ці не"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
 msgid "Low value"
@@ -101,11 +101,11 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
-msgstr ""
+msgstr "Множнік"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
 msgid "Offset"
-msgstr ""
+msgstr "Зрух"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
 msgid "Icon type"
@@ -121,14 +121,14 @@ msgstr "Колер сэнсара на графіку"
 #: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
 #: ../plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:66
 #: ../plugins/nvidia/nvidia-plugin.c:115
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
@@ -149,7 +149,7 @@ msgstr ""
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
-msgstr ""
+msgstr "MiniPCI"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
@@ -158,7 +158,7 @@ msgstr "Батарэя"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "Вентылятар"
+msgstr "Кулер"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
@@ -171,11 +171,11 @@ msgstr "тэмпература"
 
 #: ../plugins/nvidia/nvidia-plugin.c:131
 msgid "Ambient"
-msgstr ""
+msgstr "Вонкавы"
 
 #: ../sensors-applet/prefs-dialog.c:409
 msgid "Sensors Applet Preferences"
-msgstr "Настаўленні аплета сэнсараў"
+msgstr "Настáўленні аплета сэнсараў"
 
 #: ../sensors-applet/prefs-dialog.c:444
 #: ../sensors-applet/sensors-applet.c:1378
@@ -184,71 +184,71 @@ msgstr "Сэнсары не знойдзены!"
 
 #: ../sensors-applet/prefs-dialog.c:450
 msgid "Display"
-msgstr ""
+msgstr "Выгляд"
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "label with value"
-msgstr ""
+msgstr "назва і значэнне"
 
 #: ../sensors-applet/prefs-dialog.c:463
 msgid "icon with value"
-msgstr ""
+msgstr "значок і значэнне"
 
 #: ../sensors-applet/prefs-dialog.c:464
 msgid "value only"
-msgstr ""
+msgstr "толькі значэнне"
 
 #: ../sensors-applet/prefs-dialog.c:465
 msgid "icon only"
-msgstr ""
+msgstr "толькі значок"
 
 #: ../sensors-applet/prefs-dialog.c:466
 msgid "graph only"
-msgstr ""
+msgstr "толькі графік"
 
 #: ../sensors-applet/prefs-dialog.c:482
 msgid "_Display sensors in panel as"
-msgstr ""
+msgstr "_Паказваць сэнсары ў панэлі як"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr ""
+msgstr "поруч з назвай / значком"
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr ""
+msgstr "ніжэй назвы / значка"
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
-msgstr ""
+msgstr "Пажаданае _месца значэння сэнсара"
 
 #: ../sensors-applet/prefs-dialog.c:521
 msgid "Kelvin"
-msgstr "Кельвін"
+msgstr "Паводле Кельвіна"
 
 #: ../sensors-applet/prefs-dialog.c:522
 msgid "Celsius"
-msgstr "Цэльсій"
+msgstr "Паводле Цэльсія"
 
 #: ../sensors-applet/prefs-dialog.c:523
 msgid "Fahrenheit"
-msgstr "Фарэнгейт"
+msgstr "Паводле Фарэнгейта"
 
 #: ../sensors-applet/prefs-dialog.c:534
 msgid "_Temperature scale"
-msgstr ""
+msgstr "_Тэмпературная шкала"
 
 #: ../sensors-applet/prefs-dialog.c:561
 msgid "Graph _size (pixels)"
-msgstr ""
+msgstr "Памер _графіка (піксэляў)"
 
 #: ../sensors-applet/prefs-dialog.c:574
 msgid "Update"
-msgstr ""
+msgstr "Абнаўленне"
 
 #: ../sensors-applet/prefs-dialog.c:604
 msgid "Update _interval (secs)"
-msgstr ""
+msgstr "Час паміж абнаўленнямі (секунд)"
 
 #: ../sensors-applet/prefs-dialog.c:614
 msgid "Notifications"
@@ -256,7 +256,7 @@ msgstr "Абвяшчэнні"
 
 #: ../sensors-applet/prefs-dialog.c:625
 msgid "Display _notifications"
-msgstr ""
+msgstr "Паказваць _абвяшчэнні"
 
 #: ../sensors-applet/prefs-dialog.c:828
 msgid "Sensor"
@@ -264,11 +264,11 @@ msgstr "Сэнсар"
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr ""
+msgstr "Назва"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "Любую назву можна рэдагаваць, пстрыкнуўшы па ёй."
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
@@ -290,15 +290,15 @@ msgstr "Сэнсары"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
-msgstr ""
+msgstr "В"
 
 #: ../sensors-applet/sensors-applet.h:59
 msgid "A"
-msgstr ""
+msgstr "А"
 
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:581
@@ -309,7 +309,7 @@ msgstr "ПАМЫЛКА"
 #. translator
 #: ../sensors-applet/about-dialog.c:43
 msgid "translator-credits"
-msgstr "Міхась Варанцоў <meequz@gmail.com>, 2014"
+msgstr "Mikhas Varantsou <meequz@gmail.com>, 2014-2015"
 
 #: ../sensors-applet/sensor-config-dialog.c:394
 msgid "Sensor Properties"
@@ -322,11 +322,11 @@ msgstr "Графік"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr ""
+msgstr "Колер графіка"
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr ""
+msgstr "Колер _графіка"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
@@ -334,15 +334,15 @@ msgstr "Значок _сэнсара"
 
 #: ../sensors-applet/sensor-config-dialog.c:509
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "Параметры шкалы"
 
 #: ../sensors-applet/sensor-config-dialog.c:542
 msgid "Sensor value _multiplier"
-msgstr ""
+msgstr "_Множнік значэння"
 
 #: ../sensors-applet/sensor-config-dialog.c:575
 msgid "Sensor value _offset"
-msgstr ""
+msgstr "_Зрух значэння"
 
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
@@ -360,19 +360,19 @@ msgstr "_Верхняе значэнне сэнсара"
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr ""
+msgstr "Трывога"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr ""
+msgstr "Інтэрвал _паўтарэння сігналу трывогі (секунд)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "Загад для н_ізкага значэння"
 
 #: ../sensors-applet/sensor-config-dialog.c:738
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "Загад для вы_сокага значэння"
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
@@ -380,7 +380,7 @@ msgstr "_Уключыць сігнал трывогі"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
-msgstr "_Настаўленні"
+msgstr "_Настáўленні"
 
 #: ../sensors-applet/sensors-applet.c:263
 msgid "_Help"
@@ -409,23 +409,23 @@ msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:346
 msgid "Temperature"
-msgstr ""
+msgstr "Тэмпература"
 
 #: ../sensors-applet/sensors-applet.c:366
 msgid "Voltage"
-msgstr ""
+msgstr "Напружанне"
 
 #: ../sensors-applet/sensors-applet.c:367
 msgid "voltage"
-msgstr ""
+msgstr "напружанне"
 
 #: ../sensors-applet/sensors-applet.c:371
 msgid "Fan Speed"
-msgstr ""
+msgstr "Хуткасць кулера"
 
 #: ../sensors-applet/sensors-applet.c:372
 msgid "fan speed"
-msgstr ""
+msgstr "хуткасць кулера"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
@@ -438,14 +438,14 @@ msgstr ""
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "Памылка абнаўлення сэнсара %s"
 
 #: ../sensors-applet/sensors-applet.c:391
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "Узнікла памылка падчас спробы абнавіць значэнне сэнсара %s, што месціцца ў %s."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"

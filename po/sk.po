@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2014
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2015
 # Juraj Oravec <sgd.orava@gmail.com>, 2013
 # Juraj Oravec <sgd.orava@gmail.com>, 2013
 # Tibor Kaputa <tibbbi2@gmail.com>, 2014
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-05-14 18:49+0000\n"
+"PO-Revision-Date: 2015-03-19 15:18+0000\n"
 "Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -215,11 +215,11 @@ msgstr "_Zobraziť senzor v paneli ako"
 
 #: ../sensors-applet/prefs-dialog.c:497
 msgid "beside labels / icons"
-msgstr "vedľa menovky / ikon"
+msgstr "vedľa popiskov / ikon"
 
 #: ../sensors-applet/prefs-dialog.c:498
 msgid "below labels / icons"
-msgstr "pod menovkami / ikonami"
+msgstr "pod popiskami / ikonami"
 
 #: ../sensors-applet/prefs-dialog.c:509
 msgid "Preferred _position of sensor values"
@@ -267,11 +267,11 @@ msgstr "Senzor"
 
 #: ../sensors-applet/prefs-dialog.c:835
 msgid "Label"
-msgstr "Menovka"
+msgstr "Popisok"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Labels can be edited directly by clicking on them."
-msgstr "Menovky môžu byť upravené priamo kliknutím na ne"
+msgstr "Popisky môžu byť upravené priamo kliknutím na ne"
 
 #: ../sensors-applet/prefs-dialog.c:846
 msgid "Enabled"
