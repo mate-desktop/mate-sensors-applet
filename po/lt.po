@@ -6,13 +6,13 @@
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
 # GiedriusS <inactive+GiedriusS@transifex.com>, 2014
 # brennus <jonas.ska@gmail.com>, 2014
-# Moo, 2014
+# Moo, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-11-18 21:13+0000\n"
+"PO-Revision-Date: 2015-04-23 11:34+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/projects/p/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "CPU"
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "Vaizdo ploštė"
+msgstr "Vaizdo plokštė"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
@@ -350,7 +350,7 @@ msgstr "Jutiklio reikšmių p_oslinkis"
 #. now do alarm widgets
 #: ../sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor Limits"
-msgstr ""
+msgstr "Jutiklio Ribos"
 
 #: ../sensors-applet/sensor-config-dialog.c:618
 msgid "Sensor _low value"
@@ -363,11 +363,11 @@ msgstr ""
 #: ../sensors-applet/sensor-config-dialog.c:664
 #: ../sensors-applet/sensors-applet.c:384
 msgid "Alarm"
-msgstr ""
+msgstr "Signalas"
 
 #: ../sensors-applet/sensor-config-dialog.c:696
 msgid "Alarm _repeat interval (secs)"
-msgstr ""
+msgstr "Signalo ka_rtojimo intervalas (sek)"
 
 #: ../sensors-applet/sensor-config-dialog.c:716
 msgid "Lo_w alarm command"
@@ -379,7 +379,7 @@ msgstr ""
 
 #: ../sensors-applet/sensor-config-dialog.c:752
 msgid "_Enable alarm"
-msgstr ""
+msgstr "Į_jungti signalą"
 
 #: ../sensors-applet/sensors-applet.c:260
 msgid "_Preferences"
@@ -432,11 +432,11 @@ msgstr "ventiliatoriaus greitis"
 
 #: ../sensors-applet/sensors-applet.c:376
 msgid "Current"
-msgstr ""
+msgstr "Dabartinė"
 
 #: ../sensors-applet/sensors-applet.c:377
 msgid "current"
-msgstr ""
+msgstr "dabartinė"
 
 #: ../sensors-applet/sensors-applet.c:390
 #, c-format
@@ -448,7 +448,7 @@ msgstr "Klaida, atnaujinant jutiklį %s"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "Įvyko klaida, bandant atnaujinti %s jutiklio, esančio %s, reikšmę."
 
 #: ../sensors-applet/sensors-applet.c:496
 msgid "No sensors enabled!"

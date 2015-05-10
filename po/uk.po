@@ -6,13 +6,13 @@
 # Микола Ткач <Stuartlittle1970@gmail.com>, 2013
 # zubr139, 2013
 # zubr139, 2013
-# Микола Ткач <Stuartlittle1970@gmail.com>, 2014
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2014-09-18 14:34+0000\n"
+"PO-Revision-Date: 2015-05-09 06:43+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Розмір графіка у пікселях (ширина, якщо 
 
 #: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
 msgid "List of sensors"
-msgstr "Список датчиків"
+msgstr "Перелік датчиків"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
 msgid "Path to filename"
@@ -100,7 +100,7 @@ msgstr "Як часто кожен сигнал тривоги має звуча
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Використовується для визначення датчика у списку"
+msgstr "Використовується для визначення датчика у переліку"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
 msgid "Multiplier"
@@ -325,11 +325,11 @@ msgstr "Графік"
 
 #: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph Color"
-msgstr "Колір графіка"
+msgstr "Колір графіку"
 
 #: ../sensors-applet/sensor-config-dialog.c:441
 msgid "Graph _color"
-msgstr "_Колір графіка"
+msgstr "_Колір графіку"
 
 #: ../sensors-applet/sensor-config-dialog.c:503
 msgid "Sensor _icon"
