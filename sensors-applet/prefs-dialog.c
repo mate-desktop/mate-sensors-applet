@@ -408,7 +408,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
         prefs_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(_("Sensors Applet Preferences"),
                                                                       NULL,
-                                                                      GTK_DIALOG_MODAL,
+                                                                      0,
                                                                       GTK_STOCK_HELP,
                                                                       GTK_RESPONSE_HELP,
                                                                       GTK_STOCK_CLOSE,
