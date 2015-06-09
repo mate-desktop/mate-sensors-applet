@@ -549,8 +549,14 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
         case DISPLAY_VALUE:
                 gtk_widget_size_request(GTK_WIDGET(first_sensor->value),
                                         &req);
+/* FIXME, this can be done better somewhere for cairo */
+#if GTK_CHECK_VERSION (3, 0, 0)
+                value_width = req.width + COLUMN_SPACING + 10;
+                value_height = req.height + ROW_SPACING + 10;
+#else
                 value_width = req.width + COLUMN_SPACING;
                 value_height = req.height + ROW_SPACING;
+#endif
 
                 /* make sure all widths and heights are non zero,
                  * otherwise will get a divide by zero exception below
@@ -572,6 +578,16 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                  * widgets directly */
                 gtk_widget_size_request(GTK_WIDGET(first_sensor->value),
                                         &req);
+/* FIXME, this can be done better somewhere for cairo */
+#if GTK_CHECK_VERSION (3, 0, 0)
+                value_width = req.width + COLUMN_SPACING + 10;
+                value_height = req.height + ROW_SPACING + 10;
+
+                gtk_widget_size_request(GTK_WIDGET(first_sensor->label),
+                                        &req);
+                label_width = req.width + COLUMN_SPACING + 10;
+                label_height = req.height + ROW_SPACING + 10;
+#else
                 value_width = req.width + COLUMN_SPACING;
                 value_height = req.height + ROW_SPACING;
 
@@ -579,6 +595,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                                         &req);
                 label_width = req.width + COLUMN_SPACING;
                 label_height = req.height + ROW_SPACING;
+#endif
         
                 /* make sure all widths and heights are non zero, otherwise
                  * will get a divide by zero exception below 
@@ -609,6 +626,16 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
         case DISPLAY_ICON_WITH_VALUE:
                 gtk_widget_size_request(GTK_WIDGET(first_sensor->value),
                                         &req);
+/* FIXME, this can be done better somewhere for cairo */
+#if GTK_CHECK_VERSION (3, 0, 0)
+                value_width = req.width + COLUMN_SPACING +10;
+                value_height = req.height + ROW_SPACING + 10;
+
+                gtk_widget_size_request(GTK_WIDGET(first_sensor->icon),
+                                        &req);
+                icon_width = req.width + COLUMN_SPACING + 10;
+                icon_height = req.height + ROW_SPACING + 10;
+#else
                 value_width = req.width + COLUMN_SPACING;
                 value_height = req.height + ROW_SPACING;
 
@@ -616,6 +643,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                                         &req);
                 icon_width = req.width + COLUMN_SPACING;
                 icon_height = req.height + ROW_SPACING;
+#endif
                 
                 if (!(icon_width && icon_height &&
                       value_width && value_height)) {
@@ -641,8 +669,14 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
         case DISPLAY_ICON:
                 gtk_widget_size_request(GTK_WIDGET(first_sensor->icon),
                                         &req);
+/* FIXME, this can be done better somewhere for cairo */
+#if GTK_CHECK_VERSION (3, 0, 0)
+                icon_width = req.width + COLUMN_SPACING + 10;
+                icon_height = req.height + ROW_SPACING + 10;
+#else
                 icon_width = req.width + COLUMN_SPACING;
                 icon_height = req.height + ROW_SPACING;
+#endif
                 if (!(icon_width && icon_height)) {
                         return;
                 }
