@@ -64,7 +64,7 @@ void prefs_dialog_response(GtkDialog *prefs_dialog,
         case GTK_RESPONSE_HELP:
                 g_debug("loading help in prefs");
                 current_page = gtk_notebook_get_current_page(sensors_applet->prefs_dialog->notebook);
-		uri = g_strdup_printf("http://wiki.mate-desktop.org/docs:mate-sensors-applet#%s",
+		uri = g_strdup_printf("help:mate-sensors-applet#%s",
 				      ((current_page == 0) ?
 				       "general_options" :
 				       ((current_page == 1) ?
