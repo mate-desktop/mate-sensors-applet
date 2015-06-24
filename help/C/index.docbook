@@ -2,13 +2,13 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appletversion "1.6">
-  <!ENTITY manrevision "2.0">
+  <!ENTITY appletversion "1.10">
+  <!ENTITY manrevision "2.1">
   <!ENTITY date "January 2006">
   <!ENTITY applet "MATE Sensors Applet">
   <!ENTITY author-name "Alex Murray">
   <!ENTITY author-email "murray.alex@gmail.com">
-  <!ENTITY project-webpage "http://sensors-applet.sourceforge.net/">
+  <!ENTITY project-webpage "https://github.com/mate-desktop/mate-sensors-applet/">
   <!-- Information about the entities.
        The legal.xml file contains legal information, there is no need to edit the file. 
        Use the appletversion entity to specify the version of the applet.
@@ -20,7 +20,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://developer.mate.org/projects/gdp
+  http://www.mate-desktop.org/development/
   Template version: 2.0 beta
   Template last modified Feb 06, 2003
 -->
@@ -30,6 +30,10 @@
   <!-- appropriate code -->
   <articleinfo> 
     <title>&applet; Manual V&manrevision;</title>
+    <copyright> 
+      <year>2015</year> 
+      <holder>MATE Development</holder>
+    </copyright>
     <copyright> 
       <year>2006</year> 
       <holder>&author-name;</holder> 
@@ -60,6 +64,16 @@
     any of this. -->
 
     <authorgroup> 
+      <author role="maintainer"> 
+	<surname>MATE Development</surname> 
+	<affiliation> 
+	  <!-- <orgname>MATE Documentation
+	  Project</orgname> -->
+	  <!-- The email address of the author is optional and is commented out by default. 
+	  <address> <email>doc-writer2@mate.org</email> </address> 
+	  --> 
+	</affiliation> 
+      </author> 
       <author role="maintainer"> 
 	<firstname>Alex</firstname> 
 	<surname>Murray</surname> 
@@ -631,9 +645,10 @@ Alarms for individual sensors must also be enabled.
 
   <sect1 id="myapplet-about">
     <title>About &applet;</title>
-    <para>
-      <application>&applet;</application> was written by Alex Murray
-      (<email>murray.alex@gmail.com</email>). To find more information about
+    <para> The origin sensor applet was written by Alex Murray
+      (<email>murray.alex@gmail.com</email>).
+      <application>&applet;</application> is further develop by Mate dev team.
+      To find more information about
       <application>&applet;</application>, please visit the <ulink
         url="&project-webpage;" type="http">&applet; Project
         Homepage</ulink>. 
