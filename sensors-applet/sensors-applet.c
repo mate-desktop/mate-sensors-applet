@@ -78,7 +78,7 @@ static void help_cb(GtkAction *action,
 
         GError *error = NULL;
         
-        gtk_show_uri(NULL, "http://wiki.mate-desktop.org/docs:mate-sensors-applet",
+        gtk_show_uri(NULL, "help:mate-sensors-applet",
 		     gtk_get_current_event_time(),
 		     &error);
         

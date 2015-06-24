@@ -546,17 +546,17 @@ Alarms for individual sensors must also be enabled.
 		    </term>
 		    <listitem>
 		      <para>
-			The program <command>matedialog</command> can be used to create
+			The program <command>zenity</command> can be used to create
 			dialog boxes to be displayed on the users current
 			display, and can thus be used to create pop-up
 			style notifications that the alarm has
 			occurred.
 
-		      <screen><userinput><command>matedialog --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
+		      <screen><userinput><command>zenity --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
 
-		      For more information regarding MateDialog please
-		      consult the MateDialog <ulink type="help"
-			url="help:matedialog">documentation</ulink>.
+		      For more information regarding Zenity please
+		      consult the Zenity <ulink type="help"
+			url="help:zenity">documentation</ulink>.
 		    </para>
 		  </listitem>
 		  </varlistentry>
@@ -571,9 +571,9 @@ Alarms for individual sensors must also be enabled.
 		      Multiple commands can be executed one after the
 		      other using the "&amp;&amp;" construct to separate
 		      them. To play a sound and pop-up a dialog via
-		      MateDialog the follow command can be used:
+		      Zenity the follow command can be used:
 
-		      <screen><userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; matedialog --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
+		      <screen><userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; zenity --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
 
 		    </para>
 		  </listitem>
@@ -609,67 +609,7 @@ Alarms for individual sensors must also be enabled.
       
     </sect2>
   </sect1> 
-  <sect1>
-    <title>Advanced Options</title>
-    <para>There are a number of advanced options which can be set to
-    customize the display of sensors within the panel, which are set
-    using the MateConf system.</para>
-    <variablelist>
-      <varlistentry>
-	<term><guilabel>Font Size</guilabel></term>
-	<listitem>
-	  <para>The font size for labels and values is normally
-	  derived from the standard Application Font size of the MATE
-	  Desktop, however this can be overridden. This is done by
-	    setting the value of the parameter
 
-	  <emphasis>/apps/sensors-applet/font-size</emphasis>
-
-	    within the user's MateConf database. This can be achieved by
-	  the following command, where the font size is specified as
-	  the last parameter, and in this case is set to
-	  <emphasis>10</emphasis>:
-
-	    <!-- CAN"T HAVE ANY LINE BREAKS IN COMMAND -->
-	    <screen><userinput><command>mateconftool-2 -s /apps/sensors-applet/font-size -t int 10</command></userinput></screen>
-	  </para>
-
-	  <note>
-	    <para>To reset the value so that the default font size is
-	      not overridden, a font size of <emphasis>0</emphasis>
-	      should be set.
-	    </para>
-	  </note>
-
-	</listitem>
-      </varlistentry>
-      <varlistentry>
-	<term><guilabel>Hide Units</guilabel></term>
-	<listitem>
-	  <para>The units for sensor values can also be hidden if
-	  desired by setting the boolean value
-
-	  <emphasis>/apps/sensors-applet/hide-units</emphasis>
-
-	    within the user's MateConf database. This can be achieved by
-	  the following command, where the value is specified as
-	  either <emphasis>true</emphasis> or
-	  <emphasis>false</emphasis> and is specified as the last
-	  parameter. In this case is the units will be hidden (the
-	  value is set to <emphasis>true</emphasis>):
-	    <!-- CAN"T HAVE ANY LINE BREAKS IN COMMAND -->
-	    <screen><userinput><command>mateconftool-2 -s /apps/sensors-applet/hide-units -t bool true</command></userinput></screen>
-	  </para>
-	</listitem>
-      </varlistentry>
-    </variablelist>
-    <note>
-      <para>These values can also be set using the <ulink type="help"
-	url="help:mateconf-editor">Configuration Editor</ulink>
-	application.
-      </para>
-      </note>
-  </sect1>
   <!-- ============= Bugs ================================== -->
   <!-- This section is optional and is commented out by default. 
   You can use it to describe known bugs and limitations of the 
@@ -729,5 +669,4 @@ Alarms for individual sensors must also be enabled.
 <!-- Local IspellDict: english -->
 <!-- LocalWords: hddtemp filesystem proc lm README Inspiron windtunnel -->
 <!-- LocalWords: ibm ACPI sysfs PowerPC adt Omnibook NVIDIA -->
-<!-- LocalWords: libNVCtrl libsensors nvidia esdplay aplay ALSA matedialog -->
-<!-- LocalWords: acpi iMac Windfarm nvidia mateconftool MateConf bool -->
+<!-- LocalWords: libNVCtrl libsensors nvidia esdplay aplay ALSA zenity -->
