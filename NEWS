@@ -1,4 +1,9 @@
+1.10.2
+
+  * Reintroduce missing help
+
 1.10.1
+
   * Fix sensor config dialog (was non-responsive)
   * Fix display of sensors in GTK+3 build
   * Updated translations
