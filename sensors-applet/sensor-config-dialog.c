@@ -80,7 +80,7 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
         case GTK_RESPONSE_HELP:
                 g_debug("loading help in config dialog");
                 gtk_show_uri(NULL,
-			     "help:mate-sensors-applet/sensors-applet-sensor-config-dialog",
+			     "help:mate-sensors-applet/sensors-applet-sensors#sensors-applet-sensor-config-dialog",
 			     gtk_get_current_event_time(),
 			     &error);
                 
