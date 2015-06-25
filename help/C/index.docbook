@@ -126,14 +126,6 @@
     </revhistory> 
     <releaseinfo> This manual describes version &appletversion; of &applet;.
     </releaseinfo> 
-    <legalnotice> 
-      <title>Feedback</title> 
-      <para> To report a bug or make a suggestion regarding &applet; or this
-	manual, follow the directions at the
-	<ulink url="&project-webpage;"
-	  type="http">&applet; Project Homepage</ulink>. </para>
-      
-    </legalnotice> 
   </articleinfo> 
   <indexterm zone="index"> 
     <primary>&applet;</primary> 
