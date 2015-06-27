@@ -242,7 +242,7 @@ AC_ARG_WITH(aticonfig,
 	with_aticonfig="check"
 ])
 
-if test "x$with_aticonfig" == "xcheck"; then
+if test "x$with_aticonfig" = "xcheck"; then
 	AC_CHECK_PROG(ATICONFIG_EXE, ["$aticonfig_exe"], yes, no)
         if test "x$ATICONFIG_EXE" = "xno"; then
 		with_aticonfig="no"
