@@ -7,6 +7,7 @@ AC_CONFIG_SRCDIR([sensors-applet/main.c])
 AC_CONFIG_HEADERS([sensors-applet/config.h])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([dist-xz no-dist-gzip check-news])
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 AM_MAINTAINER_MODE
 
 # ============== basic compiler settings ============= #
