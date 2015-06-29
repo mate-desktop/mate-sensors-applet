@@ -141,7 +141,6 @@ static void size_allocate_cb(MatePanelApplet *applet,
         SensorsApplet *sensors_applet;
         MatePanelAppletOrient orient;
 
-        g_debug("size-allocate occurred");
         sensors_applet = (SensorsApplet *)data;
         orient = mate_panel_applet_get_orient(sensors_applet->applet);
         
@@ -176,8 +175,6 @@ static void style_set_cb(GtkWidget *widget,
         DisplayMode display_mode;
 
         sensors_applet = (SensorsApplet *)data;
-
-        g_debug("set-style occurred");
 
         display_mode = g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
         if (sensors_applet->sensors) {
