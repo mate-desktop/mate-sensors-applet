@@ -34,6 +34,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
 
     /* Construct the about dialog */
     gtk_show_about_dialog(NULL,
+                  "icon-name", "mate-sensors-applet",
                   "program-name", PACKAGE_NAME, 
                   "version", PACKAGE_VERSION,
                   "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>",
