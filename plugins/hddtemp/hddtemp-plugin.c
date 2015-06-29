@@ -36,6 +36,10 @@
 #include <arpa/inet.h>
 #endif
 
+#ifdef HAVE_STRING_H
+#include <string.h>
+#endif
+
 #include <unistd.h>
 #include <glib.h>
 #include "hddtemp-plugin.h"
@@ -54,11 +58,13 @@ enum {
 	
 };
 
+static gchar buffer[HDDTEMP_OUTPUT_BUFFER_LENGTH];
+
 static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
 	int sockfd;
 	ssize_t n = 1;
-	gboolean first_run = FALSE;
-	gint output_length = 0;
+	guint output_length = 0;
+	static gboolean first_run = TRUE;
 	gchar *pc;
 
 	struct sockaddr_in address;
@@ -66,11 +72,9 @@ static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
 	static GTimeVal previous_query_time;
 	GTimeVal current_query_time;
 
-	if (NULL == buffer) {
-		// initialise buffer and current time
-		buffer = g_new0(char, HDDTEMP_OUTPUT_BUFFER_LENGTH);
+	if (first_run) {
+		// initialise previous time
 		g_get_current_time(&previous_query_time);
-		first_run = TRUE;
 	}
 	g_get_current_time(&current_query_time);
 
@@ -85,29 +89,27 @@ static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
 			g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, HDDTEMP_SOCKET_OPEN_ERROR, "Error opening socket for hddtemp");
 			return NULL;
 		}
-		
+
 		address.sin_family = AF_INET;
 		address.sin_addr.s_addr = inet_addr(HDDTEMP_SERVER_IP_ADDRESS);
 		address.sin_port = htons(HDDTEMP_PORT_NUMBER);
 
-		if (connect(sockfd, (struct sockaddr *)&address, (socklen_t)sizeof(address)) == -1) {
+		if (connect(sockfd, (struct sockaddr *)&address,
+                            (socklen_t)sizeof(address)) == -1) {
 			g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, HDDTEMP_SOCKET_CONNECT_ERROR, "Error connecting to hddtemp daemon on port %i on %s", htons(HDDTEMP_PORT_NUMBER), HDDTEMP_SERVER_IP_ADDRESS);
 			return NULL;
 		}
-
+		memset(buffer, 0, sizeof(buffer));
 		pc = buffer;
-		while ((n = read(sockfd, pc, HDDTEMP_OUTPUT_BUFFER_LENGTH - output_length)) > 0) {
+		while ((n = read(sockfd, pc,
+                                 sizeof(buffer) - output_length)) > 0) {
 			output_length += n;
-			pc = &pc[n];
+			pc += n;
 		}
-		/* terminate with pipe if not already terminated */
-		if (buffer[n - 1] != '|') {
-			buffer[n++] = '|';
-		} 
-		/* always null terminate the end of the buffer
-		 * regardless of how much stuff is in it already */
-		buffer[output_length] = '\0';  
+		/* always null terminate the end of the buffer */
+		buffer[MIN(output_length, sizeof(buffer) - 1)] = '\0';
 		close(sockfd);
+		first_run = FALSE;
 	}
 
 	return buffer;
@@ -161,7 +163,6 @@ static void hddtemp_plugin_get_sensors(GList **sensors) {
 		pv += 5; 
 	}
 	g_strfreev(output_vector);
-        
 }
 
 /* to be called to setup for hddtemp sensors */
