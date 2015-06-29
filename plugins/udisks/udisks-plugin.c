@@ -41,9 +41,9 @@
 typedef struct _DevInfo{
 	gchar *path;
 	gchar *id;
-	gboolean changed;
 	gdouble temp;
 	DBusGProxy *sensor_proxy;
+	GError *error;
 } DevInfo;
 
 const gchar *plugin_name = "udisks";
@@ -53,17 +53,78 @@ GHashTable *devices = NULL;
 /* This is a global variable for convenience */
 DBusGConnection *connection;
 
+static void update_device(DevInfo *info)
+{
+	DBusGProxy *sensor_proxy;
+	GValue smart_time = { 0, };
+	SkDisk *sk_disk;
+	GValue smart_blob_val = { 0, };
+	GArray *smart_blob;
+	guint64 temperature;
+
+	g_return_if_fail(info != NULL);
+
+	g_clear_error(&info->error);
+
+	sensor_proxy = dbus_g_proxy_new_for_name(connection,
+						 UDISKS_BUS_NAME,
+						 info->path,
+						 UDISKS_PROPERTIES_INTERFACE);
+
+	if (!dbus_g_proxy_call(sensor_proxy, "Get", NULL,
+			       G_TYPE_STRING, UDISKS_BUS_NAME,
+			       G_TYPE_STRING, "DriveAtaSmartTimeCollected", G_TYPE_INVALID,
+			       G_TYPE_VALUE, &smart_time,
+			       G_TYPE_INVALID) ||
+	    !g_value_get_uint64(&smart_time))
+	{
+		g_object_unref(sensor_proxy);
+		return;
+	}
+
+	if (!dbus_g_proxy_call(sensor_proxy, "Get", &info->error,
+			      G_TYPE_STRING, UDISKS_BUS_NAME,
+			      G_TYPE_STRING, "DriveAtaSmartBlob", G_TYPE_INVALID,
+			      G_TYPE_VALUE, &smart_blob_val,
+			      G_TYPE_INVALID))
+	{
+		g_debug("Error getting DriveAtaSmartBlob %s",
+			info->error ? info->error->message : "NULL");
+		g_object_unref(sensor_proxy);
+		return;
+	}
+	smart_blob = g_value_get_boxed(&smart_blob_val);
+
+	sk_disk_open(NULL, &sk_disk);
+	sk_disk_set_blob(sk_disk, smart_blob->data, smart_blob->len);
+	if (sk_disk_smart_get_temperature(sk_disk, &temperature) < 0)
+	{
+		g_debug("Error getting temperature from AtaSmartBlob");
+		g_free(sk_disk);
+		g_array_free(smart_blob, TRUE);
+		g_object_unref(sensor_proxy);
+		return;
+	}
+
+	/* Temperature is in mK, so convert it to K first */
+	temperature /= 1000;
+	info->temp = (gdouble)temperature - 273.15;
+
+	g_free(sk_disk);
+	g_array_free(smart_blob, TRUE);
+	g_object_unref(sensor_proxy);
+}
 
 /* This is the handler for the Changed() signal emitted by UDisks. */
 static void udisks_changed_signal_cb(DBusGProxy *sensor_proxy) {
-	const gchar *path = dbus_g_proxy_get_path(sensor_proxy);
+	const gchar *path;
 	DevInfo *info;
 
+	path = dbus_g_proxy_get_path(sensor_proxy);
+	g_debug("%s changed()", path);
 	info = g_hash_table_lookup(devices, path);
-	if (info)
-	{
-		info->changed = TRUE;
-	}
+
+	update_device(info);
 }
 
 static void udisks_plugin_get_sensors(GList **sensors) {
@@ -107,7 +168,8 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 			   error->message);
 		g_error_free(error);
 		g_object_unref(proxy);
-		dbus_g_connection_unref (connection);
+		dbus_g_connection_unref(connection);
+		connection = NULL;
 		return;
 	}
 
@@ -171,7 +233,8 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 								 UDISKS_DEVICE_INTERFACE_NAME);
 
 			/* Use the Changed() signal emitted from UDisks to
-			 * get the temperature without always polling
+			 * get the temperature immediately if it changes rather
+			 * than waiting to poll
 			 */
 			dbus_g_proxy_add_signal(sensor_proxy, "Changed",
 						G_TYPE_INVALID);
@@ -187,7 +250,7 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 
 			gchar *id = ids != NULL && ids[0] != NULL ? ids[0] : dev;
 
-			info = g_malloc(sizeof(DevInfo));
+			info = g_malloc0(sizeof(DevInfo));
 			if (devices == NULL)
 			{
 				devices = g_hash_table_new(g_str_hash,
@@ -199,7 +262,7 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 			/* Set the device status changed as TRUE because we need
 			 * to get the initial temperature reading
 			 */
-			info->changed = TRUE;
+			info->temp = 0.0;
 			g_hash_table_insert(devices, info->id, info);
 
 			/* Write the sensor data */
@@ -229,21 +292,17 @@ static void udisks_plugin_get_sensors(GList **sensors) {
 	g_ptr_array_free(paths, TRUE);
 	g_object_unref(proxy);
 	if (devices == NULL)
-		dbus_g_connection_unref (connection);
+	{
+		dbus_g_connection_unref(connection);
+		connection = NULL;
+	}
 }
 
 static gdouble udisks_plugin_get_sensor_value(const gchar *path,
 					      const gchar *id,
 					      SensorType type,
 					      GError **error) {
-	GValue smart_blob_val = { 0, };
-	GArray *smart_blob;
-	gdouble temperature;
-	guint64 temperature_placer;
-	DBusGProxy *sensor_proxy;
-	guint count;
 	DevInfo *info;
-	SkDisk *sk_disk;
 
 	info = (DevInfo *)g_hash_table_lookup(devices, path);
 	if (info == NULL)
@@ -253,55 +312,15 @@ static gdouble udisks_plugin_get_sensor_value(const gchar *path,
 		return 0.0;
 	}
 
-	/* If the device has changed, we find the new temperature and return
-	 * it
-	 */
-	if (info->changed)
+	if (info->error)
 	{
-		GValue smart_time = { 0, };
-		sensor_proxy = dbus_g_proxy_new_for_name(connection,
-							 UDISKS_BUS_NAME,
-							 info->path,
-							 UDISKS_PROPERTIES_INTERFACE);
-		if (!dbus_g_proxy_call(sensor_proxy, "Get", error,
-				       G_TYPE_STRING, UDISKS_BUS_NAME,
-				       G_TYPE_STRING, "DriveAtaSmartTimeCollected", G_TYPE_INVALID,
-				       G_TYPE_VALUE, &smart_time,
-				       G_TYPE_INVALID) ||
-		    !g_value_get_uint64(&smart_time))
-		{
-			g_debug("Smart data has not been collected yet... returning 0.0 temp for now to avoid waking drive up unnecessarily");
-			g_object_unref(sensor_proxy);
-			return 0.0;
-		}
-
-		if (dbus_g_proxy_call(sensor_proxy, "Get", error,
-				      G_TYPE_STRING, UDISKS_BUS_NAME,
-				      G_TYPE_STRING, "DriveAtaSmartBlob", G_TYPE_INVALID,
-				      G_TYPE_VALUE, &smart_blob_val,
-				      G_TYPE_INVALID))
-		{
-			smart_blob = g_value_get_boxed(&smart_blob_val);
-
-			sk_disk_open(NULL, &sk_disk);
-			sk_disk_set_blob (sk_disk, smart_blob->data, smart_blob->len);
-			/* Note: A gdouble cannot be passed in through a cast as it is likely that the
-			 * temperature is placed in it purely through memory functions, hence a guint64
-			 * is passed and the number is then placed in a gdouble manually 
-			 */
-			sk_disk_smart_get_temperature (sk_disk, &temperature_placer);
-			temperature = temperature_placer;
-
-			/* Temperature is in mK, so convert it to K first */
-			temperature /= 1000;
-			info->temp = temperature - 273.15;
-			info->changed = FALSE;
-
-			g_free (sk_disk);
-			g_array_free(smart_blob, TRUE);
-		}
-		g_object_unref(sensor_proxy);
+		*error = info->error;
+		info->error = NULL;
+		return 0.0;
 	}
+	/* update value since Changed() signal doesn't fire manually enough so
+	 * poll instead */
+	update_device(info);
 	return info->temp;
 }
 
