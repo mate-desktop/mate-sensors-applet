@@ -8,6 +8,7 @@ DIST_SUBDIRS = \
 	i8k \
 	ibm-acpi \
         libsensors \
+	mbmon \
         nvidia \
 	omnibook \
 	pmu-sys \
@@ -21,6 +22,7 @@ SUBDIRS = \
 	hddtemp \
 	i8k \
 	ibm-acpi \
+	mbmon \
 	omnibook \
 	pmu-sys \
 	smu-sys \

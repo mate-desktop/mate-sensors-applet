@@ -291,6 +291,7 @@ AC_CONFIG_FILES([
 	plugins/i8k/Makefile
 	plugins/ibm-acpi/Makefile
 	plugins/libsensors/Makefile
+	plugins/mbmon/Makefile
 	plugins/nvidia/Makefile
 	plugins/aticonfig/Makefile
 	plugins/omnibook/Makefile
