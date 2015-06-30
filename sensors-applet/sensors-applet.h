@@ -183,4 +183,21 @@ void sensors_applet_find_sensors(SensorsApplet *sensors_applet,
                                  const gchar *path,
                                  SensorsInterfaceTestSensorFunc test_sensor);
 
+gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
+                                   const gchar *path,
+                                   const gchar *id,
+                                   const gchar *label,
+                                   const gchar *interface,
+                                   SensorType type,
+                                   gboolean enable,
+                                   gdouble low_value,
+                                   gdouble high_value,
+                                   gboolean alarm_enable,
+                                   const gchar *low_alarm_command,
+                                   const gchar *high_alarm_command,
+                                   gint alarm_timeout,
+                                   gdouble multiplier,
+                                   gdouble offset,
+                                   IconType icon_type,
+                                   const gchar *graph_color);
 #endif /* SENSORS_APPLET_H */
