@@ -36,6 +36,7 @@
 #include <arpa/inet.h>
 #endif
 
+#include <unistd.h>
 #include "mbmon-plugin.h"
 
 const gchar *plugin_name = "mbmon";
