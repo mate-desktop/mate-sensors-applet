@@ -151,9 +151,9 @@ static void hddtemp_plugin_get_sensors(GList **sensors) {
 	pv = output_vector = g_strsplit(hddtemp_output, "|", -1);
 	
 	while(pv[1] != NULL) {
-		if (strcmp(pv[2], "") != 0 &&
-		    strcmp(pv[3], "") != 0 &&
-		    strcmp(pv[4], "") != 0 &&
+		if (g_strcmp0(pv[2], "") != 0 &&
+		    g_strcmp0(pv[3], "") != 0 &&
+		    g_strcmp0(pv[4], "") != 0 &&
 		    (!(g_ascii_strcasecmp(pv[2], "???") == 0 ||
 		       g_ascii_strcasecmp(pv[3], "ERR") == 0 ||
 		       g_ascii_strcasecmp(pv[4], "*") == 0))) {
