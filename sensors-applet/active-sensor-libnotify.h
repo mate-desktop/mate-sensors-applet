@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifndef ACTIVE_SESNOR_LIBNOTIFY_H
+#ifndef ACTIVE_SENSOR_LIBNOTIFY_H
 #define ACTIVE_SENSOR_LIBNOTIFY_H
 
 #include "sensors-applet.h"
