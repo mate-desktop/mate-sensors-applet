@@ -123,47 +123,6 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
 	return;
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-static void change_background_cb(MatePanelApplet *applet, 
-				 MatePanelAppletBackgroundType type,
-				 GdkColor *color, 
-				 GdkPixmap *pixmap, 
-				 gpointer *data) {
-	GtkRcStyle *rc_style;
-	GtkStyle *style;
-
-        g_debug("change-background occurred");
-
-	/* reset style */
-	gtk_widget_set_style(GTK_WIDGET(applet), NULL);
-	rc_style = gtk_rc_style_new();
-	gtk_widget_modify_style(GTK_WIDGET(applet), rc_style);
-	gtk_rc_style_unref(rc_style);
-
-	switch(type) {
-	case PANEL_COLOR_BACKGROUND:
-		gtk_widget_modify_bg(GTK_WIDGET(applet),
-				     GTK_STATE_NORMAL, color);
-		break;
-
-	case PANEL_PIXMAP_BACKGROUND:
-		style = gtk_style_copy(GTK_WIDGET(applet)->style);
-		if (style->bg_pixmap[GTK_STATE_NORMAL]) {
-			g_object_unref(style->bg_pixmap[GTK_STATE_NORMAL]);
-		}
-		style->bg_pixmap[GTK_STATE_NORMAL] = g_object_ref(pixmap);
-		gtk_widget_set_style(GTK_WIDGET(applet), style);
-		g_object_unref(style);
-		break;
-
-	case PANEL_NO_BACKGROUND:
-		/* fall through */
-	default:
-		break;
-	}
-}
-#endif
-
 static void change_orient_cb (MatePanelApplet *applet, 
                               MatePanelAppletOrient orient, 
                               gpointer data) {
@@ -1380,6 +1339,10 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	GtkActionGroup *action_group;
 	gchar *ui_path;
 
+	/* Have our background automatically painted. */
+	mate_panel_applet_set_background_widget(MATE_PANEL_APPLET(sensors_applet->applet),
+		GTK_WIDGET(sensors_applet->applet));
+
         /* plugin functions are stored as name -> get_value_function pairs so
          * use standard string functions on hash table */
         sensors_applet->plugins = g_hash_table_new(g_str_hash,
@@ -1432,12 +1395,6 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	g_signal_connect(sensors_applet->applet, "style-set",
 			 G_CALLBACK(style_set_cb),
 			 sensors_applet);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	g_signal_connect(sensors_applet->applet, "change_background",
-			 G_CALLBACK(change_background_cb), 
-			 sensors_applet);
-#endif
 
         g_signal_connect(G_OBJECT(sensors_applet->applet), "change_orient",
                           G_CALLBACK(change_orient_cb), 
