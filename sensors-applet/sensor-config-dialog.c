@@ -323,6 +323,7 @@ static void sensor_config_dialog_graph_color_set(GtkColorButton *color_button,
 	GtkTreeModel *model;
 	GtkTreePath *path;
 	GtkTreeIter iter;
+        GtkWidget *content_area;
 	GdkColor color;
         gchar *color_string;
 
@@ -352,6 +353,7 @@ static void sensor_config_dialog_graph_color_set(GtkColorButton *color_button,
 void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 	GtkTreeModel *model;
 	GtkTreeIter iter;
+        GtkWidget *content_area;
 
         SensorConfigDialog *config_dialog;
 
@@ -912,7 +914,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 				  2, 3,
 				  14, 15);
 
-	gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area (GTK_DIALOG(config_dialog->dialog))), GTK_WIDGET(config_dialog->table), TRUE, TRUE, 0);
+        content_area = gtk_dialog_get_content_area (GTK_DIALOG(config_dialog->dialog));
+	gtk_box_pack_start(GTK_BOX(content_area), GTK_WIDGET(config_dialog->table), FALSE, FALSE, 0);
 	gtk_widget_show_all(config_dialog->dialog);
 
 }		

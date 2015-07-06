@@ -389,6 +389,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gchar *header_text;
         PrefsDialog *prefs_dialog;
         DisplayMode display_mode;
+        GtkWidget *content_area;
 
         g_assert(sensors_applet->prefs_dialog == NULL);
 
@@ -420,9 +421,10 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                      "default-height", 350,
                      NULL);
 
-        gtk_box_set_homogeneous(GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)), FALSE);
+        content_area = gtk_dialog_get_content_area (prefs_dialog->dialog);
+        gtk_box_set_homogeneous(GTK_BOX(content_area), FALSE);
 
-        gtk_box_set_spacing(GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)), 5);
+        gtk_box_set_spacing(GTK_BOX(content_area), 5);
 
 
         g_signal_connect(prefs_dialog->dialog,
@@ -441,8 +443,10 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
            we haven't been able to access any sensors */
         if (sensors_applet->sensors == NULL) {
                 GtkWidget *label;
+                GtkWidget *content_area;
                 label = gtk_label_new(_("No sensors found!"));
-                gtk_box_pack_start (GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)), label, TRUE, TRUE, 0);
+                content_area = gtk_dialog_get_content_area (prefs_dialog->dialog);
+                gtk_box_pack_start (GTK_BOX(content_area), label, FALSE, FALSE, 0);
                 return;
         }
 
@@ -990,7 +994,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                  gtk_label_new(_("Sensors")));
 
         /* pack notebook into prefs_dialog */
-        gtk_box_pack_start (GTK_BOX(gtk_dialog_get_content_area (prefs_dialog->dialog)),
+        content_area = gtk_dialog_get_content_area (prefs_dialog->dialog);
+        gtk_box_pack_start (GTK_BOX(content_area),
                             GTK_WIDGET(prefs_dialog->notebook), TRUE, TRUE, 0);
 
 
