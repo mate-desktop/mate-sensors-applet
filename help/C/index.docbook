@@ -128,11 +128,12 @@
     </releaseinfo> 
     <legalnotice>
       <title>Feedback</title>
-      <para> To report a bug or make a suggestion regarding &applet; or this
-	manual, follow the directions at the
-	<ulink url="&project-webpage;"
-	  type="http">&applet; Project Homepage</ulink>. </para>
+      <para>To report a bug or make a suggestion regarding the &app;
+      application or this manual, follow the directions in the
+      <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback
+      Page</ulink>.</para>
 
+<!-- Translators may also add here feedback address for translations -->
     </legalnotice>
   </articleinfo> 
   <indexterm zone="index"> 
