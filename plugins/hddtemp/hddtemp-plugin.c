@@ -68,7 +68,6 @@ static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
 	gchar *pc;
 
 	struct sockaddr_in address;
-	static char* buffer = NULL;
 	static GTimeVal previous_query_time;
 	GTimeVal current_query_time;
 
