@@ -23,7 +23,7 @@ GETTEXT_PACKAGE=mate-sensors-applet
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
 AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT
-IT_PROG_INTLTOOL
+IT_PROG_INTLTOOL([0.50.1])
 
 # ========== export compiler / linker options ======== #
 AC_SUBST(CFLAGS)
@@ -280,6 +280,8 @@ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 # ================= generate files =================== #
 AC_CONFIG_FILES([
 	Makefile
+	org.mate.sensors-applet.gschema.xml
+	org.mate.sensors-applet.sensor.gschema.xml
 	sensors-applet/Makefile
 	lib/Makefile
 	plugins/Makefile

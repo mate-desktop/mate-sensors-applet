@@ -2,67 +2,67 @@
   <schema id="org.mate.sensors-applet.sensor">
     <key name="path" type="s">
       <default>''</default>
-      <_summary>Path to filename</_summary>
+      <summary>Path to filename</summary>
     </key>
     <key name="id" type="s">
       <default>''</default>
-      <_summary>Sensor device ids</_summary>
+      <summary>Sensor device ids</summary>
     </key>
     <key name="interface" type="s">
       <default>''</default>
-      <_summary>The sensor device interface</_summary>
+      <summary>The sensor device interface</summary>
     </key>
     <key name="label" type="s">
       <default>''</default>
-      <_summary>User defined label</_summary>
+      <summary>User defined label</summary>
     </key>
     <key name="enabled" type="b">
       <default>true</default>
-      <_summary>Whether a sensor is enabled or not</_summary>
+      <summary>Whether a sensor is enabled or not</summary>
     </key>
     <key name="low-value" type="d">
       <default>0</default>
-      <_summary>Low value</_summary>
+      <summary>Low value</summary>
     </key>
     <key name="high-value" type="d">
       <default>0</default>
-      <_summary>High value</_summary>
+      <summary>High value</summary>
     </key>
     <key name="alarm-enabled" type="b">
       <default>false</default>
-      <_summary>Whether the sensor has its alarm enabled</_summary>
+      <summary>Whether the sensor has its alarm enabled</summary>
     </key>
     <key name="low-alarm-command" type="s">
       <default>''</default>
-      <_summary>Command to execute when the alarm is activated</_summary>
+      <summary>Command to execute when the alarm is activated</summary>
     </key>
     <key name="high-alarm-command" type="s">
       <default>''</default>
-      <_summary>Command to execute when the alarm is activated</_summary>
+      <summary>Command to execute when the alarm is activated</summary>
     </key>
     <key name="alarm-timeout" type="i">
       <default>0</default>
-      <_summary>How often each alarm should be sounded (in seconds)</_summary>
+      <summary>How often each alarm should be sounded (in seconds)</summary>
     </key>
     <key name="sensor-type" type="i">
       <default>0</default>
-      <_summary>Used to identify a sensor in a list</_summary>
+      <summary>Used to identify a sensor in a list</summary>
     </key>
     <key name="multiplier" type="d">
       <default>1</default>
-      <_summary>Multiplier</_summary>
+      <summary>Multiplier</summary>
     </key>
     <key name="offset" type="d">
       <default>0</default>
-      <_summary>Offset</_summary>
+      <summary>Offset</summary>
     </key>
     <key name="icon-type" type="i">
       <default>0</default>
-      <_summary>Icon type</_summary>
+      <summary>Icon type</summary>
     </key>
     <key name="graph-color" type="s">
       <default>'#ff0000'</default>
-      <_summary>Color of the graph for the sensor</_summary>
+      <summary>Color of the graph for the sensor</summary>
     </key>
   </schema>
 </schemalist>

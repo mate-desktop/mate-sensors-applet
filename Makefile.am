@@ -26,29 +26,23 @@ org.mate.panel.applet.SensorsAppletFactory.service: $(service_in_files)
 		$< > $@
 
 @INTLTOOL_XML_NOMERGE_RULE@
-gsettings_SCHEMAS = \
-	org.mate.sensors-applet.gschema.xml \
-	org.mate.sensors-applet.sensor.gschema.xml
+gsettingsschema_in_files = \
+	org.mate.sensors-applet.gschema.xml.in \
+	org.mate.sensors-applet.sensor.gschema.xml.in
 
-gsettings_SCHEMAS_in_in = $(gsettings_SCHEMAS:.xml=.xml.in.in)
+gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
-
-%.gschema.xml.in: %.gschema.xml.in.in Makefile
-	$(AM_V_GEN) $(SED) \
-		-e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' \
-		< $< > $@
 
 CLEANFILES = $(applet_DATA) \
 	$(applet_DATA).in \
 	$(service_DATA) \
-	$(gsettings_SCHEMAS_in) \
 	$(gsettings_SCHEMAS) \
 	*.gschema.valid
 
 EXTRA_DIST = $(ui_DATA) \
 	$(applet_in_files).in \
 	$(service_in_files) \
-	$(gsettings_SCHEMAS_in_in) \
+	$(gsettingsschema_in_files) \
 	autogen.sh
 
 DISTCLEANFILES	= intltool-extract \
