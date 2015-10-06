@@ -1,3 +1,4 @@
+1.11.0
 
   * Add support for newer NVIDIA sensors.
     Requires libxnvctrl >= 256.25.
