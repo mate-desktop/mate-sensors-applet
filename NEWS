@@ -1,17 +1,22 @@
 1.11.0
 
-  * Add support for newer NVIDIA sensors.
-    Requires libxnvctrl >= 256.25.
-  * New mbmon plugin.
-  * Make udisks plugin poll for new value.
-  * Set icon name on dialog windows.
-  * Several small cleanups and bugfixes.
-  * Several help fixes.
+  * Add support for nvidia thermal and cooler sensors (requires
+    libxnvctrl >= 256.25)
+  * Add mbmon plugin
+  * Make udisks plugin poll for new value
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Some GTK+3 fixes
+  * Some more fixes and cleanups
 
-  Gtk3
-  * Use GdkRGBA instead of GdkColor
-  * Replace gtk_widget_size_request with gtk_widget_get_preferred_size
+1.10.4
 
+  * Fix regression that caused segfault
+
+1.10.3
+
+  * Set icons for prefs and about dialogs
+  * Several small cleanups and bugfixes
+  * Several help fixes
 
 1.10.2
 
