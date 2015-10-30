@@ -1,4 +1,4 @@
-1.11.0
+1.12.0
 
   * Add support for nvidia thermal and cooler sensors (requires
     libxnvctrl >= 256.25)
