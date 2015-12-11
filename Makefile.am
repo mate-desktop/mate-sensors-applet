@@ -3,7 +3,7 @@ SUBDIRS = sensors-applet lib plugins pixmaps po help
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 appletdir =  $(datadir)/mate-panel/applets
-applet_in_files = org.mate.applets.sensors-applet.mate-panel-applet.in
+applet_in_files = org.mate.applets.SensorsApplet.mate-panel-applet.in
 applet_DATA = $(applet_in_files:.mate-panel-applet.in=.mate-panel-applet)
 
 $(applet_in_files): $(applet_in_files).in Makefile
