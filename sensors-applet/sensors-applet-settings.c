@@ -84,7 +84,6 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
                            ID_COLUMN, &current_id,
                            -1);
 
-        //mate_panel_applet_mateconf_set_bool(sensors_applet->applet, current_id, TRUE, NULL);
         g_free(current_id);
 
         /* reset sensors sentinel */
