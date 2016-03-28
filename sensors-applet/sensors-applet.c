@@ -217,6 +217,25 @@ static void style_set_cb(GtkWidget *widget,
             
 }
 
+static gboolean mouse_enter_cb(GtkWidget *widget,
+                               GdkEventCrossing *event,
+                               gpointer data)
+{
+        SensorsApplet *sensor_applet = data;
+        sensor_applet->show_tooltip = TRUE;
+        sensors_applet_update_active_sensors(sensor_applet);
+        return TRUE;
+}
+
+static gboolean mouse_leave_cb(GtkWidget *widget,
+                               GdkEventCrossing *event,
+                               gpointer data)
+{
+        SensorsApplet *sensor_applet = data;
+        sensor_applet->show_tooltip = FALSE;
+        return TRUE;
+}
+
 static const GtkActionEntry sensors_applet_menu_actions[] = {
 	{ "Preferences", GTK_STOCK_PROPERTIES, N_("_Preferences"),
 		NULL, NULL,
@@ -1372,6 +1391,13 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
                           G_CALLBACK(size_allocate_cb), 
                           sensors_applet);
 
+        g_signal_connect(G_OBJECT(sensors_applet->applet), "leave_notify_event",
+                         G_CALLBACK(mouse_leave_cb),
+                         (gpointer)sensors_applet);
+
+        g_signal_connect(G_OBJECT(sensors_applet->applet), "enter_notify_event",
+                         G_CALLBACK(mouse_enter_cb),
+                         (gpointer)sensors_applet);
 
 
 	sensors_applet_update_active_sensors(sensors_applet);
