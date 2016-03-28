@@ -646,7 +646,8 @@ void active_sensor_update(ActiveSensor *active_sensor,
                         } /* end else on error */
 
                         /* setup for tooltips */
-                        tooltip = g_strdup_printf("%s %s", sensor_label, value_tooltip);
+                        if (sensors_applet->show_tooltip)
+                                tooltip = g_strdup_printf("%s %s", sensor_label, value_tooltip);
                         g_free(value_tooltip);
 
                         /* only do icons and labels / graphs if needed */
@@ -667,10 +668,11 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                         active_sensor->sensor_low_value = sensor_low_value;
                                         active_sensor->sensor_high_value = sensor_high_value;                                
                                         active_sensor_update_icon(active_sensor, icon_pixbuf, sensor_type);
-                                } 
-                                /* always update tooltip */
-                                gtk_widget_set_tooltip_text(active_sensor->icon,
-                                                            tooltip);
+                                }
+                                if (tooltip) {
+                                        gtk_widget_set_tooltip_text(active_sensor->icon,
+                                                                    tooltip);
+                                }
                         }
                         active_sensor_update_sensor_value(active_sensor,
                                                           sensor_value);
@@ -684,8 +686,10 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                                 &(active_sensor->graph_color));
                                 
                                 gtk_widget_queue_draw (active_sensor->graph);
-                                gtk_widget_set_tooltip_text(active_sensor->graph,
-                                                            tooltip);
+                                if (tooltip) {
+                                        gtk_widget_set_tooltip_text(active_sensor->graph,
+                                                                    tooltip);
+                                }
                                 
                         }
 
@@ -733,10 +737,10 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                 }
                                 gtk_label_set_markup(GTK_LABEL(active_sensor->value),
                                                      value_text);
-                        
-			
-                                gtk_widget_set_tooltip_text(active_sensor->value,
-                                                            tooltip);
+                                if (tooltip) {
+                                        gtk_widget_set_tooltip_text(active_sensor->value,
+                                                                    tooltip);
+                                }
                         }
                         /* finished with value text */
                         g_free(value_text);
@@ -750,8 +754,10 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                 }
                                 gtk_label_set_markup(GTK_LABEL(active_sensor->label),
                                                      sensor_label);
-                                gtk_widget_set_tooltip_text(active_sensor->label,
-                                                            tooltip);
+                                if (tooltip) {
+                                        gtk_widget_set_tooltip_text(active_sensor->label,
+                                                                    tooltip);
+                                }
 
                         }
 
