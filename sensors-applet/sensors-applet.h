@@ -141,6 +141,8 @@ struct _SensorsApplet {
 #ifdef HAVE_LIBNOTIFY
         NotifyNotification *notification;
 #endif // HAVE_LIBNOTIFY
+
+        gboolean show_tooltip;
 };
 
 
