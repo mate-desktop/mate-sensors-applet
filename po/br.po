@@ -7,15 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 14:47+0200\n"
-"PO-Revision-Date: 2013-04-01 10:05+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"PO-Revision-Date: 2015-12-10 09:06+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: br\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+msgid "Sensors Applet Factory"
+msgstr ""
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr ""
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
+msgid "Displays temperature, fan speed and voltage sensor readings"
+msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
@@ -380,7 +392,7 @@ msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:221
 msgid "_Preferences"
-msgstr ""
+msgstr "_Gwellvezioù"
 
 #: ../sensors-applet/sensors-applet.c:224
 msgid "_Help"
@@ -388,7 +400,7 @@ msgstr "_Skoazell"
 
 #: ../sensors-applet/sensors-applet.c:227
 msgid "_About"
-msgstr ""
+msgstr "_Diwar-benn"
 
 #: ../sensors-applet/sensors-applet.c:289
 msgid "is very low"

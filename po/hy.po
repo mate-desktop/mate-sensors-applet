@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Siranush <ss.m.95@mail.ru>, 2015
+# Siranush <ss.m.95@mail.ru>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 14:47+0200\n"
-"PO-Revision-Date: 2015-09-26 15:04+0000\n"
+"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"PO-Revision-Date: 2016-01-03 15:29+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hy\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+msgid "Sensors Applet Factory"
+msgstr "Սենսորների Ապլետի Գործարան"
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr "Ապարատային միջոցների Սենսորային Մոնիտոր"
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
+msgid "Displays temperature, fan speed and voltage sensor readings"
+msgstr "Ցուցադրե ջերմաստիճանի, օդափոխիչի արագությունը և լարման սենսորային ընթերցումները"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
@@ -44,7 +56,7 @@ msgstr "Անկախ ամեն ինչից ցուցադրել ծանուցումնե
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr ""
+msgstr "Ուշացումը (մվ֊ներով) թարմացնումների միջև"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
@@ -97,7 +109,7 @@ msgstr "Ինչքան հաճախ պետք է յուրաքանչյուր տագն�
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr ""
+msgstr "Օգտագործված սենսորի իդենտիֆիկացում ցուցակում"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
 msgid "Multiplier"
@@ -209,7 +221,7 @@ msgstr "միայն գրաֆիկ"
 
 #: ../sensors-applet/prefs-dialog.c:495
 msgid "_Display sensors in panel as"
-msgstr ""
+msgstr "_Ցույց տալ սենսորները վահանակի վրա ինչպես "
 
 #: ../sensors-applet/prefs-dialog.c:510
 msgid "beside labels / icons"

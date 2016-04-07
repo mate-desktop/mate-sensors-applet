@@ -4,116 +4,129 @@
 # 
 # Translators:
 # Ivar Smolin <okul@linux.ee>, 2014-2015
+# Mattias Põldaru <mahfiaz@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-01 12:05+0200\n"
-"PO-Revision-Date: 2015-03-08 13:13+0000\n"
-"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
-"Language-Team: Estonian (http://www.transifex.com/projects/p/MATE/language/et/)\n"
+"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"PO-Revision-Date: 2015-12-31 02:34+0000\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
+"Language-Team: Estonian (http://www.transifex.com/mate/MATE/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:1
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+msgid "Sensors Applet Factory"
+msgstr "Andurite rakenduse tehaseseaded"
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+msgid "Hardware Sensors Monitor"
+msgstr "Riistvara andurite jälgija"
+
+#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
+msgid "Displays temperature, fan speed and voltage sensor readings"
+msgstr "Temperatuuri, ventilaatori pöörete ja pingeandurite lugemite kuvaja"
+
+#: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
 msgstr "Kirjatüübi suurus punktides"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:2
+#: ../org.mate.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "Sensorite ühiku näitamise või peitmise määramine"
+msgstr "Anduri ühiku näitamine või peitmine"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:3
+#: ../org.mate.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "Määrab, kas näidatakse ikoone või tekstisilte"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:4
+#: ../org.mate.sensors-applet.gschema.xml.in.h:4
 msgid "Set value beside or below label"
-msgstr ""
+msgstr "Kas väärtus on sildi kõrval või all"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:5
+#: ../org.mate.sensors-applet.gschema.xml.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "Temperatuuri näitamine Kelvinites, Celsiustes or Fahrenheitides"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:6
+#: ../org.mate.sensors-applet.gschema.xml.in.h:6
 msgid "Whether to display notifications"
 msgstr "Kas teavitusi kuvatakse või mitte"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:7
+#: ../org.mate.sensors-applet.gschema.xml.in.h:7
 msgid "Delay (in ms) between refreshes"
 msgstr "Viivitus värskendamiste vahel (millisekundites)"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:8
+#: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr "Graafiku suurus pikslites (rõhtsa korral laius, püstise korral kõrgus)"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.in.h:9
+#: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
-msgstr "Sensorite nimekiri"
+msgstr "Andurite nimekiri"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:1
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
 msgid "Path to filename"
 msgstr "Failinime rada"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:2
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
 msgid "Sensor device ids"
-msgstr "Sensorite seadmete identifikaatorid"
+msgstr "Andurite seadmete identifikaatorid"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:3
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
 msgid "The sensor device interface"
-msgstr "Sensorseadme liides"
+msgstr "Andurseadme liides"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:4
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
 msgid "User defined label"
 msgstr "Kasutaja määratud silt"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:5
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr "Kas sensor on lubatud või mitte"
+msgstr "Kas andur on lubatud või mitte"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:6
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
 msgid "Low value"
-msgstr ""
+msgstr "Alumine väärtus"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:7
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:7
 msgid "High value"
-msgstr ""
+msgstr "Ülemine väärtus"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:8
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr "Kas sensoril on alarm lubatud või mitte"
+msgstr "Kas anduri alarm on sees"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:9
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr ""
+msgstr "Alarmi korral käivitatav käsk"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:10
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr ""
+msgstr "Kui tihti iga alarm peaks kõlama (sekundid)"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:11
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Kasutatakse nimekirjas oleva sensori identifitseerimiseks"
+msgstr "Kasutatakse anduri eristamiseks nimekirjas"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:12
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
 msgid "Multiplier"
-msgstr ""
+msgstr "Kordaja"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:13
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:13
 msgid "Offset"
 msgstr "Nihe"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:14
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:14
 msgid "Icon type"
 msgstr "Ikooni liik"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.in.h:15
+#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr "Sensori graafiku värv"
+msgstr "Anduri värv graafikul"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -124,7 +137,8 @@ msgid "CPU"
 msgstr "CPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:66
-#: ../plugins/nvidia/nvidia-plugin.c:115
+#: ../plugins/nvidia/nvidia-plugin.c:125 ../plugins/nvidia/nvidia-plugin.c:145
+#: ../plugins/nvidia/nvidia-plugin.c:170
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
@@ -132,20 +146,20 @@ msgstr "GPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr ""
+msgstr "Korpus"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr ""
+msgstr "Vent"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr ""
+msgstr "Vent1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr ""
+msgstr "Vent2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
@@ -158,295 +172,295 @@ msgstr "Aku"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr ""
+msgstr "Vent."
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr ""
+msgstr "CPU temp"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:347
+#: ../sensors-applet/sensors-applet.c:308
 msgid "temperature"
 msgstr "temperatuur"
 
-#: ../plugins/nvidia/nvidia-plugin.c:131
+#: ../plugins/nvidia/nvidia-plugin.c:186
 msgid "Ambient"
-msgstr ""
+msgstr "Keskk"
 
-#: ../sensors-applet/prefs-dialog.c:409
+#: ../sensors-applet/prefs-dialog.c:410
 msgid "Sensors Applet Preferences"
-msgstr "Sensorite rakendi eelistused"
-
-#: ../sensors-applet/prefs-dialog.c:444
-#: ../sensors-applet/sensors-applet.c:1378
-msgid "No sensors found!"
-msgstr "Ühtegi sensorit ei leitud!"
+msgstr "Andurite rakendi eelistused"
 
 #: ../sensors-applet/prefs-dialog.c:450
+#: ../sensors-applet/sensors-applet.c:1345
+msgid "No sensors found!"
+msgstr "Andureid ei leitud!"
+
+#: ../sensors-applet/prefs-dialog.c:457
 msgid "Display"
 msgstr "Kuvamine"
 
-#: ../sensors-applet/prefs-dialog.c:462
+#: ../sensors-applet/prefs-dialog.c:470
 msgid "label with value"
-msgstr ""
+msgstr "silt ja väärtus"
 
-#: ../sensors-applet/prefs-dialog.c:463
+#: ../sensors-applet/prefs-dialog.c:472
 msgid "icon with value"
 msgstr "ikoon koos väärtusega"
 
-#: ../sensors-applet/prefs-dialog.c:464
+#: ../sensors-applet/prefs-dialog.c:474
 msgid "value only"
 msgstr "ainult väärtus"
 
-#: ../sensors-applet/prefs-dialog.c:465
+#: ../sensors-applet/prefs-dialog.c:476
 msgid "icon only"
 msgstr "ainult ikoon"
 
-#: ../sensors-applet/prefs-dialog.c:466
+#: ../sensors-applet/prefs-dialog.c:478
 msgid "graph only"
 msgstr "ainult graafik"
 
-#: ../sensors-applet/prefs-dialog.c:482
+#: ../sensors-applet/prefs-dialog.c:495
 msgid "_Display sensors in panel as"
-msgstr "_Sensorite kuvamine paneelil"
+msgstr "_Andurite kuvamine paneelil"
 
-#: ../sensors-applet/prefs-dialog.c:497
+#: ../sensors-applet/prefs-dialog.c:510
 msgid "beside labels / icons"
-msgstr ""
+msgstr "sildi / ikooni kõrval"
 
-#: ../sensors-applet/prefs-dialog.c:498
+#: ../sensors-applet/prefs-dialog.c:511
 msgid "below labels / icons"
-msgstr ""
+msgstr "sildi / ikooni all"
 
-#: ../sensors-applet/prefs-dialog.c:509
+#: ../sensors-applet/prefs-dialog.c:524
 msgid "Preferred _position of sensor values"
-msgstr ""
+msgstr "_Anduri väärtuste asukoht"
 
-#: ../sensors-applet/prefs-dialog.c:521
+#: ../sensors-applet/prefs-dialog.c:536
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: ../sensors-applet/prefs-dialog.c:522
+#: ../sensors-applet/prefs-dialog.c:537
 msgid "Celsius"
 msgstr "Celsius"
 
-#: ../sensors-applet/prefs-dialog.c:523
+#: ../sensors-applet/prefs-dialog.c:538
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../sensors-applet/prefs-dialog.c:534
+#: ../sensors-applet/prefs-dialog.c:551
 msgid "_Temperature scale"
-msgstr ""
+msgstr "_Temperatuuriskaala"
 
-#: ../sensors-applet/prefs-dialog.c:561
+#: ../sensors-applet/prefs-dialog.c:578
 msgid "Graph _size (pixels)"
 msgstr "Graafiku _suurus (pikslites)"
 
-#: ../sensors-applet/prefs-dialog.c:574
+#: ../sensors-applet/prefs-dialog.c:591
 msgid "Update"
-msgstr ""
+msgstr "Uuendamine"
 
-#: ../sensors-applet/prefs-dialog.c:604
+#: ../sensors-applet/prefs-dialog.c:621
 msgid "Update _interval (secs)"
-msgstr ""
+msgstr "Uuendamise _sagedus (sek)"
 
-#: ../sensors-applet/prefs-dialog.c:614
+#: ../sensors-applet/prefs-dialog.c:631
 msgid "Notifications"
 msgstr "Teavitused"
 
-#: ../sensors-applet/prefs-dialog.c:625
+#: ../sensors-applet/prefs-dialog.c:642
 msgid "Display _notifications"
 msgstr "_Teavitusi kuvatakse"
 
-#: ../sensors-applet/prefs-dialog.c:828
+#: ../sensors-applet/prefs-dialog.c:845
 msgid "Sensor"
-msgstr ""
+msgstr "Andur"
 
-#: ../sensors-applet/prefs-dialog.c:835
+#: ../sensors-applet/prefs-dialog.c:852
 msgid "Label"
 msgstr "Silt"
 
-#: ../sensors-applet/prefs-dialog.c:845
+#: ../sensors-applet/prefs-dialog.c:862
 msgid "Labels can be edited directly by clicking on them."
 msgstr "Silte saab muuta nendele klõpsamisega"
 
-#: ../sensors-applet/prefs-dialog.c:846
+#: ../sensors-applet/prefs-dialog.c:863
 msgid "Enabled"
 msgstr "Lubatud"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:852
-#: ../sensors-applet/sensor-config-dialog.c:452
+#: ../sensors-applet/prefs-dialog.c:869
+#: ../sensors-applet/sensor-config-dialog.c:474
 msgid "Icon"
 msgstr "Ikoon"
 
-#: ../sensors-applet/prefs-dialog.c:986
+#: ../sensors-applet/prefs-dialog.c:1003
 msgid "General Options"
 msgstr "Üldised valikud"
 
-#: ../sensors-applet/prefs-dialog.c:990
+#: ../sensors-applet/prefs-dialog.c:1007
 msgid "Sensors"
-msgstr "Sensorid"
+msgstr "Andurid"
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr ""
+msgstr "rpm"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
-msgstr ""
+msgstr "V"
 
 #: ../sensors-applet/sensors-applet.h:59
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:581
+#: ../sensors-applet/active-sensor.c:580
 msgid "ERROR"
 msgstr "VIGA"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
-#: ../sensors-applet/about-dialog.c:43
+#: ../sensors-applet/about-dialog.c:44
 msgid "translator-credits"
 msgstr "Ivar Smolin <okul@linux.ee>, 2014."
 
-#: ../sensors-applet/sensor-config-dialog.c:394
+#: ../sensors-applet/sensor-config-dialog.c:411
 msgid "Sensor Properties"
-msgstr "Sensori omadused"
+msgstr "Anduri omadused"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:419
+#: ../sensors-applet/sensor-config-dialog.c:438
 msgid "Graph"
 msgstr "Graafik"
 
-#: ../sensors-applet/sensor-config-dialog.c:438
+#: ../sensors-applet/sensor-config-dialog.c:460
 msgid "Graph Color"
 msgstr "Graph värv"
 
-#: ../sensors-applet/sensor-config-dialog.c:441
+#: ../sensors-applet/sensor-config-dialog.c:463
 msgid "Graph _color"
 msgstr "Graafiku _värv"
 
-#: ../sensors-applet/sensor-config-dialog.c:503
+#: ../sensors-applet/sensor-config-dialog.c:525
 msgid "Sensor _icon"
-msgstr "Sensori _ikoon"
+msgstr "Anduri _ikoon"
 
-#: ../sensors-applet/sensor-config-dialog.c:509
+#: ../sensors-applet/sensor-config-dialog.c:531
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "Skaala piirid"
 
-#: ../sensors-applet/sensor-config-dialog.c:542
+#: ../sensors-applet/sensor-config-dialog.c:564
 msgid "Sensor value _multiplier"
-msgstr ""
+msgstr "Anduri väärtuse _kordaja"
 
-#: ../sensors-applet/sensor-config-dialog.c:575
+#: ../sensors-applet/sensor-config-dialog.c:597
 msgid "Sensor value _offset"
-msgstr ""
+msgstr "Anduri väärtuse _nihe"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:585
+#: ../sensors-applet/sensor-config-dialog.c:607
 msgid "Sensor Limits"
-msgstr ""
+msgstr "Anduri piirid"
 
-#: ../sensors-applet/sensor-config-dialog.c:618
+#: ../sensors-applet/sensor-config-dialog.c:640
 msgid "Sensor _low value"
-msgstr ""
+msgstr "Anduri _madal väärtus"
 
-#: ../sensors-applet/sensor-config-dialog.c:653
+#: ../sensors-applet/sensor-config-dialog.c:675
 msgid "Sensor _high value"
-msgstr ""
+msgstr "Anduri _kõrge väärtus"
 
-#: ../sensors-applet/sensor-config-dialog.c:664
-#: ../sensors-applet/sensors-applet.c:384
+#: ../sensors-applet/sensor-config-dialog.c:686
+#: ../sensors-applet/sensors-applet.c:345
 msgid "Alarm"
-msgstr ""
+msgstr "Alarm"
 
-#: ../sensors-applet/sensor-config-dialog.c:696
+#: ../sensors-applet/sensor-config-dialog.c:718
 msgid "Alarm _repeat interval (secs)"
 msgstr "Alarmi _korduste vahemik (sekundites)"
 
-#: ../sensors-applet/sensor-config-dialog.c:716
-msgid "Lo_w alarm command"
-msgstr ""
-
 #: ../sensors-applet/sensor-config-dialog.c:738
+msgid "Lo_w alarm command"
+msgstr "_Alumise alarmi käsk"
+
+#: ../sensors-applet/sensor-config-dialog.c:760
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "Ü_lemise alarmi käsk"
 
-#: ../sensors-applet/sensor-config-dialog.c:752
+#: ../sensors-applet/sensor-config-dialog.c:774
 msgid "_Enable alarm"
-msgstr ""
+msgstr "_Alarm sees"
 
-#: ../sensors-applet/sensors-applet.c:260
+#: ../sensors-applet/sensors-applet.c:221
 msgid "_Preferences"
 msgstr "_Eelistused"
 
-#: ../sensors-applet/sensors-applet.c:263
+#: ../sensors-applet/sensors-applet.c:224
 msgid "_Help"
 msgstr "A_bi"
 
-#: ../sensors-applet/sensors-applet.c:266
+#: ../sensors-applet/sensors-applet.c:227
 msgid "_About"
-msgstr ""
+msgstr "_Lähemalt"
 
-#: ../sensors-applet/sensors-applet.c:328
+#: ../sensors-applet/sensors-applet.c:289
 msgid "is very low"
-msgstr ""
+msgstr "on väga madal"
 
-#: ../sensors-applet/sensors-applet.c:329
+#: ../sensors-applet/sensors-applet.c:290
 msgid "lower limit"
-msgstr ""
+msgstr "alumine piir"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:334
+#: ../sensors-applet/sensors-applet.c:295
 msgid "is very high"
-msgstr ""
+msgstr "on väga kõrge"
 
-#: ../sensors-applet/sensors-applet.c:335
+#: ../sensors-applet/sensors-applet.c:296
 msgid "upper limit"
-msgstr ""
+msgstr "ülemine piir"
 
-#: ../sensors-applet/sensors-applet.c:346
+#: ../sensors-applet/sensors-applet.c:307
 msgid "Temperature"
 msgstr "Temperatuur"
 
-#: ../sensors-applet/sensors-applet.c:366
+#: ../sensors-applet/sensors-applet.c:327
 msgid "Voltage"
-msgstr ""
+msgstr "Pinge"
 
-#: ../sensors-applet/sensors-applet.c:367
+#: ../sensors-applet/sensors-applet.c:328
 msgid "voltage"
-msgstr ""
+msgstr "pinge"
 
-#: ../sensors-applet/sensors-applet.c:371
+#: ../sensors-applet/sensors-applet.c:332
 msgid "Fan Speed"
-msgstr ""
+msgstr "Ventilaatori kiirus"
 
-#: ../sensors-applet/sensors-applet.c:372
+#: ../sensors-applet/sensors-applet.c:333
 msgid "fan speed"
-msgstr ""
+msgstr "ventilaatori kiirus"
 
-#: ../sensors-applet/sensors-applet.c:376
+#: ../sensors-applet/sensors-applet.c:337
 msgid "Current"
-msgstr ""
+msgstr "Vool"
 
-#: ../sensors-applet/sensors-applet.c:377
+#: ../sensors-applet/sensors-applet.c:338
 msgid "current"
-msgstr ""
+msgstr "vool"
 
-#: ../sensors-applet/sensors-applet.c:390
+#: ../sensors-applet/sensors-applet.c:351
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "Viga sensori %s värskendamisel"
+msgstr "Viga anduri %s värskendamisel"
 
-#: ../sensors-applet/sensors-applet.c:391
+#: ../sensors-applet/sensors-applet.c:352
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "Anduri %s kohas %s väärtuse uuendamine nurjus."
 
-#: ../sensors-applet/sensors-applet.c:496
+#: ../sensors-applet/sensors-applet.c:457
 msgid "No sensors enabled!"
-msgstr "Ühtegi sensorit pole lubatud!"
+msgstr "Andurid pole sees!"

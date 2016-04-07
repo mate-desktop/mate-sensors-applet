@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 14:34+0300\n"
-"PO-Revision-Date: 2016-02-04 20:29+0000\n"
+"PO-Revision-Date: 2016-04-03 06:49+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Контроль датчиків обладнання"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr "Показує температуру, швидкість вентилятора й дані датчика напруги"
+msgstr "Показує температуру, швидкість студника й дані датчика напруги"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
@@ -136,7 +136,7 @@ msgstr "Колір графіку для датчика"
 #: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
 #: ../plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
-msgstr "ЦП"
+msgstr "ЦПП"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:66
 #: ../plugins/nvidia/nvidia-plugin.c:125 ../plugins/nvidia/nvidia-plugin.c:145
@@ -144,7 +144,7 @@ msgstr "ЦП"
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
 #: ../plugins/aticonfig/aticonfig-plugin.c:104
 msgid "GPU"
-msgstr "ЦП"
+msgstr "ГПП"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
@@ -153,15 +153,15 @@ msgstr "CASE"
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr "Вент"
+msgstr "Студ"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr "Вент 1"
+msgstr "Студ 1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr "Вент 2"
+msgstr "Студ 2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
@@ -174,7 +174,7 @@ msgstr "Акумулятор"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr "Вент"
+msgstr "Студ"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
@@ -437,11 +437,11 @@ msgstr "вольтаж"
 
 #: ../sensors-applet/sensors-applet.c:332
 msgid "Fan Speed"
-msgstr "Швидкість обертання вентилятора"
+msgstr "Швидкість обертання студника"
 
 #: ../sensors-applet/sensors-applet.c:333
 msgid "fan speed"
-msgstr "швидкість обертання вентилятора"
+msgstr "швидкість обертання студника"
 
 #: ../sensors-applet/sensors-applet.c:337
 msgid "Current"
