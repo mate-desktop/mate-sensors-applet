@@ -5,13 +5,14 @@
 # Translators:
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2014
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2015
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2016
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 14:34+0300\n"
-"PO-Revision-Date: 2015-12-11 08:57+0000\n"
+"PO-Revision-Date: 2016-04-07 12:03+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -324,7 +325,7 @@ msgstr "오류"
 #. translator
 #: ../sensors-applet/about-dialog.c:44
 msgid "translator-credits"
-msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
+msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>\nMATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
 
 #: ../sensors-applet/sensor-config-dialog.c:411
 msgid "Sensor Properties"
