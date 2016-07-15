@@ -74,6 +74,8 @@ case "$with_gtk" in
        ;;
 esac
 
+AC_SUBST(GTK_API_VERSION)
+
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gio-2.0)
 AC_SUBST(GLIB_CFLAGS)
 AC_SUBST(GLIB_LIBS)

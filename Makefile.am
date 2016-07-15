@@ -49,6 +49,9 @@ DISTCLEANFILES	= intltool-extract \
 		   	intltool-merge \
 	   	   	intltool-update
 
+DISTCHECK_CONFIGURE_FLAGS = \
+	--with-gtk=$(GTK_API_VERSION)
+
 # Build ChangeLog from GIT  history
 ChangeLog:
 	$(AM_V_GEN) if test -d $(top_srcdir)/.git; then \
