@@ -660,8 +660,8 @@ void active_sensor_update(ActiveSensor *active_sensor,
                         /* do graph if needed */
                         if (display_mode == DISPLAY_GRAPH) {
                                 /* update graph color in case has changed */
-                                gdk_color_parse(graph_color,
-                                                &(active_sensor->graph_color));
+                                gdk_rgba_parse(&(active_sensor->graph_color),
+                                               graph_color);
                                 
                                 gtk_widget_queue_draw (active_sensor->graph);
                                 if (tooltip) {
