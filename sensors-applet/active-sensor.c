@@ -682,8 +682,13 @@ void active_sensor_update(ActiveSensor *active_sensor,
                         /* do graph if needed */
                         if (display_mode == DISPLAY_GRAPH) {
                                 /* update graph color in case has changed */
+#if GTK_CHECK_VERSION (3, 0, 0)
+                                gdk_rgba_parse(&(active_sensor->graph_color),
+                                               graph_color);
+#else
                                 gdk_color_parse(graph_color,
                                                 &(active_sensor->graph_color));
+#endif
                                 
                                 gtk_widget_queue_draw (active_sensor->graph);
                                 if (tooltip) {
