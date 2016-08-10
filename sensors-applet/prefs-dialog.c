@@ -668,149 +668,72 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
         g_object_unref(prefs_dialog->size_group);
 
-        prefs_dialog->globals_table = g_object_new(GTK_TYPE_TABLE,
-                                                   "homogeneous", FALSE,
-                                                   "n-columns", 3,
-#ifdef HAVE_LIBNOTIFY
-                                                   "n-rows", 9,
-#else
-                                                   "n-rows", 7,
-#endif
+        prefs_dialog->globals_grid = g_object_new(GTK_TYPE_GRID,
+                                                   "row-homogeneous", FALSE,
+                                                   "column-homogeneous", FALSE,
                                                    "row-spacing", 6,
                                                    "column-spacing", 12,
                                                    NULL);
 
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->display_header),
-                         0, 2,
-                         0, 1,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         0, 0, 2, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->display_mode_label),
-                         1, 2,
-                         1, 2,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         1, 1, 1, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->display_mode_combo_box),
-                         2, 3,
-                         1, 2,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         2, 1, 1, 1);
 
-
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->layout_mode_label),
-                         1, 2,
-                         2, 3,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
-        gtk_table_attach(prefs_dialog->globals_table,
+                         1, 2, 1, 1);
+
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->layout_mode_combo_box),
-                         2, 3,
-                         2, 3,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         2, 2, 1, 1);
 
-
-
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->graph_size_label),
-                         1, 2,
-                         3, 4,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         1, 3, 1, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->graph_size_spinbutton),
-                         2, 3,
-                         3, 4,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         2, 3, 1, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->temperature_scale_label),
-                         1, 2,
-                         4, 5,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
-        gtk_table_attach(prefs_dialog->globals_table,
+                         1, 4, 1, 1);
+
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->temperature_scale_combo_box),
-                         2, 3,
-                         4, 5,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         2, 4, 1, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->update_header),
-                         0, 2,
-                         5, 6,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         0, 5, 2, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->timeout_label),
-                         1, 2,
-                         6, 7,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         1, 6, 1, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->timeout_spinbutton),
-                         2, 3,
-                         6, 7,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         2, 6, 1, 1);
 
 
 #ifdef HAVE_LIBNOTIFY
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->notifications_header),
-                         0, 2,
-                         7, 8,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         0, 7, 2, 1);
 
-        gtk_table_attach(prefs_dialog->globals_table,
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->display_notifications),
-                         1, 2,
-                         8, 9,
-                         GTK_FILL,
-                         GTK_FILL,
-                         0,
-                         0);
+                         1, 8, 1, 1);
 #endif
-
 
         prefs_dialog->view = g_object_new(GTK_TYPE_TREE_VIEW,
                                           "model", GTK_TREE_MODEL(sensors_applet->sensors),
@@ -993,7 +916,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                        "right-padding", 12,
                                                        NULL);
         gtk_container_add(GTK_CONTAINER(prefs_dialog->globals_alignment),
-                          GTK_WIDGET(prefs_dialog->globals_table));
+                          GTK_WIDGET(prefs_dialog->globals_grid));
 
         prefs_dialog->notebook = g_object_new(GTK_TYPE_NOTEBOOK,
                                               NULL);
