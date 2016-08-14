@@ -131,9 +131,9 @@ struct _SensorsApplet {
 	/* preferences and about windows (if Gtk < 2.6)*/
 	PrefsDialog *prefs_dialog;
 
-	/* primary table to contain the panel dispay - we pack the
+	/* primary grid to contain the panel dispay - we pack the
 	 * list of labels and sensor values into this container */
-	GtkWidget *table;
+	GtkWidget *grid;
 	GList *active_sensors;
 
 	GSettings *settings;
