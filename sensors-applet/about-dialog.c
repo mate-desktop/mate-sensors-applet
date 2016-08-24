@@ -29,6 +29,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
     const gchar *authors[] = {
         "Alex Murray <murray.alex@gmail.com>",
         "Stefano Karapetsas <stefano@karapetsas.com>",
+        "Elias Projahn <johrpan@openmailbox.org>",
         NULL
     };
 
@@ -37,7 +38,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
                   "icon-name", "mate-sensors-applet",
                   "program-name", PACKAGE_NAME, 
                   "version", PACKAGE_VERSION,
-                  "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>",
+                  "copyright", "(C) 2005-2009, Alex Murray <murray.alex@gmail.com>\n(C) 2011, Stefano Karapetsas <stefano@karapetsas.com>\n(C) 2016, Elias Projahn <johrpan@openmailbox.org>",
                   "authors", authors,
                   "documenters", authors,
                   /* To translator: Put your name here to show up in the About dialog as the translator */

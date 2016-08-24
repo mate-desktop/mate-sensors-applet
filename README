@@ -2,6 +2,7 @@ MATE Sensors Applet <https://github.com/mate-desktop/mate-sensors-applet>
 
 Authors: Alex Murray <murray.alex@gmail.com>,
          Stefano Karapetsas <stefano@karapetsas.com>
+         Elias Projahn <johrpan@openmailbox.org>
 
 MATE Sensors Applet is an applet for the MATE Panel to display
 readings from hardware sensors, including CPU temperature, fan speeds

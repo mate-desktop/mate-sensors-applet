@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2005-2009 Alex Murray <murray.alex@gmail.com>
+ * Copyright (C) 2016 Elias Projahn <johrpan@openmailbox.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -192,6 +193,13 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
         sensors_applet_update_active_sensors(prefs_dialog->sensors_applet);
 }
 
+static void prefs_dialog_show_units_toggled (GtkCheckButton *show_units, PrefsDialog *prefs_dialog) {
+	gboolean state;
+
+	state = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (show_units));
+	g_settings_set_boolean (prefs_dialog->sensors_applet->settings, HIDE_UNITS, !state);
+	sensors_applet_update_active_sensors (prefs_dialog->sensors_applet);
+}
 
 #ifdef HAVE_LIBNOTIFY
 static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_notifications,
@@ -588,6 +596,14 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          prefs_dialog);
 
 
+	prefs_dialog->show_units = gtk_check_button_new_with_label (_("Show _units"));
+	gtk_button_set_use_underline (GTK_BUTTON (prefs_dialog->show_units), TRUE);
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (prefs_dialog->show_units),
+	                             !g_settings_get_boolean (sensors_applet->settings, HIDE_UNITS));
+	g_signal_connect (prefs_dialog->show_units, "toggled",
+	                  G_CALLBACK (prefs_dialog_show_units_toggled), prefs_dialog);
+
+
         header_text = g_markup_printf_escaped("<b>%s</b>", _("Update"));
         prefs_dialog->update_header = g_object_new(GTK_TYPE_LABEL,
                                                    "use-markup", TRUE,
@@ -763,10 +779,13 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          0,
                          0);
 
+	gtk_table_attach (prefs_dialog->globals_table, GTK_WIDGET (prefs_dialog->show_units),
+	                  1, 3, 5, 6, GTK_FILL, GTK_FILL, 0, 0);
+
         gtk_table_attach(prefs_dialog->globals_table,
                          GTK_WIDGET(prefs_dialog->update_header),
                          0, 2,
-                         5, 6,
+                         6, 7,
                          GTK_FILL,
                          GTK_FILL,
                          0,
@@ -775,7 +794,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_table_attach(prefs_dialog->globals_table,
                          GTK_WIDGET(prefs_dialog->timeout_label),
                          1, 2,
-                         6, 7,
+                         7, 8,
                          GTK_FILL,
                          GTK_FILL,
                          0,
@@ -784,7 +803,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_table_attach(prefs_dialog->globals_table,
                          GTK_WIDGET(prefs_dialog->timeout_spinbutton),
                          2, 3,
-                         6, 7,
+                         7, 8,
                          GTK_FILL,
                          GTK_FILL,
                          0,
@@ -795,7 +814,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_table_attach(prefs_dialog->globals_table,
                          GTK_WIDGET(prefs_dialog->notifications_header),
                          0, 2,
-                         7, 8,
+                         8, 9,
                          GTK_FILL,
                          GTK_FILL,
                          0,
@@ -804,7 +823,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         gtk_table_attach(prefs_dialog->globals_table,
                          GTK_WIDGET(prefs_dialog->display_notifications),
                          1, 2,
-                         8, 9,
+                         9, 10,
                          GTK_FILL,
                          GTK_FILL,
                          0,
