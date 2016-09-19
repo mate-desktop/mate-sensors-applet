@@ -1,5 +1,6 @@
-1.15.0
+1.16.0
 
+  * Make distcheck use currently selected GTK+ version
   * Translations update
 
 1.14.0
