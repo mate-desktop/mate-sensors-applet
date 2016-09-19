@@ -5,8 +5,8 @@
 # Translators:
 # Davy Defaud <davy.defaud@free.fr>, 2005
 # Mingye Wang <arthur200126@gmail.com>, 2016
-# Wylmer Wang <wantinghard@gmail.com>, 2013
-# zodiac8765 <zodiac8765@gmail.com>, 2013
+# Wylmer Wang, 2013
+# zodiac lee (喜乐) <zodiac8765@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 14:34+0300\n"
-"PO-Revision-Date: 2016-02-15 19:42+0000\n"
+"PO-Revision-Date: 2016-07-12 12:41+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -401,7 +401,7 @@ msgstr "_Nuostatos"
 
 #: ../sensors-applet/sensors-applet.c:224
 msgid "_Help"
-msgstr "_Pagalba"
+msgstr "_Žinynas"
 
 #: ../sensors-applet/sensors-applet.c:227
 msgid "_About"

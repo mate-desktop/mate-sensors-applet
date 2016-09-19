@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Francesc Famadas <kiski97@gmail.com>, 2015
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2015-2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 14:34+0300\n"
-"PO-Revision-Date: 2016-01-27 21:24+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
+"PO-Revision-Date: 2016-08-23 13:49+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -222,7 +223,7 @@ msgstr "únicament el gràfic"
 
 #: ../sensors-applet/prefs-dialog.c:495
 msgid "_Display sensors in panel as"
-msgstr "_Mostra els sensors al taulell com"
+msgstr "_Mostra els sensors al tauler com"
 
 #: ../sensors-applet/prefs-dialog.c:510
 msgid "beside labels / icons"
@@ -254,7 +255,7 @@ msgstr "Escala de _temperatura"
 
 #: ../sensors-applet/prefs-dialog.c:578
 msgid "Graph _size (pixels)"
-msgstr "Mida del gràfic (píxels)"
+msgstr "Mida del gràfic (píxel_s)"
 
 #: ../sensors-applet/prefs-dialog.c:591
 msgid "Update"
@@ -262,7 +263,7 @@ msgstr "Actualitza"
 
 #: ../sensors-applet/prefs-dialog.c:621
 msgid "Update _interval (secs)"
-msgstr "Interval d'actualització (s)"
+msgstr "_Interval d'actualització (s)"
 
 #: ../sensors-applet/prefs-dialog.c:631
 msgid "Notifications"
