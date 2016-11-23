@@ -36,11 +36,7 @@ struct _ActiveSensor {
         GtkWidget *graph;
         GtkWidget *graph_frame;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         GdkRGBA graph_color;
-#else
-        GdkColor graph_color;
-#endif
 
 	GtkTreeRowReference *sensor_row;
 

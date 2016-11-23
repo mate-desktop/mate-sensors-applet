@@ -348,32 +348,15 @@ void active_sensor_destroy(ActiveSensor *active_sensor) {
         g_free(active_sensor);
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 gboolean graph_draw_cb(GtkWidget *graph,
                        cairo_t *cr,
                        gpointer data) {
-#else
-gboolean graph_expose_event_cb(GtkWidget *graph,
-                               GdkEventExpose *event,
-                               gpointer data) {
-#endif
         ActiveSensor *as;
 
         as = (ActiveSensor *)data;
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-        cairo_t *cr;
-        cr = gdk_cairo_create (event->window);
-        gdk_cairo_region (cr, event->region);
-        cairo_clip (cr);
-#endif
-
         active_sensor_update_graph(as, cr);
         /* propagate event onwards */
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-        cairo_destroy (cr);
-#endif
 
         return FALSE;
 }
@@ -469,13 +452,8 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
                                            (horizontal ? sensors_applet->size : graph_size));
 
         g_signal_connect(G_OBJECT(active_sensor->graph),
-#if GTK_CHECK_VERSION (3, 0, 0)
                          "draw",
                          G_CALLBACK(graph_draw_cb),
-#else
-                         "expose_event",
-                         G_CALLBACK(graph_expose_event_cb),
-#endif
                          active_sensor);
 
         active_sensor->updated = FALSE;

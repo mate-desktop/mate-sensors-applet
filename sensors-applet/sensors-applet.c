@@ -50,9 +50,6 @@
                                 * real value is stored */
 #define COLUMN_SPACING 2
 #define ROW_SPACING 1
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_widget_size_request(X,Y) gtk_widget_get_preferred_size(X,Y,NULL)
-#endif
 
 /* callbacks for panel menu */
 static void prefs_cb(GtkAction *action,
@@ -525,8 +522,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 
         switch (display_mode) {
         case DISPLAY_VALUE:
-                gtk_widget_size_request(GTK_WIDGET(first_sensor->value),
-                                        &req);
+                gtk_widget_get_preferred_size(GTK_WIDGET(first_sensor->value),
+                                        &req, NULL);
                 value_width = req.width + COLUMN_SPACING;
                 value_height = req.height + ROW_SPACING;
 
@@ -548,14 +545,14 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 /* even though we end up packing the event boxes into the
                  * panel, these dont give back request sizes, so need to ask
                  * widgets directly */
-                gtk_widget_size_request(GTK_WIDGET(first_sensor->value),
-                                        &req);
+                gtk_widget_get_preferred_size(GTK_WIDGET(first_sensor->value),
+                                        &req, NULL);
 
                 value_width = req.width + COLUMN_SPACING;
                 value_height = req.height + ROW_SPACING;
 
-                gtk_widget_size_request(GTK_WIDGET(first_sensor->label),
-                                        &req);
+                gtk_widget_get_preferred_size(GTK_WIDGET(first_sensor->label),
+                                        &req, NULL);
                 label_width = req.width + COLUMN_SPACING;
                 label_height = req.height + ROW_SPACING;
         
@@ -586,13 +583,13 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 break;
 
         case DISPLAY_ICON_WITH_VALUE:
-                gtk_widget_size_request(GTK_WIDGET(first_sensor->value),
-                                        &req);
+                gtk_widget_get_preferred_size(GTK_WIDGET(first_sensor->value),
+                                        &req, NULL);
                 value_width = req.width + COLUMN_SPACING;
                 value_height = req.height + ROW_SPACING;
 
-                gtk_widget_size_request(GTK_WIDGET(first_sensor->icon),
-                                        &req);
+                gtk_widget_get_preferred_size(GTK_WIDGET(first_sensor->icon),
+                                        &req, NULL);
                 icon_width = req.width + COLUMN_SPACING;
                 icon_height = req.height + ROW_SPACING;
                 
@@ -618,8 +615,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 break;
 
         case DISPLAY_ICON:
-                gtk_widget_size_request(GTK_WIDGET(first_sensor->icon),
-                                        &req);
+                gtk_widget_get_preferred_size(GTK_WIDGET(first_sensor->icon),
+                                        &req, NULL);
                 icon_width = req.width + COLUMN_SPACING;
                 icon_height = req.height + ROW_SPACING;
 

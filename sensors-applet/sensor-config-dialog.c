@@ -325,7 +325,6 @@ static void sensor_config_dialog_graph_color_set(GtkColorButton *color_button,
 	GtkTreeIter iter;
         GtkWidget *content_area;
         gchar *color_string;
-#if GTK_CHECK_VERSION (3, 0, 0)
         GdkRGBA color;
 
         gtk_color_button_get_rgba(color_button,
@@ -334,15 +333,6 @@ static void sensor_config_dialog_graph_color_set(GtkColorButton *color_button,
         color_string = g_strdup_printf ("#%02X%02X%02X", (int)(0.5 + CLAMP (color.red, 0., 1.) * 255.),
 					(int)(0.5 + CLAMP (color.green, 0., 1.) * 255.),
 					(int)(0.5 + CLAMP (color.blue, 0., 1.) * 255.));
-#else
-        GdkColor color;
-
-        gtk_color_button_get_color(color_button,
-                                   &color);
-
-        color_string = g_strdup_printf("#%02X%02X%02X", color.red / 256, 
-                                       color.green / 256, color.blue / 256);
-#endif
 
         gtk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
 					&model,
@@ -371,12 +361,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
         GtkListStore *icon_store;
         IconType count;
         GdkPixbuf *pixbuf;
-
-#if GTK_CHECK_VERSION (3, 0, 0)
         GdkRGBA graph_color;
-#else
-        GdkColor graph_color;        
-#endif
         gchar *sensor_label;
         gchar *header_text;
         
@@ -444,13 +429,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
         g_free(header_text);
 
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         gdk_rgba_parse(&graph_color, graph_color_string);
         config_dialog->graph_color_button = GTK_COLOR_BUTTON(gtk_color_button_new_with_rgba(&graph_color));
-#else
-        gdk_color_parse(graph_color_string, &graph_color);
-        config_dialog->graph_color_button = GTK_COLOR_BUTTON(gtk_color_button_new_with_color(&graph_color));
-#endif
 	config_dialog->graph_color_button_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
                                                   "child", config_dialog->graph_color_button,
                                                    "xalign", 0.0,
