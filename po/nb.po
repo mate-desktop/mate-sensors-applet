@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 14:34+0300\n"
-"PO-Revision-Date: 2016-05-01 01:24+0000\n"
+"PO-Revision-Date: 2016-11-17 10:41+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "Angi hvorvidt sensorenheter skal vises eller skjules"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "Velg mellom visning av miniatyrbilder eller tekstmerkning"
+msgstr "Velg mellom visning av ikoner eller tekstmerkning"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:4
 msgid "Set value beside or below label"
@@ -122,7 +122,7 @@ msgstr "Forskyvning"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:14
 msgid "Icon type"
-msgstr "Miniatyrbildetype"
+msgstr "Ikontype"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
 msgid "Color of the graph for the sensor"
@@ -206,7 +206,7 @@ msgstr "merkelapp med verdi"
 
 #: ../sensors-applet/prefs-dialog.c:472
 msgid "icon with value"
-msgstr "miniatyrbilde med verdi"
+msgstr "ikon med verdi"
 
 #: ../sensors-applet/prefs-dialog.c:474
 msgid "value only"
@@ -214,7 +214,7 @@ msgstr "kun verdi"
 
 #: ../sensors-applet/prefs-dialog.c:476
 msgid "icon only"
-msgstr "kun miniatyrbilde"
+msgstr "kun ikoner"
 
 #: ../sensors-applet/prefs-dialog.c:478
 msgid "graph only"
@@ -226,11 +226,11 @@ msgstr "_Vis sensorer i panelet som"
 
 #: ../sensors-applet/prefs-dialog.c:510
 msgid "beside labels / icons"
-msgstr "ved siden av merkelapper / miniatyrbilder"
+msgstr "ved siden av merkelapper / ikoner"
 
 #: ../sensors-applet/prefs-dialog.c:511
 msgid "below labels / icons"
-msgstr "nedenfor merkelapper / miniatyrbilder"
+msgstr "nedenfor merkelapper / ikoner"
 
 #: ../sensors-applet/prefs-dialog.c:524
 msgid "Preferred _position of sensor values"
@@ -344,7 +344,7 @@ msgstr "Graf_farge"
 
 #: ../sensors-applet/sensor-config-dialog.c:525
 msgid "Sensor _icon"
-msgstr "Sensor-_miniatyrbilde"
+msgstr "Sensor-_ikon"
 
 #: ../sensors-applet/sensor-config-dialog.c:531
 msgid "Scaling Parameters"

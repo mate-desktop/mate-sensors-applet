@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Daniel <danny34ever@yahoo.com>, 2015-2016
+# Daniel <danny3@tutanota.com>, 2015-2016
 # Polihron Alexandru (APoliTech) <ppolihron@gmail.com>, 2016
 # Spoială Cristian <scristian@gmail.com>, 2005
 msgid ""
