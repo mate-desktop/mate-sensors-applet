@@ -1,25 +1,25 @@
-1.17.0
+### mate-sensors-applet 1.17.0
 
   * Translations update
   * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
   * Update tooltip only when mouse is over the applet
 
-1.16.0
+### mate-sensors-applet 1.16.0
 
   * Make distcheck use currently selected GTK+ version
   * Translations update
 
-1.14.0
+### mate-sensors-applet 1.14.0
 
   * Some cleanups
   * Translations update
   * Fix Changelog generation
 
-1.12.1
+### mate-sensors-applet 1.12.1
 
   * Fix wrong size of GPU icon
 
-1.12.0
+### mate-sensors-applet 1.12.0
 
   * Add support for nvidia thermal and cooler sensors (requires
     libxnvctrl >= 256.25)
@@ -29,35 +29,35 @@
   * Some GTK+3 fixes
   * Some more fixes and cleanups
 
-1.10.4
+### mate-sensors-applet 1.10.4
 
   * Fix regression that caused segfault
 
-1.10.3
+### mate-sensors-applet 1.10.3
 
   * Set icons for prefs and about dialogs
   * Several small cleanups and bugfixes
   * Several help fixes
 
-1.10.2
+### mate-sensors-applet 1.10.2
 
   * Reintroduce missing help
 
-1.10.1
+### mate-sensors-applet 1.10.1
 
   * Fix sensor config dialog (was non-responsive)
   * Fix display of sensors in GTK+3 build
   * Updated translations
 
-1.10.0
+### mate-sensors-applet 1.10.0
 
   * Add GTK3 support
 
-1.8.0
+### mate-sensors-applet 1.8.0
 
   * Use yelp-tools instead of mate-doc-utils
 
-1.5.0:
+### mate-sensors-applet 1.5.0:
 
   * migrate to GSettings and remove MateConf usage
   * migrate to DBUS and remove MateComponent usage
