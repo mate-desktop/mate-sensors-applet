@@ -1,3 +1,8 @@
+1.16.1
+
+  * Update tooltip only when mouse is over the applet (fixes some
+    OpenGL issues in fullscreen apps)
+
 1.16.0
 
   * Make distcheck use currently selected GTK+ version
