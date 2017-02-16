@@ -484,7 +484,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 } else {
                         /* destroy existing widgets - could be an
                          * existing version of no sensors label - okay
-                         * to just add again though if destroy fist */
+                         * to just add again though if destroy first */
                         g_debug("destroying any existing widgets in container");
                         gtk_container_foreach(GTK_CONTAINER(sensors_applet->grid),
                                               (GtkCallback)gtk_widget_destroy,
