@@ -92,7 +92,7 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
         SensorsApplet *sensors_applet;
         sensors_applet = (SensorsApplet *)data;
 
-	/* destory dialogs, remove timeout and clear sensors tree and finally
+	/* destroy dialogs, remove timeout and clear sensors tree and finally
          * the applet */
 	if (sensors_applet->prefs_dialog != NULL) {
                 // destroy's dialog too
@@ -484,7 +484,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 } else {
                         /* destroy existing widgets - could be an
                          * existing version of no sensors label - okay
-                         * to just add again though if destory fist */
+                         * to just add again though if destroy fist */
                         g_debug("destroying any existing widgets in container");
                         gtk_container_foreach(GTK_CONTAINER(sensors_applet->grid),
                                               (GtkCallback)gtk_widget_destroy,
