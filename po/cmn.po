@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"POT-Creation-Date: 2016-12-06 00:58+0300\n"
 "PO-Revision-Date: 2015-12-10 09:06+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Chinese (Mandarin) (http://www.transifex.com/mate/MATE/language/cmn/)\n"
@@ -178,7 +178,7 @@ msgid "CPU TEMP"
 msgstr "CPU 溫度"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:308
+#: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
 msgstr "溫度"
 
@@ -191,7 +191,7 @@ msgid "Sensors Applet Preferences"
 msgstr "感應器小程式偏好設定"
 
 #: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1345
+#: ../sensors-applet/sensors-applet.c:1361
 msgid "No sensors found!"
 msgstr "找不到任何感應器！"
 
@@ -289,7 +289,7 @@ msgstr "已啟用"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:869
-#: ../sensors-applet/sensor-config-dialog.c:474
+#: ../sensors-applet/sensor-config-dialog.c:454
 msgid "Icon"
 msgstr "圖示"
 
@@ -314,7 +314,7 @@ msgid "A"
 msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:580
+#: ../sensors-applet/active-sensor.c:558
 msgid "ERROR"
 msgstr "錯誤"
 
@@ -324,142 +324,142 @@ msgstr "錯誤"
 msgid "translator-credits"
 msgstr "趙惟倫 <bluebat@member.fsf.org>, 2013"
 
-#: ../sensors-applet/sensor-config-dialog.c:411
+#: ../sensors-applet/sensor-config-dialog.c:396
 msgid "Sensor Properties"
 msgstr "感應器性質"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:438
+#: ../sensors-applet/sensor-config-dialog.c:423
 msgid "Graph"
 msgstr "圖形"
 
-#: ../sensors-applet/sensor-config-dialog.c:460
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Graph Color"
 msgstr "圖形顏色"
 
-#: ../sensors-applet/sensor-config-dialog.c:463
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Graph _color"
 msgstr "圖形顏色(_C)"
 
-#: ../sensors-applet/sensor-config-dialog.c:525
+#: ../sensors-applet/sensor-config-dialog.c:505
 msgid "Sensor _icon"
 msgstr "感應器圖示(_I)"
 
-#: ../sensors-applet/sensor-config-dialog.c:531
+#: ../sensors-applet/sensor-config-dialog.c:511
 msgid "Scaling Parameters"
 msgstr "比例參數"
 
-#: ../sensors-applet/sensor-config-dialog.c:564
+#: ../sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _multiplier"
 msgstr "感應值倍數(_M)"
 
-#: ../sensors-applet/sensor-config-dialog.c:597
+#: ../sensors-applet/sensor-config-dialog.c:577
 msgid "Sensor value _offset"
 msgstr "感應值偏移(_O)"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:607
+#: ../sensors-applet/sensor-config-dialog.c:587
 msgid "Sensor Limits"
 msgstr "感應器限度"
 
-#: ../sensors-applet/sensor-config-dialog.c:640
+#: ../sensors-applet/sensor-config-dialog.c:620
 msgid "Sensor _low value"
 msgstr "感應器低值(_L)"
 
-#: ../sensors-applet/sensor-config-dialog.c:675
+#: ../sensors-applet/sensor-config-dialog.c:655
 msgid "Sensor _high value"
 msgstr "感應器高值(_H)"
 
-#: ../sensors-applet/sensor-config-dialog.c:686
-#: ../sensors-applet/sensors-applet.c:345
+#: ../sensors-applet/sensor-config-dialog.c:666
+#: ../sensors-applet/sensors-applet.c:361
 msgid "Alarm"
 msgstr "警示"
 
-#: ../sensors-applet/sensor-config-dialog.c:718
+#: ../sensors-applet/sensor-config-dialog.c:698
 msgid "Alarm _repeat interval (secs)"
 msgstr "警示重複間隔 (秒)(_R)"
 
-#: ../sensors-applet/sensor-config-dialog.c:738
+#: ../sensors-applet/sensor-config-dialog.c:718
 msgid "Lo_w alarm command"
 msgstr "低警示命令(_W)"
 
-#: ../sensors-applet/sensor-config-dialog.c:760
+#: ../sensors-applet/sensor-config-dialog.c:740
 msgid "Hi_gh alarm command"
 msgstr "高警示命令(_G)"
 
-#: ../sensors-applet/sensor-config-dialog.c:774
+#: ../sensors-applet/sensor-config-dialog.c:754
 msgid "_Enable alarm"
 msgstr "啟用警示(_E)"
 
-#: ../sensors-applet/sensors-applet.c:221
+#: ../sensors-applet/sensors-applet.c:237
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../sensors-applet/sensors-applet.c:224
+#: ../sensors-applet/sensors-applet.c:240
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: ../sensors-applet/sensors-applet.c:227
+#: ../sensors-applet/sensors-applet.c:243
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../sensors-applet/sensors-applet.c:289
+#: ../sensors-applet/sensors-applet.c:305
 msgid "is very low"
 msgstr "很低"
 
-#: ../sensors-applet/sensors-applet.c:290
+#: ../sensors-applet/sensors-applet.c:306
 msgid "lower limit"
 msgstr "下限"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:295
+#: ../sensors-applet/sensors-applet.c:311
 msgid "is very high"
 msgstr "很高"
 
-#: ../sensors-applet/sensors-applet.c:296
+#: ../sensors-applet/sensors-applet.c:312
 msgid "upper limit"
 msgstr "上限"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: ../sensors-applet/sensors-applet.c:323
 msgid "Temperature"
 msgstr "溫度"
 
-#: ../sensors-applet/sensors-applet.c:327
+#: ../sensors-applet/sensors-applet.c:343
 msgid "Voltage"
 msgstr "電壓"
 
-#: ../sensors-applet/sensors-applet.c:328
+#: ../sensors-applet/sensors-applet.c:344
 msgid "voltage"
 msgstr "電壓"
 
-#: ../sensors-applet/sensors-applet.c:332
+#: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
 msgstr "風扇速度"
 
-#: ../sensors-applet/sensors-applet.c:333
+#: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
 msgstr "風扇速度"
 
-#: ../sensors-applet/sensors-applet.c:337
+#: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
 msgstr "目前"
 
-#: ../sensors-applet/sensors-applet.c:338
+#: ../sensors-applet/sensors-applet.c:354
 msgid "current"
 msgstr "目前"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: ../sensors-applet/sensors-applet.c:367
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "更新感應器 %s 時發生錯誤"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: ../sensors-applet/sensors-applet.c:368
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr "嘗試更新位於 %s 的感應器 %s 值時發生錯誤。"
 
-#: ../sensors-applet/sensors-applet.c:457
+#: ../sensors-applet/sensors-applet.c:473
 msgid "No sensors enabled!"
 msgstr "沒有啟用任何感應器！"

@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# samson <sambelet@yahoo.com>, 2013,2015
+# samson <sambelet@yahoo.com>, 2013,2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 14:34+0300\n"
-"PO-Revision-Date: 2015-12-10 09:06+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-12-06 00:58+0300\n"
+"PO-Revision-Date: 2017-03-02 16:16+0000\n"
+"Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
 msgid "Sensors Applet Factory"
-msgstr ""
+msgstr "የ አፕሌት ፋክቶሪ ፈልጎ አግኚ"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
 msgid "Hardware Sensors Monitor"
-msgstr ""
+msgstr "የ ጠንካራ አክል ፈልጎ አግኚ መቆጣጠሪያ"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
@@ -32,19 +32,19 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
-msgstr "የፊደል መጠን በነጥብ "
+msgstr "የ ፊደል መጠን በ ነጥብ "
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ መለኪያ ማሳያ ወይንም መደበቂያ መወሰኛ"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "የ ምልክት ወይንም የ ጽሁፍ ምልክት ማሳያ ማሰናጃ"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:4
 msgid "Set value beside or below label"
-msgstr ""
+msgstr "ምልክት አጠገብ ወይንም ከ ምልክት በታች ማሰናጃ"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ ዝርዝር"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
 msgid "Path to filename"
@@ -73,15 +73,15 @@ msgstr "መንገድ ወደ ፋይል ስም "
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
 msgid "Sensor device ids"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ አካል መለያ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
 msgid "The sensor device interface"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ አካል ገጽታ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
 msgid "User defined label"
-msgstr ""
+msgstr "በ ተጠቃሚ የሚገለጽ ምልክት"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
 msgid "Whether a sensor is enabled or not"
@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
 msgid "Multiplier"
-msgstr ""
+msgstr "ማባዣ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:13
 msgid "Offset"
@@ -145,7 +145,7 @@ msgstr "GPU"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:71
 msgid "CASE"
-msgstr ""
+msgstr "CASE"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
@@ -175,10 +175,10 @@ msgstr ""
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr ""
+msgstr "የ ሲፒዩ ሙቀት"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:308
+#: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
 msgstr ""
 
@@ -188,12 +188,12 @@ msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:410
 msgid "Sensors Applet Preferences"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ አፕሌት ምርጫ"
 
 #: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1345
+#: ../sensors-applet/sensors-applet.c:1361
 msgid "No sensors found!"
-msgstr ""
+msgstr "ምንም ፈልጎ አግኚ አካል አልተገኘም!"
 
 #: ../sensors-applet/prefs-dialog.c:457
 msgid "Display"
@@ -201,11 +201,11 @@ msgstr "ማሳያ "
 
 #: ../sensors-applet/prefs-dialog.c:470
 msgid "label with value"
-msgstr ""
+msgstr "ምልክት ከ ዋጋ ጋር "
 
 #: ../sensors-applet/prefs-dialog.c:472
 msgid "icon with value"
-msgstr ""
+msgstr "ምልክት ከ ዋጋ ጋር"
 
 #: ../sensors-applet/prefs-dialog.c:474
 msgid "value only"
@@ -261,7 +261,7 @@ msgstr "ማሻሻያ"
 
 #: ../sensors-applet/prefs-dialog.c:621
 msgid "Update _interval (secs)"
-msgstr ""
+msgstr "የ ማሻሻያ _ክፍተት (ሰከንዶች)"
 
 #: ../sensors-applet/prefs-dialog.c:631
 msgid "Notifications"
@@ -273,7 +273,7 @@ msgstr "_ማስታወቂያዎች ማሳያ"
 
 #: ../sensors-applet/prefs-dialog.c:845
 msgid "Sensor"
-msgstr ""
+msgstr "ፈልጎ አግኚ "
 
 #: ../sensors-applet/prefs-dialog.c:852
 msgid "Label"
@@ -289,7 +289,7 @@ msgstr "ተችሏል "
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:869
-#: ../sensors-applet/sensor-config-dialog.c:474
+#: ../sensors-applet/sensor-config-dialog.c:454
 msgid "Icon"
 msgstr "ምልክት "
 
@@ -299,22 +299,22 @@ msgstr "ባጠቃላይ ምርጫዎች"
 
 #: ../sensors-applet/prefs-dialog.c:1007
 msgid "Sensors"
-msgstr ""
+msgstr "ፈልጎ አግኚ "
 
 #: ../sensors-applet/sensors-applet.h:57
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: ../sensors-applet/sensors-applet.h:58
 msgid "V"
-msgstr ""
+msgstr "V"
 
 #: ../sensors-applet/sensors-applet.h:59
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:580
+#: ../sensors-applet/active-sensor.c:558
 msgid "ERROR"
 msgstr "ስህተት "
 
@@ -324,142 +324,142 @@ msgstr "ስህተት "
 msgid "translator-credits"
 msgstr "ምስጋና ለተርጓሚዎች "
 
-#: ../sensors-applet/sensor-config-dialog.c:411
+#: ../sensors-applet/sensor-config-dialog.c:396
 msgid "Sensor Properties"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ ባህሪዎች"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:438
+#: ../sensors-applet/sensor-config-dialog.c:423
 msgid "Graph"
 msgstr ""
 
-#: ../sensors-applet/sensor-config-dialog.c:460
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Graph Color"
 msgstr ""
 
-#: ../sensors-applet/sensor-config-dialog.c:463
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Graph _color"
 msgstr ""
 
-#: ../sensors-applet/sensor-config-dialog.c:525
+#: ../sensors-applet/sensor-config-dialog.c:505
 msgid "Sensor _icon"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ _ምልክት"
 
-#: ../sensors-applet/sensor-config-dialog.c:531
+#: ../sensors-applet/sensor-config-dialog.c:511
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "ደንቦች መመጠኛ"
 
-#: ../sensors-applet/sensor-config-dialog.c:564
+#: ../sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _multiplier"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ ዋጋ _ማባዣ"
 
-#: ../sensors-applet/sensor-config-dialog.c:597
+#: ../sensors-applet/sensor-config-dialog.c:577
 msgid "Sensor value _offset"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ ዋጋ _ማካካሻ"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:607
+#: ../sensors-applet/sensor-config-dialog.c:587
 msgid "Sensor Limits"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ መጠን"
 
-#: ../sensors-applet/sensor-config-dialog.c:640
+#: ../sensors-applet/sensor-config-dialog.c:620
 msgid "Sensor _low value"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ _ዝቅተኛ ዋጋ"
 
-#: ../sensors-applet/sensor-config-dialog.c:675
+#: ../sensors-applet/sensor-config-dialog.c:655
 msgid "Sensor _high value"
-msgstr ""
+msgstr "የ ፈልጎ አግኚ _ከፍተኛ ዋጋ"
 
-#: ../sensors-applet/sensor-config-dialog.c:686
-#: ../sensors-applet/sensors-applet.c:345
+#: ../sensors-applet/sensor-config-dialog.c:666
+#: ../sensors-applet/sensors-applet.c:361
 msgid "Alarm"
 msgstr "ማስጠንቀቂያ "
 
-#: ../sensors-applet/sensor-config-dialog.c:718
+#: ../sensors-applet/sensor-config-dialog.c:698
 msgid "Alarm _repeat interval (secs)"
-msgstr ""
+msgstr "ማስጠንቀቂያ _መድገሚያ ክፍተት (ሰከንዶች)"
 
-#: ../sensors-applet/sensor-config-dialog.c:738
+#: ../sensors-applet/sensor-config-dialog.c:718
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "ዝቅ_ተኛ ማስጠንቀቂያ ትእዛዝ"
 
-#: ../sensors-applet/sensor-config-dialog.c:760
+#: ../sensors-applet/sensor-config-dialog.c:740
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "ከፍ_ተኛ ማስጠንቀቂያ ትእዛዝ"
 
-#: ../sensors-applet/sensor-config-dialog.c:774
+#: ../sensors-applet/sensor-config-dialog.c:754
 msgid "_Enable alarm"
 msgstr "ማስጠንቀቂያ _ማስቻያ "
 
-#: ../sensors-applet/sensors-applet.c:221
+#: ../sensors-applet/sensors-applet.c:237
 msgid "_Preferences"
 msgstr "_ምርጫዎች "
 
-#: ../sensors-applet/sensors-applet.c:224
+#: ../sensors-applet/sensors-applet.c:240
 msgid "_Help"
 msgstr "_እርዳታ "
 
-#: ../sensors-applet/sensors-applet.c:227
+#: ../sensors-applet/sensors-applet.c:243
 msgid "_About"
 msgstr "_ስለ "
 
-#: ../sensors-applet/sensors-applet.c:289
+#: ../sensors-applet/sensors-applet.c:305
 msgid "is very low"
 msgstr "በጣም ዝቅተኛ ነው "
 
-#: ../sensors-applet/sensors-applet.c:290
+#: ../sensors-applet/sensors-applet.c:306
 msgid "lower limit"
 msgstr "ዝቅተኛ መጠን "
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:295
+#: ../sensors-applet/sensors-applet.c:311
 msgid "is very high"
 msgstr "በጣም ከፍተኛ ነው"
 
-#: ../sensors-applet/sensors-applet.c:296
+#: ../sensors-applet/sensors-applet.c:312
 msgid "upper limit"
 msgstr "ከፍተኛው መጠን "
 
-#: ../sensors-applet/sensors-applet.c:307
+#: ../sensors-applet/sensors-applet.c:323
 msgid "Temperature"
 msgstr "የ አየር ንብረት "
 
-#: ../sensors-applet/sensors-applet.c:327
+#: ../sensors-applet/sensors-applet.c:343
 msgid "Voltage"
-msgstr ""
+msgstr "ቮልቴጅ"
 
-#: ../sensors-applet/sensors-applet.c:328
+#: ../sensors-applet/sensors-applet.c:344
 msgid "voltage"
-msgstr ""
+msgstr "ቮልቴጅ "
 
-#: ../sensors-applet/sensors-applet.c:332
+#: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
 msgstr ""
 
-#: ../sensors-applet/sensors-applet.c:333
+#: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
 msgstr ""
 
-#: ../sensors-applet/sensors-applet.c:337
+#: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
-msgstr ""
+msgstr "ከረንት"
 
-#: ../sensors-applet/sensors-applet.c:338
+#: ../sensors-applet/sensors-applet.c:354
 msgid "current"
-msgstr ""
+msgstr "ከረንት "
 
-#: ../sensors-applet/sensors-applet.c:351
+#: ../sensors-applet/sensors-applet.c:367
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "ስህተት ተፈጥሯል ፈልጎ አግኚ ሲሻሻል %s"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: ../sensors-applet/sensors-applet.c:368
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr ""
 
-#: ../sensors-applet/sensors-applet.c:457
+#: ../sensors-applet/sensors-applet.c:473
 msgid "No sensors enabled!"
-msgstr ""
+msgstr "ምንም  ፈልጎ አግኚ አላስቻሉም!"

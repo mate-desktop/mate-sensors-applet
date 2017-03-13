@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"POT-Creation-Date: 2016-12-06 00:58+0300\n"
 "PO-Revision-Date: 2016-04-07 12:03+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
@@ -181,7 +181,7 @@ msgid "CPU TEMP"
 msgstr "CPU 온도"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:308
+#: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
 msgstr "온도"
 
@@ -194,7 +194,7 @@ msgid "Sensors Applet Preferences"
 msgstr "센서 애플린 기본 설정"
 
 #: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1345
+#: ../sensors-applet/sensors-applet.c:1361
 msgid "No sensors found!"
 msgstr "센서가 없습니다!"
 
@@ -292,7 +292,7 @@ msgstr "활성화"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:869
-#: ../sensors-applet/sensor-config-dialog.c:474
+#: ../sensors-applet/sensor-config-dialog.c:454
 msgid "Icon"
 msgstr "아이콘"
 
@@ -317,7 +317,7 @@ msgid "A"
 msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:580
+#: ../sensors-applet/active-sensor.c:558
 msgid "ERROR"
 msgstr "오류"
 
@@ -327,142 +327,142 @@ msgstr "오류"
 msgid "translator-credits"
 msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>\nMATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
 
-#: ../sensors-applet/sensor-config-dialog.c:411
+#: ../sensors-applet/sensor-config-dialog.c:396
 msgid "Sensor Properties"
 msgstr "센서 속성"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:438
+#: ../sensors-applet/sensor-config-dialog.c:423
 msgid "Graph"
 msgstr "그래프"
 
-#: ../sensors-applet/sensor-config-dialog.c:460
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Graph Color"
 msgstr "그래프 색상"
 
-#: ../sensors-applet/sensor-config-dialog.c:463
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Graph _color"
 msgstr "그래프 색상(_C)"
 
-#: ../sensors-applet/sensor-config-dialog.c:525
+#: ../sensors-applet/sensor-config-dialog.c:505
 msgid "Sensor _icon"
 msgstr "센서 아이콘(_I)"
 
-#: ../sensors-applet/sensor-config-dialog.c:531
+#: ../sensors-applet/sensor-config-dialog.c:511
 msgid "Scaling Parameters"
 msgstr "스케일링 매개변수"
 
-#: ../sensors-applet/sensor-config-dialog.c:564
+#: ../sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _multiplier"
 msgstr "센서 값 승수(_M)"
 
-#: ../sensors-applet/sensor-config-dialog.c:597
+#: ../sensors-applet/sensor-config-dialog.c:577
 msgid "Sensor value _offset"
 msgstr "센서 값 오프셋(_O)"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:607
+#: ../sensors-applet/sensor-config-dialog.c:587
 msgid "Sensor Limits"
 msgstr "센서 한계"
 
-#: ../sensors-applet/sensor-config-dialog.c:640
+#: ../sensors-applet/sensor-config-dialog.c:620
 msgid "Sensor _low value"
 msgstr "센서 최저값(_L)"
 
-#: ../sensors-applet/sensor-config-dialog.c:675
+#: ../sensors-applet/sensor-config-dialog.c:655
 msgid "Sensor _high value"
 msgstr "센서 최고값(_H)"
 
-#: ../sensors-applet/sensor-config-dialog.c:686
-#: ../sensors-applet/sensors-applet.c:345
+#: ../sensors-applet/sensor-config-dialog.c:666
+#: ../sensors-applet/sensors-applet.c:361
 msgid "Alarm"
 msgstr "알림"
 
-#: ../sensors-applet/sensor-config-dialog.c:718
+#: ../sensors-applet/sensor-config-dialog.c:698
 msgid "Alarm _repeat interval (secs)"
 msgstr "알림 반복 주기(초)(_R)"
 
-#: ../sensors-applet/sensor-config-dialog.c:738
+#: ../sensors-applet/sensor-config-dialog.c:718
 msgid "Lo_w alarm command"
 msgstr "낮은 값 알림시 명령(_W)"
 
-#: ../sensors-applet/sensor-config-dialog.c:760
+#: ../sensors-applet/sensor-config-dialog.c:740
 msgid "Hi_gh alarm command"
 msgstr "높은 값 알림시 명령(_G)"
 
-#: ../sensors-applet/sensor-config-dialog.c:774
+#: ../sensors-applet/sensor-config-dialog.c:754
 msgid "_Enable alarm"
 msgstr "알림 활성화(_E)"
 
-#: ../sensors-applet/sensors-applet.c:221
+#: ../sensors-applet/sensors-applet.c:237
 msgid "_Preferences"
 msgstr "기본 설정(_P)"
 
-#: ../sensors-applet/sensors-applet.c:224
+#: ../sensors-applet/sensors-applet.c:240
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../sensors-applet/sensors-applet.c:227
+#: ../sensors-applet/sensors-applet.c:243
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../sensors-applet/sensors-applet.c:289
+#: ../sensors-applet/sensors-applet.c:305
 msgid "is very low"
 msgstr "매우 낮음"
 
-#: ../sensors-applet/sensors-applet.c:290
+#: ../sensors-applet/sensors-applet.c:306
 msgid "lower limit"
 msgstr "낮음 한계"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:295
+#: ../sensors-applet/sensors-applet.c:311
 msgid "is very high"
 msgstr "매우 높음"
 
-#: ../sensors-applet/sensors-applet.c:296
+#: ../sensors-applet/sensors-applet.c:312
 msgid "upper limit"
 msgstr "높음 한계"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: ../sensors-applet/sensors-applet.c:323
 msgid "Temperature"
 msgstr "온도"
 
-#: ../sensors-applet/sensors-applet.c:327
+#: ../sensors-applet/sensors-applet.c:343
 msgid "Voltage"
 msgstr "전압"
 
-#: ../sensors-applet/sensors-applet.c:328
+#: ../sensors-applet/sensors-applet.c:344
 msgid "voltage"
 msgstr "전압"
 
-#: ../sensors-applet/sensors-applet.c:332
+#: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
 msgstr "팬 회전 속도"
 
-#: ../sensors-applet/sensors-applet.c:333
+#: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
 msgstr "팬 회전 속도"
 
-#: ../sensors-applet/sensors-applet.c:337
+#: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
 msgstr "전류"
 
-#: ../sensors-applet/sensors-applet.c:338
+#: ../sensors-applet/sensors-applet.c:354
 msgid "current"
 msgstr "전류"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: ../sensors-applet/sensors-applet.c:367
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "%s 센서 업데이트중 오류"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: ../sensors-applet/sensors-applet.c:368
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr "%2$s에 있는 %1$s 센서 값을 업데이트 하려던 중 오류가 발생했습니다."
 
-#: ../sensors-applet/sensors-applet.c:457
+#: ../sensors-applet/sensors-applet.c:473
 msgid "No sensors enabled!"
 msgstr "활성화 한 센서가 없습니다!"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"POT-Creation-Date: 2016-12-06 00:58+0300\n"
 "PO-Revision-Date: 2016-03-09 13:02+0000\n"
 "Last-Translator: Victor Maximiliano <VicBrd09@mail2tor.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/mate/MATE/language/pt_BR/)\n"
@@ -184,7 +184,7 @@ msgid "CPU TEMP"
 msgstr "CPU"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:308
+#: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
 msgstr "temperatura"
 
@@ -197,7 +197,7 @@ msgid "Sensors Applet Preferences"
 msgstr "Preferências do Miniaplicativo de Sensores"
 
 #: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1345
+#: ../sensors-applet/sensors-applet.c:1361
 msgid "No sensors found!"
 msgstr "Nenhum sensor foi encontrado!"
 
@@ -295,7 +295,7 @@ msgstr "Ativado"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:869
-#: ../sensors-applet/sensor-config-dialog.c:474
+#: ../sensors-applet/sensor-config-dialog.c:454
 msgid "Icon"
 msgstr "Ícone"
 
@@ -320,7 +320,7 @@ msgid "A"
 msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:580
+#: ../sensors-applet/active-sensor.c:558
 msgid "ERROR"
 msgstr "ERRO"
 
@@ -330,142 +330,142 @@ msgstr "ERRO"
 msgid "translator-credits"
 msgstr "tradutor-créditos"
 
-#: ../sensors-applet/sensor-config-dialog.c:411
+#: ../sensors-applet/sensor-config-dialog.c:396
 msgid "Sensor Properties"
 msgstr "Propriedades do Sensor"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:438
+#: ../sensors-applet/sensor-config-dialog.c:423
 msgid "Graph"
 msgstr "Gráfico"
 
-#: ../sensors-applet/sensor-config-dialog.c:460
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Graph Color"
 msgstr "Cor do Gráfico"
 
-#: ../sensors-applet/sensor-config-dialog.c:463
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Graph _color"
 msgstr "_Cor do gráfico"
 
-#: ../sensors-applet/sensor-config-dialog.c:525
+#: ../sensors-applet/sensor-config-dialog.c:505
 msgid "Sensor _icon"
 msgstr "Ícon_e do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:531
+#: ../sensors-applet/sensor-config-dialog.c:511
 msgid "Scaling Parameters"
 msgstr "Parâmetros da Escala"
 
-#: ../sensors-applet/sensor-config-dialog.c:564
+#: ../sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _multiplier"
 msgstr "_Multiplicador do valor do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:597
+#: ../sensors-applet/sensor-config-dialog.c:577
 msgid "Sensor value _offset"
 msgstr "_Deslocamento do valor do sensor"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:607
+#: ../sensors-applet/sensor-config-dialog.c:587
 msgid "Sensor Limits"
 msgstr "Limites do Sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:640
+#: ../sensors-applet/sensor-config-dialog.c:620
 msgid "Sensor _low value"
 msgstr "Limite _inferior do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:675
+#: ../sensors-applet/sensor-config-dialog.c:655
 msgid "Sensor _high value"
 msgstr "Limite _superior do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:686
-#: ../sensors-applet/sensors-applet.c:345
+#: ../sensors-applet/sensor-config-dialog.c:666
+#: ../sensors-applet/sensors-applet.c:361
 msgid "Alarm"
 msgstr "Alarme"
 
-#: ../sensors-applet/sensor-config-dialog.c:718
+#: ../sensors-applet/sensor-config-dialog.c:698
 msgid "Alarm _repeat interval (secs)"
 msgstr "Tempo de _repetição do alarme (segs)"
 
-#: ../sensors-applet/sensor-config-dialog.c:738
+#: ../sensors-applet/sensor-config-dialog.c:718
 msgid "Lo_w alarm command"
 msgstr "Comando para alarme in_ferior"
 
-#: ../sensors-applet/sensor-config-dialog.c:760
+#: ../sensors-applet/sensor-config-dialog.c:740
 msgid "Hi_gh alarm command"
 msgstr "Comando para alarme su_perior"
 
-#: ../sensors-applet/sensor-config-dialog.c:774
+#: ../sensors-applet/sensor-config-dialog.c:754
 msgid "_Enable alarm"
 msgstr "_Ativar alarme"
 
-#: ../sensors-applet/sensors-applet.c:221
+#: ../sensors-applet/sensors-applet.c:237
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: ../sensors-applet/sensors-applet.c:224
+#: ../sensors-applet/sensors-applet.c:240
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: ../sensors-applet/sensors-applet.c:227
+#: ../sensors-applet/sensors-applet.c:243
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../sensors-applet/sensors-applet.c:289
+#: ../sensors-applet/sensors-applet.c:305
 msgid "is very low"
 msgstr "está muito baixa"
 
-#: ../sensors-applet/sensors-applet.c:290
+#: ../sensors-applet/sensors-applet.c:306
 msgid "lower limit"
 msgstr "limite inferior"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:295
+#: ../sensors-applet/sensors-applet.c:311
 msgid "is very high"
 msgstr "está muito alta"
 
-#: ../sensors-applet/sensors-applet.c:296
+#: ../sensors-applet/sensors-applet.c:312
 msgid "upper limit"
 msgstr "limite superior"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: ../sensors-applet/sensors-applet.c:323
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: ../sensors-applet/sensors-applet.c:327
+#: ../sensors-applet/sensors-applet.c:343
 msgid "Voltage"
 msgstr "Voltagem"
 
-#: ../sensors-applet/sensors-applet.c:328
+#: ../sensors-applet/sensors-applet.c:344
 msgid "voltage"
 msgstr "voltagem"
 
-#: ../sensors-applet/sensors-applet.c:332
+#: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
 msgstr "Velocidade do Ventilador"
 
-#: ../sensors-applet/sensors-applet.c:333
+#: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
 msgstr "velocidade do ventilador"
 
-#: ../sensors-applet/sensors-applet.c:337
+#: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
 msgstr "Atual"
 
-#: ../sensors-applet/sensors-applet.c:338
+#: ../sensors-applet/sensors-applet.c:354
 msgid "current"
 msgstr "atual"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: ../sensors-applet/sensors-applet.c:367
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "Erro ao atualizar o sensor %s"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: ../sensors-applet/sensors-applet.c:368
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr "Um erro ocorreu ao tentar atualizar o valor do sensor %s localizado em %s."
 
-#: ../sensors-applet/sensors-applet.c:457
+#: ../sensors-applet/sensors-applet.c:473
 msgid "No sensors enabled!"
 msgstr "Nenhum sensor ativo!"

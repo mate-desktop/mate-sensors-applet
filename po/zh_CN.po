@@ -6,12 +6,12 @@
 # Davy Defaud <davy.defaud@free.fr>, 2005
 # Mingye Wang <arthur200126@gmail.com>, 2016
 # Wylmer Wang, 2013
-# zodiac lee (喜乐) <zodiac8765@gmail.com>, 2013
+# hiahoo lee (leaber) <zodiac8765@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 14:34+0300\n"
+"POT-Creation-Date: 2016-12-06 00:58+0300\n"
 "PO-Revision-Date: 2016-01-08 21:18+0000\n"
 "Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
@@ -181,7 +181,7 @@ msgid "CPU TEMP"
 msgstr "CPU温度"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:308
+#: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
 msgstr "温度"
 
@@ -194,7 +194,7 @@ msgid "Sensors Applet Preferences"
 msgstr "传感器控件属性"
 
 #: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1345
+#: ../sensors-applet/sensors-applet.c:1361
 msgid "No sensors found!"
 msgstr "未发现传感器!"
 
@@ -292,7 +292,7 @@ msgstr "启用"
 
 #. icon stuff
 #: ../sensors-applet/prefs-dialog.c:869
-#: ../sensors-applet/sensor-config-dialog.c:474
+#: ../sensors-applet/sensor-config-dialog.c:454
 msgid "Icon"
 msgstr "图标"
 
@@ -317,7 +317,7 @@ msgid "A"
 msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:580
+#: ../sensors-applet/active-sensor.c:558
 msgid "ERROR"
 msgstr "错误"
 
@@ -327,142 +327,142 @@ msgstr "错误"
 msgid "translator-credits"
 msgstr "Wylmer Wang <wantinghard@gmail.com>"
 
-#: ../sensors-applet/sensor-config-dialog.c:411
+#: ../sensors-applet/sensor-config-dialog.c:396
 msgid "Sensor Properties"
 msgstr "传感器属性"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:438
+#: ../sensors-applet/sensor-config-dialog.c:423
 msgid "Graph"
 msgstr "图像"
 
-#: ../sensors-applet/sensor-config-dialog.c:460
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Graph Color"
 msgstr "图像颜色"
 
-#: ../sensors-applet/sensor-config-dialog.c:463
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Graph _color"
 msgstr "图像颜色(_c)"
 
-#: ../sensors-applet/sensor-config-dialog.c:525
+#: ../sensors-applet/sensor-config-dialog.c:505
 msgid "Sensor _icon"
 msgstr "传感器图标(_i)"
 
-#: ../sensors-applet/sensor-config-dialog.c:531
+#: ../sensors-applet/sensor-config-dialog.c:511
 msgid "Scaling Parameters"
 msgstr "范围参数"
 
-#: ../sensors-applet/sensor-config-dialog.c:564
+#: ../sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _multiplier"
 msgstr "传感器增值(_m)"
 
-#: ../sensors-applet/sensor-config-dialog.c:597
+#: ../sensors-applet/sensor-config-dialog.c:577
 msgid "Sensor value _offset"
 msgstr "传感器偏移值(_o)"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:607
+#: ../sensors-applet/sensor-config-dialog.c:587
 msgid "Sensor Limits"
 msgstr "传感器限制"
 
-#: ../sensors-applet/sensor-config-dialog.c:640
+#: ../sensors-applet/sensor-config-dialog.c:620
 msgid "Sensor _low value"
 msgstr "传感器低值(_l)"
 
-#: ../sensors-applet/sensor-config-dialog.c:675
+#: ../sensors-applet/sensor-config-dialog.c:655
 msgid "Sensor _high value"
 msgstr "传感器高值(_h)"
 
-#: ../sensors-applet/sensor-config-dialog.c:686
-#: ../sensors-applet/sensors-applet.c:345
+#: ../sensors-applet/sensor-config-dialog.c:666
+#: ../sensors-applet/sensors-applet.c:361
 msgid "Alarm"
 msgstr "警报"
 
-#: ../sensors-applet/sensor-config-dialog.c:718
+#: ../sensors-applet/sensor-config-dialog.c:698
 msgid "Alarm _repeat interval (secs)"
 msgstr "警报重复间隔(_r)(秒)"
 
-#: ../sensors-applet/sensor-config-dialog.c:738
+#: ../sensors-applet/sensor-config-dialog.c:718
 msgid "Lo_w alarm command"
 msgstr "低值报警命令(_w)"
 
-#: ../sensors-applet/sensor-config-dialog.c:760
+#: ../sensors-applet/sensor-config-dialog.c:740
 msgid "Hi_gh alarm command"
 msgstr "高值报警命令(_g)"
 
-#: ../sensors-applet/sensor-config-dialog.c:774
+#: ../sensors-applet/sensor-config-dialog.c:754
 msgid "_Enable alarm"
 msgstr "启用警报(_E)"
 
-#: ../sensors-applet/sensors-applet.c:221
+#: ../sensors-applet/sensors-applet.c:237
 msgid "_Preferences"
 msgstr "属性(_P)"
 
-#: ../sensors-applet/sensors-applet.c:224
+#: ../sensors-applet/sensors-applet.c:240
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../sensors-applet/sensors-applet.c:227
+#: ../sensors-applet/sensors-applet.c:243
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../sensors-applet/sensors-applet.c:289
+#: ../sensors-applet/sensors-applet.c:305
 msgid "is very low"
 msgstr "非常低"
 
-#: ../sensors-applet/sensors-applet.c:290
+#: ../sensors-applet/sensors-applet.c:306
 msgid "lower limit"
 msgstr "下限"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:295
+#: ../sensors-applet/sensors-applet.c:311
 msgid "is very high"
 msgstr "非常高"
 
-#: ../sensors-applet/sensors-applet.c:296
+#: ../sensors-applet/sensors-applet.c:312
 msgid "upper limit"
 msgstr "上限"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: ../sensors-applet/sensors-applet.c:323
 msgid "Temperature"
 msgstr "温度"
 
-#: ../sensors-applet/sensors-applet.c:327
+#: ../sensors-applet/sensors-applet.c:343
 msgid "Voltage"
 msgstr "电压"
 
-#: ../sensors-applet/sensors-applet.c:328
+#: ../sensors-applet/sensors-applet.c:344
 msgid "voltage"
 msgstr "电压"
 
-#: ../sensors-applet/sensors-applet.c:332
+#: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
 msgstr "风扇速度"
 
-#: ../sensors-applet/sensors-applet.c:333
+#: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
 msgstr "风扇速度"
 
-#: ../sensors-applet/sensors-applet.c:337
+#: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
 msgstr "当前"
 
-#: ../sensors-applet/sensors-applet.c:338
+#: ../sensors-applet/sensors-applet.c:354
 msgid "current"
 msgstr "当前"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: ../sensors-applet/sensors-applet.c:367
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "更新传感器错误 %s"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: ../sensors-applet/sensors-applet.c:368
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr "在试图更新位于 %2$s 处的传感器 %1$s 的值时发生了错误。"
 
-#: ../sensors-applet/sensors-applet.c:457
+#: ../sensors-applet/sensors-applet.c:473
 msgid "No sensors enabled!"
 msgstr "没有启动传感器!"
