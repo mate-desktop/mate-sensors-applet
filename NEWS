@@ -1,8 +1,18 @@
-### mate-sensors-applet 1.17.0
+### mate-sensors-applet 1.18.0
 
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Build: require mate-panel >= 1.17
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Fix some GTK+ deprecations
+  * Some more fixes and cleanups
   * Translations update
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
-  * Update tooltip only when mouse is over the applet
+
+### mate-sensors-applet 1.16.1
+
+  * Update tooltip only when mouse is over the applet (fixes some
+    OpenGL issues in fullscreen apps)
 
 ### mate-sensors-applet 1.16.0
 
@@ -61,4 +71,4 @@
 
   * migrate to GSettings and remove MateConf usage
   * migrate to DBUS and remove MateComponent usage
-  * remove libmate usage and use glib instead 
+  * remove libmate usage and use glib instead
