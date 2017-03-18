@@ -479,6 +479,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                         sensors_applet->grid = gtk_grid_new();
                         gtk_grid_set_column_spacing(GTK_GRID(sensors_applet->grid), COLUMN_SPACING);
                         gtk_grid_set_row_spacing(GTK_GRID(sensors_applet->grid), ROW_SPACING);
+                        gtk_widget_set_halign(sensors_applet->grid, GTK_ALIGN_CENTER);
+                        gtk_widget_set_valign(sensors_applet->grid, GTK_ALIGN_CENTER);
                         /* add grid to applet */
                         gtk_container_add(GTK_CONTAINER(sensors_applet->applet), sensors_applet->grid);
                 } else {
@@ -683,6 +685,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 		sensors_applet->grid = gtk_grid_new();
 		gtk_grid_set_column_spacing(GTK_GRID(sensors_applet->grid), COLUMN_SPACING);
 		gtk_grid_set_row_spacing(GTK_GRID(sensors_applet->grid), ROW_SPACING);
+		gtk_widget_set_halign(sensors_applet->grid, GTK_ALIGN_CENTER);
+		gtk_widget_set_valign(sensors_applet->grid, GTK_ALIGN_CENTER);
 		gtk_container_add(GTK_CONTAINER(sensors_applet->applet), sensors_applet->grid);
 	} else {
 		/* remove all children if grid already exists so we can start
