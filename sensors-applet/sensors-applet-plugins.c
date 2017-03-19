@@ -46,14 +46,15 @@ static void load_all_plugins(SensorsApplet *sensors_applet,
                                 SensorsAppletPluginGetSensorValue get_value_fn;
 
                                 plugin_file = g_strdup_printf("%s/%s", path, file);
-                                g_debug("found %s in plugin directory", plugin_file);
                                 if ((handle = dlopen(plugin_file, RTLD_NOW)) != NULL) {
+                                        g_debug("dlopen()'d %s", plugin_file);
+
                                         
                                         if ((name_fn = dlsym(handle, "sensors_applet_plugin_name")) != NULL &&
                                             (init_fn = dlsym(handle, "sensors_applet_plugin_init")) != NULL &&
                                             (get_value_fn = dlsym(handle, "sensors_applet_plugin_get_sensor_value")) != NULL) {
                                                 GList *sensors;
-                                                g_debug("calling init function for plugin file %s", plugin_file);
+                                                g_debug("initing plugin %s", name_fn());
                                                 
                                                 if ((sensors = init_fn()) != NULL) {
                                                         GList *sensor;
@@ -92,30 +93,23 @@ static void load_all_plugins(SensorsApplet *sensors_applet,
                                                         }
                                                         g_list_free(sensors);
                                                 } else {
-                                                        g_debug("plugin could not find any sensors");
+                                                        g_debug("plugin %s could not find any sensors", name_fn());
                                                         if (g_hash_table_lookup(sensors_applet->required_plugins,
                                                                                 name_fn()))
                                                         {
-                                                                g_debug("plugin is required - registering even though no sensors detected");
-                                                        g_debug("registering plugin %s", name_fn());
-                                                        g_hash_table_insert(sensors_applet->plugins,
-                                                                            g_strdup(name_fn()),
-                                                                            get_value_fn);
+                                                                g_debug("plugin %s required - registering even though no sensors detected", name_fn());
+                                                                g_hash_table_insert(sensors_applet->plugins,
+                                                                                    g_strdup(name_fn()),
+                                                                                    get_value_fn);
                                                         } else {
-                                                                g_debug("unloading plugin");
+                                                                g_debug("unloading plugin %s", name_fn());
+                                                                dlclose(handle);
                                                         }
                                                 }
-                                                
-                                                                
-
                                         } else {
                                                 g_debug("plugin file %s does not contain the required interface", plugin_file);
-                                                if (dlclose(handle) != 0) {
-                                                        g_debug("error closing plugin file %s", plugin_file);
-                                                }
+                                                dlclose(handle);
                                         }
-                                } else {
-                                        g_debug("Could not dlopen: %s: %s", plugin_file, dlerror());
                                 }
                                 g_free(plugin_file);
                         }
@@ -134,7 +128,7 @@ void sensors_applet_plugins_load_all(SensorsApplet *sensors_applet)
         
         if ((home = g_get_home_dir()) != NULL) {
                 gchar *path;
-                path = g_build_filename(home, 
+                path = g_build_filename(home,
                                         SENSORS_APPLET_USER_PLUGIN_DIR,
                                         NULL);
                 load_all_plugins(sensors_applet, path);
