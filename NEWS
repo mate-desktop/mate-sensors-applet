@@ -1,3 +1,7 @@
+### mate-sensors-applet 1.18.1
+
+  * use GTK_ALIGN_CENTER for the sensor_applet grid
+
 ### mate-sensors-applet 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
