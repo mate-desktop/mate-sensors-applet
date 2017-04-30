@@ -813,6 +813,9 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                      "vscrollbar-policy", GTK_POLICY_AUTOMATIC,
                                                      NULL);
 
+        gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(prefs_dialog->scrolled_window),
+                                            GTK_SHADOW_IN);
+
         gtk_container_add(GTK_CONTAINER(prefs_dialog->scrolled_window), GTK_WIDGET(prefs_dialog->view));
 
         /* GtkTree Selection */
