@@ -52,7 +52,6 @@ typedef struct {
         GtkButtonBox *buttons_box; /* holds sensor reorder buttons */
         GtkBox *sensors_hbox; /* holds scrolled window and
                                * buttons_vbox */
-        GtkAlignment *globals_alignment;
         GtkBox *sensors_vbox; /* holds sensors_hbox and sensor_config_hbox */
         GtkBox *sensor_config_hbox; /* holds config button */
         GtkSizeGroup *size_group; /* so comboboxes all

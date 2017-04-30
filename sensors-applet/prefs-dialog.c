@@ -735,6 +735,12 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          1, 8, 1, 1);
 #endif
 
+        gtk_widget_set_valign(GTK_WIDGET(prefs_dialog->globals_grid), GTK_ALIGN_START);
+        gtk_widget_set_margin_start(GTK_WIDGET(prefs_dialog->globals_grid), 12);
+        gtk_widget_set_margin_end(GTK_WIDGET(prefs_dialog->globals_grid), 12);
+        gtk_widget_set_margin_top(GTK_WIDGET(prefs_dialog->globals_grid), 12);
+        gtk_widget_set_margin_bottom(GTK_WIDGET(prefs_dialog->globals_grid), 12);
+
         prefs_dialog->view = g_object_new(GTK_TYPE_TREE_VIEW,
                                           "model", GTK_TREE_MODEL(sensors_applet->sensors),
                                           "rules-hint", TRUE,
@@ -910,22 +916,11 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                            GTK_WIDGET(prefs_dialog->sensor_config_hbox),
                            FALSE, FALSE, 0);
 
-        prefs_dialog->globals_alignment = g_object_new(GTK_TYPE_ALIGNMENT,
-                                                       "xalign", 0.5,
-                                                       "yalign", 0.0,
-                                                       "top-padding", 12,
-                                                       "left-padding", 12,
-                                                       "bottom-padding", 12,
-                                                       "right-padding", 12,
-                                                       NULL);
-        gtk_container_add(GTK_CONTAINER(prefs_dialog->globals_alignment),
-                          GTK_WIDGET(prefs_dialog->globals_grid));
-
         prefs_dialog->notebook = g_object_new(GTK_TYPE_NOTEBOOK,
                                               NULL);
 
         gtk_notebook_append_page(prefs_dialog->notebook,
-                                 GTK_WIDGET(prefs_dialog->globals_alignment),
+                                 GTK_WIDGET(prefs_dialog->globals_grid),
                                  gtk_label_new(_("General Options")));
 
         gtk_notebook_append_page(prefs_dialog->notebook,
