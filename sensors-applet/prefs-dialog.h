@@ -49,7 +49,7 @@ typedef struct {
         GtkCellRenderer *id_renderer, *label_renderer, *enable_renderer, *icon_renderer;
         GtkScrolledWindow *scrolled_window;
         
-        GtkVButtonBox *buttons_box; /* holds sensor reorder buttons */
+        GtkButtonBox *buttons_box; /* holds sensor reorder buttons */
         GtkBox *sensors_hbox; /* holds scrolled window and
                                * buttons_vbox */
         GtkAlignment *globals_alignment;

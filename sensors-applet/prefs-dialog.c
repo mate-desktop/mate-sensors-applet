@@ -838,7 +838,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          prefs_dialog);
 
 
-        prefs_dialog->buttons_box = GTK_VBUTTON_BOX(gtk_vbutton_box_new());
+        prefs_dialog->buttons_box = GTK_BUTTON_BOX(gtk_button_box_new(GTK_ORIENTATION_VERTICAL));
 
         gtk_button_box_set_layout(GTK_BUTTON_BOX(prefs_dialog->buttons_box),
                                   GTK_BUTTONBOX_SPREAD);
@@ -847,7 +847,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
         gtk_box_pack_start(GTK_BOX(prefs_dialog->buttons_box), GTK_WIDGET(prefs_dialog->sensor_down_button), FALSE, FALSE, 0);
 
-        prefs_dialog->sensors_hbox = g_object_new(GTK_TYPE_HBOX,
+        prefs_dialog->sensors_hbox = g_object_new(GTK_TYPE_BOX,
+                                                  "orientation", GTK_ORIENTATION_HORIZONTAL,
                                                   "border-width", 5,
                                                   "homogeneous", FALSE,
                                                   "spacing", 5,
@@ -884,7 +885,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          G_CALLBACK(prefs_dialog_sensor_config_button_clicked),
                          prefs_dialog);
 
-        prefs_dialog->sensor_config_hbox = g_object_new(GTK_TYPE_HBOX,
+        prefs_dialog->sensor_config_hbox = g_object_new(GTK_TYPE_BOX,
+                                                        "orientation", GTK_ORIENTATION_HORIZONTAL,
                                                         "border-width", 5,
                                                         "homogeneous", FALSE,
                                                         "spacing", 0,
@@ -894,7 +896,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          FALSE, FALSE, 0);
 
         /* pack sensors_vbox */
-        prefs_dialog->sensors_vbox = g_object_new(GTK_TYPE_VBOX,
+        prefs_dialog->sensors_vbox = g_object_new(GTK_TYPE_BOX,
+                                                  "orientation", GTK_ORIENTATION_VERTICAL,
                                                   "border-width", 5,
                                                   "homogeneous", FALSE,
                                                   "spacing", 0,
