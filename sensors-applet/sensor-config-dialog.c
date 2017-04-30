@@ -318,7 +318,7 @@ static void sensor_config_dialog_icon_type_changed(GtkComboBox *icon_type_combo_
         }
 }
 
-static void sensor_config_dialog_graph_color_set(GtkColorButton *color_button,
+static void sensor_config_dialog_graph_color_set(GtkColorChooser *color_chooser,
                                                  SensorConfigDialog *config_dialog) {
 	GtkTreeModel *model;
 	GtkTreePath *path;
@@ -327,8 +327,8 @@ static void sensor_config_dialog_graph_color_set(GtkColorButton *color_button,
         gchar *color_string;
         GdkRGBA color;
 
-        gtk_color_button_get_rgba(color_button,
-                                  &color);
+        gtk_color_chooser_get_rgba(color_chooser,
+                                   &color);
 
         color_string = g_strdup_printf ("#%02X%02X%02X", (int)(0.5 + CLAMP (color.red, 0., 1.) * 255.),
 					(int)(0.5 + CLAMP (color.green, 0., 1.) * 255.),
