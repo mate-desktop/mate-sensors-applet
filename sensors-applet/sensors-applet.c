@@ -835,7 +835,7 @@ GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
                 
                 /* try again with default icon */
                 icon = gtk_icon_theme_load_icon(icon_theme,
-                                                GTK_STOCK_MISSING_IMAGE,
+                                                "image-missing",
                                                 DEFAULT_ICON_SIZE,
                                                 GTK_ICON_LOOKUP_USE_BUILTIN,
                                                 &error);
