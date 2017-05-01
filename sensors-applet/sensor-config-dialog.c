@@ -431,11 +431,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
         gdk_rgba_parse(&graph_color, graph_color_string);
         config_dialog->graph_color_button = GTK_COLOR_BUTTON(gtk_color_button_new_with_rgba(&graph_color));
-	config_dialog->graph_color_button_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-                                                  "child", config_dialog->graph_color_button,
-                                                   "xalign", 0.0,
-                                                   "xscale", 0.0,
-                                                   NULL);
+        gtk_widget_set_halign (GTK_WIDGET(config_dialog->graph_color_button), GTK_ALIGN_START);
+        gtk_widget_set_valign (GTK_WIDGET(config_dialog->graph_color_button), GTK_ALIGN_START);
 
         gtk_color_button_set_title(config_dialog->graph_color_button, _("Graph Color"));
         
@@ -477,11 +474,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
         
         config_dialog->icon_type_combo_box = GTK_COMBO_BOX(gtk_combo_box_new_with_model(GTK_TREE_MODEL(icon_store)));
 
-	config_dialog->icon_type_combo_box_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-                                                   "child", config_dialog->icon_type_combo_box,
-                                                   "xalign", 0.0,
-                                                   "xscale", 0.0,
-                                                   NULL);
+        gtk_widget_set_halign (GTK_WIDGET(config_dialog->icon_type_combo_box), GTK_ALIGN_START);
+        gtk_widget_set_valign (GTK_WIDGET(config_dialog->icon_type_combo_box), GTK_ALIGN_START);
 
         config_dialog->icon_renderer = gtk_cell_renderer_pixbuf_new();
         gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(config_dialog->icon_type_combo_box),
@@ -534,11 +528,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 					     "width-chars", SPINBUTTON_WIDTH_CHARS,
 					     NULL);
 
-	config_dialog->multiplier_spinbutton_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-						     "child", config_dialog->multiplier_spinbutton,
-						     "xalign", 0.0,
-						     "xscale", 0.0,
-						     NULL);
+    gtk_widget_set_halign (GTK_WIDGET(config_dialog->multiplier_spinbutton), GTK_ALIGN_START);
+    gtk_widget_set_valign (GTK_WIDGET(config_dialog->multiplier_spinbutton), GTK_ALIGN_START);
 
 	config_dialog->multiplier_label = g_object_new(GTK_TYPE_LABEL,
                                                        "label", _("Sensor value _multiplier"),
@@ -567,11 +558,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 					 "width-chars", SPINBUTTON_WIDTH_CHARS,
 					 NULL);
 	
-	config_dialog->offset_spinbutton_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-						 "child", config_dialog->offset_spinbutton,
-						 "xalign", 0.0,
-						 "xscale", 0.0,
-						 NULL);
+    gtk_widget_set_halign (GTK_WIDGET(config_dialog->offset_spinbutton), GTK_ALIGN_START);
+    gtk_widget_set_valign (GTK_WIDGET(config_dialog->offset_spinbutton), GTK_ALIGN_START);
 
 	config_dialog->offset_label = g_object_new(GTK_TYPE_LABEL,
 				    "label", _("Sensor value _offset"),
@@ -610,11 +598,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
 					      NULL);
 	
-	config_dialog->low_value_spinbutton_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-					  "child", config_dialog->low_value_spinbutton,
-					  "xalign", 0.0,
-					  "xscale", 0.0,
-					  NULL);
+    gtk_widget_set_halign (GTK_WIDGET(config_dialog->low_value_spinbutton), GTK_ALIGN_START);
+    gtk_widget_set_valign (GTK_WIDGET(config_dialog->low_value_spinbutton), GTK_ALIGN_START);
 
 	config_dialog->low_value_label = g_object_new(GTK_TYPE_LABEL,
                                                       "label", _("Sensor _low value"),
@@ -645,11 +630,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
                                                             NULL);
 	
-	config_dialog->high_value_spinbutton_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-                                                                    "child", config_dialog->high_value_spinbutton,
-                                                                    "xalign", 0.0,
-                                                                    "xscale", 0.0,
-                                                                    NULL);
+    gtk_widget_set_halign (GTK_WIDGET(config_dialog->high_value_spinbutton), GTK_ALIGN_START);
+    gtk_widget_set_valign (GTK_WIDGET(config_dialog->high_value_spinbutton), GTK_ALIGN_START);
         
 	config_dialog->high_value_label = g_object_new(GTK_TYPE_LABEL,
                                                        "label", _("Sensor _high value"),
@@ -688,11 +670,9 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                                                "sensitive", alarm_enable,
 
 						NULL);
-	config_dialog->alarm_timeout_spinbutton_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-							"child", config_dialog->alarm_timeout_spinbutton,
-							"xalign", 0.0,
-							"xscale", 0.0,
-							NULL);
+
+    gtk_widget_set_halign (GTK_WIDGET(config_dialog->alarm_timeout_spinbutton), GTK_ALIGN_START);
+    gtk_widget_set_valign (GTK_WIDGET(config_dialog->alarm_timeout_spinbutton), GTK_ALIGN_START);
 	
 	config_dialog->alarm_timeout_label = g_object_new(GTK_TYPE_LABEL,
                                                           "label", _("Alarm _repeat interval (secs)"),
@@ -756,11 +736,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 						"xalign", 0.0,
 						NULL);
 	
-	config_dialog->alarm_enable_aligner = g_object_new(GTK_TYPE_ALIGNMENT,
-					    "child", config_dialog->alarm_enable_checkbutton,
-					    "xalign", 0.0,
-					    "xscale", 0.0,
-					    NULL);
+    gtk_widget_set_halign (GTK_WIDGET(config_dialog->alarm_enable_checkbutton), GTK_ALIGN_START);
+    gtk_widget_set_valign (GTK_WIDGET(config_dialog->alarm_enable_checkbutton), GTK_ALIGN_START);
 
 	g_signal_connect(config_dialog->alarm_enable_checkbutton, "toggled", G_CALLBACK(sensor_config_dialog_alarm_toggled), config_dialog);
 	
@@ -800,7 +777,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 1, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->multiplier_spinbutton_aligner),
+                    GTK_WIDGET(config_dialog->multiplier_spinbutton),
                     2, 1, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -808,7 +785,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 2, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->offset_spinbutton_aligner),
+                    GTK_WIDGET(config_dialog->offset_spinbutton),
                     2, 2, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -821,7 +798,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 4, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->low_value_spinbutton_aligner),
+                    GTK_WIDGET(config_dialog->low_value_spinbutton),
                     2, 4, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -829,7 +806,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 5, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->high_value_spinbutton_aligner),
+                    GTK_WIDGET(config_dialog->high_value_spinbutton),
                     2, 5, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -837,7 +814,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     0, 6, 2, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->alarm_enable_aligner),
+                    GTK_WIDGET(config_dialog->alarm_enable_checkbutton),
                     1, 7, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -845,7 +822,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 8, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->alarm_timeout_spinbutton_aligner),
+                    GTK_WIDGET(config_dialog->alarm_timeout_spinbutton),
                     2, 8, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -873,7 +850,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 12, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->icon_type_combo_box_aligner),
+                    GTK_WIDGET(config_dialog->icon_type_combo_box),
                     2, 12, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
@@ -885,7 +862,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     1, 14, 1, 1);
 
     gtk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->graph_color_button_aligner),
+                    GTK_WIDGET(config_dialog->graph_color_button),
                     2, 14, 1, 1);
 
     content_area = gtk_dialog_get_content_area (GTK_DIALOG(config_dialog->dialog));
