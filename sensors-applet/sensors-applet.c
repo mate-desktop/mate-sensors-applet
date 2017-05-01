@@ -728,13 +728,20 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 				if (layout_mode == VALUE_BESIDE_LABEL) {
 					/* left align labels */
 					if (((ActiveSensor *)(current_sensor->data))->icon) {
-						gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->icon), 0.0, 0.5);
+						gtk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_START);
+						gtk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
 					}
 					if (((ActiveSensor *)(current_sensor->data))->label) {
+#if GTK_CHECK_VERSION (3, 16, 0)
+						gtk_label_set_xalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0);
+						gtk_label_set_yalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
+#else
 						gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->label), 0.0, 0.5);
+#endif
 					}
 					if (((ActiveSensor *)(current_sensor->data))->value) {
-						gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->value), 0.0, 0.5);
+						gtk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_START);
+						gtk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
 					}
 
 					 /* place value next to label */
@@ -748,13 +755,20 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 
 					/* center align labels */
 					if (((ActiveSensor *)(current_sensor->data))->icon) {
-						gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->icon), 0.5, 0.5);
+						gtk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
+						gtk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
 					}
 					if (((ActiveSensor *)(current_sensor->data))->label) {
+#if GTK_CHECK_VERSION (3, 16, 0)
+						gtk_label_set_xalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
+						gtk_label_set_yalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
+#else
 						gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->label), 0.5, 0.5);
+#endif
 					}
 					if (((ActiveSensor *)(current_sensor->data))->value) {
-						gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->value), 0.5, 0.5);
+						gtk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
+						gtk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
 					}
 
 					if (((ActiveSensor *)(current_sensor->data))->value) {
