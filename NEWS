@@ -1,5 +1,15 @@
 ### mate-sensors-applet 1.19.0
 
+  * Translations update
+  * sensor-applet.c: replace deprecated GtkMisc
+  * sensor-applet.c: avoid deprecated GTK_STOCK_MISSING_IMAGE
+  * sensor-config-dialog: avoid deprecated GtkAlignment
+  * sensor-config-dialog: don't use deprecated GtkColorButton
+  * prefs-dialog: add style class frame to scrolledwindow
+  * prefs-dialog: avoid deprecated GtkAlignment
+  * prefs-dialog: avoid deprecated GTK_VBUTTON_BOX, GTK_TYPE_{H,V}BOX
+  * use GTK_ALIGN_CENTER for the sensor_applet grid
+
 ### mate-sensors-applet 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
