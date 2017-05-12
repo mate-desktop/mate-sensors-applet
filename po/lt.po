@@ -7,13 +7,13 @@
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
 # GiedriusS <inactive+GiedriusS@transifex.com>, 2014
 # brennus <jonas.ska@gmail.com>, 2014
-# Moo, 2014-2016
+# Moo, 2014-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:58+0300\n"
-"PO-Revision-Date: 2016-07-12 12:41+0000\n"
+"PO-Revision-Date: 2017-03-16 09:15+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -299,7 +299,7 @@ msgstr "Piktograma"
 
 #: ../sensors-applet/prefs-dialog.c:1003
 msgid "General Options"
-msgstr "Bendrinės parinktys"
+msgstr "Bendriniai parametrai"
 
 #: ../sensors-applet/prefs-dialog.c:1007
 msgid "Sensors"

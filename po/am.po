@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:58+0300\n"
-"PO-Revision-Date: 2017-03-02 16:16+0000\n"
+"PO-Revision-Date: 2017-04-12 02:10+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "የ ጠንካራ አክል ፈልጎ አግኚ መቆጣጠሪያ"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr ""
+msgstr "የ አየር ንብረት ማሳያ: የ ፋን ፍጥነት እና ቮፕልቴጅ ንባብ"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
@@ -48,20 +48,20 @@ msgstr "ምልክት አጠገብ ወይንም ከ ምልክት በታች ማሰ
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr ""
+msgstr "የ አየር ንብረት ማሳያ: በ ኬልቪን: ሴልሺየስ ወይንም ፋራናይት"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:6
 msgid "Whether to display notifications"
-msgstr ""
+msgstr "ማስታወቂያ ይታይ እንደሆን መወሰኛ"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr ""
+msgstr "ማዘግያ (በ ሚሰ) በ ማነቃቂያ መካከል"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr ""
+msgstr "የ ግራፍ መጠን በ ፒክስል (ስፋት በ አግድም ከሆነ: እርዝመት በ ቁመት ከሆነ)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
@@ -85,7 +85,7 @@ msgstr "በ ተጠቃሚ የሚገለጽ ምልክት"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "ይህን sensor ያስችሉ ወይንም አያስችሉ እንደሆን መወሰኛ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
 msgid "Low value"
@@ -97,15 +97,15 @@ msgstr "ከፍተኛ ዋጋ "
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
 msgid "Whether the sensor has its alarm enabled"
-msgstr ""
+msgstr "ይህ sensor መቀስቀሻ ያስችሉ እንደሆን መወሰኛ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:9
 msgid "Command to execute when the alarm is activated"
-msgstr ""
+msgstr "መቀስቀሻ በሚጀምር ጊዜ የሚፈጸመው ትእዛዝ"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr ""
+msgstr "ማስጠንቀቂያ በ ምን ያህል ጊዜ እንደሚሰማ መወሰኛ (በ ሰከንዶች)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
 msgid "Used to identify a sensor in a list"
@@ -125,7 +125,7 @@ msgstr "የምልክት አይነት "
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
 msgid "Color of the graph for the sensor"
-msgstr ""
+msgstr "ለ sensor የ ግራፍ ቀለም"
 
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:61
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
@@ -150,19 +150,19 @@ msgstr "CASE"
 #: ../plugins/pmu-sys/pmu-sys-plugin.c:76
 #: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
 msgid "FAN"
-msgstr ""
+msgstr "ማራገቢያ"
 
 #: ../plugins/i8k/i8k-plugin.c:56
 msgid "FAN1"
-msgstr ""
+msgstr "ማራገቢያ1"
 
 #: ../plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr ""
+msgstr "ማራገቢያ2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
-msgstr ""
+msgstr "MiniPCI"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
@@ -171,7 +171,7 @@ msgstr "ባትሪ "
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr ""
+msgstr "ማራገቢያ "
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
@@ -180,11 +180,11 @@ msgstr "የ ሲፒዩ ሙቀት"
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
-msgstr ""
+msgstr "የ አየር ንብረት"
 
 #: ../plugins/nvidia/nvidia-plugin.c:186
 msgid "Ambient"
-msgstr ""
+msgstr "Ambient"
 
 #: ../sensors-applet/prefs-dialog.c:410
 msgid "Sensors Applet Preferences"
@@ -217,7 +217,7 @@ msgstr "ምልክት ብቻ"
 
 #: ../sensors-applet/prefs-dialog.c:478
 msgid "graph only"
-msgstr ""
+msgstr "ግራፍ ብቻ"
 
 #: ../sensors-applet/prefs-dialog.c:495
 msgid "_Display sensors in panel as"
@@ -253,7 +253,7 @@ msgstr "የ አየር ንብረት መለኪያ"
 
 #: ../sensors-applet/prefs-dialog.c:578
 msgid "Graph _size (pixels)"
-msgstr ""
+msgstr "የ ግራፍ _መጠን በ (ፒክስልስ)"
 
 #: ../sensors-applet/prefs-dialog.c:591
 msgid "Update"
@@ -281,7 +281,7 @@ msgstr "ምልክት"
 
 #: ../sensors-applet/prefs-dialog.c:862
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "ምልክቶችን ማረም ይቻላል በላያቸው ላይ በ መጫን"
 
 #: ../sensors-applet/prefs-dialog.c:863
 msgid "Enabled"
@@ -331,15 +331,15 @@ msgstr "የ ፈልጎ አግኚ ባህሪዎች"
 #. graph stuff
 #: ../sensors-applet/sensor-config-dialog.c:423
 msgid "Graph"
-msgstr ""
+msgstr "ግራፍ"
 
 #: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Graph Color"
-msgstr ""
+msgstr "የ ግራፍ ቀለም"
 
 #: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Graph _color"
-msgstr ""
+msgstr "የ ግራፍ _ቀለም"
 
 #: ../sensors-applet/sensor-config-dialog.c:505
 msgid "Sensor _icon"
@@ -434,11 +434,11 @@ msgstr "ቮልቴጅ "
 
 #: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
-msgstr ""
+msgstr "የ ማራገቢያ ፍጥነት "
 
 #: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
-msgstr ""
+msgstr "የ ማራገቢያ ፍጥነት "
 
 #: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
@@ -458,7 +458,7 @@ msgstr "ስህተት ተፈጥሯል ፈልጎ አግኚ ሲሻሻል %s"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr ""
+msgstr "ስህተት ተፈጥሯል ለ ማሻሻል በ መሞከር ላይ እንዳለ የ sensor ዋጋ %s የሚገኘውን በ %s."
 
 #: ../sensors-applet/sensors-applet.c:473
 msgid "No sensors enabled!"
