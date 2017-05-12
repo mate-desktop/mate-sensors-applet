@@ -1,3 +1,8 @@
+### mate-sensors-applet 1.18.2
+
+  * Translations update
+  * prefs-dialog: add style class frame to scrolledwindow
+
 ### mate-sensors-applet 1.18.1
 
   * use GTK_ALIGN_CENTER for the sensor_applet grid
