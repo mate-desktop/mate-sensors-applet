@@ -378,7 +378,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                                        notif_type,
                                        summary,
                                        message,
-                                       GTK_STOCK_DIALOG_WARNING,
+                                       "dialog-warning",
                                        timeout_msecs);
         
         g_free(sensor_path);
