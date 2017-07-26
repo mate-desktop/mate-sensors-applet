@@ -79,11 +79,15 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
         switch (response) {
         case GTK_RESPONSE_HELP:
                 g_debug("loading help in config dialog");
+#if GTK_CHECK_VERSION (3, 22, 0)
+                gtk_show_uri_on_window(NULL,
+#else
                 gtk_show_uri(NULL,
+#endif
 			     "help:mate-sensors-applet/sensors-applet-sensors#sensors-applet-sensor-config-dialog",
 			     gtk_get_current_event_time(),
 			     &error);
-                
+
                 if (error) {
                         g_debug("Could not open help document: %s ",error->message);
                         g_error_free (error);

@@ -77,8 +77,12 @@ static void help_cb(GtkAction *action,
                     gpointer data) {
 
         GError *error = NULL;
-        
+
+#if GTK_CHECK_VERSION (3, 22, 0)
+        gtk_show_uri_on_window(NULL, "help:mate-sensors-applet",
+#else
         gtk_show_uri(NULL, "help:mate-sensors-applet",
+#endif
 		     gtk_get_current_event_time(),
 		     &error);
         
