@@ -311,15 +311,15 @@ static void active_sensor_update_graph(ActiveSensor *as, cairo_t *cr) {
                                               x, 0);
         cairo_pattern_add_color_stop_rgb(pattern,
                                          0,
-                                         as->graph_color.red / 65535.0 - CAIRO_GRAPH_COLOR_GRADIENT, 
-                                         as->graph_color.green / 65535.0 - CAIRO_GRAPH_COLOR_GRADIENT, 
-                                         as->graph_color.blue / 65535.0 - CAIRO_GRAPH_COLOR_GRADIENT);
+                                         as->graph_color.red - CAIRO_GRAPH_COLOR_GRADIENT, 
+                                         as->graph_color.green - CAIRO_GRAPH_COLOR_GRADIENT, 
+                                         as->graph_color.blue - CAIRO_GRAPH_COLOR_GRADIENT);
 
         cairo_pattern_add_color_stop_rgb(pattern,
                                          height,
-                                         as->graph_color.red / 65535.0 + CAIRO_GRAPH_COLOR_GRADIENT, 
-                                         as->graph_color.green / 65535.0 + CAIRO_GRAPH_COLOR_GRADIENT, 
-                                         as->graph_color.blue / 65535.0 + CAIRO_GRAPH_COLOR_GRADIENT);
+                                         as->graph_color.red + CAIRO_GRAPH_COLOR_GRADIENT, 
+                                         as->graph_color.green + CAIRO_GRAPH_COLOR_GRADIENT, 
+                                         as->graph_color.blue + CAIRO_GRAPH_COLOR_GRADIENT);
 
         cairo_set_source(cr, pattern);
         cairo_stroke(cr);
