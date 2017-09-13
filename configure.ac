@@ -93,6 +93,29 @@ fi
 
 AM_CONDITIONAL(UDISKS, test -n "$DBUSGLIB_LIBS" -a -n "$LIBATASMART_LIBS")
 
+# enable support for udisks2 (via dbus) by default if its available
+AC_ARG_ENABLE(udisks2,
+	      AS_HELP_STRING([--disable-udisks2],
+			     [Disable support for udisks2 sensor readings via DBUS.]),
+			     enable_udisks2=$enableval, enable_udisks2="yes")
+
+if test "x$enable_udisks2" = "xno" ; then
+	echo "Disabling udisks2 support"
+#else
+#	PKG_CHECK_MODULES(DBUSGLIB, dbus-glib-1 >= $LIBDBUSGLIB_REQUIRED,
+#		          HAVE_DBUSGLIB="yes", HAVE_DBUSGLIB="no")
+#	AC_SUBST(DBUSGLIB_CFLAGS)
+#	AC_SUBST(DBUSGLIB_LIBS)
+
+#	PKG_CHECK_MODULES(LIBATASMART, libatasmart >= $LIBATASMART_REQUIRED,
+#			  HAVE_LIBATASMART="yes", HAVE_LIBATASMART="no")
+#	AC_SUBST(LIBATASMART_CFLAGS)
+#	AC_SUBST(LIBATASMART_LIBS)
+fi
+
+# use same test as above, bc AM_CONDITIONAL may not be in if/else
+AM_CONDITIONAL(UDISKS2, test "x$enable_udisks2" = "xyes")
+
 # support for libnotify
 LIBNOTIFY_CFLAGS=
 LIBNOTIFY_LIBS=
@@ -268,6 +291,7 @@ AC_CONFIG_FILES([
 	plugins/Makefile
 	plugins/acpi/Makefile
 	plugins/udisks/Makefile
+	plugins/udisks2/Makefile
 	plugins/eee/Makefile
 	plugins/hddtemp/Makefile
 	plugins/i2c-proc/Makefile
