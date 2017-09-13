@@ -1,6 +1,7 @@
 DIST_SUBDIRS = \
 	acpi \
 	udisks \
+	udisks2 \
 	eee \
 	hddtemp \
         i2c-proc \
@@ -30,6 +31,10 @@ SUBDIRS = \
 
 if UDISKS
 SUBDIRS	     += udisks
+endif
+
+if UDISKS2
+SUBDIRS	     += udisks2
 endif
 
 if LIBSENSORS
