@@ -81,13 +81,14 @@ const gchar *plugin_name = "udisks2";
 GHashTable *devices = NULL;
 
 /* This is a global variable for convenience */
-GDBusConnection *connection;
+GDBusConnection *connection = NULL;
 
 
 static void update_device(DevInfo *info)
 {
 	GError *error = NULL;
-	GVariant *tempgvar;
+	GVariant *tempgvar = NULL;
+	GVariant *tempgvar2 = NULL;
 	gdouble temp;
 
 	// check valid input parameter
@@ -109,9 +110,21 @@ static void update_device(DevInfo *info)
 						  UDISKS2_BUS_NAME,
 						  info->path,
 						  UDISKS2_PROPERTIES_INTERFACE,
-						  NULL, NULL
+						  NULL, &error
 						);
 
+		// check, just to be sure
+		if (NULL == info->sensor_proxy)
+		{
+
+#ifdef UD2PD
+syslog(LOG_ERR, "Failed to get drive temperature 1");
+#endif
+			g_debug("Failed to get drive temperature 1: %s",
+				   error->message);
+			g_clear_error(&error);
+			return;
+		}
 	}
 
 // "DriveAtaSmartTimeCollected" in ud2 is "drive ata SmartUpdated"
@@ -180,28 +193,37 @@ static void update_device(DevInfo *info)
 	{
 
 #ifdef UD2PD
-syslog(LOG_ERR, "Failed to get drive temperature");
+syslog(LOG_ERR, "Failed to get drive temperature 2");
 #endif
-		g_debug("Failed to get drive temperature: %s",
+		g_debug("Failed to get drive temperature 2: %s",
 			   error->message);
-		g_error_free(error);
+		g_clear_error(&error);
 		// throw away proxy, maybe next time it will be better
-		g_object_unref(info->sensor_proxy);
+		g_clear_object(&info->sensor_proxy);
 		return;
 	}
 	else
 	{
 
 #ifdef UD2PD
-syslog(LOG_ERR, "tempgvar value: %s", g_variant_print(g_variant_get_variant(g_variant_get_child_value(tempgvar, 0)), TRUE));
+syslog(LOG_ERR, "tempgvar value: %s", g_variant_print(tempgvar, TRUE));
+// leaks memory!
+//syslog(LOG_ERR, "tempgvar value: %s", g_variant_print(g_variant_get_variant(g_variant_get_child_value(tempgvar, 0)), TRUE));
 #endif
 
 		// tempgvar comes back as sg along the lines of array(gvariant(tempasdouble))
 		// hence unpacking
-		temp = g_variant_get_double(g_variant_get_variant(g_variant_get_child_value(tempgvar, 0)));
+		// need to free up every param / return value, so can't do it like:
+		//temp = g_variant_get_double(g_variant_get_variant(g_variant_get_child_value(tempgvar, 0)));
+		tempgvar2 = g_variant_get_child_value(tempgvar, 0);
+		g_variant_unref(tempgvar);
+		tempgvar = g_variant_get_variant(tempgvar2);
+		g_variant_unref(tempgvar2);
+		temp = g_variant_get_double(tempgvar);
+		g_variant_unref(tempgvar);
+
 		// temp in K
 		info->temp = temp - 273.15;
-		g_variant_unref(tempgvar);
 
 #ifdef UD2PD
 syslog(LOG_ERR, "Refresh udisks2 device temp: '%f'\n", info->temp);
@@ -240,7 +262,7 @@ static void udisks2_plugin_get_sensors(GList **sensors) {
 syslog(LOG_ERR, "fstart");
 #endif
 
-	GDBusProxy *proxy;
+	GDBusProxy *proxy = NULL;
 	GError *error = NULL;
 
 	DevInfo *info;
@@ -251,7 +273,7 @@ syslog(LOG_ERR, "fstart");
 	// fd1: Returns a connection to the given bus. The connection is a global variable shared with other callers of this function.
 	// fd2: Synchronously connects to the message bus specified by bus_type . Note that the returned object may shared with other callers, e.g. if two separate parts of a process calls this function with the same bus_type , they will share the same object.
 	connection = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &error);
-	if (connection == NULL)
+	if (NULL == connection)
 	{
 
 #ifdef UD2PD
@@ -260,7 +282,7 @@ syslog(LOG_ERR, "dbus conn fail");
 
 		g_debug("Failed to open connection to DBUS: %s",
 			error->message);
-		g_error_free(error);
+		g_clear_error(&error);
 		return;
 	}
 
@@ -278,8 +300,21 @@ syslog(LOG_ERR, "dbus conn success");
 					  UDISKS2_BUS_NAME,
 					  UDISKS2_OBJECT_PATH,
 					  UDISKS2_INTERFACE_NAME,
-					  NULL, NULL
+					  NULL, &error
 					);
+
+	if (NULL == proxy)
+	{
+
+#ifdef UD2PD
+syslog(LOG_ERR, "dbus conn proxy fail");
+#endif
+		g_debug("dbus conn proxy fail: %s",
+			   error->message);
+		g_clear_error(&error);
+		g_clear_object(&connection);
+		return;
+	}
 
 #ifdef UD2PD
 syslog(LOG_ERR, "dbus conn proxy success");
@@ -295,17 +330,18 @@ syslog(LOG_ERR, "dbus conn proxy success");
 	// "GetManagedObjects" returns dict of (objectpath, (dict of (string [ie. if. name], dict of(string [ie. property name], variant [ie. prop. value]))))
 
 	// g_dbus_proxy_call_sync() returns NULL on error, GVariant * otherwise
-	GVariant *managed_objects;
+	// need second param to prevent memory leak
+	GVariant *managed_objects, *managed_objects2;
 
 
-	managed_objects = g_dbus_proxy_call_sync(proxy, "GetManagedObjects",
+	managed_objects2 = g_dbus_proxy_call_sync(proxy, "GetManagedObjects",
 				NULL,				// parameters
 				G_DBUS_CALL_FLAGS_NONE,		// flags
 				-1,				// timeout
 				NULL,				// cancellable
 				&error);
 
-	if (NULL == managed_objects)
+	if (NULL == managed_objects2)
 	{
 
 #ifdef UD2PD
@@ -314,15 +350,15 @@ syslog(LOG_ERR, "Failed to enumerate disk devices");
 
 		g_debug("Failed to enumerate disk devices: %s",
 			   error->message);
-		g_error_free(error);
-		g_object_unref(proxy);
-		g_object_unref(connection);
-		connection = NULL;
+		g_clear_error(&error);
+		g_clear_object(&proxy);
+		g_clear_object(&connection);
 		return;
 	}
 
 	// the result dictionary is enclosed in an array, unpack
-	managed_objects = g_variant_get_child_value(managed_objects, 0);
+	managed_objects = g_variant_get_child_value(managed_objects2, 0);
+	g_variant_unref(managed_objects2);
 
 #ifdef UD2PD
 //syslog(LOG_ERR, "managed_objects type: %s", g_variant_print(managed_objects, TRUE));
@@ -412,7 +448,7 @@ syslog(LOG_ERR, "Found udisks2 device temp: '%f'\n", temp);
 			{
 
 				info = g_malloc0(sizeof(DevInfo));
-				if (devices == NULL)
+				if (NULL == devices)
 				{
 					devices = g_hash_table_new(g_str_hash,
 								   g_str_equal);
@@ -483,11 +519,10 @@ syslog(LOG_ERR, "b4 free3");
 
 
 	g_variant_unref(managed_objects);
-	g_object_unref(proxy);
-	if (devices == NULL)
+	g_clear_object(&proxy);
+	if (NULL == devices)
 	{
-		g_object_unref(connection);
-		connection = NULL;
+		g_clear_object(&connection);
 	}
 }
 
@@ -501,7 +536,7 @@ static gdouble udisks2_plugin_get_sensor_value(const gchar *path,
 
 	// get device stuct from data store
 	info = (DevInfo *)g_hash_table_lookup(devices, path);
-	if (info == NULL)
+	if (NULL == info)
 	{
 		g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, 0,
 			    "Error finding disk with path %s", path);
