@@ -6,6 +6,7 @@
 # Marcin Kralka <marcink96@gmail.com>, 2013
 # Michal Herman <szalejot@gmail.com>, 2013
 # Paweł Marciniak <pmarciniak@lodz.home.pl>, 2007
+# Piotr Drąg <piotrdrag@gmail.com>, 2017
 # Piotr Strębski <strebski@gmail.com>, 2015
 # Tomasz Bielecki <tomekb@nbg.iplus.pl>, 2005
 msgid ""
@@ -13,14 +14,14 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:58+0300\n"
-"PO-Revision-Date: 2015-12-28 09:59+0000\n"
-"Last-Translator: Piotr Strębski <strebski@gmail.com>\n"
+"PO-Revision-Date: 2017-09-23 18:51+0000\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/mate/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
 msgid "Sensors Applet Factory"
@@ -40,11 +41,11 @@ msgstr "Wielkość czcionki w pikselach"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "Określ czy wyświetlić lub ukryć jednostki czujnika"
+msgstr "Określ, czy wyświetlić lub ukryć jednostki czujnika"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
-msgstr "Ustaw czy wyświetlać ikony lub etykiety tekstu"
+msgstr "Ustaw, czy wyświetlać ikony lub etykiety tekstu"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:4
 msgid "Set value beside or below label"
@@ -113,7 +114,7 @@ msgstr "Ja często poszczególny alarm powinien wydawać dźwięk (w sekundach)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
 msgid "Used to identify a sensor in a list"
-msgstr "Użyte aby zidentyfikować czujnik na liście"
+msgstr "Użyte, aby zidentyfikować czujnik na liście"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
 msgid "Multiplier"
@@ -326,7 +327,7 @@ msgstr "BŁĄD"
 #. translator
 #: ../sensors-applet/about-dialog.c:44
 msgid "translator-credits"
-msgstr "Marcin Kralka <marcink96@gmail.com>, 2013"
+msgstr "Tłumacze środowiska MATE, 2013-2014, 2016-2017\n\nTomasz Bielecki, 2005\nPaweł Marciniak, 2007"
 
 #: ../sensors-applet/sensor-config-dialog.c:396
 msgid "Sensor Properties"
