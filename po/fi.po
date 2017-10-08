@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Lauri Nurmi <lanurmi@iki.fi>, 2005
+# nomen omen <vapoursoft@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 00:58+0300\n"
-"PO-Revision-Date: 2015-12-10 09:06+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2017-09-19 16:11+0000\n"
+"Last-Translator: nomen omen <vapoursoft@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/mate/MATE/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,72 +29,72 @@ msgstr ""
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr ""
+msgstr "Näyttää lämpötila-, tuuletin nopeuden- ja jännite-antureiden lukemat"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
-msgstr ""
+msgstr "Kirjasinkoko pisteissä"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr ""
+msgstr "Määrittele näytetäänkö vai piilotetaanko anturiyksiköt."
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "Aseta näyttääksesi kuvakkeet tai tekstiotsikot"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:4
 msgid "Set value beside or below label"
-msgstr ""
+msgstr "Aseta arvo otsikon vierelle tai alle"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr ""
+msgstr "Näytä lämpötila Kelvineissä, Celsiuksina tai Fahrenheitteina"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:6
 msgid "Whether to display notifications"
-msgstr ""
+msgstr "Näytetäänkö ilmoituksia"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:7
 msgid "Delay (in ms) between refreshes"
-msgstr ""
+msgstr "Viive (millisekunteina) virkistyksien välillä"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr ""
+msgstr "Graafin koko pikseleissä (leveys, jos vaakasuunnassa, korkeus, jos pystysuunnassa)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
-msgstr ""
+msgstr "Anturilista"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
 msgid "Path to filename"
-msgstr ""
+msgstr "Tiedostonimen polku"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
 msgid "Sensor device ids"
-msgstr ""
+msgstr "Anturilaitetunnisteet"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
 msgid "The sensor device interface"
-msgstr ""
+msgstr "Anturilaitekäyttöliittymä"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
 msgid "User defined label"
-msgstr ""
+msgstr "Käyttäjän määrittelemä nimike"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "Onko anturi käytössä"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
 msgid "Low value"
-msgstr ""
+msgstr "Alhainen arvo"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:7
 msgid "High value"
-msgstr ""
+msgstr "Korkea arvo"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
 msgid "Whether the sensor has its alarm enabled"
@@ -105,7 +106,7 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr ""
+msgstr "Kuinka usein jokaisen hälytyksen pitäisi hälyttää (sekunneissa)"
 
 #: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
 msgid "Used to identify a sensor in a list"
@@ -162,25 +163,25 @@ msgstr "TUUL2"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
 msgid "MiniPCI"
-msgstr ""
+msgstr "MiniPCI"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
 msgid "Battery"
-msgstr ""
+msgstr "Akku"
 
 #: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
 msgid "Fan"
-msgstr ""
+msgstr "Tuuletin"
 
 #: ../plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
-msgstr ""
+msgstr "Suoritin lämpötila"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
 #: ../sensors-applet/sensors-applet.c:324
 msgid "temperature"
-msgstr ""
+msgstr "lämpötila"
 
 #: ../plugins/nvidia/nvidia-plugin.c:186
 msgid "Ambient"
@@ -197,7 +198,7 @@ msgstr "Antureita ei löytynyt!"
 
 #: ../sensors-applet/prefs-dialog.c:457
 msgid "Display"
-msgstr ""
+msgstr "Näyttö"
 
 #: ../sensors-applet/prefs-dialog.c:470
 msgid "label with value"
@@ -237,15 +238,15 @@ msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:536
 msgid "Kelvin"
-msgstr ""
+msgstr "Kelvin"
 
 #: ../sensors-applet/prefs-dialog.c:537
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: ../sensors-applet/prefs-dialog.c:538
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: ../sensors-applet/prefs-dialog.c:551
 msgid "_Temperature scale"
@@ -257,7 +258,7 @@ msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:591
 msgid "Update"
-msgstr ""
+msgstr "Päivitä"
 
 #: ../sensors-applet/prefs-dialog.c:621
 msgid "Update _interval (secs)"
@@ -265,7 +266,7 @@ msgstr ""
 
 #: ../sensors-applet/prefs-dialog.c:631
 msgid "Notifications"
-msgstr ""
+msgstr "Huomautukset"
 
 #: ../sensors-applet/prefs-dialog.c:642
 msgid "Display _notifications"
@@ -291,11 +292,11 @@ msgstr "Käytössä"
 #: ../sensors-applet/prefs-dialog.c:869
 #: ../sensors-applet/sensor-config-dialog.c:454
 msgid "Icon"
-msgstr ""
+msgstr "Kuvake"
 
 #: ../sensors-applet/prefs-dialog.c:1003
 msgid "General Options"
-msgstr ""
+msgstr "Yleiset Asetukset"
 
 #: ../sensors-applet/prefs-dialog.c:1007
 msgid "Sensors"
@@ -316,7 +317,7 @@ msgstr " A"
 #. hard code text as ERROR
 #: ../sensors-applet/active-sensor.c:558
 msgid "ERROR"
-msgstr ""
+msgstr "VIRHE"
 
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
@@ -434,11 +435,11 @@ msgstr ""
 
 #: ../sensors-applet/sensors-applet.c:348
 msgid "Fan Speed"
-msgstr ""
+msgstr "Tuuletin Nopeus"
 
 #: ../sensors-applet/sensors-applet.c:349
 msgid "fan speed"
-msgstr ""
+msgstr "tuuletin nopeus"
 
 #: ../sensors-applet/sensors-applet.c:353
 msgid "Current"
