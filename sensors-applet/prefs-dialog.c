@@ -196,6 +196,15 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
         sensors_applet_update_active_sensors(prefs_dialog->sensors_applet);
 }
 
+// hide/show units
+static void prefs_dialog_show_units_toggled (GtkCheckButton *show_units, PrefsDialog *prefs_dialog) {
+        gboolean state;
+
+        state = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (show_units));
+        g_settings_set_boolean (prefs_dialog->sensors_applet->settings, HIDE_UNITS, !state);
+        sensors_applet_update_active_sensors (prefs_dialog->sensors_applet);
+}
+
 
 #ifdef HAVE_LIBNOTIFY
 static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_notifications,
@@ -592,6 +601,15 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          prefs_dialog);
 
 
+        // hide/show units
+        prefs_dialog->show_units = gtk_check_button_new_with_label (_("Show _units"));
+        gtk_button_set_use_underline (GTK_BUTTON (prefs_dialog->show_units), TRUE);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (prefs_dialog->show_units),
+                            !g_settings_get_boolean (sensors_applet->settings, HIDE_UNITS));
+        g_signal_connect (prefs_dialog->show_units, "toggled",
+                            G_CALLBACK (prefs_dialog_show_units_toggled), prefs_dialog);
+
+
         header_text = g_markup_printf_escaped("<b>%s</b>", _("Update"));
         prefs_dialog->update_header = g_object_new(GTK_TYPE_LABEL,
                                                    "use-markup", TRUE,
@@ -717,26 +735,30 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                          2, 4, 1, 1);
 
         gtk_grid_attach(prefs_dialog->globals_grid,
+                         GTK_WIDGET(prefs_dialog->show_units),
+                         1, 5, 1, 1);
+
+        gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->update_header),
-                         0, 5, 2, 1);
+                         0, 6, 2, 1);
 
         gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->timeout_label),
-                         1, 6, 1, 1);
+                         1, 7, 1, 1);
 
         gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->timeout_spinbutton),
-                         2, 6, 1, 1);
+                         2, 7, 1, 1);
 
 
 #ifdef HAVE_LIBNOTIFY
         gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->notifications_header),
-                         0, 7, 2, 1);
+                         0, 8, 2, 1);
 
         gtk_grid_attach(prefs_dialog->globals_grid,
                          GTK_WIDGET(prefs_dialog->display_notifications),
-                         1, 8, 1, 1);
+                         1, 9, 1, 1);
 #endif
 
         gtk_widget_set_valign(GTK_WIDGET(prefs_dialog->globals_grid), GTK_ALIGN_START);

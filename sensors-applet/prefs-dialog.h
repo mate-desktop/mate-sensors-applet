@@ -37,6 +37,7 @@ typedef struct {
         GtkComboBoxText *display_mode_combo_box, *layout_mode_combo_box, *temperature_scale_combo_box;
         GtkLabel *timeout_label, *display_mode_label, *layout_mode_label, *temperature_scale_label, *graph_size_label, *update_header, *display_header;
         GtkAdjustment *timeout_adjust, *graph_size_adjust;
+        GtkWidget *show_units;
 
 #ifdef HAVE_LIBNOTIFY
         GtkCheckButton *display_notifications;
