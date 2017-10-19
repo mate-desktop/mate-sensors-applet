@@ -105,24 +105,23 @@ void sensors_applet_plugin_add_sensor(GList **sensors,
                                       IconType icon,
                                       const gchar *graph_color) 
 {
-        SensorsAppletSensorInfo *info;
-        
-        info = g_malloc0(sizeof(*info));
-
-        info->path = g_strdup(path);
-        info->id = g_strdup(id);
-        info->label = g_strdup(label);
-        info->type = type;
-        info->enable = enable;
+        gdouble low_value;
+        gdouble high_value;
         sensors_applet_plugin_default_sensor_limits(type,
-                                                    &(info->low_value),
-                                                    &(info->high_value));
-        info->multiplier = 1.0;
-        info->offset = 0.0;
-        info->icon = icon;
-        info->graph_color = g_strdup(graph_color);
+                                                    &low_value,
+                                                    &high_value);
 
-        *sensors = g_list_append(*sensors, info);
+        sensors_applet_plugin_add_sensor_with_limits(sensors,
+                                                  path,
+                                                  id,
+                                                  label,
+                                                  type,
+                                                  enable,
+                                                  low_value,
+                                                  high_value,
+                                                  icon,
+                                                  graph_color);
+
 }
 
 void sensors_applet_plugin_add_sensor_with_limits(GList **sensors,
