@@ -32,9 +32,10 @@
       <default>42</default>
       <summary>The size of the graph in pixels (width if horizontal, height if vertical)</summary>
     </key>
-    <key name="sensors-list" type="as">
+    <key name="sensors-list" type="a(ssssbddbssuuddus)">
       <default>[]</default>
-      <summary>List of sensors</summary>
+      <summary>Array holding sensors data</summary>
+      <description>Serialized data of the sensors info.</description>
     </key>
   </schema>
 </schemalist>

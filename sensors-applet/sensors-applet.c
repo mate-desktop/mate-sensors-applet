@@ -1350,6 +1350,10 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	sensors_applet->settings = mate_panel_applet_settings_new (sensors_applet->applet,
 								   "org.mate.sensors-applet");
 
+        // load sensors from array saved in gsettings
+        sensors_applet_conf_setup_sensors(sensors_applet);
+
+
 	/* now do any setup needed manually */
         sensors_applet_plugins_load_all(sensors_applet);        
 
