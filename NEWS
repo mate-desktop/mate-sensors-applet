@@ -1,13 +1,3 @@
-### mate-sensors-applet 1.19.1
-
-    fixed memory leaks in update_device()
-    added udisks2 plugin
-    sync with Transifex
-    about-dialog: update copyright
-    fix graphs invisible
-    don't use deprecated gtk_show_uri
-    don't use deprecated GTK_STOCK_DIALOG_WARNING
-
 ### mate-sensors-applet 1.19.0
 
   * Translations update
