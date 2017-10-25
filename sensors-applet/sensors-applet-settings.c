@@ -21,12 +21,17 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#include <syslog.h>
-
 #include <string.h>
 #include <glib.h>
 #include "sensors-applet.h"
 #include "sensors-applet-settings.h"
+
+// these must be as the gsettings schema in file org.mate.sensors-applet.gschema.xml.in
+// gsettings gvariant type string
+#define GSGVTS "(ssssbddbssuuddus)"
+// gsettings gvariant type string for the array
+#define GSGVTSA "a(ssssbddbssuuddus)"
+
 
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path) {
     gchar *unique_id;
@@ -77,9 +82,11 @@ gboolean sensors_applet_conf_setup_sensors(SensorsApplet *sensors_applet) {
         current_alarm_timeout,
         current_icon_type;
 
-    g_settings_get (sensors_applet->settings, "sensors-list", "a(ssssbddbssuuddus)", &iter);
+    // get sensors-list array from gsettings
+    g_settings_get (sensors_applet->settings, "sensors-list", GSGVTSA, &iter);
 
-    while (g_variant_iter_loop (iter, "(ssssbddbssuuddus)", &current_path, &current_id, &current_label,
+    // load sensor data into applet one by one
+    while (g_variant_iter_loop (iter, GSGVTS, &current_path, &current_id, &current_label,
         &current_interface, &current_enable, &current_low_value, &current_high_value, &current_alarm_enable,
         &current_low_alarm_command, &current_high_alarm_command, &current_alarm_timeout, &current_sensor_type,
         &current_multiplier, &current_offset, &current_icon_type, &current_graph_color)) {
@@ -134,10 +141,9 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
           current_sensor_type,
           current_icon_type;
 
-    // data structure to be able to save sensors list to gsettings
-    GVariant *vval;
+    // data structure (array) to be able to save sensors list to gsettings
     GVariantBuilder builder;
-    g_variant_builder_init (&builder, G_VARIANT_TYPE ("a(ssssbddbssuuddus)"));
+    g_variant_builder_init (&builder, G_VARIANT_TYPE (GSGVTSA));
 
 
     applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
@@ -176,9 +182,10 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
                                GRAPH_COLOR_COLUMN, &current_graph_color,
                                -1);
 
-            // save sensor data to gvariant structure
-            // g_variant_builder_add() would be better, but doesn't seem to work...
-            vval = g_variant_new("(ssssbddbssuuddus)",       // must be the same as G_VARIANT_TYPE in init and gsettings schema
+
+            // save sensor data to gvariant array
+            g_variant_builder_add(&builder,
+                GSGVTS,       // must be the same as G_VARIANT_TYPE in init and gsettings schema
                 g_strdup(current_path),
                 g_strdup(current_id),
                 g_strdup(current_label),
@@ -195,7 +202,7 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
                 current_offset * 1000,
                 current_icon_type,
                 g_strdup(current_graph_color));
-            g_variant_builder_add_value(&builder, vval);
+
 
             // save sensor data to gsettings individually
             gchar *path = g_strdup_printf ("%s%s/",
@@ -232,9 +239,9 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
         }
     }
 
+    // save the sensor-list array to gsettings
     GSettings *settings;
     settings = g_settings_new_with_path ("org.mate.sensors-applet", applet_path);
-//syslog(LOG_ERR, "builder value: %s", g_variant_print(g_variant_builder_end (&builder), TRUE));
 
     // builder is freed by g_variant_builder_end()
     // the gvariant returned from g_variant_builder_end() is floating, so it is freed by g_settings_set_value()
