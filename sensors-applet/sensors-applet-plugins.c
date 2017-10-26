@@ -83,7 +83,8 @@ static void load_all_plugins(SensorsApplet *sensors_applet,
                                                                                           sensor_info->offset,
                                                                                           sensor_info->icon,
                                                                                           sensor_info->graph_color);
-                                                                
+
+                                                                // sensors_applet_add_sensor() doesn't free strings, so free them here
                                                                 g_free(sensor_info->path);
                                                                 g_free(sensor_info->id);
                                                                 g_free(sensor_info->label);
