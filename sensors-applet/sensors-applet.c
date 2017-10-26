@@ -872,6 +872,7 @@ GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
         return icon;
 }
 
+// MUST FREE STRINGS AFTER CALLING THIS FUNCTION!!
 gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
                                    const gchar *path, 
                                    const gchar *id, 
@@ -1016,13 +1017,11 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
 	
 	/* if sensor is already in settings, load values from there */
 	gchar *applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
-	gchar *settings_path = g_strdup_printf ("%s%s/",
-				applet_path,
-				sensors_applet_settings_get_unique_id (interface,
-								       id,
-								       path));
+        gchar *gsuid = sensors_applet_settings_get_unique_id (interface, id, path);
+	gchar *settings_path = g_strdup_printf ("%s%s/", applet_path, gsuid);
 	GSettings *settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", settings_path);
 	g_free (applet_path);
+        g_free (gsuid);
 	g_free (settings_path);
 	
 	gchar *settings_id = g_settings_get_string (settings, ID);
@@ -1349,6 +1348,10 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 	/* init gsettings */
 	sensors_applet->settings = mate_panel_applet_settings_new (sensors_applet->applet,
 								   "org.mate.sensors-applet");
+
+        // load sensors from array saved in gsettings
+        sensors_applet_conf_setup_sensors(sensors_applet);
+
 
 	/* now do any setup needed manually */
         sensors_applet_plugins_load_all(sensors_applet);        
