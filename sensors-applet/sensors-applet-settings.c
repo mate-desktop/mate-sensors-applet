@@ -26,6 +26,13 @@
 #include "sensors-applet.h"
 #include "sensors-applet-settings.h"
 
+// these must be as the gsettings schema in file org.mate.sensors-applet.gschema.xml.in
+// gsettings gvariant type string
+#define GSGVTS "s"
+// gsettings gvariant type string for the array
+#define GSGVTSA "as"
+
+
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path) {
     gchar *unique_id;
     gchar *unique_id_hash;
@@ -48,6 +55,94 @@ gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gcha
     return unique_id_hash;
 }
 
+
+/* gets called if are already setup so we don't have to manually go
+    through and find sensors etc again */
+gboolean sensors_applet_conf_setup_sensors(SensorsApplet *sensors_applet) {
+    /* everything gets stored except alarm timeout indexes, which
+    we set to -1, and visible which we set to false for all
+    parent nodes and true for all child nodes */
+
+
+    gchar *applet_path;
+    // not sure about pointer, it is unclear if it is freed by loop, probably yes
+    GVariantIter *iter;
+    gchar *gsuid;
+
+    // string variables, to help free up memory in loop
+    gchar *current_path,
+        *current_id,
+        *current_label,
+        *current_interface,
+        *current_low_alarm_command,
+        *current_high_alarm_command,
+        *current_graph_color;
+
+    // get gsettings path for applet
+    applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
+
+    // get sensors-list array from gsettings
+    g_settings_get (sensors_applet->settings, "sensors-list", GSGVTSA, &iter);
+
+    // load sensor data into applet one by one
+    // first get unique id for the sensor
+    // then load sensor data from gsettings
+    // then add sensor
+    // gsuid is freed by g_variant_iter_loop()
+    while (g_variant_iter_loop (iter, GSGVTS, &gsuid)) {
+
+        // load sensor data from gsettings individually
+        // g_strdup_printf doesn't free args!
+        // applet_path is freed at the end
+        gchar *path = g_strdup_printf ("%s%s/", applet_path, gsuid);
+        //g_free (gsuid);   // freed by loop
+
+        // make a schema which points to one sensor data
+        GSettings *settings;
+        settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", path);
+        g_free (path);
+
+        // laod sensor data to temp variables
+        // g_settings_get_string allocates memory!
+        // sensors_applet_add_sensor() gtk_tree_store_set() copies strings, so free them
+        sensors_applet_add_sensor(sensors_applet,
+            current_path = g_settings_get_string (settings, PATH),
+            current_id = g_settings_get_string (settings, ID),
+            current_label = g_settings_get_string (settings, LABEL),
+            current_interface = g_settings_get_string (settings, INTERFACE),
+            g_settings_get_int (settings, SENSOR_TYPE),
+            g_settings_get_boolean (settings, ENABLED),
+            g_settings_get_double (settings, LOW_VALUE),
+            g_settings_get_double (settings, HIGH_VALUE),
+            g_settings_get_boolean (settings, ALARM_ENABLED),
+            current_low_alarm_command = g_settings_get_string (settings, LOW_ALARM_COMMAND),
+            current_high_alarm_command = g_settings_get_string (settings, HIGH_ALARM_COMMAND),
+            g_settings_get_int (settings, ALARM_TIMEOUT),
+            g_settings_get_double (settings, MULTIPLIER),
+            g_settings_get_double (settings, OFFSET),
+            g_settings_get_int (settings, ICON_TYPE),
+            current_graph_color = g_settings_get_string (settings, GRAPH_COLOR));
+
+
+        g_free (current_path);
+        g_free (current_id);
+        g_free (current_label);
+        g_free (current_interface);
+        g_free (current_low_alarm_command);
+        g_free (current_high_alarm_command);
+        g_free (current_graph_color);
+
+        g_object_unref (settings);
+
+    }
+
+    g_free (applet_path);
+
+    return TRUE;
+}
+
+// save sensor data under a unique hash
+// save sensor sort in an array, with above hash
 gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
     /* write everything to GSettings except VISIBLE and
        ALARM_TIMEOUT_INDEX */
@@ -73,6 +168,10 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
     guint current_alarm_timeout,
           current_sensor_type,
           current_icon_type;
+
+    // data structure (array) to be able to save sensors list to gsettings
+    GVariantBuilder builder;
+    g_variant_builder_init (&builder, G_VARIANT_TYPE (GSGVTSA));
 
     applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
 
@@ -110,16 +209,26 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
                                GRAPH_COLOR_COLUMN, &current_graph_color,
                                -1);
 
-            gchar *path = g_strdup_printf ("%s%s/",
-                                           applet_path,
-                                           sensors_applet_settings_get_unique_id (current_interface,
-                                                                                  current_id,
-                                                                                  current_path));
+
+            // GSettings unique id for one sensor data
+            gchar *gsuid = sensors_applet_settings_get_unique_id (current_interface, current_id, current_path);
+
+            // save sensor uid to gvariant array
+            g_variant_builder_add(&builder,
+                GSGVTS,       // must be related to the G_VARIANT_TYPE in init and gsettings schema
+                g_strdup(gsuid));
+
+            // save sensor data to gsettings individually
+            // g_strdup_printf doesn't free args!
+            // applet_path is freed at the end
+            gchar *path = g_strdup_printf ("%s%s/", applet_path, gsuid);
+            g_free (gsuid);
 
             GSettings *settings;
             settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", path);
             g_free (path);
 
+            // wait until g_settings_apply() is called to save all changes at once to gsettings
             g_settings_delay (settings);
             g_settings_set_string (settings, PATH, current_path);
             g_settings_set_string (settings, ID, current_id);
@@ -142,6 +251,16 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
 
         }
     }
+
+    // save the sensor-list array to gsettings
+    GSettings *settings;
+    settings = g_settings_new_with_path ("org.mate.sensors-applet", applet_path);
+
+    // builder is freed by g_variant_builder_end()
+    // the gvariant returned from g_variant_builder_end() is floating, so it is freed by g_settings_set_value()
+    g_settings_set_value (settings, "sensors-list", g_variant_builder_end (&builder));
+
+    g_object_unref (settings);
 
     g_free (applet_path);
 
