@@ -495,6 +495,9 @@ void active_sensor_update(ActiveSensor *active_sensor,
 	gdouble sensor_value;
         GdkPixbuf *icon_pixbuf;
         gchar *graph_color;
+	gint label_min_width;
+	gint label_width;
+	GtkRequisition  req;
 
 	/* to build the list of labels as we go */
 	gchar *value_text = NULL;
@@ -511,6 +514,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
         /* hidden gsettings options */
         gint font_size = 0;
         gboolean hide_units = FALSE;
+        gboolean hide_units_old = FALSE;
 
 	g_assert(active_sensor);
 	g_assert(active_sensor->sensor_row);
@@ -565,7 +569,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                 sensor_value = -1;
 			} else { 
                                 /* use hidden gsettings key for hide_units */
-
+				hide_units_old = hide_units;
 				hide_units = g_settings_get_boolean(sensors_applet->settings, HIDE_UNITS);
 
                                 /* scale value and set text using this
@@ -713,8 +717,22 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                         value_text = g_strdup_printf("<span font_desc=\"%d\">%s</span>", font_size, old_value_text);
                                         g_free(old_value_text);
                                 }
+                                /*Keep the label as large as previous size unless hide_units has changed */
+                                gtk_widget_get_preferred_size (GTK_WIDGET (active_sensor->value),
+                                                                                         &req, NULL);
+                                if (!(hide_units_old == hide_units)){
+                                    label_min_width = 0;
+                                }
+                                else{
+                                    label_min_width = req.width;
+                                }
                                 gtk_label_set_markup(GTK_LABEL(active_sensor->value),
                                                      value_text);
+                                gtk_widget_get_preferred_size (GTK_WIDGET (active_sensor->value),
+                                                                                          &req, NULL);
+                                label_width = MAX(req.width, label_min_width);
+                                gtk_widget_set_size_request (GTK_WIDGET (active_sensor->value),
+                                                                       label_min_width, req.height);
                                 if (tooltip) {
                                         gtk_widget_set_tooltip_text(active_sensor->value,
                                                                     tooltip);
