@@ -493,8 +493,8 @@ void active_sensor_update(ActiveSensor *active_sensor,
 	gdouble sensor_multiplier;
 	gdouble sensor_offset;
 	gdouble sensor_value;
-        GdkPixbuf *icon_pixbuf;
-        gchar *graph_color;
+	GdkPixbuf *icon_pixbuf;
+	gchar *graph_color;
 	gint label_min_width;
 	gint label_width;
 	GtkRequisition  req;
