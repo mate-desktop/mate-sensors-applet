@@ -45,69 +45,71 @@ const gchar *plugin_name = "sonypi";
 #define SONYPI_TEMP "sonypi_temp"
 
 enum {
-	SONYPI_DEVICE_FILE_OPEN_ERROR,
-	SONYPI_DEVICE_FILE_READ_ERROR
+    SONYPI_DEVICE_FILE_OPEN_ERROR,
+    SONYPI_DEVICE_FILE_READ_ERROR
 };
 
 
 GList *sonypi_plugin_init(void) {
-        int fd;
-        GList *sensors = NULL;
-        
-        if ( (fd = open(SONYPI_DEV, O_RDONLY)) != -1 ) {
-                if ( close(fd) != -1 ) {
-                        sensors_applet_plugin_add_sensor(&sensors,
-                                                         SONYPI_DEV,
-                                                         SONYPI_TEMP,
-                                                         _("CPU TEMP"),
-                                                         TEMP_SENSOR,
-                                                         TRUE,
-                                                         CPU_ICON,
-                                                         DEFAULT_GRAPH_COLOR);
-                }
+    int fd;
+    GList *sensors = NULL;
+
+    if ( (fd = open(SONYPI_DEV, O_RDONLY)) != -1 ) {
+        if ( close(fd) != -1 ) {
+            sensors_applet_plugin_add_sensor(&sensors,
+                                             SONYPI_DEV,
+                                             SONYPI_TEMP,
+                                             _("CPU TEMP"),
+                                             TEMP_SENSOR,
+                                             TRUE,
+                                             CPU_ICON,
+                                             DEFAULT_GRAPH_COLOR);
         }
-        return sensors;
+    }
+    return sensors;
 }
 
-gdouble sonypi_plugin_get_sensor_value(const gchar *path, 
-                                                  const gchar *id, 
-                                                  SensorType type,
-                                                  GError **error) {
-        int fd;
-        guint8 value8;
+gdouble sonypi_plugin_get_sensor_value(const gchar *path,
+                                       const gchar *id,
+                                       SensorType type,
+                                       GError **error) {
 
-        gdouble sensor_value = -1.0;
+    int fd;
+    guint8 value8;
 
-        if ((fd = open(path, O_RDONLY)) != -1) {
-                /* only use temp sensor */
-                if (g_ascii_strcasecmp(id, SONYPI_TEMP) == 0) {
-                        if (ioctl(fd, SONYPI_IOCGTEMP, &value8) != -1) {
-                                sensor_value = (gdouble)value8;
-                        } else {
-                                g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, SONYPI_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-                        }        
-                }
-                close(fd);
-        } else {
-		g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, SONYPI_DEVICE_FILE_OPEN_ERROR, "Error opening from sensor device file %s", path);
+    gdouble sensor_value = -1.0;
+
+    if ((fd = open(path, O_RDONLY)) != -1) {
+        /* only use temp sensor */
+        if (g_ascii_strcasecmp(id, SONYPI_TEMP) == 0) {
+            if (ioctl(fd, SONYPI_IOCGTEMP, &value8) != -1) {
+                sensor_value = (gdouble)value8;
+            } else {
+                g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, SONYPI_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+            }
         }
-                        
-        return sensor_value;
+        close(fd);
+    } else {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, SONYPI_DEVICE_FILE_OPEN_ERROR, "Error opening from sensor device file %s", path);
+    }
+
+    return sensor_value;
 }
 
-const gchar *sensors_applet_plugin_name(void) 
+const gchar *sensors_applet_plugin_name(void)
 {
-        return plugin_name;
+    return plugin_name;
 }
 
-GList *sensors_applet_plugin_init(void) 
+GList *sensors_applet_plugin_init(void)
 {
-        return sonypi_plugin_init();
+    return sonypi_plugin_init();
 }
 
-gdouble sensors_applet_plugin_get_sensor_value(const gchar *path, 
-                                                const gchar *id, 
+gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
+                                                const gchar *id,
                                                 SensorType type,
                                                 GError **error) {
-        return sonypi_plugin_get_sensor_value(path, id, type, error);
+
+    return sonypi_plugin_get_sensor_value(path, id, type, error);
 }

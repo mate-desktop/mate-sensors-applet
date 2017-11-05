@@ -32,8 +32,8 @@ GQuark sensors_applet_plugin_error_quark(void);
  * structs to create the sensors for this plugin from
  */
 GList *sensors_applet_plugin_init(void);
-gdouble sensors_applet_plugin_get_sensor_value(const gchar *path, 
-                                               const gchar *id, 
+gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
+                                               const gchar *id,
                                                SensorType type,
                                                GError **error);
 
@@ -43,8 +43,8 @@ void sensors_applet_plugin_find_sensors(GList **sensors,
                                         const gchar *path,
                                         SensorsAppletPluginTestSensorFunc);
 
-void sensors_applet_plugin_default_sensor_limits(SensorType type, 
-                                                 gdouble *low_value, 
+void sensors_applet_plugin_default_sensor_limits(SensorType type,
+                                                 gdouble *low_value,
                                                  gdouble *high_value);
 
 void sensors_applet_plugin_add_sensor(GList **sensors,
@@ -56,7 +56,6 @@ void sensors_applet_plugin_add_sensor(GList **sensors,
                                       IconType icon,
                                       const gchar *graph_color);
 
-
 void sensors_applet_plugin_add_sensor_with_limits(GList **sensors,
                                                   const gchar *path,
                                                   const gchar *id,
@@ -67,6 +66,5 @@ void sensors_applet_plugin_add_sensor_with_limits(GList **sensors,
                                                   gdouble high_value,
                                                   IconType icon,
                                                   const gchar *graph_color);
-
 
 #endif // SENSORS_APPLET_PLUGIN_H

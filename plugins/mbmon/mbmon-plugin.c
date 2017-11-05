@@ -46,146 +46,144 @@ const gchar *plugin_name = "mbmon";
 #define MBMON_OUTPUT_BUFFER_LENGTH 1024
 
 enum {
-	MBMON_SOCKET_OPEN_ERROR,
-	MBMON_SOCKET_CONNECT_ERROR,
-	MBMON_GIOCHANNEL_ERROR,
-	MBMON_GIOCHANNEL_READ_ERROR
-
+    MBMON_SOCKET_OPEN_ERROR,
+    MBMON_SOCKET_CONNECT_ERROR,
+    MBMON_GIOCHANNEL_ERROR,
+    MBMON_GIOCHANNEL_READ_ERROR
 };
 
 static const gchar *mbmon_plugin_query_mbmon_daemon(GError **error) {
-	int sockfd;
-	ssize_t n = 1;
-	gboolean first_run = FALSE;
-	gint output_length = 0;
-	gchar *pc;
+    int sockfd;
+    ssize_t n = 1;
+    gboolean first_run = FALSE;
+    gint output_length = 0;
+    gchar *pc;
 
-	struct sockaddr_in address;
-	static char* buffer = NULL;
-	static GTimeVal previous_query_time;
-	GTimeVal current_query_time;
+    struct sockaddr_in address;
+    static char* buffer = NULL;
+    static GTimeVal previous_query_time;
+    GTimeVal current_query_time;
 
-	if (NULL == buffer) {
-		// initialise buffer and current time
-		buffer = g_new0(char, MBMON_OUTPUT_BUFFER_LENGTH);
-		g_get_current_time(&previous_query_time);
-		first_run = TRUE;
-	}
-	g_get_current_time(&current_query_time);
+    if (NULL == buffer) {
+        /* initialise buffer and current time */
+        buffer = g_new0(char, MBMON_OUTPUT_BUFFER_LENGTH);
+        g_get_current_time(&previous_query_time);
+        first_run = TRUE;
+    }
+    g_get_current_time(&current_query_time);
 
-	/* only query if more than 2 seconds has elapsed,
-	mbmon daemon will send a new value every 2 seconds */
-	if (first_run || current_query_time.tv_sec - previous_query_time.tv_sec > 2) {
-		previous_query_time = current_query_time;
+    /* only query if more than 2 seconds has elapsed,
+    mbmon daemon will send a new value every 2 seconds */
+    if (first_run || current_query_time.tv_sec - previous_query_time.tv_sec > 2) {
+        previous_query_time = current_query_time;
 
-		if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
-			// couldn't open socket
-			g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, MBMON_SOCKET_OPEN_ERROR, "Error opening socket for mbmon");
-			return NULL;
-		}
+        if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
+            /* couldn't open socket */
+            g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, MBMON_SOCKET_OPEN_ERROR, "Error opening socket for mbmon");
+            return NULL;
+        }
 
-		address.sin_family = AF_INET;
-		address.sin_addr.s_addr = inet_addr(MBMON_SERVER_IP_ADDRESS);
-		address.sin_port = htons(MBMON_PORT_NUMBER);
+        address.sin_family = AF_INET;
+        address.sin_addr.s_addr = inet_addr(MBMON_SERVER_IP_ADDRESS);
+        address.sin_port = htons(MBMON_PORT_NUMBER);
 
-		if (connect(sockfd, (struct sockaddr *)&address, (socklen_t)sizeof(address)) == -1) {
-			g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, MBMON_SOCKET_CONNECT_ERROR, "Error connecting to mbmon daemon on port %i on %s", htons(MBMON_PORT_NUMBER), MBMON_SERVER_IP_ADDRESS);
-			return NULL;
-		}
+        if (connect(sockfd, (struct sockaddr *)&address, (socklen_t)sizeof(address)) == -1) {
+            g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, MBMON_SOCKET_CONNECT_ERROR, "Error connecting to mbmon daemon on port %i on %s", htons(MBMON_PORT_NUMBER), MBMON_SERVER_IP_ADDRESS);
+            return NULL;
+        }
 
-		pc = buffer;
-		while ((n = read(sockfd, pc, MBMON_OUTPUT_BUFFER_LENGTH - output_length)) > 0) {
-			output_length += n;
-			pc = &pc[n];
-		}
-		/* always null terminate the end of the buffer
-		 * regardless of how much stuff is in it already */
-		buffer[output_length] = '\0';
-		close(sockfd);
-	}
+        pc = buffer;
+        while ((n = read(sockfd, pc, MBMON_OUTPUT_BUFFER_LENGTH - output_length)) > 0) {
+            output_length += n;
+            pc = &pc[n];
+        }
+        /* always null terminate the end of the buffer
+         * regardless of how much stuff is in it already */
+        buffer[output_length] = '\0';
+        close(sockfd);
+    }
 
-	return buffer;
+    return buffer;
 }
 
 static SensorType get_sensor_type (const char *name) {
-        SensorType type = CURRENT_SENSOR;
+    SensorType type = CURRENT_SENSOR;
 
-	if (g_strrstr(name, "FAN")) {
+    if (g_strrstr(name, "FAN")) {
         type = FAN_SENSOR;
-	}
-    else if (g_strrstr(name, "TEMP")) {
+    } else if (g_strrstr(name, "TEMP")) {
         type = TEMP_SENSOR;
-	} else {
+    } else {
         type = VOLTAGE_SENSOR;
     }
-        return type;
+    return type;
 }
 
 static IconType get_sensor_icon (SensorType type) {
-	switch (type) {
-	case TEMP_SENSOR:
-		return CPU_ICON;
-	case FAN_SENSOR:
-		return FAN_ICON;
-	default:
-		return GENERIC_ICON;
-	}
+    switch (type) {
+        case TEMP_SENSOR:
+            return CPU_ICON;
+        case FAN_SENSOR:
+            return FAN_ICON;
+        default:
+            return GENERIC_ICON;
+    }
 }
 
 static void mbmon_plugin_get_sensors(GList **sensors) {
 
-	GError *error = NULL;
-	const gchar *mbmon_output;
-	gchar **output_vector = NULL, **pv, **pv2;
+    GError *error = NULL;
+    const gchar *mbmon_output;
+    gchar **output_vector = NULL, **pv, **pv2;
 
-	mbmon_output = mbmon_plugin_query_mbmon_daemon(&error);
+    mbmon_output = mbmon_plugin_query_mbmon_daemon(&error);
 
-	if (error) {
-		g_error_free(error);
-		return;
-	}
+    if (error) {
+        g_error_free(error);
+        return;
+    }
 
-	pv = output_vector = g_strsplit(mbmon_output, "\n", -1);
+    pv = output_vector = g_strsplit(mbmon_output, "\n", -1);
 
-	while(pv[0] != NULL) {
-		pv2 = g_strsplit(pv[0], ":", -1);
-		gchar *name, *label;
-		SensorType type;
+    while(pv[0] != NULL) {
+        pv2 = g_strsplit(pv[0], ":", -1);
+        gchar *name, *label;
+        SensorType type;
         gboolean visible;
         IconType icon;
         gdouble low_value, high_value;
 
-		type = get_sensor_type(pv2[0]);
-		icon = get_sensor_icon(type);
-		name = g_strstrip(pv2[0]);
-		label = NULL;
-		visible = (type == TEMP_SENSOR ? TRUE : FALSE);
+        type = get_sensor_type(pv2[0]);
+        icon = get_sensor_icon(type);
+        name = g_strstrip(pv2[0]);
+        label = NULL;
+        visible = (type == TEMP_SENSOR ? TRUE : FALSE);
 
-		if(type == VOLTAGE_SENSOR) {
-		    if(g_strrstr(name, "VC0")) {
-		        label = g_strdup("Core Voltage 1");
-		    } else if(g_strrstr(name, "VC1")) {
-		        label = g_strdup("Core Voltage 2");
-		    } else if(g_strrstr(name, "V33")) {
-		        label = g_strdup("+3.3v Voltage");
-		    } else if(g_strrstr(name, "V50P")) {
-		        label = g_strdup("+5v Voltage");
-		    } else if(g_strrstr(name, "V12P")) {
-		        label = g_strdup("+12v Voltage");
-		    } else if(g_strrstr(name, "V12N")) {
-		        label = g_strdup("-12v Voltage");
-		    } else if(g_strrstr(name, "V50N")) {
-		        label = g_strdup("-5v Voltage");
-		    }
-		}
+        if(type == VOLTAGE_SENSOR) {
+            if(g_strrstr(name, "VC0")) {
+                label = g_strdup("Core Voltage 1");
+            } else if(g_strrstr(name, "VC1")) {
+                label = g_strdup("Core Voltage 2");
+            } else if(g_strrstr(name, "V33")) {
+                label = g_strdup("+3.3v Voltage");
+            } else if(g_strrstr(name, "V50P")) {
+                label = g_strdup("+5v Voltage");
+            } else if(g_strrstr(name, "V12P")) {
+                label = g_strdup("+12v Voltage");
+            } else if(g_strrstr(name, "V12N")) {
+                label = g_strdup("-12v Voltage");
+            } else if(g_strrstr(name, "V50N")) {
+                label = g_strdup("-5v Voltage");
+            }
+        }
 
-		label = (label == NULL ? name : label);
+        label = (label == NULL ? name : label);
 
-		sensors_applet_plugin_default_sensor_limits(type, &low_value, &high_value);
+        sensors_applet_plugin_default_sensor_limits(type, &low_value, &high_value);
 
-		sensors_applet_plugin_add_sensor_with_limits(sensors,
-		                                             name,
-		                                             name,
+        sensors_applet_plugin_add_sensor_with_limits(sensors,
+                                                     name,
+                                                     name,
                                                      label,
                                                      type,
                                                      visible,
@@ -194,69 +192,70 @@ static void mbmon_plugin_get_sensors(GList **sensors) {
                                                      icon,
                                                      DEFAULT_GRAPH_COLOR);
 
-	    g_strfreev(pv2);
-		pv++;
-	}
-	g_strfreev(output_vector);
+        g_strfreev(pv2);
+        pv++;
+    }
+    g_strfreev(output_vector);
 
 }
 
 /* to be called to setup for mbmon sensors */
 static GList *mbmon_plugin_init(void) {
-	GList *sensors = NULL;
-	mbmon_plugin_get_sensors(&sensors);
-        return sensors;
+    GList *sensors = NULL;
+    mbmon_plugin_get_sensors(&sensors);
+    return sensors;
 }
 
 
 /* returns the value of the sensor_list at the given iter, or if an
    error occurs, instatiates error with an error message */
 static gdouble mbmon_plugin_get_sensor_value(const gchar *path,
-						  const gchar *id,
-						  SensorType type,
-						  GError **error) {
+                                            const gchar *id,
+                                            SensorType type,
+                                            GError **error) {
 
-	const gchar *mbmon_output;
-	gchar **output_vector = NULL, **pv, **pv2;
+    const gchar *mbmon_output;
+    gchar **output_vector = NULL, **pv, **pv2;
 
-	gfloat sensor_value = -1.0f;
+    gfloat sensor_value = -1.0f;
 
-	mbmon_output = mbmon_plugin_query_mbmon_daemon(error);
+    mbmon_output = mbmon_plugin_query_mbmon_daemon(error);
 
-	if (*error) {
-		return sensor_value;
-	}
+    if (*error) {
+        return sensor_value;
+    }
 
-	pv = output_vector = g_strsplit(mbmon_output, "\n", -1);
+    pv = output_vector = g_strsplit(mbmon_output, "\n", -1);
 
-	while(pv[0] != NULL) {
-		if (g_strrstr(pv[0], path) != NULL) {
+    while(pv[0] != NULL) {
+        if (g_strrstr(pv[0], path) != NULL) {
 
-		    pv2 = g_strsplit(pv[0], ":", -1);
-			sensor_value = (gfloat)(g_ascii_strtod(pv2[1], NULL));
-	        g_strfreev(pv2);
-			break;
-		}
-		pv++;
-	}
-	g_strfreev(output_vector);
+            pv2 = g_strsplit(pv[0], ":", -1);
+            sensor_value = (gfloat)(g_ascii_strtod(pv2[1], NULL));
+            g_strfreev(pv2);
+            break;
+        }
+        pv++;
+    }
+    g_strfreev(output_vector);
 
-	return (gdouble)sensor_value;
+    return (gdouble)sensor_value;
 }
 
 const gchar *sensors_applet_plugin_name(void)
 {
-        return plugin_name;
+    return plugin_name;
 }
 
 GList *sensors_applet_plugin_init(void)
 {
-        return mbmon_plugin_init();
+    return mbmon_plugin_init();
 }
 
 gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
                                                 const gchar *id,
                                                 SensorType type,
                                                 GError **error) {
-        return mbmon_plugin_get_sensor_value(path, id, type, error);
+
+    return mbmon_plugin_get_sensor_value(path, id, type, error);
 }

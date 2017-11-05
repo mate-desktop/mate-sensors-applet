@@ -34,128 +34,134 @@ const gchar *plugin_name = "i8k";
 #define I8K_DEVICE_FILE "i8k"
 
 enum {
-	I8K_DEVICE_FILE_OPEN_ERROR,
-	I8K_DEVICE_FILE_READ_ERROR
+    I8K_DEVICE_FILE_OPEN_ERROR,
+    I8K_DEVICE_FILE_READ_ERROR
 };
 
 static void i8k_plugin_setup_manually(GList **sensors) {
-	if (g_file_test(I8K_DEVICE_PATH, G_FILE_TEST_EXISTS)) {
-		/* with i8k have only 3 fixed sensors, all accessed
-		   from the I8K_DEVICE_PATH */
-		sensors_applet_plugin_add_sensor(sensors,
-                                                 I8K_DEVICE_PATH,
-                                                 "temp1",
-                                                 _("CPU"),
-                                                 TEMP_SENSOR,
-                                                 TRUE,
-                                                 CPU_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-		sensors_applet_plugin_add_sensor(sensors,
-                                                 I8K_DEVICE_PATH,
-                                                 "fan1",
-                                                 _("FAN1"),
-                                                 FAN_SENSOR,
-                                                 FALSE,
-                                                 FAN_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-		sensors_applet_plugin_add_sensor(sensors,
-                                                 I8K_DEVICE_PATH,
-                                                 "fan2",
-                                                 _("FAN2"),
-                                                 FAN_SENSOR,
-                                                 FALSE,
-                                                 FAN_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-	}
+    if (g_file_test(I8K_DEVICE_PATH, G_FILE_TEST_EXISTS)) {
+        /* with i8k have only 3 fixed sensors, all accessed
+           from the I8K_DEVICE_PATH */
+        sensors_applet_plugin_add_sensor(sensors,
+                                         I8K_DEVICE_PATH,
+                                         "temp1",
+                                         _("CPU"),
+                                         TEMP_SENSOR,
+                                         TRUE,
+                                         CPU_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+
+        sensors_applet_plugin_add_sensor(sensors,
+                                         I8K_DEVICE_PATH,
+                                         "fan1",
+                                         _("FAN1"),
+                                         FAN_SENSOR,
+                                         FALSE,
+                                         FAN_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+
+        sensors_applet_plugin_add_sensor(sensors,
+                                         I8K_DEVICE_PATH,
+                                         "fan2",
+                                         _("FAN2"),
+                                         FAN_SENSOR,
+                                         FALSE,
+                                         FAN_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+    }
 }
+
 /* to be called externally to setup for i8k sensors */
 static GList *i8k_plugin_init(void) {
-        GList *sensors = NULL;
-        
-	i8k_plugin_setup_manually(&sensors);
+    GList *sensors = NULL;
 
-        return sensors;
-		
+    i8k_plugin_setup_manually(&sensors);
+
+    return sensors;
 }
 
-gdouble i8k_plugin_get_sensor_value(const gchar *path, 
-					      const gchar *id, 
-					      SensorType type,
-					      GError **error) {
+gdouble i8k_plugin_get_sensor_value(const gchar *path,
+                                    const gchar *id,
+                                    SensorType type,
+                                    GError **error) {
 
-	/* to open and access the value of each sensor */
-	FILE *fp;
-	gint cpu_temp, fan1_status, fan2_status, fan1_rpm, fan2_rpm;
-	gint sensor_value;
-	gint space_count, file_length;
-	
-	if (NULL == (fp = fopen(path, "r"))) {
-		g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
-                return -1.0;
-	}
+    /* to open and access the value of each sensor */
+    FILE *fp;
+    gint cpu_temp, fan1_status, fan2_status, fan1_rpm, fan2_rpm;
+    gint sensor_value;
+    gint space_count, file_length;
 
-	space_count = 0;
-	file_length = 0;
+    if (NULL == (fp = fopen(path, "r"))) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
+        return -1.0;
+    }
 
-	/* count spaces but stop if have counted 100 characters and
-	   still not found a space (to avoid infinite loop if file
-	   format error) */
-	while (file_length < 100 && space_count < 3) {
-		if (fgetc(fp) == ' ') {
-			space_count++;
-		}
-		file_length++;
-	}
+    space_count = 0;
+    file_length = 0;
 
-	if (fscanf(fp, "%d %d %d %d %d", &cpu_temp, &fan1_status, &fan2_status, &fan1_rpm, &fan2_rpm) != 5) {
-		g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-		fclose(fp);
-		return -1.0;
-	}
-	fclose(fp);
+    /* count spaces but stop if have counted 100 characters and
+       still not found a space (to avoid infinite loop if file
+       format error) */
+    while (file_length < 100 && space_count < 3) {
+        if (fgetc(fp) == ' ') {
+            space_count++;
+        }
+        file_length++;
+    }
 
-	switch (type) {
-	case TEMP_SENSOR:
-		sensor_value = cpu_temp;
-		break;
-	case FAN_SENSOR:
-		switch (id[3]) {
-		case '1':
-			sensor_value = fan1_rpm;
-			break;
-		case '2':
-			sensor_value = fan2_rpm;
-			break;
-		default:
-                        g_error("Error in i8k sensor get value function code for id %s", id);
-                        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-                        return -1.0;
-		}
-		break;
+    if (fscanf(fp, "%d %d %d %d %d", &cpu_temp, &fan1_status, &fan2_status, &fan1_rpm, &fan2_rpm) != 5) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+        fclose(fp);
+        return -1.0;
+    }
+    fclose(fp);
 
-	default:
-                g_error("Unknown sensor type passed as parameter to i8k sensor interface, cannot get value for this sensor");
-                g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-                return -1.0;
-	} // end switch (sensor_type)
+    switch (type) {
+        case TEMP_SENSOR:
+            sensor_value = cpu_temp;
+            break;
 
-	return (gdouble)sensor_value;
+        case FAN_SENSOR:
+            switch (id[3]) {
+                case '1':
+                    sensor_value = fan1_rpm;
+                    break;
+
+                case '2':
+                    sensor_value = fan2_rpm;
+                    break;
+
+                default:
+                    g_error("Error in i8k sensor get value function code for id %s", id);
+                    g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+                    return -1.0;
+            }
+            break;
+
+        default:
+            g_error("Unknown sensor type passed as parameter to i8k sensor interface, cannot get value for this sensor");
+            g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, I8K_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+            return -1.0;
+    } // end switch (sensor_type)
+
+    return (gdouble)sensor_value;
 
 }
 
-const gchar *sensors_applet_plugin_name(void) 
+const gchar *sensors_applet_plugin_name(void)
 {
-        return plugin_name;
+    return plugin_name;
 }
 
-GList *sensors_applet_plugin_init(void) 
+GList *sensors_applet_plugin_init(void)
 {
-        return i8k_plugin_init();
+    return i8k_plugin_init();
 }
 
-gdouble sensors_applet_plugin_get_sensor_value(const gchar *path, 
-                                                const gchar *id, 
+gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
+                                                const gchar *id,
                                                 SensorType type,
                                                 GError **error) {
-        return i8k_plugin_get_sensor_value(path, id, type, error);
+
+    return i8k_plugin_get_sensor_value(path, id, type, error);
 }
