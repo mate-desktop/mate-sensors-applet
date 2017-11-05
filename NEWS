@@ -1,3 +1,11 @@
+### mate-sensors-applet 1.19.1
+
+  * Translations update
+  * Stop jumping applet as numbers change
+  * fix save order of sensors
+  * updated hide temperature units
+  * remove code duplication
+
 ### mate-sensors-applet 1.19.0
 
   * Translations update
