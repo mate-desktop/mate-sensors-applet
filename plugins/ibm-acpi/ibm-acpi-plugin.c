@@ -44,176 +44,181 @@ const gchar *plugin_name = "ibm-acpi";
 
 
 enum {
-        IBM_ACPI_FILE_OPEN_ERROR,
-        IBM_ACPI_FILE_READ_ERROR
+    IBM_ACPI_FILE_OPEN_ERROR,
+    IBM_ACPI_FILE_READ_ERROR
 };
 
 
 static void ibm_acpi_plugin_setup_manually(GList **sensors) {
-	gchar *label;
+    gchar *label;
 
-        if (g_file_test(IBM_ACPI_TEMPERATURE_FILE, G_FILE_TEST_EXISTS)) {
-                /* with Ibm_Acpi have 8 fixed sensors, all accessed
-                   from the IBM_ACPI_TEMPERATURE_FILE */
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_TEMPERATURE_FILE,
-                                                 CPU,
-                                                 _(CPU),
-                                                 TEMP_SENSOR,
-                                                 TRUE,
-                                                 CPU_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_TEMPERATURE_FILE,
-                                                 MPCI,
-                                                 _("MiniPCI"),
-                                                 TEMP_SENSOR,
-                                                 FALSE,
-                                                 GENERIC_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
+    if (g_file_test(IBM_ACPI_TEMPERATURE_FILE, G_FILE_TEST_EXISTS)) {
 
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_TEMPERATURE_FILE,
-                                                 HDD,
-                                                 _(HDD),
-                                                 TEMP_SENSOR,	
-                                                 FALSE,
-                                                 HDD_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-                
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_TEMPERATURE_FILE,
-                                                 GPU,
-                                                 _(GPU),
-                                                 TEMP_SENSOR,
-                                                 FALSE,
-                                                 GPU_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-                
-		label = g_strdup_printf("%s %d", _("Battery"), 0);
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_TEMPERATURE_FILE,
-                                                 BAT0,
-                                                 label,
-                                                 TEMP_SENSOR,
-                                                 FALSE,
-                                                 BATTERY_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
-                
-		g_free(label);
-		label = g_strdup_printf("%s %d", _("Battery"), 0);
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_TEMPERATURE_FILE,
-                                                 BAT1,
-                                                 label,
-                                                 TEMP_SENSOR,
-                                                 FALSE,
-                                                 BATTERY_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
+        /* with Ibm_Acpi have 8 fixed sensors, all accessed
+           from the IBM_ACPI_TEMPERATURE_FILE */
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_TEMPERATURE_FILE,
+                                         CPU,
+                                         _(CPU),
+                                         TEMP_SENSOR,
+                                         TRUE,
+                                         CPU_ICON,
+                                         DEFAULT_GRAPH_COLOR);
 
-		g_free(label);
-	}
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_TEMPERATURE_FILE,
+                                         MPCI,
+                                         _("MiniPCI"),
+                                         TEMP_SENSOR,
+                                         FALSE,
+                                         GENERIC_ICON,
+                                         DEFAULT_GRAPH_COLOR);
 
-        if (g_file_test(IBM_ACPI_FAN_FILE, G_FILE_TEST_EXISTS)) {
-                sensors_applet_plugin_add_sensor(sensors,
-                                                 IBM_ACPI_FAN_FILE,
-                                                 FAN,
-                                                 _("Fan"),
-                                                 FAN_SENSOR,
-                                                 FALSE,
-                                                 FAN_ICON,
-                                                 DEFAULT_GRAPH_COLOR);
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_TEMPERATURE_FILE,
+                                         HDD,
+                                         _(HDD),
+                                         TEMP_SENSOR,
+                                         FALSE,
+                                         HDD_ICON,
+                                         DEFAULT_GRAPH_COLOR);
 
-        }
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_TEMPERATURE_FILE,
+                                         GPU,
+                                         _(GPU),
+                                         TEMP_SENSOR,
+                                         FALSE,
+                                         GPU_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+
+        label = g_strdup_printf("%s %d", _("Battery"), 0);
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_TEMPERATURE_FILE,
+                                         BAT0,
+                                         label,
+                                         TEMP_SENSOR,
+                                         FALSE,
+                                         BATTERY_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+
+        g_free(label);
+
+        label = g_strdup_printf("%s %d", _("Battery"), 0);
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_TEMPERATURE_FILE,
+                                         BAT1,
+                                         label,
+                                         TEMP_SENSOR,
+                                         FALSE,
+                                         BATTERY_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+
+        g_free(label);
+    }
+
+    if (g_file_test(IBM_ACPI_FAN_FILE, G_FILE_TEST_EXISTS)) {
+        sensors_applet_plugin_add_sensor(sensors,
+                                         IBM_ACPI_FAN_FILE,
+                                         FAN,
+                                         _("Fan"),
+                                         FAN_SENSOR,
+                                         FALSE,
+                                         FAN_ICON,
+                                         DEFAULT_GRAPH_COLOR);
+
+    }
 }
+
 /* to be called externally to setup for ibm_acpi sensors */
 GList *ibm_acpi_plugin_init(void) {
-        GList *sensors = NULL;
-        
-       ibm_acpi_plugin_setup_manually(&sensors);
+    GList *sensors = NULL;
 
-       return sensors;
-                
+    ibm_acpi_plugin_setup_manually(&sensors);
+
+    return sensors;
 }
 
-gdouble ibm_acpi_plugin_get_sensor_value(const gchar *path, 
-                                         const gchar *id, 
+gdouble ibm_acpi_plugin_get_sensor_value(const gchar *path,
+                                         const gchar *id,
                                          SensorType type,
                                          GError **error) {
 
-        /* to open and access the value of each sensor */
-        FILE *fp;
-        gint sensor_value;
-        gint cpu_temp, minipci_temp, hdd_temp, gpu_temp, bat0_temp, bat1_temp, unknown0, unknown1;
-        gint fan_speed;
+    /* to open and access the value of each sensor */
+    FILE *fp;
+    gint sensor_value;
+    gint cpu_temp, minipci_temp, hdd_temp, gpu_temp, bat0_temp, bat1_temp, unknown0, unknown1;
+    gint fan_speed;
 
-        if (NULL == (fp = fopen(path, "r"))) {
-                g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
-                return -1.0;
-        }
+    if (NULL == (fp = fopen(path, "r"))) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
+        return -1.0;
+    }
 
-        switch (type) {
+    switch (type) {
         case TEMP_SENSOR:
-                if (fscanf(fp, "temperatures:   %d %d %d %d %d %d %d %d", &cpu_temp, &minipci_temp, &hdd_temp, &gpu_temp, &bat0_temp, &unknown0, &bat1_temp, &unknown1) != 8) {
-                        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-                        fclose(fp);
-                        return -1.0;
-                }
-
-                if (g_ascii_strcasecmp(id, CPU) == 0) {
-                        sensor_value = cpu_temp;
-                } else if (g_ascii_strcasecmp(id, MPCI) == 0) {
-                        sensor_value = minipci_temp;
-                } else if (g_ascii_strcasecmp(id, HDD) == 0) {
-                        sensor_value = hdd_temp;
-                } else if (g_ascii_strcasecmp(id, GPU) == 0) {
-                        sensor_value = gpu_temp;
-                } else if (g_ascii_strcasecmp(id, BAT0) == 0) {
-                        sensor_value = bat0_temp;
-                } else if (g_ascii_strcasecmp(id, BAT1) == 0) {
-                        sensor_value = bat1_temp;
-                }
-                break;
-        case FAN_SENSOR:
-                fscanf(fp, "%*[^\n]");   /* Skip to the End of the Line */
-                fscanf(fp, "%*1[\n]");   /* Skip One Newline */
-                if (fscanf(fp, "speed:   %d", &fan_speed) != 1) {
-                        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-                        fclose(fp);
-                        return -1.0;
-                }
-
-                if (g_ascii_strcasecmp(id, "FAN") == 0) {
-                        sensor_value = fan_speed;
-                }
-                break;
-
-        default:
-                g_error("Unknown sensor type passed as parameter to ibm-acpi sensor interface, cannot get value for this sensor");
+            if (fscanf(fp, "temperatures:   %d %d %d %d %d %d %d %d", &cpu_temp, &minipci_temp, &hdd_temp, &gpu_temp, &bat0_temp, &unknown0, &bat1_temp, &unknown1) != 8) {
                 g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
                 fclose(fp);
                 return -1.0;
-        }
+            }
 
-        fclose(fp);
+            if (g_ascii_strcasecmp(id, CPU) == 0) {
+                sensor_value = cpu_temp;
+            } else if (g_ascii_strcasecmp(id, MPCI) == 0) {
+                sensor_value = minipci_temp;
+            } else if (g_ascii_strcasecmp(id, HDD) == 0) {
+                sensor_value = hdd_temp;
+            } else if (g_ascii_strcasecmp(id, GPU) == 0) {
+                sensor_value = gpu_temp;
+            } else if (g_ascii_strcasecmp(id, BAT0) == 0) {
+                sensor_value = bat0_temp;
+            } else if (g_ascii_strcasecmp(id, BAT1) == 0) {
+                sensor_value = bat1_temp;
+            }
+            break;
 
-        return (gdouble)sensor_value;
+        case FAN_SENSOR:
+            fscanf(fp, "%*[^\n]");   /* Skip to the End of the Line */
+            fscanf(fp, "%*1[\n]");   /* Skip One Newline */
+            if (fscanf(fp, "speed:   %d", &fan_speed) != 1) {
+                g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+                fclose(fp);
+                return -1.0;
+            }
+
+            if (g_ascii_strcasecmp(id, "FAN") == 0) {
+                sensor_value = fan_speed;
+            }
+            break;
+
+        default:
+            g_error("Unknown sensor type passed as parameter to ibm-acpi sensor interface, cannot get value for this sensor");
+            g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+            fclose(fp);
+            return -1.0;
+    }
+
+    fclose(fp);
+
+    return (gdouble)sensor_value;
 
 }
 
-const gchar *sensors_applet_plugin_name(void) 
+const gchar *sensors_applet_plugin_name(void)
 {
-        return plugin_name;
+    return plugin_name;
 }
 
-GList *sensors_applet_plugin_init(void) 
+GList *sensors_applet_plugin_init(void)
 {
-        return ibm_acpi_plugin_init();
+    return ibm_acpi_plugin_init();
 }
 
-gdouble sensors_applet_plugin_get_sensor_value(const gchar *path, 
-                                                const gchar *id, 
+gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
+                                                const gchar *id,
                                                 SensorType type,
                                                 GError **error) {
-        return ibm_acpi_plugin_get_sensor_value(path, id, type, error);
+
+    return ibm_acpi_plugin_get_sensor_value(path, id, type, error);
 }
