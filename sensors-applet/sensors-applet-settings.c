@@ -32,7 +32,6 @@
 // gsettings gvariant type string for the array
 #define GSGVTSA "as"
 
-
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path) {
     gchar *unique_id;
     gchar *unique_id_hash;
@@ -62,7 +61,6 @@ gboolean sensors_applet_conf_setup_sensors(SensorsApplet *sensors_applet) {
     /* everything gets stored except alarm timeout indexes, which
     we set to -1, and visible which we set to false for all
     parent nodes and true for all child nodes */
-
 
     gchar *applet_path;
     // not sure about pointer, it is unclear if it is freed by loop, probably yes
@@ -123,7 +121,6 @@ gboolean sensors_applet_conf_setup_sensors(SensorsApplet *sensors_applet) {
             g_settings_get_int (settings, ICON_TYPE),
             current_graph_color = g_settings_get_string (settings, GRAPH_COLOR));
 
-
         g_free (current_path);
         g_free (current_id);
         g_free (current_label);
@@ -144,8 +141,7 @@ gboolean sensors_applet_conf_setup_sensors(SensorsApplet *sensors_applet) {
 // save sensor data under a unique hash
 // save sensor sort in an array, with above hash
 gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
-    /* write everything to GSettings except VISIBLE and
-       ALARM_TIMEOUT_INDEX */
+    /* write everything to GSettings except VISIBLE and ALARM_TIMEOUT_INDEX */
     /* for stepping through GtkTreeStore data structure */
     GtkTreeIter interfaces_iter, sensors_iter;
     gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
@@ -175,9 +171,11 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
 
     applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
 
-    /* now step through the GtkTreeStore sensors to
-       find which sensors are enabled */
-    for (gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter); not_end_of_interfaces; not_end_of_interfaces = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
+    /* now step through the GtkTreeStore sensors to find which sensors are enabled */
+    for (gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+        not_end_of_interfaces;
+        not_end_of_interfaces = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
+
         gtk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
                            &interfaces_iter,
                            ID_COLUMN, &current_id,
@@ -187,8 +185,11 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
 
         /* reset sensors sentinel */
         not_end_of_sensors = TRUE;
-        
-        for (gtk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter); not_end_of_sensors; not_end_of_sensors = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
+
+        for (gtk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
+            not_end_of_sensors;
+            not_end_of_sensors = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
+
             gtk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
                                &sensors_iter,
                                PATH_COLUMN, &current_path,
@@ -208,7 +209,6 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
                                ICON_TYPE_COLUMN, &current_icon_type,
                                GRAPH_COLOR_COLUMN, &current_graph_color,
                                -1);
-
 
             // GSettings unique id for one sensor data
             gchar *gsuid = sensors_applet_settings_get_unique_id (current_interface, current_id, current_path);

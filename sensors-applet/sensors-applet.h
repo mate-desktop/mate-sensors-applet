@@ -39,15 +39,15 @@ typedef struct _ActiveSensor ActiveSensor;
 #define SENSORS_APPLET_ICON "mate-sensors-applet"
 
 static const gchar * const stock_icons[NUM_ICONS] = {
-        "mate-sensors-applet-cpu",
-        "mate-sensors-applet-drive-harddisk",
-        "mate-sensors-applet-battery",
-        "mate-sensors-applet-memory",
-        "mate-sensors-applet-gpu",
-        "mate-sensors-applet-chip",
-        "mate-sensors-applet-fan",
-        "mate-sensors-applet-case"
-};        
+    "mate-sensors-applet-cpu",
+    "mate-sensors-applet-drive-harddisk",
+    "mate-sensors-applet-battery",
+    "mate-sensors-applet-memory",
+    "mate-sensors-applet-gpu",
+    "mate-sensors-applet-chip",
+    "mate-sensors-applet-fan",
+    "mate-sensors-applet-case"
+};
 
 #define DEFAULT_ICON_SIZE 22
 
@@ -59,100 +59,95 @@ static const gchar * const stock_icons[NUM_ICONS] = {
 #define UNITS_CURRENT  _("A")
 
 
-/* enumeration used to identify columns in the GtkTreeStore data
- * structure
- */
+/* enumeration used to identify columns in the GtkTreeStore data structure */
 enum {
-	PATH_COLUMN = 0,
-	ID_COLUMN,
-	LABEL_COLUMN,
-	INTERFACE_COLUMN,
-	SENSOR_TYPE_COLUMN,
-	ENABLE_COLUMN,
-	VISIBLE_COLUMN,
-       	LOW_VALUE_COLUMN,
-	HIGH_VALUE_COLUMN, 
-	ALARM_ENABLE_COLUMN,
-	LOW_ALARM_COMMAND_COLUMN,
-        HIGH_ALARM_COMMAND_COLUMN,
-	ALARM_TIMEOUT_COLUMN,
-	MULTIPLIER_COLUMN,
-	OFFSET_COLUMN,
-	ICON_TYPE_COLUMN,
-	ICON_PIXBUF_COLUMN,
-        GRAPH_COLOR_COLUMN,
-	N_COLUMNS
+    PATH_COLUMN = 0,
+    ID_COLUMN,
+    LABEL_COLUMN,
+    INTERFACE_COLUMN,
+    SENSOR_TYPE_COLUMN,
+    ENABLE_COLUMN,
+    VISIBLE_COLUMN,
+    LOW_VALUE_COLUMN,
+    HIGH_VALUE_COLUMN,
+    ALARM_ENABLE_COLUMN,
+    LOW_ALARM_COMMAND_COLUMN,
+    HIGH_ALARM_COMMAND_COLUMN,
+    ALARM_TIMEOUT_COLUMN,
+    MULTIPLIER_COLUMN,
+    OFFSET_COLUMN,
+    ICON_TYPE_COLUMN,
+    ICON_PIXBUF_COLUMN,
+    GRAPH_COLOR_COLUMN,
+    N_COLUMNS
 };
 
 
 /* for display mode */
 typedef enum {
-	DISPLAY_LABEL_WITH_VALUE = 0,
-        DISPLAY_ICON_WITH_VALUE, 
-	DISPLAY_VALUE,
-	DISPLAY_ICON,
-	DISPLAY_GRAPH
+    DISPLAY_LABEL_WITH_VALUE = 0,
+    DISPLAY_ICON_WITH_VALUE,
+    DISPLAY_VALUE,
+    DISPLAY_ICON,
+    DISPLAY_GRAPH
 } DisplayMode;
 
 typedef enum {
-        VALUE_BESIDE_LABEL = 0,
-        VALUE_BELOW_LABEL
+    VALUE_BESIDE_LABEL = 0,
+    VALUE_BELOW_LABEL
 } LayoutMode;
 
 typedef enum {
-        KELVIN = 0,
-        CELSIUS,
-        FAHRENHEIT
+    KELVIN = 0,
+    CELSIUS,
+    FAHRENHEIT
 } TemperatureScale;
 
-/* types of Notifs - low and high alarm warnings and error conditions*/
+/* types of Notifs - low and high alarm warnings and error conditions */
 typedef enum {
-        LOW_ALARM = 0,
-        HIGH_ALARM,
-        SENSOR_INTERFACE_ERROR,
-        NUM_NOTIFS
+    LOW_ALARM = 0,
+    HIGH_ALARM,
+    SENSOR_INTERFACE_ERROR,
+    NUM_NOTIFS
 } NotifType;
 
 /* only always two type of alarms - may have more notif types */
 #define NUM_ALARMS 2
 
 struct _SensorsApplet {
-	/* the actual applet for this instance */
-	MatePanelApplet* applet;
-        gint size;
+    /* the actual applet for this instance */
+    MatePanelApplet* applet;
+    gint size;
 
-	GtkTreeStore *sensors;
-	GtkTreeSelection *selection;
+    GtkTreeStore *sensors;
+    GtkTreeSelection *selection;
 
-        GHashTable *required_plugins;
-        GHashTable *plugins;
-        
-	guint timeout_id;
-	/* preferences and about windows (if Gtk < 2.6)*/
-	PrefsDialog *prefs_dialog;
+    GHashTable *required_plugins;
+    GHashTable *plugins;
 
-	/* primary grid to contain the panel dispay - we pack the
-	 * list of labels and sensor values into this container */
-	GtkWidget *grid;
-	GList *active_sensors;
+    guint timeout_id;
+    /* preferences and about windows (if Gtk < 2.6) */
+    PrefsDialog *prefs_dialog;
 
-	GSettings *settings;
+    /* primary grid to contain the panel dispay - we pack the
+     * list of labels and sensor values into this container */
+    GtkWidget *grid;
+    GList *active_sensors;
+
+    GSettings *settings;
 
 #ifdef HAVE_LIBNOTIFY
-        NotifyNotification *notification;
+    NotifyNotification *notification;
 #endif // HAVE_LIBNOTIFY
 
-        gboolean show_tooltip;
+    gboolean show_tooltip;
 };
-
 
 
 /* non-static function prototypes */
 void sensors_applet_init(SensorsApplet *sensors_applet);
-void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet,
-                                   GtkTreePath *path);
-void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet,
-                                    GtkTreePath *path);
+void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet, GtkTreePath *path);
+void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet, GtkTreePath *path);
 gboolean sensors_applet_update_active_sensors(SensorsApplet *sensors_applet);
 /**
  * to be called by things like prefs dialog to turn off a sensor alarm
@@ -160,17 +155,14 @@ gboolean sensors_applet_update_active_sensors(SensorsApplet *sensors_applet);
 void sensors_applet_alarm_off(SensorsApplet *sensors_applet,
                               GtkTreePath *path,
                               NotifType notif_type);
-void sensors_applet_all_alarms_off(SensorsApplet *sensors_applet,
-                              GtkTreePath *path);
-void sensors_applet_icon_changed(SensorsApplet *sensors_applet,
-                                 GtkTreePath *path);
-void sensors_applet_update_sensor(SensorsApplet *sensors_applet,
-                                  GtkTreePath *path);
+void sensors_applet_all_alarms_off(SensorsApplet *sensors_applet, GtkTreePath *path);
+void sensors_applet_icon_changed(SensorsApplet *sensors_applet, GtkTreePath *path);
+void sensors_applet_update_sensor(SensorsApplet *sensors_applet, GtkTreePath *path);
 
 void sensors_applet_display_layout_changed(SensorsApplet *sensors_applet);
 void sensors_applet_reorder_sensors(SensorsApplet *sensors_applet);
-gdouble sensors_applet_convert_temperature(gdouble value, 
-                                           TemperatureScale old, 
+gdouble sensors_applet_convert_temperature(gdouble value,
+                                           TemperatureScale old,
                                            TemperatureScale new);
 
 void sensors_applet_notify_end(ActiveSensor *active_sensor, NotifType notif_type);
@@ -179,8 +171,7 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
 GdkPixbuf *sensors_applet_load_icon(IconType icon_type);
 void sensors_applet_graph_size_changed(SensorsApplet *sensors_applet);
 
-typedef void SensorsInterfaceTestSensorFunc(SensorsApplet *sensors_applet,
-                                            const gchar *path);
+typedef void SensorsInterfaceTestSensorFunc(SensorsApplet *sensors_applet, const gchar *path);
 void sensors_applet_find_sensors(SensorsApplet *sensors_applet,
                                  const gchar *path,
                                  SensorsInterfaceTestSensorFunc test_sensor);
@@ -202,4 +193,5 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
                                    gdouble offset,
                                    IconType icon_type,
                                    const gchar *graph_color);
+
 #endif /* SENSORS_APPLET_H */

@@ -21,43 +21,43 @@
 
 #include <glib.h>
 
-// forward declare for plugins to use
+/* forward declare for plugins to use */
 typedef struct _SensorsApplet SensorsApplet;
 
 #define DEFAULT_GRAPH_COLOR "#ff0000"
 
 /* device icons */
 typedef enum {
-        CPU_ICON = 0,
-        HDD_ICON,
-        BATTERY_ICON,
-        MEMORY_ICON,
-        GPU_ICON,
-        GENERIC_ICON,
-        FAN_ICON,
-        CASE_ICON,
-        NUM_ICONS,
+    CPU_ICON = 0,
+    HDD_ICON,
+    BATTERY_ICON,
+    MEMORY_ICON,
+    GPU_ICON,
+    GENERIC_ICON,
+    FAN_ICON,
+    CASE_ICON,
+    NUM_ICONS,
 } IconType;
 
 typedef enum {
-	CURRENT_SENSOR = 0,
-	FAN_SENSOR,
-	TEMP_SENSOR,
-	VOLTAGE_SENSOR
+    CURRENT_SENSOR = 0,
+    FAN_SENSOR,
+    TEMP_SENSOR,
+    VOLTAGE_SENSOR
 } SensorType;
 
 typedef struct _SensorsAppletSensorInfo {
-        gchar *path; // must be dynamically allocated
-        gchar *id; // must be dynamically allocated
-        gchar *label; // must be dynamically allocated
-        SensorType type; 
-        gboolean enable;
-        gdouble low_value;
-        gdouble high_value;
-        gdouble multiplier;
-        gdouble offset;
-        IconType icon;
-        gchar *graph_color; // must be dynamically allocated
+    gchar *path; /* must be dynamically allocated */
+    gchar *id; /* must be dynamically allocated */
+    gchar *label; /* must be dynamically allocated */
+    SensorType type;
+    gboolean enable;
+    gdouble low_value;
+    gdouble high_value;
+    gdouble multiplier;
+    gdouble offset;
+    IconType icon;
+    gchar *graph_color; /* must be dynamically allocated */
 } SensorsAppletSensorInfo;
 
 
