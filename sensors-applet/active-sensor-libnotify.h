@@ -28,6 +28,7 @@ void active_sensor_libnotify_notify(ActiveSensor *active_sensor,
                                     const gchar *message,
                                     const gchar *icon_filename,
                                     gint timeout_msecs);
+
 void active_sensor_libnotify_notify_end(ActiveSensor *active_sensor,
                                         NotifType notif_type);
 
