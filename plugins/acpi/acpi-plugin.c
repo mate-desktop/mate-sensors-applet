@@ -34,104 +34,97 @@ const gchar *plugin_name = "acpi";
 #define ACPI_THERMAL_BASE_DIR "/proc/acpi/thermal"
 
 enum {
-	ACPI_DEVICE_FILE_OPEN_ERROR,
-	ACPI_DEVICE_FILE_READ_ERROR
+    ACPI_DEVICE_FILE_OPEN_ERROR,
+    ACPI_DEVICE_FILE_READ_ERROR
 };
 
 static void acpi_plugin_add_sensor(GList **sensors, const gchar *path) {
-	gchar *dirname;
-	gchar *id;
-        gchar *label;
-        
-        
-	dirname = g_path_get_dirname(path);
-	id = g_path_get_basename(dirname);
-	g_free(dirname);
-	
-        sensors_applet_plugin_add_sensor(sensors,
-                                         path,
-                                         id,
-                                         _("CPU"),
-                                         TEMP_SENSOR,
-                                         TRUE,
-                                         CPU_ICON,
-                                         DEFAULT_GRAPH_COLOR);
-        g_free(id);
-}	
+    gchar *dirname;
+    gchar *id;
+    gchar *label;
 
-static void acpi_plugin_test_sensor(GList **sensors,
-                                    const gchar *path) {
-        gchar *filename;
-        
-        filename = g_path_get_basename(path);
 
-        if (g_ascii_strcasecmp(filename, "temperature") == 0 || 
-            g_ascii_strcasecmp(filename, "status") == 0) {
-                acpi_plugin_add_sensor(sensors, path);
-                
-        }
-        g_free(filename);
+    dirname = g_path_get_dirname(path);
+    id = g_path_get_basename(dirname);
+    g_free(dirname);
 
+    sensors_applet_plugin_add_sensor(sensors,
+                                     path,
+                                     id,
+                                     _("CPU"),
+                                     TEMP_SENSOR,
+                                     TRUE,
+                                     CPU_ICON,
+                                     DEFAULT_GRAPH_COLOR);
+    g_free(id);
 }
 
+static void acpi_plugin_test_sensor(GList **sensors, const gchar *path) {
+    gchar *filename;
+    filename = g_path_get_basename(path);
 
+    if (g_ascii_strcasecmp(filename, "temperature") == 0 ||
+        g_ascii_strcasecmp(filename, "status") == 0) {
+            acpi_plugin_add_sensor(sensors, path);
+    }
+    g_free(filename);
+}
 
-/* to be called to setup for acpi sensors and returns the list of found
- * sensors */
+/* to be called to setup for acpi sensors and returns the list of found sensors */
 static GList *acpi_plugin_init(void) {
-        GList *sensors = NULL;
-        
-        /* call function to recursively look for sensors
-           starting at the defined base directory */
-        sensors_applet_plugin_find_sensors(&sensors, ACPI_THERMAL_ZONE_BASE_DIR, acpi_plugin_test_sensor);
-        sensors_applet_plugin_find_sensors(&sensors, ACPI_THERMAL_BASE_DIR, acpi_plugin_test_sensor);
-        return sensors;
+    GList *sensors = NULL;
+
+    /* call function to recursively look for sensors
+       starting at the defined base directory */
+    sensors_applet_plugin_find_sensors(&sensors, ACPI_THERMAL_ZONE_BASE_DIR, acpi_plugin_test_sensor);
+    sensors_applet_plugin_find_sensors(&sensors, ACPI_THERMAL_BASE_DIR, acpi_plugin_test_sensor);
+    return sensors;
 }
 
-
-static gdouble acpi_plugin_get_sensor_value(const gchar *path, 
-                                            const gchar *id, 
+static gdouble acpi_plugin_get_sensor_value(const gchar *path,
+                                            const gchar *id,
                                             SensorType type,
                                             GError **error) {
-        
-	/* to open and access the value of each sensor */
-	FILE *fp;
-	gfloat sensor_value = -1.0f;
-	gchar units[32];
 
-	if (NULL == (fp = fopen(path, "r"))) {
-		g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, ACPI_DEVICE_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
-		return sensor_value;
-	}
+    /* to open and access the value of each sensor */
+    FILE *fp;
+    gfloat sensor_value = -1.0f;
+    gchar units[32];
 
-	if (fscanf(fp, "temperature: %f %31s", &sensor_value, units) < 1) {
-		g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, ACPI_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
-		fclose(fp);
-		return sensor_value;
-	}
-	fclose(fp);
+    if (NULL == (fp = fopen(path, "r"))) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, ACPI_DEVICE_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
+        return sensor_value;
+    }
 
-	/* need to convert if units are deciKelvin */
-	if (g_ascii_strcasecmp(units, "dK") == 0) {
-		sensor_value = (sensor_value / 10.0) - 273.0;
-	}
+    if (fscanf(fp, "temperature: %f %31s", &sensor_value, units) < 1) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, ACPI_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
+        fclose(fp);
+        return sensor_value;
+    }
+    fclose(fp);
 
-	return (gdouble)sensor_value;
+    /* need to convert if units are deciKelvin */
+    if (g_ascii_strcasecmp(units, "dK") == 0) {
+        sensor_value = (sensor_value / 10.0) - 273.0;
+    }
+
+    return (gdouble)sensor_value;
 }
 
-const gchar *sensors_applet_plugin_name(void) 
+const gchar *sensors_applet_plugin_name(void)
 {
-        return plugin_name;
+    return plugin_name;
 }
 
-GList *sensors_applet_plugin_init(void) 
+GList *sensors_applet_plugin_init(void)
 {
-        return acpi_plugin_init();
+    return acpi_plugin_init();
 }
 
-gdouble sensors_applet_plugin_get_sensor_value(const gchar *path, 
-                                                const gchar *id, 
+gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
+                                                const gchar *id,
                                                 SensorType type,
                                                 GError **error) {
-        return acpi_plugin_get_sensor_value(path, id, type, error);
+
+    return acpi_plugin_get_sensor_value(path, id, type, error);
 }

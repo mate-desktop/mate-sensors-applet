@@ -47,106 +47,109 @@ static int num_gpus = 0;
 
 static int ati_get_temps(gdouble temps[], int max_temps)
 {
-  double temp;
-  int read_count;
-  int gpu_no = 0;
+    double temp;
+    int read_count;
+    int gpu_no = 0;
+
 #ifdef HAVE_STDIO_H
-  FILE *aticonfig = popen(ATICONFIG_EXE
+    FILE *aticonfig = popen(ATICONFIG_EXE
       " --adapter=all --od-gettemperature", "r");
-  if (aticonfig == NULL) {
-    return 0;
-  }
-  while ((read_count = fscanf(aticonfig, "Temperature - %lf", &temp)) != EOF) {
-    if (read_count < 1) {
-      getc(aticonfig);
-    } 
-    else {
-      temps[gpu_no] = (gdouble)temp;
-      if (++gpu_no >= max_temps) 
-	break;
+    if (aticonfig == NULL) {
+        return 0;
     }
-  } 
-  pclose(aticonfig); 
+    while ((read_count = fscanf(aticonfig, "Temperature - %lf", &temp)) != EOF) {
+        if (read_count < 1) {
+            getc(aticonfig);
+        }
+        else {
+            temps[gpu_no] = (gdouble)temp;
+            if (++gpu_no >= max_temps)
+                break;
+        }
+    }
+    pclose(aticonfig);
 #endif
-  return gpu_no; 
+
+    return gpu_no;
 }
 
 static void ati_update_temps(void)
 {
 #ifdef HAVE_TIME_H
-  static time_t last = 0;
-  time_t now = time(NULL);
-  /* Only update when more than two seconds have passed since last update */
-  if (timediff(now, last) > 2) {
+    static time_t last = 0;
+    time_t now = time(NULL);
+    /* Only update when more than two seconds have passed since last update */
+    if (timediff(now, last) > 2) {
 #endif
-    num_gpus = ati_get_temps(&gpu_temps, MAX_GPUS);
+        num_gpus = ati_get_temps(&gpu_temps, MAX_GPUS);
 #ifdef HAVE_TIME_H
-    last = now;
-  }
+        last = now;
+    }
 #endif
 }
 
 
-static GList *aticonfig_plugin_init(void) 
+static GList *aticonfig_plugin_init(void)
 {
-  GList *sensors = NULL;
+    GList *sensors = NULL;
 
-  g_debug("Initializing aticonfig plugin\n"); 
+    g_debug("Initializing aticonfig plugin\n");
 
-  int sensor_count = ati_get_temps(&gpu_temps, MAX_GPUS);
- 
-  int i;
-  for (i = 0; i < sensor_count; i++) {
-    gchar *id = g_strdup_printf("%s%d%s", SENSOR_ID_PREFIX, i, GPU_CORE_TEMP);
-    sensors_applet_plugin_add_sensor(&sensors,
-	GPU_CORE_TEMP,
-	id,
-	_("GPU"),
-	TEMP_SENSOR,
-	TRUE,
-	GPU_ICON,
-	DEFAULT_GRAPH_COLOR);
-    g_free(id);
-  }
-  return sensors;
+    int sensor_count = ati_get_temps(&gpu_temps, MAX_GPUS);
+
+    int i;
+    for (i = 0; i < sensor_count; i++) {
+        gchar *id = g_strdup_printf("%s%d%s", SENSOR_ID_PREFIX, i, GPU_CORE_TEMP);
+        sensors_applet_plugin_add_sensor(&sensors,
+                                        GPU_CORE_TEMP,
+                                        id,
+                                        _("GPU"),
+                                        TEMP_SENSOR,
+                                        TRUE,
+                                        GPU_ICON,
+                                        DEFAULT_GRAPH_COLOR);
+        g_free(id);
+    }
+
+    return sensors;
 }
 
-static gdouble aticonfig_plugin_get_sensor_value(const gchar *path, 
-                                                const gchar *id, 
+static gdouble aticonfig_plugin_get_sensor_value(const gchar *path,
+                                                const gchar *id,
                                                 SensorType type,
-                                                GError **error) 
+                                                GError **error)
 {
 
-  if (g_ascii_strcasecmp(path, GPU_CORE_TEMP) != 0 || type != TEMP_SENSOR) {
-    g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR,
-          0, "Invalid sensor value request to aticonfig plugin");
-    return 0;
-  }
-  ati_update_temps();
+    if (g_ascii_strcasecmp(path, GPU_CORE_TEMP) != 0 || type != TEMP_SENSOR) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR,
+              0, "Invalid sensor value request to aticonfig plugin");
+        return 0;
+    }
+    ati_update_temps();
 
-  int i = g_ascii_strtoll(id + strlen(SENSOR_ID_PREFIX), NULL, 10);
-  if (i < 0 || i >= num_gpus) {
-    g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR,
-          0, "Sensor index out of range in aticonfig plugin");
-    return 0;
-  }
-  return gpu_temps[i];
+    int i = g_ascii_strtoll(id + strlen(SENSOR_ID_PREFIX), NULL, 10);
+    if (i < 0 || i >= num_gpus) {
+        g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR,
+              0, "Sensor index out of range in aticonfig plugin");
+        return 0;
+    }
+    return gpu_temps[i];
 }
 
-const gchar *sensors_applet_plugin_name(void) 
+const gchar *sensors_applet_plugin_name(void)
 {
-  return plugin_name;
+    return plugin_name;
 }
 
-GList *sensors_applet_plugin_init(void) 
+GList *sensors_applet_plugin_init(void)
 {
-  return aticonfig_plugin_init();
+    return aticonfig_plugin_init();
 }
 
-gdouble sensors_applet_plugin_get_sensor_value(const gchar *path, 
-                                                const gchar *id, 
+gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
+                                                const gchar *id,
                                                 SensorType type,
-                                                GError **error) 
+                                                GError **error)
 {
-  return aticonfig_plugin_get_sensor_value(path, id, type, error);
+    return aticonfig_plugin_get_sensor_value(path, id, type, error);
 }
