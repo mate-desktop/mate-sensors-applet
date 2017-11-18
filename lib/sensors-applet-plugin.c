@@ -32,68 +32,65 @@ extern const gchar *plugin_name;
 void sensors_applet_plugin_find_sensors(GList **sensors,
                                         const gchar *path,
                                         SensorsAppletPluginTestSensorFunc test_sensor) {
-        GDir *dir;
-	const gchar* new_file;
-	gchar *new_path;
+    GDir *dir;
+    const gchar* new_file;
+    gchar *new_path;
 
-	if (g_file_test(path, G_FILE_TEST_IS_REGULAR)) {
-                /* also test can actually open file for
-                   reading */
-                if (access(path, R_OK) == 0) {
-                        test_sensor(sensors, path);
-                }
-		
-	}
-	/* if is a directory (but not a symlinked dir as this
-	   will lead us in circular loops) descend into it and look
-	   for a sensor dir
-	*/
-	if (g_file_test(path, G_FILE_TEST_IS_DIR) && !g_file_test(path, G_FILE_TEST_IS_SYMLINK)) {
-		dir = g_dir_open(path, 0, NULL);
-		if (dir != NULL) {
-			while(NULL != (new_file = g_dir_read_name(dir))) {
-				new_path = g_build_filename(path, new_file, NULL);
-				sensors_applet_plugin_find_sensors(sensors, 
-                                                                   new_path,
-                                                                   test_sensor);
-				g_free(new_path);
-			}
-			g_dir_close(dir);
-		}
-	}
+    if (g_file_test(path, G_FILE_TEST_IS_REGULAR)) {
+        /* also test can actually open file for reading */
+        if (access(path, R_OK) == 0) {
+            test_sensor(sensors, path);
+        }
+    }
+
+    /* if is a directory (but not a symlinked dir as this
+       will lead us in circular loops) descend into it and look
+       for a sensor dir
+    */
+    if (g_file_test(path, G_FILE_TEST_IS_DIR) && !g_file_test(path, G_FILE_TEST_IS_SYMLINK)) {
+        dir = g_dir_open(path, 0, NULL);
+        if (dir != NULL) {
+            while(NULL != (new_file = g_dir_read_name(dir))) {
+                new_path = g_build_filename(path, new_file, NULL);
+                sensors_applet_plugin_find_sensors(sensors, new_path, test_sensor);
+                g_free(new_path);
+            }
+            g_dir_close(dir);
+        }
+    }
 }
 
 /* for error handling */
 GQuark sensors_applet_plugin_error_quark(void) {
-	static GQuark quark = 0;
-	gchar *string;
-        
-	if (quark == 0) {
-		string = g_strdup_printf("%s-plugin-error", plugin_name);
-		quark = g_quark_from_string(string);
-		g_free(string);
-	}
+    static GQuark quark = 0;
+    gchar *string;
 
-	return quark;
+    if (quark == 0) {
+        string = g_strdup_printf("%s-plugin-error", plugin_name);
+        quark = g_quark_from_string(string);
+        g_free(string);
+    }
+
+    return quark;
 }
 
-void sensors_applet_plugin_default_sensor_limits(SensorType type, 
-                                                 gdouble *low_value, 
-                                                 gdouble *high_value)
-{
-        switch (type) {
-        case TEMP_SENSOR:
-                *low_value = 20.0;
-                *high_value = 60.0;
-                break;
-        case FAN_SENSOR:
-                *low_value = 600.0;
-                *high_value = 3000.0;
-                break;
-        default:
-                *low_value = 0.0;
-                *high_value = 0.0;
-        }
+void sensors_applet_plugin_default_sensor_limits(SensorType type,
+                                                 gdouble *low_value,
+                                                 gdouble *high_value) {
+
+    switch (type) {
+    case TEMP_SENSOR:
+        *low_value = 20.0;
+        *high_value = 60.0;
+        break;
+    case FAN_SENSOR:
+        *low_value = 600.0;
+        *high_value = 3000.0;
+        break;
+    default:
+        *low_value = 0.0;
+        *high_value = 0.0;
+    }
 }
 
 void sensors_applet_plugin_add_sensor(GList **sensors,
@@ -103,24 +100,22 @@ void sensors_applet_plugin_add_sensor(GList **sensors,
                                       SensorType type,
                                       gboolean enable,
                                       IconType icon,
-                                      const gchar *graph_color) 
-{
-        gdouble low_value;
-        gdouble high_value;
-        sensors_applet_plugin_default_sensor_limits(type,
-                                                    &low_value,
-                                                    &high_value);
+                                      const gchar *graph_color) {
 
-        sensors_applet_plugin_add_sensor_with_limits(sensors,
-                                                  path,
-                                                  id,
-                                                  label,
-                                                  type,
-                                                  enable,
-                                                  low_value,
-                                                  high_value,
-                                                  icon,
-                                                  graph_color);
+    gdouble low_value;
+    gdouble high_value;
+    sensors_applet_plugin_default_sensor_limits(type, &low_value, &high_value);
+
+    sensors_applet_plugin_add_sensor_with_limits(sensors,
+                                              path,
+                                              id,
+                                              label,
+                                              type,
+                                              enable,
+                                              low_value,
+                                              high_value,
+                                              icon,
+                                              graph_color);
 
 }
 
@@ -133,24 +128,24 @@ void sensors_applet_plugin_add_sensor_with_limits(GList **sensors,
                                                   gdouble low_value,
                                                   gdouble high_value,
                                                   IconType icon,
-                                                  const gchar *graph_color) 
-{
-        SensorsAppletSensorInfo *info;
-        
-        info = g_malloc0(sizeof(*info));
+                                                  const gchar *graph_color) {
 
-        info->path = g_strdup(path);
-        info->id = g_strdup(id);
-        info->label = g_strdup(label);
-        info->type = type;
-        info->enable = enable;
-        info->low_value = low_value;
-        info->high_value = high_value;
-        info->multiplier = 1.0;
-        info->offset = 0.0;
-        info->icon = icon;
-        info->graph_color = g_strdup(graph_color);
+    SensorsAppletSensorInfo *info;
 
-        *sensors = g_list_append(*sensors, info);
+    info = g_malloc0(sizeof(*info));
+
+    info->path = g_strdup(path);
+    info->id = g_strdup(id);
+    info->label = g_strdup(label);
+    info->type = type;
+    info->enable = enable;
+    info->low_value = low_value;
+    info->high_value = high_value;
+    info->multiplier = 1.0;
+    info->offset = 0.0;
+    info->icon = icon;
+    info->graph_color = g_strdup(graph_color);
+
+    *sensors = g_list_append(*sensors, info);
 }
 
