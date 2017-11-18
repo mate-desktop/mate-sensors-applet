@@ -23,8 +23,8 @@
 
 typedef const gchar *(*SensorsAppletPluginName)(void);
 typedef GList *(*SensorsAppletPluginInit)(void);
-typedef gdouble (*SensorsAppletPluginGetSensorValue)(const gchar *path, 
-                                                     const gchar *id, 
+typedef gdouble (*SensorsAppletPluginGetSensorValue)(const gchar *path,
+                                                     const gchar *id,
                                                      SensorType type,
                                                      GError **error);
 
