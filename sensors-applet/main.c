@@ -27,19 +27,21 @@
 static gboolean sensors_applet_fill(MatePanelApplet *applet,
                                     const gchar *iid,
                                     gpointer data) {
-	SensorsApplet *sensors_applet;
-	gboolean retval = FALSE;
-        if (strcmp(iid, "SensorsApplet") == 0) {
-		sensors_applet = g_new0(SensorsApplet, 1);
-		sensors_applet->applet = applet;
-		sensors_applet_init(sensors_applet);
-		retval = TRUE;
-	}
-	return retval;
+
+    SensorsApplet *sensors_applet;
+    gboolean retval = FALSE;
+
+    if (strcmp(iid, "SensorsApplet") == 0) {
+        sensors_applet = g_new0(SensorsApplet, 1);
+        sensors_applet->applet = applet;
+        sensors_applet_init(sensors_applet);
+        retval = TRUE;
+    }
+    return retval;
 }
 
 MATE_PANEL_APPLET_OUT_PROCESS_FACTORY ("SensorsAppletFactory",
-									   PANEL_TYPE_APPLET,
-									   "SensorsApplet",
-									   sensors_applet_fill,
-									   NULL);
+                                       PANEL_TYPE_APPLET,
+                                       "SensorsApplet",
+                                       sensors_applet_fill,
+                                       NULL);

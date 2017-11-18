@@ -27,47 +27,46 @@
 #include "sensors-applet.h"
 
 struct _ActiveSensor {
-        SensorsApplet *sensors_applet;
+    SensorsApplet *sensors_applet;
 
-	/* widgets to render to display the sensor */
-	GtkWidget *label;
-	GtkWidget *icon;
-	GtkWidget *value;
-        GtkWidget *graph;
-        GtkWidget *graph_frame;
+    /* widgets to render to display the sensor */
+    GtkWidget *label;
+    GtkWidget *icon;
+    GtkWidget *value;
+    GtkWidget *graph;
+    GtkWidget *graph_frame;
 
-        GdkRGBA graph_color;
+    GdkRGBA graph_color;
 
-	GtkTreeRowReference *sensor_row;
+    GtkTreeRowReference *sensor_row;
 
 #ifdef HAVE_LIBNOTIFY
-        NotifyNotification *notification[NUM_NOTIFS];
+    NotifyNotification *notification[NUM_NOTIFS];
 #endif
 
-        gboolean updated;
+    gboolean updated;
 
-	/* alarm related stuff */
-	gint alarm_timeout_id[NUM_ALARMS];
-	gchar *alarm_command[NUM_ALARMS];
-        gint alarm_timeout;
+    /* alarm related stuff */
+    gint alarm_timeout_id[NUM_ALARMS];
+    gchar *alarm_command[NUM_ALARMS];
+    gint alarm_timeout;
 
-	/* buffer of sensor values */
-        gdouble *sensor_values;
+    /* buffer of sensor values */
+    gdouble *sensor_values;
 
-        /* length of sensor_values buffer */
-        gint num_samples;
-        
-	gdouble sensor_low_value;
-	gdouble sensor_high_value;	
+    /* length of sensor_values buffer */
+    gint num_samples;
+
+    gdouble sensor_low_value;
+    gdouble sensor_high_value;
 };
 
-ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
-                                GtkTreeRowReference *sensor_row);
+ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet, GtkTreeRowReference *sensor_row);
 void active_sensor_destroy(ActiveSensor *active_sensor);
 gint active_sensor_compare(ActiveSensor *a, ActiveSensor *b);
 void active_sensor_update(ActiveSensor *sensor, SensorsApplet *sensors_applet);
 void active_sensor_icon_changed(ActiveSensor *sensor, SensorsApplet *sensors_applet);
-void active_sensor_update_graph_dimensions(ActiveSensor *as,
-                                           gint dimensions[2]);
+void active_sensor_update_graph_dimensions(ActiveSensor *as, gint dimensions[2]);
 void active_sensor_alarm_off(ActiveSensor *active_sensor, NotifType notif_type);
+
 #endif /* ACTIVE_SENSOR_H */
