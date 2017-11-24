@@ -71,6 +71,10 @@ PKG_CHECK_MODULES(CAIRO, cairo >= $LIBCAIRO_REQUIRED)
 AC_SUBST(CAIRO_CFLAGS)
 AC_SUBST(CAIRO_LIBS)
 
+# for enum generation
+PKG_PROG_PKG_CONFIG([0.28])
+PKG_CHECK_VAR([GLIB_MKENUMS], [glib-2.0], [glib_mkenums])
+
 # enable support for udisks (via dbus) by default if its available
 AC_ARG_ENABLE(udisks,
 	      AS_HELP_STRING([--disable-udisks],
