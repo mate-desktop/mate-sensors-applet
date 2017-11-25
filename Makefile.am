@@ -49,6 +49,26 @@ DISTCLEANFILES	= intltool-extract \
 		   	intltool-merge \
 	   	   	intltool-update
 
+MSACLEANFILES = aclocal.m4 \
+			compile \
+			config.* \
+			configure \
+			depcomp \
+			install-sh \
+			ltmain.sh \
+			missing \
+			omf.make \
+			xmldocs.make \
+			INSTALL \
+			$(top_srcdir)/sensors-applet/config.h*
+
+msa-clean: maintainer-clean
+	-test -z "$(MSACLEANFILES)" || rm -f $(MSACLEANFILES)
+	-rm -rf m4;
+	find . -name "Makefile.in" -exec rm \{\} \;
+
+.PHONY: msa-clean
+
 # Build ChangeLog from GIT  history
 ChangeLog:
 	$(AM_V_GEN) if test -d $(top_srcdir)/.git; then \
