@@ -28,7 +28,7 @@ libexec_PROGRAMS = mate-sensors-applet
 
 # enum generation
 # A list of headers to inspect
-enum_headers = sensors-applet-sensor.h sensors-applet.h
+enum_headers = sensors-applet-sensor.h
 
 # command in bash: glib-mkenums --template "enum-types.h.in" test.h > enum-types.h
 msa-enum-types.h: $(enum_headers) msa-enum-types.h.in
@@ -49,6 +49,8 @@ EXTRA_DIST = msa-enum-types.h.in msa-enum-types.c.in
 #  end enum generation
 
 mate_sensors_applet_SOURCES += main.c \
+		msa-sensor.h \
+		msa-sensor.c \
 		about-dialog.c \
 		about-dialog.h \
 		active-sensor.c \
