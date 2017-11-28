@@ -38,7 +38,8 @@ msa-enum-types.c: $(enum_headers) msa-enum-types.c.in msa-enum-types.h
 				$(AM_V_GEN)$(GLIB_MKENUMS) --template "msa-enum-types.c.in" --identifier-prefix "MSA" $(enum_headers) > $@
 
 # generate them first to prevent make errors if they are included in the other files
-mate_sensors_applet_SOURCES = msa-enum-types.h msa-enum-types.c
+# they get done for the library
+#mate_sensors_applet_SOURCES = msa-enum-types.h msa-enum-types.c
 
 # clean generated files with make clean
 CLEANFILES = msa-enum-types.h msa-enum-types.c
@@ -48,9 +49,12 @@ EXTRA_DIST = msa-enum-types.h.in msa-enum-types.c.in
 
 #  end enum generation
 
-mate_sensors_applet_SOURCES += main.c \
-		msa-sensor.h \
-		msa-sensor.c \
+
+# they get done for the library:
+#		msa-sensor.h
+#		msa-sensor.c
+
+mate_sensors_applet_SOURCES = main.c \
 		about-dialog.c \
 		about-dialog.h \
 		active-sensor.c \
@@ -68,10 +72,11 @@ mate_sensors_applet_SOURCES += main.c \
 		sensors-applet-settings.h \
 		$(libnotify_SRC)
 
-mate_sensors_applet_LDADD = -ldl
+# added new libs to the program
+mate_sensors_applet_LDADD = -ldl libmsa-enum-types.la libmsa-sensor.la
 
 # install headers for plugins to use
-INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h
+INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h msa-sensor.h msa-enum-types.h
 
 headerdir = $(prefix)/include/mate-sensors-applet
 
@@ -80,24 +85,14 @@ header_DATA = $(INST_H_FILES)
 # since it is separate
 EXTRA_DIST += sensors-applet-plugin.h
 
-# build libraires:
-noinst_LTLIBRARIES = libmsa-test.la
 
-libmsa_test_la_SOURCES = msa-test.c msa-test.h
-# noinst so no  -rpath /usr/lib/
-libmsa_test_la_LDFLAGS = -export-dynamic
+# build libraries: (this runs first)
+noinst_LTLIBRARIES = libmsa-enum-types.la libmsa-sensor.la
 
+libmsa_enum_types_la_SOURCES = msa-enum-types.c msa-enum-types.h
+# noinst so no  -rpath /usr/lib/ needed
+libmsa_enum_types_la_LDFLAGS = -export-dynamic
 
-
-#lib_LTLIBRARIES = libmsa-enum-types.la libmsa-sensor.la
-#lib_LTLIBRARIES = libmsa-test.la
-
-
-#libmsa_test_la_SOURCES = msa-test.c msa-test.h
-#libmsa_test_la_LDFLAGS = -export-dynamic -rpath $(libdir)
-
-#libmsa_enum_types_la_SOURCES = sensors-applet-plugin.c msa-test.c msa-test.h
-#libmsa_enum_types_la_LDFLAGS = -export-dynamic -rpath /usr/lib/
-
-#libmsa_sensor_la_SOURCES = sensors-applet-plugin.c msa-test.c msa-test.h
-#libmsa_sensor_la_LDFLAGS = -export-dynamic -rpath /usr/lib/
+libmsa_sensor_la_SOURCES = msa-sensor.c msa-sensor.h
+# noinst so no  -rpath /usr/lib/ needed
+libmsa_sensor_la_LDFLAGS = -export-dynamic

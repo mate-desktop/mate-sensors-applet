@@ -443,16 +443,11 @@ syslog(LOG_ERR, "msa-sensor.h is added");
 syslog(LOG_ERR, "msa-enum-types.h is added");
 #endif
 
-#ifdef MSA_TEST_H
-syslog(LOG_ERR, "msa-test.h is added");
-#endif
 
-#ifdef MSA_TEST_C
-syslog(LOG_ERR, "msa-test.c is added");
-#endif
 
-printmsamsg();
-/*
+
+syslog(LOG_ERR, "msa path %s", g_type_name (MSA_TYPE_ICON_TYPE));
+
 syslog(LOG_ERR, "msa after call01");
 MSASensor *msa_sensor = msa_sensor_new ();
 syslog(LOG_ERR, "msa after call02");
@@ -465,7 +460,7 @@ g_free (strval);
 MSA_SENSOR_GET_CLASS(msa_sensor)->printhello();
 syslog(LOG_ERR, "msa after call");
 g_object_unref (msa_sensor);
-*/
+
 
 #ifdef SENSORS_APPLET_SENSOR_H
 syslog(LOG_ERR, "sa-sensor.h is added");
