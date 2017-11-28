@@ -20,12 +20,8 @@
 
 #include <syslog.h>
 
-/* class struct */
-struct _MSASensor {
-  GObject parent_instance;
-
-    /* Other members, including private data. */
-    /* msa_sensor_set_property () frees strings before setting them */
+/* instance struct */
+struct _MSASensorPrivate {
 
     gchar *path;
     gchar *id;
@@ -38,10 +34,11 @@ struct _MSASensor {
     gdouble offset;
     IconType icon;
     gchar *graph_color;
+
 };
 
 /* convenience macro for type implementations */
-G_DEFINE_TYPE (MSASensor, msa_sensor, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (MSASensor, msa_sensor, G_TYPE_OBJECT)
 
 /* MSASensor properties */
 enum {
@@ -74,47 +71,47 @@ static void msa_sensor_get_property (GObject *object, guint property_id, GValue 
     switch (property_id)
     {
         case PROP_PATH:
-            g_value_set_string (value, self->path);
+            g_value_set_string (value, self->priv->path);
             break;
 
         case PROP_ID:
-            g_value_set_string (value, self->id);
+            g_value_set_string (value, self->priv->id);
             break;
 
         case PROP_LABEL:
-            g_value_set_string (value, self->label);
+            g_value_set_string (value, self->priv->label);
             break;
 
         case PROP_SENSOR_TYPE:
-            g_value_set_enum (value, self->type);
+            g_value_set_enum (value, self->priv->type);
             break;
 
         case PROP_ENABLE:
-            g_value_set_boolean (value, self->enable);
+            g_value_set_boolean (value, self->priv->enable);
             break;
 
         case PROP_LOW_VALUE:
-            g_value_set_double (value, self->low_value);
+            g_value_set_double (value, self->priv->low_value);
             break;
 
         case PROP_HIGH_VALUE:
-            g_value_set_double (value, self->high_value);
+            g_value_set_double (value, self->priv->high_value);
             break;
 
         case PROP_MULTIPLIER:
-            g_value_set_double (value, self->multiplier);
+            g_value_set_double (value, self->priv->multiplier);
             break;
 
         case PROP_OFFSET:
-            g_value_set_double (value, self->offset);
+            g_value_set_double (value, self->priv->offset);
             break;
 
         case PROP_ICON_TYPE:
-            g_value_set_enum (value, self->icon);
+            g_value_set_enum (value, self->priv->icon);
             break;
 
         case PROP_GRAPH_COLOR:
-            g_value_set_string (value, self->graph_color);
+            g_value_set_string (value, self->priv->graph_color);
             break;
 
         default:
@@ -133,51 +130,51 @@ static void msa_sensor_set_property (GObject *object, guint property_id, const G
     switch (property_id)
     {
         case PROP_PATH:
-            g_free (self->path);
-            self->path = g_value_dup_string (value);
+            g_free (self->priv->path);
+            self->priv->path = g_value_dup_string (value);
             break;
 
         case PROP_ID:
-            g_free (self->id);
-            self->id = g_value_dup_string (value);
+            g_free (self->priv->id);
+            self->priv->id = g_value_dup_string (value);
             break;
 
         case PROP_LABEL:
-            g_free (self->label);
-            self->label = g_value_dup_string (value);
+            g_free (self->priv->label);
+            self->priv->label = g_value_dup_string (value);
             break;
 
         case PROP_SENSOR_TYPE:
-            self->type = g_value_get_enum (value);
+            self->priv->type = g_value_get_enum (value);
             break;
 
         case PROP_ENABLE:
-            self->enable = g_value_get_boolean (value);
+            self->priv->enable = g_value_get_boolean (value);
             break;
 
         case PROP_LOW_VALUE:
-            self->low_value = g_value_get_double (value);
+            self->priv->low_value = g_value_get_double (value);
             break;
 
         case PROP_HIGH_VALUE:
-            self->high_value = g_value_get_double (value);
+            self->priv->high_value = g_value_get_double (value);
             break;
 
         case PROP_MULTIPLIER:
-            self->multiplier = g_value_get_double (value);
+            self->priv->multiplier = g_value_get_double (value);
             break;
 
         case PROP_OFFSET:
-            self->offset = g_value_get_double (value);
+            self->priv->offset = g_value_get_double (value);
             break;
 
         case PROP_ICON_TYPE:
-            self->icon = g_value_get_enum (value);
+            self->priv->icon = g_value_get_enum (value);
             break;
 
         case PROP_GRAPH_COLOR:
-            g_free (self->graph_color);
-            self->graph_color = g_value_dup_string (value);
+            g_free (self->priv->graph_color);
+            self->priv->graph_color = g_value_dup_string (value);
             break;
 
         default:
@@ -218,10 +215,10 @@ static void msa_sensor_finalize (GObject *object) {
 
     MSASensor *self = MSA_SENSOR (object);
 
-    g_free (self->path);
-    g_free (self->id);
-    g_free (self->label);
-    g_free (self->graph_color);
+    g_free (self->priv->path);
+    g_free (self->priv->id);
+    g_free (self->priv->label);
+    g_free (self->priv->graph_color);
 
 
     /* Always chain up to the parent class; as with dispose(), finalize()
@@ -272,15 +269,26 @@ static void msa_sensor_class_init (MSASensorClass *klass) {
     gobject_class->finalize = msa_sensor_finalize;
 
     g_object_class_install_properties (gobject_class, N_PROPERTIES, obj_properties);
+
+
+    klass->printhello = msa_sensor_printhello;
+
 }
 
 /* used by G_DEFINE_TYPE */
 static void msa_sensor_init (MSASensor *self) {
 
+    self->priv = msa_sensor_get_instance_private (self);
+
     /* initialize all public and private members to reasonable default values.
     * They are all automatically initialized to 0 to begin with. */
-//    self->path = g_strdup ("testpath");
+//    self->priv->path = g_strdup ("testpath");
 }
+
+static void msa_sensor_printhello (void) {
+syslog(LOG_ERR, "msa printhello");
+}
+
 
 /* create new but empty sensor */
 MSASensor *msa_sensor_new (void) {

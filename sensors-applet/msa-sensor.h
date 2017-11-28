@@ -30,11 +30,44 @@ G_BEGIN_DECLS
  * Type declaration.
  */
 #define MSA_TYPE_SENSOR msa_sensor_get_type ()
-G_DECLARE_FINAL_TYPE (MSASensor, msa_sensor, MSA, SENSOR, GObject)
+//G_DECLARE_FINAL_TYPE (MSASensor, msa_sensor, MSA, SENSOR, GObject)
+// derivable to be able to add class functions
+//G_DECLARE_DERIVABLE_TYPE (MSASensor, msa_sensor, MSA, SENSOR, GObject)
+// can't use macro, as it defines ‘struct _MSASensor’, so do things manually
+GType msa_sensor_get_type (void);
+typedef struct _MSASensorClass MSASensorClass;
+typedef struct _MSASensor MSASensor;
+typedef struct _MSASensorPrivate MSASensorPrivate;
+#define MSA_SENSOR(inst)            (G_TYPE_CHECK_INSTANCE_CAST ((inst), MSA_TYPE_SENSOR, MSASensor))
+#define MSA_SENSOR_CLASS(class)     (G_TYPE_CHECK_CLASS_CAST ((class), MSA_TYPE_SENSOR, MSASensorClass))
+#define MSA_IS_SENSOR(inst)         (G_TYPE_CHECK_INSTANCE_TYPE ((inst), MSA_TYPE_SENSOR))
+#define MSA_IS_SENSOR_CLASS(class)  (G_TYPE_CHECK_CLASS_TYPE ((class), MSA_TYPE_SENSOR))
+#define MSA_SENSOR_GET_CLASS(inst)  (G_TYPE_INSTANCE_GET_CLASS ((inst), MSA_TYPE_SENSOR, MSASensorClass))
+
+/* class struct */
+struct _MSASensorClass {
+    GObjectClass parent_class;
+
+    void (*printhello) (void);
+
+    /* Padding to allow adding up to 10 new virtual functions without breaking ABI. */
+    gpointer padding[10];
+};
+
+/* instance struct */
+struct _MSASensor {
+    GObject parent_instance;
+
+    MSASensorPrivate *priv;
+};
 
 /*
  * Method definitions.
  */
+
+static void msa_sensor_printhello (void);
+
+
 MSASensor *msa_sensor_new (void);
 
 G_END_DECLS
