@@ -19,7 +19,8 @@
 #ifndef SENSORS_APPLET_PLUGIN_H
 #define SENSORS_APPLET_PLUGIN_H
 
-#include <sensors-applet/sensors-applet-sensor.h>
+//#include <sensors-applet/sensors-applet-sensor.h>
+#include <sensors-applet/msa-sensor.h>
 
 GQuark sensors_applet_plugin_error_quark(void);
 

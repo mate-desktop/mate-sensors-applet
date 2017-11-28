@@ -44,7 +44,7 @@ syslog(LOG_ERR, "hellodd");
 
 
 // remove // from next line for syslog debug
-//#define UD2PD              1
+#define UD2PD              1
 
 #ifdef UD2PD
 #include <syslog.h>
@@ -434,6 +434,39 @@ syslog(LOG_ERR, "Found udisks2 device temp: '%f'\n", temp);
                 // this could be left at 0.0, 2 seconds later it will be refreshed anyway
                 info->temp = (gdouble)temp - 273.15;
                 g_hash_table_insert(devices, info->id, info);
+
+#ifdef MSA_SENSOR_H
+syslog(LOG_ERR, "msa-sensor.h is added");
+#endif
+
+#ifdef MSA_ENUM_TYPES_H
+syslog(LOG_ERR, "msa-enum-types.h is added");
+#endif
+
+
+
+
+syslog(LOG_ERR, "msa path %s", g_type_name (MSA_TYPE_ICON_TYPE));
+
+syslog(LOG_ERR, "msa after call01");
+MSASensor *msa_sensor = msa_sensor_new ();
+syslog(LOG_ERR, "msa after call02");
+gchar *strval;
+g_object_set (msa_sensor, "path", "helloworld", NULL);
+syslog(LOG_ERR, "msa after call03");
+g_object_get (msa_sensor, "path", &strval, NULL);
+syslog(LOG_ERR, "msa path %s", strval);
+g_free (strval);
+MSA_SENSOR_GET_CLASS(msa_sensor)->printhello();
+syslog(LOG_ERR, "msa after call");
+g_object_unref (msa_sensor);
+
+
+#ifdef SENSORS_APPLET_SENSOR_H
+syslog(LOG_ERR, "sa-sensor.h is added");
+syslog(LOG_ERR, DEFAULT_GRAPH_COLOR);
+#endif
+
 
                 // Write the sensor data
                 sensors_applet_plugin_add_sensor(sensors,
