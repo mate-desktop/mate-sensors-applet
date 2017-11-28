@@ -79,3 +79,25 @@ header_DATA = $(INST_H_FILES)
 
 # since it is separate
 EXTRA_DIST += sensors-applet-plugin.h
+
+# build libraires:
+noinst_LTLIBRARIES = libmsa-test.la
+
+libmsa_test_la_SOURCES = msa-test.c msa-test.h
+# noinst so no  -rpath /usr/lib/
+libmsa_test_la_LDFLAGS = -export-dynamic
+
+
+
+#lib_LTLIBRARIES = libmsa-enum-types.la libmsa-sensor.la
+#lib_LTLIBRARIES = libmsa-test.la
+
+
+#libmsa_test_la_SOURCES = msa-test.c msa-test.h
+#libmsa_test_la_LDFLAGS = -export-dynamic -rpath $(libdir)
+
+#libmsa_enum_types_la_SOURCES = sensors-applet-plugin.c msa-test.c msa-test.h
+#libmsa_enum_types_la_LDFLAGS = -export-dynamic -rpath /usr/lib/
+
+#libmsa_sensor_la_SOURCES = sensors-applet-plugin.c msa-test.c msa-test.h
+#libmsa_sensor_la_LDFLAGS = -export-dynamic -rpath /usr/lib/

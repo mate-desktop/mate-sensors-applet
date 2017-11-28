@@ -15,5 +15,10 @@ LIBS = $(GLIB_LIBS)
 # also build the libsensorsplugin library
 lib_LTLIBRARIES = libmate-sensors-applet-plugin.la
 
-libmate_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c msa-test.c msa-test.h
+libmate_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c
 libmate_sensors_applet_plugin_la_LDFLAGS = -export-dynamic -rpath /usr/lib/
+
+libmate_sensors_applet_plugin_la_LIBADD = $(top_builddir)/sensors-applet/libmsa-test.la
+#libmate_sensors_applet_plugin_la_DEPENDENCIES = msa-test.lo
+
+
