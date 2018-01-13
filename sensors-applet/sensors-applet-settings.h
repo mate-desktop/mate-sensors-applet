@@ -52,6 +52,7 @@
 #define GRAPH_COLOR           "graph-color"
 
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path);
-gboolean sensors_applet_settings_save_sensors(SensorsApplet *sensors_applet);
+gboolean sensors_applet_conf_setup_sensors (SensorsApplet *sensors_applet);
+gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet);
 
 #endif /* SENSORS_APPLET_SETTINGS_H*/
