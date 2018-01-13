@@ -428,7 +428,7 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
 #endif
 
         int i;
-        for (i = 0; i < NUM_NOTIFS; i++) {
+        for (i = 0; i < NUM_ALARMS; i++) {
                 active_sensor->alarm_timeout_id[i] = -1;
         }
 
