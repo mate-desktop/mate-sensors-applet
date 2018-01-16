@@ -82,14 +82,13 @@ static gdouble eee_plugin_get_sensor_value(const gchar *path,
 
     FILE *fp;
     gfloat sensor_value = 0;
-    gchar units[32];
 
     if (NULL == (fp = fopen(path, "r"))) {
         g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, EEE_DEVICE_FILE_OPEN_ERROR, "Error opening sensor device file %s", path);
         return sensor_value;
     }
 
-    if (fscanf(fp, "%f", &sensor_value, units) < 1) {
+    if (fscanf(fp, "%f", &sensor_value) < 1) {
         g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, EEE_DEVICE_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
         fclose(fp);
         return sensor_value;
