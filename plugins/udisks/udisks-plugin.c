@@ -227,8 +227,8 @@ static void udisks_plugin_get_sensors(GList **sensors) {
                                         G_CALLBACK(udisks_changed_signal_cb),
                                         path, NULL);
 
-            gchar *model = g_value_get_string(&model_v);
-            gchar *dev = g_value_get_string(&dev_v);
+            gchar *model = (gchar *) g_value_get_string(&model_v);
+            gchar *dev = (gchar *) g_value_get_string(&dev_v);
             GStrv ids = g_value_get_boxed(&ids_v);
 
             gchar *id = ids != NULL && ids[0] != NULL ? ids[0] : dev;
