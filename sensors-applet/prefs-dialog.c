@@ -418,12 +418,12 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     prefs_dialog->sensors_applet = sensors_applet;
 
-    prefs_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(_("Sensors Applet Preferences"),
-                                                                  NULL,
-                                                                  0,
-                                                                  GTK_STOCK_HELP,
+    prefs_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(_("Sensors Applet Preferences"),  /* title */
+                                                                  NULL,         /* parent */
+                                                                  0,            /* flags */
+                                                                  _("_Help"),
                                                                   GTK_RESPONSE_HELP,
-                                                                  GTK_STOCK_CLOSE,
+                                                                  _("_Close"),
                                                                   GTK_RESPONSE_CLOSE,
                                                                   NULL));
 
@@ -826,14 +826,14 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     /* when selection is changed, make sure sensor_config button is activated */
 
     /* Create buttons for user to interact with sensors tree */
-    prefs_dialog->sensor_up_button = GTK_BUTTON(gtk_button_new_from_stock(GTK_STOCK_GO_UP));
+    prefs_dialog->sensor_up_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Up")));
     gtk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
 
     g_signal_connect(prefs_dialog->sensor_up_button, "clicked",
                      G_CALLBACK(prefs_dialog_sensor_up_button_clicked),
                      prefs_dialog);
 
-    prefs_dialog->sensor_down_button = GTK_BUTTON(gtk_button_new_from_stock(GTK_STOCK_GO_DOWN));
+    prefs_dialog->sensor_down_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Down")));
     gtk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
 
     g_signal_connect(prefs_dialog->sensor_down_button, "clicked",
@@ -866,7 +866,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     /* Sensor Config button */
     /* initially make button insensitive until user selects a row
        from the sensors tree */
-    prefs_dialog->sensor_config_button = GTK_BUTTON(gtk_button_new_from_stock(GTK_STOCK_PROPERTIES));
+    prefs_dialog->sensor_config_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Properties")));
     g_object_set(prefs_dialog->sensor_config_button,
                  "sensitive", FALSE,
                  NULL);

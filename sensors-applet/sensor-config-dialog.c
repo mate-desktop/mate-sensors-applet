@@ -394,9 +394,9 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     config_dialog->dialog = gtk_dialog_new_with_buttons(header_text,
                                                         GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
                                                         GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                        GTK_STOCK_HELP,
+                                                        _("_Help"),
                                                         GTK_RESPONSE_HELP,
-                                                        GTK_STOCK_CLOSE,
+                                                        _("_Close"),
                                                         GTK_RESPONSE_CLOSE,
                                                         NULL);
     gtk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog), "sensors-applet");
