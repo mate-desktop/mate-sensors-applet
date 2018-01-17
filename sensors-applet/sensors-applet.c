@@ -231,13 +231,13 @@ static gboolean mouse_leave_cb(GtkWidget *widget, GdkEventCrossing *event, gpoin
 }
 
 static const GtkActionEntry sensors_applet_menu_actions[] = {
-    { "Preferences", GTK_STOCK_PROPERTIES, N_("_Preferences"),
+    { "Preferences", "document-properties", N_("_Preferences"),
         NULL, NULL,
         G_CALLBACK(prefs_cb) },
-    { "Help", GTK_STOCK_HELP, N_("_Help"),
+    { "Help", "help-browser", N_("_Help"),
         NULL, NULL,
         G_CALLBACK(help_cb) },
-    { "About", GTK_STOCK_ABOUT, N_("_About"),
+    { "About", "help-about", N_("_About"),
         NULL, NULL,
         G_CALLBACK(about_cb) }
 };

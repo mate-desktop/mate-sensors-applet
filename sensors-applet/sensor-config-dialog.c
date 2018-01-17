@@ -30,7 +30,7 @@
 typedef struct {
     SensorsApplet *sensors_applet;
 
-    GtkWidget *dialog;
+    GtkDialog *dialog;
     /* icon widgets */
     GtkLabel *icon_header, *icon_type_label;
     GtkComboBox *icon_type_combo_box;
@@ -387,14 +387,17 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                        -1);
     header_text = g_strdup_printf("%s - %s", _("Sensor Properties"), sensor_label);
 
-    config_dialog->dialog = gtk_dialog_new_with_buttons(header_text,
+
+    config_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(header_text,
                                                         GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
                                                         GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                        GTK_STOCK_HELP,
+                                                        "gtk-help",
                                                         GTK_RESPONSE_HELP,
-                                                        GTK_STOCK_CLOSE,
+                                                        "gtk-close",
                                                         GTK_RESPONSE_CLOSE,
-                                                        NULL);
+                                                        NULL));
+
+
     gtk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog), "sensors-applet");
 
     g_free(header_text);
@@ -823,8 +826,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     GTK_WIDGET(config_dialog->graph_color_button),
                     2, 14, 1, 1);
 
-    content_area = gtk_dialog_get_content_area (GTK_DIALOG(config_dialog->dialog));
+    content_area = gtk_dialog_get_content_area (config_dialog->dialog);
     gtk_box_pack_start(GTK_BOX(content_area), GTK_WIDGET(config_dialog->grid), FALSE, FALSE, 0);
-    gtk_widget_show_all(config_dialog->dialog);
+    gtk_widget_show_all(GTK_WIDGET(config_dialog->dialog));
 
 }
