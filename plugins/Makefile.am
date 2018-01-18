@@ -2,7 +2,6 @@ DIST_SUBDIRS = \
 	acpi \
 	udisks \
 	udisks2 \
-	eee \
 	hddtemp \
         i2c-proc \
         i2c-sys \
@@ -19,7 +18,6 @@ DIST_SUBDIRS = \
 
 SUBDIRS = \
 	acpi \
-	eee \
 	hddtemp \
 	i8k \
 	ibm-acpi \
