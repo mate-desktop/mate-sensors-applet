@@ -30,7 +30,7 @@
 typedef struct {
     SensorsApplet *sensors_applet;
 
-    GtkWidget *dialog;
+    GtkDialog *dialog;
     /* icon widgets */
     GtkLabel *icon_header, *icon_type_label;
     GtkComboBox *icon_type_combo_box;
@@ -66,6 +66,9 @@ typedef struct {
     GtkEntry *low_alarm_command_entry, *high_alarm_command_entry;
 
     GtkSizeGroup *size_group;
+
+    GtkButton *sconf_help_button;
+    GtkButton *sconf_close_button;
 } SensorConfigDialog;
 
 
@@ -391,14 +394,26 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                        -1);
     header_text = g_strdup_printf("%s - %s", _("Sensor Properties"), sensor_label);
 
-    config_dialog->dialog = gtk_dialog_new_with_buttons(header_text,
-                                                        GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
-                                                        GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                        _("_Help"),
-                                                        GTK_RESPONSE_HELP,
-                                                        _("_Close"),
-                                                        GTK_RESPONSE_CLOSE,
-                                                        NULL);
+
+    /* replace old GtkStock dialog creation: */
+    config_dialog->dialog = GTK_DIALOG(gtk_dialog_new ());
+    /* stolen from gtk/gtkdialog.c gtk_dialog_new_empty() */
+    gtk_window_set_title (GTK_WINDOW (config_dialog->dialog), header_text);
+    gtk_window_set_transient_for (GTK_WINDOW (config_dialog->dialog), GTK_WINDOW(sensors_applet->prefs_dialog->dialog));
+    gtk_window_set_destroy_with_parent (GTK_WINDOW (config_dialog->dialog), TRUE);
+
+    config_dialog->sconf_help_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Help")));
+    gtk_button_set_image(config_dialog->sconf_help_button, gtk_image_new_from_icon_name("help-browser", GTK_ICON_SIZE_BUTTON));
+
+    /* from gtk/gtkdialog.c gtk_dialog_add_button () */
+    /* void gtk_dialog_add_action_widget (GtkDialog *dialog, GtkWidget *child, gint response_id); */
+    gtk_dialog_add_action_widget (GTK_DIALOG (config_dialog->dialog), GTK_WIDGET(config_dialog->sconf_help_button), GTK_RESPONSE_HELP);
+
+    config_dialog->sconf_close_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Close")));
+    gtk_button_set_image(config_dialog->sconf_close_button, gtk_image_new_from_icon_name("window-close", GTK_ICON_SIZE_BUTTON));
+    gtk_dialog_add_action_widget (GTK_DIALOG (config_dialog->dialog), GTK_WIDGET(config_dialog->sconf_close_button), GTK_RESPONSE_CLOSE);
+
+
     gtk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog), "sensors-applet");
 
     g_free(header_text);
@@ -827,8 +842,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                     GTK_WIDGET(config_dialog->graph_color_button),
                     2, 14, 1, 1);
 
-    content_area = gtk_dialog_get_content_area (GTK_DIALOG(config_dialog->dialog));
+    content_area = gtk_dialog_get_content_area (config_dialog->dialog);
     gtk_box_pack_start(GTK_BOX(content_area), GTK_WIDGET(config_dialog->grid), FALSE, FALSE, 0);
-    gtk_widget_show_all(config_dialog->dialog);
+    gtk_widget_show_all(GTK_WIDGET(config_dialog->dialog));
 
 }

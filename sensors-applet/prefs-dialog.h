@@ -59,6 +59,9 @@ typedef struct {
     GtkButton *sensor_up_button;
     GtkButton *sensor_down_button;
     GtkButton *sensor_config_button;
+
+    GtkButton *prefs_help_button;
+    GtkButton *prefs_close_button;
 } PrefsDialog;
 
 /* function prototypes */
