@@ -179,9 +179,9 @@ gdouble ibm_acpi_plugin_get_sensor_value(const gchar *path,
             break;
 
         case FAN_SENSOR:
-            fscanf(fp, "%*[^\n]");   /* Skip to the End of the Line */
-            fscanf(fp, "%*1[\n]");   /* Skip One Newline */
-            if (fscanf(fp, "speed:   %d", &fan_speed) != 1) {
+            /*fscanf(fp, "%*[^\n]");*/   /* Skip to the End of the Line */
+            /*fscanf(fp, "%*1[\n]");*/   /* Skip One Newline */
+            if (fscanf(fp, "%*[^\n]%*1[\n]speed:   %d", &fan_speed) != 1) {
                 g_set_error(error, SENSORS_APPLET_PLUGIN_ERROR, IBM_ACPI_FILE_READ_ERROR, "Error reading from sensor device file %s", path);
                 fclose(fp);
                 return -1.0;
