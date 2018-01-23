@@ -54,9 +54,9 @@ DBusGConnection *connection;
 static void update_device(DevInfo *info)
 {
     DBusGProxy *sensor_proxy;
-    GValue smart_time = { 0, };
+    GValue smart_time = G_VALUE_INIT;
     SkDisk *sk_disk;
-    GValue smart_blob_val = { 0, };
+    GValue smart_blob_val = G_VALUE_INIT;
     GArray *smart_blob;
     guint64 temperature;
 
@@ -227,11 +227,11 @@ static void udisks_plugin_get_sensors(GList **sensors) {
                                         G_CALLBACK(udisks_changed_signal_cb),
                                         path, NULL);
 
-            gchar *model = g_value_get_string(&model_v);
-            gchar *dev = g_value_get_string(&dev_v);
-            GStrv ids = g_value_get_boxed(&ids_v);
+            const gchar *model = g_value_get_string(&model_v);
+            const gchar *dev = g_value_get_string(&dev_v);
+            const GStrv ids = g_value_get_boxed(&ids_v);
 
-            gchar *id = ids != NULL && ids[0] != NULL ? ids[0] : dev;
+            const gchar *id = ids != NULL && ids[0] != NULL ? ids[0] : dev;
 
             info = g_malloc0(sizeof(DevInfo));
             if (devices == NULL)
@@ -257,9 +257,9 @@ static void udisks_plugin_get_sensors(GList **sensors) {
                                              HDD_ICON,
                                              DEFAULT_GRAPH_COLOR);
 
-            g_strfreev(ids);
-            g_free(model);
-            g_free(dev);
+            g_value_unset(&ids_v);
+            g_value_unset(&model_v);
+            g_value_unset(&dev_v);
             g_debug("Added %s %s", path, id);
         } else {
             g_debug ("Cannot obtain data for device: %s\n"
