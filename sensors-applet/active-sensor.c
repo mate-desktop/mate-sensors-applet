@@ -420,6 +420,11 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
 
     active_sensor->sensor_row = sensor_row;
 
+#ifdef HAVE_LIBNOTIFY
+    /* set a base time, creation -5 minutes */
+    active_sensor->ierror_ts = time(NULL) - 300;
+#endif
+
     int i;
     for (i = 0; i < NUM_ALARMS; i++) {
         active_sensor->alarm_timeout_id[i] = -1;
