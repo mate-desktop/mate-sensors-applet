@@ -273,6 +273,8 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
         const gchar *limit_type = NULL;
         const gchar *units = NULL;
         gdouble limit_value;
+        gdouble seconds;
+        gboolean show_notification = TRUE;
         
         sensors_applet = active_sensor->sensors_applet;
 
@@ -364,10 +366,21 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                 break;
                 
         case SENSOR_INTERFACE_ERROR:
+                /* get time since the last error */
+                seconds = difftime(time(NULL), active_sensor->ierror_ts);
+
+                /* if the last error happened less than 10 seconds ago, don't display this one
+                 * this should prevent recurring popups for removed sensors, like USB-HDDs */
+                if (seconds < 11.0) {
+                    show_notification = FALSE;
+                }
+
                 summary = g_strdup_printf(_("Error updating sensor %s"), sensor_label);
                 message = g_strdup_printf(_("An error occurred while trying to update the value of the sensor %s located at %s."), sensor_label, sensor_path);
                 timeout_msecs = g_settings_get_int (active_sensor->sensors_applet->settings, TIMEOUT);
-                
+
+                /* update timestamp */
+                time(&(active_sensor->ierror_ts));
                 break;
                 
         default:
@@ -380,6 +393,14 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
                                        message,
                                        GTK_STOCK_DIALOG_WARNING,
                                        timeout_msecs);
+        if (show_notification) {
+            active_sensor_libnotify_notify(active_sensor,
+                                           notif_type,
+                                           summary,
+                                           message,
+                                           "dialog-warning",
+                                           timeout_msecs);
+            }
         
         g_free(sensor_path);
         g_free(sensor_label);
