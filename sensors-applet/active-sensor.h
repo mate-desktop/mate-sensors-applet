@@ -20,6 +20,7 @@
 #define ACTIVE_SENSOR_H
 
 #ifdef HAVE_LIBNOTIFY
+#include <time.h>
 #include <libnotify/notify.h>
 #include "active-sensor-libnotify.h"
 #endif
@@ -42,6 +43,8 @@ struct _ActiveSensor {
 
 #ifdef HAVE_LIBNOTIFY
     NotifyNotification *notification[NUM_NOTIFS];
+    /* error timestamp - save the time of the last SENSOR_INTERFACE_ERROR */
+    time_t ierror_ts;
 #endif
 
     gboolean updated;
