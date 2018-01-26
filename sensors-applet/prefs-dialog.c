@@ -418,21 +418,14 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     prefs_dialog->sensors_applet = sensors_applet;
 
-    /* replace old GtkStock dialog creation: */
-    prefs_dialog->dialog = GTK_DIALOG(gtk_dialog_new ());
-    /* stolen from gtk/gtkdialog.c gtk_dialog_new_empty() */
-    gtk_window_set_title (GTK_WINDOW (prefs_dialog->dialog), _("Sensors Applet Preferences"));
-
-    prefs_dialog->prefs_help_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Help")));
-    gtk_button_set_image(prefs_dialog->prefs_help_button, gtk_image_new_from_icon_name("help-browser", GTK_ICON_SIZE_BUTTON));
-
-    /* from gtk/gtkdialog.c gtk_dialog_add_button () */
-    /* void gtk_dialog_add_action_widget (GtkDialog *dialog, GtkWidget *child, gint response_id); */
-    gtk_dialog_add_action_widget (GTK_DIALOG (prefs_dialog->dialog), GTK_WIDGET(prefs_dialog->prefs_help_button), GTK_RESPONSE_HELP);
-
-    prefs_dialog->prefs_close_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Close")));
-    gtk_button_set_image(prefs_dialog->prefs_close_button, gtk_image_new_from_icon_name("window-close", GTK_ICON_SIZE_BUTTON));
-    gtk_dialog_add_action_widget (GTK_DIALOG (prefs_dialog->dialog), GTK_WIDGET(prefs_dialog->prefs_close_button), GTK_RESPONSE_CLOSE);
+    prefs_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(_("Sensors Applet Preferences"),
+                                                                  NULL,
+                                                                  0,
+                                                                  "gtk-help",
+                                                                  GTK_RESPONSE_HELP,
+                                                                  "gtk-close",
+                                                                  GTK_RESPONSE_CLOSE,
+                                                                  NULL));
 
 
     gtk_window_set_icon_name(GTK_WINDOW(prefs_dialog->dialog), "mate-sensors-applet");

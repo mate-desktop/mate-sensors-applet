@@ -66,9 +66,6 @@ typedef struct {
     GtkEntry *low_alarm_command_entry, *high_alarm_command_entry;
 
     GtkSizeGroup *size_group;
-
-    GtkButton *sconf_help_button;
-    GtkButton *sconf_close_button;
 } SensorConfigDialog;
 
 
@@ -395,23 +392,14 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     header_text = g_strdup_printf("%s - %s", _("Sensor Properties"), sensor_label);
 
 
-    /* replace old GtkStock dialog creation: */
-    config_dialog->dialog = GTK_DIALOG(gtk_dialog_new ());
-    /* stolen from gtk/gtkdialog.c gtk_dialog_new_empty() */
-    gtk_window_set_title (GTK_WINDOW (config_dialog->dialog), header_text);
-    gtk_window_set_transient_for (GTK_WINDOW (config_dialog->dialog), GTK_WINDOW(sensors_applet->prefs_dialog->dialog));
-    gtk_window_set_destroy_with_parent (GTK_WINDOW (config_dialog->dialog), TRUE);
-
-    config_dialog->sconf_help_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Help")));
-    gtk_button_set_image(config_dialog->sconf_help_button, gtk_image_new_from_icon_name("help-browser", GTK_ICON_SIZE_BUTTON));
-
-    /* from gtk/gtkdialog.c gtk_dialog_add_button () */
-    /* void gtk_dialog_add_action_widget (GtkDialog *dialog, GtkWidget *child, gint response_id); */
-    gtk_dialog_add_action_widget (GTK_DIALOG (config_dialog->dialog), GTK_WIDGET(config_dialog->sconf_help_button), GTK_RESPONSE_HELP);
-
-    config_dialog->sconf_close_button = GTK_BUTTON(gtk_button_new_with_mnemonic(_("_Close")));
-    gtk_button_set_image(config_dialog->sconf_close_button, gtk_image_new_from_icon_name("window-close", GTK_ICON_SIZE_BUTTON));
-    gtk_dialog_add_action_widget (GTK_DIALOG (config_dialog->dialog), GTK_WIDGET(config_dialog->sconf_close_button), GTK_RESPONSE_CLOSE);
+    config_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(header_text,
+                                                        GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
+                                                        GTK_DIALOG_DESTROY_WITH_PARENT,
+                                                        "gtk-help",
+                                                        GTK_RESPONSE_HELP,
+                                                        "gtk-close",
+                                                        GTK_RESPONSE_CLOSE,
+                                                        NULL));
 
 
     gtk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog), "sensors-applet");
