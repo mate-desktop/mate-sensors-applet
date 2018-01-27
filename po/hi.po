@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 00:58+0300\n"
-"PO-Revision-Date: 2017-09-19 16:11+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2018-01-25 17:09+0100\n"
+"PO-Revision-Date: 2017-11-28 14:05+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
 "Language-Team: Hindi (http://www.transifex.com/mate/MATE/language/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,49 +127,49 @@ msgstr "चिह्न प्रकार"
 msgid "Color of the graph for the sensor"
 msgstr "सेंसर के लेखाचित्र का रंग"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:61
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:60
 #: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
 #: ../plugins/omnibook/omnibook-plugin.c:47
-#: ../plugins/i2c-proc/i2c-proc-plugin.c:57 ../plugins/acpi/acpi-plugin.c:54
+#: ../plugins/i2c-proc/i2c-proc-plugin.c:56 ../plugins/acpi/acpi-plugin.c:54
 #: ../plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
 msgstr "सीपीयू"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:66
-#: ../plugins/nvidia/nvidia-plugin.c:125 ../plugins/nvidia/nvidia-plugin.c:145
-#: ../plugins/nvidia/nvidia-plugin.c:170
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:65
+#: ../plugins/nvidia/nvidia-plugin.c:128 ../plugins/nvidia/nvidia-plugin.c:148
+#: ../plugins/nvidia/nvidia-plugin.c:173
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
-#: ../plugins/aticonfig/aticonfig-plugin.c:104
+#: ../plugins/aticonfig/aticonfig-plugin.c:106
 msgid "GPU"
 msgstr "जीपीयू"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:71
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:70
 msgid "CASE"
 msgstr "पेटी"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:76
-#: ../plugins/smu-sys/smu-sys-plugin.c:68 ../plugins/eee/eee-plugin.c:52
+#: ../plugins/pmu-sys/pmu-sys-plugin.c:75
+#: ../plugins/smu-sys/smu-sys-plugin.c:68
 msgid "FAN"
 msgstr "फेन"
 
-#: ../plugins/i8k/i8k-plugin.c:56
+#: ../plugins/i8k/i8k-plugin.c:57
 msgid "FAN1"
 msgstr "फेन1"
 
-#: ../plugins/i8k/i8k-plugin.c:64
+#: ../plugins/i8k/i8k-plugin.c:66
 msgid "FAN2"
 msgstr "फेन2"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:69
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:71
 msgid "MiniPCI"
 msgstr "लघु पीसीआई"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:93
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:104
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:95
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:107
 msgid "Battery"
 msgstr "बैटरी"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:121
+#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:124
 msgid "Fan"
 msgstr "फेन"
 
@@ -178,126 +178,131 @@ msgid "CPU TEMP"
 msgstr "सीपीयू ताप"
 
 #: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:324
+#: ../sensors-applet/sensors-applet.c:326
 msgid "temperature"
 msgstr "तापमान"
 
-#: ../plugins/nvidia/nvidia-plugin.c:186
+#: ../plugins/nvidia/nvidia-plugin.c:190
 msgid "Ambient"
 msgstr "परिवेशिक"
 
-#: ../sensors-applet/prefs-dialog.c:410
+#: ../sensors-applet/prefs-dialog.c:421
 msgid "Sensors Applet Preferences"
 msgstr "सेंसर एप्लेट प्राथमिकताएं"
 
-#: ../sensors-applet/prefs-dialog.c:450
-#: ../sensors-applet/sensors-applet.c:1361
+#: ../sensors-applet/prefs-dialog.c:460
+#: ../sensors-applet/sensors-applet.c:1279
 msgid "No sensors found!"
 msgstr "कोई सेंसर नहीं मिला"
 
-#: ../sensors-applet/prefs-dialog.c:457
+#: ../sensors-applet/prefs-dialog.c:466
 msgid "Display"
 msgstr "प्रदर्शक"
 
-#: ../sensors-applet/prefs-dialog.c:470
+#: ../sensors-applet/prefs-dialog.c:476
 msgid "label with value"
 msgstr "लेबल के साथ मूल्य"
 
-#: ../sensors-applet/prefs-dialog.c:472
+#: ../sensors-applet/prefs-dialog.c:477
 msgid "icon with value"
 msgstr "चिन्ह के साथ मूल्य"
 
-#: ../sensors-applet/prefs-dialog.c:474
+#: ../sensors-applet/prefs-dialog.c:478
 msgid "value only"
 msgstr "केवल मूल्य"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: ../sensors-applet/prefs-dialog.c:479
 msgid "icon only"
 msgstr "केवल चिन्ह"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: ../sensors-applet/prefs-dialog.c:480
 msgid "graph only"
 msgstr "सिर्फ लेखाचित्र"
 
-#: ../sensors-applet/prefs-dialog.c:495
+#: ../sensors-applet/prefs-dialog.c:493
 msgid "_Display sensors in panel as"
 msgstr "पैनल में सेंसर ऐसे प्रदर्शित करें (_D)"
 
-#: ../sensors-applet/prefs-dialog.c:510
+#: ../sensors-applet/prefs-dialog.c:505
 msgid "beside labels / icons"
 msgstr "लेबल / चिन्ह के बाजू"
 
-#: ../sensors-applet/prefs-dialog.c:511
+#: ../sensors-applet/prefs-dialog.c:506
 msgid "below labels / icons"
 msgstr "लेबल / चिन्ह के नीचे"
 
-#: ../sensors-applet/prefs-dialog.c:524
+#: ../sensors-applet/prefs-dialog.c:519
 msgid "Preferred _position of sensor values"
 msgstr "सेंसर मूल्यों का पसंदीदा स्थान (_P)"
 
-#: ../sensors-applet/prefs-dialog.c:536
+#: ../sensors-applet/prefs-dialog.c:531
 msgid "Kelvin"
 msgstr "केल्विन"
 
-#: ../sensors-applet/prefs-dialog.c:537
+#: ../sensors-applet/prefs-dialog.c:532
 msgid "Celsius"
 msgstr "सेल्सियस"
 
-#: ../sensors-applet/prefs-dialog.c:538
+#: ../sensors-applet/prefs-dialog.c:533
 msgid "Fahrenheit"
 msgstr "फॉरेनहाइट"
 
-#: ../sensors-applet/prefs-dialog.c:551
+#: ../sensors-applet/prefs-dialog.c:546
 msgid "_Temperature scale"
 msgstr "तापमान पैमाना  (_T)"
 
-#: ../sensors-applet/prefs-dialog.c:578
+#: ../sensors-applet/prefs-dialog.c:572
 msgid "Graph _size (pixels)"
 msgstr "लेखाचित्र आकार (पिक्सेल) (_S)"
 
-#: ../sensors-applet/prefs-dialog.c:591
+#. hide/show units
+#: ../sensors-applet/prefs-dialog.c:584
+msgid "Show _units"
+msgstr ""
+
+#: ../sensors-applet/prefs-dialog.c:592
 msgid "Update"
 msgstr "अद्यतन"
 
-#: ../sensors-applet/prefs-dialog.c:621
+#: ../sensors-applet/prefs-dialog.c:619
 msgid "Update _interval (secs)"
 msgstr "अद्यतन अंतराल (सेकण्ड्स) (_I)"
 
-#: ../sensors-applet/prefs-dialog.c:631
+#: ../sensors-applet/prefs-dialog.c:629
 msgid "Notifications"
 msgstr "अधिसूचनाएं"
 
-#: ../sensors-applet/prefs-dialog.c:642
+#: ../sensors-applet/prefs-dialog.c:639
 msgid "Display _notifications"
 msgstr "अधिसूचनाएं प्रदर्शित करें (_N)"
 
-#: ../sensors-applet/prefs-dialog.c:845
+#: ../sensors-applet/prefs-dialog.c:773
 msgid "Sensor"
 msgstr "सेंसर"
 
-#: ../sensors-applet/prefs-dialog.c:852
+#: ../sensors-applet/prefs-dialog.c:780
 msgid "Label"
 msgstr "लेबल"
 
-#: ../sensors-applet/prefs-dialog.c:862
+#: ../sensors-applet/prefs-dialog.c:790
 msgid "Labels can be edited directly by clicking on them."
 msgstr "लेबलों का सीधा संपादन उन पे क्लिक कर किया जा सक ता है"
 
-#: ../sensors-applet/prefs-dialog.c:863
+#: ../sensors-applet/prefs-dialog.c:791
 msgid "Enabled"
 msgstr "सक्षम"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:869
-#: ../sensors-applet/sensor-config-dialog.c:454
+#: ../sensors-applet/prefs-dialog.c:797
+#: ../sensors-applet/sensor-config-dialog.c:444
 msgid "Icon"
 msgstr "चिह्न"
 
-#: ../sensors-applet/prefs-dialog.c:1003
+#: ../sensors-applet/prefs-dialog.c:915
 msgid "General Options"
 msgstr "सामान्य विकल्प"
 
-#: ../sensors-applet/prefs-dialog.c:1007
+#: ../sensors-applet/prefs-dialog.c:919
 msgid "Sensors"
 msgstr "सेंसर"
 
@@ -314,7 +319,7 @@ msgid "A"
 msgstr "A"
 
 #. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:558
+#: ../sensors-applet/active-sensor.c:563
 msgid "ERROR"
 msgstr "त्रुटि"
 
@@ -324,142 +329,142 @@ msgstr "त्रुटि"
 msgid "translator-credits"
 msgstr "राघवन गोपालकृष्णन् (g.raghavan.g@gmail.com)"
 
-#: ../sensors-applet/sensor-config-dialog.c:396
+#: ../sensors-applet/sensor-config-dialog.c:392
 msgid "Sensor Properties"
 msgstr "सेंसर गुण"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:423
+#: ../sensors-applet/sensor-config-dialog.c:417
 msgid "Graph"
 msgstr "रेखाचित्र"
 
-#: ../sensors-applet/sensor-config-dialog.c:440
+#: ../sensors-applet/sensor-config-dialog.c:430
 msgid "Graph Color"
 msgstr "रेखाचित्र रंग"
 
-#: ../sensors-applet/sensor-config-dialog.c:443
+#: ../sensors-applet/sensor-config-dialog.c:433
 msgid "Graph _color"
 msgstr "रेखाचित्र रंग (_C)"
 
-#: ../sensors-applet/sensor-config-dialog.c:505
+#: ../sensors-applet/sensor-config-dialog.c:487
 msgid "Sensor _icon"
 msgstr "सेंसर चिह्न (_I)"
 
-#: ../sensors-applet/sensor-config-dialog.c:511
+#: ../sensors-applet/sensor-config-dialog.c:493
 msgid "Scaling Parameters"
 msgstr "स्केलिंग पैरामीटर्स"
 
-#: ../sensors-applet/sensor-config-dialog.c:544
+#: ../sensors-applet/sensor-config-dialog.c:522
 msgid "Sensor value _multiplier"
 msgstr "सेंसर मूल्य गुणक (_M)"
 
-#: ../sensors-applet/sensor-config-dialog.c:577
+#: ../sensors-applet/sensor-config-dialog.c:550
 msgid "Sensor value _offset"
 msgstr "सेंसर मूल्य ऑफसेट (_O)"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:587
+#: ../sensors-applet/sensor-config-dialog.c:559
 msgid "Sensor Limits"
 msgstr "सेंसर सीमाएं"
 
-#: ../sensors-applet/sensor-config-dialog.c:620
+#: ../sensors-applet/sensor-config-dialog.c:587
 msgid "Sensor _low value"
 msgstr "सेंसर निम्न मूल्य (_L)"
 
-#: ../sensors-applet/sensor-config-dialog.c:655
+#: ../sensors-applet/sensor-config-dialog.c:615
 msgid "Sensor _high value"
 msgstr "सेंसर ऊपरी मूल्य (_H)"
 
-#: ../sensors-applet/sensor-config-dialog.c:666
-#: ../sensors-applet/sensors-applet.c:361
+#: ../sensors-applet/sensor-config-dialog.c:623
+#: ../sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "अलार्म"
 
-#: ../sensors-applet/sensor-config-dialog.c:698
+#: ../sensors-applet/sensor-config-dialog.c:652
 msgid "Alarm _repeat interval (secs)"
 msgstr "अलार्म दोहराने का अंतराल (सेकण्ड्स) (_R)"
 
-#: ../sensors-applet/sensor-config-dialog.c:718
+#: ../sensors-applet/sensor-config-dialog.c:671
 msgid "Lo_w alarm command"
 msgstr "निम्न अलार्म आदेश (_W)"
 
-#: ../sensors-applet/sensor-config-dialog.c:740
+#: ../sensors-applet/sensor-config-dialog.c:692
 msgid "Hi_gh alarm command"
 msgstr "उच्च अलार्म आदेश (_G)"
 
-#: ../sensors-applet/sensor-config-dialog.c:754
+#: ../sensors-applet/sensor-config-dialog.c:705
 msgid "_Enable alarm"
 msgstr "अलार्म सक्षम करें (_E)"
 
-#: ../sensors-applet/sensors-applet.c:237
+#: ../sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
 msgstr "वरीयताएँ (_P)"
 
-#: ../sensors-applet/sensors-applet.c:240
+#: ../sensors-applet/sensors-applet.c:241
 msgid "_Help"
 msgstr "मदद (_H)"
 
-#: ../sensors-applet/sensors-applet.c:243
+#: ../sensors-applet/sensors-applet.c:244
 msgid "_About"
 msgstr "परिचय (_A)"
 
-#: ../sensors-applet/sensors-applet.c:305
+#: ../sensors-applet/sensors-applet.c:307
 msgid "is very low"
 msgstr "कम है"
 
-#: ../sensors-applet/sensors-applet.c:306
+#: ../sensors-applet/sensors-applet.c:308
 msgid "lower limit"
 msgstr "निचली सीमा"
 
 #. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:311
+#: ../sensors-applet/sensors-applet.c:313
 msgid "is very high"
 msgstr "अत्याधिक है"
 
-#: ../sensors-applet/sensors-applet.c:312
+#: ../sensors-applet/sensors-applet.c:314
 msgid "upper limit"
 msgstr "ऊपरी सीमा"
 
-#: ../sensors-applet/sensors-applet.c:323
+#: ../sensors-applet/sensors-applet.c:325
 msgid "Temperature"
 msgstr "तापमान"
 
-#: ../sensors-applet/sensors-applet.c:343
+#: ../sensors-applet/sensors-applet.c:345
 msgid "Voltage"
 msgstr "वोल्टेज"
 
-#: ../sensors-applet/sensors-applet.c:344
+#: ../sensors-applet/sensors-applet.c:346
 msgid "voltage"
 msgstr "वोल्टेज"
 
-#: ../sensors-applet/sensors-applet.c:348
+#: ../sensors-applet/sensors-applet.c:351
 msgid "Fan Speed"
 msgstr "फेन गति"
 
-#: ../sensors-applet/sensors-applet.c:349
+#: ../sensors-applet/sensors-applet.c:352
 msgid "fan speed"
 msgstr "फेन गति"
 
-#: ../sensors-applet/sensors-applet.c:353
+#: ../sensors-applet/sensors-applet.c:357
 msgid "Current"
 msgstr "करंट"
 
-#: ../sensors-applet/sensors-applet.c:354
+#: ../sensors-applet/sensors-applet.c:358
 msgid "current"
 msgstr "करंट"
 
-#: ../sensors-applet/sensors-applet.c:367
+#: ../sensors-applet/sensors-applet.c:379
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "%s सेंसर अद्यतन करने में त्रुटि"
 
-#: ../sensors-applet/sensors-applet.c:368
+#: ../sensors-applet/sensors-applet.c:380
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr ""
 
-#: ../sensors-applet/sensors-applet.c:473
+#: ../sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "कोई सेंसर सक्षम नहीं !"
