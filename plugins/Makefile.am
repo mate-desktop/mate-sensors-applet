@@ -1,6 +1,5 @@
 DIST_SUBDIRS = \
 	acpi \
-	udisks \
 	udisks2 \
 	hddtemp \
         i2c-proc \
@@ -26,10 +25,6 @@ SUBDIRS = \
 	pmu-sys \
 	smu-sys \
 	sonypi
-
-if UDISKS
-SUBDIRS	     += udisks
-endif
 
 if UDISKS2
 SUBDIRS	     += udisks2

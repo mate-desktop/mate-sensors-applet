@@ -52,8 +52,6 @@ GTK_REQUIRED=3.14.0
 LIBPANEL_REQUIRED=1.17.0
 LIBNOTIFY_REQUIRED=0.7.0
 LIBCAIRO_REQUIRED=1.0.4
-LIBDBUSGLIB_REQUIRED=0.80
-LIBATASMART_REQUIRED=0.16
 
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gio-2.0)
 AC_SUBST(GLIB_CFLAGS)
@@ -71,46 +69,9 @@ PKG_CHECK_MODULES(CAIRO, cairo >= $LIBCAIRO_REQUIRED)
 AC_SUBST(CAIRO_CFLAGS)
 AC_SUBST(CAIRO_LIBS)
 
-# enable support for udisks (via dbus) by default if its available
-AC_ARG_ENABLE(udisks,
-	      AS_HELP_STRING([--disable-udisks],
-			     [Disable support for udisks sensor readings via DBUS.]),
-			     enable_udisks=$enableval, enable_udisks="yes")
-
-if test "x$enable_udisks" = "xno" ; then
-	echo "Disabling udisks support"
-else
-	PKG_CHECK_MODULES(DBUSGLIB, dbus-glib-1 >= $LIBDBUSGLIB_REQUIRED,
-		          HAVE_DBUSGLIB="yes", HAVE_DBUSGLIB="no")
-	AC_SUBST(DBUSGLIB_CFLAGS)
-	AC_SUBST(DBUSGLIB_LIBS)
-
-	PKG_CHECK_MODULES(LIBATASMART, libatasmart >= $LIBATASMART_REQUIRED,
-			  HAVE_LIBATASMART="yes", HAVE_LIBATASMART="no")
-	AC_SUBST(LIBATASMART_CFLAGS)
-	AC_SUBST(LIBATASMART_LIBS)
-fi
-
-AM_CONDITIONAL(UDISKS, test -n "$DBUSGLIB_LIBS" -a -n "$LIBATASMART_LIBS")
-
-# enable support for udisks2 (via dbus) by default if its available
-AC_ARG_ENABLE(udisks2,
-	      AS_HELP_STRING([--disable-udisks2],
-			     [Disable support for udisks2 sensor readings via DBUS.]),
-			     enable_udisks2=$enableval, enable_udisks2="yes")
 
 if test "x$enable_udisks2" = "xno" ; then
 	echo "Disabling udisks2 support"
-#else
-#	PKG_CHECK_MODULES(DBUSGLIB, dbus-glib-1 >= $LIBDBUSGLIB_REQUIRED,
-#		          HAVE_DBUSGLIB="yes", HAVE_DBUSGLIB="no")
-#	AC_SUBST(DBUSGLIB_CFLAGS)
-#	AC_SUBST(DBUSGLIB_LIBS)
-
-#	PKG_CHECK_MODULES(LIBATASMART, libatasmart >= $LIBATASMART_REQUIRED,
-#			  HAVE_LIBATASMART="yes", HAVE_LIBATASMART="no")
-#	AC_SUBST(LIBATASMART_CFLAGS)
-#	AC_SUBST(LIBATASMART_LIBS)
 fi
 
 # use same test as above, bc AM_CONDITIONAL may not be in if/else
@@ -290,7 +251,6 @@ AC_CONFIG_FILES([
 	lib/Makefile
 	plugins/Makefile
 	plugins/acpi/Makefile
-	plugins/udisks/Makefile
 	plugins/udisks2/Makefile
 	plugins/hddtemp/Makefile
 	plugins/i2c-proc/Makefile
