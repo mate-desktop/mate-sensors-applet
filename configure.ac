@@ -70,6 +70,12 @@ AC_SUBST(CAIRO_CFLAGS)
 AC_SUBST(CAIRO_LIBS)
 
 
+# enable support for udisks2 (via dbus) by default if its available
+AC_ARG_ENABLE(udisks2,
+	      AS_HELP_STRING([--disable-udisks2],
+			     [Disable support for udisks2 sensor readings via DBUS.]),
+			     enable_udisks2=$enableval, enable_udisks2="yes")
+
 if test "x$enable_udisks2" = "xno" ; then
 	echo "Disabling udisks2 support"
 fi
