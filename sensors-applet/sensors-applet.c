@@ -75,11 +75,7 @@ static void help_cb(GtkAction *action, gpointer data) {
 
     GError *error = NULL;
 
-#if GTK_CHECK_VERSION (3, 22, 0)
     gtk_show_uri_on_window(NULL, "help:mate-sensors-applet",
-#else
-    gtk_show_uri(NULL, "help:mate-sensors-applet",
-#endif
 
         gtk_get_current_event_time(),
         &error);
@@ -704,12 +700,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                         gtk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
                     }
                     if (((ActiveSensor *)(current_sensor->data))->label) {
-#if GTK_CHECK_VERSION (3, 16, 0)
                         gtk_label_set_xalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0);
                         gtk_label_set_yalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
-#else
-                        gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->label), 0.0, 0.5);
-#endif
                     }
                     if (((ActiveSensor *)(current_sensor->data))->value) {
                         gtk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_START);
@@ -731,12 +723,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                         gtk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
                     }
                     if (((ActiveSensor *)(current_sensor->data))->label) {
-#if GTK_CHECK_VERSION (3, 16, 0)
                         gtk_label_set_xalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
                         gtk_label_set_yalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
-#else
-                        gtk_misc_set_alignment(GTK_MISC(((ActiveSensor *)(current_sensor->data))->label), 0.5, 0.5);
-#endif
                     }
                     if (((ActiveSensor *)(current_sensor->data))->value) {
                         gtk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
