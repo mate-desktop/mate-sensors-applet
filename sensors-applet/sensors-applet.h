@@ -120,6 +120,7 @@ struct _SensorsApplet {
     gint size;
 
     GtkTreeStore *sensors;
+    gchar **sensors_hash_array;
     GtkTreeSelection *selection;
 
     GHashTable *required_plugins;

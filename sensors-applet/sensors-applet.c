@@ -51,6 +51,10 @@
 #define ROW_SPACING 1
 
 
+/* builder for sensor sorting verification */
+static GVariantBuilder gvb_sensors_hash_list;
+
+
 /* callbacks for panel menu */
 static void prefs_cb(GtkAction *action, gpointer *data) {
 
@@ -962,6 +966,10 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     gchar *gsuid = sensors_applet_settings_get_unique_id (interface, id, path);
     gchar *settings_path = g_strdup_printf ("%s%s/", applet_path, gsuid);
     GSettings *settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", settings_path);
+
+    /* add hash to temp sorting list */
+    g_variant_builder_add (&gvb_sensors_hash_list, "s", gsuid);
+
     g_free (applet_path);
     g_free (gsuid);
     g_free (settings_path);
@@ -1255,11 +1263,24 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     /* init gsettings */
     sensors_applet->settings = mate_panel_applet_settings_new (sensors_applet->applet, "org.mate.sensors-applet");
 
-    // load sensors from array saved in gsettings
-    sensors_applet_conf_setup_sensors(sensors_applet);
 
-    /* now do any setup needed manually */
+    /* set up builder for sorting verification */
+    g_variant_builder_init (&gvb_sensors_hash_list, G_VARIANT_TYPE ("as"));
+
+    /* set up / load sensors from the plugins */
     sensors_applet_plugins_load_all(sensors_applet);
+
+    /* set sorting hash array */
+    GVariant *gv_temp = g_variant_builder_end (&gvb_sensors_hash_list);
+    sensors_applet->sensors_hash_array = g_variant_dup_strv (gv_temp, NULL);
+    g_variant_unref (gv_temp);
+
+    /* sort sensors based on saved sorting */
+    sensors_applet_settings_sort_sensors(sensors_applet);
+
+    /* free hash array */
+    g_strfreev (sensors_applet->sensors_hash_array);
+
 
     /* should have created sensors tree above, but if have not was because we couldn't find any sensors */
     if (NULL == sensors_applet->sensors) {
