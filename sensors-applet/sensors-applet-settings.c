@@ -26,10 +26,15 @@
 #include "sensors-applet.h"
 #include "sensors-applet-settings.h"
 
-// these must be as the gsettings schema in file org.mate.sensors-applet.gschema.xml.in
-// gsettings gvariant type string
+/* #define SORT_DEBUG */
+#ifdef SORT_DEBUG
+#include <syslog.h>
+#endif
+
+/* these must be as the gsettings schema in file org.mate.sensors-applet.gschema.xml.in
+ * gsettings gvariant type string */
 #define GSGVTS "s"
-// gsettings gvariant type string for the array
+/* gsettings gvariant type string for the array */
 #define GSGVTSA "as"
 
 
@@ -55,20 +60,18 @@ gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gcha
     return unique_id_hash;
 }
 
-
-/* gets called if are already setup so we don't have to manually go
-    through and find sensors etc again */
+/* load sensors from gsettings with sorting */
 gboolean sensors_applet_settings_load_sensors (SensorsApplet *sensors_applet) {
     /* everything gets stored except alarm timeout indexes, which
     we set to -1, and visible which we set to false for all
     parent nodes and true for all child nodes */
 
     gchar *applet_path;
-    // not sure about pointer, it is unclear if it is freed by loop, probably yes
+    /* not sure about pointer, it is unclear if it is freed by loop, probably yes */
     GVariantIter *iter;
     gchar *gsuid;
 
-    // string variables, to help free up memory in loop
+    /* string variables, to help free up memory in loop */
     gchar *current_path,
         *current_id,
         *current_label,
@@ -77,33 +80,33 @@ gboolean sensors_applet_settings_load_sensors (SensorsApplet *sensors_applet) {
         *current_high_alarm_command,
         *current_graph_color;
 
-    // get gsettings path for applet
+    /* get gsettings path for applet */
     applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
 
-    // get sensors-list array from gsettings
+    /* get sensors-list array from gsettings */
     g_settings_get (sensors_applet->settings, "sensors-list", GSGVTSA, &iter);
 
-    // load sensor data into applet one by one
-    // first get unique id for the sensor
-    // then load sensor data from gsettings
-    // then add sensor
-    // gsuid is freed by g_variant_iter_loop()
+    /* load sensor data into applet one by one
+     * first get unique id for the sensor
+     * then load sensor data from gsettings
+     * then add sensor
+     * gsuid is freed by g_variant_iter_loop() */
     while (g_variant_iter_loop (iter, GSGVTS, &gsuid)) {
 
-        // load sensor data from gsettings individually
-        // g_strdup_printf doesn't free args!
-        // applet_path is freed at the end
+        /* load sensor data from gsettings individually
+         * g_strdup_printf doesn't free args!
+         * applet_path is freed at the end */
         gchar *path = g_strdup_printf ("%s%s/", applet_path, gsuid);
-        //g_free (gsuid);   // freed by loop
+        /*g_free (gsuid);   // freed by loop */
 
-        // make a schema which points to one sensor data
+        /* make a schema which points to one sensor data */
         GSettings *settings;
         settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", path);
         g_free (path);
 
-        // laod sensor data to temp variables
-        // g_settings_get_string allocates memory!
-        // sensors_applet_add_sensor() gtk_tree_store_set() copies strings, so free them
+        /* laod sensor data to temp variables
+         * g_settings_get_string allocates memory!
+         * sensors_applet_add_sensor() gtk_tree_store_set() copies strings, so free them */
         sensors_applet_add_sensor(sensors_applet,
             current_path = g_settings_get_string (settings, PATH),
             current_id = g_settings_get_string (settings, ID),
@@ -139,8 +142,9 @@ gboolean sensors_applet_settings_load_sensors (SensorsApplet *sensors_applet) {
     return TRUE;
 }
 
-#include <syslog.h>
-void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_applet) {
+#ifdef SORT_DEBUG
+/* print a gtk_tree_store (for debug) */
+static void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_applet) {
 
     g_assert(sensors_applet);
     g_assert(sensors_applet->sensors);
@@ -156,7 +160,6 @@ void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_applet) 
     gchar *sensor_id;
     gchar *sensor_path;
     gchar *sensor_hash;
-
 
     /* iterate through the sensor tree
      * code from sensors-applet.c sensors_applet_add_sensor()
@@ -199,12 +202,11 @@ void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_applet) 
     }
 
 }
+#endif
 
-
-//FIXME kinda same as active_sensor_compare ()
-
-/* compare to iters using their paths */
-gint sensors_applet_settings_sort_sensors_iter_compare (SensorsApplet *sensors_applet, GtkTreeIter ti_a, GtkTreeIter ti_b) {
+/* compare two iters using their paths
+ * kinda same as active_sensor_compare () */
+static gint sensors_applet_settings_sort_sensors_iter_compare (SensorsApplet *sensors_applet, GtkTreeIter ti_a, GtkTreeIter ti_b) {
 
     GtkTreePath *tp_a;
     GtkTreePath *tp_b;
@@ -221,12 +223,16 @@ gint sensors_applet_settings_sort_sensors_iter_compare (SensorsApplet *sensors_a
     return ret_val;
 }
 
-
-
-gboolean sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_applet,
-                                                    const gchar *hash_a,
-                                                    const gchar *hash_b,
-                                                    gboolean a_is_first) {
+/* find two sensors in the sensors tree based on their hash and sort them
+ * Return codes:
+ * 0: something went very wrong...
+ * 1: normal run, a and b are in place
+ * 2: hash_b has already been removed from the system
+ * 3: hash_a is not found */
+static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_applet,
+                                                           const gchar *hash_a,
+                                                           const gchar *hash_b,
+                                                           gboolean a_is_first) {
 
     g_assert(sensors_applet);
     g_assert(sensors_applet->sensors);
@@ -249,7 +255,6 @@ gboolean sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_apple
     GtkTreeIter sensor_iter_b;
     gboolean found_a = FALSE;
     gboolean found_b = FALSE;
-
 
     /* iterate through the sensor tree
      * code from sensors-applet.c sensors_applet_add_sensor()
@@ -352,8 +357,7 @@ gboolean sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_apple
         }
 
 
-        /* at this point the interfaces are sorted
-         * the sensors are next */
+        /* at this point the interfaces are sorted, the sensors are next */
         /* set a to be the first sensor in the sensors tree, under the first if. iter */
         if (a_is_first) {
 
@@ -390,14 +394,13 @@ gboolean sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_apple
             }
         }
 
-
         /* if a's if. and b's if is not the same
          * as b comes after a, b must be under a new if.
-         * and so be must be the first node under that if. */
+         * and so b must be the first node under that if. */
         /* set b to be the first sensor in the sensors tree, under the b's if. iter */
         if (-1 == ret_val) {
 
-            /* this 'fails' if the tree is empty, but at least a is in it */
+            /* this 'fails' if the tree is empty, but at least b is in it */
             gtk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &first_iter,  &interface_iter_b);
 
             /* we are only interested in the case, where the two are not equal
@@ -410,13 +413,25 @@ gboolean sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_apple
 
         }
 
-        return TRUE;
+        return 1;
+
     }
 
-    return FALSE;
+    /* hash_b has already been removed from the system */
+    if (found_a && !found_b) {
+        return 2;
+    }
+
+    /* this is the least likely case
+     * if hash_a is not found, then the sensors-list starts with a sensor
+     * that has already been removed from the system */
+    if (!found_a) {
+        return 3;
+    }
+
+    /* we should never get here */
+    return 0;
 }
-
-
 
 /* sort sensors based on sensors-list array in gsettings */
 gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
@@ -426,24 +441,32 @@ gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
     gchar *hash_a;
     gchar *hash_b;
 
+    gint ret_val;
+    /* marks the first iteration */
+    gint first_counter = 1;
 
-    // get sensors-list array from gsettings
-    // newly allocated, has to be freed fully
-    // for an empty array a pointer to a NULL pointer will be returned (g_variant_dup_strv ())
+    /* get sensors-list array from gsettings
+     * newly allocated, has to be freed fully
+     * for an empty array a pointer to a NULL pointer will be returned (g_variant_dup_strv ()) */
     sensors_list = g_settings_get_strv (sensors_applet->settings, "sensors-list");
-//syslog(LOG_ERR, "1");
+
+    /* list is empty (on the first run) */
     if (NULL == *sensors_list) {
+        /* still need to free the array, even if it is empty */
+        g_strfreev (sensors_list);
         return FALSE;
     }
-//syslog(LOG_ERR, "2");
-//sensors_applet_settings_print_sensors_tree (sensors_applet);
-//syslog(LOG_ERR, "3");
+
+#ifdef SORT_DEBUG
+    sensors_applet_settings_print_sensors_tree (sensors_applet);
+#endif
+
     gint i;
     for (i = 0; NULL != sensors_list[i]; i++) {
-//        syslog(LOG_ERR, "hash #%d: %s", i, sensors_list[i]);
-        // first pass
+
+        /* first pass */
         if (i == 0) {
-            // make a copy
+            /* make a copy */
             hash_a = g_strdup (sensors_list[i]);
             continue;
         }
@@ -452,18 +475,38 @@ gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
 
         /* now that we have two hashes, find the two corresponding sensors and sort them
          * if i == 1, we have both a and b set, this is the first time calling this function */
-        sensors_applet_settings_sort_sensors_sort (sensors_applet, hash_a, hash_b, (i == 1));
+        ret_val = sensors_applet_settings_sort_sensors_sort (sensors_applet, hash_a, hash_b, (i == first_counter));
+
+        /* hash_b has already been removed from the system
+         * don't free hash_a, don't reassign hash_b
+         * as we already know that b is no longer in the system */
+        if (2 == ret_val) {
+            continue;
+        }
 
         /* after sorting free hash_a (it should be in place) and reassign hash_b to hash_a */
         g_free (hash_a);
         hash_a = hash_b;
+
+        /* hash_a not found
+         * set hash_b as hash_a and set the first element counter
+         * (essentially skip the first element in the sensors-list array) */
+        if (3 == ret_val) {
+            first_counter++;
+        }
     }
-//syslog(LOG_ERR, "4");
-//sensors_applet_settings_print_sensors_tree (sensors_applet);
-//syslog(LOG_ERR, "5");
-    /* hash_a already freed */
+
+#ifdef SORT_DEBUG
+    sensors_applet_settings_print_sensors_tree (sensors_applet);
+#endif
+
+    /* hash_a already freed
+     * only in the following case do we need to free it */
+    if (2 == ret_val) {
+        g_free (hash_a);
+    }
     g_free (hash_b);
-//syslog(LOG_ERR, "6");
+
     g_strfreev (sensors_list);
 
     /* reorder active sensors based on reordered sensors tree */
@@ -472,17 +515,18 @@ gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
     return TRUE;
 }
 
-
-// save sensor data under a unique hash
-// save sensor sort in an array, with above hash
+/* save sensor data under a unique hash
+ * save sensor sort in an array, with above hash */
 gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
-    /* write everything to GSettings except VISIBLE and ALARM_TIMEOUT_INDEX */
-    /* for stepping through GtkTreeStore data structure */
-    GtkTreeIter interfaces_iter, sensors_iter;
-    gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
+
+    /* write everything to GSettings except VISIBLE and ALARM_TIMEOUT_INDEX
+     * for stepping through GtkTreeStore data structure */
+    GtkTreeIter interfaces_iter;
+    GtkTreeIter sensors_iter;
+    gboolean not_end_of_interfaces = TRUE;
+    gboolean not_end_of_sensors = TRUE;
     gchar *applet_path;
 
-    int i;
     gchar *current_path,
           *current_id,
           *current_label,
@@ -500,28 +544,19 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
           current_sensor_type,
           current_icon_type;
 
-    // data structure (array) to be able to save sensors list to gsettings
+    /* data structure (array) to be able to save sensors list to gsettings */
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE (GSGVTSA));
 
     applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
 
-    /* now step through the GtkTreeStore sensors to find which sensors are enabled */
-    for (gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+    /* now step through the GtkTreeStore sensors to find which sensors are available / loaded */
+    for (not_end_of_interfaces = gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_end_of_interfaces;
         not_end_of_interfaces = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
 
-        gtk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
-                           &interfaces_iter,
-                           ID_COLUMN, &current_id,
-                           -1);
 
-        g_free(current_id);
-
-        /* reset sensors sentinel */
-        not_end_of_sensors = TRUE;
-
-        for (gtk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
+        for (not_end_of_sensors = gtk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
             not_end_of_sensors;
             not_end_of_sensors = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
 
@@ -545,17 +580,17 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
                                GRAPH_COLOR_COLUMN, &current_graph_color,
                                -1);
 
-            // GSettings unique id for one sensor data
+            /* GSettings unique id for one sensor data */
             gchar *gsuid = sensors_applet_settings_get_unique_id (current_interface, current_id, current_path);
 
-            // save sensor uid to gvariant array
+            /* save sensor uid to gvariant array */
             g_variant_builder_add(&builder,
-                GSGVTS,       // must be related to the G_VARIANT_TYPE in init and gsettings schema
+                GSGVTS,       /* must be related to the G_VARIANT_TYPE in init and gsettings schema */
                 g_strdup(gsuid));
 
-            // save sensor data to gsettings individually
-            // g_strdup_printf doesn't free args!
-            // applet_path is freed at the end
+            /* save sensor data to gsettings individually
+             * g_strdup_printf doesn't free args!
+             * applet_path is freed at the end */
             gchar *path = g_strdup_printf ("%s%s/", applet_path, gsuid);
             g_free (gsuid);
 
@@ -563,7 +598,7 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
             settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", path);
             g_free (path);
 
-            // wait until g_settings_apply() is called to save all changes at once to gsettings
+            /* wait until g_settings_apply() is called to save all changes at once to gsettings */
             g_settings_delay (settings);
             g_settings_set_string (settings, PATH, current_path);
             g_settings_set_string (settings, ID, current_id);
@@ -587,17 +622,10 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
         }
     }
 
-    //FIXME use sensors_applet->settings ?
-
-    // save the sensor-list array to gsettings
-    GSettings *settings;
-    settings = g_settings_new_with_path ("org.mate.sensors-applet", applet_path);
-
-    // builder is freed by g_variant_builder_end()
-    // the gvariant returned from g_variant_builder_end() is floating, so it is freed by g_settings_set_value()
-    g_settings_set_value (settings, "sensors-list", g_variant_builder_end (&builder));
-
-    g_object_unref (settings);
+    /* save the sensor-list array to gsettings
+     * builder is freed by g_variant_builder_end()
+     * the gvariant returned from g_variant_builder_end() is floating, so it is freed by g_settings_set_value() */
+    g_settings_set_value (sensors_applet->settings, "sensors-list", g_variant_builder_end (&builder));
 
     g_free (applet_path);
 
