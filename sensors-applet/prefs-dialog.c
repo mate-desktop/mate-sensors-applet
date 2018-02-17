@@ -807,7 +807,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     prefs_dialog->scrolled_window = g_object_new(GTK_TYPE_SCROLLED_WINDOW,
                                                  "hadjustment", NULL,
                                                  "height-request", 200,
-                                                 "hscrollbar-policy", GTK_POLICY_AUTOMATIC,
+                                                 "hscrollbar-policy", GTK_POLICY_NEVER,
                                                  "vadjustment",NULL,
                                                  "vscrollbar-policy", GTK_POLICY_AUTOMATIC,
                                                  NULL);
