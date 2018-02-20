@@ -790,6 +790,9 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                                            "visible", VISIBLE_COLUMN,
                                                                            NULL);
 
+
+    gtk_tree_view_column_set_min_width(prefs_dialog->enable_column, 90);
+
     prefs_dialog->icon_column = gtk_tree_view_column_new_with_attributes(_("Icon"),
                                                                          prefs_dialog->icon_renderer,
                                                                          "pixbuf", ICON_PIXBUF_COLUMN,
