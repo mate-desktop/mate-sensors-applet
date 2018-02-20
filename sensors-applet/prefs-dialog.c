@@ -468,6 +468,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     g_free(header_text);
 
     prefs_dialog->display_mode_combo_box = GTK_COMBO_BOX_TEXT(gtk_combo_box_text_new());
+    /*expand the whole column */
+    gtk_widget_set_hexpand(GTK_WIDGET(prefs_dialog->display_mode_combo_box), TRUE);
 
     gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("label with value"));
     gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("icon with value"));
