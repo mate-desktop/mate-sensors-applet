@@ -457,11 +457,34 @@ gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
         return FALSE;
     }
 
+    gint i;
+    /* hash lists are equal */
+    gboolean hle = TRUE;
+    /* compare saved sorted list to newly loaded sensors' list */
+    for (i = 0; (NULL != sensors_applet->sensors_hash_array[i]) && (NULL != sensors_list[i]); i++) {
+
+        if (g_ascii_strcasecmp(sensors_applet->sensors_hash_array[i], sensors_list[i]) != 0) {
+            hle = FALSE;
+            break;
+        }
+    }
+
+    /* lists are the same -> nothing to do */
+    if (hle) {
+#ifdef SORT_DEBUG
+        syslog(LOG_ERR, "sensor sort: saved list is the same as the new one, returning");
+#endif
+
+        /* still need to free the array */
+        g_strfreev (sensors_list);
+        return TRUE;
+    }
+
 #ifdef SORT_DEBUG
     sensors_applet_settings_print_sensors_tree (sensors_applet);
 #endif
 
-    gint i;
+
     for (i = 0; NULL != sensors_list[i]; i++) {
 
         /* first pass */
@@ -586,7 +609,7 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
             /* save sensor uid to gvariant array */
             g_variant_builder_add(&builder,
                 GSGVTS,       /* must be related to the G_VARIANT_TYPE in init and gsettings schema */
-                g_strdup(gsuid));
+                gsuid);
 
             /* save sensor data to gsettings individually
              * g_strdup_printf doesn't free args!
