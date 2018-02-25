@@ -1,4 +1,4 @@
-# UDisks plugin
+# UDisks2 plugin
 plugindir = $(libdir)/mate-sensors-applet/plugins
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
