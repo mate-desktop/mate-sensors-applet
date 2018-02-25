@@ -39,9 +39,9 @@
 
 
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path) {
-    gchar *unique_id;
-    gchar *unique_id_hash;
-    GChecksum *checksum;
+    gchar *unique_id = NULL;
+    gchar *unique_id_hash = NULL;
+    GChecksum *checksum = NULL;
     guint8 digest[16];
     gsize digest_len = sizeof (digest);
 
@@ -66,19 +66,19 @@ gboolean sensors_applet_settings_load_sensors (SensorsApplet *sensors_applet) {
     we set to -1, and visible which we set to false for all
     parent nodes and true for all child nodes */
 
-    gchar *applet_path;
+    gchar *applet_path = NULL;
     /* not sure about pointer, it is unclear if it is freed by loop, probably yes */
-    GVariantIter *iter;
-    gchar *gsuid;
+    GVariantIter *iter = NULL;
+    gchar *gsuid = NULL;
 
     /* string variables, to help free up memory in loop */
-    gchar *current_path,
-        *current_id,
-        *current_label,
-        *current_interface,
-        *current_low_alarm_command,
-        *current_high_alarm_command,
-        *current_graph_color;
+    gchar *current_path = NULL;
+    gchar *current_id = NULL;
+    gchar *current_label = NULL;
+    gchar *current_interface = NULL;
+    gchar *current_low_alarm_command = NULL;
+    gchar *current_high_alarm_command = NULL;
+    gchar *current_graph_color = NULL;
 
     /* get gsettings path for applet */
     applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
@@ -156,10 +156,10 @@ static void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_a
     gint interfaces_counter = 0;
     gint sensors_counter = 0;
 
-    gchar *interface_name;
-    gchar *sensor_id;
-    gchar *sensor_path;
-    gchar *sensor_hash;
+    gchar *interface_name = NULL;
+    gchar *sensor_id = NULL;
+    gchar *sensor_path = NULL;
+    gchar *sensor_hash = NULL;
 
     /* iterate through the sensor tree
      * code from sensors-applet.c sensors_applet_add_sensor()
@@ -242,13 +242,11 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
     gboolean not_end_of_interfaces = TRUE;
     gboolean not_end_of_sensors = TRUE;
 
-    gchar *interface_name;
-    gchar *sensor_id;
-    gchar *sensor_path;
-    gchar *sensor_hash;
+    gchar *interface_name = NULL;
+    gchar *sensor_id = NULL;
+    gchar *sensor_path = NULL;
+    gchar *sensor_hash = NULL;
 
-    gchar *interface_name_a;
-    gchar *interface_name_b;
     GtkTreeIter interface_iter_a;
     GtkTreeIter interface_iter_b;
     GtkTreeIter sensor_iter_a;
@@ -280,7 +278,6 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
 
             /* save interface_name and iters for swap */
             if (g_ascii_strcasecmp(sensor_hash, hash_a) == 0) {
-                interface_name_a = g_strdup (interface_name);
                 /* can copy by value, don't free */
                 interface_iter_a = interfaces_iter;
                 sensor_iter_a = sensors_iter;
@@ -288,7 +285,6 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
             }
 
             if (g_ascii_strcasecmp(sensor_hash, hash_b) == 0) {
-                interface_name_b = g_strdup (interface_name);
                 interface_iter_b = interfaces_iter;
                 sensor_iter_b = sensors_iter;
                 found_b = TRUE;
@@ -436,12 +432,12 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
 /* sort sensors based on sensors-list array in gsettings */
 gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
 
-    gchar **sensors_list;
+    gchar **sensors_list = NULL;
 
-    gchar *hash_a;
-    gchar *hash_b;
+    gchar *hash_a = NULL;
+    gchar *hash_b = NULL;
 
-    gint ret_val;
+    gint ret_val = -1;
     /* marks the first iteration */
     gint first_counter = 1;
 
@@ -548,15 +544,15 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
     GtkTreeIter sensors_iter;
     gboolean not_end_of_interfaces = TRUE;
     gboolean not_end_of_sensors = TRUE;
-    gchar *applet_path;
+    gchar *applet_path = NULL;
 
-    gchar *current_path,
-          *current_id,
-          *current_label,
-          *current_interface,
-          *current_low_alarm_command,
-          *current_high_alarm_command,
-          *current_graph_color;
+    gchar *current_path = NULL;
+    gchar *current_id = NULL;
+    gchar *current_label = NULL;
+    gchar *current_interface = NULL;
+    gchar *current_low_alarm_command = NULL;
+    gchar *current_high_alarm_command = NULL;
+    gchar *current_graph_color = NULL;
     gboolean current_enable,
              current_alarm_enable;
     gdouble current_low_value,
