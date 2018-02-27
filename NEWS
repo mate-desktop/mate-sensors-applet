@@ -1,19 +1,27 @@
+### mate-sensors-applet 1.20.1
+
+  * Translations update
+  * fix save order of sensors v2
+  * prefs-dialog: drop unneeded space in general tab
+  * prefs-dialog: set a min_width for enable_column
+  * prefs-dialog: use hscrollbar-policy GTK_POLICY_NEVER
+
 ### mate-sensors-applet 1.20.0
 
-    require GTK+ 3.22 and GLib 2.50
-    build: enable udisk2 plugin again
-    sync with transifex
-    Remove deprecated udisks plugin
-    udisks plugin: fix memory management for GValue variables
-    Remove deprecated eee plugin
-    Fix popup shower on removed HDD
-    ibm-acpi.c: Fix build warning:
-    eee-plugin.c: Fix build warning:
-    active-sensor.c: Fix build warning:
-    sensors-applet.c: Fix build warning:
-    update copyright year to 2018
-    Fix indents
-    Fix project cleanup
+  * require GTK+ 3.22 and GLib 2.50
+  * build: enable udisk2 plugin again
+  * Translations update
+  * Remove deprecated udisks plugin
+  * udisks plugin: fix memory management for GValue variables
+  * Remove deprecated eee plugin
+  * Fix popup shower on removed HDD
+  * ibm-acpi.c: Fix build warning:
+  * eee-plugin.c: Fix build warning:
+  * active-sensor.c: Fix build warning:
+  * sensors-applet.c: Fix build warning:
+  * update copyright year to 2018
+  * Fix indents
+  * Fix project cleanup
 
 ### mate-sensors-applet 1.19.1
 
