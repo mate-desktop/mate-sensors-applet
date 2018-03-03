@@ -70,6 +70,19 @@ AC_SUBST(CAIRO_CFLAGS)
 AC_SUBST(CAIRO_LIBS)
 
 
+# enable dummy plugin for debug
+AC_ARG_ENABLE(dummyplugin,
+	      AS_HELP_STRING([--enable-dummyplugin],
+			     [Enable dummy plugin for debug.]),
+			     enable_dummyplugin=$enableval, enable_dummyplugin="no")
+
+if test "x$enable_dummyplugin" = "xyes" ; then
+	echo "Enabling dummy plugin support"
+fi
+
+# use same test as above, because AM_CONDITIONAL may not be in if/else
+AM_CONDITIONAL(DUMMYPLUGIN, test "x$enable_dummyplugin" = "xyes")
+
 # enable support for udisks2 (via dbus) by default if its available
 AC_ARG_ENABLE(udisks2,
 	      AS_HELP_STRING([--disable-udisks2],
@@ -80,7 +93,7 @@ if test "x$enable_udisks2" = "xno" ; then
 	echo "Disabling udisks2 support"
 fi
 
-# use same test as above, bc AM_CONDITIONAL may not be in if/else
+# use same test as above, because AM_CONDITIONAL may not be in if/else
 AM_CONDITIONAL(UDISKS2, test "x$enable_udisks2" = "xyes")
 
 # support for libnotify
@@ -257,6 +270,7 @@ AC_CONFIG_FILES([
 	lib/Makefile
 	plugins/Makefile
 	plugins/acpi/Makefile
+	plugins/dummy/Makefile
 	plugins/udisks2/Makefile
 	plugins/hddtemp/Makefile
 	plugins/i2c-proc/Makefile
