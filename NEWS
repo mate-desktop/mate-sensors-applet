@@ -1,3 +1,10 @@
+### mate-sensors-applet 1.18.4
+
+  * Stop jumping applet as numbers change
+  * Fix saving order of sensors
+  * Fix popup showing on removed HDD
+  * Fix some build warnings
+
 ### mate-sensors-applet 1.18.3
 
   * Fix barely visible graphs
