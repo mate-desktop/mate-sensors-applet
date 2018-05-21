@@ -9,6 +9,7 @@ DIST_SUBDIRS = \
 	ibm-acpi \
         libsensors \
 	mbmon \
+	netbsd \
         nvidia \
 	omnibook \
 	pmu-sys \
@@ -39,6 +40,10 @@ if LIBSENSORS
 SUBDIRS      += libsensors
 else
 SUBDIRS      += i2c-proc i2c-sys
+endif
+
+if NETBSD
+SUBDIRS      += netbsd
 endif
 
 if NVIDIA
