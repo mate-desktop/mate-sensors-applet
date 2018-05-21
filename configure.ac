@@ -242,6 +242,19 @@ else
   AC_DEFINE_UNQUOTED(ATICONFIG_EXE, ["$aticonfig_exe"], [aticonfig executable])
 fi
 
+# enable netbsd plugin
+AC_ARG_ENABLE(netbsd,
+	      AS_HELP_STRING([--enable-netbsd],
+			     [Enable NetBSD plugin.]),
+			     enable_netbsd=$enableval, enable_netbsd="no")
+
+if test "x$enable_netbsd" = "xyes" ; then
+	echo "Enabling NetBSD support"
+fi
+
+# use same test as above, because AM_CONDITIONAL may not be in if/else
+AM_CONDITIONAL(NETBSD, test "x$enable_netbsd" = "xyes")
+
 AC_SUBST(CFLAGS)
 # for help docs stuff
 AC_PATH_PROG(XSLTPROC, xsltproc, no)
@@ -279,6 +292,7 @@ AC_CONFIG_FILES([
 	plugins/ibm-acpi/Makefile
 	plugins/libsensors/Makefile
 	plugins/mbmon/Makefile
+	plugins/netbsd/Makefile
 	plugins/nvidia/Makefile
 	plugins/aticonfig/Makefile
 	plugins/omnibook/Makefile
