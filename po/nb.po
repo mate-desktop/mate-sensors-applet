@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Allan Nordhøy <epost@anotheragency.no>, 2016-2017
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2016
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-25 17:09+0100\n"
-"PO-Revision-Date: 2017-12-22 08:55+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
+"POT-Creation-Date: 2018-03-17 15:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,7 +61,8 @@ msgstr "Forsinkelse (i ms) mellom gjenoppfriskninger"
 #: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "Grafens størrelse i bildepunkter (bredde hvis vannrett, høyde hvis loddrett)"
+msgstr ""
+"Grafens størrelse i bildepunkter (bredde hvis vannrett, høyde hvis loddrett)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
@@ -187,123 +187,123 @@ msgstr "temperatur"
 msgid "Ambient"
 msgstr "Bakgrunnsbelysning"
 
-#: ../sensors-applet/prefs-dialog.c:421
+#: ../sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "Innstillinger for panelprogram for sensorer"
 
-#: ../sensors-applet/prefs-dialog.c:460
-#: ../sensors-applet/sensors-applet.c:1279
+#: ../sensors-applet/prefs-dialog.c:456
+#: ../sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "Ingen sensorer funnet!"
 
-#: ../sensors-applet/prefs-dialog.c:466
+#: ../sensors-applet/prefs-dialog.c:462
 msgid "Display"
 msgstr "Vis"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: ../sensors-applet/prefs-dialog.c:474
 msgid "label with value"
 msgstr "merkelapp med verdi"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: ../sensors-applet/prefs-dialog.c:475
 msgid "icon with value"
 msgstr "ikon med verdi"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: ../sensors-applet/prefs-dialog.c:476
 msgid "value only"
 msgstr "kun verdi"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: ../sensors-applet/prefs-dialog.c:477
 msgid "icon only"
 msgstr "kun ikoner"
 
-#: ../sensors-applet/prefs-dialog.c:480
+#: ../sensors-applet/prefs-dialog.c:478
 msgid "graph only"
 msgstr "kun graf"
 
-#: ../sensors-applet/prefs-dialog.c:493
+#: ../sensors-applet/prefs-dialog.c:491
 msgid "_Display sensors in panel as"
 msgstr "_Vis sensorer i panelet som"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: ../sensors-applet/prefs-dialog.c:503
 msgid "beside labels / icons"
 msgstr "ved siden av merkelapper / ikoner"
 
-#: ../sensors-applet/prefs-dialog.c:506
+#: ../sensors-applet/prefs-dialog.c:504
 msgid "below labels / icons"
 msgstr "nedenfor merkelapper / ikoner"
 
-#: ../sensors-applet/prefs-dialog.c:519
+#: ../sensors-applet/prefs-dialog.c:517
 msgid "Preferred _position of sensor values"
 msgstr "Foretrukken _posisjon for sensorverdier"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: ../sensors-applet/prefs-dialog.c:529
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: ../sensors-applet/prefs-dialog.c:530
 msgid "Celsius"
 msgstr "Celsius"
 
-#: ../sensors-applet/prefs-dialog.c:533
+#: ../sensors-applet/prefs-dialog.c:531
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../sensors-applet/prefs-dialog.c:546
+#: ../sensors-applet/prefs-dialog.c:544
 msgid "_Temperature scale"
 msgstr "_Temperaturskala"
 
-#: ../sensors-applet/prefs-dialog.c:572
+#: ../sensors-applet/prefs-dialog.c:570
 msgid "Graph _size (pixels)"
 msgstr "Graf_størrelse (billedpunkter)"
 
 #. hide/show units
-#: ../sensors-applet/prefs-dialog.c:584
+#: ../sensors-applet/prefs-dialog.c:582
 msgid "Show _units"
 msgstr "Vis _enheter"
 
-#: ../sensors-applet/prefs-dialog.c:592
+#: ../sensors-applet/prefs-dialog.c:590
 msgid "Update"
 msgstr "Oppdater"
 
-#: ../sensors-applet/prefs-dialog.c:619
+#: ../sensors-applet/prefs-dialog.c:617
 msgid "Update _interval (secs)"
 msgstr "Oppdaterings_intervall (sek.)"
 
-#: ../sensors-applet/prefs-dialog.c:629
+#: ../sensors-applet/prefs-dialog.c:627
 msgid "Notifications"
 msgstr "Varslinger"
 
-#: ../sensors-applet/prefs-dialog.c:639
+#: ../sensors-applet/prefs-dialog.c:637
 msgid "Display _notifications"
 msgstr "Vis _påminnelser"
 
-#: ../sensors-applet/prefs-dialog.c:773
+#: ../sensors-applet/prefs-dialog.c:771
 msgid "Sensor"
 msgstr "Sensor"
 
-#: ../sensors-applet/prefs-dialog.c:780
+#: ../sensors-applet/prefs-dialog.c:778
 msgid "Label"
 msgstr "Merkelapp"
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: ../sensors-applet/prefs-dialog.c:788
 msgid "Labels can be edited directly by clicking on them."
 msgstr "Merkelapper kan endres direkte ved å klikke på dem."
 
-#: ../sensors-applet/prefs-dialog.c:791
+#: ../sensors-applet/prefs-dialog.c:789
 msgid "Enabled"
 msgstr "Påslått"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:797
-#: ../sensors-applet/sensor-config-dialog.c:444
+#: ../sensors-applet/prefs-dialog.c:798
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Icon"
 msgstr "Ikon"
 
-#: ../sensors-applet/prefs-dialog.c:915
+#: ../sensors-applet/prefs-dialog.c:916
 msgid "General Options"
 msgstr "Generelle innstillinger"
 
-#: ../sensors-applet/prefs-dialog.c:919
+#: ../sensors-applet/prefs-dialog.c:920
 msgid "Sensors"
 msgstr "Sensorer"
 
@@ -328,72 +328,82 @@ msgstr "FEIL"
 #. translator
 #: ../sensors-applet/about-dialog.c:44
 msgid "translator-credits"
-msgstr "Kjartan Maraas <kmaraas@gnome.org>\nEspen Stefansen <libbe AT stefansen DOT net>\nAllan Nordhøy <epost@anotheragency.no>"
+msgstr ""
+"Send en e-post om du finner feil eller mangler i oversettelsen.\n"
+"\n"
+"stefanok (Stefano Karapetsas) 7943\n"
+"kingu (Allan Nordhøy) epost@anotheragency.no 3326\n"
+"pompel9 (Kenneth Jenssen) 186\n"
+"Bornxlo (Alexander Jansen) 93\n"
+"flexiondotorg (Martin Wimpress) 19\n"
+"wty (Håvard Havdal) 18\n"
+"\n"
+"Av totalt 11597 tekststrenger."
 
-#: ../sensors-applet/sensor-config-dialog.c:392
+#: ../sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "Sensoregenskaper"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:417
+#: ../sensors-applet/sensor-config-dialog.c:413
 msgid "Graph"
 msgstr "Graf"
 
-#: ../sensors-applet/sensor-config-dialog.c:430
+#: ../sensors-applet/sensor-config-dialog.c:426
 msgid "Graph Color"
 msgstr "Graf farge"
 
-#: ../sensors-applet/sensor-config-dialog.c:433
+#: ../sensors-applet/sensor-config-dialog.c:429
 msgid "Graph _color"
 msgstr "Graf_farge"
 
-#: ../sensors-applet/sensor-config-dialog.c:487
+#: ../sensors-applet/sensor-config-dialog.c:483
 msgid "Sensor _icon"
 msgstr "Sensor-_ikon"
 
-#: ../sensors-applet/sensor-config-dialog.c:493
+#: ../sensors-applet/sensor-config-dialog.c:489
 msgid "Scaling Parameters"
 msgstr "Skaleringsparameter"
 
-#: ../sensors-applet/sensor-config-dialog.c:522
+#: ../sensors-applet/sensor-config-dialog.c:518
 msgid "Sensor value _multiplier"
 msgstr "_Multiplikator for sensorverdi"
 
-#: ../sensors-applet/sensor-config-dialog.c:550
+#: ../sensors-applet/sensor-config-dialog.c:546
 msgid "Sensor value _offset"
 msgstr "_Forskyvning for sensorverdi"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:559
+#: ../sensors-applet/sensor-config-dialog.c:555
 msgid "Sensor Limits"
 msgstr "Sensorbegrensninger"
 
-#: ../sensors-applet/sensor-config-dialog.c:587
+#: ../sensors-applet/sensor-config-dialog.c:583
 msgid "Sensor _low value"
 msgstr "_Lav verdi for sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:615
+#: ../sensors-applet/sensor-config-dialog.c:611
 msgid "Sensor _high value"
 msgstr "_Høy verdi for sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:623
+#: ../sensors-applet/sensor-config-dialog.c:619
 #: ../sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "Alarm"
 
-#: ../sensors-applet/sensor-config-dialog.c:652
+#: ../sensors-applet/sensor-config-dialog.c:648
 msgid "Alarm _repeat interval (secs)"
 msgstr "Alarm _gjentakningsintervall (sek.)"
 
-#: ../sensors-applet/sensor-config-dialog.c:671
+#: ../sensors-applet/sensor-config-dialog.c:667
 msgid "Lo_w alarm command"
 msgstr "La_v alarmkommando"
 
-#: ../sensors-applet/sensor-config-dialog.c:692
+#: ../sensors-applet/sensor-config-dialog.c:688
 msgid "Hi_gh alarm command"
 msgstr "H_øy alarmkommando"
 
-#: ../sensors-applet/sensor-config-dialog.c:705
+#: ../sensors-applet/sensor-config-dialog.c:701
 msgid "_Enable alarm"
 msgstr "_Aktiver alarm"
 
@@ -464,7 +474,9 @@ msgstr "Feil under oppdatering av sensor %s"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "Det oppsto en feil under oppdatering av verdien for sensoren %s som finnes på %s."
+msgstr ""
+"Det oppsto en feil under oppdatering av verdien for sensoren %s som finnes "
+"på %s."
 
 #: ../sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"

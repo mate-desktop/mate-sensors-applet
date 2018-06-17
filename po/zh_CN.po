@@ -1,21 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Davy Defaud <davy.defaud@free.fr>, 2005
-# Mingcong Bai <jeffbai@aosc.xyz>, 2017
-# Mingye Wang <arthur200126@gmail.com>, 2016
-# Wylmer Wang, 2013
-# hiahoo lee (leaber) <zodiac8765@gmail.com>, 2013
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-25 17:09+0100\n"
-"PO-Revision-Date: 2017-12-01 16:04+0000\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
+"POT-Creation-Date: 2018-03-17 15:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Mingye Wang <arthur200126@gmail.com>, 2018\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -190,123 +186,123 @@ msgstr "温度"
 msgid "Ambient"
 msgstr "周边的"
 
-#: ../sensors-applet/prefs-dialog.c:421
+#: ../sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "传感器控件属性"
 
-#: ../sensors-applet/prefs-dialog.c:460
-#: ../sensors-applet/sensors-applet.c:1279
+#: ../sensors-applet/prefs-dialog.c:456
+#: ../sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "未发现传感器!"
 
-#: ../sensors-applet/prefs-dialog.c:466
+#: ../sensors-applet/prefs-dialog.c:462
 msgid "Display"
 msgstr "显示"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: ../sensors-applet/prefs-dialog.c:474
 msgid "label with value"
 msgstr "标签与值"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: ../sensors-applet/prefs-dialog.c:475
 msgid "icon with value"
 msgstr "图标与值"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: ../sensors-applet/prefs-dialog.c:476
 msgid "value only"
 msgstr "值"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: ../sensors-applet/prefs-dialog.c:477
 msgid "icon only"
 msgstr "图标"
 
-#: ../sensors-applet/prefs-dialog.c:480
+#: ../sensors-applet/prefs-dialog.c:478
 msgid "graph only"
 msgstr "图形显示"
 
-#: ../sensors-applet/prefs-dialog.c:493
+#: ../sensors-applet/prefs-dialog.c:491
 msgid "_Display sensors in panel as"
 msgstr "在面板中显示传感器(_D)"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: ../sensors-applet/prefs-dialog.c:503
 msgid "beside labels / icons"
 msgstr "在标签/图标旁边"
 
-#: ../sensors-applet/prefs-dialog.c:506
+#: ../sensors-applet/prefs-dialog.c:504
 msgid "below labels / icons"
 msgstr "在标签/图标下面"
 
-#: ../sensors-applet/prefs-dialog.c:519
+#: ../sensors-applet/prefs-dialog.c:517
 msgid "Preferred _position of sensor values"
 msgstr "传感器值的位置(_p)"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: ../sensors-applet/prefs-dialog.c:529
 msgid "Kelvin"
 msgstr "开氏温标"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: ../sensors-applet/prefs-dialog.c:530
 msgid "Celsius"
 msgstr "摄氏温标"
 
-#: ../sensors-applet/prefs-dialog.c:533
+#: ../sensors-applet/prefs-dialog.c:531
 msgid "Fahrenheit"
 msgstr "华氏温标"
 
-#: ../sensors-applet/prefs-dialog.c:546
+#: ../sensors-applet/prefs-dialog.c:544
 msgid "_Temperature scale"
 msgstr "温度范围(_T)"
 
-#: ../sensors-applet/prefs-dialog.c:572
+#: ../sensors-applet/prefs-dialog.c:570
 msgid "Graph _size (pixels)"
 msgstr "图像大小(_s)(像素)"
 
 #. hide/show units
-#: ../sensors-applet/prefs-dialog.c:584
+#: ../sensors-applet/prefs-dialog.c:582
 msgid "Show _units"
 msgstr "显示单位(_U)"
 
-#: ../sensors-applet/prefs-dialog.c:592
+#: ../sensors-applet/prefs-dialog.c:590
 msgid "Update"
 msgstr "更新"
 
-#: ../sensors-applet/prefs-dialog.c:619
+#: ../sensors-applet/prefs-dialog.c:617
 msgid "Update _interval (secs)"
 msgstr "更新间隔(_i)(秒)"
 
-#: ../sensors-applet/prefs-dialog.c:629
+#: ../sensors-applet/prefs-dialog.c:627
 msgid "Notifications"
 msgstr "通知"
 
-#: ../sensors-applet/prefs-dialog.c:639
+#: ../sensors-applet/prefs-dialog.c:637
 msgid "Display _notifications"
 msgstr "显示通知(_n)"
 
-#: ../sensors-applet/prefs-dialog.c:773
+#: ../sensors-applet/prefs-dialog.c:771
 msgid "Sensor"
 msgstr "传感器"
 
-#: ../sensors-applet/prefs-dialog.c:780
+#: ../sensors-applet/prefs-dialog.c:778
 msgid "Label"
 msgstr "标签"
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: ../sensors-applet/prefs-dialog.c:788
 msgid "Labels can be edited directly by clicking on them."
 msgstr "点击时能直接编辑标签"
 
-#: ../sensors-applet/prefs-dialog.c:791
+#: ../sensors-applet/prefs-dialog.c:789
 msgid "Enabled"
 msgstr "启用"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:797
-#: ../sensors-applet/sensor-config-dialog.c:444
+#: ../sensors-applet/prefs-dialog.c:798
+#: ../sensors-applet/sensor-config-dialog.c:440
 msgid "Icon"
 msgstr "图标"
 
-#: ../sensors-applet/prefs-dialog.c:915
+#: ../sensors-applet/prefs-dialog.c:916
 msgid "General Options"
 msgstr "通用选项"
 
-#: ../sensors-applet/prefs-dialog.c:919
+#: ../sensors-applet/prefs-dialog.c:920
 msgid "Sensors"
 msgstr "传感器"
 
@@ -331,72 +327,82 @@ msgstr "错误"
 #. translator
 #: ../sensors-applet/about-dialog.c:44
 msgid "translator-credits"
-msgstr "Wylmer Wang <wantinghard@gmail.com>"
+msgstr ""
+"Christopher Meng <i@cicku.me>, 2012-2013\n"
+"ravix <dr.neemous@gmail.com>, 2013\n"
+"Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
+"Cravix <dr.neemous@gmail.com>, 2013\n"
+"nyanyh <rebuilty@gmail.com>, 2013\n"
+"liulitchi <xingzuo88@qq.com>, 2013\n"
+"玉堂白鹤 <yjwork@qq.com>, 2015\n"
+"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
+"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
+"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
 
-#: ../sensors-applet/sensor-config-dialog.c:392
+#: ../sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "传感器属性"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:417
+#: ../sensors-applet/sensor-config-dialog.c:413
 msgid "Graph"
 msgstr "图像"
 
-#: ../sensors-applet/sensor-config-dialog.c:430
+#: ../sensors-applet/sensor-config-dialog.c:426
 msgid "Graph Color"
 msgstr "图像颜色"
 
-#: ../sensors-applet/sensor-config-dialog.c:433
+#: ../sensors-applet/sensor-config-dialog.c:429
 msgid "Graph _color"
 msgstr "图像颜色(_c)"
 
-#: ../sensors-applet/sensor-config-dialog.c:487
+#: ../sensors-applet/sensor-config-dialog.c:483
 msgid "Sensor _icon"
 msgstr "传感器图标(_i)"
 
-#: ../sensors-applet/sensor-config-dialog.c:493
+#: ../sensors-applet/sensor-config-dialog.c:489
 msgid "Scaling Parameters"
 msgstr "范围参数"
 
-#: ../sensors-applet/sensor-config-dialog.c:522
+#: ../sensors-applet/sensor-config-dialog.c:518
 msgid "Sensor value _multiplier"
 msgstr "传感器增值(_m)"
 
-#: ../sensors-applet/sensor-config-dialog.c:550
+#: ../sensors-applet/sensor-config-dialog.c:546
 msgid "Sensor value _offset"
 msgstr "传感器偏移值(_o)"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:559
+#: ../sensors-applet/sensor-config-dialog.c:555
 msgid "Sensor Limits"
 msgstr "传感器限制"
 
-#: ../sensors-applet/sensor-config-dialog.c:587
+#: ../sensors-applet/sensor-config-dialog.c:583
 msgid "Sensor _low value"
 msgstr "传感器低值(_l)"
 
-#: ../sensors-applet/sensor-config-dialog.c:615
+#: ../sensors-applet/sensor-config-dialog.c:611
 msgid "Sensor _high value"
 msgstr "传感器高值(_h)"
 
-#: ../sensors-applet/sensor-config-dialog.c:623
+#: ../sensors-applet/sensor-config-dialog.c:619
 #: ../sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "警报"
 
-#: ../sensors-applet/sensor-config-dialog.c:652
+#: ../sensors-applet/sensor-config-dialog.c:648
 msgid "Alarm _repeat interval (secs)"
 msgstr "警报重复间隔(_r)(秒)"
 
-#: ../sensors-applet/sensor-config-dialog.c:671
+#: ../sensors-applet/sensor-config-dialog.c:667
 msgid "Lo_w alarm command"
 msgstr "低值报警命令(_w)"
 
-#: ../sensors-applet/sensor-config-dialog.c:692
+#: ../sensors-applet/sensor-config-dialog.c:688
 msgid "Hi_gh alarm command"
 msgstr "高值报警命令(_g)"
 
-#: ../sensors-applet/sensor-config-dialog.c:705
+#: ../sensors-applet/sensor-config-dialog.c:701
 msgid "_Enable alarm"
 msgstr "启用警报(_E)"
 
@@ -406,7 +412,7 @@ msgstr "属性(_P)"
 
 #: ../sensors-applet/sensors-applet.c:241
 msgid "_Help"
-msgstr "帮助(_H)"
+msgstr "帮助（_H）"
 
 #: ../sensors-applet/sensors-applet.c:244
 msgid "_About"
