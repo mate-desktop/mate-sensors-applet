@@ -1,20 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Carlos Moreira, 2013
-# Carlos Moreira, 2014,2017
-# José Vieira <jvieira33@sapo.pt>, 2017
-# Manuela Silva <manuela.silva@sky.com>, 2016
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-25 17:09+0100\n"
-"PO-Revision-Date: 2017-12-14 15:18+0000\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
-"Language-Team: Portuguese (http://www.transifex.com/mate/MATE/language/pt/)\n"
+"POT-Creation-Date: 2018-03-17 15:21+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2018\n"
+"Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +28,9 @@ msgstr "Monitor de Sensores de Hardware"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr "Exibe as leituras de temperatura, velocidade das ventoinhas, e sensor de voltagem"
+msgstr ""
+"Exibe as leituras de temperatura, velocidade das ventoinhas, e sensor de "
+"voltagem"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
@@ -64,7 +63,8 @@ msgstr "Demora (em ms) entre atualizações"
 #: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "O tamanho do gráfico em pixeis (largura se horizontal, altura se vertical)"
+msgstr ""
+"O tamanho do gráfico em pixeis (largura se horizontal, altura se vertical)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
@@ -189,123 +189,140 @@ msgstr "temperatura"
 msgid "Ambient"
 msgstr "Ambiente"
 
-#: ../sensors-applet/prefs-dialog.c:421
+#: ../sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "Preferências da Applet de Sensores"
 
-#: ../sensors-applet/prefs-dialog.c:460
-#: ../sensors-applet/sensors-applet.c:1279
+#: ../sensors-applet/prefs-dialog.c:457
+#: ../sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "Não existem sensores!"
 
-#: ../sensors-applet/prefs-dialog.c:466
+#: ../sensors-applet/prefs-dialog.c:463
 msgid "Display"
-msgstr "Visor"
+msgstr "Ecrâ"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: ../sensors-applet/prefs-dialog.c:475
 msgid "label with value"
 msgstr "etiqueta com valor"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: ../sensors-applet/prefs-dialog.c:476
 msgid "icon with value"
 msgstr "ícone com valor"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: ../sensors-applet/prefs-dialog.c:477
 msgid "value only"
 msgstr "apenas valor"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: ../sensors-applet/prefs-dialog.c:478
 msgid "icon only"
 msgstr "apenas ícone"
 
-#: ../sensors-applet/prefs-dialog.c:480
+#: ../sensors-applet/prefs-dialog.c:479
 msgid "graph only"
 msgstr "apenas gráfico"
 
-#: ../sensors-applet/prefs-dialog.c:493
+#: ../sensors-applet/prefs-dialog.c:492
 msgid "_Display sensors in panel as"
 msgstr "_Mostrar sensores no painel como"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: ../sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
 msgstr "ao lado das etiquetas / ícones"
 
-#: ../sensors-applet/prefs-dialog.c:506
+#: ../sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
 msgstr "abaixo das etiquetas / ícones"
 
-#: ../sensors-applet/prefs-dialog.c:519
+#: ../sensors-applet/prefs-dialog.c:518
 msgid "Preferred _position of sensor values"
 msgstr "_Posição preferida dos valores de sensor"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: ../sensors-applet/prefs-dialog.c:530
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: ../sensors-applet/prefs-dialog.c:531
 msgid "Celsius"
 msgstr "Celsius"
 
-#: ../sensors-applet/prefs-dialog.c:533
+#: ../sensors-applet/prefs-dialog.c:532
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../sensors-applet/prefs-dialog.c:546
+#: ../sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
 msgstr "Escala de _temperatura"
 
-#: ../sensors-applet/prefs-dialog.c:572
+#: ../sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
 msgstr "_Tamanho do gráfico (pixeis)"
 
 #. hide/show units
-#: ../sensors-applet/prefs-dialog.c:584
+#: ../sensors-applet/prefs-dialog.c:583
 msgid "Show _units"
 msgstr "Mostrar _unidades"
 
-#: ../sensors-applet/prefs-dialog.c:592
+#: ../sensors-applet/prefs-dialog.c:591
 msgid "Update"
 msgstr "Atualizar"
 
-#: ../sensors-applet/prefs-dialog.c:619
+#: ../sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
 msgstr "Intervalo de atualização (segundos)"
 
-#: ../sensors-applet/prefs-dialog.c:629
+#: ../sensors-applet/prefs-dialog.c:628
 msgid "Notifications"
 msgstr "Notificações"
 
-#: ../sensors-applet/prefs-dialog.c:639
+#: ../sensors-applet/prefs-dialog.c:638
 msgid "Display _notifications"
 msgstr "Mostrar _notificações"
 
-#: ../sensors-applet/prefs-dialog.c:773
+#: ../sensors-applet/prefs-dialog.c:772
 msgid "Sensor"
 msgstr "Sensor"
 
-#: ../sensors-applet/prefs-dialog.c:780
+#: ../sensors-applet/prefs-dialog.c:779
 msgid "Label"
 msgstr "Etiqueta"
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: ../sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
 msgstr "As etiquetas podem ser editadas diretamente ao clicar nelas."
 
-#: ../sensors-applet/prefs-dialog.c:791
+#: ../sensors-applet/prefs-dialog.c:790
 msgid "Enabled"
-msgstr "Ativado"
+msgstr "Ativo"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:797
-#: ../sensors-applet/sensor-config-dialog.c:444
+#: ../sensors-applet/prefs-dialog.c:799
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Icon"
 msgstr "Ícone"
 
-#: ../sensors-applet/prefs-dialog.c:915
+#. when selection is changed, make sure sensor_config button is activated
+#. Create buttons for user to interact with sensors tree
+#: ../sensors-applet/prefs-dialog.c:831
+msgid "_Up"
+msgstr "_Subir"
+
+#: ../sensors-applet/prefs-dialog.c:839
+msgid "_Down"
+msgstr ""
+
+#. Sensor Config button
+#. initially make button insensitive until user selects a row
+#. from the sensors tree
+#: ../sensors-applet/prefs-dialog.c:873
+msgid "_Properties"
+msgstr "_Propriedades"
+
+#: ../sensors-applet/prefs-dialog.c:920
 msgid "General Options"
 msgstr "Opções Gerais"
 
-#: ../sensors-applet/prefs-dialog.c:919
+#: ../sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
 msgstr "Sensores"
 
@@ -330,72 +347,72 @@ msgstr "ERRO"
 #. translator
 #: ../sensors-applet/about-dialog.c:44
 msgid "translator-credits"
-msgstr "Carlos Moreira"
+msgstr "créditos de tradução"
 
-#: ../sensors-applet/sensor-config-dialog.c:392
+#: ../sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "Propriedades do Sensor"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:417
+#: ../sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
 msgstr "Gráfico"
 
-#: ../sensors-applet/sensor-config-dialog.c:430
+#: ../sensors-applet/sensor-config-dialog.c:429
 msgid "Graph Color"
 msgstr "Cor do Gráfico"
 
-#: ../sensors-applet/sensor-config-dialog.c:433
+#: ../sensors-applet/sensor-config-dialog.c:432
 msgid "Graph _color"
 msgstr "_Cor do gráfico"
 
-#: ../sensors-applet/sensor-config-dialog.c:487
+#: ../sensors-applet/sensor-config-dialog.c:486
 msgid "Sensor _icon"
 msgstr "_Ícone do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:493
+#: ../sensors-applet/sensor-config-dialog.c:492
 msgid "Scaling Parameters"
 msgstr "Parâmetros de Escala"
 
-#: ../sensors-applet/sensor-config-dialog.c:522
+#: ../sensors-applet/sensor-config-dialog.c:521
 msgid "Sensor value _multiplier"
 msgstr "_Multiplicador do valor do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:550
+#: ../sensors-applet/sensor-config-dialog.c:549
 msgid "Sensor value _offset"
 msgstr "_Variação do valor do sensor"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:559
+#: ../sensors-applet/sensor-config-dialog.c:558
 msgid "Sensor Limits"
 msgstr "Limites dos Sensores"
 
-#: ../sensors-applet/sensor-config-dialog.c:587
+#: ../sensors-applet/sensor-config-dialog.c:586
 msgid "Sensor _low value"
 msgstr "Valor _baixo do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:615
+#: ../sensors-applet/sensor-config-dialog.c:614
 msgid "Sensor _high value"
 msgstr "Valor _alto do sensor"
 
-#: ../sensors-applet/sensor-config-dialog.c:623
+#: ../sensors-applet/sensor-config-dialog.c:622
 #: ../sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "Alarme"
 
-#: ../sensors-applet/sensor-config-dialog.c:652
+#: ../sensors-applet/sensor-config-dialog.c:651
 msgid "Alarm _repeat interval (secs)"
 msgstr "Intervalo de _repetição do alarme (segundos)"
 
-#: ../sensors-applet/sensor-config-dialog.c:671
+#: ../sensors-applet/sensor-config-dialog.c:670
 msgid "Lo_w alarm command"
 msgstr "Comando de alarme _baixo"
 
-#: ../sensors-applet/sensor-config-dialog.c:692
+#: ../sensors-applet/sensor-config-dialog.c:691
 msgid "Hi_gh alarm command"
 msgstr "Comando de alarme _alto"
 
-#: ../sensors-applet/sensor-config-dialog.c:705
+#: ../sensors-applet/sensor-config-dialog.c:704
 msgid "_Enable alarm"
 msgstr "_Ativar alarme"
 
@@ -405,7 +422,7 @@ msgstr "_Preferências"
 
 #: ../sensors-applet/sensors-applet.c:241
 msgid "_Help"
-msgstr "_Ajuda"
+msgstr "A_juda"
 
 #: ../sensors-applet/sensors-applet.c:244
 msgid "_About"
@@ -466,7 +483,8 @@ msgstr "Erro ao atualizar o sensor %s"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "Ocorreu um erro ao tentar atualizar o valor do sensor %s localizado em %s."
+msgstr ""
+"Ocorreu um erro ao tentar atualizar o valor do sensor %s localizado em %s."
 
 #: ../sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"

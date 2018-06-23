@@ -1,20 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# corneliu.e <corneliueva@yahoo.com>, 2017
-# Daniel <danny3@tutanota.com>, 2015-2016
-# Polihron Alexandru (APoliTech) <ppolihron@gmail.com>, 2016
-# Spoială Cristian <scristian@gmail.com>, 2005
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-25 17:09+0100\n"
-"PO-Revision-Date: 2017-11-29 11:38+0000\n"
-"Last-Translator: corneliu.e <corneliueva@yahoo.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
+"POT-Creation-Date: 2018-03-17 15:21+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Polihron Alexandru (APoliTech) <ppolihron@gmail.com>, 2018\n"
+"Language-Team: Romanian (https://www.transifex.com/mate/teams/13566/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +28,9 @@ msgstr "Senzori care monitorizeaza componenta principala"
 
 #: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr "Afișează temperatura, viteza ventilatorului și citirile senzorilor de tensiune"
+msgstr ""
+"Afișează temperatura, viteza ventilatorului și citirile senzorilor de "
+"tensiune"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
@@ -64,7 +63,9 @@ msgstr "Întârziere (în ms) între reîmprospătări"
 #: ../org.mate.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
-msgstr "Dimensiunea graficului în pixeli (lățime dacă este orizontal, înălțime dacă este vertical)"
+msgstr ""
+"Dimensiunea graficului în pixeli (lățime dacă este orizontal, înălțime dacă "
+"este vertical)"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
@@ -189,123 +190,140 @@ msgstr "Temperatură"
 msgid "Ambient"
 msgstr "Ambient"
 
-#: ../sensors-applet/prefs-dialog.c:421
+#: ../sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "Preferinţe miniaplicație senzori"
 
-#: ../sensors-applet/prefs-dialog.c:460
-#: ../sensors-applet/sensors-applet.c:1279
+#: ../sensors-applet/prefs-dialog.c:457
+#: ../sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "Nu s-au găsit senzorii!"
 
-#: ../sensors-applet/prefs-dialog.c:466
+#: ../sensors-applet/prefs-dialog.c:463
 msgid "Display"
 msgstr "Ecran"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: ../sensors-applet/prefs-dialog.c:475
 msgid "label with value"
 msgstr "Nume și valoare"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: ../sensors-applet/prefs-dialog.c:476
 msgid "icon with value"
 msgstr "Pictogramă și valoare"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: ../sensors-applet/prefs-dialog.c:477
 msgid "value only"
 msgstr "Doar valoare"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: ../sensors-applet/prefs-dialog.c:478
 msgid "icon only"
 msgstr "Doar pictogramă"
 
-#: ../sensors-applet/prefs-dialog.c:480
+#: ../sensors-applet/prefs-dialog.c:479
 msgid "graph only"
 msgstr "Doar grafic"
 
-#: ../sensors-applet/prefs-dialog.c:493
+#: ../sensors-applet/prefs-dialog.c:492
 msgid "_Display sensors in panel as"
 msgstr "Afișează _senzorii în panou ca"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: ../sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
 msgstr "Langă nume/ pictograme"
 
-#: ../sensors-applet/prefs-dialog.c:506
+#: ../sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
 msgstr "Sub nume/ pictograme"
 
-#: ../sensors-applet/prefs-dialog.c:519
+#: ../sensors-applet/prefs-dialog.c:518
 msgid "Preferred _position of sensor values"
 msgstr "Poziție _preferată pentru valorile senzorilor"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: ../sensors-applet/prefs-dialog.c:530
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: ../sensors-applet/prefs-dialog.c:531
 msgid "Celsius"
 msgstr "Celsius"
 
-#: ../sensors-applet/prefs-dialog.c:533
+#: ../sensors-applet/prefs-dialog.c:532
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../sensors-applet/prefs-dialog.c:546
+#: ../sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
 msgstr "Scală _temperatură"
 
-#: ../sensors-applet/prefs-dialog.c:572
+#: ../sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
 msgstr "Dimensiune grafic (pixeli)"
 
 #. hide/show units
-#: ../sensors-applet/prefs-dialog.c:584
+#: ../sensors-applet/prefs-dialog.c:583
 msgid "Show _units"
 msgstr "Arată _unități"
 
-#: ../sensors-applet/prefs-dialog.c:592
+#: ../sensors-applet/prefs-dialog.c:591
 msgid "Update"
 msgstr "Actualizează"
 
-#: ../sensors-applet/prefs-dialog.c:619
+#: ../sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
 msgstr "Interval actualizare (secunde)"
 
-#: ../sensors-applet/prefs-dialog.c:629
+#: ../sensors-applet/prefs-dialog.c:628
 msgid "Notifications"
 msgstr "Notificări"
 
-#: ../sensors-applet/prefs-dialog.c:639
+#: ../sensors-applet/prefs-dialog.c:638
 msgid "Display _notifications"
 msgstr "Arată _notificări"
 
-#: ../sensors-applet/prefs-dialog.c:773
+#: ../sensors-applet/prefs-dialog.c:772
 msgid "Sensor"
 msgstr "Senzor"
 
-#: ../sensors-applet/prefs-dialog.c:780
+#: ../sensors-applet/prefs-dialog.c:779
 msgid "Label"
 msgstr "Nume"
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: ../sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
 msgstr "Numele pot fi modificate direct prin clic pe ele"
 
-#: ../sensors-applet/prefs-dialog.c:791
+#: ../sensors-applet/prefs-dialog.c:790
 msgid "Enabled"
 msgstr "Activat"
 
 #. icon stuff
-#: ../sensors-applet/prefs-dialog.c:797
-#: ../sensors-applet/sensor-config-dialog.c:444
+#: ../sensors-applet/prefs-dialog.c:799
+#: ../sensors-applet/sensor-config-dialog.c:443
 msgid "Icon"
 msgstr "Pictogramă"
 
-#: ../sensors-applet/prefs-dialog.c:915
+#. when selection is changed, make sure sensor_config button is activated
+#. Create buttons for user to interact with sensors tree
+#: ../sensors-applet/prefs-dialog.c:831
+msgid "_Up"
+msgstr "_Sus"
+
+#: ../sensors-applet/prefs-dialog.c:839
+msgid "_Down"
+msgstr ""
+
+#. Sensor Config button
+#. initially make button insensitive until user selects a row
+#. from the sensors tree
+#: ../sensors-applet/prefs-dialog.c:873
+msgid "_Properties"
+msgstr "_Proprietăți"
+
+#: ../sensors-applet/prefs-dialog.c:920
 msgid "General Options"
 msgstr "Opțiuni generale"
 
-#: ../sensors-applet/prefs-dialog.c:919
+#: ../sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
 msgstr "Senzori"
 
@@ -332,76 +350,76 @@ msgstr "EROARE"
 msgid "translator-credits"
 msgstr "Daniel Alămiță <danny3@tutanota.com>"
 
-#: ../sensors-applet/sensor-config-dialog.c:392
+#: ../sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "Proprietăți senzor"
 
 #. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:417
+#: ../sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
 msgstr "Grafic"
 
-#: ../sensors-applet/sensor-config-dialog.c:430
+#: ../sensors-applet/sensor-config-dialog.c:429
 msgid "Graph Color"
 msgstr "Culoare grafic"
 
-#: ../sensors-applet/sensor-config-dialog.c:433
+#: ../sensors-applet/sensor-config-dialog.c:432
 msgid "Graph _color"
 msgstr "_Culoare grafic"
 
-#: ../sensors-applet/sensor-config-dialog.c:487
+#: ../sensors-applet/sensor-config-dialog.c:486
 msgid "Sensor _icon"
 msgstr "P_ictogramă senzor"
 
-#: ../sensors-applet/sensor-config-dialog.c:493
+#: ../sensors-applet/sensor-config-dialog.c:492
 msgid "Scaling Parameters"
 msgstr "Parametrii scalare"
 
-#: ../sensors-applet/sensor-config-dialog.c:522
+#: ../sensors-applet/sensor-config-dialog.c:521
 msgid "Sensor value _multiplier"
 msgstr "Multiplicator pentru valoarea senzorului"
 
-#: ../sensors-applet/sensor-config-dialog.c:550
+#: ../sensors-applet/sensor-config-dialog.c:549
 msgid "Sensor value _offset"
 msgstr "_Decalaj valoare senzor"
 
 #. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:559
+#: ../sensors-applet/sensor-config-dialog.c:558
 msgid "Sensor Limits"
 msgstr "Limite senzor"
 
-#: ../sensors-applet/sensor-config-dialog.c:587
+#: ../sensors-applet/sensor-config-dialog.c:586
 msgid "Sensor _low value"
 msgstr "Valoare _minimă senzor"
 
-#: ../sensors-applet/sensor-config-dialog.c:615
+#: ../sensors-applet/sensor-config-dialog.c:614
 msgid "Sensor _high value"
 msgstr "Valoare ma_ximă senzor"
 
-#: ../sensors-applet/sensor-config-dialog.c:623
+#: ../sensors-applet/sensor-config-dialog.c:622
 #: ../sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "Alarmă"
 
-#: ../sensors-applet/sensor-config-dialog.c:652
+#: ../sensors-applet/sensor-config-dialog.c:651
 msgid "Alarm _repeat interval (secs)"
 msgstr "Interval _repetare alarmă (secunde)"
 
-#: ../sensors-applet/sensor-config-dialog.c:671
+#: ../sensors-applet/sensor-config-dialog.c:670
 msgid "Lo_w alarm command"
 msgstr "Comandă alarmă nivel _scăzut"
 
-#: ../sensors-applet/sensor-config-dialog.c:692
+#: ../sensors-applet/sensor-config-dialog.c:691
 msgid "Hi_gh alarm command"
 msgstr "Comandă alarmă nivel _ridicat"
 
-#: ../sensors-applet/sensor-config-dialog.c:705
+#: ../sensors-applet/sensor-config-dialog.c:704
 msgid "_Enable alarm"
 msgstr "_Activează alarma"
 
 #: ../sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
-msgstr "_Preferinţe"
+msgstr "_Preferințe"
 
 #: ../sensors-applet/sensors-applet.c:241
 msgid "_Help"
@@ -466,7 +484,9 @@ msgstr "Eroare la actualizarea senzorului %s"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "A apărut o eroare în timp ce se încerca actualizarea valorii senzorului %s localizat la %s."
+msgstr ""
+"A apărut o eroare în timp ce se încerca actualizarea valorii senzorului %s "
+"localizat la %s."
 
 #: ../sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
