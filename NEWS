@@ -1,5 +1,10 @@
 ### mate-sensors-applet 1.21.0
 
+  * Translations update
+  * Fix copyright for plugin files
+  * Add dummy plugin
+  * UDisks2 plugin cleanup
+
 ### mate-sensors-applet 1.20.1
 
   * Translations update
