@@ -32,7 +32,7 @@
 const gchar *plugin_name = "nvidia";
 
 #define THERMAL_SENSOR_TEMP "SensorTemp"
-#define THERMAL_COOLER_LEVEL "CoolerLevel"
+#define THERMAL_COOLER_SPEED "CoolerSpeed"
 #define GPU_CORE_TEMP "CoreTemp"
 #define AMBIENT_TEMP "AmbientTemp"
 
@@ -58,12 +58,12 @@ static gdouble nvidia_plugin_get_sensor_value(const gchar *path,
                           NV_CTRL_THERMAL_SENSOR_READING,
                           &temp);
 
-    } else if (g_ascii_strcasecmp(path, THERMAL_COOLER_LEVEL) == 0) {
+    } else if (g_ascii_strcasecmp(path, THERMAL_COOLER_SPEED) == 0) {
         res = XNVCTRLQueryTargetAttribute(nvidia_sensors_dpy,
                           NV_CTRL_TARGET_TYPE_COOLER,
                           i,
                           0,
-                          NV_CTRL_THERMAL_COOLER_LEVEL,
+                          NV_CTRL_THERMAL_COOLER_SPEED,
                           &temp);
 
     } else if (g_ascii_strcasecmp(path, GPU_CORE_TEMP) == 0) {
@@ -140,10 +140,10 @@ static GList *nvidia_plugin_init(void) {
                         &cnt)) {
 
             for (i = 0; i < cnt; i++) {
-                gchar *id = g_strdup_printf("GPU%d%s", i, THERMAL_COOLER_LEVEL);
+                gchar *id = g_strdup_printf("GPU%d%s", i, THERMAL_COOLER_SPEED);
 
                 sensors_applet_plugin_add_sensor(&sensors,
-                                                 THERMAL_COOLER_LEVEL,
+                                                 THERMAL_COOLER_SPEED,
                                                  id,
                                                  _("GPU"),
                                                  FAN_SENSOR,
