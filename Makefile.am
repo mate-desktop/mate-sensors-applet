@@ -39,6 +39,9 @@ CLEANFILES = $(applet_DATA) \
 	$(gsettings_SCHEMAS) \
 	*.gschema.valid
 
+DISTCHECK_CONFIGURE_FLAGS = \
+	CFLAGS='-Wno-deprecated-declarations'
+
 EXTRA_DIST = $(ui_DATA) \
 	$(applet_in_files).in \
 	$(service_in_files) \
