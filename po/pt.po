@@ -3,13 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Carlos Moreira, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# ogalho Carlos Dias Martins <ogalho@gmail.com>, 2018
+# Rui <xymarior@yandex.com>, 2018
+# MS <manuelarodsilva@gmail.com>, 2018
+# José Vieira <jvieira33@sapo.pt>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:23+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-03-12 07:34+0000\n"
 "Last-Translator: José Vieira <jvieira33@sapo.pt>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -200,7 +208,7 @@ msgstr "Não existem sensores!"
 
 #: ../sensors-applet/prefs-dialog.c:462
 msgid "Display"
-msgstr "Ecrâ"
+msgstr "Ecrã"
 
 #: ../sensors-applet/prefs-dialog.c:474
 msgid "label with value"
