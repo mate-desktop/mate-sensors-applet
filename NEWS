@@ -1,3 +1,11 @@
+### mate-sensors-applet 1.21.1
+
+    tx: sync with transifex
+    disable deprecation warnings for distcheck
+    Add NetBSD support.
+    Use make functions for HELP_LINGUAS
+    add help to transifex config
+
 ### mate-sensors-applet 1.21.0
 
   * Translations update
