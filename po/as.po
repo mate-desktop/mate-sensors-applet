@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:21+0100\n"
+"POT-Creation-Date: 2018-12-23 14:46+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Assamese (https://www.transifex.com/mate/teams/13566/as/)\n"
@@ -142,7 +142,7 @@ msgstr "CPU"
 #: ../plugins/nvidia/nvidia-plugin.c:128 ../plugins/nvidia/nvidia-plugin.c:148
 #: ../plugins/nvidia/nvidia-plugin.c:173
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
-#: ../plugins/aticonfig/aticonfig-plugin.c:106
+#: ../plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr ""
 

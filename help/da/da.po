@@ -1,13 +1,13 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joe Hansen <joedalton2@yahoo.dk>, 2018
+# Joe Hansen <joedalton2@yahoo.dk>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "POT-Creation-Date: 2018-10-04 19:19+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2018\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -182,6 +182,8 @@ msgid ""
 "<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>Manual for panelprogrammet MATE-sensorer version 2.1</revnumber> "
+"<date>Januar 2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:127
@@ -251,11 +253,14 @@ msgid ""
 "<application>MATE Sensors Applet</application> provides a convenient way to "
 "monitor the health of your computer in a simple display on your desktop."
 msgstr ""
+"Panelprogrammet <application>MATE-sensorer</application> tilbyder en nem "
+"måde at overvåge helbredet for din computer i en simpel visning på dit "
+"skrivebord."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:170
 msgid "ACPI thermal zones, via the Linux kernel ACPI modules"
-msgstr ""
+msgstr "ACPI-termiske zoner, via Linuxkernens ACPI-moduler"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:174
@@ -282,6 +287,9 @@ msgid ""
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
 "type=\"http\">lm_sensors and i2c</ulink> packages (kernel 2.4)"
 msgstr ""
+"Via proc-filsystemet og i2c-moduler fra pakkerne <ulink "
+"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
+"type=\"http\">lm_sensors og i2c</ulink> (kerne 2.4)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:189
@@ -290,6 +298,9 @@ msgid ""
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
 "type=\"http\">lm_sensors</ulink> package"
 msgstr ""
+"Via biblioteket libsensors tilbudt med pakken <ulink "
+"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
+"type=\"http\">lm_sensors</ulink>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:199
@@ -358,6 +369,8 @@ msgid ""
 "A number of sensor interfaces are supported, which should be configured "
 "before adding MATE Sensors Applet to the panel: <_:itemizedlist-1/>"
 msgstr ""
+"Et antal sensorgrænseflader er understøttet, som skal konfigureres før "
+"tilføjelse af panelprogrammet MATE-sensorer til panelet: <_:itemizedlist-1/>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:240
@@ -367,6 +380,10 @@ msgid ""
 "<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors "
 "Monitor</guimenuitem> </menuchoice>."
 msgstr ""
+"For at tilføje Panelprogrammet <application>MATE-sensorer</application> til "
+"et panel, højreklik for at åbne panelets pop op-menu, vælg så <menuchoice> "
+"<guimenu>Tilføj til panel</guimenu> <guimenuitem>Overvågning af "
+"udstyrssensorer</guimenuitem> </menuchoice>."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:251
@@ -381,6 +398,10 @@ msgid ""
 " and will display a sensible default sensor if found (such as the "
 "temperature of the CPU)."
 msgstr ""
+"Når du tilføjer panelprogrammet <application>MATE-sensorer</application> til"
+" et panel for den første gang, så vil panelprogrammet søge for tilgængelige "
+"sensorer at overvåge, og vil vise en fornuftig standardsensor hvis fundet "
+"(såsom cpu'ens temperatur)."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:255
@@ -390,6 +411,10 @@ msgid ""
 "</menuchoice> menu item (see <xref linkend=\"sensors-applet-"
 "preferences\"/>)."
 msgstr ""
+"De fleste brugere vil ønske at tilpasse visningen til deres ønske, hvilket "
+"kan gøres via menuelementet <menuchoice> "
+"<guimenuitem>Præferencer</guimenuitem> </menuchoice> (se <xref linkend"
+"=\"sensors-applet-preferences\"/>)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:266
@@ -404,6 +429,10 @@ msgid ""
 "<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
 "pop-up menu."
 msgstr ""
+"For at konfigurere panelprogrammet <application>MATE-sensorer</application>,"
+" højreklik på panelprogrammet, vælg så "
+"<menuchoice><guimenuitem>Præferencer</guimenuitem></menuchoice> fra pop op-"
+"menuen."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:271
@@ -411,6 +440,8 @@ msgid ""
 "The <menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> window "
 "contains the following tabbed sections:"
 msgstr ""
+"Vinduet <menuchoice><guimenuitem>Præferencer</guimenuitem></menuchoice> "
+"indeholder de følgende faneblade:"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:291
@@ -420,7 +451,7 @@ msgstr "Generelle indstillinger"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:294
 msgid "<guilabel>Display sensors in panel as</guilabel>"
-msgstr ""
+msgstr "<guilabel>Vis sensorer i panel som</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:298
@@ -431,16 +462,21 @@ msgid ""
 " sensor. A graph can also be displayed for each sensor, showing the "
 "progression of the sensor value over time."
 msgstr ""
+"Denne indstilling vælger om sensorer vises i panelet med enten deres etiket "
+"eller deres værdi, eller uden identifikator for hver sensor og bare en "
+"visning af deres værdier, eller simpelthen at vise ikonet for hver sensor. "
+"En graf kan også vises for hver sensor, der viser progressionen for "
+"sensorværdien over tid."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:304
 msgid "Default: icon with value."
-msgstr ""
+msgstr "Standard: ikon med værdi."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:308
 msgid "<guilabel>Preferred position of sensor values</guilabel>"
-msgstr ""
+msgstr "<guilabel>Foretrukken position for sensorværdier</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:312
@@ -448,11 +484,13 @@ msgid ""
 "Sensors can be display with either their value beside their icon / label, or"
 " with the value shown below the icon / label."
 msgstr ""
+"Sensorer kan blive vist med enten deres værdi ved siden af deres ikon/etiket"
+" eller med værdien vist under ikonet/etiketten."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:315
 msgid "Default: beside labels / icons."
-msgstr ""
+msgstr "Standard: ved siden af etiketter/ikoner."
 
 #. (itstool) path: note/para
 #: C/index.docbook:318
@@ -461,11 +499,14 @@ msgid ""
 "best position to ensure all sensor elements are visible will be used "
 "instead."
 msgstr ""
+"Hvis der ikke er nok plads i panelet til at bruge den anmodte position, vil "
+"den bedste position, der sikrer at alle sensorelementer er synlige blive "
+"brugt i stedet for."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:325
 msgid "<guilabel>Graph size (pixels)</guilabel>"
-msgstr ""
+msgstr "<guilabel>Grafstørrelse (billedpunkter)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:329
@@ -474,16 +515,19 @@ msgid ""
 "width of the graph (when displayed on either the top or bottom panel) or the"
 " height of the graph (when displayed on the left or right panel)."
 msgstr ""
+"Når sensorer vises som grafer, angiver størrelsen på grafen enten bredden på"
+" grafen (når vist på enten top- eller bundpanel) eller højden på grafen (når"
+" vist til venstre eller højre panel)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:333
 msgid "Default: 42 pixels."
-msgstr ""
+msgstr "Standard: 42 billedpunkter."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:337
 msgid "<guilabel>Temperature scale</guilabel>"
-msgstr ""
+msgstr "<guilabel>Temperaturskala</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:341
@@ -491,31 +535,33 @@ msgid ""
 "Which scale to use for temperature sensors (Kelvin, Fahrenheit or Celsius "
 "are supported)."
 msgstr ""
+"Hvilken skal skal bruges for temperatursensorer (Kelvin, Fahrenheit eller "
+"Celcius er understøttet)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:343
 msgid "Default: Celsius."
-msgstr ""
+msgstr "Standard: Celsius."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:347
 msgid "<guilabel>Update interval</guilabel>"
-msgstr ""
+msgstr "<guilabel>Opdateringsinterval</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:351
 msgid "How often to update the values of each sensor shown within the panel."
-msgstr ""
+msgstr "Hvor ofte skal værdierne for hver sensor vist i panelet opdateres."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:353
 msgid "Default: 2 seconds."
-msgstr ""
+msgstr "Standard: 2 sekunder."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:357
 msgid "<guilabel>Display notifications</guilabel>"
-msgstr ""
+msgstr "<guilabel>Vis påmindelser</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:361
@@ -523,16 +569,18 @@ msgid ""
 "If enabled, MATE Sensors Applet will display notifications to the user when "
 "alarm conditions occur."
 msgstr ""
+"Hvis aktivere vil panelprogrammet MATE-sensorer vise påmindelser til "
+"brugeren, når alarmbetingelser opstår."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:363
 msgid "Default: Enabled."
-msgstr ""
+msgstr "Standard: Aktiveret."
 
 #. (itstool) path: note/para
 #: C/index.docbook:365
 msgid "Alarms for individual sensors must also be enabled."
-msgstr ""
+msgstr "Alarmer for individuelle sensorer skal også være aktiveret."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:376
@@ -542,17 +590,17 @@ msgstr "Sensorer"
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "A fixed ID to identify the sensor within its interface."
-msgstr ""
+msgstr "En fast id til at identificere sensoren i sin grænseflade."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:386
 msgid "A user selectable icon to identify the sensor within the panel."
-msgstr ""
+msgstr "Et brugervalgt ikon til at identificere sensoren i panelet."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:391
 msgid "A user editable label to identify the sensor within the panel."
-msgstr ""
+msgstr "En brugerredigeret etiket til at identificere sensoren i panelet."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:396
@@ -560,6 +608,8 @@ msgid ""
 "A check-box to allow the user to enable / disable monitoring and display of "
 "the sensor within the panel."
 msgstr ""
+"En afkrydsningsboks så brugeren kan aktivere/deaktivere overvågning og "
+"visning af sensoren i panelet."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:377
@@ -571,6 +621,12 @@ msgid ""
 " finely configured, providing a separate window box for this purpose. (see "
 "<xref linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 msgstr ""
+"Fanebladet sensorer i præferencevinduet tilbyder indstillingerne til "
+"konfiguration af hver individuel sensor. Hver sensor er vist under sin "
+"specifikke grænseflade, sammen med: <_:itemizedlist-1/> Knappen "
+"<guibutton>Egenskaber</guibutton> gør det muligt for en specifik sensor at "
+"blive mere fint konfigureret, da der tilbydes en separat vinduesboks til "
+"dette formål. (se <xref linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:408
@@ -587,6 +643,11 @@ msgid ""
 "well as set the color for the thermometer displayed within the icons of "
 "temperature sensors."
 msgstr ""
+"Hver sensor kan konfigureres med et antal indstillinger, inklusive mulighed "
+"for at skalere sensorværdien og afvikle en alarm hvis en bestemt lav eller "
+"høj værdi mødes. Sensorikonet kan også vælges hvis krævet. De høje og lave "
+"værdier bruges til at skalere grafvisningen samt indstille farven for "
+"termometeret vist i ikonerne med temperatursensorer."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:418
@@ -596,43 +657,50 @@ msgid ""
 "read, it is first multiplied by the 'multiplier' and summed with the "
 "'offset' to produce the final value."
 msgstr ""
+"Sensorværdien kan skaleres på en lineær måde ved at tillade brugeren at "
+"angive en multiplikator og forskydning for hver sensor. Efterhånden som hver"
+" sensor læses, bliver den først multipliceret af »multiplikatoren« og "
+"summeret med »forskydningen« for at lave den endelige værdi."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:427
 msgid "<guilabel>Sensor value multiplier</guilabel>"
-msgstr ""
+msgstr "<guilabel>Sensorværdimultiplikator</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:431
 msgid ""
 "This option allows the user to specify the multiplier of the sensor value."
 msgstr ""
+"Denne indstilling gør det muligt at angive multiplikatoren for "
+"sensorværdien."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:433
 msgid "Default: 1.0"
-msgstr ""
+msgstr "Standard: 1.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:438
 msgid "<guilabel>Sensor value offset</guilabel>"
-msgstr ""
+msgstr "<guilabel>Sensorværdiforskydning</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:442
 msgid ""
 "This option allows the user to specify the offset for the sensor value."
 msgstr ""
+"Denne indstilling gør det muligt at angive forskydningen for sensorværdien."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:444
 msgid "Default: 0.0"
-msgstr ""
+msgstr "Standard: 0.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:448
 msgid "<guilabel>Sensor low value</guilabel>"
-msgstr ""
+msgstr "<guilabel>Sensor - lav værdi</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:452
@@ -641,16 +709,18 @@ msgid ""
 " This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
+"Værdien som udløser en alarm hvis sensoren går under denne værdi. Denne "
+"værdi bruges også til at skalere visningen af grafen og temperaturikoner."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:455 C/index.docbook:466
 msgid "Default: dependent on sensor type"
-msgstr ""
+msgstr "Standard: afhængig af sensortype"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:459
 msgid "<guilabel>Sensor high value</guilabel>"
-msgstr ""
+msgstr "<guilabel>Sensor - høj værdi</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:463
@@ -659,11 +729,13 @@ msgid ""
 " This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
+"Værdien som udløser en alarm hvis sensoren går over denne værdi. Denne værdi"
+" bruges også til at skalere visningen af grafen og temperaturikoner."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:470
 msgid "<guilabel>Enable alarm</guilabel>"
-msgstr ""
+msgstr "<guilabel>Aktiver alarm</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:474
@@ -674,21 +746,26 @@ msgid ""
 " enabled), and execute the appropriate Alarm Command every Alarm repeat "
 "interval seconds."
 msgstr ""
+"Denne indstilling gør det muligt at aktivere alarmovervågning for denne "
+"sensor. Når sensorværdien er over, eller under dets høje eller eller lave "
+"værdi vil alarmbetingelsen opstå. Dette vil vise en påmindelse for brugeren "
+"(hvis aktiveret) og afvikle den passende alarmkommando hver "
+"alarmgentagelsesintervalsekund."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:481
 msgid "Default: disabled"
-msgstr ""
+msgstr "Standard: deaktiveret"
 
 #. (itstool) path: note/para
 #: C/index.docbook:483
 msgid "Alarms will only execute for active sensors"
-msgstr ""
+msgstr "Alarmer vil kun afvikles for aktive sensorer"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:490
 msgid "<guilabel>Alarm repeat interval (secs)</guilabel>"
-msgstr ""
+msgstr "<guilabel>Alarmgentagelsesinterval (sek.)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:494
@@ -697,11 +774,14 @@ msgid ""
 "value of 0 specifies to execute the alarm once only when the alarm condition"
 " occurs."
 msgstr ""
+"Hvor ofte alarmkommandoen skal afvikles når alarmbetingelsen er opfyldt. En "
+"værdi på 0 angiver afvikling af alarmen en gang, når alarmbetingelsen "
+"opstår."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:499
 msgid "Default: 0 seconds"
-msgstr ""
+msgstr "Standard: 0 sekunder"
 
 #. (itstool) path: note/para
 #: C/index.docbook:501
@@ -710,11 +790,14 @@ msgid ""
 "time the alarm is executed as well to notify the user that the alarm "
 "condition has occurred."
 msgstr ""
+"Hvis påmindelser også er aktiveret, vil en påmindelse også blive vist hver "
+"gang alarmen afvikles for at påminde brugeren om, at en alarmbetingelse er "
+"opstået."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:512
 msgid "<guilabel>High alarm command</guilabel>"
-msgstr ""
+msgstr "<guilabel>Alarmkommando - høj</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:516
@@ -722,16 +805,18 @@ msgid ""
 "The command to be executed at each repeat interval when the sensor value is "
 "equal to or above the upper limit."
 msgstr ""
+"Kommandoen der afvikles ved hvert gentagelsesinterval, når sensorværdien "
+"svarer til eller er over den øvre grænse."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:519 C/index.docbook:531
 msgid "Default: none"
-msgstr ""
+msgstr "Standard: ingen"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:524
 msgid "<guilabel>Low alarm command</guilabel>"
-msgstr ""
+msgstr "<guilabel>Alarmkommando - lav</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:528
@@ -739,11 +824,13 @@ msgid ""
 "The command to be executed at each repeat interval when the sensor value is "
 "equal to or below the lower limit."
 msgstr ""
+"Kommandoen der afvikles ved hvert gentagelsesinterval, når sensorværdien "
+"svarer til eller er under den nedre grænse."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:535
 msgid "<guilabel>Play a sound when the alarm occurs</guilabel>"
-msgstr ""
+msgstr "<guilabel>Afspil en lyd når alarmen lyder</guilabel>"
 
 #. (itstool) path: para/screen
 #: C/index.docbook:552
@@ -752,6 +839,8 @@ msgid ""
 "<userinput><command>esdplay "
 "/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 msgstr ""
+"<userinput><command>esdplay "
+"/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:539
@@ -762,12 +851,18 @@ msgid ""
 "<command>aplay</command> which is the default ALSA sound player). "
 "<_:screen-1/>"
 msgstr ""
+"Du kan afspille en lyd, når alarmen opstår ved at bruge kommandoen "
+"<command>esdplay</command>, der bør være tilgængelig som en del af MATE-"
+"installationen. (Bemærk: Hvis dette ikke fungerer, kan du også prøve "
+"<command>aplay</command>, der er den gængse ALSA-lydafspiller). "
+"<_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:558
 msgid ""
 "<guilabel>Pop-up a window to notify that the alarm has occurred</guilabel>"
 msgstr ""
+"<guilabel>Pop op-vindue til at påminde om at alarmen er opstået</guilabel>"
 
 #. (itstool) path: para/screen
 #: C/index.docbook:570
@@ -776,6 +871,8 @@ msgid ""
 "<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
 "--text=\"Sensor Alarm occurred\"</command></userinput>"
 msgstr ""
+"<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
+"--text=\"Sensoralarm\"</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:563
@@ -786,6 +883,11 @@ msgid ""
 "more information regarding Zenity please consult the Zenity <ulink "
 "type=\"help\" url=\"help:zenity\">documentation</ulink>."
 msgstr ""
+"Programmet <command>zenity</command> kan bruges til at oprette dialogbokse "
+"til visning på brugerens nuværende skærm, og dermed bruges til at oprette "
+"pop op-stilpåmindelser om at alarmen er opstået. <_:screen-1/> For "
+"yderligere information jævnfør Zenity se venligst <ulink type=\"help\" "
+"url=\"help:zenity\">dokumentation for Zenity</ulink>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:579
@@ -812,11 +914,14 @@ msgid ""
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
 "dialog via Zenity the follow command can be used: <_:screen-1/>"
 msgstr ""
+"Flere kommandoer kan afvikles efter hinanden ved at bruge "
+"»&amp;&amp;«-konstruktionen som adskillelse. For at afspille lyd og en pop "
+"op-dialog via Zenity kan den følgende kommando bruges: <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:601
 msgid "<guilabel>Sensor icon</guilabel>"
-msgstr ""
+msgstr "<guilabel>Sensorikon</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:605
@@ -824,16 +929,18 @@ msgid ""
 "Provides a list of available icons to allow the user to select one to "
 "represent this sensor."
 msgstr ""
+"Tilbyder en liste over tilgængelige ikoner så  brugeren kan vælge en til at "
+"repræsentere denne sensor."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:610
 msgid "<guilabel>Graph color</guilabel>"
-msgstr ""
+msgstr "<guilabel>Graffarve</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:614
 msgid "The color to use to display the graph for the sensor."
-msgstr ""
+msgstr "Farve på grafens sensor."
 
 #. (itstool) path: note/para
 #: C/index.docbook:617
@@ -841,11 +948,13 @@ msgid ""
 "To accurately display graphs both the high and low values for the sensor "
 "need to be set correctly."
 msgstr ""
+"For korrekt at vise grafer for både høje og lave værdier skal sensoren være "
+"korrekt indstillet."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:648
 msgid "About MATE Sensors Applet"
-msgstr ""
+msgstr "Om panelprogrammet MATE-sensorer"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:649
@@ -857,6 +966,13 @@ msgid ""
 "visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-"
 "applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
 msgstr ""
+"Det oprindelige sensorpanelprogram blev skrevet af Alex Murray "
+"(<email>murray.alex@gmail.com</email>). <application>Panelprogrammet MATE-"
+"sensorer</application> er yderligere udvikling af MATE-udviklingsholdet. For"
+" at finde yderligere information om <application>Panelprogrammet MATE-"
+"sensorer</application>, så besøg <ulink url=\"https://github.com/mate-"
+"desktop/mate-sensors-applet/\" type=\"http\">MATE-sensorers "
+"projekthjemmeside</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:657
@@ -865,6 +981,10 @@ msgid ""
 "manual, follow the directions at the <ulink url=\"https://github.com/mate-"
 "desktop/mate-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
+"For at rapportere en fejl eller komme med et forslag jævnfør panelprogrammet"
+" MATE-sensorer eller denne manual, så følg retningslinjerne fra <ulink "
+"url=\"https://github.com/mate-desktop/mate-sensors-applet/\" "
+"type=\"http\">projektets hjemmeside</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:672
@@ -875,6 +995,12 @@ msgid ""
 "can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
 "in the file COPYING included with the source code of this program."
 msgstr ""
+"Dette program er distribueret under betingelserne i GNU General Public-"
+"licensen, som udgivet af Free Software Foundation; enten version 2 af "
+"licensen, eller (efter dit vlag) enhver senere version. En kopi af denne "
+"licens kan ses via denne <ulink type=\"help\" "
+"url=\"help:gpl\">henvisning</ulink>, eller i filen COPYING inklusderet med "
+"kildekoden for dette program."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9

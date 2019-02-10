@@ -1,14 +1,14 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Francesc Famadas <kiski97@gmail.com>, 2018
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "POT-Creation-Date: 2018-10-04 19:19+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,12 +24,12 @@ msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018."
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:32
 msgid "MATE Sensors Applet Manual V2.1"
-msgstr ""
+msgstr "Versió 2.1 del manual de la miniaplicació de sensors"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:33
 msgid "<year>2015</year> <holder>MATE Development</holder>"
-msgstr ""
+msgstr "<year>2015</year> <holder>Desenvolupament de MATE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:37
@@ -42,6 +42,8 @@ msgid ""
 "MATE Sensors Applet displays readings from temperature, voltage and fan "
 "sensors within the panel."
 msgstr ""
+"La miniaplicació de sensors de MATE mostra les lectures dels sensors de "
+"temperatura, voltatges i ventiladors dins del tauler."
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:2
@@ -157,6 +159,7 @@ msgstr ""
 #: C/index.docbook:67
 msgid "<surname>MATE Development</surname> <affiliation> </affiliation>"
 msgstr ""
+"<surname>Desenvolupament de MATE</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:77
@@ -164,11 +167,13 @@ msgid ""
 "<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
 "</affiliation>"
 msgstr ""
+"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
+"</affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:119
 msgid "Alex Murray <email>murray.alex@gmail.com</email>"
-msgstr ""
+msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:115
@@ -176,11 +181,14 @@ msgid ""
 "<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>Versió 2.1 del manual de la miniaplicació de sensors</revnumber> "
+"<date>Gener de 2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:127
 msgid "This manual describes version 1.10 of MATE Sensors Applet."
 msgstr ""
+"Aquest manual descriu la versió 1.10 de la miniaplicació de sensors de MATE."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:130
@@ -194,11 +202,15 @@ msgid ""
 "manual, follow the directions in the <ulink url=\"help:mate-user-"
 "guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
+"Per informar d'un error o fer un suggeriment sobre la miniaplicació de "
+"sensors de MATE o d'aquest manual, seguiu les instruccions de la <ulink "
+"url=\"help:mate-user-guide/feedback\" type=\"help\">pàgina de retroacció de "
+"MATE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:139
 msgid "<primary>MATE Sensors Applet</primary>"
-msgstr ""
+msgstr "<primary>Miniaplicació de sensors de MATE</primary>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:145
@@ -208,7 +220,7 @@ msgstr "Introducció"
 #. (itstool) path: figure/title
 #: C/index.docbook:148
 msgid "MATE Sensors Applet"
-msgstr ""
+msgstr "Miniaplicació de sensors de MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -231,6 +243,9 @@ msgid ""
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Sensors Applet "
 "with 3 sensors enabled.</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>La miniaplicació de "
+"sensors de MATE amb tres sensors habilitats.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
@@ -238,6 +253,9 @@ msgid ""
 "<application>MATE Sensors Applet</application> provides a convenient way to "
 "monitor the health of your computer in a simple display on your desktop."
 msgstr ""
+"La <application>miniaplicació de sensors de MATE</application> proporciona "
+"una manera pràctica per monitorar la salut de l'ordinador en una "
+"visualització senzilla a l'escriptori."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:170
@@ -374,6 +392,10 @@ msgid ""
 "<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
 "pop-up menu."
 msgstr ""
+"Per configurar la <application>miniaplicació de sensors de "
+"MATE</application>, feu clic dret a la miniaplicació, després trieu "
+"<menuchoice><guimenuitem>Preferències</guimenuitem></menuchoice> del menú "
+"emergent."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:271
@@ -812,7 +834,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: C/index.docbook:648
 msgid "About MATE Sensors Applet"
-msgstr ""
+msgstr "Quant a la miniaplicació de sensors de MATE"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:649
@@ -832,6 +854,10 @@ msgid ""
 "manual, follow the directions at the <ulink url=\"https://github.com/mate-"
 "desktop/mate-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
+"Per informar d'un error o fer un suggeriment sobre la miniaplicació de "
+"sensors de MATE o d'aquest manual, seguiu les instruccions de la <ulink "
+"url=\"https://github.com/mate-desktop/mate-sensors-applet/\" "
+"type=\"http\">pàgina inicial del projecte</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:672

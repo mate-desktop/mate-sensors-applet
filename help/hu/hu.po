@@ -1,6 +1,7 @@
 # Translators:
 # KAMI KAMI <kami911@gmail.com>, 2018
 # Rezső Páder <rezso@rezso.net>, 2018
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Falu <info@falu.me>, 2018
@@ -872,5 +873,5 @@ msgstr ""
 "Free Documentation License (GFDL) 1.1-es verziója vagy a Free Software "
 "Foundation által kiadott ennél frissebb verziója alatt, a \"Nem "
 "változtatható szakaszok\", \"Címlapszövegek\" és a \"Hátlapszövegek\" "
-"kivételével. A GFDL leírása ezzel a <:_Qulink1/> érhető el, vagy a jelen "
+"kivételével. A GFDL leírása ezzel a <_:ulink-1/> érhető el, vagy a jelen "
 "dokumentációban található COPYING-DOCS fájlban."

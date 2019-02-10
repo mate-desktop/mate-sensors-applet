@@ -9,7 +9,7 @@
 # Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
 # Michal <sinope@seznam.cz>, 2018
 # Lucas Lommer <drom@kdyne.net>, 2018
-# Jaroslav Lichtblau <dragonlord@seznam.cz>, 2018
+# Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2018
 # Radek kohout <radekpv@seznam.cz>, 2018
 # LiberteCzech <liberte.czech@gmail.com>, 2018
 # Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:21+0100\n"
+"POT-Creation-Date: 2018-12-23 14:46+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
 "Last-Translator: ToMáš Marný, 2018\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
@@ -153,7 +153,7 @@ msgstr "CPU"
 #: ../plugins/nvidia/nvidia-plugin.c:128 ../plugins/nvidia/nvidia-plugin.c:148
 #: ../plugins/nvidia/nvidia-plugin.c:173
 #: ../plugins/smu-sys/smu-sys-plugin.c:63
-#: ../plugins/aticonfig/aticonfig-plugin.c:106
+#: ../plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr "GPU"
 
