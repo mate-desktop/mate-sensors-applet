@@ -11,15 +11,16 @@
 # Marcin Kralka <marcink96@gmail.com>, 2018
 # Paweł Bandura <gawelx@gmail.com>, 2018
 # pietrasagh <pietrasagh@gmail.com>, 2018
+# Przemek P <ppjg@dami.pl>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-23 14:46+0100\n"
+"POT-Creation-Date: 2019-02-16 09:52+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: pietrasagh <pietrasagh@gmail.com>, 2018\n"
+"Last-Translator: Przemek P <ppjg@dami.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -354,9 +355,19 @@ msgstr "A"
 msgid "ERROR"
 msgstr "BŁĄD"
 
+#: ../sensors-applet/about-dialog.c:40
+msgid ""
+"Copyright © 2005-2009 Alex Murray\n"
+"Copyright © 2011 Stefano Karapetsas\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+"Prawa autorskie © 2005-2009 Alex Murray\n"
+"Prawa autorskie © 2011 Stefano Karapetsas\n"
+"Prawa autorskie © 2012-2019 Programiści MATE"
+
 #. To translator: Put your name here to show up in the About dialog as the
 #. translator
-#: ../sensors-applet/about-dialog.c:44
+#: ../sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
 "Tłumacze środowiska MATE, 2013-2014, 2016-2018\n"
