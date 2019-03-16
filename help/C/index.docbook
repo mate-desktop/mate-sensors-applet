@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
-  <!ENTITY legal SYSTEM "legal.xml">
   <!ENTITY appletversion "1.10">
   <!ENTITY manrevision "2.1">
   <!ENTITY date "January 2006">
@@ -10,7 +9,6 @@
   <!ENTITY author-email "murray.alex@gmail.com">
   <!ENTITY project-webpage "https://github.com/mate-desktop/mate-sensors-applet/">
   <!-- Information about the entities.
-       The legal.xml file contains legal information, there is no need to edit the file. 
        Use the appletversion entity to specify the version of the applet.
        Use the manrevision entity to specify the revision number of this manual.
        Use the date entity to specify the release date of this manual.
@@ -58,10 +56,8 @@
     <publishername> MATE Documentation Project </publishername> 
   </publisher> 
     -->
-    &legal;
-    <!-- This file  contains link to license for the documentation (GNU FDL), and 
-    other legal stuff such as "NO WARRANTY" statement. Please do not change 
-    any of this. -->
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 
     <authorgroup> 
       <author role="maintainer"> 
