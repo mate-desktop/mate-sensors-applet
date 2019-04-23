@@ -1,9 +1,3 @@
-### mate-sensors-applet 1.22.1
-
-  * tx: sync with transifex
-  * help: update copyright
-  * Help: Use XInclude instead of ENTITY for legal.xml
-
 ### mate-sensors-applet 1.22.0
 
   * Translations update
