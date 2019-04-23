@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
-msgstr "Tamaño do tipo de letra en puntos"
+msgstr "Tamaño da letra en puntos"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"

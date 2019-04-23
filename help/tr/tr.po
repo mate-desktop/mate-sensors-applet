@@ -2,14 +2,14 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Butterfly <gokhanlnx@gmail.com>, 2018
 # mauron, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2018-10-04 19:19+0200\n"
+"POT-Creation-Date: 2019-03-20 19:07+0100\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2018\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,22 +33,22 @@ msgstr ""
 "Emre FIRAT <emrefirat93@gmail.com>, 2013, 2014, 2015"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:32
+#: C/index.docbook:30
 msgid "MATE Sensors Applet Manual V2.1"
 msgstr "MATE Donanım Algılayıcıları Uygulamacık Kılavuzu V2.1"
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:33
+#: C/index.docbook:31
 msgid "<year>2015</year> <holder>MATE Development</holder>"
 msgstr "<year>2015</year> <holder>MATE Geliştiricileri</holder>"
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:37
+#: C/index.docbook:35
 msgid "<year>2006</year> <holder>Alex Murray</holder>"
 msgstr "<year>2006</year> <holder>Alex Murray</holder>"
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:42
+#: C/index.docbook:40
 msgid ""
 "MATE Sensors Applet displays readings from temperature, voltage and fan "
 "sensors within the panel."
@@ -56,121 +56,13 @@ msgstr ""
 "MATE Donanım Algılayıcı Uygulamacığı panelde sıcaklık, voltaj ve vantilatör "
 "algılayıcılarının değerlerini görüntüler."
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:2
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-"Bu belgeyi kopyalama, dağıtma ve/veya değiştirme izni, değişmez bölümsüz, ön"
-" kapak metinsiz ve arka kapak metinsiz şekilde GNU Free Documentation "
-"License (GNU Özgür Belgeleme Lisansı, GFDL), sürüm 1.1 ya da Free Software "
-"Foundation tarafından yayınlanan daha yeni bir sürüm kapsamında verilmiştir."
-" GFDL'in bir kopyasını bu <ulink type=\"help\" "
-"url=\"help:fdl\">bağlantıda</ulink> ya da bu kılavuzla dağıtılan COPYING-"
-"DOCS dosyasında bulabilirsiniz."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:12 C/legal.xml:12
-msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
-msgstr ""
-"Bu kılavuz, GFDL (GNU Özgür Belgelendirme Lisansı) kapsamında yayınlanan "
-"MATE kılavuzları koleksiyonunun bir parçasıdır. Bu kılavuzu koleksiyondan "
-"ayrı bir biçimde dağıtmak istiyorsanız, lisansın 6. bölümünde açıklandığı "
-"gibi kılavuza lisansın bir kopyasını ilave ederek yapabilirsiniz."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:19 C/legal.xml:19
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-"Firmalar tarafından ürün ve hizmetlerinin ayırt edilmeleri için "
-"kullandıkları isimlerin birçoğu tescilli marka olarak ayrılmıştır. Bu "
-"isimlerin MATE belgelendirilmesinde yer alması ve MATE Belgelendirme Projesi"
-" mensupları bu tescilli markalardan haberdar edildikleri durumda, isimlerin "
-"ilk harfi ya da tamamı büyük harflerle yazılır."
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:35 C/legal.xml:35
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-"BELGE OLDUĞU GİBİ, AÇIK VEYA ZIMNİ HİÇBİR TÜRLÜ GARANTİ OLMADAN SUNULMUŞTUR,"
-" Kİ BUNA SINIRLAMA OLMAKSIZIN BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN"
-" BELLİ BİR AMACA UYGUN OLMALARI, KUSURDAN ARINMIŞ OLMALARI VEYA HAK "
-"İHLALİNDE BULUNMAMALARI GARANTİLERİ OLMAMASI DA DAHİLDİR. BELGE VE BELGENİN "
-"DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN KALİTESİ, DOĞRULUĞU VE PERFORMANSINA İLİŞKİN TÜM "
-"RİSK SİZE AİTTİR. HERHANGİ BİR BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMÜNÜN "
-"KUSURLU OLMASI HALİNDE, GEREKLİ SERVİS, ONARIM VE DÜZELTMENİN ÜCRETİNİ SİZ "
-"ÜSTLENİRSİNİZ (İLK YAZAR, HAZIRLAYAN VEYA HERHANGİ BİR KATILIMCI DEĞİL). BU "
-"GARANTİ REDDİ BU LİSANSIN TEMEL BİR PARÇASINI OLUŞTURMAKTADIR. HERHANGİ BİR "
-"BELGENİN VEYA BELGENİN DEĞİŞTİRİLMİŞ BİR SÜRÜMÜNÜN KULLANIMINA SADECE BU "
-"GARANTİ REDDİ ALTINDA İZİN VERİLMİŞTİR; VE"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:55 C/legal.xml:55
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-"HİÇBİR KOŞULDA VE HİÇBİR YASAL TEORİDE, Kİ BU TAZMİNAT YÜKÜMLÜLÜĞÜ (İHMAK DE"
-" DAHİL), KONTRATO VEYA BAŞKA BİR ŞEKİLİ DE İÇERİR, BELGEYİ VE BELGENİN "
-"DEĞİŞTİRİLMİŞ SÜRÜMLERİNİ İLK YAZAN, YAZAR, HERHANGİ BİR KATKIDA BULUNAN, "
-"DAĞITAN VEYA BU TARAFLARIN HERHANGİ BİR TEDARİKÇİSİ HERHANGİ DOĞRUDAN, "
-"DOLAYLI, ÖZEL, ARIZİ  ZARARLARDAN HERHANGİ BİR KİŞİ SORUMLU DEĞİLDİR, Kİ "
-"BUNA BU TÜR KAYIPLAR HAKKINDA BU TARFAFIN BİLGİLENDİRİLMİŞ OLMASI GEREKSE "
-"BİLE SINIRLANMAMIŞ OLMAK ÜZERE ŞEREFİYE KAYBI, İŞ DURMASI, BİLGİSAYAR "
-"BOZULMASI VE YANLIŞ ÇALIŞMASI VEYA BELGENİN VE BELGENİN DEĞİŞTİRİLMİŞ "
-"SÜRÜMLERİNİN KULLANIMINDAN VEYA KULLANIMIYLA İLİŞKİLİ TÜM KAYIPLAR DAHİLDİR."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:28 C/legal.xml:28
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
-msgstr ""
-"BELGE VE BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMLERİ GNU FREE DOCUMENTATION LICENSE "
-"(YANİ GNU ÖZGÜR BELGE LİSANSI) KAPSAMINDA, ŞU KONULARDA ANLAŞMAYLA "
-"SUNULMUŞTUR: <_:orderedlist-1/>"
-
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:67
+#: C/index.docbook:63
 msgid "<surname>MATE Development</surname> <affiliation> </affiliation>"
 msgstr "<surname>MATE Geliştiricileri</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:77
+#: C/index.docbook:73
 msgid ""
 "<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
 "</affiliation>"
@@ -179,12 +71,12 @@ msgstr ""
 "</affiliation>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:119
+#: C/index.docbook:115
 msgid "Alex Murray <email>murray.alex@gmail.com</email>"
 msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:115
+#: C/index.docbook:111
 msgid ""
 "<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
@@ -193,19 +85,19 @@ msgstr ""
 "<date>Ocak 2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:127
+#: C/index.docbook:123
 msgid "This manual describes version 1.10 of MATE Sensors Applet."
 msgstr ""
 "Bu kılavuz MATE Donanım Algılayıcı Uygulamacığının 1.10 sürümünü tasvir "
 "eder."
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:130
+#: C/index.docbook:126
 msgid "Feedback"
 msgstr "Geri bildirim"
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:131
+#: C/index.docbook:127
 msgid ""
 "To report a bug or make a suggestion regarding MATE Sensors Applet or this "
 "manual, follow the directions in the <ulink url=\"help:mate-user-"
@@ -217,17 +109,17 @@ msgstr ""
 "yönergeleri izleyin."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:139
+#: C/index.docbook:135
 msgid "<primary>MATE Sensors Applet</primary>"
 msgstr "<primary>MATE Donanım Algılayıcıları Uygulamacığı</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:145
+#: C/index.docbook:141
 msgid "Introduction"
 msgstr "Başlangıç"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:148
+#: C/index.docbook:144
 msgid "MATE Sensors Applet"
 msgstr "MATE Donanım Algılayıcıları Uygulamacığı"
 
@@ -236,7 +128,7 @@ msgstr "MATE Donanım Algılayıcıları Uygulamacığı"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:152
+#: C/index.docbook:148
 msgctxt "_"
 msgid ""
 "external ref='figures/applet_in_panel.png' "
@@ -246,7 +138,7 @@ msgstr ""
 "md5='432ed012f0897c7f0cf522f6c55ea92a'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:150
+#: C/index.docbook:146
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Sensors Applet "
@@ -258,7 +150,7 @@ msgstr ""
 "</textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:161
+#: C/index.docbook:157
 msgid ""
 "<application>MATE Sensors Applet</application> provides a convenient way to "
 "monitor the health of your computer in a simple display on your desktop."
@@ -268,17 +160,17 @@ msgstr ""
 "için kolay bir yol sağlar."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:170
+#: C/index.docbook:166
 msgid "ACPI thermal zones, via the Linux kernel ACPI modules"
 msgstr "Linux çekirdeği ACPI modülleri üzerinden ACPI termal bölgeleri"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:174
+#: C/index.docbook:170
 msgid "Linux kernel i2c modules"
 msgstr "Linux çekirdeği i2c öbekleri"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:177
+#: C/index.docbook:173
 msgid ""
 "Via the sysfs filesystem and <ulink "
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
@@ -290,7 +182,7 @@ msgstr ""
 "type=\"http\">i2c</ulink> öbekleri vasıtasıyla"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:183
+#: C/index.docbook:179
 msgid ""
 "Via the proc filesystem and i2c modules from the <ulink "
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
@@ -302,7 +194,7 @@ msgstr ""
 " 2.4) vasıtasıyla"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:189
+#: C/index.docbook:185
 msgid ""
 "Via the libsensors library provided with the <ulink "
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
@@ -313,7 +205,7 @@ msgstr ""
 "kütüphanesi vasıtasıyla"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:199
+#: C/index.docbook:195
 msgid ""
 "Linux kernel <ulink url=\"http://people.debian.org/~dz/i8k/00-README\" "
 "type=\"http\">i8k</ulink> module (for Dell Inspiron Laptops)."
@@ -323,7 +215,7 @@ msgstr ""
 "için)."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:205
+#: C/index.docbook:201
 msgid ""
 "Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
 "\">ibm-acpi</ulink> module (for IBM Laptops)."
@@ -332,17 +224,17 @@ msgstr ""
 "\">ibm-acpi</ulink> öbeği (IBM diz üstü bilgisayarlar için)."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:211
+#: C/index.docbook:207
 msgid "Linux kernel PowerPC modules therm_adt746x and therm_windtunnel."
 msgstr "Linux çekirdeği PowerPC therm_adt746x ve therm_windtunnel öbekleri."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:215
+#: C/index.docbook:211
 msgid "Linux kernel iMac G5 Windfarm module."
 msgstr "Linux çekirdeği iMac G5 Windfarm öbeği."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:219
+#: C/index.docbook:215
 msgid ""
 "<ulink url=\"http://www.guzu.net/linux/hddtemp.php\" "
 "type=\"http\">hddtemp</ulink> daemon for reading temperatures from "
@@ -353,7 +245,7 @@ msgstr ""
 "servisi."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:225
+#: C/index.docbook:221
 msgid ""
 "Linux kernel <ulink "
 "url=\"http://sourceforge.net/projects/omke\">Omnibook</ulink> module. (for "
@@ -364,7 +256,7 @@ msgstr ""
 "Toshiba Satellite diz üstü bilgisayarları için)."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:231
+#: C/index.docbook:227
 msgid ""
 "NVIDIA graphics cards via libNVCtrl (provided with <ulink "
 "url=\"ftp://download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-"
@@ -375,7 +267,7 @@ msgstr ""
 "settings</ulink> ile sağlanır)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:166
+#: C/index.docbook:162
 msgid ""
 "A number of sensor interfaces are supported, which should be configured "
 "before adding MATE Sensors Applet to the panel: <_:itemizedlist-1/>"
@@ -385,7 +277,7 @@ msgstr ""
 "<_:itemizedlist-1/>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:240
+#: C/index.docbook:236
 msgid ""
 "To add <application>MATE Sensors Applet</application> to a panel right-click"
 " on the panel to open the panel pop-up menu, then choose <menuchoice> "
@@ -398,12 +290,12 @@ msgstr ""
 "Algılayıcıları İzleyicisi</guimenuitem> </menuchoice> unsurunu seçin."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:251
+#: C/index.docbook:247
 msgid "Usage"
 msgstr "Kullanım"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:252
+#: C/index.docbook:248
 msgid ""
 "When you add <application>MATE Sensors Applet</application> to a panel for "
 "the first time, the applet will search for any available sensors to monitor,"
@@ -416,7 +308,7 @@ msgstr ""
 "(işlemcinin sıcaklığı gibi)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:255
+#: C/index.docbook:251
 msgid ""
 "Most users will then want to customize the display to their liking, which "
 "can be done via the <menuchoice> <guimenuitem>Preferences</guimenuitem> "
@@ -430,12 +322,12 @@ msgstr ""
 "bakın)."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:266
+#: C/index.docbook:262
 msgid "Preferences"
 msgstr "Tercihler"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:267
+#: C/index.docbook:263
 msgid ""
 "To configure <application>MATE Sensors Applet</application>, right-click on "
 "the applet, then choose "
@@ -448,7 +340,7 @@ msgstr ""
 "unsurunu seçin."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:271
+#: C/index.docbook:267
 msgid ""
 "The <menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> window "
 "contains the following tabbed sections:"
@@ -457,17 +349,17 @@ msgstr ""
 "aşağıdaki sekme bölümlerini içerir:"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:291
+#: C/index.docbook:287
 msgid "General Options"
 msgstr "Genel Seçenekler"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:294
+#: C/index.docbook:290
 msgid "<guilabel>Display sensors in panel as</guilabel>"
 msgstr "<guilabel>Algılayıcıları panelde böyle görüntüle</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:298
+#: C/index.docbook:294
 msgid ""
 "This option selects whether to display sensors in the panel with either "
 "their label or icon and their value, or to have no identifier for each "
@@ -483,17 +375,17 @@ msgstr ""
 "de görüntülenebilir."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:304
+#: C/index.docbook:300
 msgid "Default: icon with value."
 msgstr "Varsayılan: değerle beraber ikon."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:308
+#: C/index.docbook:304
 msgid "<guilabel>Preferred position of sensor values</guilabel>"
 msgstr "<guilabel>Algılayıcı konumlarının tercih edilen konumları</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:312
+#: C/index.docbook:308
 msgid ""
 "Sensors can be display with either their value beside their icon / label, or"
 " with the value shown below the icon / label."
@@ -502,12 +394,12 @@ msgstr ""
 "etiketin altında gösterilebilirler."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:315
+#: C/index.docbook:311
 msgid "Default: beside labels / icons."
 msgstr "Varsayılan: etiketlerin / ikonların yanında."
 
 #. (itstool) path: note/para
-#: C/index.docbook:318
+#: C/index.docbook:314
 msgid ""
 "If there is not enough room in the panel to use the requested position, the "
 "best position to ensure all sensor elements are visible will be used "
@@ -517,12 +409,12 @@ msgstr ""
 "görüntülenmesini garantileyen en iyi konum onun yerine kullanılacaktır."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:325
+#: C/index.docbook:321
 msgid "<guilabel>Graph size (pixels)</guilabel>"
 msgstr "<guilabel>Grafik boyutu (piksel)</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:329
+#: C/index.docbook:325
 msgid ""
 "When displaying sensors as graphs, the size of the graph sets either the "
 "width of the graph (when displayed on either the top or bottom panel) or the"
@@ -533,17 +425,17 @@ msgstr ""
 "yüksekliğini (sağ veya sol panelde görüntülendiğinde) ayarlar."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:333
+#: C/index.docbook:329
 msgid "Default: 42 pixels."
 msgstr "Varsayılan: 42 piksel."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:337
+#: C/index.docbook:333
 msgid "<guilabel>Temperature scale</guilabel>"
 msgstr "<guilabel>Sıcaklık ölçeği</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:341
+#: C/index.docbook:337
 msgid ""
 "Which scale to use for temperature sensors (Kelvin, Fahrenheit or Celsius "
 "are supported)."
@@ -552,33 +444,33 @@ msgstr ""
 " ya da Celsius desteklenir)."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:343
+#: C/index.docbook:339
 msgid "Default: Celsius."
 msgstr "Varsayılan: Celsius."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:347
+#: C/index.docbook:343
 msgid "<guilabel>Update interval</guilabel>"
 msgstr "<guilabel>Güncelleme aralığı</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:351
+#: C/index.docbook:347
 msgid "How often to update the values of each sensor shown within the panel."
 msgstr ""
 "Paneldeki her bir algılayıcının değerlerinin hangi sıklıkla güncelleneceği."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:353
+#: C/index.docbook:349
 msgid "Default: 2 seconds."
 msgstr "Varsayılan: 2 saniye."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:357
+#: C/index.docbook:353
 msgid "<guilabel>Display notifications</guilabel>"
 msgstr "<guilabel>Bildirimleri göster</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:361
+#: C/index.docbook:357
 msgid ""
 "If enabled, MATE Sensors Applet will display notifications to the user when "
 "alarm conditions occur."
@@ -587,41 +479,41 @@ msgstr ""
 "koşulları oluştuğunda kullanıcıya bildirim görüntüleyecektir."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:363
+#: C/index.docbook:359
 msgid "Default: Enabled."
 msgstr "Varsayılan: Etkin."
 
 #. (itstool) path: note/para
-#: C/index.docbook:365
+#: C/index.docbook:361
 msgid "Alarms for individual sensors must also be enabled."
 msgstr "Tekil algılayıcılar için de alarmların etkinleştirilmesi gerekir."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:376
+#: C/index.docbook:372
 msgid "Sensors"
 msgstr "Algılayıcılar"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:382
+#: C/index.docbook:378
 msgid "A fixed ID to identify the sensor within its interface."
 msgstr "Algılayıcıyı arayüzünde tanımlamak için sabit bir kimlik."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:386
+#: C/index.docbook:382
 msgid "A user selectable icon to identify the sensor within the panel."
 msgstr ""
 "Algılayıcıyı panelde tanımlamak için kullanıcı tarafından seçilebilir bir "
 "ikon."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:391
+#: C/index.docbook:387
 msgid "A user editable label to identify the sensor within the panel."
 msgstr ""
 "Algılayıcıyı panelde tanımlamak için kullanıcı tarafından düzenlenebilir bir"
 " etiket."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:396
+#: C/index.docbook:392
 msgid ""
 "A check-box to allow the user to enable / disable monitoring and display of "
 "the sensor within the panel."
@@ -630,7 +522,7 @@ msgstr ""
 "etkinleştirmesi / devre dışı bırakmasına imkân verecek bir seçme kutucuğu."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:377
+#: C/index.docbook:373
 msgid ""
 "The Sensors tab within the preferences window provides the options for "
 "configuring each individual sensor. Each sensor is listed under its specific"
@@ -648,12 +540,12 @@ msgstr ""
 "dialog\"/> sayfasına bakın)"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:408
+#: C/index.docbook:404
 msgid "Sensor Properties"
 msgstr "Algılayıcı Özellikleri"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:410
+#: C/index.docbook:406
 msgid ""
 "Each sensor can be configured with a number of options, including the "
 "possibility to scale the sensor value, and to execute an alarm if a certain "
@@ -670,7 +562,7 @@ msgstr ""
 "termometrenin rengini ayarlamak için kullanılır."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:418
+#: C/index.docbook:414
 msgid ""
 "The sensor value can be scaled in a linear fashion by allowing the user to "
 "specify a multiplier and offset for each sensor. As each sensor value is "
@@ -683,12 +575,12 @@ msgstr ""
 "çarpılır ve 'mahsup' ile toplanır."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:427
+#: C/index.docbook:423
 msgid "<guilabel>Sensor value multiplier</guilabel>"
 msgstr "<guilabel>Algılayıcı değer çarpanı</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:431
+#: C/index.docbook:427
 msgid ""
 "This option allows the user to specify the multiplier of the sensor value."
 msgstr ""
@@ -696,17 +588,17 @@ msgstr ""
 "verir."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:433
+#: C/index.docbook:429
 msgid "Default: 1.0"
 msgstr "Varsayılan: 1,0"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:438
+#: C/index.docbook:434
 msgid "<guilabel>Sensor value offset</guilabel>"
 msgstr "<guilabel>Ofset algılayıcı değeri</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:442
+#: C/index.docbook:438
 msgid ""
 "This option allows the user to specify the offset for the sensor value."
 msgstr ""
@@ -714,17 +606,17 @@ msgstr ""
 "belirtmesine imkân verir."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:444
+#: C/index.docbook:440
 msgid "Default: 0.0"
 msgstr "Varsayılan: 0,0"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:448
+#: C/index.docbook:444
 msgid "<guilabel>Sensor low value</guilabel>"
 msgstr "<guilabel>Algılayıcı düşük değeri</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:452
+#: C/index.docbook:448
 msgid ""
 "The value at which to trigger an alarm if the sensor drops below this value."
 " This value is also used to scale the display of the graph and temperature "
@@ -735,17 +627,17 @@ msgstr ""
 "kullanılır."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:455 C/index.docbook:466
+#: C/index.docbook:451 C/index.docbook:462
 msgid "Default: dependent on sensor type"
 msgstr "Varsayılan: algılayıcı türüne göre değişir"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:459
+#: C/index.docbook:455
 msgid "<guilabel>Sensor high value</guilabel>"
 msgstr "<guilabel>Algılayıcı yüksek değeri</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:463
+#: C/index.docbook:459
 msgid ""
 "The value at which to trigger an alarm if the sensor rises above this value."
 " This value is also used to scale the display of the graph and temperature "
@@ -755,12 +647,12 @@ msgstr ""
 "grafik ve sıcaklık ikonlarının görüntüsünü ölçeklendirmek için kullanılır."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:470
+#: C/index.docbook:466
 msgid "<guilabel>Enable alarm</guilabel>"
 msgstr "<guilabel>Alarmı etkinleştir</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:474
+#: C/index.docbook:470
 msgid ""
 "This option allows the user to enable alarm monitoring for this sensor. When"
 " the sensor value rises above, or drops below it's high or low values, the "
@@ -776,22 +668,22 @@ msgstr ""
 "çalıştıracaktır."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:481
+#: C/index.docbook:477
 msgid "Default: disabled"
 msgstr "Varsayılan: devre dışı"
 
 #. (itstool) path: note/para
-#: C/index.docbook:483
+#: C/index.docbook:479
 msgid "Alarms will only execute for active sensors"
 msgstr "Alarmlar sadece etkin algılayıcılar için çalışır"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:490
+#: C/index.docbook:486
 msgid "<guilabel>Alarm repeat interval (secs)</guilabel>"
 msgstr "<guilabel>Alarmın tekrarlanma aralığı (saniye)</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:494
+#: C/index.docbook:490
 msgid ""
 "How often to execute the alarm command while the alarm condition is met. A "
 "value of 0 specifies to execute the alarm once only when the alarm condition"
@@ -802,12 +694,12 @@ msgstr ""
 "çalıştırılacağını belirtir."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:499
+#: C/index.docbook:495
 msgid "Default: 0 seconds"
 msgstr "Varsayılan: 0 saniye"
 
 #. (itstool) path: note/para
-#: C/index.docbook:501
+#: C/index.docbook:497
 msgid ""
 "If notifications are also enabled, a notification will be displayed each "
 "time the alarm is executed as well to notify the user that the alarm "
@@ -818,12 +710,12 @@ msgstr ""
 "görüntülenecektir."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:512
+#: C/index.docbook:508
 msgid "<guilabel>High alarm command</guilabel>"
 msgstr "<guilabel>Yüksek alarm komutu</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:516
+#: C/index.docbook:512
 msgid ""
 "The command to be executed at each repeat interval when the sensor value is "
 "equal to or above the upper limit."
@@ -832,17 +724,17 @@ msgstr ""
 "alarmın aralıkların ardından her bir çalıştırılmasında çalıştırılacak komut."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:519 C/index.docbook:531
+#: C/index.docbook:515 C/index.docbook:527
 msgid "Default: none"
 msgstr "Varsayılan: yok"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:524
+#: C/index.docbook:520
 msgid "<guilabel>Low alarm command</guilabel>"
 msgstr "<guilabel>Düşük alarm komutu</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:528
+#: C/index.docbook:524
 msgid ""
 "The command to be executed at each repeat interval when the sensor value is "
 "equal to or below the lower limit."
@@ -852,12 +744,12 @@ msgstr ""
 "çalıştırılacak komut."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:535
+#: C/index.docbook:531
 msgid "<guilabel>Play a sound when the alarm occurs</guilabel>"
 msgstr "<guilabel>Alarm meydana geldiğinde bir ses çal</guilabel>"
 
 #. (itstool) path: para/screen
-#: C/index.docbook:552
+#: C/index.docbook:548
 #, no-wrap
 msgid ""
 "<userinput><command>esdplay "
@@ -867,7 +759,7 @@ msgstr ""
 "/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:539
+#: C/index.docbook:535
 msgid ""
 "You can play a sound when the alarm occurs by using the command "
 "<command>esdplay</command> which should be available as part of the standard"
@@ -881,13 +773,13 @@ msgstr ""
 "<command>aplay</command> komutunu deneyebilirsiniz). <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:558
+#: C/index.docbook:554
 msgid ""
 "<guilabel>Pop-up a window to notify that the alarm has occurred</guilabel>"
 msgstr "<guilabel>Alarmın oluştuğunu bildiren bir pencere aç</guilabel>"
 
 #. (itstool) path: para/screen
-#: C/index.docbook:570
+#: C/index.docbook:566
 #, no-wrap
 msgid ""
 "<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
@@ -897,7 +789,7 @@ msgstr ""
 "--text=\"Algılayıcı Alarmı oluştu\"</command></userinput>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:563
+#: C/index.docbook:559
 msgid ""
 "The program <command>zenity</command> can be used to create dialog boxes to "
 "be displayed on the users current display, and can thus be used to create "
@@ -913,13 +805,13 @@ msgstr ""
 "bakın."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:579
+#: C/index.docbook:575
 msgid ""
 "<guilabel> Combine multiple commands into one alarm command </guilabel>"
 msgstr "<guilabel>Birden çok komutu bir alarm komutuna birleştir</guilabel>"
 
 #. (itstool) path: para/screen
-#: C/index.docbook:591
+#: C/index.docbook:587
 #, no-wrap
 msgid ""
 "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp;"
@@ -931,7 +823,7 @@ msgstr ""
 "oluştu\"</command></userinput>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:585
+#: C/index.docbook:581
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
@@ -942,12 +834,12 @@ msgstr ""
 "diyalog açmak için aşağıdaki komut kullanılabilir: <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:601
+#: C/index.docbook:597
 msgid "<guilabel>Sensor icon</guilabel>"
 msgstr "<guilabel>Algılayıcı ikonu</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:605
+#: C/index.docbook:601
 msgid ""
 "Provides a list of available icons to allow the user to select one to "
 "represent this sensor."
@@ -956,17 +848,17 @@ msgstr ""
 "mevcut ikonların bir listesini sağlar."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:610
+#: C/index.docbook:606
 msgid "<guilabel>Graph color</guilabel>"
 msgstr "<guilabel>Grafik rengi</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:614
+#: C/index.docbook:610
 msgid "The color to use to display the graph for the sensor."
 msgstr "Algılayıcının grafiğini görüntülemek için kullanıclacak renk."
 
 #. (itstool) path: note/para
-#: C/index.docbook:617
+#: C/index.docbook:613
 msgid ""
 "To accurately display graphs both the high and low values for the sensor "
 "need to be set correctly."
@@ -975,12 +867,12 @@ msgstr ""
 " düşük değerlerinin doğru şekilde ayarlanması gerekir."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:648
+#: C/index.docbook:644
 msgid "About MATE Sensors Applet"
 msgstr "MATE Donanım Algılayıcıları Uygulamacığı Hakkında"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:649
+#: C/index.docbook:645
 msgid ""
 "The origin sensor applet was written by Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
@@ -999,7 +891,7 @@ msgstr ""
 "Projesi Ana Sayfasını</ulink> ziyaret edin."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:657
+#: C/index.docbook:653
 msgid ""
 "To report a bug or make a suggestion regarding MATE Sensors Applet or this "
 "manual, follow the directions at the <ulink url=\"https://github.com/mate-"
@@ -1011,7 +903,7 @@ msgstr ""
 "takip edin."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:672
+#: C/index.docbook:668
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -1046,3 +938,93 @@ msgstr ""
 "Foundation tarafından yayınlanan daha yeni bir sürüm kapsamında verilmiştir."
 " GFDL'in bir kopyasını bu <_:ulink-1/>  ya da bu kılavuzla dağıtılan "
 "COPYING-DOCS dosyasında bulabilirsiniz."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:12
+msgid ""
+"This manual is part of a collection of MATE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in"
+" section 6 of the license."
+msgstr ""
+"Bu kılavuz, GFDL (GNU Özgür Belgelendirme Lisansı) kapsamında yayınlanan "
+"MATE kılavuzları koleksiyonunun bir parçasıdır. Bu kılavuzu koleksiyondan "
+"ayrı bir biçimde dağıtmak istiyorsanız, lisansın 6. bölümünde açıklandığı "
+"gibi kılavuza lisansın bir kopyasını ilave ederek yapabilirsiniz."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any MATE "
+"documentation, and the members of the MATE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Firmalar tarafından ürün ve hizmetlerinin ayırt edilmeleri için "
+"kullandıkları isimlerin birçoğu tescilli marka olarak ayrılmıştır. Bu "
+"isimlerin MATE belgelendirilmesinde yer alması ve MATE Belgelendirme Projesi"
+" mensupları bu tescilli markalardan haberdar edildikleri durumda, isimlerin "
+"ilk harfi ya da tamamı büyük harflerle yazılır."
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"BELGE OLDUĞU GİBİ, AÇIK VEYA ZIMNİ HİÇBİR TÜRLÜ GARANTİ OLMADAN SUNULMUŞTUR,"
+" Kİ BUNA SINIRLAMA OLMAKSIZIN BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN"
+" BELLİ BİR AMACA UYGUN OLMALARI, KUSURDAN ARINMIŞ OLMALARI VEYA HAK "
+"İHLALİNDE BULUNMAMALARI GARANTİLERİ OLMAMASI DA DAHİLDİR. BELGE VE BELGENİN "
+"DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN KALİTESİ, DOĞRULUĞU VE PERFORMANSINA İLİŞKİN TÜM "
+"RİSK SİZE AİTTİR. HERHANGİ BİR BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMÜNÜN "
+"KUSURLU OLMASI HALİNDE, GEREKLİ SERVİS, ONARIM VE DÜZELTMENİN ÜCRETİNİ SİZ "
+"ÜSTLENİRSİNİZ (İLK YAZAR, HAZIRLAYAN VEYA HERHANGİ BİR KATILIMCI DEĞİL). BU "
+"GARANTİ REDDİ BU LİSANSIN TEMEL BİR PARÇASINI OLUŞTURMAKTADIR. HERHANGİ BİR "
+"BELGENİN VEYA BELGENİN DEĞİŞTİRİLMİŞ BİR SÜRÜMÜNÜN KULLANIMINA SADECE BU "
+"GARANTİ REDDİ ALTINDA İZİN VERİLMİŞTİR; VE"
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"HİÇBİR KOŞULDA VE HİÇBİR YASAL TEORİDE, Kİ BU TAZMİNAT YÜKÜMLÜLÜĞÜ (İHMAK DE"
+" DAHİL), KONTRATO VEYA BAŞKA BİR ŞEKİLİ DE İÇERİR, BELGEYİ VE BELGENİN "
+"DEĞİŞTİRİLMİŞ SÜRÜMLERİNİ İLK YAZAN, YAZAR, HERHANGİ BİR KATKIDA BULUNAN, "
+"DAĞITAN VEYA BU TARAFLARIN HERHANGİ BİR TEDARİKÇİSİ HERHANGİ DOĞRUDAN, "
+"DOLAYLI, ÖZEL, ARIZİ  ZARARLARDAN HERHANGİ BİR KİŞİ SORUMLU DEĞİLDİR, Kİ "
+"BUNA BU TÜR KAYIPLAR HAKKINDA BU TARFAFIN BİLGİLENDİRİLMİŞ OLMASI GEREKSE "
+"BİLE SINIRLANMAMIŞ OLMAK ÜZERE ŞEREFİYE KAYBI, İŞ DURMASI, BİLGİSAYAR "
+"BOZULMASI VE YANLIŞ ÇALIŞMASI VEYA BELGENİN VE BELGENİN DEĞİŞTİRİLMİŞ "
+"SÜRÜMLERİNİN KULLANIMINDAN VEYA KULLANIMIYLA İLİŞKİLİ TÜM KAYIPLAR DAHİLDİR."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"BELGE VE BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMLERİ GNU FREE DOCUMENTATION LICENSE "
+"(YANİ GNU ÖZGÜR BELGE LİSANSI) KAPSAMINDA, ŞU KONULARDA ANLAŞMAYLA "
+"SUNULMUŞTUR: <_:orderedlist-1/>"
