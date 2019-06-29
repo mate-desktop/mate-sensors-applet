@@ -588,7 +588,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
                                  * always display
                                  * units */
                                 value_tooltip = g_strdup_printf("%2.0f %s", sensor_value, UNITS_FAHRENHEIT);
-                               
+
                                 break;
                             case CELSIUS:
                                 value_text = g_strdup_printf("%2.0f %s", sensor_value, (hide_units ? "" : UNITS_CELSIUS));
@@ -629,7 +629,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
 
             /* only do icons and labels / graphs if needed */
             display_mode = g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
-           
+
             /* most users wont have a font size set */
             font_size = g_settings_get_int (sensors_applet->settings, FONT_SIZE);
 
