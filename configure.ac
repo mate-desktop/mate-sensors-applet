@@ -35,9 +35,9 @@ AC_SUBST(LIBS)
 # check for headers needed for standard interfaces
 AC_CHECK_HEADERS(
 	stdlib.h \
-	string.h \ 
+	string.h \
 	stdio.h \
-	sys/types.h \ 
+	sys/types.h \
 	sys/socket.h \
 	netinet/in.h \
 	arpa/inet.h \
@@ -45,7 +45,7 @@ AC_CHECK_HEADERS(
 	sys/ioctl.h \
 	unistd.h \
 	dlfcn.h
-)   
+)
 
 GLIB_REQUIRED=2.50.0
 GTK_REQUIRED=3.22.0
@@ -101,7 +101,7 @@ LIBNOTIFY_CFLAGS=
 LIBNOTIFY_LIBS=
 
 # enable support even if not specifically asked for
-AC_ARG_ENABLE(libnotify, 
+AC_ARG_ENABLE(libnotify,
 [  --enable-libnotify    Enable libnotify support], [
          enable_libnotify=$enableval], [
          enable_libnotify="yes"
@@ -117,7 +117,7 @@ else
 	if test "x$HAVE_LIBNOTIFY" = "xyes"
 	then
 	   AC_DEFINE(HAVE_LIBNOTIFY, 1, [libnotify available])
-	fi	
+	fi
 fi
 
 AM_CONDITIONAL(LIBNOTIFY, test -n "$LIBNOTIFY_LIBS")
@@ -157,7 +157,7 @@ else
                         else
                                 LIBSENSORS_LIBS="-lsensors"
                         fi]))
-fi			
+fi
 
 AM_CONDITIONAL(LIBSENSORS, test -n "$LIBSENSORS_LIBS")
 
@@ -190,22 +190,22 @@ else
 		with_x11="yes"
 	])
 
-	AC_CHECK_HEADERS(X11/Xlib.h, 
+	AC_CHECK_HEADERS(X11/Xlib.h,
                 AC_CHECK_LIB(X11, XOpenDisplay, [ HAVE_X11=true ]))
 	# can't embed next AC_CHECK_HEADERS in true case of AC_CHECK_LIB
 	if test "${HAVE_X11}" = "true"; then
 	        LIBS="${LIBS} -lX11 -lXext"
 		# need to specifically include X11/Xlib header when
 		# doing checks for NVCtrl headers
-	        AC_CHECK_HEADERS(NVCtrl/NVCtrl.h NVCtrl/NVCtrlLib.h, [ HAVE_NVIDIA=true ], [], 
+	        AC_CHECK_HEADERS(NVCtrl/NVCtrl.h NVCtrl/NVCtrlLib.h, [ HAVE_NVIDIA=true ], [],
 	        [
 	        #include <X11/Xlib.h>
          	])
 	        if test "${HAVE_NVIDIA}" = "true"; then
-	                AC_CHECK_LIB(XNVCtrl, XNVCTRLQueryExtension, [ 
+	                AC_CHECK_LIB(XNVCtrl, XNVCTRLQueryExtension, [
                         NVIDIA_LIBS="-lXNVCtrl"
 	                AC_DEFINE(HAVE_NVIDIA,1,[nvidia sensors available])
-	                ])			
+	                ])
 	        fi
 	fi
 fi
@@ -214,8 +214,8 @@ AM_CONDITIONAL(NVIDIA, test -n "$NVIDIA_LIBS")
 AC_SUBST(NVIDIA_CFLAGS)
 AC_SUBST(NVIDIA_LIBS)
 
-AC_ARG_WITH(aticonfig, 
-[  --with-aticonfig[=PATH]   use aticonfig plugin with optional binary provided         
+AC_ARG_WITH(aticonfig,
+[  --with-aticonfig[=PATH]   use aticonfig plugin with optional binary provided
                           by PATH], [
 	if test "$withval" != "no" -a "$withval" != "yes"; then
 		aticonfig_exe=$withval
