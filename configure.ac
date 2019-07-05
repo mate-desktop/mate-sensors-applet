@@ -1,6 +1,6 @@
 # ================= initialization =================== #
 
-AC_INIT([MATE Sensors Applet], [1.22.0], [https://mate-desktop.org],
+AC_INIT([MATE Sensors Applet], [1.23.0], [https://mate-desktop.org],
 [mate-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
