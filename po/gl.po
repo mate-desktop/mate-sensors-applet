@@ -42,7 +42,7 @@ msgstr "Tamaño da letra en puntos"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"
-msgstr "Especifica se amosar ou agachar as unidades sensoras"
+msgstr "Especifica se amosar ou agochar as unidades sensoras"
 
 #: ../org.mate.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
