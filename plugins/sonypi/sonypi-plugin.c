@@ -36,12 +36,14 @@
 #include <glib/gi18n.h>
 #include "sonypi-plugin.h"
 
+#include <stdint.h>
+
 const gchar *plugin_name = "sonypi";
 
 /* These values are taken from spicctrl by Stelian Pop */
 #define SONYPI_DEV       "/dev/sonypi"
-#define SONYPI_IOCGFAN   _IOR('v', 10, guint8)
-#define SONYPI_IOCGTEMP  _IOR('v', 12, guint8)
+#define SONYPI_IOCGFAN   _IOR('v', 10, uint8_t)
+#define SONYPI_IOCGTEMP  _IOR('v', 12, uint8_t)
 #define SONYPI_TEMP "sonypi_temp"
 
 enum {
