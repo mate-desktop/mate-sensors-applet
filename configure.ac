@@ -18,12 +18,13 @@ AC_HEADER_STDC
 AC_PROG_LIBTOOL
 
 # =========== take care of some localization ========= #
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT([external])
+
 AH_TEMPLATE([GETTEXT_PACKAGE], [Package name for gettext])
 GETTEXT_PACKAGE=mate-sensors-applet
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
 AC_SUBST(GETTEXT_PACKAGE)
-AM_GLIB_GNU_GETTEXT
-IT_PROG_INTLTOOL([0.50.1])
 
 # ========== export compiler / linker options ======== #
 AC_SUBST(CFLAGS)
