@@ -1,6 +1,6 @@
-[type: gettext/ini]org.mate.applets.SensorsApplet.mate-panel-applet.in.in
-[type: gettext/gsettings]org.mate.sensors-applet.gschema.xml.in
-[type: gettext/gsettings]org.mate.sensors-applet.sensor.gschema.xml.in
+org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in
+org.mate.sensors-applet.gschema.xml.in
+org.mate.sensors-applet.sensor.gschema.xml.in
 plugins/pmu-sys/pmu-sys-plugin.c
 plugins/i2c-sys/i2c-sys-plugin.c
 plugins/i8k/i8k-plugin.c
