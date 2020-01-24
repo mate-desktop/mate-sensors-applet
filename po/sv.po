@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -12,12 +12,11 @@
 # Tobias Lekare <lekare@linux.com>, 2018
 # Philip Andersen <renegadevi@codeofmagi.net>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-16 09:52+0100\n"
+"Project-Id-Version: mate-sensors-applet 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
 "Last-Translator: Philip Andersen <renegadevi@codeofmagi.net>, 2018\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
@@ -27,471 +26,455 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
 msgstr "Panelprogramsfabrik för Sensorer"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "Hårdvara sensor övervakare"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
-msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr "Visar temperatur, fläkthastighet och spänning sensoravläsningar"
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
+msgid "mate-sensors-applet"
+msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:1
+#: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
 msgstr "Fontstorlek i typsnittspunkter"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:2
+#: org.mate.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
 msgstr "Ange om sensorenheterna ska visas eller döljas "
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:3
+#: org.mate.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
 msgstr "Använd displayikoner eller textikoner"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:4
+#: org.mate.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
 msgstr "Ange värde bredvid eller under etikett"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:5
+#: org.mate.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "Visa temperatur i Kelvin, Celsius eller Farhenheit"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:6
+#: org.mate.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
 msgstr "Huruvida notifieringar ska visas"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:7
+#: org.mate.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
 msgstr "Dröjsmål (i ms) mellan omladdningar"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:8
+#: org.mate.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr "Grafens storlek i pixlar (bredd om horisontell, höjd om vertikal)"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:9
+#: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
 msgstr "Lista över sensorer"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
+#: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
 msgstr "Sökväg till filnamn"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
+#: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
 msgstr "Sensor enhets id:n"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
+#: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
 msgstr "Sensor enhetens gränssnitt"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
+#: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
 msgstr "Användardefinierad etikett"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
+#: org.mate.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
 msgstr "Huruvida en sensor är aktiverad eller ej"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
+#: org.mate.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
 msgstr "Lågt värde"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:7
+#: org.mate.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
 msgstr "Högt värde"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
+#: org.mate.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
 msgstr "Huruvida sensorn har sitt alarm aktiverat"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:9
+#: org.mate.sensors-applet.sensor.gschema.xml.in:37
+#: org.mate.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
 msgstr "Kommando att köra när alarmet är aktiverat"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
+#: org.mate.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr "Hur ofta varje alarm bör låta (i sekunder)"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
+#: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
 msgstr "Används för att identifiera en sensor i en lista"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
+#: org.mate.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
 msgstr "Multiplikator"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:13
+#: org.mate.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
 msgstr "Offset"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:14
+#: org.mate.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
 msgstr "Ikon typ"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
+#: org.mate.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
 msgstr "Färgen för sensors graf"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:60
-#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
-#: ../plugins/omnibook/omnibook-plugin.c:47
-#: ../plugins/i2c-proc/i2c-proc-plugin.c:56 ../plugins/acpi/acpi-plugin.c:54
-#: ../plugins/smu-sys/smu-sys-plugin.c:58
+#: plugins/pmu-sys/pmu-sys-plugin.c:60 plugins/i2c-sys/i2c-sys-plugin.c:53
+#: plugins/i8k/i8k-plugin.c:48 plugins/omnibook/omnibook-plugin.c:47
+#: plugins/i2c-proc/i2c-proc-plugin.c:56 plugins/acpi/acpi-plugin.c:54
+#: plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
 msgstr "Processor"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:65
-#: ../plugins/nvidia/nvidia-plugin.c:128 ../plugins/nvidia/nvidia-plugin.c:148
-#: ../plugins/nvidia/nvidia-plugin.c:173
-#: ../plugins/smu-sys/smu-sys-plugin.c:63
-#: ../plugins/aticonfig/aticonfig-plugin.c:107
+#: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:128
+#: plugins/nvidia/nvidia-plugin.c:148 plugins/nvidia/nvidia-plugin.c:173
+#: plugins/smu-sys/smu-sys-plugin.c:63
+#: plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr "Grafikprocessor"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:70
+#: plugins/pmu-sys/pmu-sys-plugin.c:70
 msgid "CASE"
 msgstr "CHASSI"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:75
-#: ../plugins/smu-sys/smu-sys-plugin.c:68
+#: plugins/pmu-sys/pmu-sys-plugin.c:75 plugins/smu-sys/smu-sys-plugin.c:68
 msgid "FAN"
 msgstr "FLÄKT"
 
-#: ../plugins/i8k/i8k-plugin.c:57
+#: plugins/i8k/i8k-plugin.c:57
 msgid "FAN1"
 msgstr "FLÄKT1"
 
-#: ../plugins/i8k/i8k-plugin.c:66
+#: plugins/i8k/i8k-plugin.c:66
 msgid "FAN2"
 msgstr "FLÄKT2"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:71
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:71
 msgid "MiniPCI"
 msgstr "MiniPCI"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:95
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:107
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:95
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:107
 msgid "Battery"
 msgstr "Batteri"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:124
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:124
 msgid "Fan"
 msgstr "Fläkt"
 
-#: ../plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
 msgstr "CPU TEMP"
 
-#: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:326
+#: plugins/omnibook/omnibook-plugin.c:46 sensors-applet/sensors-applet.c:326
 msgid "temperature"
 msgstr "temperatur"
 
-#: ../plugins/nvidia/nvidia-plugin.c:190
+#: plugins/nvidia/nvidia-plugin.c:190
 msgid "Ambient"
 msgstr "Omgivande"
 
-#: ../sensors-applet/prefs-dialog.c:417
+#: sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "Inställningar för sensorpanelprogrammet"
 
-#: ../sensors-applet/prefs-dialog.c:457
-#: ../sensors-applet/sensors-applet.c:1288
+#: sensors-applet/prefs-dialog.c:457 sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "Inga sensorer hittades!"
 
-#: ../sensors-applet/prefs-dialog.c:463
+#: sensors-applet/prefs-dialog.c:463
 msgid "Display"
 msgstr "Skärm"
 
-#: ../sensors-applet/prefs-dialog.c:475
+#: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
 msgstr "etikett med värde"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: sensors-applet/prefs-dialog.c:476
 msgid "icon with value"
 msgstr "ikon med värde"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: sensors-applet/prefs-dialog.c:477
 msgid "value only"
 msgstr "endast värde"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: sensors-applet/prefs-dialog.c:478
 msgid "icon only"
 msgstr "endast ikon"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: sensors-applet/prefs-dialog.c:479
 msgid "graph only"
 msgstr "endast diagram"
 
-#: ../sensors-applet/prefs-dialog.c:492
+#: sensors-applet/prefs-dialog.c:492
 msgid "_Display sensors in panel as"
 msgstr "_Visa sensorer i panel som"
 
-#: ../sensors-applet/prefs-dialog.c:504
+#: sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
 msgstr "bredvid etiketter/ikoner"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
 msgstr "under etiketter/ikoner"
 
-#: ../sensors-applet/prefs-dialog.c:518
+#: sensors-applet/prefs-dialog.c:518
 msgid "Preferred _position of sensor values"
 msgstr "Föredragen _position för sensorvärden"
 
-#: ../sensors-applet/prefs-dialog.c:530
+#: sensors-applet/prefs-dialog.c:530
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: sensors-applet/prefs-dialog.c:531
 msgid "Celsius"
 msgstr "Celsius"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: sensors-applet/prefs-dialog.c:532
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../sensors-applet/prefs-dialog.c:545
+#: sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
 msgstr "_Temperaturskala"
 
-#: ../sensors-applet/prefs-dialog.c:571
+#: sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
 msgstr "Graf _storlek (pixlar)"
 
-#. hide/show units
-#: ../sensors-applet/prefs-dialog.c:583
+#: sensors-applet/prefs-dialog.c:583
 msgid "Show _units"
 msgstr "Visa _enheter"
 
-#: ../sensors-applet/prefs-dialog.c:591
+#: sensors-applet/prefs-dialog.c:591
 msgid "Update"
 msgstr "Uppdatera"
 
-#: ../sensors-applet/prefs-dialog.c:618
+#: sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
 msgstr "Uppdaterings_intervall (sekunder)"
 
-#: ../sensors-applet/prefs-dialog.c:628
+#: sensors-applet/prefs-dialog.c:628
 msgid "Notifications"
 msgstr "Notifieringar"
 
-#: ../sensors-applet/prefs-dialog.c:638
+#: sensors-applet/prefs-dialog.c:638
 msgid "Display _notifications"
 msgstr "Visa _notifieringar"
 
-#: ../sensors-applet/prefs-dialog.c:772
+#: sensors-applet/prefs-dialog.c:772
 msgid "Sensor"
 msgstr "Sensor"
 
-#: ../sensors-applet/prefs-dialog.c:779
+#: sensors-applet/prefs-dialog.c:779
 msgid "Label"
 msgstr "Etikett"
 
-#: ../sensors-applet/prefs-dialog.c:789
+#: sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
 msgstr "Etiketter kan redigeras direkt genom att klicka på dem."
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: sensors-applet/prefs-dialog.c:790
 msgid "Enabled"
 msgstr "Aktiverad"
 
-#. icon stuff
-#: ../sensors-applet/prefs-dialog.c:799
-#: ../sensors-applet/sensor-config-dialog.c:443
+#: sensors-applet/prefs-dialog.c:799 sensors-applet/sensor-config-dialog.c:443
 msgid "Icon"
 msgstr "Ikon"
 
-#. when selection is changed, make sure sensor_config button is activated
-#. Create buttons for user to interact with sensors tree
-#: ../sensors-applet/prefs-dialog.c:831
+#: sensors-applet/prefs-dialog.c:831
 msgid "_Up"
 msgstr "_Upp"
 
-#: ../sensors-applet/prefs-dialog.c:839
+#: sensors-applet/prefs-dialog.c:839
 msgid "_Down"
 msgstr "Nedåt"
 
-#. Sensor Config button
-#. initially make button insensitive until user selects a row
-#. from the sensors tree
-#: ../sensors-applet/prefs-dialog.c:873
+#: sensors-applet/prefs-dialog.c:873
 msgid "_Properties"
 msgstr "_Egenskaper"
 
-#: ../sensors-applet/prefs-dialog.c:920
+#: sensors-applet/prefs-dialog.c:920
 msgid "General Options"
 msgstr "Allmänna inställningar"
 
-#: ../sensors-applet/prefs-dialog.c:924
+#: sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
 msgstr "Sensorer"
 
-#: ../sensors-applet/sensors-applet.h:57
+#: sensors-applet/sensors-applet.h:57
 msgid "RPM"
 msgstr "varv/min"
 
-#: ../sensors-applet/sensors-applet.h:58
+#: sensors-applet/sensors-applet.h:58
 msgid "V"
 msgstr "V"
 
-#: ../sensors-applet/sensors-applet.h:59
+#: sensors-applet/sensors-applet.h:59
 msgid "A"
 msgstr "A"
 
-#. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:563
+#: sensors-applet/active-sensor.c:563
 msgid "ERROR"
 msgstr "FEL"
 
-#: ../sensors-applet/about-dialog.c:40
+#: sensors-applet/about-dialog.c:40
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 
-#. To translator: Put your name here to show up in the About dialog as the
-#. translator
-#: ../sensors-applet/about-dialog.c:46
+#: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
 
-#: ../sensors-applet/sensor-config-dialog.c:388
+#: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "Sensoregenskaper"
 
-#. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:416
+#: sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
 msgstr "Diagram"
 
-#: ../sensors-applet/sensor-config-dialog.c:429
+#: sensors-applet/sensor-config-dialog.c:429
 msgid "Graph Color"
 msgstr "Diagramfärg"
 
-#: ../sensors-applet/sensor-config-dialog.c:432
+#: sensors-applet/sensor-config-dialog.c:432
 msgid "Graph _color"
 msgstr "Diagram_färg"
 
-#: ../sensors-applet/sensor-config-dialog.c:486
+#: sensors-applet/sensor-config-dialog.c:486
 msgid "Sensor _icon"
 msgstr "Sensor_ikon"
 
-#: ../sensors-applet/sensor-config-dialog.c:492
+#: sensors-applet/sensor-config-dialog.c:492
 msgid "Scaling Parameters"
 msgstr "Skalningsparametrar"
 
-#: ../sensors-applet/sensor-config-dialog.c:521
+#: sensors-applet/sensor-config-dialog.c:521
 msgid "Sensor value _multiplier"
 msgstr "_Multiplicerare för sensorvärde"
 
-#: ../sensors-applet/sensor-config-dialog.c:549
+#: sensors-applet/sensor-config-dialog.c:549
 msgid "Sensor value _offset"
 msgstr "P_osition för sensorvärde"
 
-#. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:558
+#: sensors-applet/sensor-config-dialog.c:558
 msgid "Sensor Limits"
 msgstr "Sensorgränser"
 
-#: ../sensors-applet/sensor-config-dialog.c:586
+#: sensors-applet/sensor-config-dialog.c:586
 msgid "Sensor _low value"
 msgstr "_Lägre sensorvärde"
 
-#: ../sensors-applet/sensor-config-dialog.c:614
+#: sensors-applet/sensor-config-dialog.c:614
 msgid "Sensor _high value"
 msgstr "_Högre sensorvärde"
 
-#: ../sensors-applet/sensor-config-dialog.c:622
-#: ../sensors-applet/sensors-applet.c:365
+#: sensors-applet/sensor-config-dialog.c:622
+#: sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "Alarm"
 
-#: ../sensors-applet/sensor-config-dialog.c:651
+#: sensors-applet/sensor-config-dialog.c:651
 msgid "Alarm _repeat interval (secs)"
 msgstr "Intervall för upp_repning av alarm (sekunder)"
 
-#: ../sensors-applet/sensor-config-dialog.c:670
+#: sensors-applet/sensor-config-dialog.c:670
 msgid "Lo_w alarm command"
 msgstr "Låg_t alarm kommando"
 
-#: ../sensors-applet/sensor-config-dialog.c:691
+#: sensors-applet/sensor-config-dialog.c:691
 msgid "Hi_gh alarm command"
 msgstr "Hö_gt alarm kommando"
 
-#: ../sensors-applet/sensor-config-dialog.c:704
+#: sensors-applet/sensor-config-dialog.c:704
 msgid "_Enable alarm"
 msgstr "Aktiv_era alarm"
 
-#: ../sensors-applet/sensors-applet.c:238
+#: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
 msgstr "_Inställningar"
 
-#: ../sensors-applet/sensors-applet.c:241
+#: sensors-applet/sensors-applet.c:241
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../sensors-applet/sensors-applet.c:244
+#: sensors-applet/sensors-applet.c:244
 msgid "_About"
 msgstr "_Om"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: sensors-applet/sensors-applet.c:307
 msgid "is very low"
 msgstr "är väldigt låg"
 
-#: ../sensors-applet/sensors-applet.c:308
+#: sensors-applet/sensors-applet.c:308
 msgid "lower limit"
 msgstr "lägre gräns"
 
-#. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:313
+#: sensors-applet/sensors-applet.c:313
 msgid "is very high"
 msgstr "är mycket hög"
 
-#: ../sensors-applet/sensors-applet.c:314
+#: sensors-applet/sensors-applet.c:314
 msgid "upper limit"
 msgstr "högre gräns"
 
-#: ../sensors-applet/sensors-applet.c:325
+#: sensors-applet/sensors-applet.c:325
 msgid "Temperature"
 msgstr "Temperatur"
 
-#: ../sensors-applet/sensors-applet.c:345
+#: sensors-applet/sensors-applet.c:345
 msgid "Voltage"
 msgstr "Spänning"
 
-#: ../sensors-applet/sensors-applet.c:346
+#: sensors-applet/sensors-applet.c:346
 msgid "voltage"
 msgstr "spänning"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: sensors-applet/sensors-applet.c:351
 msgid "Fan Speed"
 msgstr "Fläkthastighet"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: sensors-applet/sensors-applet.c:352
 msgid "fan speed"
 msgstr "fläkthastighet"
 
-#: ../sensors-applet/sensors-applet.c:357
+#: sensors-applet/sensors-applet.c:357
 msgid "Current"
 msgstr "Aktuellt"
 
-#: ../sensors-applet/sensors-applet.c:358
+#: sensors-applet/sensors-applet.c:358
 msgid "current"
 msgstr "aktuellt"
 
-#: ../sensors-applet/sensors-applet.c:379
+#: sensors-applet/sensors-applet.c:379
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "Fel vid uppdatering av sensor %s"
 
-#: ../sensors-applet/sensors-applet.c:380
+#: sensors-applet/sensors-applet.c:380
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
@@ -500,6 +483,6 @@ msgstr ""
 "Ett fel inträffade under försök att uppdatera värdet för sensor %s "
 "lokaliserad vid %s."
 
-#: ../sensors-applet/sensors-applet.c:481
+#: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "Inga sensorer är aktiverade!"

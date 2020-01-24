@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -11,12 +11,11 @@
 # alibacha19 <alibacha19@gmail.com>, 2018
 # Saif Husam <saifxman10@yahoo.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-16 09:52+0100\n"
+"Project-Id-Version: mate-sensors-applet 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
 "Last-Translator: Saif Husam <saifxman10@yahoo.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/mate/teams/13566/ar/)\n"
@@ -26,479 +25,463 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
 msgstr "استشعار مصنع التطبيق الصغير"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "مراقبة أجهزة الاستشعار"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
-msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr "عرض درجة الحرارة، وسرعة المروحة والجهد قراءات أجهزة الاستشعار"
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
+msgid "mate-sensors-applet"
+msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:1
+#: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
 msgstr "حجم الخط بالنقاط"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:2
+#: org.mate.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
 msgstr "أظهر أو أخفِ واحدات الحساسات"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:3
+#: org.mate.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
 msgstr "أظهر أو أخفِ الرموز أو التسميات"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:4
+#: org.mate.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
 msgstr "حدد القيمة جانب أو تحت التسمية"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:5
+#: org.mate.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "أظهر درجة الحرارة بالمئوية أو الكلفن أو الفهرنهايت"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:6
+#: org.mate.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
 msgstr "عرض الإشعارات أم لا"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:7
+#: org.mate.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
 msgstr "المهلة ( بالثواني ) بين عمليات التحديث"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:8
+#: org.mate.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr "حجم المخطط بالبكسل ( العرض للأفقي ، و الطول للعمودي )"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:9
+#: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
 msgstr "قائمة الحساسات"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
+#: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
 msgstr "مسار الملف"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
+#: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
 msgstr "معرّفات جهاز الحساس"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
+#: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
 msgstr "واجهة إدخال جهاز الحساس"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
+#: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
 msgstr "التسمية المخصصة بواسطة المستخدم"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
+#: org.mate.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
 msgstr "ما إذا كان الحساس مفعلًا أم لا"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
+#: org.mate.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
 msgstr "قيمة منخفضة"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:7
+#: org.mate.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
 msgstr "قيمة مرتفعة"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
+#: org.mate.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
 msgstr "عندما يفعّل التنبيه بواسطة الحساس"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:9
+#: org.mate.sensors-applet.sensor.gschema.xml.in:37
+#: org.mate.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
 msgstr "تنفيذ هذا الأمر عند تفعيل التنبيه"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
+#: org.mate.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr "كل متى ترغب بسماع التنبيهات ( بالثواني)"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
+#: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
 msgstr "مستخدم للتعريف عن الحساس في القائمة."
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
+#: org.mate.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
 msgstr "محصي"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:13
+#: org.mate.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
 msgstr "التعويض"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:14
+#: org.mate.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
 msgstr "صيغة الرمز"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
+#: org.mate.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
 msgstr "لون مخطط الحساس"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:60
-#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
-#: ../plugins/omnibook/omnibook-plugin.c:47
-#: ../plugins/i2c-proc/i2c-proc-plugin.c:56 ../plugins/acpi/acpi-plugin.c:54
-#: ../plugins/smu-sys/smu-sys-plugin.c:58
+#: plugins/pmu-sys/pmu-sys-plugin.c:60 plugins/i2c-sys/i2c-sys-plugin.c:53
+#: plugins/i8k/i8k-plugin.c:48 plugins/omnibook/omnibook-plugin.c:47
+#: plugins/i2c-proc/i2c-proc-plugin.c:56 plugins/acpi/acpi-plugin.c:54
+#: plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
 msgstr "وحدة المعالجة المركزية"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:65
-#: ../plugins/nvidia/nvidia-plugin.c:128 ../plugins/nvidia/nvidia-plugin.c:148
-#: ../plugins/nvidia/nvidia-plugin.c:173
-#: ../plugins/smu-sys/smu-sys-plugin.c:63
-#: ../plugins/aticonfig/aticonfig-plugin.c:107
+#: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:128
+#: plugins/nvidia/nvidia-plugin.c:148 plugins/nvidia/nvidia-plugin.c:173
+#: plugins/smu-sys/smu-sys-plugin.c:63
+#: plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr "وحدة معالجة الرسوميات"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:70
+#: plugins/pmu-sys/pmu-sys-plugin.c:70
 msgid "CASE"
 msgstr "الصندوق"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:75
-#: ../plugins/smu-sys/smu-sys-plugin.c:68
+#: plugins/pmu-sys/pmu-sys-plugin.c:75 plugins/smu-sys/smu-sys-plugin.c:68
 msgid "FAN"
 msgstr "المروحة"
 
-#: ../plugins/i8k/i8k-plugin.c:57
+#: plugins/i8k/i8k-plugin.c:57
 msgid "FAN1"
 msgstr "المروحة 1"
 
-#: ../plugins/i8k/i8k-plugin.c:66
+#: plugins/i8k/i8k-plugin.c:66
 msgid "FAN2"
 msgstr "المروحة 2"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:71
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:71
 msgid "MiniPCI"
 msgstr "بطاقة PCI مصغرة"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:95
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:107
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:95
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:107
 msgid "Battery"
 msgstr "البطارية"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:124
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:124
 msgid "Fan"
 msgstr "المروحة"
 
-#: ../plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
 msgstr "درجة حرارة المعالج"
 
-#: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:326
+#: plugins/omnibook/omnibook-plugin.c:46 sensors-applet/sensors-applet.c:326
 msgid "temperature"
 msgstr "درجة الحرارة"
 
-#: ../plugins/nvidia/nvidia-plugin.c:190
+#: plugins/nvidia/nvidia-plugin.c:190
 msgid "Ambient"
 msgstr "المحيط"
 
-#: ../sensors-applet/prefs-dialog.c:417
+#: sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "إعدادات تطبيق الحساسات"
 
-#: ../sensors-applet/prefs-dialog.c:457
-#: ../sensors-applet/sensors-applet.c:1288
+#: sensors-applet/prefs-dialog.c:457 sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "لم يعثر على أي حساس!"
 
-#: ../sensors-applet/prefs-dialog.c:463
+#: sensors-applet/prefs-dialog.c:463
 msgid "Display"
 msgstr "الشاشة"
 
-#: ../sensors-applet/prefs-dialog.c:475
+#: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
 msgstr "التسمية مع القيمة"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: sensors-applet/prefs-dialog.c:476
 msgid "icon with value"
 msgstr "الرمز مع القيمة"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: sensors-applet/prefs-dialog.c:477
 msgid "value only"
 msgstr "القيمة فقط"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: sensors-applet/prefs-dialog.c:478
 msgid "icon only"
 msgstr "الرمز فقط"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: sensors-applet/prefs-dialog.c:479
 msgid "graph only"
 msgstr "الرسم البياني فقط"
 
-#: ../sensors-applet/prefs-dialog.c:492
+#: sensors-applet/prefs-dialog.c:492
 msgid "_Display sensors in panel as"
 msgstr "_إظهار الحساسات في اللوحة كـ"
 
-#: ../sensors-applet/prefs-dialog.c:504
+#: sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
 msgstr "جانب التسميات / الرموز"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
 msgstr "تحت التسميات / الرموز"
 
-#: ../sensors-applet/prefs-dialog.c:518
+#: sensors-applet/prefs-dialog.c:518
 msgid "Preferred _position of sensor values"
 msgstr "المكان ال_مفضل لقيم الحساس"
 
-#: ../sensors-applet/prefs-dialog.c:530
+#: sensors-applet/prefs-dialog.c:530
 msgid "Kelvin"
 msgstr "كلفن"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: sensors-applet/prefs-dialog.c:531
 msgid "Celsius"
 msgstr "مئوية"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: sensors-applet/prefs-dialog.c:532
 msgid "Fahrenheit"
 msgstr "فهرنهايت"
 
-#: ../sensors-applet/prefs-dialog.c:545
+#: sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
 msgstr "مستوى الحرارة_"
 
-#: ../sensors-applet/prefs-dialog.c:571
+#: sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
 msgstr "حجم المخ_طط بالبكسل"
 
-#. hide/show units
-#: ../sensors-applet/prefs-dialog.c:583
+#: sensors-applet/prefs-dialog.c:583
 msgid "Show _units"
 msgstr ""
 
-#: ../sensors-applet/prefs-dialog.c:591
+#: sensors-applet/prefs-dialog.c:591
 msgid "Update"
 msgstr "تحديث"
 
-#: ../sensors-applet/prefs-dialog.c:618
+#: sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
 msgstr "تحدي _بفاصل (ثواني)"
 
-#: ../sensors-applet/prefs-dialog.c:628
+#: sensors-applet/prefs-dialog.c:628
 msgid "Notifications"
 msgstr "الإشعارات"
 
-#: ../sensors-applet/prefs-dialog.c:638
+#: sensors-applet/prefs-dialog.c:638
 msgid "Display _notifications"
 msgstr "عرض الإشعارات"
 
-#: ../sensors-applet/prefs-dialog.c:772
+#: sensors-applet/prefs-dialog.c:772
 msgid "Sensor"
 msgstr "الحساس"
 
-#: ../sensors-applet/prefs-dialog.c:779
+#: sensors-applet/prefs-dialog.c:779
 msgid "Label"
 msgstr "التسمية"
 
-#: ../sensors-applet/prefs-dialog.c:789
+#: sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
 msgstr "يمكن تحرير التسميات مباشرة بالضغط عليها."
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: sensors-applet/prefs-dialog.c:790
 msgid "Enabled"
 msgstr "مفعّل"
 
-#. icon stuff
-#: ../sensors-applet/prefs-dialog.c:799
-#: ../sensors-applet/sensor-config-dialog.c:443
+#: sensors-applet/prefs-dialog.c:799 sensors-applet/sensor-config-dialog.c:443
 msgid "Icon"
 msgstr "أيقونة"
 
-#. when selection is changed, make sure sensor_config button is activated
-#. Create buttons for user to interact with sensors tree
-#: ../sensors-applet/prefs-dialog.c:831
+#: sensors-applet/prefs-dialog.c:831
 msgid "_Up"
 msgstr "أ_على"
 
-#: ../sensors-applet/prefs-dialog.c:839
+#: sensors-applet/prefs-dialog.c:839
 msgid "_Down"
 msgstr ""
 
-#. Sensor Config button
-#. initially make button insensitive until user selects a row
-#. from the sensors tree
-#: ../sensors-applet/prefs-dialog.c:873
+#: sensors-applet/prefs-dialog.c:873
 msgid "_Properties"
 msgstr "_خصائص"
 
-#: ../sensors-applet/prefs-dialog.c:920
+#: sensors-applet/prefs-dialog.c:920
 msgid "General Options"
 msgstr "خيارات عامة"
 
-#: ../sensors-applet/prefs-dialog.c:924
+#: sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
 msgstr "الحساسات"
 
-#: ../sensors-applet/sensors-applet.h:57
+#: sensors-applet/sensors-applet.h:57
 msgid "RPM"
 msgstr "دورة بالدقيقة"
 
-#: ../sensors-applet/sensors-applet.h:58
+#: sensors-applet/sensors-applet.h:58
 msgid "V"
 msgstr "فولط"
 
-#: ../sensors-applet/sensors-applet.h:59
+#: sensors-applet/sensors-applet.h:59
 msgid "A"
 msgstr "A"
 
-#. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:563
+#: sensors-applet/active-sensor.c:563
 msgid "ERROR"
 msgstr "خطأ"
 
-#: ../sensors-applet/about-dialog.c:40
+#: sensors-applet/about-dialog.c:40
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 
-#. To translator: Put your name here to show up in the About dialog as the
-#. translator
-#: ../sensors-applet/about-dialog.c:46
+#: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
 "فريق عيون العرب للترجمة http://www.arabeyes.org :\n"
 "مصعب الزعبي\t<moceap@hotmail.com>"
 
-#: ../sensors-applet/sensor-config-dialog.c:388
+#: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "خصائص الحساس"
 
-#. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:416
+#: sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
 msgstr "المخطط"
 
-#: ../sensors-applet/sensor-config-dialog.c:429
+#: sensors-applet/sensor-config-dialog.c:429
 msgid "Graph Color"
 msgstr "لون المخطط"
 
-#: ../sensors-applet/sensor-config-dialog.c:432
+#: sensors-applet/sensor-config-dialog.c:432
 msgid "Graph _color"
 msgstr "لون الم_خطط"
 
-#: ../sensors-applet/sensor-config-dialog.c:486
+#: sensors-applet/sensor-config-dialog.c:486
 msgid "Sensor _icon"
 msgstr "_رمز المخطط"
 
-#: ../sensors-applet/sensor-config-dialog.c:492
+#: sensors-applet/sensor-config-dialog.c:492
 msgid "Scaling Parameters"
 msgstr "معاملات القياس"
 
-#: ../sensors-applet/sensor-config-dialog.c:521
+#: sensors-applet/sensor-config-dialog.c:521
 msgid "Sensor value _multiplier"
 msgstr "محصي _قيم الحساس"
 
-#: ../sensors-applet/sensor-config-dialog.c:549
+#: sensors-applet/sensor-config-dialog.c:549
 msgid "Sensor value _offset"
 msgstr "تعويض _قيمة الحساس"
 
-#. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:558
+#: sensors-applet/sensor-config-dialog.c:558
 msgid "Sensor Limits"
 msgstr "نهايات الحساس"
 
-#: ../sensors-applet/sensor-config-dialog.c:586
+#: sensors-applet/sensor-config-dialog.c:586
 msgid "Sensor _low value"
 msgstr "القيمة الد_نيا للحساس"
 
-#: ../sensors-applet/sensor-config-dialog.c:614
+#: sensors-applet/sensor-config-dialog.c:614
 msgid "Sensor _high value"
 msgstr "القيمة العليا لل_حساس"
 
-#: ../sensors-applet/sensor-config-dialog.c:622
-#: ../sensors-applet/sensors-applet.c:365
+#: sensors-applet/sensor-config-dialog.c:622
+#: sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "تنبيه"
 
-#: ../sensors-applet/sensor-config-dialog.c:651
+#: sensors-applet/sensor-config-dialog.c:651
 msgid "Alarm _repeat interval (secs)"
 msgstr "التنبيه بفا_صل (ثواني)"
 
-#: ../sensors-applet/sensor-config-dialog.c:670
+#: sensors-applet/sensor-config-dialog.c:670
 msgid "Lo_w alarm command"
 msgstr "أمر التنبيه الأ_دنى"
 
-#: ../sensors-applet/sensor-config-dialog.c:691
+#: sensors-applet/sensor-config-dialog.c:691
 msgid "Hi_gh alarm command"
 msgstr "أمر التنبيه الأ_على"
 
-#: ../sensors-applet/sensor-config-dialog.c:704
+#: sensors-applet/sensor-config-dialog.c:704
 msgid "_Enable alarm"
 msgstr "_تفعيل التنبيه"
 
-#: ../sensors-applet/sensors-applet.c:238
+#: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
 msgstr "ال_تّفضيلات"
 
-#: ../sensors-applet/sensors-applet.c:241
+#: sensors-applet/sensors-applet.c:241
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../sensors-applet/sensors-applet.c:244
+#: sensors-applet/sensors-applet.c:244
 msgid "_About"
 msgstr "_عنْ"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: sensors-applet/sensors-applet.c:307
 msgid "is very low"
 msgstr "منخفضة جدًّا"
 
-#: ../sensors-applet/sensors-applet.c:308
+#: sensors-applet/sensors-applet.c:308
 msgid "lower limit"
 msgstr "النهاية الدنيا"
 
-#. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:313
+#: sensors-applet/sensors-applet.c:313
 msgid "is very high"
 msgstr "مرتفعة جدًّا"
 
-#: ../sensors-applet/sensors-applet.c:314
+#: sensors-applet/sensors-applet.c:314
 msgid "upper limit"
 msgstr "النهاية العليا"
 
-#: ../sensors-applet/sensors-applet.c:325
+#: sensors-applet/sensors-applet.c:325
 msgid "Temperature"
 msgstr "الحرارة"
 
-#: ../sensors-applet/sensors-applet.c:345
+#: sensors-applet/sensors-applet.c:345
 msgid "Voltage"
 msgstr "فرق الكمون"
 
-#: ../sensors-applet/sensors-applet.c:346
+#: sensors-applet/sensors-applet.c:346
 msgid "voltage"
 msgstr "فرق الكمون"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: sensors-applet/sensors-applet.c:351
 msgid "Fan Speed"
 msgstr "سرعة المروحة"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: sensors-applet/sensors-applet.c:352
 msgid "fan speed"
 msgstr "سرعة المروحة"
 
-#: ../sensors-applet/sensors-applet.c:357
+#: sensors-applet/sensors-applet.c:357
 msgid "Current"
 msgstr "الحالية"
 
-#: ../sensors-applet/sensors-applet.c:358
+#: sensors-applet/sensors-applet.c:358
 msgid "current"
 msgstr "الحالية"
 
-#: ../sensors-applet/sensors-applet.c:379
+#: sensors-applet/sensors-applet.c:379
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "خطأ في تحديث الحساس %s"
 
-#: ../sensors-applet/sensors-applet.c:380
+#: sensors-applet/sensors-applet.c:380
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr "حدث خلل أثناء محاولة تحديث قيمة الحساس %s و المتوضّع في %s."
 
-#: ../sensors-applet/sensors-applet.c:481
+#: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "لا يوجد حساسات مفعلّة!"

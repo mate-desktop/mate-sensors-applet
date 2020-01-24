@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Walter Cheuk <wwycheuk@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 趙惟倫 <bluebat@member.fsf.org>, 2018
-# Jeff Huang <s8321414@gmail.com>, 2019
+# 黃柏諺 <s8321414@gmail.com>, 2020
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-16 09:52+0100\n"
+"Project-Id-Version: mate-sensors-applet 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>, 2019\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,341 +23,328 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
 msgstr "感應器面板程式工廠"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "硬體感應監視器"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
-msgid "Displays temperature, fan speed and voltage sensor readings"
-msgstr "顯示溫度、風扇速度與電壓感應器讀數"
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
+msgid "mate-sensors-applet"
+msgstr "mate-sensors-applet"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:1
+#: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
 msgstr "字型尺寸以像點計量"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:2
+#: org.mate.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
 msgstr "指定是否顯示或隱藏感應器單位"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:3
+#: org.mate.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
 msgstr "設定是否顯示圖示或文字標貼"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:4
+#: org.mate.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
 msgstr "設定值在標貼的旁邊或下面"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:5
+#: org.mate.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "以凱氏、攝氏或華氏顯示溫度"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:6
+#: org.mate.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
 msgstr "是否要顯示通知"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:7
+#: org.mate.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
 msgstr "重新整理的間隔延遲 (毫秒)"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:8
+#: org.mate.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr "圖形大小以像素計量 (水平時為寬度，垂直時為高度)"
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:9
+#: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
 msgstr "感應器清單"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
+#: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
 msgstr "檔名路徑"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
+#: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
 msgstr "感應器裝置識別號"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
+#: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
 msgstr "感應器裝置介面"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
+#: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
 msgstr "使用者自訂標貼"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
+#: org.mate.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
 msgstr "是否某個感應器已啟用"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
+#: org.mate.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
 msgstr "低值"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:7
+#: org.mate.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
 msgstr "高值"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
+#: org.mate.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
 msgstr "是否感應器已啟用其警示"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:9
+#: org.mate.sensors-applet.sensor.gschema.xml.in:37
+#: org.mate.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
 msgstr "啟用警示時所執行的命令"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
+#: org.mate.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr "每個警示應該發出聲響多久 (秒)"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
+#: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
 msgstr "用來在清單中識別感應器"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
+#: org.mate.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
 msgstr "倍數"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:13
+#: org.mate.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
 msgstr "偏移"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:14
+#: org.mate.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
 msgstr "圖示型態"
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
+#: org.mate.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
 msgstr "感應器的圖形顏色"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:60
-#: ../plugins/i2c-sys/i2c-sys-plugin.c:53 ../plugins/i8k/i8k-plugin.c:48
-#: ../plugins/omnibook/omnibook-plugin.c:47
-#: ../plugins/i2c-proc/i2c-proc-plugin.c:56 ../plugins/acpi/acpi-plugin.c:54
-#: ../plugins/smu-sys/smu-sys-plugin.c:58
+#: plugins/pmu-sys/pmu-sys-plugin.c:60 plugins/i2c-sys/i2c-sys-plugin.c:53
+#: plugins/i8k/i8k-plugin.c:48 plugins/omnibook/omnibook-plugin.c:47
+#: plugins/i2c-proc/i2c-proc-plugin.c:56 plugins/acpi/acpi-plugin.c:54
+#: plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
 msgstr "CPU"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:65
-#: ../plugins/nvidia/nvidia-plugin.c:128 ../plugins/nvidia/nvidia-plugin.c:148
-#: ../plugins/nvidia/nvidia-plugin.c:173
-#: ../plugins/smu-sys/smu-sys-plugin.c:63
-#: ../plugins/aticonfig/aticonfig-plugin.c:107
+#: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:128
+#: plugins/nvidia/nvidia-plugin.c:148 plugins/nvidia/nvidia-plugin.c:173
+#: plugins/smu-sys/smu-sys-plugin.c:63
+#: plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr "GPU"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:70
+#: plugins/pmu-sys/pmu-sys-plugin.c:70
 msgid "CASE"
 msgstr "機殼"
 
-#: ../plugins/pmu-sys/pmu-sys-plugin.c:75
-#: ../plugins/smu-sys/smu-sys-plugin.c:68
+#: plugins/pmu-sys/pmu-sys-plugin.c:75 plugins/smu-sys/smu-sys-plugin.c:68
 msgid "FAN"
 msgstr "風扇"
 
-#: ../plugins/i8k/i8k-plugin.c:57
+#: plugins/i8k/i8k-plugin.c:57
 msgid "FAN1"
 msgstr "風扇1"
 
-#: ../plugins/i8k/i8k-plugin.c:66
+#: plugins/i8k/i8k-plugin.c:66
 msgid "FAN2"
 msgstr "風扇2"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:71
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:71
 msgid "MiniPCI"
 msgstr "MiniPCI"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:95
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:107
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:95
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:107
 msgid "Battery"
 msgstr "電池"
 
-#: ../plugins/ibm-acpi/ibm-acpi-plugin.c:124
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:124
 msgid "Fan"
 msgstr "風扇"
 
-#: ../plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:62
 msgid "CPU TEMP"
 msgstr "CPU 溫度"
 
-#: ../plugins/omnibook/omnibook-plugin.c:46
-#: ../sensors-applet/sensors-applet.c:326
+#: plugins/omnibook/omnibook-plugin.c:46 sensors-applet/sensors-applet.c:326
 msgid "temperature"
 msgstr "溫度"
 
-#: ../plugins/nvidia/nvidia-plugin.c:190
+#: plugins/nvidia/nvidia-plugin.c:190
 msgid "Ambient"
 msgstr "環境音樂"
 
-#: ../sensors-applet/prefs-dialog.c:417
+#: sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
 msgstr "感應器小程式偏好設定"
 
-#: ../sensors-applet/prefs-dialog.c:457
-#: ../sensors-applet/sensors-applet.c:1288
+#: sensors-applet/prefs-dialog.c:457 sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
 msgstr "找不到任何感應器！"
 
-#: ../sensors-applet/prefs-dialog.c:463
+#: sensors-applet/prefs-dialog.c:463
 msgid "Display"
 msgstr "顯示"
 
-#: ../sensors-applet/prefs-dialog.c:475
+#: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
 msgstr "標貼與值"
 
-#: ../sensors-applet/prefs-dialog.c:476
+#: sensors-applet/prefs-dialog.c:476
 msgid "icon with value"
 msgstr "圖示與值"
 
-#: ../sensors-applet/prefs-dialog.c:477
+#: sensors-applet/prefs-dialog.c:477
 msgid "value only"
 msgstr "只有值"
 
-#: ../sensors-applet/prefs-dialog.c:478
+#: sensors-applet/prefs-dialog.c:478
 msgid "icon only"
 msgstr "只有圖示"
 
-#: ../sensors-applet/prefs-dialog.c:479
+#: sensors-applet/prefs-dialog.c:479
 msgid "graph only"
 msgstr "只有圖形"
 
-#: ../sensors-applet/prefs-dialog.c:492
+#: sensors-applet/prefs-dialog.c:492
 msgid "_Display sensors in panel as"
 msgstr "在面板中顯示感應器為(_D)"
 
-#: ../sensors-applet/prefs-dialog.c:504
+#: sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
 msgstr "在標貼/圖示旁邊"
 
-#: ../sensors-applet/prefs-dialog.c:505
+#: sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
 msgstr "標貼/圖示的下面"
 
-#: ../sensors-applet/prefs-dialog.c:518
+#: sensors-applet/prefs-dialog.c:518
 msgid "Preferred _position of sensor values"
 msgstr "感應值的首選位置(_P)"
 
-#: ../sensors-applet/prefs-dialog.c:530
+#: sensors-applet/prefs-dialog.c:530
 msgid "Kelvin"
 msgstr "凱氏"
 
-#: ../sensors-applet/prefs-dialog.c:531
+#: sensors-applet/prefs-dialog.c:531
 msgid "Celsius"
 msgstr "攝氏"
 
-#: ../sensors-applet/prefs-dialog.c:532
+#: sensors-applet/prefs-dialog.c:532
 msgid "Fahrenheit"
 msgstr "華氏"
 
-#: ../sensors-applet/prefs-dialog.c:545
+#: sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
 msgstr "溫標(_T)"
 
-#: ../sensors-applet/prefs-dialog.c:571
+#: sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
 msgstr "圖形大小 (像素)(_S)"
 
-#. hide/show units
-#: ../sensors-applet/prefs-dialog.c:583
+#: sensors-applet/prefs-dialog.c:583
 msgid "Show _units"
 msgstr "顯示單位(_U)"
 
-#: ../sensors-applet/prefs-dialog.c:591
+#: sensors-applet/prefs-dialog.c:591
 msgid "Update"
 msgstr "更新"
 
-#: ../sensors-applet/prefs-dialog.c:618
+#: sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
 msgstr "更新間隔 (秒)(_I)"
 
-#: ../sensors-applet/prefs-dialog.c:628
+#: sensors-applet/prefs-dialog.c:628
 msgid "Notifications"
 msgstr "通知"
 
-#: ../sensors-applet/prefs-dialog.c:638
+#: sensors-applet/prefs-dialog.c:638
 msgid "Display _notifications"
 msgstr "顯示通知(_N)"
 
-#: ../sensors-applet/prefs-dialog.c:772
+#: sensors-applet/prefs-dialog.c:772
 msgid "Sensor"
 msgstr "感應器"
 
-#: ../sensors-applet/prefs-dialog.c:779
+#: sensors-applet/prefs-dialog.c:779
 msgid "Label"
 msgstr "標貼"
 
-#: ../sensors-applet/prefs-dialog.c:789
+#: sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
 msgstr "藉由按一下標貼可以直接編輯它們。"
 
-#: ../sensors-applet/prefs-dialog.c:790
+#: sensors-applet/prefs-dialog.c:790
 msgid "Enabled"
 msgstr "已啟用"
 
-#. icon stuff
-#: ../sensors-applet/prefs-dialog.c:799
-#: ../sensors-applet/sensor-config-dialog.c:443
+#: sensors-applet/prefs-dialog.c:799 sensors-applet/sensor-config-dialog.c:443
 msgid "Icon"
 msgstr "圖示"
 
-#. when selection is changed, make sure sensor_config button is activated
-#. Create buttons for user to interact with sensors tree
-#: ../sensors-applet/prefs-dialog.c:831
+#: sensors-applet/prefs-dialog.c:831
 msgid "_Up"
 msgstr "上層(_U)"
 
-#: ../sensors-applet/prefs-dialog.c:839
+#: sensors-applet/prefs-dialog.c:839
 msgid "_Down"
 msgstr "下(_D)"
 
-#. Sensor Config button
-#. initially make button insensitive until user selects a row
-#. from the sensors tree
-#: ../sensors-applet/prefs-dialog.c:873
+#: sensors-applet/prefs-dialog.c:873
 msgid "_Properties"
 msgstr "屬性(_P)"
 
-#: ../sensors-applet/prefs-dialog.c:920
+#: sensors-applet/prefs-dialog.c:920
 msgid "General Options"
 msgstr "一般選項"
 
-#: ../sensors-applet/prefs-dialog.c:924
+#: sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
 msgstr "感應器"
 
-#: ../sensors-applet/sensors-applet.h:57
+#: sensors-applet/sensors-applet.h:57
 msgid "RPM"
 msgstr "每分鐘轉速"
 
-#: ../sensors-applet/sensors-applet.h:58
+#: sensors-applet/sensors-applet.h:58
 msgid "V"
 msgstr "V"
 
-#: ../sensors-applet/sensors-applet.h:59
+#: sensors-applet/sensors-applet.h:59
 msgid "A"
 msgstr "A"
 
-#. hard code text as ERROR
-#: ../sensors-applet/active-sensor.c:563
+#: sensors-applet/active-sensor.c:563
 msgid "ERROR"
 msgstr "錯誤"
 
-#: ../sensors-applet/about-dialog.c:40
+#: sensors-applet/about-dialog.c:40
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2019 MATE 開發者"
+"Copyright © 2012-2020 MATE 開發者"
 
-#. To translator: Put your name here to show up in the About dialog as the
-#. translator
-#: ../sensors-applet/about-dialog.c:46
+#: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
 "黃柏諺 <s8321414@yahoo.com.tw>,2013-14\n"
@@ -368,142 +354,139 @@ msgstr ""
 "  fetag https://launchpad.net/~coolfire\n"
 "Walter Cheuk <wwycheuk@gmail.com>, 2016."
 
-#: ../sensors-applet/sensor-config-dialog.c:388
+#: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
 msgstr "感應器性質"
 
-#. graph stuff
-#: ../sensors-applet/sensor-config-dialog.c:416
+#: sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
 msgstr "圖形"
 
-#: ../sensors-applet/sensor-config-dialog.c:429
+#: sensors-applet/sensor-config-dialog.c:429
 msgid "Graph Color"
 msgstr "圖形顏色"
 
-#: ../sensors-applet/sensor-config-dialog.c:432
+#: sensors-applet/sensor-config-dialog.c:432
 msgid "Graph _color"
 msgstr "圖形顏色(_C)"
 
-#: ../sensors-applet/sensor-config-dialog.c:486
+#: sensors-applet/sensor-config-dialog.c:486
 msgid "Sensor _icon"
 msgstr "感應器圖示(_I)"
 
-#: ../sensors-applet/sensor-config-dialog.c:492
+#: sensors-applet/sensor-config-dialog.c:492
 msgid "Scaling Parameters"
 msgstr "比例參數"
 
-#: ../sensors-applet/sensor-config-dialog.c:521
+#: sensors-applet/sensor-config-dialog.c:521
 msgid "Sensor value _multiplier"
 msgstr "感應值倍數(_M)"
 
-#: ../sensors-applet/sensor-config-dialog.c:549
+#: sensors-applet/sensor-config-dialog.c:549
 msgid "Sensor value _offset"
 msgstr "感應值偏移(_O)"
 
-#. now do alarm widgets
-#: ../sensors-applet/sensor-config-dialog.c:558
+#: sensors-applet/sensor-config-dialog.c:558
 msgid "Sensor Limits"
 msgstr "感應器限度"
 
-#: ../sensors-applet/sensor-config-dialog.c:586
+#: sensors-applet/sensor-config-dialog.c:586
 msgid "Sensor _low value"
 msgstr "感應器低值(_L)"
 
-#: ../sensors-applet/sensor-config-dialog.c:614
+#: sensors-applet/sensor-config-dialog.c:614
 msgid "Sensor _high value"
 msgstr "感應器高值(_H)"
 
-#: ../sensors-applet/sensor-config-dialog.c:622
-#: ../sensors-applet/sensors-applet.c:365
+#: sensors-applet/sensor-config-dialog.c:622
+#: sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr "警示"
 
-#: ../sensors-applet/sensor-config-dialog.c:651
+#: sensors-applet/sensor-config-dialog.c:651
 msgid "Alarm _repeat interval (secs)"
 msgstr "警示重複間隔 (秒)(_R)"
 
-#: ../sensors-applet/sensor-config-dialog.c:670
+#: sensors-applet/sensor-config-dialog.c:670
 msgid "Lo_w alarm command"
 msgstr "低警示命令(_W)"
 
-#: ../sensors-applet/sensor-config-dialog.c:691
+#: sensors-applet/sensor-config-dialog.c:691
 msgid "Hi_gh alarm command"
 msgstr "高警示命令(_G)"
 
-#: ../sensors-applet/sensor-config-dialog.c:704
+#: sensors-applet/sensor-config-dialog.c:704
 msgid "_Enable alarm"
 msgstr "啟用警示(_E)"
 
-#: ../sensors-applet/sensors-applet.c:238
+#: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../sensors-applet/sensors-applet.c:241
+#: sensors-applet/sensors-applet.c:241
 msgid "_Help"
 msgstr "說明(_H)"
 
-#: ../sensors-applet/sensors-applet.c:244
+#: sensors-applet/sensors-applet.c:244
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../sensors-applet/sensors-applet.c:307
+#: sensors-applet/sensors-applet.c:307
 msgid "is very low"
 msgstr "很低"
 
-#: ../sensors-applet/sensors-applet.c:308
+#: sensors-applet/sensors-applet.c:308
 msgid "lower limit"
 msgstr "下限"
 
-#. assume high alarm condition
-#: ../sensors-applet/sensors-applet.c:313
+#: sensors-applet/sensors-applet.c:313
 msgid "is very high"
 msgstr "很高"
 
-#: ../sensors-applet/sensors-applet.c:314
+#: sensors-applet/sensors-applet.c:314
 msgid "upper limit"
 msgstr "上限"
 
-#: ../sensors-applet/sensors-applet.c:325
+#: sensors-applet/sensors-applet.c:325
 msgid "Temperature"
 msgstr "溫度"
 
-#: ../sensors-applet/sensors-applet.c:345
+#: sensors-applet/sensors-applet.c:345
 msgid "Voltage"
 msgstr "電壓"
 
-#: ../sensors-applet/sensors-applet.c:346
+#: sensors-applet/sensors-applet.c:346
 msgid "voltage"
 msgstr "電壓"
 
-#: ../sensors-applet/sensors-applet.c:351
+#: sensors-applet/sensors-applet.c:351
 msgid "Fan Speed"
 msgstr "風扇速度"
 
-#: ../sensors-applet/sensors-applet.c:352
+#: sensors-applet/sensors-applet.c:352
 msgid "fan speed"
 msgstr "風扇速度"
 
-#: ../sensors-applet/sensors-applet.c:357
+#: sensors-applet/sensors-applet.c:357
 msgid "Current"
 msgstr "目前"
 
-#: ../sensors-applet/sensors-applet.c:358
+#: sensors-applet/sensors-applet.c:358
 msgid "current"
 msgstr "目前"
 
-#: ../sensors-applet/sensors-applet.c:379
+#: sensors-applet/sensors-applet.c:379
 #, c-format
 msgid "Error updating sensor %s"
 msgstr "更新感應器 %s 時發生錯誤"
 
-#: ../sensors-applet/sensors-applet.c:380
+#: sensors-applet/sensors-applet.c:380
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr "嘗試更新位於 %s 的感應器 %s 值時發生錯誤。"
 
-#: ../sensors-applet/sensors-applet.c:481
+#: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "沒有啟用任何感應器！"

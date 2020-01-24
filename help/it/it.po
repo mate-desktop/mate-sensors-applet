@@ -1,15 +1,16 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Giuseppe Pignataro <rogepix@gmail.com>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Marco Z. <minaz666@gmail.com>, 2018
+# Giuseppe Pignataro <rogepix@gmail.com>, 2019
+# Alessandro Volturno <alelvb@inwind.it>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2019-04-23 21:05+0200\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Marco Z. <minaz666@gmail.com>, 2018\n"
+"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,17 +26,17 @@ msgstr "Riconoscimenti-tradutore"
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:30
 msgid "MATE Sensors Applet Manual V2.1"
-msgstr ""
+msgstr "Manuale di MATE Sensors Applet V2.1"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2019</year> <holder>MATE Development</holder>"
-msgstr ""
+msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
+msgstr "<year>2015-2020</year> <holder>Team Documentazione di MATE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
 msgid "<year>2006</year> <holder>Alex Murray</holder>"
-msgstr ""
+msgstr "<year>2006</year> <holder>Alex Murray</holder>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:40
@@ -43,11 +44,13 @@ msgid ""
 "MATE Sensors Applet displays readings from temperature, voltage and fan "
 "sensors within the panel."
 msgstr ""
+"MATE Sensors Applet mostra la lettura dei sensori di temperatura, voltaggio "
+"e ventole all'interno del pannello."
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:63
 msgid "<surname>MATE Development</surname> <affiliation> </affiliation>"
-msgstr ""
+msgstr "<surname>MATE Development</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
@@ -55,11 +58,13 @@ msgid ""
 "<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
 "</affiliation>"
 msgstr ""
+"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
+"</affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:115
 msgid "Alex Murray <email>murray.alex@gmail.com</email>"
-msgstr ""
+msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
@@ -67,11 +72,13 @@ msgid ""
 "<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>Manuale di MATE Sensors Applet V2.1</revnumber> <date>January "
+"2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:123
 msgid "This manual describes version 1.10 of MATE Sensors Applet."
-msgstr ""
+msgstr "Questo manuale descrive la versione 1.10 di MATE Sensors Applet."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:126
@@ -85,11 +92,14 @@ msgid ""
 "manual, follow the directions in the <ulink url=\"help:mate-user-"
 "guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
+"Per segnalare un malfunzionamento o un suggerimento su MATE Sensors Applet o"
+" su questo manuale, segui le istruzioni nella <ulink url=\"help:mate-user-"
+"guide/feedback\" type=\"help\">pagina di feedback di MATE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:135
 msgid "<primary>MATE Sensors Applet</primary>"
-msgstr ""
+msgstr "<primary>MATE Sensors Applet</primary>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:141
@@ -99,7 +109,7 @@ msgstr "Introduzione"
 #. (itstool) path: figure/title
 #: C/index.docbook:144
 msgid "MATE Sensors Applet"
-msgstr ""
+msgstr "MATE Sensors Applet "
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -112,6 +122,8 @@ msgid ""
 "external ref='figures/applet_in_panel.png' "
 "md5='432ed012f0897c7f0cf522f6c55ea92a'"
 msgstr ""
+"external ref='figures/applet_in_panel.png' "
+"md5='432ed012f0897c7f0cf522f6c55ea92a'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:146
@@ -120,6 +132,9 @@ msgid ""
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Sensors Applet "
 "with 3 sensors enabled.</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Sensors Applet con"
+" 3 sensori attivati.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:157
@@ -127,16 +142,19 @@ msgid ""
 "<application>MATE Sensors Applet</application> provides a convenient way to "
 "monitor the health of your computer in a simple display on your desktop."
 msgstr ""
+"<application>MATE Sensors Applet </application> fornisce un modo conveniente"
+" per monitorare la salute del vostro computer in un semplice display sulla "
+"vostra scrivania."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:166
 msgid "ACPI thermal zones, via the Linux kernel ACPI modules"
-msgstr ""
+msgstr "ACPI thermal zones, mediante i moduli ACPI del kernel Linux "
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:170
 msgid "Linux kernel i2c modules"
-msgstr ""
+msgstr "Moduli del kernel Linux I2c"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:173
@@ -146,6 +164,10 @@ msgid ""
 "type=\"http\">i2c</ulink> modules distributed directly with the kernel "
 "(kernel 2.6)"
 msgstr ""
+"Mediante il filesystem sysfs e i moduli <ulink "
+"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
+"type=\"http\">i2c</ulink> distribuiti direttamente con il kernel Linux "
+"(kernel 2.6)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:179
@@ -154,6 +176,9 @@ msgid ""
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
 "type=\"http\">lm_sensors and i2c</ulink> packages (kernel 2.4)"
 msgstr ""
+"Mediante il filesystem proc e i moduli i2c dai pacchetti <ulink "
+"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
+"type=\"http\">m_sensors e i2c</ulink> (kernel 2.4)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:185
@@ -162,6 +187,9 @@ msgid ""
 "url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
 "type=\"http\">lm_sensors</ulink> package"
 msgstr ""
+"Mediante la libreria libsensors fornita con il pacchetto <ulink "
+"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
+"type=\"http\">lm_sensors</ulink>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:195
@@ -169,6 +197,9 @@ msgid ""
 "Linux kernel <ulink url=\"http://people.debian.org/~dz/i8k/00-README\" "
 "type=\"http\">i8k</ulink> module (for Dell Inspiron Laptops)."
 msgstr ""
+"Modulo del kernel Linux <ulink "
+"url=\"http://people.debian.org/~dz/i8k/00-README\" type=\"http\">i8k</ulink>"
+" (per i laptop Dell Inspiron)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
@@ -176,16 +207,19 @@ msgid ""
 "Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
 "\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
+"Modulo del kernel Linux <ulink "
+"url=\"http://people.debian.org/~dz/i8k/00-README\" type=\"http\">ibm-"
+"acpi</ulink> (per i laptop IBM)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:207
 msgid "Linux kernel PowerPC modules therm_adt746x and therm_windtunnel."
-msgstr ""
+msgstr "Moduli del kernel Linux PowerPC therm_adt746x e therm_windtunnel."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:211
 msgid "Linux kernel iMac G5 Windfarm module."
-msgstr ""
+msgstr "Modulo del kernel Linux iMac G5 Windfarm."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:215
@@ -194,6 +228,9 @@ msgid ""
 "type=\"http\">hddtemp</ulink> daemon for reading temperatures from "
 "S.M.A.R.T. equipped disks."
 msgstr ""
+"Demone <ulink url=\"http://www.guzu.net/linux/hddtemp.php\" "
+"type=\"http\">hddtemp</ulink> per leggere le temperature dei dischi forniti "
+"si tecnologia S.M.A.R.T."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:221
@@ -202,6 +239,9 @@ msgid ""
 "url=\"http://sourceforge.net/projects/omke\">Omnibook</ulink> module. (for "
 "HP and Toshiba Satellite Laptops)"
 msgstr ""
+"Modulo del kernel <ulink "
+"url=\"http://sourceforge.net/projects/omke\">Omnibook</ulink> (per laptop HP"
+" e Toshiba Satellite)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:227
@@ -210,6 +250,9 @@ msgid ""
 "url=\"ftp://download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-"
 "settings</ulink> )."
 msgstr ""
+"Schede grafiche NVIDIA via libNVCtrl (fornito con <ulink "
+"url=\"ftp://download.nvidia.com/XFree86/nvidia-settings/\">nvidia-"
+"settings</ulink>)."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:162
@@ -217,6 +260,9 @@ msgid ""
 "A number of sensor interfaces are supported, which should be configured "
 "before adding MATE Sensors Applet to the panel: <_:itemizedlist-1/>"
 msgstr ""
+"Sono supportate dierse interfacce per i sensori, che dovrebbero essere "
+"configurate prima di aggiungere MATE Sensors Applet al "
+"pannello:<_:itemizedlist-1/>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:236
@@ -226,6 +272,10 @@ msgid ""
 "<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors "
 "Monitor</guimenuitem> </menuchoice>."
 msgstr ""
+"Per aggiungere <application>MATE Sensors Applet</application> al pannello "
+"fare click col pulsante destro del mouse per aprire il menu del pannello, "
+"quindi selezionare <menuchoice> <guimenu>Aggiungi al Pannello</guimenu> "
+"<guimenuitem>Hardware Sensors Monitor</guimenuitem> </menuchoice>."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:247
@@ -240,6 +290,10 @@ msgid ""
 " and will display a sensible default sensor if found (such as the "
 "temperature of the CPU)."
 msgstr ""
+"Quando si aggiunge per la prima volta <application>MATE Sensors "
+"Applet</application> ad un pannello, l'applet cercherà di controllare ogni "
+"sensore disponibile, e, se lo trova, mostrerà un sensore predefinito (come "
+"ad esempio la temperatura della CPU)."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:251
@@ -249,6 +303,10 @@ msgid ""
 "</menuchoice> menu item (see <xref linkend=\"sensors-applet-"
 "preferences\"/>)."
 msgstr ""
+"Molti utenti potranno personalizzare la visualizzazione a loro piacimento, "
+"cosa che può essere fatta mediante il menu <menuchoice> "
+"<guimenuitem>Preferenze</guimenuitem> </menuchoice> (vedi <xref linkend"
+"=\"sensors-applet-preferences\"/>)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
@@ -263,6 +321,10 @@ msgid ""
 "<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
 "pop-up menu."
 msgstr ""
+"Per configurare <application>MATE Sensors Applet</application>, fare click "
+"destro sullìapplet, quindi selezionare "
+"<menuchoice><guimenuitem>Preferenze</guimenuitem></menuchoice> dal menu a "
+"comparsa."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:267
@@ -270,16 +332,18 @@ msgid ""
 "The <menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> window "
 "contains the following tabbed sections:"
 msgstr ""
+"La finestra <menuchoice><guimenuitem>Preferenze</guimenuitem></menuchoice> "
+"le seguenti sezioni:"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:287
 msgid "General Options"
-msgstr "Impostazioni generali"
+msgstr "Impostazioni Generali"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:290
 msgid "<guilabel>Display sensors in panel as</guilabel>"
-msgstr ""
+msgstr "<guilabel>Mostra i sensori sul pannello con</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:294
@@ -290,16 +354,22 @@ msgid ""
 " sensor. A graph can also be displayed for each sensor, showing the "
 "progression of the sensor value over time."
 msgstr ""
+"Questa opzione seleziona in che modo visualizzare i sensori sul pannello con"
+" la loro etichetta o icona e il loro valore, oppure non avere alcun "
+"identificatore per ciascun sensore e mostrare solo il loro valore oppure, "
+"ancora, semplicemente mostrare un'icona per ciascun sensore. È inoltre "
+"possibile mostrare un grafico per ciascun sensore che visualizza la "
+"variazione del valore nel tempo."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:300
 msgid "Default: icon with value."
-msgstr ""
+msgstr "Predefinito: icona e valore"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:304
 msgid "<guilabel>Preferred position of sensor values</guilabel>"
-msgstr ""
+msgstr "<guilabel>Posizione preferita dei valori dei sensori</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:308
@@ -307,11 +377,13 @@ msgid ""
 "Sensors can be display with either their value beside their icon / label, or"
 " with the value shown below the icon / label."
 msgstr ""
+"I sensori possono essere mostrati o con il loro valoro accanto l'icona / "
+"etichetta , o con il valore mostrato al di sotto dell'icona / etichetta."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:311
 msgid "Default: beside labels / icons."
-msgstr ""
+msgstr "Predefinito: accanto etichette / icone."
 
 #. (itstool) path: note/para
 #: C/index.docbook:314
@@ -320,11 +392,14 @@ msgid ""
 "best position to ensure all sensor elements are visible will be used "
 "instead."
 msgstr ""
+"Se non c'è spazio a sufficienza sul pannello per utilizzare la posizione "
+"richiesta, verrà invece utilizzata la migliore disposizione affinché siano "
+"visibili tutti gli elementi."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:321
 msgid "<guilabel>Graph size (pixels)</guilabel>"
-msgstr ""
+msgstr "Dimensioni grafico (pixel)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:325
@@ -333,16 +408,20 @@ msgid ""
 "width of the graph (when displayed on either the top or bottom panel) or the"
 " height of the graph (when displayed on the left or right panel)."
 msgstr ""
+"Quando si mostrano i sensori in forma di grafico, la dimensione del grafico "
+"imposta o l'ampiezza del grafico (quando sono visualizzati sul pannello "
+"superiore o inferiore), o l'altezza del grafico (quando sono visualizzati "
+"nel pannelo di sinistra o di destra)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:329
 msgid "Default: 42 pixels."
-msgstr ""
+msgstr "Predefinito: 42 pixel"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:333
 msgid "<guilabel>Temperature scale</guilabel>"
-msgstr ""
+msgstr "<guilabel>Scala di temperatura</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:337
@@ -350,31 +429,34 @@ msgid ""
 "Which scale to use for temperature sensors (Kelvin, Fahrenheit or Celsius "
 "are supported)."
 msgstr ""
+"Quale scala di temperatura utilizzare per i sensori (sono supportate le "
+"scale Kelvin, Fahrenheit o Celsius)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:339
 msgid "Default: Celsius."
-msgstr ""
+msgstr "Predefinito: Celsius."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:343
 msgid "<guilabel>Update interval</guilabel>"
-msgstr ""
+msgstr "<guilabel>Intervallo di aggiornamento</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:347
 msgid "How often to update the values of each sensor shown within the panel."
 msgstr ""
+"Quanto spesso aggiornare i valori di ciascun sensore mostrati sul pannello."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:349
 msgid "Default: 2 seconds."
-msgstr ""
+msgstr "Predefinito: 2 secondi."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:353
 msgid "<guilabel>Display notifications</guilabel>"
-msgstr ""
+msgstr "<guilabel>Mostra notifiche</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:357
@@ -382,16 +464,18 @@ msgid ""
 "If enabled, MATE Sensors Applet will display notifications to the user when "
 "alarm conditions occur."
 msgstr ""
+"se abilitata, questa voce consente a MATE Sensors Applet di mostrare "
+"notifiche all'utente quando si verificano condizioni di allarme."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:359
 msgid "Default: Enabled."
-msgstr ""
+msgstr "Predefinito: Attivato."
 
 #. (itstool) path: note/para
 #: C/index.docbook:361
 msgid "Alarms for individual sensors must also be enabled."
-msgstr ""
+msgstr "Gli allarmi dei singoli sensori devono essere abilitati anch'essi."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:372
@@ -401,17 +485,20 @@ msgstr "Sensori"
 #. (itstool) path: listitem/para
 #: C/index.docbook:378
 msgid "A fixed ID to identify the sensor within its interface."
-msgstr ""
+msgstr "Un ID fisso per identificare il sensore nel pannello."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "A user selectable icon to identify the sensor within the panel."
 msgstr ""
+"Un'icona selezionabile dall'utente per identificare il sensore nel pannello."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
 msgid "A user editable label to identify the sensor within the panel."
 msgstr ""
+"Una etichetta modificabile dall'utente per identificare il sensore sul "
+"pannello."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:392
@@ -419,6 +506,8 @@ msgid ""
 "A check-box to allow the user to enable / disable monitoring and display of "
 "the sensor within the panel."
 msgstr ""
+"Una casella di spunta per consentire all'utente di abilitare / disabilitare "
+"il monitoraggio e la visualizzazione del sensore sul pannello."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:373
@@ -430,6 +519,12 @@ msgid ""
 " finely configured, providing a separate window box for this purpose. (see "
 "<xref linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 msgstr ""
+"La scheda Sensori nella finestra Preferenze fornisce le opzioni per "
+"configurare ogni singolo sensore. Ciascun sensore è elencato nella sua "
+"specifica interfaccia, assieme a <_:itemizedlist-1/> il pulsante "
+"<guibutton>Proprietà</guibutton> consente ad un sensore specifico di essere "
+"configurato più in finemente, mediante una finestra autonoma. (Vedi <xref "
+"linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:404
@@ -446,6 +541,12 @@ msgid ""
 "well as set the color for the thermometer displayed within the icons of "
 "temperature sensors."
 msgstr ""
+"Ciascun sensore può essere configurato con diverse opzioni, inclusa la "
+"possibilità di scalare il valore del sensore, o di eseguire un allarme se "
+"viene raggiunto un certo valore alto o basso che sia. Se fosse necessario si"
+" può inoltre selezionare l'icona del sensore. I valori di alto e basso "
+"possono essere impiegati per scalare il grafico, oltre che ad impostare il "
+"colore del termometro mostrato tra le icone dei sensori di temperatura."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:414
@@ -455,43 +556,52 @@ msgid ""
 "read, it is first multiplied by the 'multiplier' and summed with the "
 "'offset' to produce the final value."
 msgstr ""
+"Il valore del sensore può essere scalato in modo lineare consentendo "
+"all'utente di specificare un moltiplicatore ed uno scarto o offset per "
+"ciascun sensore. Quando viene letto ciascun valore del sensore, questo viene"
+" prima moltiplicato per il fattore di scala e poi sommato al valore di "
+"offset per produrre il risultato finale. "
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:423
 msgid "<guilabel>Sensor value multiplier</guilabel>"
-msgstr ""
+msgstr "<guilabel>moltiplicatore del valore del sensore</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:427
 msgid ""
 "This option allows the user to specify the multiplier of the sensor value."
 msgstr ""
+"Quest'opzione permette all'utente di specificare il valore del coefficiente "
+"moltiplicativo del valore del sensore."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:429
 msgid "Default: 1.0"
-msgstr ""
+msgstr "Predefinito: 1.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:434
 msgid "<guilabel>Sensor value offset</guilabel>"
-msgstr ""
+msgstr "<guilabel>Scarto del valore del sensore</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:438
 msgid ""
 "This option allows the user to specify the offset for the sensor value."
 msgstr ""
+"Questa opzione permette all'utente di specificare lo scarto del valore del "
+"sensore."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:440
 msgid "Default: 0.0"
-msgstr ""
+msgstr "Predefinito: 0.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:444
 msgid "<guilabel>Sensor low value</guilabel>"
-msgstr ""
+msgstr "<guilabel>Valore minimo del sensore</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:448
@@ -500,16 +610,19 @@ msgid ""
 " This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
+"Il limite al quale emettere un segnale di allarme se il sensore cade sotto a"
+" questo valore. Questo valore è anche utilizzato per scalare la "
+"visualizzazione del grafico e dellle icone della temperatura."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:451 C/index.docbook:462
 msgid "Default: dependent on sensor type"
-msgstr ""
+msgstr "Predefinito: dipende dal tipo di sensore"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:455
 msgid "<guilabel>Sensor high value</guilabel>"
-msgstr ""
+msgstr "<guilabel>Valore massimo del sensore</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:459
@@ -518,11 +631,14 @@ msgid ""
 " This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
+"Il valore limite al quale emettere un segnale di allarme se il sensore si "
+"alza oltre questo indice. Questo valore è anche utilizzato per scalare la "
+"visualizzazione del grafico e delle icone della temperatura."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:466
 msgid "<guilabel>Enable alarm</guilabel>"
-msgstr ""
+msgstr "<guilabel>Abilitare allarme</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:470
@@ -533,21 +649,27 @@ msgid ""
 " enabled), and execute the appropriate Alarm Command every Alarm repeat "
 "interval seconds."
 msgstr ""
+"Questa opzione consente all'utente di attivare il controllo con allarme per "
+"questo sensore. Quando il valore del sensore si alza sopra o cade sotto il "
+"suo valore massimo o minimo, si verificherà la condizione di allarme Ciò "
+"mostrerà (se abilitata) una notifica all'utente, ed eseguirà l'appropriato "
+"Comando di Allarme ogni numero di secondi specificato dal parametro "
+"Intervallo di ripetizione dell'Allarme."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:477
 msgid "Default: disabled"
-msgstr ""
+msgstr "Predefinito: disattivato."
 
 #. (itstool) path: note/para
 #: C/index.docbook:479
 msgid "Alarms will only execute for active sensors"
-msgstr ""
+msgstr "L'allarme verrà eseguito solo per i sensori attivi"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:486
 msgid "<guilabel>Alarm repeat interval (secs)</guilabel>"
-msgstr ""
+msgstr "<guilabel>Intervallo di ripetizione dell'Allarme (sec)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:490
@@ -556,11 +678,14 @@ msgid ""
 "value of 0 specifies to execute the alarm once only when the alarm condition"
 " occurs."
 msgstr ""
+"Quanto spesso ripetere il comando di allarme quando si è nella condizione di"
+" allarme. Un valore paria 0 specifica di eseguire l'allarme solo una volta, "
+"quando si supera il valore di guardia."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:495
 msgid "Default: 0 seconds"
-msgstr ""
+msgstr "Predefinito: 0 secondi."
 
 #. (itstool) path: note/para
 #: C/index.docbook:497
@@ -569,11 +694,14 @@ msgid ""
 "time the alarm is executed as well to notify the user that the alarm "
 "condition has occurred."
 msgstr ""
+"Se le notifiche sono attivate, una notifica verrà visualizzata ogni volta "
+"che l'allarme viene eseguito anche per avvisare l'utente che la condizione "
+"di allarme è stata raggiunta."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:508
 msgid "<guilabel>High alarm command</guilabel>"
-msgstr ""
+msgstr "<guilabel>comando dell'allarme massimo</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:512
@@ -581,16 +709,18 @@ msgid ""
 "The command to be executed at each repeat interval when the sensor value is "
 "equal to or above the upper limit."
 msgstr ""
+"Il comando da eseguire ad ogni intervallo di ripetizione quando il valore di"
+" un sensore è uguale o superiore al limite superiore impostato. "
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:515 C/index.docbook:527
 msgid "Default: none"
-msgstr ""
+msgstr "Predefinito: nessuno"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:520
 msgid "<guilabel>Low alarm command</guilabel>"
-msgstr ""
+msgstr "<guilabel>Comando dell'allarme minimo</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:524
@@ -598,11 +728,13 @@ msgid ""
 "The command to be executed at each repeat interval when the sensor value is "
 "equal to or below the lower limit."
 msgstr ""
+"Il comando da eseguire ad ogni intervallo di ripetizione quando il valore di"
+" un sensore è uguale o inferiore al limite impostato. "
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:531
 msgid "<guilabel>Play a sound when the alarm occurs</guilabel>"
-msgstr ""
+msgstr "<guilabel>Riproduci un suono quando si verifica l'allarme</guilabel>"
 
 #. (itstool) path: para/screen
 #: C/index.docbook:548
@@ -611,6 +743,8 @@ msgid ""
 "<userinput><command>esdplay "
 "/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 msgstr ""
+"<userinput><command>esdplay "
+"/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:535
@@ -621,12 +755,19 @@ msgid ""
 "<command>aplay</command> which is the default ALSA sound player). "
 "<_:screen-1/>"
 msgstr ""
+"È possibile riprodurre un suono quando si verifica l'allarme usando il "
+"comando <command>esdplay</command> che dovrebbe essere disponibile come "
+"parte dell'installazione standard di MATE. (Nota: se questo non dovesse "
+"funzionare, potreste provare con il comando <command>aplay</command>che è il"
+" riproduttore di suoni predefinito di ALSA)."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:554
 msgid ""
 "<guilabel>Pop-up a window to notify that the alarm has occurred</guilabel>"
 msgstr ""
+"<guilabel>Mostrare una finestra per notificare che è avvenuto "
+"l'allarme</guilabel>"
 
 #. (itstool) path: para/screen
 #: C/index.docbook:566
@@ -635,6 +776,8 @@ msgid ""
 "<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
 "--text=\"Sensor Alarm occurred\"</command></userinput>"
 msgstr ""
+"<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
+"--text=\"Sensor Alarm occurred\"</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:559
@@ -645,12 +788,19 @@ msgid ""
 "more information regarding Zenity please consult the Zenity <ulink "
 "type=\"help\" url=\"help:zenity\">documentation</ulink>."
 msgstr ""
+"Il programma <command>Zenity</command> può essere impiegato per creare "
+"finestre di dialogo sul display dell'utente corrente, e che può quindi "
+"essere utilizzato per creare messaggi di notifica a pop-up quando si "
+"verifica una condizione di allarme. <_:screen-1/> Per maggiori informazioni "
+"su Zenity consultate la <ulink type=\"help\" "
+"url=\"help:zenity\">documentazione di Zenity</ulink>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:575
 msgid ""
 "<guilabel> Combine multiple commands into one alarm command </guilabel>"
 msgstr ""
+"<guilabel>Combinare più comandi in un solo comando di allarme</guilabel>"
 
 #. (itstool) path: para/screen
 #: C/index.docbook:587
@@ -660,6 +810,9 @@ msgid ""
 " zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm "
 "occurred\"</command></userinput>"
 msgstr ""
+"<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp;"
+" zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm "
+"occurred\"</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:581
@@ -668,11 +821,14 @@ msgid ""
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
 "dialog via Zenity the follow command can be used: <_:screen-1/>"
 msgstr ""
+"È possibile eseguire più comandi uno dopo l'altro utilizzandop il costrutto "
+"\"&amp;&amp;\" per separarli. Per riprodurre un suono e visualizzare un "
+"messaggio pop-up può essere utilizzata la seguente istruzione: <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:597
 msgid "<guilabel>Sensor icon</guilabel>"
-msgstr ""
+msgstr "<guilabel>Icona del sensore</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:601
@@ -680,16 +836,18 @@ msgid ""
 "Provides a list of available icons to allow the user to select one to "
 "represent this sensor."
 msgstr ""
+"Fornisce un elenco delle icone disponibili per consentire all'utente di "
+"selezionarne una per rappresentare questo sensore."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:606
 msgid "<guilabel>Graph color</guilabel>"
-msgstr ""
+msgstr "<guilabel>Colore del grafico</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:610
 msgid "The color to use to display the graph for the sensor."
-msgstr ""
+msgstr "Il colore da usare per mostrare il grafico del sensore."
 
 #. (itstool) path: note/para
 #: C/index.docbook:613
@@ -697,11 +855,13 @@ msgid ""
 "To accurately display graphs both the high and low values for the sensor "
 "need to be set correctly."
 msgstr ""
+"Per mostrare accuratamente i grafici di un sensore devono essere impostati "
+"correttamente i valori massimo e minimo del sensore."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:644
 msgid "About MATE Sensors Applet"
-msgstr ""
+msgstr "Informazioni su MATE Sensors Applet"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
@@ -713,6 +873,12 @@ msgid ""
 "visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-"
 "applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
 msgstr ""
+"L'applet originale è stata scritta da Alex Murray "
+"(<email>murray.alex@gmail.com</email>). <application>MATE Sensor "
+"Applet</application> è lo sviluppo ulteriore del team sviluppatori MATE. Per"
+" trovare più informazioni su </application>MATE Sensors Applet</application>"
+" , visitate la pagina del <ulink url=\"https://github.com/mate-desktop/mate-"
+"sensors-applet/\" type=\"http\">Progetto MATE Sensors Applet</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
@@ -721,6 +887,9 @@ msgid ""
 "manual, follow the directions at the <ulink url=\"https://github.com/mate-"
 "desktop/mate-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
+"Per segnalare un malfunzionamento o un suggerimento su MATE Sensors Applet o"
+" su questo manuale, segui le istruzioni nella <ulink url=\"help:mate-user-"
+"guide/feedback\" type=\"help\">pagina del progetto</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:668
@@ -731,6 +900,12 @@ msgid ""
 "can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
 "in the file COPYING included with the source code of this program."
 msgstr ""
+"Questo documento è distribuito sotto i termini della GNU General Public "
+"license come pubblicata dalla Free Software Foundation; versione 2 della "
+"licenza, o (a vostra discrezione) una qualsiasi versione successiva. Una "
+"copia della licenza può essere trovata <ulink type=\"help\" "
+"url=\"help:gpl\">qui</ulink>, o nel file COPYING incluso con il codice "
+"sorgente di questo programma."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
