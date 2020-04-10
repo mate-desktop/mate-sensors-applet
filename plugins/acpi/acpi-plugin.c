@@ -41,7 +41,6 @@ enum {
 static void acpi_plugin_add_sensor(GList **sensors, const gchar *path) {
     gchar *dirname;
     gchar *id;
-    gchar *label;
 
 
     dirname = g_path_get_dirname(path);
