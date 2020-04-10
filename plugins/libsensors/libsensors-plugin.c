@@ -402,7 +402,6 @@ static gdouble libsensors_plugin_get_sensor_value(const gchar *path,
     if (regexec (&uri_re, path, 3, m, 0) == 0) {
         const sensors_chip_name *found_chip;
         int feature;
-        int i;
 
         if ((found_chip = g_hash_table_lookup(hash_table, path)) != NULL) {
             gdouble value;

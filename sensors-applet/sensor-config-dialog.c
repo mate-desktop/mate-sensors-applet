@@ -317,7 +317,6 @@ static void sensor_config_dialog_graph_color_set(GtkColorChooser *color_chooser,
     GtkTreeModel *model;
     GtkTreePath *path;
     GtkTreeIter iter;
-    GtkWidget *content_area;
     gchar *color_string;
     GdkRGBA color;
 
