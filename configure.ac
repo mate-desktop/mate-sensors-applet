@@ -9,6 +9,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([dist-xz no-dist-gzip check-news])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 AM_MAINTAINER_MODE
+MATE_COMPILE_WARNINGS
 
 # ============== basic compiler settings ============= #
 AC_PROG_CC
@@ -262,8 +263,6 @@ AC_PATH_PROG(XSLTPROC, xsltproc, no)
 if test x"$XSLTPROC" = xno; then
   AC_MSG_ERROR([xsltproc executable not found in your path - should be installed with libxslt])
 fi
-
-MATE_COMPILE_WARNINGS(maximum)
 
 # ================ yelp-tools stuff ============= #
 YELP_HELP_INIT
