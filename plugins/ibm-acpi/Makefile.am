@@ -9,11 +9,12 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libibm-acpi.la
 
-libibm_acpi_la_SOURCES = \
+libibm_acpi_la_SOURCES =	\
 	ibm-acpi-plugin.h	\
 	ibm-acpi-plugin.c
 

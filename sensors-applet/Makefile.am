@@ -12,7 +12,12 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(MATE_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(GTK_CFLAGS) \
+	$(MATE_CFLAGS) \
+	$(CAIRO_CFLAGS) \
+	$(LIBNOTIFY_CFLAGS) \
+	$(WARN_CFLAGS)
 
 
 LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)

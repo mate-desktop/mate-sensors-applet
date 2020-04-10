@@ -9,11 +9,12 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libi8k.la
 
-libi8k_la_SOURCES = \
+libi8k_la_SOURCES =	\
 	i8k-plugin.h	\
 	i8k-plugin.c
 

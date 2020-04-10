@@ -9,11 +9,12 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libi2c-sys.la
 
-libi2c_sys_la_SOURCES = \
+libi2c_sys_la_SOURCES =		\
 	i2c-sys-plugin.h	\
 	i2c-sys-plugin.c
 

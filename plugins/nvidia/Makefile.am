@@ -9,11 +9,13 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(NVIDIA_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(NVIDIA_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libnvidia.la
 
-libnvidia_la_SOURCES = \
+libnvidia_la_SOURCES =	\
 	nvidia-plugin.h	\
 	nvidia-plugin.c
 

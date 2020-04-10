@@ -9,12 +9,13 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 
 plugin_LTLIBRARIES = libdummy.la
 
-libdummy_la_SOURCES = \
+libdummy_la_SOURCES =	\
 	dummy-plugin.h	\
 	dummy-plugin.c
 

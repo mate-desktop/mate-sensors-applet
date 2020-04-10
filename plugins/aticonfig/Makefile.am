@@ -9,13 +9,14 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libaticonfig.la
 
-libaticonfig_la_SOURCES = \
+libaticonfig_la_SOURCES =	\
 	aticonfig-plugin.h	\
 	aticonfig-plugin.c
 
-libaticonfig_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) 
+libaticonfig_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libaticonfig_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la

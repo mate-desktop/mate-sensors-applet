@@ -9,11 +9,12 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libsmu-sys.la
 
-libsmu_sys_la_SOURCES = \
+libsmu_sys_la_SOURCES =		\
 	smu-sys-plugin.h	\
 	smu-sys-plugin.c
 

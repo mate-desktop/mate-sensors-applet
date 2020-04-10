@@ -9,12 +9,13 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 
 plugin_LTLIBRARIES = libnetbsd.la
 
-libnetbsd_la_SOURCES = \
+libnetbsd_la_SOURCES =	\
 	netbsd-plugin.h	\
 	netbsd-plugin.c
 

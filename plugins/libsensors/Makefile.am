@@ -9,11 +9,13 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(LIBSENSORS_CFLAGS)
+	$(GLIB_CFLAGS) \
+	$(LIBSENSORS_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = liblibsensors.la
 
-liblibsensors_la_SOURCES = \
+liblibsensors_la_SOURCES =	\
 	libsensors-plugin.h	\
 	libsensors-plugin.c
 

@@ -9,13 +9,12 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS)
-
-
+	$(GLIB_CFLAGS) \
+	$(WARN_CFLAGS)
 
 plugin_LTLIBRARIES = libudisks2.la
 
-libudisks2_la_SOURCES = \
+libudisks2_la_SOURCES =		\
 	udisks2-plugin.h	\
 	udisks2-plugin.c
 
