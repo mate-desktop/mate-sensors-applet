@@ -263,7 +263,7 @@ if test x"$XSLTPROC" = xno; then
   AC_MSG_ERROR([xsltproc executable not found in your path - should be installed with libxslt])
 fi
 
-MATE_COMPILE_WARNINGS(maximum)
+MATE_COMPILE_WARNINGS
 
 # ================ yelp-tools stuff ============= #
 YELP_HELP_INIT
