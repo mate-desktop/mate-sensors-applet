@@ -304,3 +304,17 @@ AC_CONFIG_FILES([
 	help/Makefile
 ])
 AC_OUTPUT
+
+dnl ---------------------------------------------------------------------------
+dnl - Show summary
+dnl ---------------------------------------------------------------------------
+
+echo "
+       mate-sensors-applet $VERSION
+       `echo mate-sensors-applet $VERSION | sed "s/./=/g"`
+
+       prefix:               ${prefix}
+       compiler:             ${CC}
+       cflags:               ${CFLAGS}
+       warning flags:        ${WARN_CFLAGS}
+"
