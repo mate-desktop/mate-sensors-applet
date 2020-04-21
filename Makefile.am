@@ -40,6 +40,7 @@ CLEANFILES = $(applet_DATA) \
 	*.gschema.valid
 
 DISTCHECK_CONFIGURE_FLAGS = \
+	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
 
 EXTRA_DIST = $(ui_DATA) \
