@@ -37,3 +37,5 @@ EXTRA_DIST = \
 	$(pixmaps_DATA) \
 	$(deviceicons_DATA) \
 	$(appicon_DATA)
+
+-include $(top_srcdir)/git.mk

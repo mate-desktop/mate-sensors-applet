@@ -21,3 +21,5 @@ liblibsensors_la_SOURCES =	\
 
 liblibsensors_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) $(LIBSENSORS_LIBS)
 liblibsensors_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

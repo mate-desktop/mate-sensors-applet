@@ -20,3 +20,5 @@ libaticonfig_la_SOURCES =	\
 
 libaticonfig_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libaticonfig_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

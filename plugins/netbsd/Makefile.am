@@ -22,3 +22,5 @@ libnetbsd_la_SOURCES =	\
 libnetbsd_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) -lprop
 
 libnetbsd_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

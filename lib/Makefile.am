@@ -17,3 +17,5 @@ lib_LTLIBRARIES = libmate-sensors-applet-plugin.la
 
 libmate_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c
 libmate_sensors_applet_plugin_la_LDFLAGS = -export-dynamic
+
+-include $(top_srcdir)/git.mk
