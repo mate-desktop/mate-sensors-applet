@@ -54,3 +54,5 @@ header_DATA = $(INST_H_FILES)
 
 # since it is separate
 EXTRA_DIST = sensors-applet-plugin.h
+
+-include $(top_srcdir)/git.mk

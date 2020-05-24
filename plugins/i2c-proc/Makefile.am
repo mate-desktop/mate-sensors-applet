@@ -19,3 +19,5 @@ libi2c_proc_la_SOURCES = \
 
 libi2c_proc_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libi2c_proc_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

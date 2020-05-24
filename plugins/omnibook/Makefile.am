@@ -19,3 +19,5 @@ libomnibook_la_SOURCES = \
 
 libomnibook_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libomnibook_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

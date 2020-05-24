@@ -19,3 +19,5 @@ libibm_acpi_la_SOURCES = \
 
 libibm_acpi_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libibm_acpi_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk
