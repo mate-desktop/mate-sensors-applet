@@ -53,3 +53,5 @@ endif
 if ATICONFIG
 SUBDIRS      += aticonfig
 endif
+
+-include $(top_srcdir)/git.mk

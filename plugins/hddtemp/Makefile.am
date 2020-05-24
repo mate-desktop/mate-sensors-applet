@@ -20,3 +20,5 @@ libhddtemp_la_SOURCES =		\
 
 libhddtemp_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libhddtemp_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

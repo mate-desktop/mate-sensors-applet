@@ -20,3 +20,5 @@ libpmu_sys_la_SOURCES =		\
 
 libpmu_sys_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libpmu_sys_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk

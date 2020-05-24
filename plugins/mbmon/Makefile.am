@@ -20,3 +20,5 @@ libmbmon_la_SOURCES =	\
 
 libmbmon_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 libmbmon_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+
+-include $(top_srcdir)/git.mk
