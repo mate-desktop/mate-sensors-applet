@@ -4,7 +4,6 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
 	-DLIBDIR=\""$(libdir)"\" \
-	-DSENSORS_APPLET_PLUGIN_DIR=\""$(libdir)/$(PACKAGE)/plugins/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
