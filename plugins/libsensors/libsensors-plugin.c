@@ -83,10 +83,11 @@ static char *get_chip_name_string(const sensors_chip_name *chip) {
 #else
 /* adapted from lm-sensors:prog/sensors/main.c:sprintf_chip_name in lm-sensors-3.0 */
 #define BUF_SIZE 200
-    name = g_malloc0(BUF_SIZE);
-    if (sensors_snprintf_chip_name(name, BUF_SIZE, chip) < 0) {
-        g_free(name);
+    static char buf[BUF_SIZE];
+    if (sensors_snprintf_chip_name(buf, BUF_SIZE, chip) < 0) {
         name = NULL;
+    } else {
+        name = g_strdup (buf);
     }
 #endif
 

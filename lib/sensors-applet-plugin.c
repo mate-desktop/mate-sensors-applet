@@ -132,7 +132,7 @@ void sensors_applet_plugin_add_sensor_with_limits(GList **sensors,
 
     SensorsAppletSensorInfo *info;
 
-    info = g_malloc0(sizeof(*info));
+    info = g_new0 (SensorsAppletSensorInfo, 1);
 
     info->path = g_strdup(path);
     info->id = g_strdup(id);

@@ -335,7 +335,7 @@ syslog(LOG_ERR, "Found udisks2 device temp: '%f'\n", temp);
              * save data */
             if (smartenabled) {
 
-                info = g_malloc0 (sizeof (DevInfo));
+                info = g_new0 (DevInfo, 1);
                 if (NULL == devices) {
                     devices = g_hash_table_new (g_str_hash, g_str_equal);
                 }
