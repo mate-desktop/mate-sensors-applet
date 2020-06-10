@@ -32,10 +32,6 @@
 #include <sys/types.h>
 #endif
 
-#ifdef HAVE_REGEX_H
-#include <regex.h>
-#endif
-
 #ifdef HAVE_SENSORS_SENSORS_H
 #include <sensors/sensors.h>
 #endif
@@ -58,7 +54,7 @@ enum {
 #define LIBSENSORS_ALTERNATIVE_CONFIG_FILE "/usr/local/etc/sensors.conf"
 #endif
 
-regex_t uri_re;
+GRegex *uri_re;
 
 static char *get_chip_name_string(const sensors_chip_name *chip) {
     char *name;
@@ -396,16 +392,21 @@ static gdouble libsensors_plugin_get_sensor_value(const gchar *path,
                                                     SensorType type,
                                                     GError **error) {
     gdouble result = 0;
-    regmatch_t m[3];
+    GMatchInfo *m;
 
     /* parse the uri into a (chip, feature) tuplet */
-    if (regexec (&uri_re, path, 3, m, 0) == 0) {
+    g_regex_match (uri_re, path, 0, &m);
+    if (g_match_info_matches (m)) {
         const sensors_chip_name *found_chip;
         int feature;
 
         if ((found_chip = g_hash_table_lookup(hash_table, path)) != NULL) {
             gdouble value;
-            feature = atoi(path + m[2].rm_so);
+            gchar *feature_str;
+
+            feature_str = g_match_info_fetch (m, 1);
+            feature = atoi(feature_str);
+            g_free (feature_str);
 
 #if SENSORS_API_VERSION < 0x400
             /* retrieve the value of the feature */
@@ -426,22 +427,28 @@ static gdouble libsensors_plugin_get_sensor_value(const gchar *path,
             g_set_error (error, SENSORS_APPLET_PLUGIN_ERROR, LIBSENSORS_CHIP_NOT_FOUND_ERROR, "Chip not found");
         }
     } else {
-        g_set_error (error, SENSORS_APPLET_PLUGIN_ERROR, LIBSENSORS_REGEX_URL_COMPILE_ERROR, "Error compiling URL regex");
+        g_set_error (error, SENSORS_APPLET_PLUGIN_ERROR, LIBSENSORS_REGEX_URL_COMPILE_ERROR, "Error compiling URL regex: Not match");
     }
+    g_match_info_free (m);
     return result;
 }
 
 
 static GList *libsensors_plugin_init() {
+    GError *err = NULL;
+
     /* compile the regular expressions */
-    if (regcomp(&uri_re, "^sensor://([a-z0-9_-]+)/([0-9]+)$", REG_EXTENDED | REG_ICASE) != 0) {
-        g_debug("Error compiling regexp...not initing libsensors sensors interface");
+    uri_re = g_regex_new ("^sensor://[a-z0-9_-]+/([0-9]+)$", G_REGEX_CASELESS | G_REGEX_OPTIMIZE, G_REGEX_MATCH_ANCHORED, &err);
+    if (err) {
+        g_debug("Error compiling regexp: %s\nnot initing libsensors sensors interface", err->message);
+        g_error_free (err);
         return NULL;
     }
 
     /* create hash table to associate path strings with sensors_chip_name
      * pointers - make sure it free's the keys strings on destroy */
     hash_table = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, NULL);
+
     return libsensors_plugin_get_sensors();
 }
 
