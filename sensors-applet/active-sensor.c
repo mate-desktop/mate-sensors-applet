@@ -378,14 +378,14 @@ static void active_sensor_set_graph_dimensions(ActiveSensor *as,
         old_num_samples = as->num_samples;
 
         as->num_samples = num_samples;
-        as->sensor_values = g_malloc0(sizeof(gdouble)*as->num_samples);
+        as->sensor_values = g_new0 (gdouble, as->num_samples);
         memcpy(as->sensor_values,
                old_values,
                MIN(old_num_samples, as->num_samples)*sizeof(gdouble));
 
         g_free(old_values);
     } else {
-        as->sensor_values = g_malloc0(sizeof(gdouble)*num_samples);
+        as->sensor_values = g_new0 (gdouble, num_samples);
         as->num_samples = num_samples;
     }
 
