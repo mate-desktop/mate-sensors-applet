@@ -143,7 +143,6 @@ if test "$with_libsensors" = "no"; then
         echo "Disabling lmsensors support"
 else
 	# check for specfic headers needed for libsensors-sensors-interface
-	AC_CHECK_HEADERS(regex.h)
         AC_CHECK_HEADERS(sensors/sensors.h,
                 AC_CHECK_LIB(sensors, sensors_init,[
                         AC_DEFINE(HAVE_LIBSENSORS,1,[libsensors is available])
