@@ -3,7 +3,7 @@
 uidir = $(datadir)/mate-sensors-applet/ui
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
-	-DG_LOG_DOMAIN=\""Sensors Applet"\" \
+	-DG_LOG_DOMAIN=\""sensors-applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
 	-DLIBDIR=\""$(libdir)"\" \
