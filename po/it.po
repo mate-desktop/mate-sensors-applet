@@ -4,12 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Marco Mangiacavalli, 2018
-# Dario Di Nucci <linkin88mail@gmail.com>, 2018
-# Giuseppe Pignataro <rogepix@gmail.com>, 2018
-# Marco Bartolucci <nap.84@live.it>, 2018
-# l3nn4rt, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Marco Mangiacavalli, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Dario Di Nucci <linkin88mail@gmail.com>, 2020
+# Giuseppe Pignataro <rogepix@gmail.com>, 2020
+# Marco Bartolucci <nap.84@live.it>, 2020
+# l3nn4rt, 2020
 # Alessandro Volturno <alelvb@inwind.it>, 2020
 # 
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
+"PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
@@ -233,11 +234,11 @@ msgstr "_Mostra i sensori nel pannello con"
 
 #: sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
-msgstr "etichette accanto / icone"
+msgstr "accanto etichette / icone"
 
 #: sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
-msgstr "etichette di sotto / icone"
+msgstr "sotto etichette / icone"
 
 #: sensors-applet/prefs-dialog.c:518
 msgid "Preferred _position of sensor values"
@@ -314,11 +315,11 @@ msgstr "_Giù"
 
 #: sensors-applet/prefs-dialog.c:873
 msgid "_Properties"
-msgstr "_Proprietà"
+msgstr "Pr_oprietà"
 
 #: sensors-applet/prefs-dialog.c:920
 msgid "General Options"
-msgstr "Impostazioni generali"
+msgstr "Impostazioni Generali"
 
 #: sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
@@ -352,11 +353,11 @@ msgstr ""
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
-msgstr "Riconoscimenti-traduzione"
+msgstr " "
 
 #: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
-msgstr "Proprietà sensore"
+msgstr "Proprietà del Sensore"
 
 #: sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
