@@ -6,7 +6,6 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Marco Mangiacavalli, 2018
-# Dario Di Nucci <linkin88mail@gmail.com>, 2018
 # Giuseppe Pignataro <rogepix@gmail.com>, 2018
 # Marco Bartolucci <nap.84@live.it>, 2018
 # l3nn4rt, 2018
@@ -28,7 +27,7 @@ msgstr ""
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
-msgstr "Fabbrica Applet di Sensori"
+msgstr "Fabbrica Applet dei Sensori"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
@@ -42,11 +41,11 @@ msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
-msgstr "Dimensione del carattere nei punti"
+msgstr "Dimensione del carattere in punti"
 
 #: org.mate.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
-msgstr "Specifica se mostrare o nascondere le unità sensori"
+msgstr "Specifica se mostrare o nascondere le unità dei sensori"
 
 #: org.mate.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
@@ -85,7 +84,7 @@ msgstr "Percorso del nome del file"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
-msgstr "Dispositivo del sensore ids"
+msgstr "Id del dispositivo sensore"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
@@ -93,7 +92,7 @@ msgstr "L'interfaccia del dispositivo del sensore"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
-msgstr "Usa un etichetta definita"
+msgstr "Etichetta definita dall'utente"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
@@ -118,7 +117,7 @@ msgstr "Comando da eseguire quando l'allarme è attivato"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr "Con quale frequenza ogni allarme dovrebbe suonare (in secondi)"
+msgstr "Quanto spessop ogni allarme dovrebbe suonare (in secondi)"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
@@ -197,7 +196,7 @@ msgstr "Ambiente"
 
 #: sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
-msgstr "Impostazioni di Applet di sensori"
+msgstr "Impostazioni di Applet dei sensori"
 
 #: sensors-applet/prefs-dialog.c:457 sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
@@ -205,7 +204,7 @@ msgstr "Non è stato trovato alcun sensore!"
 
 #: sensors-applet/prefs-dialog.c:463
 msgid "Display"
-msgstr "Display"
+msgstr "Mostra"
 
 #: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
@@ -233,7 +232,7 @@ msgstr "_Mostra i sensori nel pannello con"
 
 #: sensors-applet/prefs-dialog.c:504
 msgid "beside labels / icons"
-msgstr "etichette accanto / icone"
+msgstr "affianco etichette / icone"
 
 #: sensors-applet/prefs-dialog.c:505
 msgid "below labels / icons"
@@ -257,7 +256,7 @@ msgstr "Fahrenheit"
 
 #: sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
-msgstr "Scala _temperatura"
+msgstr "Scala di _temperatura"
 
 #: sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
@@ -352,11 +351,11 @@ msgstr ""
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
-msgstr "Riconoscimenti-traduzione"
+msgstr " "
 
 #: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
-msgstr "Proprietà sensore"
+msgstr "Proprietà del sensore"
 
 #: sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
