@@ -640,7 +640,7 @@ Alarms for individual sensors must also be enabled.
   manual, this is the place to put it. Alternatively, you can put this 
   information in the title page.-->
 
-  <sect1 id="myapplet-about">
+  <sect1 id="sensors-applet-about">
     <title>About &applet;</title>
     <para> The origin sensor applet was written by Alex Murray
       (<email>murray.alex@gmail.com</email>).
