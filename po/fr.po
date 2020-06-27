@@ -11,6 +11,7 @@
 # yoplait <yoplait@tememe.org>, 2018
 # jeremy shields <jeremy.shields@orange.fr>, 2018
 # Étienne Deparis <etienne@depar.is>, 2018
+# Laurent Napias, 2020
 # 
 msgid ""
 msgstr ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Étienne Deparis <etienne@depar.is>, 2018\n"
+"Last-Translator: Laurent Napias, 2020\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -345,11 +346,14 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2005-2009 Alex Murray\n"
+"Copyright © 2011 Stefano Karapetsas\n"
+"Copyright © 2012-2020 Les développeurs de MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
-"Contributeurs au projet MATE :\n"
+"Contributeurs au projet MATE :\n"
 "Voir https://www.transifex.com/mate/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"
@@ -435,7 +439,7 @@ msgstr "_Préférences"
 
 #: sensors-applet/sensors-applet.c:241
 msgid "_Help"
-msgstr "_Aide"
+msgstr "Aid_e"
 
 #: sensors-applet/sensors-applet.c:244
 msgid "_About"

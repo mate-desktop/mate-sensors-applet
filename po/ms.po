@@ -338,6 +338,9 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Hak Cipta © 2005-2009 Alex Murray\n"
+"Hak Cipta © 2011 Stefano Karapetsas\n"
+"Hak Cipta © 2012-2020 Pembangun MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"

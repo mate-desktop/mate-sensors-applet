@@ -7,7 +7,7 @@
 # Rezső Páder <rezso@rezso.net>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Takler Tamás <taklertamas@gmail.com>, 2018
-# Balázs Meskó <meskobalazs@gmail.com>, 2018
+# Balázs Meskó <meskobalazs@mailbox.org>, 2018
 # KAMI KAMI <kami911@gmail.com>, 2018
 # 
 msgid ""

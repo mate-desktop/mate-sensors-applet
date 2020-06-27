@@ -4,11 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mantas Kriaučiūnas <mantas@akl.lt>, 2018
+# Mantas Kriaučiūnas Baltix <mantas@akl.lt>, 2018
 # brennus <jonas.ska@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018
-# GiedriusS <inactive+GiedriusS@transifex.com>, 2018
+# 3d02078546e0f637ccb37bfbde85aceb_d44ba10 <876509489831837cd14447e1ec1c7b32_156767>, 2018
 # Audrius Meskauskas, 2018
 # Moo, 2020
 # 

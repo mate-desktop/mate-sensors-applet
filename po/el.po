@@ -5,7 +5,7 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2018
-# Christos Nouskas <nous@archlinux.us>, 2018
+# Christos Nouskas <nous@artixlinux.org>, 2018
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # thunk <thunk77@gmail.com>, 2018

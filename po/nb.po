@@ -35,7 +35,7 @@ msgstr "Maskinvaresensor-oversikt"
 #. file name)!
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-sensors-applet"
-msgstr ""
+msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"

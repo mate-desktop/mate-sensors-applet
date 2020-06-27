@@ -6,7 +6,8 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2018
-# Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
+# Quentin PAGÈS, 2020
 # 
 msgid ""
 msgstr ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018\n"
+"Last-Translator: Quentin PAGÈS, 2020\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +35,7 @@ msgstr ""
 #. file name)!
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-sensors-applet"
-msgstr ""
+msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -71,19 +72,19 @@ msgstr ""
 
 #: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
-msgstr ""
+msgstr "Lista dels captaires"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
-msgstr ""
+msgstr "Camin al fichièr"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
-msgstr ""
+msgstr "ID del periferic del captaire"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
-msgstr ""
+msgstr "Interfàcia del periferic del captaire"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
@@ -95,11 +96,11 @@ msgstr ""
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
-msgstr ""
+msgstr "Valor baissa"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
-msgstr ""
+msgstr "Valor nauta"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
@@ -128,7 +129,7 @@ msgstr ""
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
-msgstr ""
+msgstr "Tipe d’icòna"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
@@ -187,15 +188,15 @@ msgstr "temperatura"
 
 #: plugins/nvidia/nvidia-plugin.c:190
 msgid "Ambient"
-msgstr ""
+msgstr "Ambient"
 
 #: sensors-applet/prefs-dialog.c:417
 msgid "Sensors Applet Preferences"
-msgstr ""
+msgstr "Preferéncias de l’applet captaires"
 
 #: sensors-applet/prefs-dialog.c:457 sensors-applet/sensors-applet.c:1288
 msgid "No sensors found!"
-msgstr ""
+msgstr "Cap de captaire pas trobat !"
 
 #: sensors-applet/prefs-dialog.c:463
 msgid "Display"
@@ -203,23 +204,23 @@ msgstr "Afichar"
 
 #: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
-msgstr ""
+msgstr "etiqueta amb valor"
 
 #: sensors-applet/prefs-dialog.c:476
 msgid "icon with value"
-msgstr ""
+msgstr "icòna amb valor"
 
 #: sensors-applet/prefs-dialog.c:477
 msgid "value only"
-msgstr ""
+msgstr "valor solament"
 
 #: sensors-applet/prefs-dialog.c:478
 msgid "icon only"
-msgstr ""
+msgstr "icòna solament"
 
 #: sensors-applet/prefs-dialog.c:479
 msgid "graph only"
-msgstr ""
+msgstr "grafic solament"
 
 #: sensors-applet/prefs-dialog.c:492
 msgid "_Display sensors in panel as"
@@ -251,15 +252,15 @@ msgstr "Fahrenheit"
 
 #: sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
-msgstr ""
+msgstr "Escala de _temperatura"
 
 #: sensors-applet/prefs-dialog.c:571
 msgid "Graph _size (pixels)"
-msgstr ""
+msgstr "_Talha grafic (pixèl)"
 
 #: sensors-applet/prefs-dialog.c:583
 msgid "Show _units"
-msgstr ""
+msgstr "Afichar _unitats"
 
 #: sensors-applet/prefs-dialog.c:591
 msgid "Update"
@@ -267,7 +268,7 @@ msgstr "Actualizar"
 
 #: sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
-msgstr ""
+msgstr "_Interval d’actualizacion (seg.)"
 
 #: sensors-applet/prefs-dialog.c:628
 msgid "Notifications"
@@ -275,11 +276,11 @@ msgstr "Notificacions"
 
 #: sensors-applet/prefs-dialog.c:638
 msgid "Display _notifications"
-msgstr ""
+msgstr "Afichar las _notificacions"
 
 #: sensors-applet/prefs-dialog.c:772
 msgid "Sensor"
-msgstr ""
+msgstr "Captaire"
 
 #: sensors-applet/prefs-dialog.c:779
 msgid "Label"
@@ -287,7 +288,7 @@ msgstr "Etiqueta"
 
 #: sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "Modificacion de las etiquetas en clicant dessús."
 
 #: sensors-applet/prefs-dialog.c:790
 msgid "Enabled"
@@ -303,7 +304,7 @@ msgstr "_Aval"
 
 #: sensors-applet/prefs-dialog.c:839
 msgid "_Down"
-msgstr ""
+msgstr "_Amont"
 
 #: sensors-applet/prefs-dialog.c:873
 msgid "_Properties"
@@ -315,7 +316,7 @@ msgstr "Opcions generalas"
 
 #: sensors-applet/prefs-dialog.c:924
 msgid "Sensors"
-msgstr ""
+msgstr "Captaires"
 
 #: sensors-applet/sensors-applet.h:57
 msgid "RPM"
@@ -339,6 +340,9 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2005-2009 Alex Murray\n"
+"Copyright © 2011 Stefano Karapetsas\n"
+"Copyright © 2012-2020 los desvolopaires de MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
@@ -348,15 +352,15 @@ msgstr ""
 
 #: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
-msgstr ""
+msgstr "Proprietats del captaire"
 
 #: sensors-applet/sensor-config-dialog.c:416
 msgid "Graph"
-msgstr ""
+msgstr "Grafic"
 
 #: sensors-applet/sensor-config-dialog.c:429
 msgid "Graph Color"
-msgstr ""
+msgstr "Color del grafic"
 
 #: sensors-applet/sensor-config-dialog.c:432
 msgid "Graph _color"
@@ -364,7 +368,7 @@ msgstr ""
 
 #: sensors-applet/sensor-config-dialog.c:486
 msgid "Sensor _icon"
-msgstr ""
+msgstr "Icòna del captaire"
 
 #: sensors-applet/sensor-config-dialog.c:492
 msgid "Scaling Parameters"
@@ -409,7 +413,7 @@ msgstr ""
 
 #: sensors-applet/sensor-config-dialog.c:704
 msgid "_Enable alarm"
-msgstr ""
+msgstr "_Activar l’alarma"
 
 #: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
@@ -425,7 +429,7 @@ msgstr "A _prepaus"
 
 #: sensors-applet/sensors-applet.c:307
 msgid "is very low"
-msgstr ""
+msgstr "es fòrça baissa"
 
 #: sensors-applet/sensors-applet.c:308
 msgid "lower limit"
@@ -433,7 +437,7 @@ msgstr ""
 
 #: sensors-applet/sensors-applet.c:313
 msgid "is very high"
-msgstr ""
+msgstr "es fòrça nauta"
 
 #: sensors-applet/sensors-applet.c:314
 msgid "upper limit"
@@ -461,16 +465,16 @@ msgstr ""
 
 #: sensors-applet/sensors-applet.c:357
 msgid "Current"
-msgstr ""
+msgstr "Actual"
 
 #: sensors-applet/sensors-applet.c:358
 msgid "current"
-msgstr ""
+msgstr "actual"
 
 #: sensors-applet/sensors-applet.c:379
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "Error en actualizar lo captaire %s"
 
 #: sensors-applet/sensors-applet.c:380
 #, c-format
@@ -481,4 +485,4 @@ msgstr ""
 
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
-msgstr ""
+msgstr "Cap de captaire pas activat !"

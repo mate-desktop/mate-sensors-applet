@@ -37,7 +37,7 @@ msgstr "Pemantau Sensor Perangkat Keras"
 #. file name)!
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-sensors-applet"
-msgstr ""
+msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -343,6 +343,9 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Hak Cipta © 2005-2009 Alex Murray\n"
+"Hak Cipta © 2011 Stefano Karapetsas\n"
+"Hak Cipta © 2012-2020 Pengembang MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
