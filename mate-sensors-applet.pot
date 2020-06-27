@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.23.0\n"
+"Project-Id-Version: mate-sensors-applet 1.24.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2020-06-27 15:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,6 @@ msgstr ""
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-sensors-applet"
 msgstr ""
 
 #: org.mate.sensors-applet.gschema.xml.in:5
@@ -129,7 +124,7 @@ msgstr ""
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:60 plugins/i2c-sys/i2c-sys-plugin.c:53
 #: plugins/i8k/i8k-plugin.c:48 plugins/omnibook/omnibook-plugin.c:47
-#: plugins/i2c-proc/i2c-proc-plugin.c:56 plugins/acpi/acpi-plugin.c:54
+#: plugins/i2c-proc/i2c-proc-plugin.c:56 plugins/acpi/acpi-plugin.c:53
 #: plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
 msgstr ""
@@ -168,7 +163,7 @@ msgstr ""
 msgid "Fan"
 msgstr ""
 
-#: plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:64
 msgid "CPU TEMP"
 msgstr ""
 
@@ -284,7 +279,7 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
-#: sensors-applet/prefs-dialog.c:799 sensors-applet/sensor-config-dialog.c:443
+#: sensors-applet/prefs-dialog.c:799 sensors-applet/sensor-config-dialog.c:442
 msgid "Icon"
 msgstr ""
 
@@ -335,68 +330,68 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:388
+#: sensors-applet/sensor-config-dialog.c:387
 msgid "Sensor Properties"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:416
+#: sensors-applet/sensor-config-dialog.c:415
 msgid "Graph"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:429
+#: sensors-applet/sensor-config-dialog.c:428
 msgid "Graph Color"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:432
+#: sensors-applet/sensor-config-dialog.c:431
 msgid "Graph _color"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:486
+#: sensors-applet/sensor-config-dialog.c:485
 msgid "Sensor _icon"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:492
+#: sensors-applet/sensor-config-dialog.c:491
 msgid "Scaling Parameters"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:521
+#: sensors-applet/sensor-config-dialog.c:520
 msgid "Sensor value _multiplier"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:549
+#: sensors-applet/sensor-config-dialog.c:548
 msgid "Sensor value _offset"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:558
+#: sensors-applet/sensor-config-dialog.c:557
 msgid "Sensor Limits"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:586
+#: sensors-applet/sensor-config-dialog.c:585
 msgid "Sensor _low value"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:614
+#: sensors-applet/sensor-config-dialog.c:613
 msgid "Sensor _high value"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:622
+#: sensors-applet/sensor-config-dialog.c:621
 #: sensors-applet/sensors-applet.c:365
 msgid "Alarm"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:651
+#: sensors-applet/sensor-config-dialog.c:650
 msgid "Alarm _repeat interval (secs)"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:670
+#: sensors-applet/sensor-config-dialog.c:669
 msgid "Lo_w alarm command"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:691
+#: sensors-applet/sensor-config-dialog.c:690
 msgid "Hi_gh alarm command"
 msgstr ""
 
-#: sensors-applet/sensor-config-dialog.c:704
+#: sensors-applet/sensor-config-dialog.c:703
 msgid "_Enable alarm"
 msgstr ""
 
