@@ -1,13 +1,14 @@
+# 
 # Translators:
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
-"PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"PO-Revision-Date: 2020-02-16 14:49+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,12 +29,12 @@ msgstr ""
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
 msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr ""
+msgstr "<year>2015-2020</year> <holder>Тим Мејтове документације</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
 msgid "<year>2006</year> <holder>Alex Murray</holder>"
-msgstr ""
+msgstr "<year>2006</year> <holder>Алекс Мареј</holder>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:40
@@ -45,7 +46,7 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:63
 msgid "<surname>MATE Development</surname> <affiliation> </affiliation>"
-msgstr ""
+msgstr "<surname>Развој Мејта</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
@@ -53,11 +54,13 @@ msgid ""
 "<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
 "</affiliation>"
 msgstr ""
+"<firstname>Алекс</firstname> <surname>Мареј</surname> <affiliation> "
+"</affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:115
 msgid "Alex Murray <email>murray.alex@gmail.com</email>"
-msgstr ""
+msgstr "Алекс Мареј <email>murray.alex@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
@@ -74,7 +77,7 @@ msgstr ""
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:126
 msgid "Feedback"
-msgstr ""
+msgstr "Примедбе"
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:127
@@ -87,7 +90,7 @@ msgstr ""
 #. (itstool) path: article/indexterm
 #: C/index.docbook:135
 msgid "<primary>MATE Sensors Applet</primary>"
-msgstr ""
+msgstr "<primary>Мејтово програмче сензора</primary>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:141
@@ -97,7 +100,7 @@ msgstr "Увод"
 #. (itstool) path: figure/title
 #: C/index.docbook:144
 msgid "MATE Sensors Applet"
-msgstr ""
+msgstr "Мејтово програмче сензора"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -110,6 +113,8 @@ msgid ""
 "external ref='figures/applet_in_panel.png' "
 "md5='432ed012f0897c7f0cf522f6c55ea92a'"
 msgstr ""
+"external ref='figures/applet_in_panel.png' "
+"md5='432ed012f0897c7f0cf522f6c55ea92a'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:146
@@ -134,7 +139,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:170
 msgid "Linux kernel i2c modules"
-msgstr ""
+msgstr "Модули Линуксовог језгра i2c"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:173
@@ -268,6 +273,8 @@ msgid ""
 "The <menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> window "
 "contains the following tabbed sections:"
 msgstr ""
+"Прозор <menuchoice><guimenuitem>Поставке</guimenuitem></menuchoice> садржи "
+"следеће одвојене одељке:"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:287
@@ -292,12 +299,12 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:300
 msgid "Default: icon with value."
-msgstr ""
+msgstr "Основно: иконица са вредношћу."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:304
 msgid "<guilabel>Preferred position of sensor values</guilabel>"
-msgstr ""
+msgstr "<guilabel>Омиљени положај вредности сензора</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:308
@@ -309,7 +316,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:311
 msgid "Default: beside labels / icons."
-msgstr ""
+msgstr "Основно: иза натписа / иконица."
 
 #. (itstool) path: note/para
 #: C/index.docbook:314
@@ -322,7 +329,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:321
 msgid "<guilabel>Graph size (pixels)</guilabel>"
-msgstr ""
+msgstr "<guilabel>Величина графика (тачкица)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:325
@@ -335,7 +342,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:329
 msgid "Default: 42 pixels."
-msgstr ""
+msgstr "Основно: 42 тачкице."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:333
@@ -352,12 +359,12 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:339
 msgid "Default: Celsius."
-msgstr ""
+msgstr "Основно: Целзијус."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:343
 msgid "<guilabel>Update interval</guilabel>"
-msgstr ""
+msgstr "<guilabel>Период освежења</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:347
@@ -367,7 +374,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:349
 msgid "Default: 2 seconds."
-msgstr ""
+msgstr "Основно: 2 секунде."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:353
@@ -384,7 +391,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:359
 msgid "Default: Enabled."
-msgstr ""
+msgstr "Основно: Укључено."
 
 #. (itstool) path: note/para
 #: C/index.docbook:361
@@ -468,12 +475,12 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:429
 msgid "Default: 1.0"
-msgstr ""
+msgstr "Основно: 1.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:434
 msgid "<guilabel>Sensor value offset</guilabel>"
-msgstr ""
+msgstr "<guilabel>Померај вредности сензора</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:438
@@ -484,12 +491,12 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:440
 msgid "Default: 0.0"
-msgstr ""
+msgstr "Основно: 0.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:444
 msgid "<guilabel>Sensor low value</guilabel>"
-msgstr ""
+msgstr "<guilabel>Доња вредност сензора</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:448
@@ -502,12 +509,12 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:451 C/index.docbook:462
 msgid "Default: dependent on sensor type"
-msgstr ""
+msgstr "Основно: зависно од врсте сензора"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:455
 msgid "<guilabel>Sensor high value</guilabel>"
-msgstr ""
+msgstr "<guilabel>Горња вредност сензора</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:459
@@ -520,7 +527,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:466
 msgid "<guilabel>Enable alarm</guilabel>"
-msgstr ""
+msgstr "<guilabel>Укључи аларм</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:470
@@ -535,7 +542,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:477
 msgid "Default: disabled"
-msgstr ""
+msgstr "Основно: искључено."
 
 #. (itstool) path: note/para
 #: C/index.docbook:479
@@ -558,7 +565,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:495
 msgid "Default: 0 seconds"
-msgstr ""
+msgstr "Основно: 0 секунди"
 
 #. (itstool) path: note/para
 #: C/index.docbook:497
@@ -583,7 +590,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:515 C/index.docbook:527
 msgid "Default: none"
-msgstr ""
+msgstr "Основно: ништа"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:520

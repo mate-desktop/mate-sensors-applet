@@ -1,24 +1,27 @@
 # 
 # Translators:
-# Rasti K5 <rasti.khdhr@gmail.com>, 2020
+# Slimane Selyan AMIRI <selyan.kab@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2020-02-16 14:49+0000\n"
-"Last-Translator: Rasti K5 <rasti.khdhr@gmail.com>, 2020\n"
-"Language-Team: Kurdish (Iraq) (https://www.transifex.com/mate/teams/13566/ku_IQ/)\n"
+"Last-Translator: Slimane Selyan AMIRI <selyan.kab@gmail.com>, 2020\n"
+"Language-Team: Kabyle (https://www.transifex.com/mate/teams/13566/kab/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ku_IQ\n"
+"Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
+"Launchpad Contributions:\n"
+"  Belkacem Mohammed https://launchpad.net/~belkacem77\n"
+"  Slimane Amiri https://launchpad.net/~slimaneamiri"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:30
@@ -92,7 +95,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: C/index.docbook:141
 msgid "Introduction"
-msgstr ""
+msgstr "Tazwart"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:144
@@ -251,7 +254,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
 msgid "Preferences"
-msgstr "هەڵبژاردنەکان"
+msgstr "Ismenyifen"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:263
@@ -272,7 +275,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: C/index.docbook:287
 msgid "General Options"
-msgstr "بژاردە گشتییەکان"
+msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:290
@@ -733,7 +736,7 @@ msgstr ""
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
 msgid "link"
-msgstr "بەستەر"
+msgstr "aseɣwen"
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:2

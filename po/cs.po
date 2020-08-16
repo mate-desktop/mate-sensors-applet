@@ -4,24 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
-# Michal <sinope@seznam.cz>, 2018
-# Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2018
-# Radek kohout <radekpv@seznam.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
-# ToMáš Marný, 2018
-# Lucas Lommer <drom@kdyne.net>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2020
+# ToMáš Marný, 2020
+# Michal <sinope@seznam.cz>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2020
+# Radek kohout <radekpv@seznam.cz>, 2020
+# LiberteCzech <liberte.czech@gmail.com>, 2020
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
+# Lucas Lommer <drom@kdyne.net>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2019\n"
+"PO-Revision-Date: 2020-02-16 14:48+0000\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +42,7 @@ msgstr "Monitor hardwarových senzorů"
 #. file name)!
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-sensors-applet"
-msgstr ""
+msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -207,7 +208,7 @@ msgstr "Žádný senzor nebyl nalezen!"
 
 #: sensors-applet/prefs-dialog.c:463
 msgid "Display"
-msgstr "Displej"
+msgstr "Zobrazit"
 
 #: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
@@ -271,7 +272,7 @@ msgstr "Zobrazit _jednotky"
 
 #: sensors-applet/prefs-dialog.c:591
 msgid "Update"
-msgstr "Aktualizovat"
+msgstr "Aktualizace"
 
 #: sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
@@ -291,7 +292,7 @@ msgstr "Senzor"
 
 #: sensors-applet/prefs-dialog.c:779
 msgid "Label"
-msgstr "Jmenovka"
+msgstr "Popisek"
 
 #: sensors-applet/prefs-dialog.c:789
 msgid "Labels can be edited directly by clicking on them."
@@ -307,7 +308,7 @@ msgstr "Ikona"
 
 #: sensors-applet/prefs-dialog.c:831
 msgid "_Up"
-msgstr "_Výš"
+msgstr "_Nahoru"
 
 #: sensors-applet/prefs-dialog.c:839
 msgid "_Down"
@@ -347,6 +348,9 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2005-2009 Alex Murray\n"
+"Copyright © 2011 Stefano Karapetsas\n"
+"Copyright © 2012-2020 Vývojáři MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
@@ -356,8 +360,12 @@ msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
-"Lucas Lommer <drom@kdyne.net>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
+"Kamil Páral <ripper42@gmail.com>\n"
 "Petr Kovář <pknbe@volny.cz>\n"
+"Lucas Lommer <drom@kdyne.net>\n"
+"Tomas Bzatek <tbzatek@redhat.com>\n"
 "Roman Horník <roman.hornik@debian-linux.cz>"
 
 #: sensors-applet/sensor-config-dialog.c:388
@@ -427,7 +435,7 @@ msgstr "Povolit alarm"
 
 #: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
-msgstr "Nastavení"
+msgstr "_Předvolby"
 
 #: sensors-applet/sensors-applet.c:241
 msgid "_Help"

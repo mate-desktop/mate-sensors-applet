@@ -4,21 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Piotr Strębski <strebski@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Michal Herman <szalejot@gmail.com>, 2018
-# Marcin Kralka <marcink96@gmail.com>, 2018
-# Paweł Bandura <gawelx@gmail.com>, 2018
-# pietrasagh <pietrasagh@gmail.com>, 2018
-# Piotr Drąg <piotrdrag@gmail.com>, 2018
+# Piotr Drąg <piotrdrag@gmail.com>, 2020
+# Piotr Strębski <strebski@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Michal Herman <szalejot@gmail.com>, 2020
+# Marcin Kralka <marcink96@gmail.com>, 2020
+# Paweł Bandura <gawelx@gmail.com>, 2020
+# pietrasagh <pietrasagh@gmail.com>, 2020
+# Daniel Tokarzewski <bezimo@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>, 2018\n"
+"PO-Revision-Date: 2020-02-16 14:48+0000\n"
+"Last-Translator: Daniel Tokarzewski <bezimo@gmail.com>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +39,7 @@ msgstr "Monitor czujników sprzętowych"
 #. file name)!
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-sensors-applet"
-msgstr ""
+msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -145,7 +146,7 @@ msgstr "Kolor wykresu dla czujnika"
 #: plugins/i2c-proc/i2c-proc-plugin.c:56 plugins/acpi/acpi-plugin.c:54
 #: plugins/smu-sys/smu-sys-plugin.c:58
 msgid "CPU"
-msgstr "PROCESOR"
+msgstr "Procesor"
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:128
 #: plugins/nvidia/nvidia-plugin.c:148 plugins/nvidia/nvidia-plugin.c:173
@@ -346,14 +347,23 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Prawa autorskie © 2005-2009 Alex Murray\n"
+"Prawa autorskie © 2011 Stefano Karapetsas\n"
+"Prawa autorskie © 2012-2020 programiści MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
-"Tłumacze środowiska MATE, 2013-2014, 2016-2018\n"
+"Tłumacze środowiska MATE, 2014-2020\n"
 "\n"
-"Tomasz Bielecki, 2005\n"
-"Paweł Marciniak, 2007"
+"Zbigniew Chyla, 2002-2003\n"
+"Artur Flinta, 2003-2005\n"
+"Wadim Dziedzic, 2007-2009\n"
+"Tomasz Dominikowski, 2008-2009\n"
+"Joanna Mazgaj, 2009\n"
+"Piotr Drąg, 2010\n"
+"Aviary.pl, 2007-2010\n"
+"Daniel Tokarzewski, 2020"
 
 #: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
@@ -422,11 +432,11 @@ msgstr "_Alarm"
 
 #: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
-msgstr "P_referencje"
+msgstr "_Preferencje"
 
 #: sensors-applet/sensors-applet.c:241
 msgid "_Help"
-msgstr "P_omoc"
+msgstr "_Pomoc"
 
 #: sensors-applet/sensors-applet.c:244
 msgid "_About"

@@ -4,11 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Rizki Aulia Rachman <rizkiaulia.r@gmail.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
-# hpiece 8 <hpiece8@gmail.com>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Rizki Aulia Rachman <rizkiaulia.r@gmail.com>, 2020
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2020
+# hpiece 8 <hpiece8@gmail.com>, 2020
 # Andika Triwidada <andika@gmail.com>, 2020
 # 
 msgid ""
@@ -16,7 +15,7 @@ msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
+"PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +36,7 @@ msgstr "Pemantau Sensor Perangkat Keras"
 #. file name)!
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-sensors-applet"
-msgstr ""
+msgstr "mate-sensors-applet"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -343,6 +342,9 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Hak Cipta © 2005-2009 Alex Murray\n"
+"Hak Cipta © 2011 Stefano Karapetsas\n"
+"Hak Cipta © 2012-2020 Pengembang MATE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
@@ -351,7 +353,8 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020."
 
 #: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"

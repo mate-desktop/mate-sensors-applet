@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Edward Sawyer <saoded@gmail.com>, 2018
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Edward Sawyer <saoded@gmail.com>, 2020
+# Omer, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Edward Sawyer <saoded@gmail.com>, 2018\n"
+"PO-Revision-Date: 2020-02-16 14:48+0000\n"
+"Last-Translator: Omer, 2020\n"
 "Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,7 +117,7 @@ msgstr ""
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
-msgstr "משמש לזיהוי חיישן ברשימה"
+msgstr "בשימוש לזיהוי חיישן ברשימה"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"

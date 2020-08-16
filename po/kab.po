@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Slimane Selyan AMIRI <selyan.kab@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -12,12 +12,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
-"Language-Team: Spanish (Dominican Republic) (https://www.transifex.com/mate/teams/13566/es_DO/)\n"
+"Last-Translator: Slimane Selyan AMIRI <selyan.kab@gmail.com>, 2020\n"
+"Language-Team: Kabyle (https://www.transifex.com/mate/teams/13566/kab/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_DO\n"
+"Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
@@ -197,7 +197,7 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:463
 msgid "Display"
-msgstr "Visor"
+msgstr "Affichage"
 
 #: sensors-applet/prefs-dialog.c:475
 msgid "label with value"
@@ -237,15 +237,15 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:530
 msgid "Kelvin"
-msgstr "Kelvin"
+msgstr ""
 
 #: sensors-applet/prefs-dialog.c:531
 msgid "Celsius"
-msgstr "Centígrados"
+msgstr ""
 
 #: sensors-applet/prefs-dialog.c:532
 msgid "Fahrenheit"
-msgstr "Fahrenheit"
+msgstr ""
 
 #: sensors-applet/prefs-dialog.c:545
 msgid "_Temperature scale"
@@ -261,7 +261,7 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:591
 msgid "Update"
-msgstr "Actualizar"
+msgstr ""
 
 #: sensors-applet/prefs-dialog.c:618
 msgid "Update _interval (secs)"
@@ -293,11 +293,11 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:799 sensors-applet/sensor-config-dialog.c:443
 msgid "Icon"
-msgstr ""
+msgstr "Tignit"
 
 #: sensors-applet/prefs-dialog.c:831
 msgid "_Up"
-msgstr ""
+msgstr "D _asawen"
 
 #: sensors-applet/prefs-dialog.c:839
 msgid "_Down"
@@ -305,7 +305,7 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:873
 msgid "_Properties"
-msgstr "_Propiedades"
+msgstr ""
 
 #: sensors-applet/prefs-dialog.c:920
 msgid "General Options"
@@ -341,8 +341,9 @@ msgstr ""
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
-"Francisco Javier F. Serrador <serrador@cvs.mate.org>\n"
-"Jorge González González <jorge.gonzalez.gonzalez@hispalinux.es>"
+"Launchpad Contributions:\n"
+"  Belkacem Mohammed https://launchpad.net/~belkacem77\n"
+"  Slimane Amiri https://launchpad.net/~slimaneamiri"
 
 #: sensors-applet/sensor-config-dialog.c:388
 msgid "Sensor Properties"
@@ -411,15 +412,15 @@ msgstr ""
 
 #: sensors-applet/sensors-applet.c:238
 msgid "_Preferences"
-msgstr "_Preferencias"
+msgstr ""
 
 #: sensors-applet/sensors-applet.c:241
 msgid "_Help"
-msgstr "Ay_uda"
+msgstr "Ta_llalt"
 
 #: sensors-applet/sensors-applet.c:244
 msgid "_About"
-msgstr "_Acerca de"
+msgstr "_Ɣef"
 
 #: sensors-applet/sensors-applet.c:307
 msgid "is very low"
