@@ -1,3 +1,16 @@
+### mate-sensors-applet 1.24.1
+
+  * Translations update
+  * add git.mk to generate .gitignore
+  * build: prevents two consecutive slashes in plugin file path
+  * build: Fix G_LOG_DOMAIN for sensors applet
+  * sonypi-plugin.c: Make sonypi plugin portable to GNU/Hurd
+  * libsensors-plugin: Port to GRegex
+  * Replace g_malloc0 with g_new0 and g_strdup
+  * build: silent build warnings for distcheck
+  * use default MATE_COMPILE_WARNINGS level
+  * build: show configure summary
+
 ### mate-sensors-applet 1.24.0
 
   * Translations update
