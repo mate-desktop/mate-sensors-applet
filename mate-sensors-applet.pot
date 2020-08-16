@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.23.0\n"
+"Project-Id-Version: mate-sensors-applet 1.24.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2020-08-16 18:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,6 @@ msgstr ""
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-sensors-applet"
 msgstr ""
 
 #: org.mate.sensors-applet.gschema.xml.in:5
@@ -168,7 +163,7 @@ msgstr ""
 msgid "Fan"
 msgstr ""
 
-#: plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:64
 msgid "CPU TEMP"
 msgstr ""
 
