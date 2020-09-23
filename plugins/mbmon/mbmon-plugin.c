@@ -62,20 +62,20 @@ static const gchar *mbmon_plugin_query_mbmon_daemon(GError **error) {
 
     struct sockaddr_in address;
     static char* buffer = NULL;
-    static GTimeVal previous_query_time;
-    GTimeVal current_query_time;
+    static gint64 previous_query_time;
+    gint64 current_query_time;
 
     if (NULL == buffer) {
         /* initialise buffer and current time */
         buffer = g_new0(char, MBMON_OUTPUT_BUFFER_LENGTH);
-        g_get_current_time(&previous_query_time);
+        previous_query_time = g_get_monotonic_time ();
         first_run = TRUE;
     }
-    g_get_current_time(&current_query_time);
+    current_query_time = g_get_monotonic_time ();
 
     /* only query if more than 2 seconds has elapsed,
     mbmon daemon will send a new value every 2 seconds */
-    if (first_run || current_query_time.tv_sec - previous_query_time.tv_sec > 2) {
+    if (first_run || current_query_time - previous_query_time > 2 * G_TIME_SPAN_SECOND) {
         previous_query_time = current_query_time;
 
         if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
