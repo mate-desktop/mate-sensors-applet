@@ -67,19 +67,19 @@ static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
     gchar *pc;
 
     struct sockaddr_in address;
-    static GTimeVal previous_query_time;
-    GTimeVal current_query_time;
+    static gint64 previous_query_time;
+    gint64 current_query_time;
 
     if (first_run) {
         // initialise previous time
-        g_get_current_time(&previous_query_time);
+        previous_query_time = g_get_monotonic_time ();
     }
-    g_get_current_time(&current_query_time);
+    current_query_time = g_get_monotonic_time ();
 
     /* only actually query if more than 60 seconds has elapsed as
     hddtemp daemon will only actually send a new value if is > 60
     seconds */
-    if (first_run || current_query_time.tv_sec - previous_query_time.tv_sec > 60) {
+    if (first_run || current_query_time - previous_query_time > G_TIME_SPAN_MINUTE) {
         previous_query_time = current_query_time;
 
         if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
