@@ -48,11 +48,12 @@ static int num_gpus = 0;
 
 static int ati_get_temps(gdouble temps[], int max_temps)
 {
-    double temp;
-    int read_count;
     int gpu_no = 0;
 
 #ifdef HAVE_STDIO_H
+    double temp;
+    int read_count;
+
     FILE *aticonfig = popen(ATICONFIG_EXE
       " --adapter=all --od-gettemperature", "r");
     if (aticonfig == NULL) {
