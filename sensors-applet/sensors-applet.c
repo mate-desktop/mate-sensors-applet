@@ -248,14 +248,6 @@ static const GtkActionEntry sensors_applet_menu_actions[] = {
         G_CALLBACK(about_cb) }
 };
 
-#ifdef HAVE_LIBNOTIFY
-static void notif_closed_cb(NotifyNotification *notification, SensorsApplet *sensors_applet) {
-    g_assert(sensors_applet);
-
-    sensors_applet->notification = NULL;
-}
-#endif // HAVE_LIBNOTIFY
-
 void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType notif_type) {
 #ifdef HAVE_LIBNOTIFY
 
