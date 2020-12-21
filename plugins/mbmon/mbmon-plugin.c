@@ -54,9 +54,7 @@ enum {
 };
 
 static const gchar *mbmon_plugin_query_mbmon_daemon(GError **error) {
-    int sockfd;
-    ssize_t n = 1;
-    gboolean first_run = FALSE;
+    static gboolean first_run = FALSE;
     gint output_length = 0;
     gchar *pc;
 
@@ -76,6 +74,9 @@ static const gchar *mbmon_plugin_query_mbmon_daemon(GError **error) {
     /* only query if more than 2 seconds has elapsed,
     mbmon daemon will send a new value every 2 seconds */
     if (first_run || current_query_time - previous_query_time > 2 * G_TIME_SPAN_SECOND) {
+        int sockfd;
+        ssize_t n;
+
         previous_query_time = current_query_time;
 
         if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
@@ -135,7 +136,7 @@ static void mbmon_plugin_get_sensors(GList **sensors) {
 
     GError *error = NULL;
     const gchar *mbmon_output;
-    gchar **output_vector = NULL, **pv, **pv2;
+    gchar **output_vector = NULL, **pv;
 
     mbmon_output = mbmon_plugin_query_mbmon_daemon(&error);
 
@@ -147,6 +148,8 @@ static void mbmon_plugin_get_sensors(GList **sensors) {
     pv = output_vector = g_strsplit(mbmon_output, "\n", -1);
 
     while(pv[0] != NULL) {
+        gchar **pv2;
+
         pv2 = g_strsplit(pv[0], ":", -1);
         gchar *name, *label;
         SensorType type;

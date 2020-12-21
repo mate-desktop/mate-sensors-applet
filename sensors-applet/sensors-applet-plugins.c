@@ -39,13 +39,13 @@ static void load_all_plugins(SensorsApplet *sensors_applet, const gchar *path) {
                 /* try and open plugin */
                 gchar *plugin_file;
                 void *handle;
-                SensorsAppletPluginName name_fn;
                 SensorsAppletPluginInit init_fn;
-                SensorsAppletPluginGetSensorValue get_value_fn;
 
                 plugin_file = g_strdup_printf("%s/%s", path, file);
                 g_debug("found %s in plugin directory", plugin_file);
                 if ((handle = dlopen(plugin_file, RTLD_NOW)) != NULL) {
+                    SensorsAppletPluginName name_fn;
+                    SensorsAppletPluginGetSensorValue get_value_fn;
 
                     if ((name_fn = dlsym(handle, "sensors_applet_plugin_name")) != NULL &&
                         (init_fn = dlsym(handle, "sensors_applet_plugin_init")) != NULL &&

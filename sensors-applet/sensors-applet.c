@@ -165,10 +165,8 @@ static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) 
 
     /* update all icons in the sensors tree and update all active sensors */
     GtkTreeIter interfaces_iter, sensors_iter;
-    GtkTreePath *path;
     gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
     IconType icon_type;
-    GdkPixbuf *new_icon;
     gboolean enabled;
     SensorsApplet *sensors_applet;
     DisplayMode display_mode;
@@ -188,6 +186,8 @@ static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) 
                 not_end_of_sensors;
                 not_end_of_sensors = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
 
+                GdkPixbuf *new_icon;
+
                 gtk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
                                    &sensors_iter,
                                    ENABLE_COLUMN, &enabled,
@@ -206,6 +206,8 @@ static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) 
                 if (enabled &&
                     (display_mode == DISPLAY_ICON ||
                      display_mode == DISPLAY_ICON_WITH_VALUE)) {
+
+                    GtkTreePath *path;
 
                     path = gtk_tree_model_get_path(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter);
                     sensors_applet_icon_changed(sensors_applet, path);

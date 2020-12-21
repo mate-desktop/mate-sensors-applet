@@ -211,7 +211,7 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
                                       GdkPixbuf *base_icon,
                                       SensorType sensor_type) {
 
-    GdkPixbuf *overlay_icon, *new_icon;
+    GdkPixbuf *new_icon;
     const gchar *overlay_icon_filename = NULL;
     SensorValueRange value_range;
 
@@ -231,6 +231,8 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
 
     /* only load overlay if required */
     if (overlay_icon_filename) {
+        GdkPixbuf *overlay_icon;
+
         overlay_icon = gdk_pixbuf_new_from_file_at_size(overlay_icon_filename,
                                 DEFAULT_ICON_SIZE,
                                 DEFAULT_ICON_SIZE,
@@ -360,7 +362,6 @@ static void active_sensor_set_graph_dimensions(ActiveSensor *as,
                                                gint width,
                                                gint height) {
 
-    gdouble *old_values;
     gint num_samples, old_num_samples;
     gint graph_width, graph_height;
 
@@ -374,6 +375,8 @@ static void active_sensor_set_graph_dimensions(ActiveSensor *as,
     num_samples = graph_width;
 
     if (as->sensor_values) {
+        gdouble *old_values;
+
         old_values = as->sensor_values;
         old_num_samples = as->num_samples;
 
@@ -504,7 +507,6 @@ void active_sensor_update(ActiveSensor *active_sensor,
 
     /* to build the list of labels as we go */
     gchar *value_text = NULL;
-    gchar *old_value_text;
 
     TemperatureScale scale;
     DisplayMode display_mode;
@@ -668,7 +670,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
                 }
             }
 
-            old_value_text = value_text;
+            gchar *old_value_text = value_text;
 
             if (sensor_alarm_enabled) {
                 if (sensor_value >= sensor_high_value || sensor_value <= sensor_low_value) {

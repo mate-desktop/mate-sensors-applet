@@ -283,13 +283,13 @@ static void sensor_config_dialog_icon_type_changed(GtkComboBox *icon_type_combo_
 
     GtkTreeModel *model;
     GtkTreeIter iter;
-    GtkTreePath *path;
 
     GdkPixbuf *new_icon;
     IconType icon_type;
 
     icons_model = gtk_combo_box_get_model(icon_type_combo_box);
     if (gtk_combo_box_get_active_iter(icon_type_combo_box, &icons_iter)) {
+        GtkTreePath *path;
 
         gtk_tree_model_get(icons_model, &icons_iter,
                            0, &new_icon,
@@ -351,7 +351,6 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     GtkListStore *icon_store;
     IconType count;
-    GdkPixbuf *pixbuf;
     GdkRGBA graph_color;
     gchar *sensor_label;
     gchar *header_text;
@@ -452,6 +451,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     /* populate list with icons */
     for (count = CPU_ICON; count < NUM_ICONS; count++) {
+        GdkPixbuf *pixbuf;
+
         pixbuf = sensors_applet_load_icon(count);
         if (pixbuf) {
             gtk_list_store_insert(icon_store, &iter, count);
