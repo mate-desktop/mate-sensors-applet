@@ -50,9 +50,8 @@ enum {
 
 
 static void ibm_acpi_plugin_setup_manually(GList **sensors) {
-    gchar *label;
-
     if (g_file_test(IBM_ACPI_TEMPERATURE_FILE, G_FILE_TEST_EXISTS)) {
+        gchar *label;
 
         /* with Ibm_Acpi have 8 fixed sensors, all accessed
            from the IBM_ACPI_TEMPERATURE_FILE */

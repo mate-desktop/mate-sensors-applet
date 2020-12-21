@@ -293,10 +293,11 @@ static void prefs_dialog_row_activated(GtkTreeView *view, GtkTreePath *path, Gtk
 static void prefs_dialog_sensor_up_button_clicked(GtkButton *button, PrefsDialog *prefs_dialog) {
     GtkTreeModel *model;
     GtkTreeIter iter;
-    GtkTreePath *path;
 
     if (gtk_tree_selection_get_selected(prefs_dialog->sensors_applet->selection, &model, &iter)) {
         /* if has no prev node set up button insentive */
+        GtkTreePath *path;
+
         path = gtk_tree_model_get_path(model, &iter);
         if (gtk_tree_path_prev(path)) {
 
@@ -349,10 +350,12 @@ static void prefs_dialog_selection_changed(GtkTreeSelection *selection,
                                            PrefsDialog *prefs_dialog) {
 
     GtkTreeIter iter;
-    GtkTreePath *path;
     GtkTreeModel *model;
+
     /* if there is a selection with no children make config button sensitive */
     if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
+        GtkTreePath *path;
+
         if (!gtk_tree_model_iter_has_child(model, &iter)) {
             gtk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_config_button), TRUE);
         } else {

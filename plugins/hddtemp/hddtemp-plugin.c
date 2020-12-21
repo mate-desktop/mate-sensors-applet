@@ -60,11 +60,8 @@ enum {
 static gchar buffer[HDDTEMP_OUTPUT_BUFFER_LENGTH];
 
 static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
-    int sockfd;
-    ssize_t n = 1;
     guint output_length = 0;
     static gboolean first_run = TRUE;
-    gchar *pc;
 
     struct sockaddr_in address;
     static gint64 previous_query_time;
@@ -80,6 +77,10 @@ static const gchar *hddtemp_plugin_query_hddtemp_daemon(GError **error) {
     hddtemp daemon will only actually send a new value if is > 60
     seconds */
     if (first_run || current_query_time - previous_query_time > G_TIME_SPAN_MINUTE) {
+        int sockfd;
+        ssize_t n;
+        gchar *pc;
+
         previous_query_time = current_query_time;
 
         if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {

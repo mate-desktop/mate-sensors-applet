@@ -28,10 +28,11 @@ static gboolean sensors_applet_fill(MatePanelApplet *applet,
                                     const gchar *iid,
                                     gpointer data) {
 
-    SensorsApplet *sensors_applet;
     gboolean retval = FALSE;
 
     if (strcmp(iid, "SensorsApplet") == 0) {
+        SensorsApplet *sensors_applet;
+
         sensors_applet = g_new0(SensorsApplet, 1);
         sensors_applet->applet = applet;
         sensors_applet_init(sensors_applet);

@@ -32,10 +32,6 @@ extern const gchar *plugin_name;
 void sensors_applet_plugin_find_sensors(GList **sensors,
                                         const gchar *path,
                                         SensorsAppletPluginTestSensorFunc test_sensor) {
-    GDir *dir;
-    const gchar* new_file;
-    gchar *new_path;
-
     if (g_file_test(path, G_FILE_TEST_IS_REGULAR)) {
         /* also test can actually open file for reading */
         if (access(path, R_OK) == 0) {
@@ -48,9 +44,14 @@ void sensors_applet_plugin_find_sensors(GList **sensors,
        for a sensor dir
     */
     if (g_file_test(path, G_FILE_TEST_IS_DIR) && !g_file_test(path, G_FILE_TEST_IS_SYMLINK)) {
-        dir = g_dir_open(path, 0, NULL);
-        if (dir != NULL) {
+        GDir *dir;
+
+        if ((dir = g_dir_open(path, 0, NULL)) != NULL) {
+            const gchar *new_file;
+
             while(NULL != (new_file = g_dir_read_name(dir))) {
+                gchar *new_path;
+
                 new_path = g_build_filename(path, new_file, NULL);
                 sensors_applet_plugin_find_sensors(sensors, new_path, test_sensor);
                 g_free(new_path);
@@ -63,9 +64,10 @@ void sensors_applet_plugin_find_sensors(GList **sensors,
 /* for error handling */
 GQuark sensors_applet_plugin_error_quark(void) {
     static GQuark quark = 0;
-    gchar *string;
 
     if (quark == 0) {
+        gchar *string;
+
         string = g_strdup_printf("%s-plugin-error", plugin_name);
         quark = g_quark_from_string(string);
         g_free(string);
