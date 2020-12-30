@@ -1,3 +1,5 @@
+NULL=
+
 DIST_SUBDIRS = \
 	acpi \
 	dummy \
@@ -15,7 +17,7 @@ DIST_SUBDIRS = \
 	pmu-sys \
 	smu-sys \
 	sonypi \
-	aticonfig
+	$(NULL)
 
 SUBDIRS = \
 	acpi \
@@ -48,10 +50,6 @@ endif
 
 if NVIDIA
 SUBDIRS      += nvidia
-endif
-
-if ATICONFIG
-SUBDIRS      += aticonfig
 endif
 
 -include $(top_srcdir)/git.mk
