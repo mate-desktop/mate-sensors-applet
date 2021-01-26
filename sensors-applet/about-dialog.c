@@ -45,7 +45,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
                   /* To translator: Put your name here to show up in the About dialog as the translator */
                   "translator-credits", _("translator-credits"),
                   "logo-icon-name", SENSORS_APPLET_ICON,
-                  "website", "https://mate-desktop.org",
+                  "website", PACKAGE_URL,
                   NULL);
 
 }
