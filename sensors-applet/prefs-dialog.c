@@ -455,10 +455,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     /* if no SensorsList's have been created, this is because
        we haven't been able to access any sensors */
     if (sensors_applet->sensors == NULL) {
-        GtkWidget *label;
-        GtkWidget *content_area;
-        label = gtk_label_new(_("No sensors found!"));
-        content_area = gtk_dialog_get_content_area (prefs_dialog->dialog);
+        GtkWidget *label = gtk_label_new(_("No sensors found!"));
         gtk_box_pack_start (GTK_BOX(content_area), label, FALSE, FALSE, 0);
         return;
     }
