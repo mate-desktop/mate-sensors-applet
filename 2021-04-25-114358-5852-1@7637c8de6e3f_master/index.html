@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>rootdir - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>rootdir - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>root@c3c02cec77ca</td></tr>
+<tr><th>Working Directory:</th><td>/rootdir</td></tr>
+<tr><th>Command Line:</th><td>make -j 2</td></tr>
+<tr><th>Clang Version:</th><td>clang version 11.0.0 (Fedora 11.0.0-2.fc33)
+</td></tr>
+<tr><th>Date:</th><td>Sun Apr 25 11:43:58 2021</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">23</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>Dead store</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead assignment</td><td class="Q">6</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_dead_store_dead_assignment');" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Cast from non-struct type to struct type</td><td class="Q">13</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_cast_from_non-struct_type_to_struct_type');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Garbage return value</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_garbage_return_value');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Result of operation is garbage or undefined</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_result_of_operation_is_garbage_or_undefined');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Uninitialized argument value</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_uninitialized_argument_value');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">322</td><td class="Q">1</td><td><a href="report-01b31f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-01b31f.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">301</td><td class="Q">1</td><td><a href="report-41f16d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-41f16d.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">321</td><td class="Q">1</td><td><a href="report-57c953.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-57c953.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">301</td><td class="Q">1</td><td><a href="report-57d00e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-57d00e.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">300</td><td class="Q">1</td><td><a href="report-7b80cf.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-7b80cf.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">prefs_cb</td><td class="Q">62</td><td class="Q">1</td><td><a href="report-7bb4c6.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-7bb4c6.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">322</td><td class="Q">1</td><td><a href="report-835cca.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-835cca.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">324</td><td class="Q">1</td><td><a href="report-8a0c9c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-8a0c9c.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">321</td><td class="Q">1</td><td><a href="report-8d28f3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-8d28f3.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">324</td><td class="Q">1</td><td><a href="report-a2c7b1.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a2c7b1.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">325</td><td class="Q">1</td><td><a href="report-c2c428.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c2c428.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">300</td><td class="Q">1</td><td><a href="report-e571e1.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-e571e1.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">325</td><td class="Q">1</td><td><a href="report-f81690.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f81690.html" -->
+</tr>
+<tr class="bt_dead_store_dead_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead assignment</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">sensors_applet_add_sensor</td><td class="Q">888</td><td class="Q">1</td><td><a href="report-0b1ced.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0b1ced.html" -->
+</tr>
+<tr class="bt_dead_store_dead_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead assignment</td><td>sensors-applet/sensor-config-dialog.c</td><td class="DESC">sensor_config_dialog_response</td><td class="Q">79</td><td class="Q">1</td><td><a href="report-0eb0a2.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0eb0a2.html" -->
+</tr>
+<tr class="bt_dead_store_dead_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead assignment</td><td>sensors-applet/active-sensor.c</td><td class="DESC">active_sensor_update</td><td class="Q">730</td><td class="Q">1</td><td><a href="report-0fa638.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0fa638.html" -->
+</tr>
+<tr class="bt_dead_store_dead_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead assignment</td><td>plugins/libsensors/libsensors-plugin.c</td><td class="DESC">libsensors_plugin_get_sensors</td><td class="Q">283</td><td class="Q">1</td><td><a href="report-d39f83.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d39f83.html" -->
+</tr>
+<tr class="bt_dead_store_dead_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead assignment</td><td>plugins/libsensors/libsensors-plugin.c</td><td class="DESC">libsensors_plugin_get_sensors</td><td class="Q">283</td><td class="Q">1</td><td><a href="report-d62048.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d62048.html" -->
+</tr>
+<tr class="bt_dead_store_dead_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead assignment</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">sensors_applet_add_sensor</td><td class="Q">861</td><td class="Q">1</td><td><a href="report-ebc212.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-ebc212.html" -->
+</tr>
+<tr class="bt_logic_error_garbage_return_value"><td class="DESC">Logic error</td><td class="DESC">Garbage return value</td><td>plugins/ibm-acpi/ibm-acpi-plugin.c</td><td class="DESC">ibm_acpi_plugin_get_sensor_value</td><td class="Q">203</td><td class="Q">11</td><td><a href="report-a21f64.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a21f64.html" -->
+</tr>
+<tr class="bt_logic_error_garbage_return_value"><td class="DESC">Logic error</td><td class="DESC">Garbage return value</td><td>plugins/ibm-acpi/ibm-acpi-plugin.c</td><td class="DESC">ibm_acpi_plugin_get_sensor_value</td><td class="Q">203</td><td class="Q">11</td><td><a href="report-db988b.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-db988b.html" -->
+</tr>
+<tr class="bt_logic_error_result_of_operation_is_garbage_or_undefined"><td class="DESC">Logic error</td><td class="DESC">Result of operation is garbage or undefined</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">sensors_applet_pack_display</td><td class="Q">530</td><td class="Q">12</td><td><a href="report-d36f85.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d36f85.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>sensors-applet/active-sensor.c</td><td class="DESC">active_sensor_update_graph</td><td class="Q">307</td><td class="Q">6</td><td><a href="report-6960c7.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-6960c7.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>
