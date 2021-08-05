@@ -4,14 +4,14 @@
 # Cédric Valmary <cvalmary@yahoo.fr>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
-# Quentin PAGÈS, 2020
+# Quentin PAGÈS, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2021-01-16 15:11+0100\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Quentin PAGÈS, 2020\n"
+"Last-Translator: Quentin PAGÈS, 2021\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +33,14 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
+msgstr ""
+"<year>2015-2021</year> <holder>La còla de documentacion de MATE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
 msgid "<year>2006</year> <holder>Alex Murray</holder>"
-msgstr ""
+msgstr "<year>2006</year> <holder>Alex Murray</holder>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:40
@@ -59,11 +60,13 @@ msgid ""
 "<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
 "</affiliation>"
 msgstr ""
+"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
+"</affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:115
 msgid "Alex Murray <email>murray.alex@gmail.com</email>"
-msgstr ""
+msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
@@ -71,6 +74,8 @@ msgid ""
 "<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>Genièr de "
+"2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:123
@@ -116,6 +121,8 @@ msgid ""
 "external ref='figures/applet_in_panel.png' "
 "md5='432ed012f0897c7f0cf522f6c55ea92a'"
 msgstr ""
+"external ref='figures/applet_in_panel.png' "
+"md5='432ed012f0897c7f0cf522f6c55ea92a'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:146
@@ -712,7 +719,7 @@ msgstr ""
 msgid ""
 "The origin sensor applet was written by Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
-"Applet</application> is further develop by Mate dev team. To find more "
+"Applet</application> is further develop by MATE Dev team. To find more "
 "information about <application>MATE Sensors Applet</application>, please "
 "visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-"
 "applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
@@ -732,8 +739,9 @@ msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
 "the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"can be found at this <ulink type=\"https\" "
+"url=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt\">link</ulink>, "
+"or in the file COPYING included with the source code of this program."
 msgstr ""
 
 #. (itstool) path: para/ulink
@@ -751,6 +759,13 @@ msgid ""
 " of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
+"Autorizacion vos es donada de copiar, distribuir e/o modificar aqueste "
+"document segon los tèrmes de la Licéncia GNU Free Documentation License "
+"(GFDL), Version 1.1 o ulteriora publicada per la Free Software Foundation "
+"sens seccion inalterabla, sens tèxt de primièra pagina de cubèrta ni tèxt de"
+" darrièra pagina de cubèrta. Trobaretz un exemplari de la GFDL en seguissent"
+" aqueste <_:ulink-1/> o dins lo fichièr COPYING-DOCS provesit amb lo present"
+" manual."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
@@ -760,6 +775,11 @@ msgid ""
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
+"Aqueste manual fa part de la colleccion de manuals de MATE distribuits jols "
+"tèrmes de la licéncia de documentacion liura GNU. Se volètz distribuir "
+"aqueste document a despart de la colleccion, o podètz far en ajustant un "
+"exemplar de la licéncia al manual, coma indicat a la seccion 6 de la "
+"licéncia."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:19
@@ -770,6 +790,11 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
+"La màger part dels noms utilizats per las entrepresas per distinguir lors "
+"produches e servicis son de marcas depausadas. Quand aqueles noms apareisson"
+" dins la documentacion MATE e que los membres del projècte de Documentacion "
+"MATE son informats de l’existéncia d’aquelas marcas depausadas, siá aqueles "
+"noms entièrs, siá lor primièra letra es en majuscula."
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:35
@@ -786,6 +811,19 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
+"LO DOCUMENT ES PROVESIT « TAL COMA ES » SENS CAP DE GARANTIDA DE QUIN TIPE "
+"QUE SIÁ, EXPLICITA O IMPLICADA, AQUÒ INCLUTZ, SENS CAP DE LIMIT, LAS "
+"GARANTIDAS QUE LO DOCUMENT O UNA VERSION MODIFICADA NON AJA PAS CAP DE "
+"DEFAUT, QUE SIÁ COMERCIABLE, QUE SIÁ ADAPTAT PER UN USATGE PARTICULAR O QUE "
+"ENFRANGA PAS LA LEI. TOT LO RISC RESPÈCTE A LA QUALITAT, L’EXACTITUD O LAS "
+"QUALITATS TECNICAS DEL DOCUMENT O DE SAS VERSIONS MODIFICADAS ES VÒSTRE. SE "
+"PER CAS LO DOCUMENT O UNA VERSION MODIFICADA S’AVERÈSSE DEFECTUÓS AL "
+"RESPÈCTE DE QUIN ASPÈCTE QUE SIÁ, VOSAUTRES (NON PAS LO REDACTOR INICIAL, "
+"L’AUTOR O QUIN CONTRIBUIDOR QUE SIÁ) ASSUMISSÈTZ LO CÒST DE TOTA MANTENENÇA,"
+" REPARACION O CORRECCION NECESSÀRIA. AQUESTA DESCARGA DE GARANTIDA "
+"CONSTITUÍS UNA PART ESSENCIALA D’AQUESTA LICÉNCIA. CAP D’UTILIZACION "
+"D’AQUESTE DOCUMENT O VERSION MODIFICADA ES AUTORIZADA LEVAT JOS AQUESTA "
+"DESCARGA DE GARANTIDA E"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
@@ -801,6 +839,16 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
 " POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
+"EN CAP DE CIRCONSTÀNCIA E JOS CAP D’INTERPRETACION LEGALA, QUE SIÁ DE "
+"RESPONSABILITAT CIVILA (NEGLIGÉNCIA INCLUSA), CONTRACTUALA O AUTRA, L’AUTOR,"
+" LO REDACTOR INICIAL, TOT CONTRIBUIDOR E TOT DISTRIBUIDOR D’AQUESTE DOCUMENT"
+" O DE SA VERSION MODIFICADA NI CAP DE PROVESIDOR D’AQUESTES PARTS SERÀN PAS "
+"RESPONSABLES AL RESPÈCTE DE QUIN DAMATGE DIRÈCTE, INDIRÈCTE, ESPECIAL O "
+"ACCIDENTAL QUE SIÁ DE TOT TIPE E TANBEN, SENS LIMITACION, LOS DAMATGES "
+"LIGATS A LA PÈRDA DE CLIENTÈLA, LAS INTERRUPCIONS DE TRABALH, ALS "
+"DEFALHIMENTS E DISFONCIONAMENTS INFORMATICS O TOTA AUTRA PÈRDA LIGADA A "
+"L’UTILIZACION DEL DOCUMENT E DE SAS VERSIONS MODIFICADAS, ATAL METEIS "
+"S’AQUESTES PART ÈRAN AVISATS DE LA POSSIBILITAT D’AQUESTES DAMATGES."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:28
@@ -809,3 +857,6 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
+"LOS DOCUMENTS E LAS VERSIONS MODIFICADAS D’AQUESTE DOCUMENT SON FORNITS JOLS"
+" TÈRMES DE LA LICÉNCIA DE DOCUMENTACION LIURA GNU ESTANT QUE : "
+"<_:orderedlist-1/>"

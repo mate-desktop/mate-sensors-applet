@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2021-01-16 15:11+0100\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
 "Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
@@ -40,7 +40,7 @@ msgstr "MATE Donanım Algılayıcıları Uygulamacık Kılavuzu V2.1"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -877,19 +877,11 @@ msgstr "MATE Donanım Algılayıcıları Uygulamacığı Hakkında"
 msgid ""
 "The origin sensor applet was written by Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
-"Applet</application> is further develop by Mate dev team. To find more "
+"Applet</application> is further develop by MATE Dev team. To find more "
 "information about <application>MATE Sensors Applet</application>, please "
 "visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-"
 "applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
 msgstr ""
-"Orijinal algılayıcı uygulamacığı Alex Murray "
-"(<email>murray.alex@gmail.com</email>) tarafından geliştirilmişti. "
-"<application>MATE Donanım Algılayıcıları Uygulamacığı</application> "
-"geliştirilmesi MATE geliştirme takımı tarafından devam etmektedir. "
-"<application>MATE  Donanım Algılayıcıları Uygulamacığı</application> "
-"hakkında daha fazla bilgi için lütfen <ulink url=\"https://github.com/mate-"
-"desktop/mate-sensors-applet/\" type=\"http\">MATE Algılayıcı Uygulamacık "
-"Projesi Ana Sayfasını</ulink> ziyaret edin."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
@@ -909,14 +901,10 @@ msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
 "the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"can be found at this <ulink type=\"https\" "
+"url=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt\">link</ulink>, "
+"or in the file COPYING included with the source code of this program."
 msgstr ""
-"Bu program, Free Software Foundation yani Özgür Yazılım Vakfı tarafından "
-"yayınlanan GNU Genel Kamu lisansının ya 2. sürümü, ya da (seçiminize göre) "
-"daha sonraki herhangi bir sürümü kapsamında dağıtılmaktadır. Bu lisansın bir"
-" kopyasını bu <ulink type=\"help\" url=\"help:gpl\">bağlantıda</ulink> veya "
-"bu programın kaynak kodundaki COPYING dosyasında bulabilirsiniz."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9

@@ -1,14 +1,14 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# abuyop <abuyop@gmail.com>, 2020
+# abuyop <abuyop@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2021-01-16 15:11+0100\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>, 2020\n"
+"Last-Translator: abuyop <abuyop@gmail.com>, 2021\n"
 "Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,8 +28,8 @@ msgstr "Panduan Aplet Penderia MATE V2.1"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr "<year>2015-2020</year> <holder>Pasukan Pendokumenan MATE</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
+msgstr "<year>2015-2021</year> <holder>Pasukan Pendokumenan MATE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
@@ -851,18 +851,17 @@ msgstr "Perihal Aplet Penderia MATE"
 msgid ""
 "The origin sensor applet was written by Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
-"Applet</application> is further develop by Mate dev team. To find more "
+"Applet</application> is further develop by MATE Dev team. To find more "
 "information about <application>MATE Sensors Applet</application>, please "
 "visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-"
 "applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
 msgstr ""
-"Aplet penderia asal telah ditulis oleh Alex Murray "
+"Aplet penderia yang asal telah ditulis oleh Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>Aplet Penderia "
-"MATE</application> kemudian dibangunkan oleh pasukan pembangunan Mate. "
-"Maklumat lanjut berkenaan <application>Aplet Penderia MATE</application>, "
-"boleh diperolehi di <ulink url=\"https://github.com/mate-desktop/mate-"
-"sensors-applet/\" type=\"http\">Laman Sesawang Projek Aplet Penderia "
-"MATE</ulink>."
+"MATE</application> seterusnya dibangunkan oleh pasukan Pembangunan MATE. "
+"Untuk mengetahui maklumat <application>Aplet Penderia MATE</application> "
+"lebih lanjut, sila lawati <ulink url=\"https://github.com/mate-desktop/mate-"
+"sensors-applet/\" type=\"http\">Tapak Sesawang Projek Aplet MATE</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
@@ -882,15 +881,17 @@ msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
 "the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"can be found at this <ulink type=\"https\" "
+"url=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt\">link</ulink>, "
+"or in the file COPYING included with the source code of this program."
 msgstr ""
-"Program ini diedar bawah terma lesen Awam Am GNU sepertimana yang "
-"diterbitkan oleh Free SoftwARE Foundation; sama ada versi 2 Lesen, atau "
-"(mengikut pilihan anda) mana-mana versi terkemudian. Satu salinan lesen ini "
-"boleh ditemui dalam <ulink type=\"help\" url=\"help:gpl\">pautan</ulink> "
-"ini, atau di dalam fail COPYING yang disertakan dengan kod sumber program "
-"ini."
+"Program ini telah diedarkan di bawah terma lesen Awam Am GNU seperti mana "
+"yang telah diterbitkan oleh Free Software Foundation; sama ada versi 2 "
+"lesen, atau (ikut pilihan anda) mana-mana versi terkemudian. Satu salinan "
+"lesen ini boleh ditemui pada <ulink type=\"https\" "
+"url=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt\">pautan</ulink>"
+" ini, atau di dalam fail COPYING yang disertakan bersama-sama kod sumber "
+"program ini."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9

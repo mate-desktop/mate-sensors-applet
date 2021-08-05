@@ -1,14 +1,14 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joe Hansen <joedalton2@yahoo.dk>, 2020
+# Joe Hansen <joedalton2@yahoo.dk>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2021-01-16 15:11+0100\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2020\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2021\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,8 +32,8 @@ msgstr "Manual for panelprogrammet MATE-sensorer version 2.1"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr "<year>2015-2020</year> <holder>MATE-dokumentationsholdet</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
+msgstr "<year>2015-2021</year> <holder>MATE-dokumentationsholdet</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
@@ -853,15 +853,15 @@ msgstr "Om panelprogrammet MATE-sensorer"
 msgid ""
 "The origin sensor applet was written by Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
-"Applet</application> is further develop by Mate dev team. To find more "
+"Applet</application> is further develop by MATE Dev team. To find more "
 "information about <application>MATE Sensors Applet</application>, please "
 "visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-"
 "applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
 msgstr ""
 "Det oprindelige sensorpanelprogram blev skrevet af Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>Panelprogrammet MATE-"
-"sensorer</application> er yderligere udvikling af MATE-udviklingsholdet. For"
-" at finde yderligere information om <application>Panelprogrammet MATE-"
+"sensorer</application> er yderligere udviklet af MATE-udviklingsholdet. For "
+"at finde yderligere information om <application>Panelprogrammet MATE-"
 "sensorer</application>, så besøg <ulink url=\"https://github.com/mate-"
 "desktop/mate-sensors-applet/\" type=\"http\">MATE-sensorers "
 "projekthjemmeside</ulink>."
@@ -884,15 +884,17 @@ msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
 "the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"can be found at this <ulink type=\"https\" "
+"url=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt\">link</ulink>, "
+"or in the file COPYING included with the source code of this program."
 msgstr ""
 "Dette program er distribueret under betingelserne i GNU General Public-"
 "licensen, som udgivet af Free Software Foundation; enten version 2 af "
 "licensen, eller (efter dit vlag) enhver senere version. En kopi af denne "
-"licens kan ses via denne <ulink type=\"help\" "
-"url=\"help:gpl\">henvisning</ulink>, eller i filen COPYING inklusderet med "
-"kildekoden for dette program."
+"licens kan ses via denne <ulink type=\"https\" "
+"url=\"https://www.gnu.org/licenses/old-"
+"licenses/gpl-2.0.txt\">henvisning</ulink>, eller i filen COPYING inklusderet"
+" med kildekoden for dette program."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
