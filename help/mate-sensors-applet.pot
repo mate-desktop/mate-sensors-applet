@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2021-09-18 16:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -524,7 +524,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:581
-msgid "Multiple commands can be executed one after the other using the \"&amp;&amp;\" construct to separate them. To play a sound and pop-up a dialog via Zenity the follow command can be used: <_:screen-1/>"
+msgid "Multiple commands can be executed one after the other using the \"&amp;&amp;\" construct to separate them. To play a sound and pop-up a dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
