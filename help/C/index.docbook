@@ -582,7 +582,7 @@ Alarms for individual sensors must also be enabled.
 		      Multiple commands can be executed one after the
 		      other using the "&amp;&amp;" construct to separate
 		      them. To play a sound and pop-up a dialog via
-		      Zenity the follow command can be used:
+		      Zenity the following command can be used:
 
 		      <screen><userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; zenity --warning --title="Sensor Alarm" --text="Sensor Alarm occurred"</command></userinput></screen>
 
