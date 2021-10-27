@@ -43,12 +43,10 @@ const gchar *plugin_name = "ibm-acpi";
 #define BAT1 "BAT1"
 #define FAN "FAN"
 
-
 enum {
     IBM_ACPI_FILE_OPEN_ERROR,
     IBM_ACPI_FILE_READ_ERROR
 };
-
 
 static void ibm_acpi_plugin_setup_manually(GList **sensors) {
     if (g_file_test(IBM_ACPI_TEMPERATURE_FILE, G_FILE_TEST_EXISTS)) {

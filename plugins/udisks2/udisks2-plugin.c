@@ -31,7 +31,6 @@ https://developer.gnome.org/gio/stable/index.html
 
 */
 
-
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
@@ -40,14 +39,12 @@ https://developer.gnome.org/gio/stable/index.html
 #include <gio/gio.h>
 #include "udisks2-plugin.h"
 
-
 /* remove // from next line for syslog debug */
 //#define UD2PD              1
 
 #ifdef UD2PD
 #include <syslog.h>
 #endif
-
 
 #define UDISKS2_BUS_NAME              "org.freedesktop.UDisks2"
 #define UDISKS2_INTERFACE_NAME        "org.freedesktop.DBus.ObjectManager"
@@ -56,7 +53,6 @@ https://developer.gnome.org/gio/stable/index.html
 
 #define UDISKS2_PROPERTIES_INTERFACE  "org.freedesktop.DBus.Properties"
 #define UDISKS2_OBJECT_PATH           "/org/freedesktop/UDisks2"
-
 
 /* Info about a single sensor */
 typedef struct _DevInfo {
@@ -67,7 +63,6 @@ typedef struct _DevInfo {
     GError *error;
 } DevInfo;
 
-
 const gchar *plugin_name = "udisks2";
 
 /* a container for the devices found to have smart enabled */
@@ -75,7 +70,6 @@ GHashTable *devices = NULL;
 
 /* This is a global variable for convenience */
 GDBusConnection *connection = NULL;
-
 
 static void update_device (DevInfo *info) {
     GError *error = NULL;
@@ -301,7 +295,6 @@ syslog(LOG_ERR, "key value: %s", key);
         propdict = g_variant_lookup_value (value, UDISKS2_DEVICE_INTERFACE_NAME, G_VARIANT_TYPE_DICTIONARY);
         propdict2 = g_variant_lookup_value (value, UDISKS2_DEVICE_INTERFACE2_NAME, G_VARIANT_TYPE_DICTIONARY);
 
-
         /* do we have the right ifname keys? */
         if ((NULL != propdict) && (NULL != propdict2)) {
 
@@ -402,7 +395,6 @@ syslog(LOG_ERR, "b4 free3");
 
     }       /* end of while loop */
 
-
     g_variant_unref (managed_objects);
     g_clear_object (&proxy);
     if (NULL == devices) {
@@ -434,7 +426,6 @@ static gdouble udisks2_plugin_get_sensor_value (const gchar *path,
     update_device (info);
     return info->temp;
 }
-
 
 /* API functions */
 const gchar *sensors_applet_plugin_name (void) {

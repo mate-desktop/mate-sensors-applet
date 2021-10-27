@@ -27,7 +27,6 @@ GQuark sensors_applet_plugin_error_quark(void);
 /* for error handling */
 #define SENSORS_APPLET_PLUGIN_ERROR (sensors_applet_plugin_error_quark())
 
-
 /**
  * Initialises the plugin, and returns the list of SensorsAppletSensorInfo
  * structs to create the sensors for this plugin from

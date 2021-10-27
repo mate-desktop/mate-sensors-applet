@@ -119,7 +119,6 @@ static void i2c_proc_plugin_test_sensor(GList **sensors, const gchar *path) {
 
 }
 
-
 /* to be called to setup for proc sensors */
 static GList *i2c_proc_plugin_init(void) {
     GList *sensors = NULL;

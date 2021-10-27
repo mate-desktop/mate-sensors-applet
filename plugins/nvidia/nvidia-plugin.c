@@ -220,4 +220,3 @@ gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
     return nvidia_plugin_get_sensor_value(path, id, type, error);
 }
 
-

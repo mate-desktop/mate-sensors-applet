@@ -40,7 +40,6 @@ const gchar *plugin_name = "smu-sys";
 #define TEMPERATURE "-temp"
 #define FAN_SPEED "-fan"
 
-
 enum {
     SMU_SYS_DEVICE_FILE_OPEN_ERROR,
     SMU_SYS_DEVICE_FILE_READ_ERROR
@@ -109,7 +108,6 @@ static void smu_sys_plugin_test_sensor(GList **sensors, const gchar *path) {
     }
     g_free(filename);
 }
-
 
 /* to be called to setup for sys sensors */
 GList *smu_sys_plugin_init(void) {

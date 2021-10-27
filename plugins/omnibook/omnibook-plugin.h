@@ -22,5 +22,4 @@
 
 #include <sensors-applet/sensors-applet-plugin.h>
 
-
 #endif /* OMNIBOOK_PLUGIN_H*/

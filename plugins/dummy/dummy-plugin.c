@@ -20,7 +20,6 @@
 
 /* Dummy plugin to be able to test msa in a VM */
 
-
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
@@ -29,7 +28,6 @@
 #include <stdlib.h>
 #include "dummy-plugin.h"
 
-
 // remove // from next line for syslog debug
 //#define DPDBG              1
 
@@ -37,9 +35,7 @@
 #include <syslog.h>
 #endif
 
-
 const gchar *plugin_name = "dummy";
-
 
 static void dummy_plugin_get_sensors(GList **sensors) {
 
@@ -95,7 +91,6 @@ static gdouble dummy_plugin_get_sensor_value(const gchar *path,
     }
 
 }
-
 
 /* API functions */
 const gchar *sensors_applet_plugin_name(void) {

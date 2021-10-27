@@ -43,7 +43,6 @@ static void acpi_plugin_add_sensor(GList **sensors, const gchar *path) {
     gchar *dirname;
     gchar *id;
 
-
     dirname = g_path_get_dirname(path);
     id = g_path_get_basename(dirname);
     g_free(dirname);

@@ -22,5 +22,4 @@
 
 #include <sensors-applet/sensors-applet-plugin.h>
 
-
 #endif /* I2C_SYS_PLUGIN_H*/

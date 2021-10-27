@@ -59,7 +59,6 @@ static const gchar * const stock_icons[NUM_ICONS] = {
 #define UNITS_VOLTAGE  _("V")
 #define UNITS_CURRENT  _("A")
 
-
 /* enumeration used to identify columns in the GtkTreeStore data structure */
 enum {
     PATH_COLUMN = 0,
@@ -82,7 +81,6 @@ enum {
     GRAPH_COLOR_COLUMN,
     N_COLUMNS
 };
-
 
 /* for display mode */
 typedef enum {
@@ -144,7 +142,6 @@ struct _SensorsApplet {
 
     gboolean show_tooltip;
 };
-
 
 /* non-static function prototypes */
 void sensors_applet_init(SensorsApplet *sensors_applet);

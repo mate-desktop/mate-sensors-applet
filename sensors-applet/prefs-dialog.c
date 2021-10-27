@@ -30,7 +30,6 @@
 #define OLD_TEMP_SCALE 0
 #define NEW_TEMP_SCALE 1
 
-
 /* when a user closes the prefs-dialog we assume that applet is now
    setup, so store all values in gsettings */
 void prefs_dialog_close(SensorsApplet *sensors_applet) {
@@ -86,7 +85,6 @@ void prefs_dialog_response(GtkDialog *prefs_dialog,
     }
 }
 
-
 static gboolean prefs_dialog_convert_low_and_high_values(GtkTreeModel *model,
                                                          GtkTreePath *path,
                                                          GtkTreeIter *iter,
@@ -111,7 +109,6 @@ static gboolean prefs_dialog_convert_low_and_high_values(GtkTreeModel *model,
                                                         scales[OLD_TEMP_SCALE],
                                                         scales[NEW_TEMP_SCALE]);
 
-
         gtk_tree_store_set(GTK_TREE_STORE(model),
                            iter,
                            LOW_VALUE_COLUMN, low_value,
@@ -120,7 +117,6 @@ static gboolean prefs_dialog_convert_low_and_high_values(GtkTreeModel *model,
     }
     return FALSE;
 }
-
 
 static void prefs_dialog_timeout_changed(GtkSpinButton *button,
                                          PrefsDialog *prefs_dialog) {
@@ -132,7 +128,6 @@ static void prefs_dialog_timeout_changed(GtkSpinButton *button,
 
 static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_box,
                                               PrefsDialog *prefs_dialog) {
-
 
     int display_mode;
 
@@ -205,7 +200,6 @@ static void prefs_dialog_show_units_toggled (GtkCheckButton *show_units, PrefsDi
     sensors_applet_update_active_sensors (prefs_dialog->sensors_applet);
 }
 
-
 #ifdef HAVE_LIBNOTIFY
 static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_notifications,
                                                        PrefsDialog *prefs_dialog) {
@@ -224,7 +218,6 @@ static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_n
     }
 }
 #endif
-
 
 static void prefs_dialog_graph_size_changed(GtkSpinButton *button,
                                             PrefsDialog *prefs_dialog) {
@@ -426,7 +419,6 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                                   "gtk-close",
                                                                   GTK_RESPONSE_CLOSE,
                                                                   NULL));
-
 
     gtk_window_set_icon_name(GTK_WINDOW(prefs_dialog->dialog), "mate-sensors-applet");
 
@@ -794,7 +786,6 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                                            "visible", VISIBLE_COLUMN,
                                                                            NULL);
 
-
     gtk_tree_view_column_set_min_width(prefs_dialog->enable_column, 90);
 
     prefs_dialog->icon_column = gtk_tree_view_column_new_with_attributes(_("Icon"),
@@ -927,7 +918,6 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     /* pack notebook into prefs_dialog */
     content_area = gtk_dialog_get_content_area (prefs_dialog->dialog);
     gtk_box_pack_start (GTK_BOX(content_area), GTK_WIDGET(prefs_dialog->notebook), TRUE, TRUE, 0);
-
 
     gtk_widget_show_all(GTK_WIDGET(prefs_dialog->dialog));
 }

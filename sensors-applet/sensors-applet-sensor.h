@@ -61,5 +61,4 @@ typedef struct _SensorsAppletSensorInfo {
     gchar *graph_color; /* must be dynamically allocated */
 } SensorsAppletSensorInfo;
 
-
 #endif // SENSORS_APPLET_SENSOR_H

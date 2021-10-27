@@ -53,7 +53,6 @@ static void omnibook_plugin_setup_manually(GList **sensors) {
     }
 }
 
-
 /* to be called to setup for sys sensors */
 static GList *omnibook_plugin_init(void) {
     GList *sensors = NULL;

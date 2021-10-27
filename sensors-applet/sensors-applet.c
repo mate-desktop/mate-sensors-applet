@@ -51,10 +51,8 @@
 #define COLUMN_SPACING 2
 #define ROW_SPACING 1
 
-
 /* builder for sensor sorting verification */
 static GVariantBuilder gvb_sensors_hash_list;
-
 
 /* callbacks for panel menu */
 static void prefs_cb(GtkAction *action, gpointer *data) {
@@ -1258,7 +1256,6 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     /* init gsettings */
     sensors_applet->settings = mate_panel_applet_settings_new (sensors_applet->applet, "org.mate.sensors-applet");
 
-
     /* set up builder for sorting verification */
     g_variant_builder_init (&gvb_sensors_hash_list, G_VARIANT_TYPE ("as"));
 
@@ -1275,7 +1272,6 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 
     /* free hash array */
     g_strfreev (sensors_applet->sensors_hash_array);
-
 
     /* should have created sensors tree above, but if have not was because we couldn't find any sensors */
     if (NULL == sensors_applet->sensors) {
