@@ -38,7 +38,6 @@
 /* gsettings gvariant type string for the array */
 #define GSGVTSA "as"
 
-
 gchar* sensors_applet_settings_get_unique_id (const gchar *interface, const gchar *id, const gchar *path) {
     gchar *unique_id = NULL;
     gchar *unique_id_hash = NULL;
@@ -353,7 +352,6 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
             }
         }
 
-
         /* at this point the interfaces are sorted, the sensors are next */
         /* set a to be the first sensor in the sensors tree, under the first if. iter */
         if (a_is_first) {
@@ -481,7 +479,6 @@ gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
     sensors_applet_settings_print_sensors_tree (sensors_applet);
 #endif
 
-
     for (i = 0; NULL != sensors_list[i]; i++) {
 
         /* first pass */
@@ -574,7 +571,6 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
     for (not_end_of_interfaces = gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_end_of_interfaces;
         not_end_of_interfaces = gtk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
-
 
         for (not_end_of_sensors = gtk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
             not_end_of_sensors;

@@ -211,7 +211,6 @@ static GList *mbmon_plugin_init(void) {
     return sensors;
 }
 
-
 /* returns the value of the sensor_list at the given iter, or if an
    error occurs, instatiates error with an error message */
 static gdouble mbmon_plugin_get_sensor_value(const gchar *path,

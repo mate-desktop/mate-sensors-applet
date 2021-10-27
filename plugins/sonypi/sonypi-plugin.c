@@ -52,7 +52,6 @@ enum {
     SONYPI_DEVICE_FILE_READ_ERROR
 };
 
-
 GList *sonypi_plugin_init(void) {
     int fd;
     GList *sensors = NULL;

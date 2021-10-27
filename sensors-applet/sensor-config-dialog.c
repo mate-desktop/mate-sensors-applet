@@ -69,7 +69,6 @@ typedef struct {
     GtkSizeGroup *size_group;
 } SensorConfigDialog;
 
-
 static void sensor_config_dialog_response(GtkDialog *dialog,
                                           gint response,
                                           gpointer data) {
@@ -386,7 +385,6 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                        -1);
     header_text = g_strdup_printf("%s - %s", _("Sensor Properties"), sensor_label);
 
-
     config_dialog->dialog = GTK_DIALOG(gtk_dialog_new_with_buttons(header_text,
                                                         GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
                                                         GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -395,7 +393,6 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                                         "gtk-close",
                                                         GTK_RESPONSE_CLOSE,
                                                         NULL));
-
 
     gtk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog), "sensors-applet");
 

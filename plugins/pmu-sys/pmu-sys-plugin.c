@@ -42,7 +42,6 @@ const gchar *plugin_name = "pmu-sys";
 #define TEMPERATURE "_temperature"
 #define FAN_SPEED "_fan_speed"
 
-
 enum {
     PMU_SYS_DEVICE_FILE_OPEN_ERROR,
     PMU_SYS_DEVICE_FILE_READ_ERROR
@@ -117,7 +116,6 @@ static void pmu_sys_plugin_test_sensor(GList **sensors, const gchar *path) {
 
     g_free(filename);
 }
-
 
 /* to be called to setup for sys sensors */
 GList *pmu_sys_plugin_init(void) {

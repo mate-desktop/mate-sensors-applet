@@ -135,7 +135,6 @@ if ((g_str_has_suffix(filename, "_input") &&
     g_free(filename);
 }
 
-
 /* to be called to setup for sys sensors */
 static GList *i2c_sys_plugin_init(void) {
     GList *sensors = NULL;

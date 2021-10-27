@@ -55,7 +55,6 @@ static const gchar * const temp_overlay_icons[] = {
     PIXMAPS_DIR "very-high-temp-icon.png"
 };
 
-
 static gdouble sensor_value_range_normalised(gdouble value,
                                           gdouble low_value,
                                           gdouble high_value) {

@@ -435,7 +435,6 @@ static gdouble libsensors_plugin_get_sensor_value(const gchar *path,
     return result;
 }
 
-
 static GList *libsensors_plugin_init(void) {
     GError *err = NULL;
 
