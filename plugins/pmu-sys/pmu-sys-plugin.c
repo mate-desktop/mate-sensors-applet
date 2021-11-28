@@ -95,9 +95,7 @@ static void pmu_sys_plugin_add_sensor(GList **sensors, const gchar *path) {
     }
 
     g_free(filename);
-    if (label != NULL) {
-        g_free(label);
-    }
+    g_free(label);
 }
 
 static void pmu_sys_plugin_test_sensor(GList **sensors, const gchar *path) {
