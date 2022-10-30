@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2021\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
@@ -20,10 +20,10 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"\"Joe Hansen, 2012, 2013, 2014, 2015, 2016, 2017, 2018.\\n\"\n"
-"\"\\n\"\n"
-"\"Dansk-gruppen <dansk@dansk-gruppen.dk>\\n\"\n"
-"\"Mere info: http://www.dansk-gruppen.dk\""
+"Joe Hansen 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:30
@@ -206,11 +206,11 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
-"Linuxkernens <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink>-modul (for IBM Laptops)."
+"Linuxkernens <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink>-modul (for IBM Laptops)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:207
@@ -305,8 +305,8 @@ msgid ""
 msgstr ""
 "De fleste brugere vil ønske at tilpasse visningen til deres ønske, hvilket "
 "kan gøres via menuelementet <menuchoice> "
-"<guimenuitem>Præferencer</guimenuitem> </menuchoice> (se <xref linkend"
-"=\"sensors-applet-preferences\"/>)."
+"<guimenuitem>Præferencer</guimenuitem> </menuchoice> (se <xref "
+"linkend=\"sensors-applet-preferences\"/>)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
@@ -804,7 +804,7 @@ msgstr ""
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
 "Flere kommandoer kan afvikles efter hinanden ved at bruge "
 "»&amp;&amp;«-konstruktionen som adskillelse. For at afspille lyd og en pop "

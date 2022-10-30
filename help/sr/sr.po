@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2021\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
@@ -201,8 +201,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
 "Модул <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http\">ibm-"
 "acpi</ulink> Линукс језгра (за преносне рачунаре IBM)."
@@ -298,8 +298,8 @@ msgid ""
 msgstr ""
 "Већина корисника ће тада желети да прилагоде приказ према својој жељи, што "
 "може бити урађено путем ставке изборника „<menuchoice> "
-"<guimenuitem>Поставке</guimenuitem> </menuchoice>“ (видите <xref linkend"
-"=\"sensors-applet-preferences\"/>)."
+"<guimenuitem>Поставке</guimenuitem> </menuchoice>“ (видите <xref "
+"linkend=\"sensors-applet-preferences\"/>)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
@@ -802,11 +802,11 @@ msgstr ""
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
-"Више наредби се може извршити једна за другом коришћењем „&amp;&amp;“ за "
-"њихово раздвајање. За пуштање звука и приказивање прозорчета путем Зенитија "
-"следећа наредба се може користити: <_:screen-1/>"
+"Неколико наредби се може извршити једна за другом коришћењем „&amp;&amp;“ "
+"конструкције за њихово раздвајање. Да пустите звук и да избаците прозорче "
+"путем Зенитија следећу наредбу можете користити: <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:597
@@ -872,9 +872,9 @@ msgid ""
 "desktop/mate-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
 "Да пријавите грешку или дате предлог у вези Мејтовог програмчета сензора или"
-" у вези овог упутства, пратите упутства на <ulink url=\"https://github.com"
-"/mate-desktop/mate-sensors-applet/\" type=\"http\">матичној страници "
-"пројекта</ulink>."
+" у вези овог упутства, пратите упутства на <ulink "
+"url=\"https://github.com/mate-desktop/mate-sensors-applet/\" "
+"type=\"http\">матичној страници пројекта</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:668

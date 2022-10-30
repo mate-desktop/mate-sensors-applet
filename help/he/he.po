@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
 "Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
 "Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
@@ -174,8 +174,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -667,7 +667,7 @@ msgstr ""
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term

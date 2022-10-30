@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2021\n"
 "Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
@@ -200,11 +200,11 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
-"Modul <ulink url=\"http://people.debian.org/~dz/i8k/00-README\" type=\"http"
-"\">ibm-acpi</ulink> kernel Linux (untuk Komputer Riba IBM)."
+"Modul <ulink url=\"http://people.debian.org/~dz/i8k/00-README\" "
+"type=\"http\">ibm-acpi</ulink> kernel Linux (untuk Komputer Riba IBM)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:207
@@ -299,8 +299,8 @@ msgid ""
 msgstr ""
 "Kebanyakan pengguna selalunya mahu menyuaikan paparan mengikut citarasa "
 "masing-masing, ia boleh dilakukan melalui item menu <menuchoice> "
-"<guimenuitem>Keutamaan</guimenuitem> </menuchoice> (sila rujuk<xref linkend"
-"=\"sensors-applet-preferences\"/>)."
+"<guimenuitem>Keutamaan</guimenuitem> </menuchoice> (sila rujuk<xref "
+"linkend=\"sensors-applet-preferences\"/>)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
@@ -802,11 +802,8 @@ msgstr ""
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
-"Perintah berbilang boleh dilakukan secara berturutan menggunakan  "
-"\"&amp;&amp;\" dimasukkan untuk asingkannya. Untuk memainkan bunyi dan "
-"timbulkan dialog melalui Zenity ikuti perintah berikut: <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:597
@@ -871,9 +868,9 @@ msgid ""
 "desktop/mate-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
 "Untuk melaporkan pepijat atau membuat saranan berkenaan Aplet Penderia MATE "
-"atau panduan ini, ikuti arahan di dalam <ulink url=\"https://github.com"
-"/mate-desktop/mate-sensors-applet/\" type=\"http\">Laman sesawang "
-"projek</ulink>."
+"atau panduan ini, ikuti arahan di dalam <ulink "
+"url=\"https://github.com/mate-desktop/mate-sensors-applet/\" "
+"type=\"http\">Laman sesawang projek</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:668

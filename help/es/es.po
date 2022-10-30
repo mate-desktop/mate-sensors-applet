@@ -1,6 +1,6 @@
 # 
 # Translators:
-# Adolfo Jayme Barrientos, 2018
+# Adolfo Jayme-Barrientos, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Andres Sanchez <blackatze93@gmail.com>, 2018
 # elio <micta2003@hotmail.com>, 2018
@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -183,8 +183,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -676,7 +676,7 @@ msgstr ""
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -787,9 +787,9 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"Muchos de los nombres utilizados por las empresas para distinguir sus "
-"productos y servicios se consideran marcas comerciales. Cuando esos nombres "
-"aparecen en cualquier documentación de MATE y los miembros del proyecto de "
+"Muchos de los nombres usados por las empresas para distinguir sus productos "
+"y servicios se consideran marcas comerciales. Cuando esos nombres aparecen "
+"en cualquier documentación de MATE y los miembros del proyecto de "
 "documentación de MATE son conscientes de que se trata de marcas registradas,"
 " dichos nombres se escriben en letras mayúsculas o con inical mayúscula."
 

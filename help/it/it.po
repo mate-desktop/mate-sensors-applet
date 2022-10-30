@@ -4,25 +4,25 @@
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Marco Z. <minaz666@gmail.com>, 2018
 # Giuseppe Pignataro <rogepix@gmail.com>, 2019
-# Alessandro Volturno <alelvb@inwind.it>, 2021
+# Alessandro Volturno <alelvb@inwind.it>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 15:11+0100\n"
+"POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
+"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Alessandro Volturno, 2020 "
+msgstr "Alessandro Volturno, 2020, 2022"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:30
@@ -46,7 +46,7 @@ msgid ""
 "sensors within the panel."
 msgstr ""
 "MATE Sensors Applet mostra la lettura dei sensori di temperatura, voltaggio "
-"e ventole all'interno del pannello."
+"e i dati sulle ventole all'interno del pannello."
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:63
@@ -150,7 +150,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:166
 msgid "ACPI thermal zones, via the Linux kernel ACPI modules"
-msgstr "ACPI thermal zones, mediante i moduli ACPI del kernel Linux "
+msgstr "ACPI thermal zones, mediante i moduli ACPI del kernel Linux"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:170
@@ -205,8 +205,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
 "Modulo del kernel linux <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
 "type=\"http\">ibm-acpi</ulink> (per i laptop IBM)"
@@ -260,7 +260,7 @@ msgid ""
 "A number of sensor interfaces are supported, which should be configured "
 "before adding MATE Sensors Applet to the panel: <_:itemizedlist-1/>"
 msgstr ""
-"Sono supportate dierse interfacce per i sensori, che dovrebbero essere "
+"Sono supportate diverse interfacce per i sensori, che dovrebbero essere "
 "configurate prima di aggiungere MATE Sensors Applet al "
 "pannello:<_:itemizedlist-1/>"
 
@@ -280,7 +280,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: C/index.docbook:247
 msgid "Usage"
-msgstr "Uso"
+msgstr "Utilizzo"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:248
@@ -304,9 +304,9 @@ msgid ""
 "preferences\"/>)."
 msgstr ""
 "Molti utenti potranno personalizzare la visualizzazione a loro piacimento, "
-"cosa che può essere fatta mediante il menu <menuchoice> "
-"<guimenuitem>Preferenze</guimenuitem> </menuchoice> (vedi <xref linkend"
-"=\"sensors-applet-preferences\"/>)."
+"cosa che può essere fatta mediante il menù <menuchoice> "
+"<guimenuitem>Preferenze</guimenuitem> </menuchoice> (vedi <xref "
+"linkend=\"sensors-applet-preferences\"/>)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
@@ -383,7 +383,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:311
 msgid "Default: beside labels / icons."
-msgstr "Predefinito: a fianco etichette / icone."
+msgstr "Predefinito: a fianco di etichette / icone."
 
 #. (itstool) path: note/para
 #: C/index.docbook:314
@@ -399,7 +399,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:321
 msgid "<guilabel>Graph size (pixels)</guilabel>"
-msgstr "Dimensioni grafico (pixel)"
+msgstr "Dimensioni del grafico (pixel)"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:325
@@ -456,7 +456,7 @@ msgstr "Predefinito: 2 secondi."
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:353
 msgid "<guilabel>Display notifications</guilabel>"
-msgstr "<guilabel>Mostra notifiche</guilabel>"
+msgstr "<guilabel>Mostra le notifiche</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:357
@@ -523,7 +523,7 @@ msgstr ""
 "configurare ogni singolo sensore. Ciascun sensore è elencato nella sua "
 "specifica interfaccia, assieme al <_:itemizedlist-1/> pulsante "
 "<guibutton>Proprietà</guibutton> consente ad un sensore specifico di essere "
-"configurato più in finemente, mediante una finestra autonoma. (Vedi <xref "
+"configurato più finemente, mediante una finestra autonoma. (Vedi <xref "
 "linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 
 #. (itstool) path: sect2/title
@@ -543,10 +543,10 @@ msgid ""
 msgstr ""
 "Ciascun sensore può essere configurato con diverse opzioni, inclusa la "
 "possibilità di scalare il valore del sensore, o di eseguire un allarme se "
-"viene raggiunto un certo valore alto o basso che sia. Se fosse necessario si"
-" può inoltre selezionare l'icona del sensore. I valori di alto e basso sono "
-"impiegati per scalare il grafico, oltre che per impostare il colore del "
-"termometro mostrato tra le icone dei sensori di temperatura."
+"viene raggiunto un certo valore alto o basso che sia. Se fosse necessario, "
+"si può inoltre selezionare l'icona del sensore. I valori di alto e basso "
+"sono impiegati per scalare il grafico, oltre che per impostare il colore del"
+" termometro mostrato tra le icone dei sensori di temperatura."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:414
@@ -790,7 +790,7 @@ msgid ""
 msgstr ""
 "Il programma <command>Zenity</command> può essere impiegato per creare "
 "finestre di dialogo sul display dell'utente corrente, e che può quindi "
-"essere utilizzato per creare messaggi di notifica acomparsa quando si "
+"essere utilizzato per creare messaggi di notifica a comparsa quando si "
 "verifica una condizione di allarme. <_:screen-1/> Per maggiori informazioni "
 "su Zenity consultare la <ulink type=\"help\" "
 "url=\"help:zenity\">documentazione di Zenity</ulink>."
@@ -819,12 +819,12 @@ msgstr ""
 msgid ""
 "Multiple commands can be executed one after the other using the "
 "\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"dialog via Zenity the following command can be used: <_:screen-1/>"
 msgstr ""
-"È possibile eseguire più comandi uno dopo l'altro utilizzando il costrutto "
-"\"&amp;&amp;\" per separarli. Per riprodurre un suono e visualizzare un "
-"messaggio a comparsa può essere utilizzata la seguente istruzione: "
-"<_:screen-1/>"
+"Comandi multipli possono essere eseguiti uno dopo l'altro utilizzando il "
+"costrutto \"&amp;&amp;\" per separarli. Per riprodurre un suono e far "
+"apparire una finestra di dialogo con Zenity può essere utilizzato il "
+"seguente comando: <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:597
@@ -848,7 +848,7 @@ msgstr "<guilabel>Colore del grafico</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:610
 msgid "The color to use to display the graph for the sensor."
-msgstr "Il colore da usare per mostrare il grafico del sensore."
+msgstr "Il colore da utilizzare per mostrare il grafico del sensore."
 
 #. (itstool) path: note/para
 #: C/index.docbook:613
@@ -876,10 +876,11 @@ msgid ""
 msgstr ""
 "L'applet sensors originale è stata scritta da Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>MATE Sensor "
-"Applet</application> è lo sviluppo ulteriore del team sviluppatori MATE. Per"
-" trovare più informazioni su <application>MATE Sensors Applet</application> "
-", visitate la pagina del <ulink url=\"https://github.com/mate-desktop/mate-"
-"sensors-applet/\" type=\"http\">Progetto MATE Sensors Applet</ulink>."
+"Applet</application> è lo sviluppo ulteriore del team sviluppatori di MATE. "
+"Per trovare più informazioni su <application>MATE Sensors "
+"Applet</application> , visitate la pagina del <ulink "
+"url=\"https://github.com/mate-desktop/mate-sensors-applet/\" "
+"type=\"http\">Progetto MATE Sensors Applet</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
@@ -928,10 +929,10 @@ msgid ""
 msgstr ""
 "È concesso il permesso di copiare, distribuire e/o modificare questo "
 "documento in base ai termini della GNU Free Documentation License (GFDL), "
-"Versione 1.1 o qualsiasi versione successiva pubblicata dalla Free Software "
-"Foundation senza sezioni invarianti, senza testi di copertina e nessun testo"
-" di retro copertina. Puoi trovare una copia del GFDL qui <_:ulink-1/> o nel "
-"file COPYING-DOCS distribuito con questo manuale."
+"Versione 1.1 o una qualsiasi versione successiva pubblicata dalla Free "
+"Software Foundation senza sezioni invarianti, senza testi di copertina e "
+"nessun testo di retro copertina. Puoi trovare una copia del GFDL qui "
+"<_:ulink-1/> o nel file COPYING-DOCS distribuito con questo manuale."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
@@ -988,7 +989,7 @@ msgstr ""
 "REDATTORE INIZIALE, DELL'AUTORE O DI ALTRI COLLABORATORI). QUESTA "
 "LIMITAZIONE DELLA GARANZIA COSTITUISCE PARTE ESSENZIALE DELLA LICENZA. L'USO"
 " DEL DOCUMENTO O DELLE SUE VERSIONI MODIFICATE È CONSENTITO SOLO ENTRO I "
-"TERMINI DI QUESTA LIMITAZIONE DELLA GARANZIA;"
+"TERMINI DI QUESTA LIMITAZIONE DELLA GARANZIA; E "
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
