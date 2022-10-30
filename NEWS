@@ -1,3 +1,13 @@
+### mate-sensors-applet 1.27.0
+
+  * tx: sync with transifex
+  * tx: update resource
+  * tx: migrate config file
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * Use a blank line at most
+  * tx: update resource
+  * user-guide: fix typo reported by translators
+
 ### mate-sensors-applet 1.26.0
 
   * Translations update
