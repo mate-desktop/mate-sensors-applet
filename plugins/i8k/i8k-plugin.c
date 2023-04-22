@@ -81,6 +81,7 @@ static GList *i8k_plugin_init(void) {
     return sensors;
 }
 
+static
 gdouble i8k_plugin_get_sensor_value(const gchar *path,
                                     const gchar *id,
                                     SensorType type,

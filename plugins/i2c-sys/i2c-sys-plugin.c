@@ -92,8 +92,6 @@ static void i2c_sys_plugin_add_sensor(GList **sensors, const gchar *path) {
                 /* SHOULDN'T BE ABLE * TO GET HERE!! */
                 g_warning("filename:\"%s\" begins with a charater that is not covered by this switch statement... not adding sensor", filename);
                 g_free(filename);
-                g_free(id);
-                g_free(label);
 
                 return;
         }

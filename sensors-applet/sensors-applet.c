@@ -450,7 +450,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     /* note the if () around each widget is to ensure we only
      * operate on those that actually exist */
     GtkLabel *no_sensors_enabled_label = NULL;
-    gint num_active_sensors = 0, num_sensors_per_group, rows, cols, i, j;
+    gint num_active_sensors = 0, num_sensors_per_group = 0, rows, cols, i, j;
     GList *old_grid_children = NULL;
 
     GList *current_sensor;

@@ -230,11 +230,11 @@ static void check_sensor_with_data(GList **sensors,
 
 static GList *libsensors_plugin_get_sensors(void) {
     const sensors_chip_name *chip_name;
-    int i;
     GList *sensors = NULL;
 
 #if SENSORS_API_VERSION < 0x400
     FILE *file;
+    int i;
     g_debug("%s: using libsensors version < 4", __FUNCTION__);
 
     /* try to open config file, otherwise try alternate config
@@ -281,7 +281,6 @@ static GList *libsensors_plugin_get_sensors(void) {
         return sensors;
     }
 
-    i = 0;
     while ((chip_name = sensors_get_detected_chips(NULL, &nr))) {
 
         char *chip_name_string, *label;
