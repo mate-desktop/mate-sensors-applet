@@ -116,6 +116,7 @@ static void pmu_sys_plugin_test_sensor(GList **sensors, const gchar *path) {
 }
 
 /* to be called to setup for sys sensors */
+static
 GList *pmu_sys_plugin_init(void) {
     GList *sensors = NULL;
     /* call function to recursively look for sensors
@@ -127,6 +128,7 @@ GList *pmu_sys_plugin_init(void) {
 
 /* returns the value of the sensor_list at the given iter, or if an
    error occurs, instatiates error with an error message */
+static
 gdouble pmu_sys_plugin_get_sensor_value(const gchar *path,
                                         const gchar *id,
                                         SensorType type,

@@ -129,6 +129,7 @@ static void ibm_acpi_plugin_setup_manually(GList **sensors) {
 }
 
 /* to be called externally to setup for ibm_acpi sensors */
+static
 GList *ibm_acpi_plugin_init(void) {
     GList *sensors = NULL;
 
@@ -137,6 +138,7 @@ GList *ibm_acpi_plugin_init(void) {
     return sensors;
 }
 
+static
 gdouble ibm_acpi_plugin_get_sensor_value(const gchar *path,
                                          const gchar *id,
                                          SensorType type,
@@ -144,7 +146,7 @@ gdouble ibm_acpi_plugin_get_sensor_value(const gchar *path,
 
     /* to open and access the value of each sensor */
     FILE *fp;
-    gint sensor_value;
+    gint sensor_value = 0;
     gint cpu_temp, minipci_temp, hdd_temp, gpu_temp, bat0_temp, bat1_temp, unknown0, unknown1;
     gint fan_speed;
 

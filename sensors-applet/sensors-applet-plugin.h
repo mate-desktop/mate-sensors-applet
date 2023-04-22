@@ -37,6 +37,8 @@ gdouble sensors_applet_plugin_get_sensor_value(const gchar *path,
                                                SensorType type,
                                                GError **error);
 
+const gchar *sensors_applet_plugin_name(void);
+
 typedef void SensorsAppletPluginTestSensorFunc(GList **sensors,
                                                const gchar *path);
 void sensors_applet_plugin_find_sensors(GList **sensors,

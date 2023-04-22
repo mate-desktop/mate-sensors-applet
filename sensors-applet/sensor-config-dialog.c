@@ -73,10 +73,7 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
                                           gint response,
                                           gpointer data) {
 
-    SensorConfigDialog *config_dialog;
     GError *error = NULL;
-
-    config_dialog = (SensorConfigDialog *)data;
 
     switch (response) {
         case GTK_RESPONSE_HELP:

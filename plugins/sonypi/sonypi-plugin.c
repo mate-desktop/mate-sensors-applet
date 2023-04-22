@@ -52,6 +52,7 @@ enum {
     SONYPI_DEVICE_FILE_READ_ERROR
 };
 
+static
 GList *sonypi_plugin_init(void) {
     int fd;
     GList *sensors = NULL;
@@ -71,6 +72,7 @@ GList *sonypi_plugin_init(void) {
     return sensors;
 }
 
+static
 gdouble sonypi_plugin_get_sensor_value(const gchar *path,
                                        const gchar *id,
                                        SensorType type,

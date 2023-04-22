@@ -50,6 +50,7 @@ void prefs_dialog_close(SensorsApplet *sensors_applet) {
 
 }
 
+static
 void prefs_dialog_response(GtkDialog *prefs_dialog,
                            gint response,
                            gpointer data) {

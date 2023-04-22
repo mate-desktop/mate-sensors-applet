@@ -261,7 +261,7 @@ static void active_sensor_update_graph(ActiveSensor *as, cairo_t *cr) {
     GtkAllocation allocation;
     gdouble line_height;
     gdouble width, height;
-    gdouble x, y;
+    gdouble x = 0.0, y = 0.0;
     cairo_pattern_t *pattern;
     gint i;
 
@@ -344,6 +344,7 @@ void active_sensor_destroy(ActiveSensor *active_sensor) {
     g_free(active_sensor);
 }
 
+static
 gboolean graph_draw_cb(GtkWidget *graph,
                        cairo_t *cr,
                        gpointer data) {
@@ -502,7 +503,6 @@ void active_sensor_update(ActiveSensor *active_sensor,
     GdkPixbuf *icon_pixbuf;
     gchar *graph_color;
     gint label_min_width;
-    gint label_width;
     GtkRequisition  req;
 
     /* to build the list of labels as we go */
@@ -727,7 +727,6 @@ void active_sensor_update(ActiveSensor *active_sensor,
                 gtk_label_set_markup(GTK_LABEL(active_sensor->value), value_text);
 
                 gtk_widget_get_preferred_size (GTK_WIDGET (active_sensor->value), &req, NULL);
-                label_width = MAX(req.width, label_min_width);
                 gtk_widget_set_size_request (GTK_WIDGET (active_sensor->value), label_min_width, req.height);
 
                 if (tooltip) {
