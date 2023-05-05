@@ -38,7 +38,6 @@ AC_SUBST(LIBS)
 AC_CHECK_HEADERS(
 	stdlib.h \
 	string.h \
-	stdio.h \
 	sys/types.h \
 	sys/socket.h \
 	netinet/in.h \
