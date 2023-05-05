@@ -21,14 +21,8 @@
 #include <config.h>
 #endif /* HAVE_CONFIG_H */
 
-#ifdef HAVE_STDIO_H
 #include <stdio.h>
-#endif /* HAVE_STDIO_H */
-
-#ifdef HAVE_LOCALE_H
 #include <locale.h>
-#endif
-
 #include <glib.h>
 #include <glib/gi18n.h>
 #include "i2c-proc-plugin.h"
