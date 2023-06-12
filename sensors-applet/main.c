@@ -42,7 +42,7 @@ static gboolean sensors_applet_fill(MatePanelApplet *applet,
     return retval;
 }
 
-MATE_PANEL_APPLET_OUT_PROCESS_FACTORY ("SensorsAppletFactory",
+MATE_PANEL_APPLET_IN_PROCESS_FACTORY ("SensorsAppletFactory",
                                        PANEL_TYPE_APPLET,
                                        "SensorsApplet",
                                        sensors_applet_fill,
