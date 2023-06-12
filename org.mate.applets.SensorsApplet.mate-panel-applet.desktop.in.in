@@ -1,6 +1,7 @@
 [Applet Factory]
 Id=SensorsAppletFactory
-Location=@LIBEXECDIR@/mate-sensors-applet
+InProcess=true
+Location=@APPLET_LOCATION@
 Name=Sensors Applet Factory
 Description=Sensors Applet Factory
 
