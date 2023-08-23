@@ -20,8 +20,6 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	$(WARN_CFLAGS)
 
 mate_sensors_applet_libdir= $(pkglibdir)
-mate_sensors_applet_lib_LTLIBRARIES=libmate_sensors_applet.la
-
 
 LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
 
@@ -32,6 +30,8 @@ else
 libnotify_SRC =
 endif
 
+if ENABLE_IN_PROCESS
+mate_sensors_applet_lib_LTLIBRARIES=libmate-sensors-applet.la
 libmate_sensors_applet_la_CFLAGS = \
 	$(MATE_APPLETS4_CFLAGS)		\
 	$(WARN_CFLAGS) \
@@ -65,6 +65,26 @@ libmate_sensors_applet_la_SOURCES = main.c \
 		sensors-applet-settings.c \
 		sensors-applet-settings.h \
 		$(libnotify_SRC)
+else
+libexec_PROGRAMS = mate-sensors-applet
+mate_sensors_applet_SOURCES = main.c \
+		about-dialog.c \
+		about-dialog.h \
+		active-sensor.c \
+		active-sensor.h \
+		prefs-dialog.c \
+		prefs-dialog.h \
+		sensor-config-dialog.c \
+		sensor-config-dialog.h \
+		sensors-applet.c \
+		sensors-applet.h \
+		sensors-applet-sensor.h \
+		sensors-applet-plugins.c \
+		sensors-applet-plugins.h \
+		sensors-applet-settings.c \
+		sensors-applet-settings.h \
+		$(libnotify_SRC)
+endif
 
 # install headers for plugins to use
 INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h

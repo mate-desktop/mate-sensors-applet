@@ -244,6 +244,28 @@ GLIB_GSETTINGS
 PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
 AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 
+# ==========Whether to build in-process or out ========= #
+AC_ARG_ENABLE([in-process],
+              [AS_HELP_STRING([--enable-in-process],
+                              [Build all applet in-process])],
+              [enable_in_process=$enableval],
+              [enable_in_process=no])
+
+# Automake conditional on whether to build in-process
+AM_CONDITIONAL([ENABLE_IN_PROCESS], [test "x$enable_in_process" = "xyes"])
+# Automake value expected to be substitued in .mate-panel-apple.* for the value of "InProcess"
+AS_IF([test "x$enable_in_process" = "xyes"],
+      [AC_SUBST([APPLET_IN_PROCESS], [true])],
+      [AC_SUBST([APPLET_IN_PROCESS], [false])])
+# C conditional on whether to build in-process
+AS_IF([test "x$enable_in_process" = "xyes"],
+      [AC_DEFINE([ENABLE_IN_PROCESS], [1], [building in-process])])
+# Convenience C define selecting the right applet factory
+AS_IF([test "x$enable_in_process" = "xyes"],
+      [factory=MATE_PANEL_APPLET_IN_PROCESS_FACTORY],
+      [factory=MATE_PANEL_APPLET_OUT_PROCESS_FACTORY])
+AC_DEFINE_UNQUOTED([PANEL_APPLET_FACTORY], [$factory], [Panel applet factory])
+
 # ================= generate files =================== #
 AC_CONFIG_FILES([
 	Makefile
@@ -286,4 +308,5 @@ echo "
        compiler:             ${CC}
        cflags:               ${CFLAGS}
        warning flags:        ${WARN_CFLAGS}
+       Build in-process:     $enable_in_process
 "
