@@ -33,7 +33,7 @@ requires:
     - libgtk-3-dev
     - libmate-panel-applet-dev
     - libnotify-dev
-    - libsensors4-dev
+    - libsensors-dev
     - libtool
     - libxml-parser-perl
     - libxnvctrl-dev
