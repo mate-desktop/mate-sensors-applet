@@ -9,23 +9,23 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.26.0\n"
+"Project-Id-Version: mate-sensors-applet 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/issues\n"
-"POT-Creation-Date: 2022-10-29 15:34+0200\n"
+"POT-Creation-Date: 2023-09-04 18:15+0200\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
 "Last-Translator: Sadgamaya <g.raghavan.g@gmail.com>, 2021\n"
-"Language-Team: Hindi (https://www.transifex.com/mate/teams/13566/hi/)\n"
+"Language-Team: Hindi (https://app.transifex.com/mate/teams/13566/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:6
 msgid "Sensors Applet Factory"
 msgstr ""
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:10
 msgid "Hardware Sensors Monitor"
 msgstr ""
 
@@ -127,53 +127,53 @@ msgstr "चिह्न प्रकार"
 msgid "Color of the graph for the sensor"
 msgstr "सेंसर के लेखाचित्र का रंग"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:60 plugins/i2c-sys/i2c-sys-plugin.c:54
-#: plugins/i8k/i8k-plugin.c:49 plugins/omnibook/omnibook-plugin.c:48
-#: plugins/i2c-proc/i2c-proc-plugin.c:57 plugins/acpi/acpi-plugin.c:53
-#: plugins/smu-sys/smu-sys-plugin.c:58
+#: plugins/pmu-sys/pmu-sys-plugin.c:57 plugins/i2c-sys/i2c-sys-plugin.c:51
+#: plugins/i8k/i8k-plugin.c:46 plugins/omnibook/omnibook-plugin.c:45
+#: plugins/i2c-proc/i2c-proc-plugin.c:51 plugins/acpi/acpi-plugin.c:50
+#: plugins/smu-sys/smu-sys-plugin.c:55
 msgid "CPU"
 msgstr "सीपीयू"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:129
+#: plugins/pmu-sys/pmu-sys-plugin.c:62 plugins/nvidia/nvidia-plugin.c:129
 #: plugins/nvidia/nvidia-plugin.c:149 plugins/nvidia/nvidia-plugin.c:174
-#: plugins/smu-sys/smu-sys-plugin.c:63
+#: plugins/smu-sys/smu-sys-plugin.c:60
 msgid "GPU"
 msgstr "जीपीयू"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:70
+#: plugins/pmu-sys/pmu-sys-plugin.c:67
 msgid "CASE"
 msgstr "पेटी"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:75 plugins/smu-sys/smu-sys-plugin.c:68
+#: plugins/pmu-sys/pmu-sys-plugin.c:72 plugins/smu-sys/smu-sys-plugin.c:65
 msgid "FAN"
 msgstr "फेन"
 
-#: plugins/i8k/i8k-plugin.c:58
+#: plugins/i8k/i8k-plugin.c:55
 msgid "FAN1"
 msgstr "फेन1"
 
-#: plugins/i8k/i8k-plugin.c:67
+#: plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
 msgstr "फेन2"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:69
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:66
 msgid "MiniPCI"
 msgstr "लघु पीसीआई"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:93
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:105
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:90
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:102
 msgid "Battery"
 msgstr "बैटरी"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:122
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:119
 msgid "Fan"
 msgstr "फेन"
 
-#: plugins/sonypi/sonypi-plugin.c:64
+#: plugins/sonypi/sonypi-plugin.c:65
 msgid "CPU TEMP"
 msgstr "सीपीयू ताप"
 
-#: plugins/omnibook/omnibook-plugin.c:47 sensors-applet/sensors-applet.c:319
+#: plugins/omnibook/omnibook-plugin.c:44 sensors-applet/sensors-applet.c:319
 msgid "temperature"
 msgstr "तापमान"
 
@@ -181,131 +181,131 @@ msgstr "तापमान"
 msgid "Ambient"
 msgstr "परिवेशिक"
 
-#: sensors-applet/prefs-dialog.c:414
+#: sensors-applet/prefs-dialog.c:415
 msgid "Sensors Applet Preferences"
 msgstr "सेंसर एप्लेट प्राथमिकताएं"
 
-#: sensors-applet/prefs-dialog.c:451 sensors-applet/sensors-applet.c:1279
+#: sensors-applet/prefs-dialog.c:452 sensors-applet/sensors-applet.c:1279
 msgid "No sensors found!"
 msgstr "कोई सेंसर नहीं मिला"
 
-#: sensors-applet/prefs-dialog.c:456
+#: sensors-applet/prefs-dialog.c:457
 msgid "Display"
 msgstr "प्रदर्शक"
 
-#: sensors-applet/prefs-dialog.c:468
+#: sensors-applet/prefs-dialog.c:469
 msgid "label with value"
 msgstr "लेबल के साथ मूल्य"
 
-#: sensors-applet/prefs-dialog.c:469
+#: sensors-applet/prefs-dialog.c:470
 msgid "icon with value"
 msgstr "चिन्ह के साथ मूल्य"
 
-#: sensors-applet/prefs-dialog.c:470
+#: sensors-applet/prefs-dialog.c:471
 msgid "value only"
 msgstr "केवल मूल्य"
 
-#: sensors-applet/prefs-dialog.c:471
+#: sensors-applet/prefs-dialog.c:472
 msgid "icon only"
 msgstr "केवल चिन्ह"
 
-#: sensors-applet/prefs-dialog.c:472
+#: sensors-applet/prefs-dialog.c:473
 msgid "graph only"
 msgstr "सिर्फ लेखाचित्र"
 
-#: sensors-applet/prefs-dialog.c:485
+#: sensors-applet/prefs-dialog.c:486
 msgid "_Display sensors in panel as"
 msgstr "पैनल में सेंसर ऐसे प्रदर्शित करें (_D)"
 
-#: sensors-applet/prefs-dialog.c:497
+#: sensors-applet/prefs-dialog.c:498
 msgid "beside labels / icons"
 msgstr "लेबल / चिन्ह के बाजू"
 
-#: sensors-applet/prefs-dialog.c:498
+#: sensors-applet/prefs-dialog.c:499
 msgid "below labels / icons"
 msgstr "लेबल / चिन्ह के नीचे"
 
-#: sensors-applet/prefs-dialog.c:511
+#: sensors-applet/prefs-dialog.c:512
 msgid "Preferred _position of sensor values"
 msgstr "सेंसर मूल्यों का पसंदीदा स्थान (_P)"
 
-#: sensors-applet/prefs-dialog.c:523
+#: sensors-applet/prefs-dialog.c:524
 msgid "Kelvin"
 msgstr "केल्विन"
 
-#: sensors-applet/prefs-dialog.c:524
+#: sensors-applet/prefs-dialog.c:525
 msgid "Celsius"
 msgstr "सेल्सियस"
 
-#: sensors-applet/prefs-dialog.c:525
+#: sensors-applet/prefs-dialog.c:526
 msgid "Fahrenheit"
 msgstr "फॉरेनहाइट"
 
-#: sensors-applet/prefs-dialog.c:538
+#: sensors-applet/prefs-dialog.c:539
 msgid "_Temperature scale"
 msgstr "तापमान पैमाना  (_T)"
 
-#: sensors-applet/prefs-dialog.c:564
+#: sensors-applet/prefs-dialog.c:565
 msgid "Graph _size (pixels)"
 msgstr "लेखाचित्र आकार (पिक्सेल) (_S)"
 
-#: sensors-applet/prefs-dialog.c:576
+#: sensors-applet/prefs-dialog.c:577
 msgid "Show _units"
 msgstr ""
 
-#: sensors-applet/prefs-dialog.c:584
+#: sensors-applet/prefs-dialog.c:585
 msgid "Update"
 msgstr "अद्यतन"
 
-#: sensors-applet/prefs-dialog.c:611
+#: sensors-applet/prefs-dialog.c:612
 msgid "Update _interval (secs)"
 msgstr "अद्यतन अंतराल (सेकण्ड्स) (_I)"
 
-#: sensors-applet/prefs-dialog.c:621
+#: sensors-applet/prefs-dialog.c:622
 msgid "Notifications"
 msgstr "अधिसूचनाएं"
 
-#: sensors-applet/prefs-dialog.c:631
+#: sensors-applet/prefs-dialog.c:632
 msgid "Display _notifications"
 msgstr "अधिसूचनाएं प्रदर्शित करें (_N)"
 
-#: sensors-applet/prefs-dialog.c:765
+#: sensors-applet/prefs-dialog.c:766
 msgid "Sensor"
 msgstr "सेंसर"
 
-#: sensors-applet/prefs-dialog.c:772
+#: sensors-applet/prefs-dialog.c:773
 msgid "Label"
 msgstr "लेबल"
 
-#: sensors-applet/prefs-dialog.c:782
+#: sensors-applet/prefs-dialog.c:783
 msgid "Labels can be edited directly by clicking on them."
 msgstr "लेबलों का सीधा संपादन उन पे क्लिक कर किया जा सक ता है"
 
-#: sensors-applet/prefs-dialog.c:783
+#: sensors-applet/prefs-dialog.c:784
 msgid "Enabled"
 msgstr "सक्षम"
 
-#: sensors-applet/prefs-dialog.c:791 sensors-applet/sensor-config-dialog.c:439
+#: sensors-applet/prefs-dialog.c:792 sensors-applet/sensor-config-dialog.c:436
 msgid "Icon"
 msgstr "चिह्न"
 
-#: sensors-applet/prefs-dialog.c:823
+#: sensors-applet/prefs-dialog.c:824
 msgid "_Up"
 msgstr "ऊपर (_U)"
 
-#: sensors-applet/prefs-dialog.c:831
+#: sensors-applet/prefs-dialog.c:832
 msgid "_Down"
 msgstr ""
 
-#: sensors-applet/prefs-dialog.c:865
+#: sensors-applet/prefs-dialog.c:866
 msgid "_Properties"
 msgstr "गुण (_P)"
 
-#: sensors-applet/prefs-dialog.c:912
+#: sensors-applet/prefs-dialog.c:913
 msgid "General Options"
 msgstr "सामान्य विकल्प"
 
-#: sensors-applet/prefs-dialog.c:916
+#: sensors-applet/prefs-dialog.c:917
 msgid "Sensors"
 msgstr "सेंसर"
 
@@ -340,68 +340,68 @@ msgstr ""
 "रविशंकर श्रीवास्तव (raviratlami@gmail.com)\n"
 "राघवन गोपालकृष्णन्  (g.raghavan.g@gmail.com)"
 
-#: sensors-applet/sensor-config-dialog.c:386
+#: sensors-applet/sensor-config-dialog.c:383
 msgid "Sensor Properties"
 msgstr "सेंसर गुण"
 
-#: sensors-applet/sensor-config-dialog.c:412
+#: sensors-applet/sensor-config-dialog.c:409
 msgid "Graph"
 msgstr "रेखाचित्र"
 
-#: sensors-applet/sensor-config-dialog.c:425
+#: sensors-applet/sensor-config-dialog.c:422
 msgid "Graph Color"
 msgstr "रेखाचित्र रंग"
 
-#: sensors-applet/sensor-config-dialog.c:428
+#: sensors-applet/sensor-config-dialog.c:425
 msgid "Graph _color"
 msgstr "रेखाचित्र रंग (_C)"
 
-#: sensors-applet/sensor-config-dialog.c:484
+#: sensors-applet/sensor-config-dialog.c:481
 msgid "Sensor _icon"
 msgstr "सेंसर चिह्न (_I)"
 
-#: sensors-applet/sensor-config-dialog.c:490
+#: sensors-applet/sensor-config-dialog.c:487
 msgid "Scaling Parameters"
 msgstr "स्केलिंग पैरामीटर्स"
 
-#: sensors-applet/sensor-config-dialog.c:519
+#: sensors-applet/sensor-config-dialog.c:516
 msgid "Sensor value _multiplier"
 msgstr "सेंसर मूल्य गुणक (_M)"
 
-#: sensors-applet/sensor-config-dialog.c:547
+#: sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _offset"
 msgstr "सेंसर मूल्य ऑफसेट (_O)"
 
-#: sensors-applet/sensor-config-dialog.c:556
+#: sensors-applet/sensor-config-dialog.c:553
 msgid "Sensor Limits"
 msgstr "सेंसर सीमाएं"
 
-#: sensors-applet/sensor-config-dialog.c:584
+#: sensors-applet/sensor-config-dialog.c:581
 msgid "Sensor _low value"
 msgstr "सेंसर निम्न मूल्य (_L)"
 
-#: sensors-applet/sensor-config-dialog.c:612
+#: sensors-applet/sensor-config-dialog.c:609
 msgid "Sensor _high value"
 msgstr "सेंसर ऊपरी मूल्य (_H)"
 
-#: sensors-applet/sensor-config-dialog.c:620
+#: sensors-applet/sensor-config-dialog.c:617
 #: sensors-applet/sensors-applet.c:358
 msgid "Alarm"
 msgstr "अलार्म"
 
-#: sensors-applet/sensor-config-dialog.c:649
+#: sensors-applet/sensor-config-dialog.c:646
 msgid "Alarm _repeat interval (secs)"
 msgstr "अलार्म दोहराने का अंतराल (सेकण्ड्स) (_R)"
 
-#: sensors-applet/sensor-config-dialog.c:668
+#: sensors-applet/sensor-config-dialog.c:665
 msgid "Lo_w alarm command"
 msgstr "निम्न अलार्म आदेश (_W)"
 
-#: sensors-applet/sensor-config-dialog.c:689
+#: sensors-applet/sensor-config-dialog.c:686
 msgid "Hi_gh alarm command"
 msgstr "उच्च अलार्म आदेश (_G)"
 
-#: sensors-applet/sensor-config-dialog.c:702
+#: sensors-applet/sensor-config-dialog.c:699
 msgid "_Enable alarm"
 msgstr "अलार्म सक्षम करें (_E)"
 

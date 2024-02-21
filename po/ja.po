@@ -7,30 +7,29 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # ABE Tsunehiko, 2021
 # fbc955180bc2b956cb4ef52d00eb80a0_91487f8, 2021
-# semicolon <mail@semicln.com>, 2021
-# Green, 2021
+# Green <usergreen@users.osdn.me>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.26.0\n"
+"Project-Id-Version: mate-sensors-applet 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/issues\n"
-"POT-Creation-Date: 2022-10-29 15:34+0200\n"
+"POT-Creation-Date: 2023-09-04 18:15+0200\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Green, 2021\n"
-"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
+"Last-Translator: Green <usergreen@users.osdn.me>, 2024\n"
+"Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:6
 msgid "Sensors Applet Factory"
-msgstr "センサーアプレットのファクトリ"
+msgstr "センサアプレットのファクトリ"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
+#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:10
 msgid "Hardware Sensors Monitor"
-msgstr "機器センサのモニター"
+msgstr "機器センサのモニタ"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -38,7 +37,7 @@ msgstr "フォントサイズ (ポイント)"
 
 #: org.mate.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
-msgstr "センサーの単位を表示するかどうか"
+msgstr "センサの単位を表示するかどうか"
 
 #: org.mate.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
@@ -67,7 +66,7 @@ msgstr "グラフのピクセル数(水平なら幅、垂直なら高さ)"
 
 #: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
-msgstr "センサーの一覧"
+msgstr "センサの一覧"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
@@ -75,19 +74,19 @@ msgstr "ファイル名のパス"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
-msgstr "センサーデバイス ID"
+msgstr "センサデバイス ID"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
-msgstr "センサーデバイスインターフェイス"
+msgstr "センサデバイス・インタフェース"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
-msgstr "ユーザー定義ラベル"
+msgstr "ユーザ定義ラベル"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
-msgstr "センサーが有効かどうか"
+msgstr "センサが有効かどうか"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
@@ -99,7 +98,7 @@ msgstr "高い値"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
-msgstr "センサーがアラームを有効にしているか"
+msgstr "センサがアラームを有効にしているか"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:37
 #: org.mate.sensors-applet.sensor.gschema.xml.in:41
@@ -112,7 +111,7 @@ msgstr "アラームを鳴らす頻度 (秒)"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
-msgstr "リスト内のセンサーの識別に使用"
+msgstr "リスト内のセンサの識別に使用"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
@@ -128,55 +127,55 @@ msgstr "アイコン種別"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
-msgstr "センサーに対するグラフの色"
+msgstr "センサに対するグラフの色"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:60 plugins/i2c-sys/i2c-sys-plugin.c:54
-#: plugins/i8k/i8k-plugin.c:49 plugins/omnibook/omnibook-plugin.c:48
-#: plugins/i2c-proc/i2c-proc-plugin.c:57 plugins/acpi/acpi-plugin.c:53
-#: plugins/smu-sys/smu-sys-plugin.c:58
+#: plugins/pmu-sys/pmu-sys-plugin.c:57 plugins/i2c-sys/i2c-sys-plugin.c:51
+#: plugins/i8k/i8k-plugin.c:46 plugins/omnibook/omnibook-plugin.c:45
+#: plugins/i2c-proc/i2c-proc-plugin.c:51 plugins/acpi/acpi-plugin.c:50
+#: plugins/smu-sys/smu-sys-plugin.c:55
 msgid "CPU"
 msgstr "CPU"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:129
+#: plugins/pmu-sys/pmu-sys-plugin.c:62 plugins/nvidia/nvidia-plugin.c:129
 #: plugins/nvidia/nvidia-plugin.c:149 plugins/nvidia/nvidia-plugin.c:174
-#: plugins/smu-sys/smu-sys-plugin.c:63
+#: plugins/smu-sys/smu-sys-plugin.c:60
 msgid "GPU"
 msgstr "GPU"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:70
+#: plugins/pmu-sys/pmu-sys-plugin.c:67
 msgid "CASE"
 msgstr "ケース"
 
-#: plugins/pmu-sys/pmu-sys-plugin.c:75 plugins/smu-sys/smu-sys-plugin.c:68
+#: plugins/pmu-sys/pmu-sys-plugin.c:72 plugins/smu-sys/smu-sys-plugin.c:65
 msgid "FAN"
 msgstr "ファン"
 
-#: plugins/i8k/i8k-plugin.c:58
+#: plugins/i8k/i8k-plugin.c:55
 msgid "FAN1"
 msgstr "ファン1"
 
-#: plugins/i8k/i8k-plugin.c:67
+#: plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
 msgstr "ファン2"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:69
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:66
 msgid "MiniPCI"
 msgstr "MiniPCI"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:93
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:105
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:90
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:102
 msgid "Battery"
 msgstr "バッテリー"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:122
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:119
 msgid "Fan"
 msgstr "ファン"
 
-#: plugins/sonypi/sonypi-plugin.c:64
+#: plugins/sonypi/sonypi-plugin.c:65
 msgid "CPU TEMP"
 msgstr "CPU温度"
 
-#: plugins/omnibook/omnibook-plugin.c:47 sensors-applet/sensors-applet.c:319
+#: plugins/omnibook/omnibook-plugin.c:44 sensors-applet/sensors-applet.c:319
 msgid "temperature"
 msgstr "温度"
 
@@ -184,133 +183,133 @@ msgstr "温度"
 msgid "Ambient"
 msgstr "室温"
 
-#: sensors-applet/prefs-dialog.c:414
+#: sensors-applet/prefs-dialog.c:415
 msgid "Sensors Applet Preferences"
-msgstr "センサーアプレットの設定"
+msgstr "センサアプレットの設定"
 
-#: sensors-applet/prefs-dialog.c:451 sensors-applet/sensors-applet.c:1279
+#: sensors-applet/prefs-dialog.c:452 sensors-applet/sensors-applet.c:1279
 msgid "No sensors found!"
-msgstr "センサーが見つかりません！"
+msgstr "センサが見つかりません！"
 
-#: sensors-applet/prefs-dialog.c:456
+#: sensors-applet/prefs-dialog.c:457
 msgid "Display"
 msgstr "表示"
 
-#: sensors-applet/prefs-dialog.c:468
+#: sensors-applet/prefs-dialog.c:469
 msgid "label with value"
 msgstr "ラベルと値"
 
-#: sensors-applet/prefs-dialog.c:469
+#: sensors-applet/prefs-dialog.c:470
 msgid "icon with value"
 msgstr "アイコンと値"
 
-#: sensors-applet/prefs-dialog.c:470
+#: sensors-applet/prefs-dialog.c:471
 msgid "value only"
 msgstr "値のみ"
 
-#: sensors-applet/prefs-dialog.c:471
+#: sensors-applet/prefs-dialog.c:472
 msgid "icon only"
 msgstr "アイコンのみ"
 
-#: sensors-applet/prefs-dialog.c:472
+#: sensors-applet/prefs-dialog.c:473
 msgid "graph only"
 msgstr "グラフのみ"
 
-#: sensors-applet/prefs-dialog.c:485
+#: sensors-applet/prefs-dialog.c:486
 msgid "_Display sensors in panel as"
-msgstr "センサーの表示形式(_D)"
+msgstr "センサの表示形式(_D)"
 
-#: sensors-applet/prefs-dialog.c:497
+#: sensors-applet/prefs-dialog.c:498
 msgid "beside labels / icons"
 msgstr "横にラベル/アイコンを表示"
 
-#: sensors-applet/prefs-dialog.c:498
+#: sensors-applet/prefs-dialog.c:499
 msgid "below labels / icons"
 msgstr "下にラベル/アイコンを表示"
 
-#: sensors-applet/prefs-dialog.c:511
+#: sensors-applet/prefs-dialog.c:512
 msgid "Preferred _position of sensor values"
-msgstr "センサー値の表示位置(_P)"
+msgstr "センサ値の表示位置(_P)"
 
-#: sensors-applet/prefs-dialog.c:523
+#: sensors-applet/prefs-dialog.c:524
 msgid "Kelvin"
 msgstr "ケルビン"
 
-#: sensors-applet/prefs-dialog.c:524
+#: sensors-applet/prefs-dialog.c:525
 msgid "Celsius"
 msgstr "摂氏 (°C)"
 
-#: sensors-applet/prefs-dialog.c:525
+#: sensors-applet/prefs-dialog.c:526
 msgid "Fahrenheit"
 msgstr "華氏 (°F)"
 
-#: sensors-applet/prefs-dialog.c:538
+#: sensors-applet/prefs-dialog.c:539
 msgid "_Temperature scale"
 msgstr "温度のスケール(_T)"
 
-#: sensors-applet/prefs-dialog.c:564
+#: sensors-applet/prefs-dialog.c:565
 msgid "Graph _size (pixels)"
 msgstr "グラフのサイズ(ピクセル)(_P)"
 
-#: sensors-applet/prefs-dialog.c:576
+#: sensors-applet/prefs-dialog.c:577
 msgid "Show _units"
 msgstr "ユニットを表示(_U)"
 
-#: sensors-applet/prefs-dialog.c:584
+#: sensors-applet/prefs-dialog.c:585
 msgid "Update"
 msgstr "更新"
 
-#: sensors-applet/prefs-dialog.c:611
+#: sensors-applet/prefs-dialog.c:612
 msgid "Update _interval (secs)"
 msgstr "更新間隔(秒)(_I)"
 
-#: sensors-applet/prefs-dialog.c:621
+#: sensors-applet/prefs-dialog.c:622
 msgid "Notifications"
 msgstr "通知"
 
-#: sensors-applet/prefs-dialog.c:631
+#: sensors-applet/prefs-dialog.c:632
 msgid "Display _notifications"
 msgstr "通知を表示する(_N)"
 
-#: sensors-applet/prefs-dialog.c:765
+#: sensors-applet/prefs-dialog.c:766
 msgid "Sensor"
-msgstr "センサー"
+msgstr "センサ"
 
-#: sensors-applet/prefs-dialog.c:772
+#: sensors-applet/prefs-dialog.c:773
 msgid "Label"
 msgstr "ラベル"
 
-#: sensors-applet/prefs-dialog.c:782
+#: sensors-applet/prefs-dialog.c:783
 msgid "Labels can be edited directly by clicking on them."
 msgstr "ラベルをクリックすると直接編集できます。"
 
-#: sensors-applet/prefs-dialog.c:783
+#: sensors-applet/prefs-dialog.c:784
 msgid "Enabled"
 msgstr "有効"
 
-#: sensors-applet/prefs-dialog.c:791 sensors-applet/sensor-config-dialog.c:439
+#: sensors-applet/prefs-dialog.c:792 sensors-applet/sensor-config-dialog.c:436
 msgid "Icon"
 msgstr "アイコン"
 
-#: sensors-applet/prefs-dialog.c:823
+#: sensors-applet/prefs-dialog.c:824
 msgid "_Up"
 msgstr "上へ(_U)"
 
-#: sensors-applet/prefs-dialog.c:831
+#: sensors-applet/prefs-dialog.c:832
 msgid "_Down"
 msgstr "下へ(_D)"
 
-#: sensors-applet/prefs-dialog.c:865
+#: sensors-applet/prefs-dialog.c:866
 msgid "_Properties"
 msgstr "プロパティ(_P)"
 
-#: sensors-applet/prefs-dialog.c:912
+#: sensors-applet/prefs-dialog.c:913
 msgid "General Options"
 msgstr "全般の設定"
 
-#: sensors-applet/prefs-dialog.c:916
+#: sensors-applet/prefs-dialog.c:917
 msgid "Sensors"
-msgstr "センサー"
+msgstr "センサ"
 
 #: sensors-applet/sensors-applet.h:58
 msgid "RPM"
@@ -355,68 +354,68 @@ msgstr ""
 "日本GNOMEユーザー会 http://www.gnome.gr.jp/\n"
 "MATE文書化チーム https://www.transifex.com/mate/"
 
-#: sensors-applet/sensor-config-dialog.c:386
+#: sensors-applet/sensor-config-dialog.c:383
 msgid "Sensor Properties"
-msgstr "センサーのプロパティ"
+msgstr "センサのプロパティ"
 
-#: sensors-applet/sensor-config-dialog.c:412
+#: sensors-applet/sensor-config-dialog.c:409
 msgid "Graph"
 msgstr "グラフ"
 
-#: sensors-applet/sensor-config-dialog.c:425
+#: sensors-applet/sensor-config-dialog.c:422
 msgid "Graph Color"
 msgstr "グラフの色"
 
-#: sensors-applet/sensor-config-dialog.c:428
+#: sensors-applet/sensor-config-dialog.c:425
 msgid "Graph _color"
 msgstr "グラフの色(_C)"
 
-#: sensors-applet/sensor-config-dialog.c:484
+#: sensors-applet/sensor-config-dialog.c:481
 msgid "Sensor _icon"
-msgstr "センサーアイコン(_I)"
+msgstr "センサアイコン(_I)"
 
-#: sensors-applet/sensor-config-dialog.c:490
+#: sensors-applet/sensor-config-dialog.c:487
 msgid "Scaling Parameters"
 msgstr "スケーリングパラメーター"
 
-#: sensors-applet/sensor-config-dialog.c:519
+#: sensors-applet/sensor-config-dialog.c:516
 msgid "Sensor value _multiplier"
-msgstr "センサー値の倍率(_M)"
+msgstr "センサ値の倍率(_M)"
 
-#: sensors-applet/sensor-config-dialog.c:547
+#: sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _offset"
-msgstr "センサー値のオフセット(_O)"
+msgstr "センサ値のオフセット(_O)"
 
-#: sensors-applet/sensor-config-dialog.c:556
+#: sensors-applet/sensor-config-dialog.c:553
 msgid "Sensor Limits"
-msgstr "センサーの限界値"
+msgstr "センサの限界値"
 
-#: sensors-applet/sensor-config-dialog.c:584
+#: sensors-applet/sensor-config-dialog.c:581
 msgid "Sensor _low value"
-msgstr "センサーの最小値(_L)"
+msgstr "センサの最小値(_L)"
 
-#: sensors-applet/sensor-config-dialog.c:612
+#: sensors-applet/sensor-config-dialog.c:609
 msgid "Sensor _high value"
-msgstr "センサーの最大値(_H)"
+msgstr "センサの最大値(_H)"
 
-#: sensors-applet/sensor-config-dialog.c:620
+#: sensors-applet/sensor-config-dialog.c:617
 #: sensors-applet/sensors-applet.c:358
 msgid "Alarm"
 msgstr "アラーム"
 
-#: sensors-applet/sensor-config-dialog.c:649
+#: sensors-applet/sensor-config-dialog.c:646
 msgid "Alarm _repeat interval (secs)"
 msgstr "アラームの繰り返し間隔(秒)(_R)"
 
-#: sensors-applet/sensor-config-dialog.c:668
+#: sensors-applet/sensor-config-dialog.c:665
 msgid "Lo_w alarm command"
 msgstr "最小値のコマンド(_W)"
 
-#: sensors-applet/sensor-config-dialog.c:689
+#: sensors-applet/sensor-config-dialog.c:686
 msgid "Hi_gh alarm command"
 msgstr "最大値のコマンド(_G)"
 
-#: sensors-applet/sensor-config-dialog.c:702
+#: sensors-applet/sensor-config-dialog.c:699
 msgid "_Enable alarm"
 msgstr "アラームを有効にする(_E)"
 
@@ -474,20 +473,20 @@ msgstr "電流"
 
 #: sensors-applet/sensors-applet.c:351
 msgid "current"
-msgstr "current"
+msgstr "電流"
 
 #: sensors-applet/sensors-applet.c:372
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "%s センサーをアップデート中にエラーが発生しました"
+msgstr "%s センサをアップデート中にエラーが発生しました"
 
 #: sensors-applet/sensors-applet.c:373
 #, c-format
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "%s センサーの値をアップデートする際にエラーが発生しました。場所:%s"
+msgstr "%s センサの値をアップデートする際にエラーが発生しました。場所:%s"
 
 #: sensors-applet/sensors-applet.c:474
 msgid "No sensors enabled!"
-msgstr "有効になっているセンサーがありません。"
+msgstr "センサが有効になっていません！"
