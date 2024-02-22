@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>rootdir - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>rootdir - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>root@2e94aad6133f</td></tr>
+<tr><th>Working Directory:</th><td>/rootdir</td></tr>
+<tr><th>Command Line:</th><td>make -j 2</td></tr>
+<tr><th>Clang Version:</th><td>clang version 16.0.6 (Fedora 16.0.6-2.fc38)
+</td></tr>
+<tr><th>Date:</th><td>Wed Aug 23 22:35:53 2023</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">10</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Cast from non-struct type to struct type</td><td class="Q">7</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_cast_from_non-struct_type_to_struct_type');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Division by zero</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_division_by_zero');" checked/></center></td></tr>
+<tr><th>Unused code</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead assignment</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_dead_assignment');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">315</td><td class="Q">1</td><td><a href="report-1191e2.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1191e2.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">295</td><td class="Q">1</td><td><a href="report-1e32d3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1e32d3.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">prefs_cb</td><td class="Q">61</td><td class="Q">1</td><td><a href="report-407f6f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-407f6f.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">316</td><td class="Q">1</td><td><a href="report-48fbd5.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-48fbd5.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">319</td><td class="Q">1</td><td><a href="report-782a54.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-782a54.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">318</td><td class="Q">1</td><td><a href="report-e082ac.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-e082ac.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>plugins/udisks2/udisks2-plugin.c</td><td class="DESC">udisks2_plugin_get_sensors</td><td class="Q">296</td><td class="Q">1</td><td><a href="report-f7fb7e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f7fb7e.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">sensors_applet_add_sensor</td><td class="Q">860</td><td class="Q">1</td><td><a href="report-5f1566.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-5f1566.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">sensors_applet_add_sensor</td><td class="Q">887</td><td class="Q">1</td><td><a href="report-699f6d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-699f6d.html" -->
+</tr>
+<tr class="bt_logic_error_division_by_zero"><td class="DESC">Logic error</td><td class="DESC">Division by zero</td><td>sensors-applet/sensors-applet.c</td><td class="DESC">sensors_applet_pack_display</td><td class="Q">529</td><td class="Q">13</td><td><a href="report-f0c410.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f0c410.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>
