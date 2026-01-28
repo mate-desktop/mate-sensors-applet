@@ -11,19 +11,24 @@ infoend() {
 # Required packages on Archlinux
 requires=(
 	ccache # Use ccache to speed up build
+	clang  # Build with clang on Archlinux
 )
 
+# https://gitlab.archlinux.org/archlinux/packaging/packages/mate-sensors-applet
 requires+=(
 	autoconf-archive
+	docbook-xsl
 	gcc
+	gettext
 	git
-	gtk3
+	itstool
 	libnotify
 	libxnvctrl
 	lm_sensors
 	make
 	mate-common
 	mate-panel
+	udisks2
 	which
 	yelp-tools
 )
