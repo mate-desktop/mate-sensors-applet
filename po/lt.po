@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Mantas Kriaučiūnas Baltix <mantas@akl.lt>, 2021
-# brennus <jonas.ska@gmail.com>, 2021
+# 6e9a9577074b2341d51f618cde75c068_3d9df7b <40bf3f0bbcec108c555dc79b84e0e20b_1525>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2021
 # 3d02078546e0f637ccb37bfbde85aceb_d44ba10 <876509489831837cd14447e1ec1c7b32_156767>, 2021

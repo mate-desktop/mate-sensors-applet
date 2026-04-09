@@ -1,17 +1,18 @@
-# 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # ToMáš Marný, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
 # LiberteCzech <martin.kriz.czech@gmail.com>, 2018
 # Lukáš Lommer <drom@kdyne.net>, 2021
+# J Nezbeda, 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-29 15:34+0200\n"
 "PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Lukáš Lommer <drom@kdyne.net>, 2021\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Czech (https://app.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +73,7 @@ msgstr ""
 #. (itstool) path: revdescription/para
 #: C/index.docbook:115
 msgid "Alex Murray <email>murray.alex@gmail.com</email>"
-msgstr ""
+msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
@@ -149,7 +150,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:170
 msgid "Linux kernel i2c modules"
-msgstr ""
+msgstr "i2c moduly linuxového jádra"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:173
@@ -292,7 +293,7 @@ msgstr "Obecná nastavení"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:290
 msgid "<guilabel>Display sensors in panel as</guilabel>"
-msgstr ""
+msgstr "<guilabel>Zobrazovací senzory v panelu jako</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:294
@@ -307,7 +308,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:300
 msgid "Default: icon with value."
-msgstr ""
+msgstr "Výchozí: ikona s hodnotou."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:304
@@ -337,7 +338,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:321
 msgid "<guilabel>Graph size (pixels)</guilabel>"
-msgstr ""
+msgstr "<guilabel>Velikost grafu (v pixelech)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:325
@@ -350,7 +351,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:329
 msgid "Default: 42 pixels."
-msgstr ""
+msgstr "Výchozí: 42 pixelů."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:333
@@ -399,7 +400,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:359
 msgid "Default: Enabled."
-msgstr ""
+msgstr "Výchozí: povoleno."
 
 #. (itstool) path: note/para
 #: C/index.docbook:361
@@ -483,7 +484,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:429
 msgid "Default: 1.0"
-msgstr ""
+msgstr "Výchozí: 1.0"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:434
@@ -697,7 +698,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:606
 msgid "<guilabel>Graph color</guilabel>"
-msgstr ""
+msgstr "<guilabel>Barva grafu</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:610
