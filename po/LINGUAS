@@ -1,4 +1,3 @@
-#
 af
 am
 an
@@ -46,6 +45,7 @@ et
 eu
 fa
 fi
+fil
 fr
 fr_CA
 frp
@@ -78,6 +78,7 @@ ks
 ku
 ku_IQ
 ky
+la
 lb
 li
 lt
@@ -90,7 +91,9 @@ ml
 mn
 mr
 ms
+my
 nah
+nan
 nb
 nds
 ne
@@ -102,7 +105,6 @@ oc
 or
 pa
 pl
-# please keep this list sorted alphabetically
 pms
 ps
 pt
@@ -125,6 +127,7 @@ th
 tk
 tr
 tt
+tzm
 ug
 uk
 ur
@@ -135,6 +138,7 @@ wa
 xh
 yi
 yo
+zh-Hans
 zh_CN
 zh_HK
 zh_TW
