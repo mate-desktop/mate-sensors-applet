@@ -7,19 +7,23 @@
 # Alex Puts, 2018
 # Павел Коваленко, 2021
 # Sergej A. <Ser82-png@yandex.ru>, 2022
-# 
+# "Sergey A." <Ser82-png@yandex.ru>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-29 15:34+0200\n"
-"PO-Revision-Date: 2018-10-04 17:41+0000\n"
-"Last-Translator: Sergej A. <Ser82-png@yandex.ru>, 2022\n"
-"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
+"PO-Revision-Date: 2026-06-21 01:11+0000\n"
+"Last-Translator: \"Sergey A.\" <Ser82-png@yandex.ru>\n"
+"Language-Team: Russian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/help-documentation/mate-sensors-applet-help/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -29,7 +33,6 @@ msgstr ""
 "Александр Сигачёв <ajvol2@gmail.com>\n"
 "Александр Соколов\n"
 "Александр Хромин\n"
-"Алексей Кабанов <ak099@mail.ru>, 2018\n"
 "Алексей Рочев <equeim@gmail.com>\n"
 "Алексей Сорокин <sor.alexei@meowr.ru>\n"
 "Андрей Иванков\n"
@@ -43,6 +46,7 @@ msgstr ""
 "Влад Орлов <monsta@inbox.ru>\n"
 "Глеб Мехренин <mehrenin@gmail.com>\n"
 "Денис Арефьев <arefevdns@mail.ru>\n"
+"Дмитрий Астанков <mornie@basealt.ru>\n"
 "Дмитрий Мандрык <dmandryk@gmail.com>\n"
 "Дмитрий Мастрюков <dmitry@taurussoft.org>\n"
 "Дмитрий Михирев <mikhirev@gmail.com>\n"
@@ -147,7 +151,7 @@ msgstr "Введение"
 #. (itstool) path: figure/title
 #: C/index.docbook:144
 msgid "MATE Sensors Applet"
-msgstr "Апплет «Сенсоры» для среды MATE "
+msgstr "Апплет «Сенсоры» для среды MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -393,7 +397,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:300
 msgid "Default: icon with value."
-msgstr "По умолчанию: значок и значение"
+msgstr "По умолчанию: значок и значение."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:304
@@ -444,7 +448,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:329
 msgid "Default: 42 pixels."
-msgstr "По умолчанию:  пиксела."
+msgstr "По умолчанию: 42 пиксела."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:333
@@ -479,7 +483,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:349
 msgid "Default: 2 seconds."
-msgstr "По умолчанию: 2 секунды"
+msgstr "По умолчанию: 2 секунды."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:353
@@ -608,7 +612,7 @@ msgstr "По умолчанию: 1.0"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:434
 msgid "<guilabel>Sensor value offset</guilabel>"
-msgstr "<guilabel>SСмещение</guilabel>"
+msgstr "<guilabel>Смещение значения сенсора</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:438
@@ -1041,6 +1045,5 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПРЕДОСТАВЛЯЮТСЯ ПО "
-"УСЛОВИЯМ ЛИЦЕНЗИИ БЕСПЛАТНОЙ ДОКУМЕНТАЦИИ GNU С ПОНИМАНИЕМ ЧТО: "
-"<_:orderedlist-1/>"
+"ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПО УСЛОВИЯМ ЛИЦЕНЗИИ "
+"БЕСПЛАТНОЙ ДОКУМЕНТАЦИИ GNU С ПОНИМАНИЕМ ЧТО: <_:orderedlist-1/>"

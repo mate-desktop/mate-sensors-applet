@@ -1,27 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-sensors-applet package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2021
 # Junghee Lee <daemul72@gmail.com>, 2021
-# 
+# 김인수 <simmon@nplob.com>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.27.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/"
+"issues\n"
 "POT-Creation-Date: 2023-09-04 18:15+0200\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Junghee Lee <daemul72@gmail.com>, 2021\n"
-"Language-Team: Korean (https://app.transifex.com/mate/teams/13566/ko/)\n"
+"PO-Revision-Date: 2026-06-14 20:10+0000\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
+"Language-Team: Korean <https://translate.fedoraproject.org/projects/mate-"
+"desktop/mate-sensors-applet/ko/>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:6
 msgid "Sensors Applet Factory"
@@ -74,7 +77,7 @@ msgstr "파일 이름 경로"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
-msgstr "센서 장치 ID"
+msgstr "센서 장치 id"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
@@ -339,14 +342,7 @@ msgstr ""
 
 #: sensors-applet/about-dialog.c:47
 msgid "translator-credits"
-msgstr ""
-"Elex https://launchpad.net/~mysticzizone\n"
-"Valmantas Palikša https://launchpad.net/~walmis\n"
-"Yoo Duk Nam https://launchpad.net/~yoo2001818\n"
-"onlyeriko https://launchpad.net/~onlyeriko\n"
-"Seong-ho Cho <darkcircle.0426@gmail.com>\n"
-"JungHee Lee <daemul72@gmail.com>\n"
-"MATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
+msgstr "김인수 <simmon@nplob.com>"
 
 #: sensors-applet/sensor-config-dialog.c:383
 msgid "Sensor Properties"
@@ -479,7 +475,7 @@ msgstr "%s 센서 업데이트중 오류"
 msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
-msgstr "%2$s에 있는 %1$s 센서 값을 업데이트 하려던 중 오류가 발생했습니다."
+msgstr "%s 에 위치한 센서 %s 값을 위해 최신화 시도 중 오류가 발생했습니다."
 
 #: sensors-applet/sensors-applet.c:474
 msgid "No sensors enabled!"
