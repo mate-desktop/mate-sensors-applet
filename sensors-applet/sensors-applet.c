@@ -29,7 +29,7 @@
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <glib/gprintf.h>
 #include <gio/gio.h>
 #include "sensors-applet.h"

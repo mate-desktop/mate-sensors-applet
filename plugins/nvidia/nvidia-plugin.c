@@ -27,7 +27,7 @@
 #include <NVCtrl/NVCtrlLib.h>
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include "nvidia-plugin.h"
 
 const gchar *plugin_name = "nvidia";

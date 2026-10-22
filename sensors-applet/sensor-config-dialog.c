@@ -21,7 +21,7 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include "sensor-config-dialog.h"
 #include "sensors-applet.h"
 

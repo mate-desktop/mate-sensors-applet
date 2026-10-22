@@ -22,7 +22,7 @@
 #endif /* HAVE_CONFIG_H */
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
 #include "about-dialog.h"
 
@@ -34,7 +34,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
     };
 
     /* Construct the about dialog */
-    gtk_show_about_dialog(NULL,
+    GtkWidget *about = g_object_new (GTK_TYPE_ABOUT_DIALOG,
                   "icon-name", "mate-sensors-applet",
                   "program-name", PACKAGE_NAME,
                   "version", PACKAGE_VERSION,
@@ -49,4 +49,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
                   "website", PACKAGE_URL,
                   NULL);
 
+    g_signal_connect_swapped (about, "response",
+                              G_CALLBACK (gtk_widget_destroy), about);
+    gtk_widget_show (about);
 }
