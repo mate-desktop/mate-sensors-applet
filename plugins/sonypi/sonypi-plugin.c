@@ -34,7 +34,7 @@
 #endif /* HAVE_UNISTD_H */
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include "sonypi-plugin.h"
 
 #include <stdint.h>
