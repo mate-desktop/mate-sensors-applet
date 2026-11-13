@@ -1,27 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-sensors-applet package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Rihards Priedītis <rprieditis@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # reki the human <voiceofwise1@gmail.com>, 2021
 # Transifex Bot <>, 2026
-# 
+# Rihards Prieditis <rprieditis@gmail.com>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.27.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/"
+"issues\n"
 "POT-Creation-Date: 2023-09-04 18:15+0200\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Latvian (https://app.transifex.com/mate/teams/13566/lv/)\n"
+"PO-Revision-Date: 2026-11-12 15:18+0000\n"
+"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-sensors-applet/lv/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lv\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:6
 msgid "Sensors Applet Factory"
@@ -193,7 +196,7 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:457
 msgid "Display"
-msgstr "Attēlot"
+msgstr "Displejs"
 
 #: sensors-applet/prefs-dialog.c:469
 msgid "label with value"
@@ -285,7 +288,7 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:784
 msgid "Enabled"
-msgstr "Aktivizēts"
+msgstr "Ieslēgts"
 
 #: sensors-applet/prefs-dialog.c:792 sensors-applet/sensor-config-dialog.c:436
 msgid "Icon"
@@ -301,11 +304,11 @@ msgstr ""
 
 #: sensors-applet/prefs-dialog.c:866
 msgid "_Properties"
-msgstr "_Parametri"
+msgstr "Īpašī_bas"
 
 #: sensors-applet/prefs-dialog.c:913
 msgid "General Options"
-msgstr ""
+msgstr "Vispārīgās opcijas"
 
 #: sensors-applet/prefs-dialog.c:917
 msgid "Sensors"
@@ -337,8 +340,10 @@ msgstr ""
 #: sensors-applet/about-dialog.c:47
 msgid "translator-credits"
 msgstr ""
+"Rihards Priedītis <rprieditis@gmail.com>\n"
+"\n"
 "Launchpad Contributions:\n"
-"  Kristaps https://launchpad.net/~retail"
+" Kristaps https://launchpad.net/~retail"
 
 #: sensors-applet/sensor-config-dialog.c:383
 msgid "Sensor Properties"
@@ -415,7 +420,7 @@ msgstr "_Palīdzība"
 
 #: sensors-applet/sensors-applet.c:245
 msgid "_About"
-msgstr "P_ar"
+msgstr "_Par"
 
 #: sensors-applet/sensors-applet.c:300
 msgid "is very low"
@@ -439,7 +444,7 @@ msgstr "Temperatūra"
 
 #: sensors-applet/sensors-applet.c:338
 msgid "Voltage"
-msgstr "Voltāža"
+msgstr "Spriegums"
 
 #: sensors-applet/sensors-applet.c:339
 msgid "voltage"
