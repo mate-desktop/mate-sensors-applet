@@ -1,32 +1,35 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-sensors-applet package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
 # Quentin PAGÈS, 2025
 # Transifex Bot <>, 2026
-# 
+# Quentin PAGÈS <quentinantonin@free.fr>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.27.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/"
+"issues\n"
 "POT-Creation-Date: 2023-09-04 18:15+0200\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
+"PO-Revision-Date: 2026-11-13 20:18+0000\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-sensors-applet/oc/>\n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: oc\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:6
 msgid "Sensors Applet Factory"
-msgstr ""
+msgstr "Fabrica d’ajuston de captadors"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:10
 msgid "Hardware Sensors Monitor"
@@ -67,7 +70,7 @@ msgstr ""
 
 #: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
-msgstr "Lista dels captaires"
+msgstr "Lista dels captadors"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
@@ -75,11 +78,11 @@ msgstr "Camin al fichièr"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
-msgstr "ID del periferic del captaire"
+msgstr "ID del periferic del captador"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
-msgstr "Interfàcia del periferic del captaire"
+msgstr "Interfàcia del periferic del captador"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
@@ -186,11 +189,11 @@ msgstr "Ambient"
 
 #: sensors-applet/prefs-dialog.c:415
 msgid "Sensors Applet Preferences"
-msgstr "Preferéncias de l’applet captaires"
+msgstr "Preferéncias de l’ajuston dels captadors"
 
 #: sensors-applet/prefs-dialog.c:452 sensors-applet/sensors-applet.c:1279
 msgid "No sensors found!"
-msgstr "Cap de captaire pas trobat !"
+msgstr "Cap de captador pas trobat !"
 
 #: sensors-applet/prefs-dialog.c:457
 msgid "Display"
@@ -274,7 +277,7 @@ msgstr "Afichar las _notificacions"
 
 #: sensors-applet/prefs-dialog.c:766
 msgid "Sensor"
-msgstr "Captaire"
+msgstr "Captador"
 
 #: sensors-applet/prefs-dialog.c:773
 msgid "Label"
@@ -310,7 +313,7 @@ msgstr "Opcions generalas"
 
 #: sensors-applet/prefs-dialog.c:917
 msgid "Sensors"
-msgstr "Captaires"
+msgstr "Captadors"
 
 #: sensors-applet/sensors-applet.h:58
 msgid "RPM"
@@ -341,12 +344,12 @@ msgstr ""
 #: sensors-applet/about-dialog.c:47
 msgid "translator-credits"
 msgstr ""
-"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, Cédric Valmary "
-"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin Pagès"
+"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "
+"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin PAGÈS"
 
 #: sensors-applet/sensor-config-dialog.c:383
 msgid "Sensor Properties"
-msgstr "Proprietats del captaire"
+msgstr "Proprietats del captador"
 
 #: sensors-applet/sensor-config-dialog.c:409
 msgid "Graph"
@@ -362,7 +365,7 @@ msgstr "_Color del grafic"
 
 #: sensors-applet/sensor-config-dialog.c:481
 msgid "Sensor _icon"
-msgstr "_Icòna del captor"
+msgstr "_Icòna del captador"
 
 #: sensors-applet/sensor-config-dialog.c:487
 msgid "Scaling Parameters"
@@ -378,15 +381,15 @@ msgstr ""
 
 #: sensors-applet/sensor-config-dialog.c:553
 msgid "Sensor Limits"
-msgstr ""
+msgstr "Limits del captador"
 
 #: sensors-applet/sensor-config-dialog.c:581
 msgid "Sensor _low value"
-msgstr ""
+msgstr "Limit _bas del captador"
 
 #: sensors-applet/sensor-config-dialog.c:609
 msgid "Sensor _high value"
-msgstr ""
+msgstr "Limit _naut del captador"
 
 #: sensors-applet/sensor-config-dialog.c:617
 #: sensors-applet/sensors-applet.c:358
@@ -468,7 +471,7 @@ msgstr "actual"
 #: sensors-applet/sensors-applet.c:372
 #, c-format
 msgid "Error updating sensor %s"
-msgstr "Error en actualizar lo captaire %s"
+msgstr "Error en actualizar lo captador %s"
 
 #: sensors-applet/sensors-applet.c:373
 #, c-format
@@ -479,4 +482,4 @@ msgstr ""
 
 #: sensors-applet/sensors-applet.c:474
 msgid "No sensors enabled!"
-msgstr "Cap de captaire pas activat !"
+msgstr "Cap de captador pas activat !"
