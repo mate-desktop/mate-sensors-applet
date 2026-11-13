@@ -1,119 +1,123 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-sensors-applet package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021, 2026.
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# 
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-sensors-applet 1.27.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-sensors-applet/"
+"issues\n"
 "POT-Creation-Date: 2023-09-04 18:15+0200\n"
-"PO-Revision-Date: 2018-03-12 07:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Kazakh (https://app.transifex.com/mate/teams/13566/kk/)\n"
+"PO-Revision-Date: 2026-08-26 18:18+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-sensors-applet/kk/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:6
 msgid "Sensors Applet Factory"
-msgstr ""
+msgstr "Сенсорлар апплетінің фабрикасы"
 
 #: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:10
 msgid "Hardware Sensors Monitor"
-msgstr ""
+msgstr "Аппараттық сенсорлар мониторы"
 
 #: org.mate.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
-msgstr ""
+msgstr "Нүктелердегі қаріп өлшемі"
 
 #: org.mate.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
-msgstr ""
+msgstr "Сенсор өлшем бірліктерін көрсету немесе жасыруды анықтау"
 
 #: org.mate.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
-msgstr ""
+msgstr "Таңбашаларды немесе мәтіндік жапсырмаларды көрсетуді орнату"
 
 #: org.mate.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
-msgstr ""
+msgstr "Мәнді жапсырманың қасына немесе астына орналастыру"
 
 #: org.mate.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
-msgstr ""
+msgstr "Температураны Кельвин, Цельсий немесе Фаренгейт бойынша көрсету"
 
 #: org.mate.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
-msgstr ""
+msgstr "Хабарландыруларды көрсету керек пе"
 
 #: org.mate.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
-msgstr ""
+msgstr "Жаңартулар арасындағы кідіріс (мс)"
 
 #: org.mate.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr ""
+"Графиктің пиксельдегі өлшемі (горизонталды болса ені, вертикалды болса "
+"биіктігі)"
 
 #: org.mate.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
-msgstr ""
+msgstr "Сенсорлар тізімі"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
-msgstr ""
+msgstr "Файл атауының жолы"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
-msgstr ""
+msgstr "Сенсор құрылғысының идентификаторлары"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
-msgstr ""
+msgstr "Сенсор құрылғысының интерфейсі"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
-msgstr ""
+msgstr "Пайдаланушы анықтаған жапсырма"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
-msgstr ""
+msgstr "Сенсор іске қосылған ба, жоқ па"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
-msgstr ""
+msgstr "Төмен мән"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
-msgstr ""
+msgstr "Жоғары мән"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
-msgstr ""
+msgstr "Сенсордың дабылы іске қосылған ба, жоқ па"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:37
 #: org.mate.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
-msgstr ""
+msgstr "Дабыл белсендірілген кезде орындалатын команда"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
-msgstr ""
+msgstr "Әрбір дабыл қаншалықты жиі берілуі керек (секундпен)"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
-msgstr ""
+msgstr "Тізімдегі сенсорды анықтау үшін пайдаланылады"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
-msgstr ""
+msgstr "Көбейткіш"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
@@ -121,11 +125,11 @@ msgstr "Шегіну"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
-msgstr ""
+msgstr "Таңбаша түрі"
 
 #: org.mate.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
-msgstr ""
+msgstr "Сенсорға арналған график түсі"
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:57 plugins/i2c-sys/i2c-sys-plugin.c:51
 #: plugins/i8k/i8k-plugin.c:46 plugins/omnibook/omnibook-plugin.c:45
@@ -138,27 +142,27 @@ msgstr "Процессор"
 #: plugins/nvidia/nvidia-plugin.c:149 plugins/nvidia/nvidia-plugin.c:174
 #: plugins/smu-sys/smu-sys-plugin.c:60
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:67
 msgid "CASE"
-msgstr ""
+msgstr "КОРПУС"
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:72 plugins/smu-sys/smu-sys-plugin.c:65
 msgid "FAN"
-msgstr ""
+msgstr "ЖЕЛДЕТКІШ"
 
 #: plugins/i8k/i8k-plugin.c:55
 msgid "FAN1"
-msgstr ""
+msgstr "1-ЖЕЛДЕТКІШ"
 
 #: plugins/i8k/i8k-plugin.c:64
 msgid "FAN2"
-msgstr ""
+msgstr "2-ЖЕЛДЕТКІШ"
 
 #: plugins/ibm-acpi/ibm-acpi-plugin.c:66
 msgid "MiniPCI"
-msgstr ""
+msgstr "MiniPCI"
 
 #: plugins/ibm-acpi/ibm-acpi-plugin.c:90
 #: plugins/ibm-acpi/ibm-acpi-plugin.c:102
@@ -167,27 +171,27 @@ msgstr "Батарея"
 
 #: plugins/ibm-acpi/ibm-acpi-plugin.c:119
 msgid "Fan"
-msgstr ""
+msgstr "Желдеткіш"
 
 #: plugins/sonypi/sonypi-plugin.c:65
 msgid "CPU TEMP"
-msgstr ""
+msgstr "ПРОЦЕССОР ТЕМПЕРАТУРАСЫ"
 
 #: plugins/omnibook/omnibook-plugin.c:44 sensors-applet/sensors-applet.c:319
 msgid "temperature"
-msgstr ""
+msgstr "температура"
 
 #: plugins/nvidia/nvidia-plugin.c:191
 msgid "Ambient"
-msgstr ""
+msgstr "Қоршаған орта"
 
 #: sensors-applet/prefs-dialog.c:415
 msgid "Sensors Applet Preferences"
-msgstr ""
+msgstr "Сенсорлар апплетінің баптаулары"
 
 #: sensors-applet/prefs-dialog.c:452 sensors-applet/sensors-applet.c:1279
 msgid "No sensors found!"
-msgstr ""
+msgstr "Сенсорлар табылмады!"
 
 #: sensors-applet/prefs-dialog.c:457
 msgid "Display"
@@ -195,39 +199,39 @@ msgstr "Көрсету"
 
 #: sensors-applet/prefs-dialog.c:469
 msgid "label with value"
-msgstr ""
+msgstr "мәні бар жапсырма"
 
 #: sensors-applet/prefs-dialog.c:470
 msgid "icon with value"
-msgstr ""
+msgstr "мәні бар таңбаша"
 
 #: sensors-applet/prefs-dialog.c:471
 msgid "value only"
-msgstr ""
+msgstr "тек мәні"
 
 #: sensors-applet/prefs-dialog.c:472
 msgid "icon only"
-msgstr ""
+msgstr "тек таңбаша"
 
 #: sensors-applet/prefs-dialog.c:473
 msgid "graph only"
-msgstr ""
+msgstr "тек график"
 
 #: sensors-applet/prefs-dialog.c:486
 msgid "_Display sensors in panel as"
-msgstr ""
+msgstr "Панельдегі сенсорларды келесі түрінде _көрсету"
 
 #: sensors-applet/prefs-dialog.c:498
 msgid "beside labels / icons"
-msgstr ""
+msgstr "жапсырмалардың / таңбашалардың қасында"
 
 #: sensors-applet/prefs-dialog.c:499
 msgid "below labels / icons"
-msgstr ""
+msgstr "жапсырмалардың / таңбашалардың астында"
 
 #: sensors-applet/prefs-dialog.c:512
 msgid "Preferred _position of sensor values"
-msgstr ""
+msgstr "Сенсор мәндерінің қалаулы _орны"
 
 #: sensors-applet/prefs-dialog.c:524
 msgid "Kelvin"
@@ -243,15 +247,15 @@ msgstr "Фаренгейт"
 
 #: sensors-applet/prefs-dialog.c:539
 msgid "_Temperature scale"
-msgstr ""
+msgstr "_Температура шәкілі"
 
 #: sensors-applet/prefs-dialog.c:565
 msgid "Graph _size (pixels)"
-msgstr ""
+msgstr "График өл_шемі (пиксельмен)"
 
 #: sensors-applet/prefs-dialog.c:577
 msgid "Show _units"
-msgstr ""
+msgstr "Өлшем бірліктерін _көрсету"
 
 #: sensors-applet/prefs-dialog.c:585
 msgid "Update"
@@ -259,7 +263,7 @@ msgstr "Жаңарту"
 
 #: sensors-applet/prefs-dialog.c:612
 msgid "Update _interval (secs)"
-msgstr ""
+msgstr "Жаңарту _интервалы (сек)"
 
 #: sensors-applet/prefs-dialog.c:622
 msgid "Notifications"
@@ -267,7 +271,7 @@ msgstr "Хабарламалар"
 
 #: sensors-applet/prefs-dialog.c:632
 msgid "Display _notifications"
-msgstr ""
+msgstr "Хабарландыруларды _көрсету"
 
 #: sensors-applet/prefs-dialog.c:766
 msgid "Sensor"
@@ -279,7 +283,7 @@ msgstr "Белгі"
 
 #: sensors-applet/prefs-dialog.c:783
 msgid "Labels can be edited directly by clicking on them."
-msgstr ""
+msgstr "Жапсырмаларды оларды шерту арқылы тікелей өңдеуге болады."
 
 #: sensors-applet/prefs-dialog.c:784
 msgid "Enabled"
@@ -295,7 +299,7 @@ msgstr "Жоғ_ары"
 
 #: sensors-applet/prefs-dialog.c:832
 msgid "_Down"
-msgstr ""
+msgstr "_Төмен"
 
 #: sensors-applet/prefs-dialog.c:866
 msgid "_Properties"
@@ -307,11 +311,11 @@ msgstr "Жалпы опциялар"
 
 #: sensors-applet/prefs-dialog.c:917
 msgid "Sensors"
-msgstr ""
+msgstr "Сенсорлар"
 
 #: sensors-applet/sensors-applet.h:58
 msgid "RPM"
-msgstr ""
+msgstr "айн/мин"
 
 #: sensors-applet/sensors-applet.h:59
 msgid "V"
@@ -331,6 +335,9 @@ msgid ""
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 2005-2009 Alex Murray\n"
+"Copyright © 2011 Stefano Karapetsas\n"
+"Copyright © 2012-2021 MATE developers"
 
 #: sensors-applet/about-dialog.c:47
 msgid "translator-credits"
@@ -338,47 +345,47 @@ msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
 #: sensors-applet/sensor-config-dialog.c:383
 msgid "Sensor Properties"
-msgstr ""
+msgstr "Сенсор қасиеттері"
 
 #: sensors-applet/sensor-config-dialog.c:409
 msgid "Graph"
-msgstr ""
+msgstr "График"
 
 #: sensors-applet/sensor-config-dialog.c:422
 msgid "Graph Color"
-msgstr ""
+msgstr "График түсі"
 
 #: sensors-applet/sensor-config-dialog.c:425
 msgid "Graph _color"
-msgstr ""
+msgstr "График _түсі"
 
 #: sensors-applet/sensor-config-dialog.c:481
 msgid "Sensor _icon"
-msgstr ""
+msgstr "Сенсор _таңбашасы"
 
 #: sensors-applet/sensor-config-dialog.c:487
 msgid "Scaling Parameters"
-msgstr ""
+msgstr "Масштабтау параметрлері"
 
 #: sensors-applet/sensor-config-dialog.c:516
 msgid "Sensor value _multiplier"
-msgstr ""
+msgstr "Сенсор мәнінің _көбейткіші"
 
 #: sensors-applet/sensor-config-dialog.c:544
 msgid "Sensor value _offset"
-msgstr ""
+msgstr "Сенсор мәнінің _ығысуы"
 
 #: sensors-applet/sensor-config-dialog.c:553
 msgid "Sensor Limits"
-msgstr ""
+msgstr "Сенсор шектері"
 
 #: sensors-applet/sensor-config-dialog.c:581
 msgid "Sensor _low value"
-msgstr ""
+msgstr "Сенсордың _төмен мәні"
 
 #: sensors-applet/sensor-config-dialog.c:609
 msgid "Sensor _high value"
-msgstr ""
+msgstr "Сенсордың _жоғары мәні"
 
 #: sensors-applet/sensor-config-dialog.c:617
 #: sensors-applet/sensors-applet.c:358
@@ -387,19 +394,19 @@ msgstr "Оятқыш"
 
 #: sensors-applet/sensor-config-dialog.c:646
 msgid "Alarm _repeat interval (secs)"
-msgstr ""
+msgstr "Дабылдың _қайталану аралығы (сек)"
 
 #: sensors-applet/sensor-config-dialog.c:665
 msgid "Lo_w alarm command"
-msgstr ""
+msgstr "_Төменгі деңгей дабылының командасы"
 
 #: sensors-applet/sensor-config-dialog.c:686
 msgid "Hi_gh alarm command"
-msgstr ""
+msgstr "_Жоғарғы деңгей дабылының командасы"
 
 #: sensors-applet/sensor-config-dialog.c:699
 msgid "_Enable alarm"
-msgstr ""
+msgstr "Дабылды _іске қосу"
 
 #: sensors-applet/sensors-applet.c:239
 msgid "_Preferences"
@@ -415,19 +422,19 @@ msgstr "О_сы туралы"
 
 #: sensors-applet/sensors-applet.c:300
 msgid "is very low"
-msgstr ""
+msgstr "өте төмен"
 
 #: sensors-applet/sensors-applet.c:301
 msgid "lower limit"
-msgstr ""
+msgstr "төменгі шек"
 
 #: sensors-applet/sensors-applet.c:306
 msgid "is very high"
-msgstr ""
+msgstr "өте жоғары"
 
 #: sensors-applet/sensors-applet.c:307
 msgid "upper limit"
-msgstr ""
+msgstr "жоғарғы шек"
 
 #: sensors-applet/sensors-applet.c:318
 msgid "Temperature"
@@ -439,15 +446,15 @@ msgstr "Вольтаж"
 
 #: sensors-applet/sensors-applet.c:339
 msgid "voltage"
-msgstr ""
+msgstr "кернеу"
 
 #: sensors-applet/sensors-applet.c:344
 msgid "Fan Speed"
-msgstr ""
+msgstr "Желдеткіш жылдамдығы"
 
 #: sensors-applet/sensors-applet.c:345
 msgid "fan speed"
-msgstr ""
+msgstr "желдеткіш жылдамдығы"
 
 #: sensors-applet/sensors-applet.c:350
 msgid "Current"
@@ -455,12 +462,12 @@ msgstr "Ағымдағы"
 
 #: sensors-applet/sensors-applet.c:351
 msgid "current"
-msgstr ""
+msgstr "current"
 
 #: sensors-applet/sensors-applet.c:372
 #, c-format
 msgid "Error updating sensor %s"
-msgstr ""
+msgstr "%s сенсорын жаңарту қатесі"
 
 #: sensors-applet/sensors-applet.c:373
 #, c-format
@@ -468,7 +475,8 @@ msgid ""
 "An error occurred while trying to update the value of the sensor %s located "
 "at %s."
 msgstr ""
+"%2$s орналасқан %1$s сенсорының мәнін жаңарту әрекеті кезінде қате орын алды."
 
 #: sensors-applet/sensors-applet.c:474
 msgid "No sensors enabled!"
-msgstr ""
+msgstr "Сенсорлар іске қосылмаған!"
